@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0032.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Aerogram Signed Edward Mendelson to Stella Musulin 1980-12-01</title>
+            <author>Mendelson, Edward</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>2, 12</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1980-12-01" >1980-12-01</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2021-12-06">text transcribed</change>
+         <change who="tfruehwirth" when="2021-12-06">text transcribed using Transkribus</change>
+         <change who="smayer tfruehwirth" when="2021-12-06">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="5128" lry="7124">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0227/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5128" lry="7122">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0228/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0227/" type="sheet"/>
+               <p>
+                  39 Claremont Ave, apt 32<lb/>
+                  New York NY  10027<lb/>
+                  USA
+               </p>
+               <p>
+                 1 December 1980 
+               </p>
+               <p>
+                  Dear Stella,<lb/>
+                  I just got back from a month in England to find your letter.  I was<lb/>
+                  rather worried as to how you were, and am delighted to hear that<lb/>
+                  you're on the ascent after a "decline."  I'm also abashed not to have<lb/>
+                  been in touch with you before about the collapse of our four-memoir<lb/>
+                  book, but the whole thing has been farcical and uncertain.  Here are<lb/>
+                  the basics.  First, there should be no need to repay any of the<lb/>
+                  advance (I haven't spoken with Random House about this, except with<lb/>
+                  an ill-informed assitant, but there shouldn't be any problem), and<lb/>
+                  second, I hope you haven't gone out of your way to work on the thing<lb/>
+                  again.  The structure collapsed in two or three stages.  First Lincoln<lb/>
+                  Kirstein read the forthcoming biography by Humphrey Carpenter (not bad,<lb/>
+                  not spectacularly good), and decided he didn't know enough Auden to<lb/>
+                  add new facts, that he wasn't really worthy to be a memoirist, etc.<lb/>
+                  None of this has any truth, but Kirstein is not a person to argue with.<lb/>
+                  He managed to persuade me, in September, that the book should at least<lb/>
+                  be left to stew for a while.  Then Spender finally sent in a first<lb/>
+                  draft of his piece, which, between us, was a disaster.  At this time<lb/>
+                  Charles Monteith had a look at it, and agreed.  When I saw Charles<lb/>
+                  in London a couple of weeks ago, we formally let the thing drop, and<lb/>
+                  I think he already wrote you about it.<lb/>
+                  I still think your piece is first-rate (the copyright is yours, by the<lb/>
+                  way), and I hope you'll publish it, perhaps with a word or two of<lb/>
+                  information from Christa Esders if that's possible.  (Did you learn<lb/>
+                  anything from her??)  If you want me to try to place it in this country,<lb/>
+                  I'll do my best with it.  Do let me know.  I feel very sorry that you<lb/>
+                  went to all this trouble for--up to now--nothing, and for many reasons<lb/>
+                  I should like to see the piece in print.<lb/>
+                  No, I haven't got to Vienna for five years now, and couldn't afford<lb/>
+                  a visit this year.  Next summer, if my job is sorted out, I would very<lb/>
+                  much like to come over again.  This past summer I tried ringing you a<lb/>
+                  few times at 4217175, but got no reply.  Is that your number?  Mine here<lb/>
+                  is 212 222-0679 if there's ever a reason to need it.<lb/>
+                  Please do forgive me for the muddle over the book.  And please do keep<lb/>
+                  in touch.  Incidentally I finished that critical book--to be published<lb/>
+                  in the spring--after doing nothing but work on it for a year.  My "summer"<lb/>
+                  trip to England got postponed to November while I revised.<lb/>
+                  Yours ever,<lb/>
+                  Ed
+                </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0228/" type="sheet"/>
+               <p>
+                  Edward Mendelson<lb/>
+                  39 Claremont Ave apt 32<lb/>
+                  New York NY  10027
+              </p>
+              <p>
+                  Frl Baronin<lb/>
+                  Stella Musulin<lb/>
+                  Schlösselgasse 8/17<lb/>
+                  A-1080 Wien<lb/>
+                  Austria 
+              </p>
+         </div>
+      </body>
+   </text>
+</TEI>

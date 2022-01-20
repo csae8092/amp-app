@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0046.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Autograph Notes Stella Musulin on Translation W. H. Auden "Joseph Weinheber" [1965]</title>
+            <author>Musulin, Stella</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>2, 2</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate>[1965]</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2022-01-04">text transcribed</change>
+         <change who="tfruehwirth" when="2022-01-04">text transcribed using Transkribus</change>
+         <change who="smayer tfruehwirth" when="2022-01-04">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="5696" lry="7728">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0141/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5694" lry="7730">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0142/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0141/" type="sheet"/>
+               <p>
+                  1. In dem man <unclear>&#x2713;</unclear> dich &#8212; begrub &#x00B7;
+               </p>
+               <p>
+                  2. Kategorisiert<unclear>.</unclear><lb/>
+                  Amb<unclear>it-</unclear>Umwelt is a bit wea<unclear>k</unclear> but pro<unclear>b</unclear>ably<lb/>
+                  can't <unclear>b</unclear>e helped&#x00B7;
+               </p>
+               <p>
+                  <unclear>3</unclear>. Grosses Unheil stifteten und Böses planten .<lb/>
+                  <del>Mem</del> men of great damage and malengine <unclear>.</unclear><lb/>
+                  <unclear>1</unclear> the act<unclear>io</unclear>n<lb/>
+                  2 the intent.<lb/>
+                  Übel wollens ?<lb/>
+                  Männer <unclear>&#x2713;</unclear> grossen Unheils und Übelwol<unclear>l</unclear>ens<unclear>.</unclear> ?
+               </p>
+               <p>
+                  <unclear>5</unclear> . Alpdruck .(vom nicht vor)<lb/>
+                  Stümper .
+               </p>
+               <p>
+                  <unclear>6.</unclear> <del><unclear>I</unclear>n str</del> Bei &#x2713; strömendem Re<unclear>g</unclear>en<lb/>
+               </p>
+               <p>
+                  <unclear>7.</unclear> Hope ever<unclear>y</unclear>one won't thi<unclear>n</unclear>k <unclear>"</unclear>die Reiche<unclear>"</unclear><lb/>
+                  is a missprint for <unclear>"</unclear>die Reichen<unclear>".</unclear>
+               </p>
+               <p>
+                  prosais<unclear>c</unclear>he<lb/>
+                  &#x0026; private Art
+               </p>
+               <p>
+                  8. Lächeln wir bei Hochzei<unclear>t</unclear>en , auf denen ?<lb/>
+                  Next sentence ungramm<unclear>a</unclear>t<unclear>ica</unclear>l <unclear>.</unclear> Verb <del>lacking</del>. missing .<lb/>
+                  And perhaps<unclear>:</unclear> <unclear>"</unclear>Noch nie war die Erde ohne<lb/>
+                  ihre faule<del>n</del> Stelle<del>n</del> (singular as in original),<lb/>
+                  ein Uno<unclear>r</unclear>t mit Posten fü<unclear>r</unclear> Folterer
+               </p>
+               <p>
+                  <unclear>9</unclear>. Frieden oder Frie<unclear>d</unclear>e <unclear>&#x2713;</unclear> ?
+               </p>
+               <p>
+                  wie <unclear>w</unclear>u einst <unclear>&#x2713;</unclear> &#x00B7;
+               </p>
+               <p>
+                  10. An das Regime? Wann bei jedem<lb/>
+                  Wenn .
+               </p>
+               <p>
+                  11. Bedeu<unclear>te</unclear>ndere<del><unclear>r</unclear></del>n Nachbarn 
+               </p>
+               <p>
+                  die Perschling
+               </p>
+               <p>
+                  Warum des noblen <unclear>Fl</unclear>usses <unclear>?</unclear>
+               </p>
+               <p>
+                  12. Was ist der Abgrund?<lb/>
+                  statt Bratschen Violas oder Geigen &#x2052;
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0142/" type="sheet"/>
+               <p>
+                  Heute lächeln wir bei Hochzeiten ,<lb/>
+                  bei <unclear>d</unclear>enen Braut u. Bräutigam schon<lb/>
+                  auf der Welt waren als sich der Schatten<lb/>
+                  gehoben <unclear>od</unclear>er (vielmehr) &#x2713; weiter <unclear>&#x2713;</unclear> gerückt war<unclear>.</unclear>
+               </p>
+               <p>
+                  1<unclear>2.</unclear><lb/>
+                  Anger wäre ev. besser als Rasen <unclear>.</unclear><lb/>
+                  Try gepfählt
+               </p>
+               <p>
+                  die ihn nachher dazu verpf<unclear>l</unclear>ichteten, sie<lb/>
+                  den Abgrund zu nennen .<lb/>
+                  Look for old-fashioned wo<unclear>r</unclear>d for Streicher .<lb/>
+                  <unclear>(</unclear>Strin<unclear>g</unclear>end instruments genera<unclear>l</unclear>ly.)
+               </p>
+         </div>
+      </body>
+   </text>
+</TEI>

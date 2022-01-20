@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0051.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Typed Notes [Janko Musulin] on W. H. Auden "Freedom and Necessity in the Arts" [1970]</title>
+            <author>[Janko Musulin]</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>2, 5</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate>[1970]</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2021-12-16">text transcribed</change>
+         <change who="tfruehwirth" when="2021-12-17">text transcribed using Transkribus</change>
+         <change who="smayer tfruehwirth" when="2021-12-17">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="5686" lry="7738">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0165/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5692" lry="7742">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0166/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5688" lry="7740">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0167/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5690" lry="7738">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0168/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5688" lry="7740">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0169/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5684" lry="7738">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0170/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0165/" type="sheet"/>
+               <p>
+                  Einschub 1 ,<lb/>
+                  <del><unclear></unclear></del>Als ich zwischen sechs und zwölf Jahre alt war verbrachte ich<lb/>
+                  viele meiner wachen Stunden damit mir eine heilsame zweite Welt zu<lb/>
+                  schaffen . Ihre <del>Grundelemente</del> Bausteine waren erstens eine<lb/>
+                  Karlksteinlandschaft , die hauptsächlich .<del>...</del>von.<del>.</del>der Pennine Heide<lb/>
+                  herrührte und zweitens ein Werk - die Bleigruben .<lb/>
+                  Einschub 2<lb/>
+                  Zweitens , während ich meine höchst-eigene Welt aufbaute ,<lb/>
+                  musste ich feststellen , dass hier nicht ohne Regeln <del>gespielt</del>vorgegangen werden konnte<lb/>
+                  <del>werden konnte</del> - obwohl, oder gerade weil es hier um ein Spiel<lb/>
+                  ging , nicht eine Notwendigkeit wie essen oder schlafen , um etwas, das<lb/>
+                  mir frei stand , das ich tun oder lassen konnte, wie es mir<lb/>
+                  passte<lb/>
+                  Eimschub 3<lb/>
+                  Während ich meine <del>Pläne</del>Vorstellungen für einen <del>zentral-Meiler</del>Anreicherungs-Meiler entwarf, stiess<lb/>
+                  ich auf Schwierigkeiten: Ich musste zwischen zwei Arten von<lb/>
+                  Maschienen wählen , die d<del>ie</del>er Absonderung des Schlamms d<del>urchführen</del><lb/>
+                  dienen , sie werden ' buddle ' genannt , Der eine Typ kam mir<lb/>
+                  ' heilsamer ' , schöner vor aber der andere, das wusste ich bereits aus<lb/>
+                  meiner <unclear>L</unclear>ekture funktionierte besser   ....................<lb/>
+                  Als ich später    <unclear>G</unclear>edichte zu schreiben begann stellte ich fest ,<lb/>
+                  dass für mich genau die gleiche Verpflichtung gültig war . Das<lb/>
+                  heisst, ich ich kann die Do<del><unclear>j</unclear></del>ktrin nicht akzeptieren derzufolge man<lb/>
+                  in der Poesie <del>vom Zwang der Glaubwürdigkeit</del> vorübergehend vom Zwang<lb/>
+                  zur Glaubwürdigkeit entbunden werden kann  .<lb/>
+                  Einschub 4<lb/>
+                  Eine eigene Phantasiewelt für sich <del>selbst aufbauen</del> allein
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0166/" type="sheet"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0167/" type="sheet"/>
+               <p>
+                  - 2 -
+               </p>
+               <p>
+                  aufbauen und Gedichte schreiben , das ist gewiss auf profunde Weise etwas<lb/>
+                  anderes. "<lb/>
+                  Einschub 5<lb/>
+                  " Die Wissenschaften früherer Tage sind nur für die Studenten der<lb/>
+                  Wissenschaftsgeschichte von Interesse , sie haben keinen Bezug auf das ,<lb/>
+                  was Wissenschaftler in diesem Augenblick tun "<lb/>
+                  Einschub 6<lb/>
+                  Gründer der " modernen Kunst " ansehen , Glück, weil sie just in<lb/>
+                  diesem Augenblick auf die Welt kamen , mithin vor 1914 erwachsene<lb/>
+                  Männer waren .<lb/>
+                  Einschub 7<lb/>
+                  In meinen jungen Jahren hatte sie gar keinen , sie befand sich im<lb/>
+                  Zustand kategorischen Gegensatzes , häufig in wirk<del><unclear>o</unclear></del>licher<lb/>
+                  Feindschaft<lb/>
+                  Einschub 8<lb/>
+                  In Zeiten wie der unseren , in Zeiten rascher sozialer <unclear>V</unclear>eränderungen<lb/>
+                  und politischer Krise , besteht immer die Gefahr die auf<lb/>
+                  politische Aktion anwendbaren Prinzipien mit jenen zu verwechseln ,<lb/>
+                  die das künstlerische Schaffen bestimmen.<lb/>
+                  Einschub 9<lb/>
+                  heisst auf verantwortliche Weise am richtigen Funktionieren<lb/>
+                  der <unclear>G</unclear>esellschaft, der er angehört, wie an ihrer <unclear>V</unclear>erbesserung ,<lb/>
+                  mitzuwirken . "
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0168/" type="sheet"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0169/" type="sheet"/>
+               <p>
+                  - 3 -
+               </p>
+               <p>
+                  Einschub 10<lb/>
+                  Politisches <del><unclear>h</unclear></del>Handel<del>t</del>n kommt aus Notwendigkeit , das<lb/>
+                  heisst : In jedem Augenblick muss etwas getan werden , für den<lb/>
+                  Augenblick - der Aktion des Augenblickes folgt die des nächsten<lb/>
+                  Augenblicks .<lb/>
+                  E<del>u</del>inschub 11<lb/>
+                  Noch eine weitere Erfahrung, dieich gemacht habe : Im Gegensatz<lb/>
+                  zu dem, was man erwarten würde,klingen die freien <unclear>V</unclear>erse viel<lb/>
+                  ähnlicher als <del>jene</del> die Verse von Dichtern , die in vorgegebenen<lb/>
+                  Formen schreiben "
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0170/" type="sheet"/>
+         </div>
+      </body>
+   </text>
+</TEI>

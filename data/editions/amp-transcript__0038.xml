@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0038.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Typed Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Joseph Weinheber" 1965-03-15</title>
+            <author>Auden, W. H.</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>1, 10</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1965-03-15" >1965-03-15</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"></placeName>
+               <date  when-iso="1965-03-15" >1965-03-15</date>
+            </correspAction>
+            <correspAction type="received">
+                <persName ref="#musulin-stella">Musulin, Stella</persName>
+                <placeName ref="#"></placeName>
+                <date></date>
+            </correspAction>
+         </correspDesc>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2021-12-20">text transcribed</change>
+         <change who="tfruehwirth" when="2021-12-20">text transcribed using Transkribus</change>
+         <change who="smayer tfruehwirth" when="2021-12-21">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="4534" lry="3426">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0011/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="4532" lry="3428">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0012/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5696" lry="7750">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0133/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5698" lry="7752">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0134/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5698" lry="7752">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0135/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5696" lry="7756">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0136/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5694" lry="7754">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0137/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5698" lry="7750">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0138/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0011/" type="envelope"/>
+               <p>
+                  Die Baronin<lb/>
+                  S<unclear>t</unclear>ella Musulin<lb/>
+                  <del>Fridau</del><lb/>
+                  <del>Obergrabe<unclear>m</unclear>d<unclear>o</unclear>o<unclear>rf</unclear></del><lb/>
+                  <del>b<unclear>e</unclear>i S. Pölten</del><lb/>
+                  <del>N.Ö</del><lb/>
+                  Osterreich
+               </p>
+               <p>
+                  Wien III<lb/>
+                  Neuling<unclear>g</unclear>. 2<unclear>6</unclear>/1<unclear>4</unclear>
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0012/" type="envelope"/>
+               <p>
+                  W.H. Auden<lb/>
+                  Berlin-Dahle<unclear>m</unclear><lb/>
+                  Hubertusbaderstrasse <unclear>4</unclear>3<lb/>
+                  Germany
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0133/" type="sheet"/>
+               <p>
+                  <l>JOSEPH WEINHEBER</l>
+                  <l>(I892-I945)</l>
+                  <l>Reachi<del>j</del>ng my gate a narrow</l>
+                  <l>Lane from the village</l>
+                  <l>Passes on into a wood:</l>
+                  <l>When I walk that way</l>
+                  <l>It seems becoming to stop</l>
+                  <l>And look through the fence</l>
+                  <l>Of your garden where(under</l>
+                  <l>The circs they had to)</l>
+                  <l>They buried you like a lo<unclear>v</unclear>ed</l>
+                  <l>Old family dog.</l>
+                  <l>Categorised enemies</l>
+                  <l>Twenty years ago,</l>
+                  <l>Now next-door neighbors,we might</l>
+                  <l>Have become good friends,</l>
+                  <l>Sharing a common ambit</l>
+                  <l>And love of the word,</l>
+                  <l>Over a golden Kremser</l>
+                  <l>Had many a long</l>
+                  <l>Language on syntax,commas,</l>
+                  <l>Versification.</l>
+                  <l>Yes,yes,it has to be said:</l>
+                  <l>Men of great damage</l>
+                  <l>And malengine took you up.</l>
+                  <l>Did they,though,ever</l>
+                  <l>Take you in,who to Goebbels'</l>
+                  <l>Offer of culture</l>
+                  <l>Countered In Ruah lassen!?</l>
+                  <l>But the crowd prefers</l>
+                  <l>A nasty stink and the young</l>
+                  <l>Condemn you unread.</l>
+                  <l>What,had you ever heard of</l>
+                  <l>Franz J<unclear>ä</unclear>gerst<unclear>ä</unclear>tter,</l>
+                  <l>The St.Radegund peasant</l>
+                  <l>Who said his lonely</l>
+                  <l>Nein to the Aryan State</l>
+                  <l>And was beheaded,</l>
+                  <l>Would your heart,as Austrian,</l>
+                  <l>As poet,have told you?</l>
+                  <l>Good care,of course,was taken</l>
+                  <l>You should hear nothing,</l>
+                  <l>Be unprepared for a day</l>
+                  <l>That was bound to come,</l>
+                  <l>A season of dread and tears</l>
+                  <l>And dishevelment</l>
+                  <l>When,transfixed by a nightmare,</l>
+                  <l>You destroyed yourself.</l>
+                  <l>Retribution was ever</l>
+                  <l>A bungler at it:</l>
+                  <l>Dies alles ist furchtbar,hier</l>
+                  <l>Nur Schweigen gem<unclear>ä</unclear>ss. (<unclear>I</unclear>)</l>
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0134/" type="sheet"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0135/" type="sheet"/>
+               <p>
+                  (2
+               </p>
+               <p>
+                  <l>Unmarked by me,unmourned for,</l>
+                  <l>The hour of your death,</l>
+                  <l>Unhailed by you the moment</l>
+                  <l>When,providence-led,</l>
+                  <l>I first beheld Kirchstetten</l>
+                  <l>On a pouring wet</l>
+                  <l>October day in a year</l>
+                  <l>That changed our Cosmos,</l>
+                  <l>The annus mirabilis</l>
+                  <l>When Parity fell.</l>
+                  <l>Already the realms that lost</l>
+                  <l>Were properly warm</l>
+                  <l>And over-eating,their crimes</l>
+                  <l>The pedestrian</l>
+                  <l>Private sort,those nuisances,</l>
+                  <l>Corpses and rubble,</l>
+                  <l>Lon<del>f</del>g carted away: for their raped</l>
+                  <l>The shock was fading,</l>
+                  <l>Their kidnapped physicists felt</l>
+                  <l>No longer homesick.</l>
+                  <l>To-day we smile at weddings</l>
+                  <l>Where bride and bridegroom</l>
+                  <l>Were both born since the Shadow</l>
+                  <l>Lifted,or rather</l>
+                  <l>Moved elsewhere. Never as yet</l>
+                  <l>Has Earth been without</l>
+                  <l>Her bad patch,some unplace with</l>
+                  <l>Jobs for torturers</l>
+                  <l>(In what bars are they welcome?</l>
+                  <l>What girls marry them?),</l>
+                  <l>Or her nutritive surface</l>
+                  <l>At peace all over.</l>
+                  <l>No one,so far as we know,</l>
+                  <l>Has ever been safe,</l>
+                  <l>And so in secret regions</l>
+                  <l>Good family men</l>
+                  <l>Keep eye,devoted as monks,</l>
+                  <l>On apparatus</l>
+                  <l>Inside which harmless matter</l>
+                  <l>Turns homicidal.</l>
+                  <l>Here,though,I feel as at home</l>
+                  <l>As you did: the same</l>
+                  <l>Short-lived creatures re-utter</l>
+                  <l>The same care-free songs,</l>
+                  <l>Orchards cling to the regime</l>
+                  <l>They know,from April's</l>
+                  <l>Rapid augment of color</l>
+                  <l>Till boisterous Fall</l>
+                  <l>When at each stammering gust</l>
+                  <l>Apples thump the ground.</l>
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0136/" type="sheet"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0137/" type="sheet"/>
+               <p>
+                  (3
+               </p>
+               <p>
+                  <l>Looking across <del>u</del>our valley</l>
+                  <l>Where,hidden from view,</l>
+                  <l>Sichelbach tottles westward</l>
+                  <l>To join the Perschling,</l>
+                  <l>Humanely modest in scale</l>
+                  <l>And mild in contour,</l>
+                  <l>Conscious of grander neighbors</l>
+                  <l>To bow to,mountains</l>
+                  <l>Soaring behind me,ahead</l>
+                  <l>A noble river,</l>
+                  <l>I would respect you also,</l>
+                  <l>Neighbor and colleague,</l>
+                  <l>For even my English ear</l>
+                  <l>Gets in your German</l>
+                  <l>The workmanship and the note</l>
+                  <l>Of one who was graced</l>
+                  <l>To hear the viols playing</l>
+                  <l>On the impaled green,</l>
+                  <l>Committed thereafter den</l>
+                  <l>Abgrund zu nennen. (2)</l>
+                  ___<lb/>
+                  <del>N</del>  I) Quotation from W<del>8</del><unclear>'</unclear>s poem Auf das Unabwendbare.<lb/>
+                  2) Quotation from W's poem Kammermusik.<lb/>
+                  __
+               </p>
+               <p>
+                  Dear Stella:<lb/>
+                  Kirchstetten is intending to have a ceremony in memory of the twentieth<lb/>
+                  anniversary of Weinheber'<del>w</del>s  death.  Herewith my effort to do my<lb/>
+                  Gemeindepflicht.<lb/>
+                  love<lb/>
+                  Wystan.
+               </p>
+               <p>
+                  P.S. Expect to re<unclear>tu</unclear>rn K April 22nd. Do hope you<lb/>
+                  <unclear>w</unclear>il<unclear>l</unclear> be around.
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0138/" type="sheet"/>
+         </div>
+      </body>
+   </text>
+</TEI>

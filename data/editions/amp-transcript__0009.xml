@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0009.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-15</title>
+            <author>Auden, W. H.</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>1, 20</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1968-10-15" >1968-10-15</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"></placeName>
+               <date  when-iso="1968-10-15" >1968-10-15</date>
+            </correspAction>
+            <correspAction type="received">
+                <persName ref="#musulin-stella">Musulin, Stella</persName>
+                <placeName ref="#"></placeName>
+                <date></date>
+            </correspAction>
+         </correspDesc>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="tfruehwirth" when="2021-09-30">text transcribed</change>
+         <change who="smayer" when="2021-10-01">text transcribed</change>
+         <change who="smayer tfruehwirth" when="2021-10-01">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="6430" lry="3622">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0043/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="6420" lry="3624">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0044/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5674" lry="7758">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0045/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5676" lry="7758">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0046/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0043/" type="envelope"/>
+               <p>
+                  W.H.Auden<lb/>
+                  &#x2105; Heyworth<lb/>
+                  32 Bryanston Square<lb/>
+                  London. W.I.<lb/>
+                  England
+               </p>
+               <p>
+                  <del><unclear></unclear></del>Air-M<unclear>ai</unclear>l
+               </p>
+               <p>
+                  Die Baronin<lb/>
+                  Stella Musulin<lb/>
+                  Wien <del>IV</del>III<lb/>
+                  Neulinggasse 26<lb/>
+                  Austria .
+               </p>
+               <p>
+                  Re Czech refugees .
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0044/" type="envelope"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0045/" type="sheet"/>
+               <p>
+                  &#x2105; Heyworth<lb/>
+                  32 BRYANSTON SQUARE LONDON W1 &#x00B7; AMBASSADOR 8906
+               </p>
+               <p>
+                  Tuesday
+               </p>
+               <p>
+                  Dear Stella:<lb/>
+                  Got back from Oxford yesterday and found your<lb/>
+                  letter waiting.<lb/>
+                  1) I think I ought to take the couple in , but<lb/>
+                  I must leave it to you to decide whether<lb/>
+                  they are O.K. If they are , all rooms, including<lb/>
+                  my study ( which can't be heated are open to them.<lb/>
+                  2). How much money will they need to keep going?<lb/>
+                  And how shall I make the arrangements for payment.<lb/>
+                  3) Will they be able to find work or emigrate before<lb/>
+                  I return in April , when <unclear>I</unclear>'m afraid there will<lb/>
+                  not be room for them.?<lb/>
+                  4) I'm worried about how they will get gas-cylinders<lb/>
+                  for cooking from Neulengbach, since, presumably, they<lb/>
+                  have no car. I expect someone in the village<lb/>
+                  will help.<lb/>
+                  5). If and when they come, I must know in advance<lb/>
+                  so that I can write a note to the<lb/>
+                  Burgomeister.<lb/>
+                  Shall be here <unclear>in</unclear> my a<unclear>ddre</unclear>ss until O<unclear>ct</unclear> 31.st After that<lb/>
+                  77 St Mark's Place .N.Y.C<unclear>.</unclear> N.Y 10003 .<lb/>
+                  love<lb/>
+                  Wystan
+               </p>
+               <p>
+                  Here, I suggest<lb/>
+                  you contact<lb/>
+                  Otto Hoffmann.<lb/>
+                  Wien VII<lb/>
+                  Karl Schweighofgasse<lb/>
+                  4/21<lb/>
+                  Tel. 93/88/155.
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0046/" type="sheet"/>
+         </div>
+      </body>
+   </text>
+</TEI>

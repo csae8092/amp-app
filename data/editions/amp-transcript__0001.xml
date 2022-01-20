@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0001.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin 1963-05-12</title>
+            <author>Auden, W. H.</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>1, 7</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1963-05-12" >1963-05-12</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"></placeName>
+               <date  when-iso="1963-05-12" >1963-05-12</date>
+            </correspAction>
+            <correspAction type="received">
+                <persName ref="#musulin-stella">Musulin, Stella</persName>
+                <placeName ref="#"></placeName>
+                <date></date>
+            </correspAction>
+         </correspDesc>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-17">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2021-09-20">text transcribed</change>
+         <change who="tfruehwirth" when="2021-09-20">text transcribed</change>
+         <change who="smayer tfruehwirth" when="2021-09-20">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="4564" lry="3450">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0001/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="4568" lry="3442">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0002/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="7746" lry="5688">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0003/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="7740" lry="5688">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0004/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0001/" type="envelope"/>
+            <p>Chester in Florence.</p>
+            <p>
+               Die <unclear>Baronin</unclear><lb/>
+               Stella <unclear>Mussulin</unclear><lb/>
+               <del>Wien III</del><lb/>
+               <del>Neulinggasse 26</del>
+            </p>
+            <p>
+               Fridau,<lb/>
+               Obergrafendorf,<lb/>
+               bei ST.PÖLTEN,<lb/>
+               NÖ
+            </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0002/" type="envelope"/>
+            <p>
+               W.H.Auden.<lb/>
+               KIRCHSTETTEN (WESTBAHN)<lb/>
+               HINTERHOLZ 6<lb/>
+               N.-Ö., AUSTRIA
+            </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0003/" type="letter"/>
+            <p>Sunday.</p>
+            <p>
+               KIRCHSTETTEN (WESTBAHN)<lb/>
+               HINTERHOLZ 6<lb/>
+               N.-Ö., Austria               
+            </p>
+            <p>
+               Dear Stella:<lb/>
+               Delighted to hear you are zu Haus.<lb/>
+               No, I didnt get any letter from you. Perhaps<lb/>
+               it is in the U.S. I shall be in Vienna this<lb/>
+               coming week on Monday, <del>Thur</del> Wednesday <unclear>and</unclear> Friday.<lb/>
+               Will try to call you to-morrow to arrange<lb/>
+               a meeting.<lb/>
+               Chester is at the moment in Florence, but<lb/>
+               I expect him back on Tuesday.<lb/>
+               love<lb/>
+               Wystan
+            </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0004/" type="letter"/>
+         </div>
+      </body>
+   </text>
+</TEI>

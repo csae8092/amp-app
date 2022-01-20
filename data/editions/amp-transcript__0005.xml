@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0005.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin 1967-11-08</title>
+            <author>Auden, W. H.</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>1, 14</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1967-11-08" >1967-11-08</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"></placeName>
+               <date  when-iso="1967-11-08" >1967-11-08</date>
+            </correspAction>
+            <correspAction type="received">
+                <persName ref="#musulin-stella">Musulin, Stella</persName>
+                <placeName ref="#"></placeName>
+                <date></date>
+            </correspAction>
+         </correspDesc>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="tfruehwirth" when="2021-09-24">text transcribed</change>
+         <change who="smayer" when="2021-09-27">text transcribed</change>
+         <change who="smayer tfruehwirth" when="2021-09-27">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="6426" lry="3392">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0023/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="6418" lry="3392">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0024/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5568" lry="7398">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0025/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5568" lry="7392">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0026/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0023/" type="envelope"/>
+               <p>
+                  W.H. Auden<lb/>
+                  77 St Mark's Place<lb/>
+                  New York City<lb/>
+                  New York 10003<lb/>
+                  U.<unclear>S.</unclear>A
+               </p>
+               <p>
+                  Air-Mail
+               </p>
+               <p>
+                  Death of Emma Eiermann
+               </p>
+               <p>
+                  Die Baronin<lb/>
+                  Stella Musulin<lb/>
+                  Wien III<lb/>
+                  <del><unclear></unclear></del>Neulingasse 26<lb/>
+                  Austria
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0024/" type="envelope"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0025/" type="sheet"/>
+               <p>
+                  77 St Mark's Place<lb/>
+                  New York City<lb/>
+                  New York 10003
+               </p>
+               <p>
+                  Nov 8th
+               </p>
+               <p>
+                  Dear Stella.<lb/>
+                  A disaster has happened. Frau Eiermann<lb/>
+                  died of a heart-attack on Nov 4th.<lb/>
+                  (Have just hea<unclear>rd</unclear> this from my lawyer.)<unclear>.</unclear><lb/>
+                  A minor worry connected with this is what<lb/>
+                  is happening to her cats and ours. I suppose<lb/>
+                  they will probably have to be destroyed.<lb/>
+                  Next time you are travelling between Fridau<lb/>
+                  and Wien, could you be a dear and stop<lb/>
+                  in Kirchstetten to see what is happening.<lb/>
+                  Incedentally, in case you should need it my lawyers<lb/>
+                  name and address is Dr Walter Redlich. Wien I.<lb/>
+                  Wipplingerstrasse. 24-26.<lb/>
+                  Canterbury was quite fun. The Archbishop came<lb/>
+                  to my first lecture.<lb/>
+                  love<lb/>
+                  Wystan
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0026/" type="sheet"/>
+         </div>
+      </body>
+   </text>
+</TEI>

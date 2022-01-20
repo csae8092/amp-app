@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0053.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Typed Letter Stella Musulin to [Edith Silbermann] [1969]-05-29</title>
+            <author>Musulin, Stella</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>2, 9</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate>[1969]-05-29</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2021-12-15">text transcribed</change>
+         <change who="tfruehwirth" when="2021-12-15">text transcribed using Transkribus</change>
+         <change who="smayer tfruehwirth" when="2021-12-15">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="5696" lry="7754">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0219/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5696" lry="7752">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0220/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0219/" type="sheet"/>
+               <p>
+                  29.Mai.
+               </p>
+               <p>
+                  <del>Liebling,</del>
+                  Ich habe schon sehr lange nicht geschrieben, Du wirst<lb/>
+                  Dich, fürchte ich, schon kränken.  Sehr schön war es, Deine<lb/>
+                  Stimme zu hören, leider hattest Du nicht viel davon.<lb/>
+                  Heute stehe ich immer noch unter dem Eindruck des gest<del>ir</del>rigen<lb/>
+                  Ausflugs nach Kirchstetten wohin ich Fritz Heer verabredeter-<lb/>
+                  maßen zum Essen mitnahm.  Diese manisch-depressive Genie,<del>und</del><lb/>
+                  dieser innerlich verschreckte Lausbub Friedrich Heer, und der<lb/>
+                  grosse englische Dichter Auden, von Kallman ganz zu schweigen -<lb/>
+                  wie würde das gehen?  Es ging großartig.  Fritz war wie ein aus<lb/>
+                  dem Gefängnis entlassener Mensch.  Monatelang kommt er nicht aus<lb/>
+                  der Arbeitsroutine heraus, er freute sich so über das satte Grün<lb/>
+                  des Wienerwalds, über die Akazienbäume die immer wieder silbern<lb/>
+                  schimmernd aus dem dü<del>h</del>nkleren Hintergrund herausleuchteten, ü<del>v</del>ber<lb/>
+                  die gute Luft, die klare Sicht nach dem Sturm vor zwei Tagen.<lb/>
+                  Ich habe ein wenig Angst gehabt, die beiden Großredner würden<lb/>
+                  gleichzeitig oder aneinander vorbeireden, aber das taten sie<lb/>
+                  nur manchmal:  sie wollten von einander etwas erfahren,<lb/>
+                  konnten aber natürlich nur immer wieder große Themen streifen,<lb/>
+                  Anekdoten erzählen und so.  Jedenfalls war die Stimmung herrlich,<lb/>
+                  Fritz entpuppte sich als begabter "mimic", der nicht nur Hitler<lb/>
+                  zum besten nachmachen konnte, das können viele, sondern auf<lb/>
+                  ganz unheimliche Weise Mussolini dem er plötzlich unglaublich<lb/>
+                  ähnlich sah.  Hatte er also die verdorbenen deutschen und<lb/>
+                  italienischen Sprachen illustriert, so ging er später auf die<lb/>
+                  französischen Intellektuellen los:  ein zimperlich-geschwollene<del>n</del>s<lb/>
+                  Gespräch zwischen Gide und Claudel.  Es wurde über Wagners<lb/>
+                  Texte gesprochen, über Liturgie-Reform, über Weinheber, Rudolf<lb/>
+                  Kassner und Freud - über<del>d</del><unclear>i</unclear>diese drei hatte Fritz persönliche<lb/>
+                  Erlebnisse zu berichten gehabt.  Wenn ich Fritz beobachte, kann<lb/>
+                  es sehr oft vorkommen, daß ich sein Gehaben mit den Augen der<lb/>
+                  Konvention sehe, ohne diese Vor<del>ein</del>urteile zu empfinden - wenn<lb/>
+                  Du das irgendwie verstehen kannst.  So hat er, als Auden ihn<lb/>
+                  begrüßte, ihm die Hand geküßt, und das war einerseits "unmöglich"<lb/>
+                  und grenzte auch tatsächlich ans Lächerliche, wa<del>f</del>r es aber doch<lb/>
+                  nicht, weil Fritz einfach aus allen Kategorien, in die man ihn<lb/>
+                  hineinpressen möchte, herausplatzt.  Die Erklärung dafür, daß<lb/>
+                  er doch nicht ganz lächerlich wirkt, ist die Natürlichkeit, die<lb/>
+                  kind<del>ische</del>liche Freude, die er empfindet, im gegeben Fall das plötzliche<lb/>
+                  und völlig unaffektierte Bedürfnis, einen großen Mann zu<lb/>
+                  huldigen.   Interessant, daß Heer mit der Droste-Hülshoff und<lb/>
+                  auch mit Bertha Suttner verwandt ist.<lb/>
+                  Ohne Zweifel liegt in und um das Wesen Heers etwas Tragisches<unclear>.</unclear>
+                  Er ist ebenso unentbehrlich wie unbrauchbar.  Seine große Linie<lb/>
+                  stimmt, die Details nicht, das geht für seine geistige Arbeit<lb/>
+                  wie für seine Persönlichkeit.  Die akademische Welt, wo immer<lb/>
+                  sie von sturer, g<del>e</del>radliniger Mittelmäßigkeit (wie in Wien)<lb/>
+                  beherrscht wird, empört sich und schiebt ihn von sich:  er ist<lb/>
+                  frivol, frevelhaft, frech, unorthodox, unberechenbar und - fast<lb/>
+                  übertreibe ich da ein bißl - im soziologisch-biologischen Sinne<lb/>
+                  artfremd.  Aber nicht nur in Österreich:  er sagte mir, vor<lb/>
+                  kurzem sagte ihm ein deutscher Universitätsprofessor ("er konnte<lb/>
+                  es sagen, weil er Naturwissenschaftler ist"):  "Sie müssen es<lb/>
+                  mir glauben, daß es sich kein deutsches Professorenkollegium<lb/>
+                  leisten kann, Sie zu sich zu nehmen." Ist er einfach zu<lb/>
+                  unbequem?  Was aber seine Person enbelangt, so empfindet er es
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0220/" type="sheet"/>
+               <p>
+                  als weitaus schwieriger, mit sich selbst auszukommen, als<lb/>
+                  dies für d<del>en</del>ie Mitmenschen der Fall ist.  "Ich bin noch immer das<lb/>
+                  verschreckte, verheulte Kind, das sich irgendwie durchschlagen<lb/>
+                  mußte.  Ich bin nie reif geworden.  Ich heiratete zu früh, für<lb/>
+                  die Ehe völlig unreif, mußte kämpfen, um meine F<del>q<unclear></unclear></del>amilie zu<lb/>
+                  ernähren und hatte nie Zeit und Ruhe, um nachzudenken...<lb/>
+                  ein völliges Versagen...  Mein Leben lang ringe ich mit dem<lb/>
+                  Tod, kämpfe ich gegen Selbstmordgedanken... Ich bin passé:<lb/>
+                  man schreibt aus meinen alten Arbeiten kommentarlos ab"usw. usf.<lb/>
+                  Diese und <del><unclear>ü</unclear></del>ähnliche Dinge erzählte er mir auf der Rückfahrt,<lb/>
+                  wo ich eine<del>n</del> ruhige<del>n</del> Nebenstrasse nach Wien wählte und langsam<lb/>
+                  gefahren bin, aber inmitten dieser Depression war er immer wieder<lb/>
+                  über die schöne Natur glücklich, über ruhige Dörfer und hübsche<lb/>
+                  Häuser. sprach über diesen uralten Kulturboden, "wo die Leute<lb/>
+                  noch heute Sachen tun, die vier, fünf Jahrtausende zurück<del>liegen</del><lb/>
+                  reichen, und sie wissen es nicht."<lb/>
+                  Des Rätsels Lösung, des fast überentwickelten Geistes neben<lb/>
+                  der zerrissenen, ungleichmäßig ausgereiften Persönlichkeit,<lb/>
+                  kennt er selbst, oder wenigstens zum Teil.  Es liegt i<del><unclear></unclear></del>m<lb/>
+                  Entsetzen des 4-jährigen Kindes und in den seelischen<lb/>
+                  Entbehrungen, die die Scheidung seiner Eltern verursachte.<lb/>
+                  Ärgerst Du Dich schon darüber, daß ich so viel über Fritz<lb/>
+                  Heer schreibe und wahrscheinlich deshalb weniger über andere<lb/>
+                  Dinge weil die Zeit fehlen wird?  Ich tue es teils weil <del>e</del> ich<lb/>
+                  Dir darüber erzählen möchte, teils als eine Art von self-<lb/>
+                  expression, weil mich der Mann seit 20 Jahren interessiert, seit<lb/>
+                  ich seine Stimme zum ersten Mal 1948 in der "Furche" hörte.<lb/>
+                  Damals habe ich sofort gewusst:  hier ist etwas Gr<del>ßs</del>oßes, das wir<lb/>
+                  jetzt brauchen wie ein bißchen Brot.  (Damals keine abgedroschene<lb/>
+                  Phrase.)  Und er ist auch für Dich interessant:  ich liefere<lb/>
+                  Dir gern Zeugnisse, daß es Menschen gibt - Österreicher! - dem<lb/>
+                  die nötigen Eigenschaften, die Zutaten aus dem ein Faschist<lb/>
+                  geformt werden kann, gänzlich fehlen.  Plötzlich sagte er mir<lb/>
+                  <del>stah</del> strahlend:  "Kallman hat mir er<del>äz</del>zählt, seine Vorfahren<lb/>
+                  waren Juden aus Riga... Juden aus Riga."  Aus irgend einen Grund<lb/>
+                  freute ihn das enorm, und gleich <del><unclear>k</unclear>rie</del> kreisten seine Gedanken<lb/>
+                  <del>u</del>in weiß Gott was für Konvolutionen.  Ach ja, jetzt weiß ich<lb/>
+                  warum, er hat in Riga studiert und kannte wahrscheinlich jüdische<lb/>
+                  Menschen dort.<lb/>
+                  Also Schluß.  Pfingsten:  fast durchwegs herrliches Wetter,<lb/>
+                  es war zum T. Besuch draussen, u.a. Sony, ihre Mutter und die<lb/>
+                  Amélie.  Marko und ich sind Samstag vormittag hinaus- und<lb/>
+                  erst Dienstag am späten Nachmittag hereingefahren.  Ich habe<lb/>
+                  einen sehr netten Brief vom foreign editor der Financial Times<lb/>
+                  bekommen, <del>um</del> in dem er sagt, er ist mit meiner Arbeit sehr<lb/>
+                  zufrieden und war auch darüber freudig überrascht, daß ich<lb/>
+                  imstande bin, in ih<del>e</del>rem Stil zu schreiben - "wenigen gelingt es".<lb/>
+                  Jetzt will ich Deine Fragen beantworten und sonst noch schauen<lb/>
+                  was in Deinem letzten Brief steht.  Die grande toilette der Eva<lb/>
+                  für Schönbrunn war - ich kann Kleider so schlecht schildern -<lb/>
+                  ein bis zum Boden reichendes Kleid in sanft grüner Farbe, aus<lb/>
+                  <del>einer</del> mit winzigen Perlen besticker, schwerer Seide.  Der Mantel<lb/>
+                  mit ein wenig hochstehendem Kragen war aus dem gleichen aber<lb/>
+                  unbesticktem Stoff.  Mein eigenes Kleid für die Oper war leider<lb/>
+                  auch grün, ganz schlicht, gold-lurex Art, mit Seitenschlitz<lb/>
+                  links bis zum Knie.  Für den makellosen Teint der Königin ist<lb/>
+                  Veranlagung verantwortlich, ich habe selten jemanden mit einem<lb/>
+                  so herrlichen Teint gesehen wie seinerzeit <del>die</del> ihre Mutter,<lb/>
+                  und diesen hat auch die Prinzessin Anne gee<del>h</del>rbt.<lb/>
+                  Daß Deine Haut im Augenblick <del>k</del>in keinem guten Zustand ist,<lb/>
+                  ist sehr ärgerlich und ich frage mich, was die Ursache sein<lb/>
+                  könnte.  Daß Du Schuppen hast, habe ich nie gemerkt, aber nimm<lb/>
+                  doch einen guten Schuppen-Schaumpon.  Freilich kann das alles<lb/>
+                  mit dem Alter zu tun <del><unclear>z</unclear></del>haben.  Freuen wir uns auf den Teint, den<lb/>
+                  Du nachher haben wirst...  Ich will mir Livias Stimme, wie sie
+               </p>
+         </div>
+      </body>
+   </text>
+</TEI>

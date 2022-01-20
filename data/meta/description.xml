@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0001.xml">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Project Description</title>
+            <author>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </author>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+                     for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="smayer tfruehwirth" when="2021-12-17">text created</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <figure>
+               <graphic url="../images/DSC_0216.JPG"></graphic>
+               <head>W. H. Auden standing in the garden of his house in Kirchstetten.</head>
+               <figDesc>W. H. Auden in the garden of his house in Kirchstetten (ZEITzeigen community archive).</figDesc>
+            </figure>
+         </div>
+         <div>
+            <head>Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin</head>
+            <p>Wystan Hugh Auden (1907-1973) counts among one of the most influential English-language writers of the twentieth century. From 1958 until his death in 1973, Auden spent up to six months of each year in the Lower Austrian village of Kirchstetten, where he wrote most of his late poetry. This open-access digital edition presents previously unpublished personal letters, notes, literary manuscripts and typescripts, official statements, and photographs in the estate of Welsh-Austrian writer, journalist, and translator Stella Musulin (1915-1996), Auden's close friend and confidante. The three-year project (2021-2024) is supported by the FWF Austrian Science Fund under grant number P33754.</p>
+            <div>
+               <head>Auden in Austria: An Alternative Cartography of Auden Scholarship</head>
+               <p>Auden's life and work in Austria are still often treated as a footnote in Auden scholarship, which has tended to focus on the writer's lengthy periods of residence in his native England and the United States, his adoptive home country from 1939. This project builds on the growing interest in Auden’s activities in Europe in the second half of the twentieth century and sets out to place the 'Austrian Auden' firmly on the map of Auden scholarship. It will help establish Austrian Auden Studies as an emerging field of vibrant research that brings together local and international scholars in their reassessment of one of Auden's most prolific creative periods. Shedding new light on the local and transnational artistic networks in which Auden moved as well as the poet's ambivalent relationship with his host country, this project will also add a vital chapter to Austria's complex political, social, and cultural history in the 1960s and 1970s.</p>
+            </div>
+            <div>
+               <head>The Digital Edition as Life-Writing Project</head>
+               <p>Digital technologies lend themselves to depicting the non-linearity, fragmentedness, and relationality of lives, which seems particularly relevant in the case of a 'global subject' such as W. H. Auden, who, throughout his life, kept straddling multiple cultural and linguistic contexts. We conceive of this digital edition as a form of life writing that presents a life in fragments at the interface of public and private spheres, individual and collective, micro- and macro-environments. Situating Auden within his networks and relationships sidesteps the 'spotlight approach' of traditional biography and allows for other intriguing individuals to come into view, such as Stella Musulin, or Auden's long-term partner and artistic collaborator Chester Kallman. What is more, through the auto/biographical material in the Auden Musulin Papers we encounter a range of Auden personae - public, private, poetic, and legal - as Auden constructs, negotiates, and aligns different versions of selfhood within different social, cultural, media, and industry frameworks during his life in Austria.</p>
+            </div>
+            <div>
+               <head>The Poet's Workshop: Material and Poetic Practices</head>
+               <p>The project takes advantage of innovative imaging technologies used in cultural-heritage research of 3D objects to provide new insights into Auden's poetic practices of composition and revision. High-resolution photometric-stereo reconstructions of selected documents, produced by the Computer Vision Lab (CVL) of TU Wien, will contribute to our understanding of the relationship between, and the development of, texts written by Auden and will enable us to trace the history of typescripts housed in several other Auden collections in the US and the UK. It will also allow for a glimpse into the poet's workshop with regard to the material practices and technologies of writing employed by W. H. Auden in his Kirchstetten home.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>
