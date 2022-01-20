@@ -30,13 +30,16 @@
                                         <a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden-Musulin Correspondence</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Musulin typescripts" href="#" class="nav-link">Musulin typescripts</a>
+                                        <a title="Surface reconstructions" href="#" class="nav-link">Surface reconstructions</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Photos" href="#" class="nav-link">Photos</a>
+                                        <a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="CVL visualizations" href="#" class="nav-link">CVL visualizations</a>
+                                        <a title="Photos" href="photos.html" class="nav-link">Photos</a>
+                                    </li>
+                                    <li class="nav-item dropdown-submenu">
+                                        <a title="Additional materials" href="additional-materials.html" class="nav-link">Additional materials</a>
                                     </li>
                                 </ul>                                
                             </li>

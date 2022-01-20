@@ -10,7 +10,7 @@
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="partials/html_footer.xsl"/>
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="'Correspondence'"/>
+        <xsl:variable name="doc_title" select="'Memoirs'"/>
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
@@ -41,7 +41,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="cards-tab" tabindex="-1">  
                                 <div class="row">
-                                    <xsl:for-each select="collection('../data/editions/correspondence')//tei:TEI">
+                                    <xsl:for-each select="collection('../data/editions/memoirs')//tei:TEI">
                                         <xsl:variable name="full_path">
                                             <xsl:value-of select="document-uri(/)"/>
                                         </xsl:variable>                                
@@ -87,7 +87,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <xsl:for-each select="collection('../data/editions/correspondence')//tei:TEI">
+                                                <xsl:for-each select="collection('../data/editions/memoirs')//tei:TEI">
                                                     <xsl:variable name="full_path">
                                                         <xsl:value-of select="document-uri(/)"/>
                                                     </xsl:variable>
