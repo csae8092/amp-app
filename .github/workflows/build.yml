@@ -21,7 +21,7 @@ jobs:
     - name: Fetch data
       run: |
         ./fetch_data.sh
-    -name: Reorganize data
+    - name: Reorganize data
       run: |
         ant -f copy-task.xml
     - name: Build
