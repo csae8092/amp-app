@@ -19,14 +19,22 @@
         <fileset dir="${target}" includes="*.html"/>
     </delete>
     <delete dir="${target}/static-search"/>
-    <xslt style="${xsl_editions_xml}"  basedir="${editions}" destdir="${target_xml}" includes="*.xml">
+    <xslt style="${xsl_editions_xml}"  basedir="${editions}/correspondence" destdir="${target_xml}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    <xslt style="${xsl_editions}"  basedir="${editions}" destdir="${target}" includes="*.xml">
+    <xslt style="${xsl_editions_xml}"  basedir="${editions}/memoirs" destdir="${target_xml}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+    <xslt style="${xsl_editions_xml}"  basedir="${editions}/photos" destdir="${target_xml}" includes="*.xml">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    <!-- <xslt style="${xsl_editions_xml}"  basedir="${editions}/surfance-reconstructions" destdir="${target_xml}" includes="*.xml">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt> -->
     <xslt style="${xsl_editions}"  basedir="${editions}/correspondence" destdir="${target}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
