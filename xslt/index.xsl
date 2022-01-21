@@ -29,7 +29,7 @@
                     <div class="wrapper" id="wrapper-hero">
                         <div class="row">
                             <div class="col-md-8" style="padding:0!important;">
-                                <div class="wrapper" style="background-color:#fff!important;">
+                                <div class="wrapper">
                                     <div class="container hero-dark" id="wrapper-hero-inner" tabindex="-1" style="margin-top:5%;">
                                         <div class="main-title">
                                             <h1 style="color:#615a60;padding:.5em 0;">Auden Musulin Papers</h1>
@@ -42,67 +42,73 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4" style="padding:0!important;">
-                                <div id="audenIndexCarousel" class="container carousel carousel-fade" data-ride="carousel">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#audenIndexCarousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="1"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="2"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="3"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="4"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="5"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="6"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="7"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="8"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="9"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="10"></li>
-                                        <li data-target="#audenIndexCarousel" data-slide-to="11"></li>                                       
-                                    </ol>
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="images/daumenkino/DSC_0250.JPG" class="d-block" alt="..."/>
-                                            <!--<div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
+                            <div class="col-md-3" style="padding:0!important;">
+                                <div class="card" id="carousel-card">
+                                    <div class="card-body" id="carousel-body">
+                                        <div id="audenIndexCarousel" class="container carousel carousel-fade" data-ride="carousel">
+                                            <!--<ol class="carousel-indicators">
+                                                <li data-target="#audenIndexCarousel" data-slide-to="0" class="active"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="1"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="2"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="3"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="4"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="5"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="6"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="7"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="8"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="9"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="10"></li>
+                                                <li data-target="#audenIndexCarousel" data-slide-to="11"></li>                                       
+                                            </ol>-->
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="images/daumenkino/DSC_0250.JPG" class="d-block" alt="..."/>
+                                                    <!--<div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
                                             </div>-->
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0251.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0252.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0253.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0254.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0267.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0268.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0257.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0265.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0259.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0260.JPG" class="d-block w-100" alt="..."/>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="images/daumenkino/DSC_0262.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0251.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0252.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0253.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0254.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0267.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0268.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0257.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0265.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0259.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0260.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="images/daumenkino/DSC_0262.JPG" class="d-block w-100" alt="..."/>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>                                 
+                            </div>
+                            <div class="col-md-1" style="padding:0!important;">
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid" style="margin-top:1em;">
+                    <div class="container-fluid" style="margin-top:3em;">
                         <div class="row">
                             <div class="col-md-4">
                                 <a href="toc.html" class="index-link">                                   
@@ -111,7 +117,7 @@
                                             <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="d-block w-100" alt="..."/>
                                         </div>
                                         <div class="card-header">                                            
-                                            <h4>W. H. Auden's Letters to Stella Musulin</h4>
+                                            <h4>W. H. Auden's correspondence with Stella Musulin</h4>
                                         </div>
                                     </div>                                     
                                 </a>                                    
