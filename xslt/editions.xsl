@@ -12,6 +12,8 @@
     <xsl:import href="partials/html_footer.xsl"/>
     <xsl:import href="partials/osd-container.xsl"/>
     <xsl:import href="partials/tei-facsimile.xsl"/>
+    <xsl:import href="partials/view-pagination.xsl"/>
+    <xsl:import href="partials/view-type.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
@@ -125,417 +127,41 @@
                             <div class="tab-content">
                                  <div class="tab-pane active" id="diplomatic-tab" tabindex="-1">                                     
                                      <xsl:for-each select="//tei:div[@xml:id='transcription']">                                             
-                                         <xsl:variable 
-                                             name="vseq" 
-                                             select="//tei:pb" 
-                                             as="item()*"/>
-                                         <div class="text-center pagination">
-                                            <ul class="nav nav-tabs">
-                                                <xsl:for-each select="$vseq">
-                                                    <xsl:choose>
-                                                        <xsl:when test="position() = 1">
-                                                            <li class="nav-item">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link active"
-                                                                    data-toggle="tab"
-                                                                    href="#diplomatic-paginate-{position()}"
-                                                                    style="border-radius:30px;">
-                                                                    <xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:when test="position() = [1,2,3,4,5,6,7,8,9]">
-                                                            <li class="nav-item">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link"
-                                                                    data-toggle="tab"
-                                                                    href="#diplomatic-paginate-{position()}"
-                                                                    style="border-radius:30px;">
-                                                                    <xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:when test="position() = 10">
-                                                            <li class="nav-item dropdown">
-                                                                <a
-                                                                    title="more"
-                                                                    href="#"
-                                                                    data-toggle="dropdown"
-                                                                    class="nav-link dropdown-toggle"
-                                                                    style="border-radius:30px;"
-                                                                    >
-                                                                    more <span class="caret"></span>
-                                                                </a>
-                                                                <ul class="dropdown-menu" role="menu">
-                                                                    <xsl:for-each select="$vseq">
-                                                                        <xsl:choose>
-                                                                            <xsl:when test="position() > 9">
-                                                                                <li
-                                                                                    class="nav-item dropdown-submenu"
-                                                                                    style="display:inline-block;">
-                                                                                    <a
-                                                                                        title="{position()}"
-                                                                                        href="#diplomatic-paginate-{position()}"
-                                                                                        class="nav-link"
-                                                                                        data-toggle="tab"
-                                                                                        style="border-radius:30px;">
-                                                                                        <xsl:value-of select="position()"/>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </xsl:when>
-                                                                        </xsl:choose>
-                                                                    </xsl:for-each>                                                                                                                
-                                                                </ul>                                
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:otherwise>
-                                                            <!--<li class="nav-item" style="display:none;">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link btn btn-round btn-backlink"
-                                                                    data-toggle="tab"
-                                                                    href="#diplomatic-paginate-{position()}"
-                                                                    ><xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>-->
-                                                        </xsl:otherwise>
-                                                    </xsl:choose>                                                                                                        
-                                                </xsl:for-each>                                                                                                
-                                            </ul>
-                                         </div>
-                                         <div class="tab-content">
-                                         <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                 
-                                             <xsl:choose>
-                                                 <xsl:when test="position() = 1">                                                         
-                                                     <div class="tab-pane active" id="diplomatic-paginate-{position()}" tabindex="-1">
-                                                         <div id="container-resize-{position()}" class="transcript row">
-                                                             <div id="text-resize-{position()}" class="text-re col-md-8">
-                                                                 <div class="card-body">                                                                                                                                                                                       
-                                                                     <xsl:for-each select="current-group()[self::tei:p]">
-                                                                         <p>
-                                                                             <xsl:apply-templates>
-                                                                                 <xsl:with-param name="view" select="'diplomatic'"/>
-                                                                             </xsl:apply-templates>
-                                                                         </p>
-                                                                     </xsl:for-each>
-                                                                 </div>
-                                                             </div>                                                     
-                                                             <div id="img-resize-{position()}" class="col-md-3">
-                                                                 <div class="expand-wrapper" style="cursor:col-resize;">
-                                                                     <svg id="img-expand-{position()}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
-                                                                         <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
-                                                                         <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
-                                                                     </svg>
-                                                                     <p><small>change size</small></p>
-                                                                 </div>
-                                                                 <!--<hr/> -->                                             
-                                                                 <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
-                                                                 <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
-                                                                 <div id="viewer-{position()}">
-                                                                     <div id="{$osd_container_id}" style="padding:.5em;">
-                                                                         <!-- image container accessed by OSD script -->
-                                                                         <script type="text/javascript" src="js/osd_single.js"></script>
-                                                                         <div id="{$osd_container_id2}">
-                                                                             <xsl:if test="@facs">    
-                                                                                 <xsl:variable name="iiif-ext" select="'full/full/0/default.jpg'"/> 
-                                                                                 <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
-                                                                                 <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'), $( document ).ready(resize('{position()}'))]">
-                                                                                     <xsl:attribute name="src">
-                                                                                         <xsl:value-of select="concat(@facs , $iiif-ext)"/>
-                                                                                     </xsl:attribute>
-                                                                                 </img>                                                                
-                                                                             </xsl:if>                                
-                                                                         </div>                                
-                                                                     </div>  
-                                                                 </div>
-                                                             </div>                                                                 
-                                                         </div>
-                                                     </div>                                                         
-                                                 </xsl:when>
-                                                 <xsl:otherwise>
-                                                     <div class="tab-pane fade" id="diplomatic-paginate-{position()}" tabindex="-1">
-                                                         <div id="container-resize-{position()}" class="transcript row">
-                                                             <div id="text-resize-{position()}" class="text-re col-md-8">                                                                
-                                                                 <div class="card-body">                                                                                                                                                                                       
-                                                                     <xsl:for-each select="current-group()[self::tei:p]">
-                                                                         <p>
-                                                                             <xsl:apply-templates>
-                                                                                 <xsl:with-param name="view" select="'diplomatic'"/>
-                                                                             </xsl:apply-templates>
-                                                                         </p>
-                                                                     </xsl:for-each>
-                                                                 </div>
-                                                             </div>                                                     
-                                                             <div id="img-resize-{position()}" class="col-md-3">
-                                                                 <div class="expand-wrapper" style="cursor:col-resize;">
-                                                                     <svg id="img-expand-{position()}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
-                                                                         <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
-                                                                         <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
-                                                                     </svg>
-                                                                     <p><small>change size</small></p>
-                                                                 </div>
-                                                                 <!--<hr/> -->                                             
-                                                                 <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
-                                                                 <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
-                                                                 <div id="viewer-{position()}">
-                                                                     <div id="{$osd_container_id}" style="padding:.5em;">
-                                                                         <!-- image container accessed by OSD script -->
-                                                                         <script type="text/javascript" src="js/osd_single.js"></script>
-                                                                         <div id="{$osd_container_id2}">
-                                                                             <xsl:if test="@facs">    
-                                                                                 <xsl:variable name="iiif-ext" select="'full/full/0/default.jpg'"/> 
-                                                                                 <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
-                                                                                 <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'), $( document ).ready(resize('{position()}'))]">
-                                                                                     <xsl:attribute name="src">
-                                                                                         <xsl:value-of select="concat(@facs , $iiif-ext)"/>
-                                                                                     </xsl:attribute>
-                                                                                 </img>                                                                
-                                                                             </xsl:if>                                
-                                                                         </div>                                
-                                                                     </div>  
-                                                                 </div>
-                                                             </div>                                                                 
-                                                         </div>
-                                                     </div>                                                         
-                                                 </xsl:otherwise>
-                                             </xsl:choose>
-                                             
-                                         </xsl:for-each-group>   
-                                         </div>
+                                         
+                                         <xsl:call-template name="view-pagination">
+                                             <xsl:with-param name="reading-type" select="'diplomatic'"/>
+                                         </xsl:call-template>
+                                         
+                                         <xsl:call-template name="view-type-img">
+                                             <xsl:with-param name="reading-type" select="'diplomatic'"/>
+                                         </xsl:call-template>
+                                         
                                      </xsl:for-each>                                     
                                  </div>
                                 <div class="tab-pane fade" id="reading-tab" tabindex="-1">
                                     <xsl:for-each select="//tei:div[@xml:id='transcription']">
-                                        <xsl:variable 
-                                            name="vseq" 
-                                            select="//tei:pb" 
-                                            as="item()*"/>
-                                        <div class="text-center pagination">
-                                            <ul class="nav nav-tabs">
-                                                <xsl:for-each select="$vseq">
-                                                    <xsl:choose>
-                                                        <xsl:when test="position() = 1">
-                                                            <li class="nav-item">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link active"
-                                                                    data-toggle="tab"
-                                                                    href="#reading-paginate-{position()}"
-                                                                    style="border-radius:30px;">
-                                                                    <xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:when test="position() = [1,2,3,4,5,6,7,8,9]">
-                                                            <li class="nav-item">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link"
-                                                                    data-toggle="tab"
-                                                                    href="#reading-paginate-{position()}"
-                                                                    style="border-radius:30px;">
-                                                                    <xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:when test="position() = 10">
-                                                            <li class="nav-item dropdown">
-                                                                <a
-                                                                    title="more"
-                                                                    href="#"
-                                                                    data-toggle="dropdown"
-                                                                    class="nav-link dropdown-toggle"
-                                                                    style="border-radius:30px;"
-                                                                    >
-                                                                    more <span class="caret"></span>
-                                                                </a>
-                                                                <ul class="dropdown-menu" role="menu">
-                                                                    <xsl:for-each select="$vseq">
-                                                                        <xsl:choose>
-                                                                            <xsl:when test="position() > 9">
-                                                                                <li
-                                                                                    class="nav-item dropdown-submenu"
-                                                                                    style="display:inline-block;">
-                                                                                    <a
-                                                                                        title="{position()}"
-                                                                                        href="#reading-paginate-{position()}"
-                                                                                        class="nav-link"
-                                                                                        data-toggle="tab"
-                                                                                        style="border-radius:30px;">
-                                                                                        <xsl:value-of select="position()"/>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </xsl:when>
-                                                                        </xsl:choose>
-                                                                    </xsl:for-each>                                                                                                                
-                                                                </ul>                                
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:otherwise>
-                                                            <!--<li class="nav-item" style="display:none;">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link btn btn-round btn-backlink"
-                                                                    data-toggle="tab"
-                                                                    href="#diplomatic-paginate-{position()}"
-                                                                    ><xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>-->
-                                                        </xsl:otherwise>
-                                                    </xsl:choose>                                                                                                        
-                                                </xsl:for-each>                                                                                                
-                                            </ul>
-                                        </div>
-                                        <div class="tab-content">
-                                            <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                
-                                                <xsl:choose>
-                                                    <xsl:when test="position() = 1">
-                                                        <div class="tab-pane active" id="reading-paginate-{position()}" tabindex="-1">
-                                                            <div class="card-body"> 
-                                                            <xsl:for-each select="current-group()[self::tei:p]">
-                                                                <p>                                                        
-                                                                    <xsl:apply-templates>
-                                                                        <xsl:with-param name="view" select="'reading'"/>
-                                                                    </xsl:apply-templates>
-                                                                </p>
-                                                            </xsl:for-each>
-                                                            </div>
-                                                        </div>
-                                                    </xsl:when>
-                                                    <xsl:otherwise>
-                                                        <div class="tab-pane fade" id="reading-paginate-{position()}" tabindex="-1">
-                                                            <div class="card-body"> 
-                                                            <xsl:for-each select="current-group()[self::tei:p]">
-                                                                <p>                                                        
-                                                                    <xsl:apply-templates>
-                                                                        <xsl:with-param name="view" select="'reading'"/>
-                                                                    </xsl:apply-templates>
-                                                                </p>
-                                                            </xsl:for-each>
-                                                            </div>
-                                                        </div>
-                                                    </xsl:otherwise>
-                                                </xsl:choose>                                                
-                                            </xsl:for-each-group>
-                                        </div>
+                                        
+                                        <xsl:call-template name="view-pagination">
+                                            <xsl:with-param name="reading-type" select="'reading'"/>
+                                        </xsl:call-template>
+                                        
+                                        <xsl:call-template name="view-type-no-img">
+                                            <xsl:with-param name="reading-type" select="'reading'"/>
+                                        </xsl:call-template>
+                                        
                                     </xsl:for-each>                                            
                                 </div>
                                 <div class="tab-pane fade" id="commentary-tab" tabindex="-1">
                                     <xsl:for-each select="//tei:div[@xml:id='transcription']">
-                                        <xsl:variable 
-                                            name="vseq" 
-                                            select="//tei:pb" 
-                                            as="item()*"/>   
-                                        <div class="text-center pagination">
-                                            <ul class="nav nav-tabs">
-                                                <xsl:for-each select="$vseq">
-                                                    <xsl:choose>
-                                                        <xsl:when test="position() = 1">
-                                                            <li class="nav-item">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link active"
-                                                                    data-toggle="tab"
-                                                                    href="#commentary-paginate-{position()}"
-                                                                    style="border-radius:30px;">
-                                                                    <xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:when test="position() = [1,2,3,4,5,6,7,8,9]">
-                                                            <li class="nav-item">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link"
-                                                                    data-toggle="tab"
-                                                                    href="#commentary-paginate-{position()}"
-                                                                    style="border-radius:30px;">
-                                                                    <xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:when test="position() = 10">
-                                                            <li class="nav-item dropdown">
-                                                                <a
-                                                                    title="more"
-                                                                    href="#"
-                                                                    data-toggle="dropdown"
-                                                                    class="nav-link dropdown-toggle"
-                                                                    style="border-radius:30px;"
-                                                                    >
-                                                                    more <span class="caret"></span>
-                                                                </a>
-                                                                <ul class="dropdown-menu" role="menu">
-                                                                    <xsl:for-each select="$vseq">
-                                                                        <xsl:choose>
-                                                                            <xsl:when test="position() > 9">
-                                                                                <li
-                                                                                    class="nav-item dropdown-submenu"
-                                                                                    style="display:inline-block;">
-                                                                                    <a
-                                                                                        title="{position()}"
-                                                                                        href="#commentary-paginate-{position()}"
-                                                                                        class="nav-link"
-                                                                                        data-toggle="tab"
-                                                                                        style="border-radius:30px;">
-                                                                                        <xsl:value-of select="position()"/>
-                                                                                    </a>
-                                                                                </li>
-                                                                            </xsl:when>
-                                                                        </xsl:choose>
-                                                                    </xsl:for-each>                                                                                                                
-                                                                </ul>                                
-                                                            </li>
-                                                        </xsl:when>
-                                                        <xsl:otherwise>
-                                                            <!--<li class="nav-item" style="display:none;">
-                                                                <a
-                                                                    title="{position()}"
-                                                                    class="nav-link btn btn-round btn-backlink"
-                                                                    data-toggle="tab"
-                                                                    href="#diplomatic-paginate-{position()}"
-                                                                    ><xsl:value-of select="position()"/> 
-                                                                </a>                                                    
-                                                            </li>-->
-                                                        </xsl:otherwise>
-                                                    </xsl:choose>                                                                                                        
-                                                </xsl:for-each>                                                                                                
-                                            </ul>
-                                        </div>                                             
-                                        <div class="tab-content">
-                                        <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                
-                                            <xsl:choose>
-                                                <xsl:when test="position() = 1">
-                                                    <div class="tab-pane active" id="commentary-paginate-{position()}" tabindex="-1">
-                                                        <div class="card-body"> 
-                                                        <xsl:for-each select="current-group()[self::tei:p]">
-                                                            <p>                                                        
-                                                                <xsl:apply-templates>
-                                                                    <xsl:with-param name="view" select="'commentary'"/>
-                                                                </xsl:apply-templates>
-                                                            </p>
-                                                        </xsl:for-each>
-                                                        </div>
-                                                    </div>
-                                                </xsl:when>
-                                                <xsl:otherwise>
-                                                    <div class="tab-pane fade" id="commentary-paginate-{position()}" tabindex="-1">
-                                                        <div class="card-body"> 
-                                                        <xsl:for-each select="current-group()[self::tei:p]">
-                                                            <p>                                                        
-                                                                <xsl:apply-templates>
-                                                                    <xsl:with-param name="view" select="'commentary'"/>
-                                                                </xsl:apply-templates>
-                                                            </p>
-                                                        </xsl:for-each>
-                                                        </div>
-                                                    </div>
-                                                </xsl:otherwise>
-                                            </xsl:choose>                                                
-                                        </xsl:for-each-group>
-                                        </div>
+                                        
+                                        <xsl:call-template name="view-pagination">
+                                            <xsl:with-param name="reading-type" select="'commentary'"/>
+                                        </xsl:call-template>
+                                        
+                                        <xsl:call-template name="view-type-no-img">
+                                            <xsl:with-param name="reading-type" select="'commentary'"/>
+                                        </xsl:call-template>
+                                        
                                     </xsl:for-each>                                    
                                 </div>
                                 <div class="tab-pane fade" id="xml-tab" tabindex="-1">

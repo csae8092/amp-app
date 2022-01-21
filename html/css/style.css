@@ -74,8 +74,12 @@ div.dataTables_filter {
     box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, .1);
 }
 
+.index-card > .card-body {
+
+}
+
 .index-card {
-    border-top: 5px solid #615a60; 
+    border-top: 5px solid #615a60;
     transition: transform .2s;
 }
 

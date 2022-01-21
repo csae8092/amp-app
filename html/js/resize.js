@@ -26,7 +26,7 @@ function resize(position) {
             left_container.css('max-width', container.width() - offsetRight);
             right_container.css('max-width', offsetRight);
             viewer.css('width', offsetRight);
-            viewer.css('height', 400 + offsetRight);
+            viewer.css('height', offsetRight);
 
         }).on('mouseup', function (e) {
             // stop resizing
