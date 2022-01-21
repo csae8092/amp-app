@@ -9,6 +9,8 @@
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="partials/html_footer.xsl"/>
+    <xsl:import href="partials/toc-table.xsl"/>
+    <xsl:import href="partials/toc-cards.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="'Correspondence'"/>
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
@@ -41,32 +43,9 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="cards-tab" tabindex="-1">  
                                 <div class="row">
-                                    <xsl:for-each select="collection('../data/editions/correspondence')//tei:TEI">
-                                        <xsl:variable name="full_path">
-                                            <xsl:value-of select="document-uri(/)"/>
-                                        </xsl:variable>                                
-                                        <!--<xsl:variable name="date" select="//tei:correspAction/tei:date/@when-iso"/>-->
-                                        <div class="col-md-4" style="padding: 0 !important;">
-                                            <a>
-                                                <xsl:attribute name="href">                                                
-                                                    <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
-                                                </xsl:attribute>
-                                                <div class="card index-card" style="margin:.2em !important;">                                 
-                                                    <div class="card-body">
-                                                        <xsl:variable name="iiif-ext" select="'full/full/0/default.jpg'"/>
-                                                        <img>
-                                                            <xsl:attribute name="src">
-                                                                <xsl:value-of select="concat(//tei:pb[1]/@facs, $iiif-ext)"/>
-                                                            </xsl:attribute>
-                                                        </img>
-                                                    </div>
-                                                    <div class="card-header">                                                      
-                                                        <p style="padding: .2em!important;margin:0!important;"><xsl:value-of select="//tei:title[@level='a']"/></p>
-                                                    </div>                                        
-                                                </div>
-                                            </a>
-                                        </div>                                
-                                    </xsl:for-each>
+                                    <xsl:call-template name="toc-cards">
+                                        <xsl:with-param name="category" select="'correspondence'"/>
+                                    </xsl:call-template>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="table-tab" tabindex="-1">                        
@@ -75,58 +54,9 @@
                                         <h1><xsl:value-of select="$doc_title"/></h1>
                                     </div>
                                     <div class="card-body">
-                                        <table class="table table-striped display" id="tocTable" style="width:100%">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Title</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Latest Revisions Data</th>
-                                                    <th scope="col">Latest Revisions Content</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <xsl:for-each select="collection('../data/editions/correspondence')//tei:TEI">
-                                                    <xsl:variable name="full_path">
-                                                        <xsl:value-of select="document-uri(/)"/>
-                                                    </xsl:variable>
-                                                    <!--<tr>
-                                                        <td>                                        
-                                                            <a>
-                                                                <xsl:attribute name="href">                                                
-                                                                    <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
-                                                                </xsl:attribute>
-                                                                <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
-                                                            </a>
-                                                        </td>
-                                                        <td>
-                                                            <xsl:value-of select="data(.//tei:origDate/@when-iso)"/>
-                                                        </td>  
-                                                    </tr>-->
-                                                    <xsl:for-each select=".//tei:revisionDesc/tei:change[position()=last()]/self::tei:change">                                                
-                                                        <tr>
-                                                            <td>
-                                                                <a>
-                                                                    <xsl:attribute name="href">                                                
-                                                                        <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
-                                                                    </xsl:attribute>
-                                                                    <xsl:value-of select="//tei:title[@level='a'][1]/text()"/>
-                                                                </a>
-                                                            </td>
-                                                            <td><xsl:value-of select="data(//tei:origDate/@when-iso)"/></td>
-                                                            <td>
-                                                                <ul>
-                                                                    <li><xsl:value-of select="concat(@when/name(), ': ' ,@when)"/></li>
-                                                                    <li><xsl:value-of select="concat(@who/name(), ': ', @who)"/></li>
-                                                                </ul>                                                                                                                                            
-                                                            </td>
-                                                            <td>
-                                                                <xsl:apply-templates/>                                                                                             
-                                                            </td>  
-                                                        </tr>                                                                                                                                             
-                                                    </xsl:for-each>
-                                                </xsl:for-each>
-                                            </tbody>
-                                        </table>
+                                        <xsl:call-template name="toc-table">
+                                            <xsl:with-param name="category" select="'correspondence'"/>
+                                        </xsl:call-template>
                                     </div>
                                 </div> 
                             </div>

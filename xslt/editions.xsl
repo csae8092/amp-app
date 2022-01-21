@@ -56,6 +56,7 @@
                         width: 4px;
                         height: 100%;
                         position:absolute;
+                        border-top: 10px solid ccc;
                     }
                 </style>
             </head>
