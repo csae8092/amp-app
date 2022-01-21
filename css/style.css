@@ -1,3 +1,12 @@
+body {
+    background: url("../images/letter-background.png") 0 0 repeat;
+}
+
+#wrapper-hero > .row {
+    padding-top: 2em;
+    background: url("../images/letter-background.png") 0 0 repeat;
+}
+
 /* Datatables, provided by https://github.com/babslgam */
 
 div.dataTables_filter {
@@ -24,7 +33,9 @@ div.dataTables_filter {
 /* main navigation */
 
 .navbar {
-    border-bottom: 5px solid #615a60 !important;
+    /*border-bottom: 5px solid #615a60 !important;*/
+    border-bottom: none !important;
+    background-color: #F7F9F9;
 }
 
 .navbar-collapse {
@@ -72,6 +83,8 @@ div.dataTables_filter {
 .card {
     margin-top: 1em;
     box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background-color: #F7F9F9;
 }
 
 .index-card > .card-body {
@@ -169,12 +182,6 @@ a.btn-round:hover {
 
 /* Index Carousel / Slider */
 
-.carousel-indicators {
-    cursor: pointer;
-    margin-right: 13em;
-    margin-bottom: 3.5em;
-}
-
 #wrapper-hero {
     background-color: #fff;
 }
@@ -191,12 +198,32 @@ a.btn-round:hover {
 
 #audenIndexCarousel {
     max-width: 100%;
-    padding: 2.5em 2em;
+/*    padding: 2.5em 2em;*/
+}
+
+#carousel-body {
+    background-color: #F7F9F9;
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    padding: 0;
+    margin: 0;
+    border-bottom: 5px solid #615a60;
+    border-top: 5px solid #615a60;
+}
+
+#carousel-card {
+    background-color: transparent;
+    margin-top: 1em;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
 }
 
 .carousel .carousel-inner .carousel-item {
-    max-width: 80%;
+/*    max-width: 80%;*/
     background-color:transparent;
+    height: auto;
+    margin-top: 1.5em;
 }
 
 /* staticSearch */
@@ -411,7 +438,7 @@ fieldset.ssFieldset > span > input {
     border: 1px solid #b59890;
     padding: .5em .5em 0 .5em;
     border-radius: .5rem .5rem 0 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #F7F9F9;
     z-index: 99;
     margin-bottom: -2px;
 }
@@ -465,15 +492,9 @@ fieldset.ssFieldset > span > input {
 /*                                                  */
 /* Small devices (landscape phones, 576px and up) */ 
 @media (max-width: 576px) {
-    .carousel-indicators {
-        display:none;         
-    }
     #audenIndexCarousel {
         max-width: 100%;
         padding: 0;
-    }
-    .carousel-item {
-        margin: .5em auto;
     }
     #wrapper-hero{
         padding-bottom: 2em;
@@ -522,17 +543,10 @@ fieldset.ssFieldset > span > input {
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) { 
-    .carousel-indicators {
-        display:none; 
-    }    
     #audenIndexCarousel {
         max-width: 100%;
-        padding: 2em 2em;
         margin: 0 auto;
     }    
-    .carousel-item {
-        margin: .5em auto;
-    }
     #wrapper-hero-inner {
         margin-bottom: 1em;
         padding: 0;
@@ -572,18 +586,11 @@ fieldset.ssFieldset > span > input {
     }
 }
 
-@media (max-width: 1024px){
-    .carousel-indicators {
-        display:none; 
-    }    
+@media (max-width: 1024px){   
     #audenIndexCarousel {
         max-width: 100%;
         padding: 0;
-        margin-top: 2em;
     }    
-    .carousel-item {
-        margin: 1em auto;
-    }
     #wrapper-hero-inner {
         margin-bottom: 1em;
         padding: 0 2em;
@@ -597,18 +604,10 @@ fieldset.ssFieldset > span > input {
 /*@media (min-width: 992px) {  }*/
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) { 
-    .carousel-indicators {
-        margin: 1.5em auto;
-        padding: 0 3em;
-    }    
+@media (max-width: 1200px) {    
     #audenIndexCarousel {
-        padding: 2.5em 3em;
+
     }    
-    .carousel-item {
-        max-width: 100%;
-        margin-top: 2em;
-    }
     #wrapper-hero-inner {
         margin-bottom: 1em;
         padding: 0 2em;
@@ -616,17 +615,10 @@ fieldset.ssFieldset > span > input {
 }
 
 /* Extra large devices (large desktops, 1680px and up) */
-@media (max-width: 1680px) { 
-    .carousel-indicators {
-        margin: 1.5em 4em;
-        padding: 2em 3em;
-    }       
+@media (max-width: 1680px) {      
     #audenIndexCarousel {
         max-width: 100%;
-        padding: 2.5em 2em;
-    }
-    .carousel-item {
-        margin: 1em auto;
+
     }
     #wrapper-hero-inner {
         margin-bottom: 1em;
