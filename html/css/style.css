@@ -93,6 +93,7 @@ div.dataTables_filter {
 
 .index-card {
     border-top: 5px solid #615a60;
+    /*opacity: .6;*/
     transition: transform .2s;
 }
 
@@ -103,6 +104,32 @@ div.dataTables_filter {
 .index-link:hover {
     text-decoration: none !important;
 }
+
+/* timeline auden biography */
+
+.timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 3px;
+    background-color: #ccc;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+.timeline > li > a > .row > .col-md-6 > .timeline-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #ccc;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+}
+
 /* slider button */
 .btn-round {
     border: 1px solid #000;
