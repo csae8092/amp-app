@@ -64,17 +64,17 @@
                                 </ul>                                
                             </li>                            
                             <li class="nav-item"><a title="Relations" href="#" class="nav-link">Relations</a></li>
-                            <!--<li class="nav-item dropdown">
+                            <li class="nav-item dropdown">
                                 <a title="Biographies" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Level 1" href="#" class="nav-link">In Progress</a>
+                                        <a title="W. H. Auden" href="auden-biography.html" class="nav-link">W. H. Auden</a>
                                     </li>
-                                    <li class="nav-item dropdown-submenu">
+                                    <!--<li class="nav-item dropdown-submenu">
                                         <a title="Level 1" href="#" class="nav-link">In Progress</a>
-                                    </li>
+                                    </li>-->
                                 </ul>                                
-                            </li>-->
+                            </li>
                             <li class="nav-item dropdown">
                                 <a title="Project" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Project <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">

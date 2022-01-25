@@ -123,7 +123,7 @@
                                 </a>                                    
                             </div>                            
                             <div class="col-md-4">
-                                <a href="#" class="index-link">  
+                                <a href="auden-biography.html" class="index-link">  
                                     <div class="card index-card">
                                         <div class="card-body">
                                             <img src="images/index/W-H-Auden_7.jpg" class="d-block w-100" alt="..."/>

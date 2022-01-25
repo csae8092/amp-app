@@ -41,43 +41,102 @@
                     
                     <div class="container-fluid">  
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header text-center">
                                 <h1><xsl:value-of select="$doc_title"/></h1>
                             </div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul class="timeline" style="list-style:none;">
-                                            <xsl:for-each select="//tei:event">
-                                                <xsl:variable name="panel-id" select="concat(generate-id(), '-', position())"/>
-                                                <li id="{$panel-id}">
-                                                    <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
-                                                        <div class="row">
-                                                            <div class="col-md-6">
-                                                                <div class="card timeline-panel" style="border:1px solid #ccc;margin-right:1.8em;">
-                                                                    <div class="card-body">
-                                                                        <h5><xsl:value-of select="./tei:head"/></h5>
-                                                                        <p><xsl:value-of select="./tei:ab"/></p>
-                                                                    </div>                                                                    
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <!--<div class="card timeline-panel" style="border:1px solid #615a60;">
-                                                                    <div class="card-body">
-                                                                        
-                                                                    </div>                                                                    
-                                                                </div>-->
-                                                            </div>
-                                                        </div>                                                         
-                                                    </a>                                                                                                        
-                                                </li>                                                
-                                            </xsl:for-each> 
-                                        </ul>
-                                    </div>
-                                                                        
-                                </div>
-                            </div>                            
                         </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <xsl:for-each select="//tei:event">
+                                    <xsl:variable name="panel-id" select="concat(generate-id(), '-', position())"/>
+                                    <xsl:variable name="img" select="concat(@facs, 'full/full/0/default.jpg')"/>
+                                    <div class="row timeline">
+                                        <xsl:choose>
+                                            <xsl:when test="@type='correspondence'">                                                        
+                                                <div class="col-md-5">    
+                                                    <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
+                                                        <div class="card timeline-panel-left">
+                                                            <div class="card-body">                                                                 
+                                                                <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
+                                                            </div>          
+                                                            <div class="card-footer">
+                                                                <h5><xsl:value-of select="./tei:label"/></h5>
+                                                            </div>                                                                   
+                                                        </div>
+                                                    </a>
+                                                </div>  
+                                                <div class="col-md-2">
+                                                    <div class="timeline-circle">
+                                                        <xsl:value-of select="./tei:head/tei:date/@when"/>
+                                                    </div>
+                                                </div>                                                                
+                                                <div class="col-md-5">
+                                                    <!--<div class="card timeline-panel" style="border:1px solid #615a60;">
+                                                        <div class="card-body">
+                                                            
+                                                        </div>                                                                    
+                                                    </div>-->
+                                                </div>
+                                            </xsl:when>
+                                            <xsl:when test="@type='additional-materials'">
+                                                <div class="col-md-5">
+                                                    <!--<div class="card timeline-panel" style="border:1px solid #615a60;">
+                                                        <div class="card-body">
+                                                            
+                                                        </div>                                                                    
+                                                    </div>-->
+                                                </div>                                                                
+                                                <div class="col-md-2">
+                                                    <div class="timeline-circle">
+                                                        <xsl:value-of select="./tei:head/tei:date/@when"/>
+                                                    </div>
+                                                </div>                                                                
+                                                <div class="col-md-5">    
+                                                    <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
+                                                        <div class="card timeline-panel-right">
+                                                            <div class="card-body">                                                                 
+                                                                <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
+                                                            </div>          
+                                                            <div class="card-footer">
+                                                                <h5><xsl:value-of select="./tei:label"/></h5>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>                                                                
+                                            </xsl:when>
+                                            <xsl:when test="@type='photos'">
+                                                <div class="col-md-5">
+                                                    <!--<div class="card timeline-panel" style="border:1px solid #615a60;">
+                                                        <div class="card-body">
+                                                            
+                                                        </div>                                                                    
+                                                    </div>-->
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <div class="timeline-circle">
+                                                        <xsl:value-of select="./tei:head/tei:date/@when"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">    
+                                                    <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
+                                                        <div class="card timeline-panel-right">
+                                                            <div class="card-body">                                                                 
+                                                                <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
+                                                            </div>          
+                                                            <div class="card-footer">
+                                                                <h5><xsl:value-of select="./tei:label"/></h5>
+                                                            </div>                                                                 
+                                                        </div>
+                                                    </a>
+                                                </div>                                                            
+                                            </xsl:when>
+                                        </xsl:choose>
+                                    </div>                                                                                                    
+                                </xsl:for-each> 
+                            </div>                                                                        
+                        </div>
+                                                        
+                        
                     </div>
                     <xsl:call-template name="html_footer"/>
                 </div>                
