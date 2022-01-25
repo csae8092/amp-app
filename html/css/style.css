@@ -107,6 +107,10 @@ div.dataTables_filter {
 
 /* timeline auden biography */
 
+.timeline > .col-md-5 {
+    z-index: 1;
+}
+
 .timeline:before {
     top: 0;
     bottom: 0;
@@ -116,7 +120,7 @@ div.dataTables_filter {
     background-color: #ccc;
     left: 50%;
     margin-left: -1.5px;
-    z-index: 1;
+    z-index: 0;
 }
 .timeline-panel-left {
     border:1px solid #ccc;
@@ -705,6 +709,12 @@ fieldset.ssFieldset > span > input {
         padding: 12px 0 10px 0px;
     }
     .expand-wrapper {
+        display: none;
+    }
+    .timeline-panel-left:before {
+        display: none;
+    }
+    .timeline-panel-right:before {
         display: none;
     }
 }

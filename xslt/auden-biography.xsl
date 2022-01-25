@@ -66,8 +66,11 @@
                                                     </a>
                                                 </div>  
                                                 <div class="col-md-2">
-                                                    <div class="timeline-circle">
-                                                        <xsl:value-of select="./tei:head/tei:date/@when"/>
+                                                    <div class="timeline-circle text-center">
+                                                        <p style="font-family: FreeMono, monospace;margin-bottom:0;padding: 0 .5em">
+                                                            <xsl:variable name="d" as="xs:date" select="./tei:head/tei:date/@when"/>
+                                                            <xsl:value-of select="format-date($d, '[Y], [MNn] [D1o]', 'en', (), ())"/>
+                                                        </p>                                                        
                                                     </div>
                                                 </div>                                                                
                                                 <div class="col-md-5">
@@ -87,8 +90,11 @@
                                                     </div>-->
                                                 </div>                                                                
                                                 <div class="col-md-2">
-                                                    <div class="timeline-circle">
-                                                        <xsl:value-of select="./tei:head/tei:date/@when"/>
+                                                    <div class="timeline-circle text-center">
+                                                        <p style="font-family: FreeMono, monospace;margin-bottom:0;padding: 0 .5em">
+                                                            <xsl:variable name="d" as="xs:date" select="./tei:head/tei:date/@when"/>
+                                                            <xsl:value-of select="format-date($d, '[Y], [MNn] [D1o]', 'en', (), ())"/>
+                                                        </p> 
                                                     </div>
                                                 </div>                                                                
                                                 <div class="col-md-5">    
@@ -113,8 +119,11 @@
                                                     </div>-->
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <div class="timeline-circle">
-                                                        <xsl:value-of select="./tei:head/tei:date/@when"/>
+                                                    <div class="timeline-circle text-center">
+                                                        <p style="font-family: FreeMono, monospace;margin-bottom:0;padding: 0 .5em">
+                                                            <xsl:variable name="d" as="xs:date" select="./tei:head/tei:date/@when"/>
+                                                            <xsl:value-of select="format-date($d, '[Y], [MNn] [D1o]', 'en', (), ())"/>
+                                                        </p> 
                                                     </div>
                                                 </div>
                                                 <div class="col-md-5">    
