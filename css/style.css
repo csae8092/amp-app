@@ -116,9 +116,53 @@ div.dataTables_filter {
     background-color: #ccc;
     left: 50%;
     margin-left: -1.5px;
+    z-index: 1;
+}
+.timeline-panel-left {
+    border:1px solid #ccc;
+    border-bottom: 5px solid #615a60;
+    border-top: 5px solid #615a60;
+    transition: transform .2s;
 }
 
-.timeline > li > a > .row > .col-md-6 > .timeline-panel:before {
+.timeline-panel-right {
+    border:1px solid #ccc;
+    border-bottom: 5px solid #615a60;
+    border-top: 5px solid #615a60;
+    transition: transform .2s;
+}
+
+/*.timeline-panel-right > .card-body {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 1s linear, display 2s;
+}
+
+.timeline-panel-left > .card-body {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 1s linear, display 2s;
+}
+
+.timeline-panel-left:hover > .card-body {    
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}
+
+.timeline-panel-right:hover > .card-body {    
+    visibility: visible;
+    opacity: 1;
+    display: block;
+}*/
+
+.timeline-panel-right:hover, .timeline-panel-left:hover {
+    transform: scale(1.02);
+}
+
+.timeline-panel-left:before {
     position: absolute;
     top: 26px;
     right: -15px;
@@ -128,6 +172,42 @@ div.dataTables_filter {
     border-right: 0 solid #ccc;
     border-bottom: 15px solid transparent;
     content: " ";
+}
+
+.timeline-panel-right:before {
+    position: absolute;
+    top: 26px;
+    left: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #ccc;
+    border-left: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    content: " ";
+}
+
+.timeline-circle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 110px;
+    margin: auto;
+    margin-top: .7em;
+    color: #fff;
+    background-color: #615a60;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 6px solid #b59890;
+    z-index: 2;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, .1);
+    transition: transform .2s;
+}
+
+.timeline-circle:hover {
+    transform: scale(1.02);
 }
 
 /* slider button */
