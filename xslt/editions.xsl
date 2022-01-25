@@ -94,7 +94,7 @@
                                                     </svg>
                                                 </a>  
                                             </xsl:when>
-                                            <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') != ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060','0055', '0048', '0054', '0050','0028']">
+                                            <xsl:when test="not(substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060','0055', '0048', '0054', '0050','0028'])">
                                                 <a title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink">
                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                                                         <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
@@ -129,39 +129,63 @@
                                  <div class="tab-pane active" id="diplomatic-tab" tabindex="-1">                                     
                                      <xsl:for-each select="//tei:div[@xml:id='transcription']">                                             
                                          
-                                         <xsl:call-template name="view-pagination">
-                                             <xsl:with-param name="reading-type" select="'diplomatic'"/>
-                                         </xsl:call-template>
+                                         <div class="pagination-top">
+                                             <xsl:call-template name="view-pagination">
+                                                 <xsl:with-param name="reading-type" select="'diplomatic'"/>
+                                             </xsl:call-template>  
+                                         </div> 
                                          
                                          <xsl:call-template name="view-type-img">
                                              <xsl:with-param name="reading-type" select="'diplomatic'"/>
                                          </xsl:call-template>
+                                         
+                                         <div class="pagination-bottom">
+                                             <xsl:call-template name="view-pagination">
+                                                 <xsl:with-param name="reading-type" select="'diplomatic'"/>
+                                             </xsl:call-template>  
+                                         </div>                                         
                                          
                                      </xsl:for-each>                                     
                                  </div>
                                 <div class="tab-pane fade" id="reading-tab" tabindex="-1">
                                     <xsl:for-each select="//tei:div[@xml:id='transcription']">
                                         
-                                        <xsl:call-template name="view-pagination">
-                                            <xsl:with-param name="reading-type" select="'reading'"/>
-                                        </xsl:call-template>
+                                        <div class="pagination-top">
+                                            <xsl:call-template name="view-pagination">
+                                                <xsl:with-param name="reading-type" select="'reading'"/>
+                                            </xsl:call-template>  
+                                        </div>   
                                         
                                         <xsl:call-template name="view-type-no-img">
                                             <xsl:with-param name="reading-type" select="'reading'"/>
                                         </xsl:call-template>
+                                        
+                                        <div class="pagination-bottom">
+                                            <xsl:call-template name="view-pagination">
+                                                <xsl:with-param name="reading-type" select="'reading'"/>
+                                            </xsl:call-template>  
+                                        </div>   
                                         
                                     </xsl:for-each>                                            
                                 </div>
                                 <div class="tab-pane fade" id="commentary-tab" tabindex="-1">
-                                    <xsl:for-each select="//tei:div[@xml:id='transcription']">
+                                    <xsl:for-each select="//tei:div[@xml:id='transcription']">                                        
                                         
-                                        <xsl:call-template name="view-pagination">
-                                            <xsl:with-param name="reading-type" select="'commentary'"/>
-                                        </xsl:call-template>
+                                        <div class="pagination-top">
+                                            <xsl:call-template name="view-pagination">
+                                                <xsl:with-param name="reading-type" select="'commentary'"/>
+                                            </xsl:call-template>  
+                                        </div>   
                                         
                                         <xsl:call-template name="view-type-no-img">
                                             <xsl:with-param name="reading-type" select="'commentary'"/>
                                         </xsl:call-template>
+                                        
+                                        <div class="pagination-bottom">
+                                            <xsl:call-template name="view-pagination">
+                                                <xsl:with-param name="reading-type" select="'commentary'"/>
+                                            </xsl:call-template>  
+                                        </div> 
                                         
                                     </xsl:for-each>                                    
                                 </div>
