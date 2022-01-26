@@ -15,15 +15,15 @@
     <xsl:template name="bio-el">
         <xsl:param name="img"/>
         <xsl:param name="location"/>
-        <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
-            <div class="card timeline-panel-{$location}">
-                <!--<div class="card-body">                                                                 
+            <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
+                <div class="card timeline-panel-{$location}">
+                    <!--<div class="card-body">                                                                 
                     <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
                 </div>-->          
-                <div class="card-body">
-                    <span><xsl:value-of select="./tei:label"/></span>
-                </div>                                                                 
-            </div>
-        </a>
+                    <div class="card-body">
+                        <span><xsl:value-of select="./tei:label"/></span>
+                    </div>                                                                 
+                </div>
+            </a>                
     </xsl:template>
 </xsl:stylesheet>
