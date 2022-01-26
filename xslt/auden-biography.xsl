@@ -10,6 +10,8 @@
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="partials/html_footer.xsl"/>
+    <xsl:import href="partials/biography-el.xsl"/>
+    <xsl:import href="partials/biography-circle.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
@@ -54,24 +56,13 @@
                                         <xsl:choose>
                                             <xsl:when test="@type='correspondence'">                                                        
                                                 <div class="col-md-5">    
-                                                    <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
-                                                        <div class="card timeline-panel-left">
-                                                            <div class="card-body">                                                                 
-                                                                <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
-                                                            </div>          
-                                                            <div class="card-footer">
-                                                                <h5><xsl:value-of select="./tei:label"/></h5>
-                                                            </div>                                                                   
-                                                        </div>
-                                                    </a>
+                                                    <xsl:call-template name="bio-el">
+                                                        <xsl:with-param name="img" select="$img"/>
+                                                        <xsl:with-param name="location" select="'left'"/>
+                                                    </xsl:call-template>
                                                 </div>  
                                                 <div class="col-md-2">
-                                                    <div class="timeline-circle text-center">
-                                                        <p style="font-family: FreeMono, monospace;margin-bottom:0;padding: 0 .5em">
-                                                            <xsl:variable name="d" as="xs:date" select="./tei:head/tei:date/@when"/>
-                                                            <xsl:value-of select="format-date($d, '[Y], [MNn] [D1o]', 'en', (), ())"/>
-                                                        </p>                                                        
-                                                    </div>
+                                                    <xsl:call-template name="bio-circle"/>
                                                 </div>                                                                
                                                 <div class="col-md-5">
                                                     <!--<div class="card timeline-panel" style="border:1px solid #615a60;">
@@ -90,24 +81,13 @@
                                                     </div>-->
                                                 </div>                                                                
                                                 <div class="col-md-2">
-                                                    <div class="timeline-circle text-center">
-                                                        <p style="font-family: FreeMono, monospace;margin-bottom:0;padding: 0 .5em">
-                                                            <xsl:variable name="d" as="xs:date" select="./tei:head/tei:date/@when"/>
-                                                            <xsl:value-of select="format-date($d, '[Y], [MNn] [D1o]', 'en', (), ())"/>
-                                                        </p> 
-                                                    </div>
+                                                    <xsl:call-template name="bio-circle"/>
                                                 </div>                                                                
                                                 <div class="col-md-5">    
-                                                    <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
-                                                        <div class="card timeline-panel-right">
-                                                            <div class="card-body">                                                                 
-                                                                <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
-                                                            </div>          
-                                                            <div class="card-footer">
-                                                                <h5><xsl:value-of select="./tei:label"/></h5>
-                                                            </div>
-                                                        </div>
-                                                    </a>
+                                                    <xsl:call-template name="bio-el">
+                                                        <xsl:with-param name="img" select="$img"/>
+                                                        <xsl:with-param name="location" select="'right'"/>
+                                                    </xsl:call-template>
                                                 </div>                                                                
                                             </xsl:when>
                                             <xsl:when test="@type='photos'">
@@ -119,24 +99,13 @@
                                                     </div>-->
                                                 </div>
                                                 <div class="col-md-2">
-                                                    <div class="timeline-circle text-center">
-                                                        <p style="font-family: FreeMono, monospace;margin-bottom:0;padding: 0 .5em">
-                                                            <xsl:variable name="d" as="xs:date" select="./tei:head/tei:date/@when"/>
-                                                            <xsl:value-of select="format-date($d, '[Y], [MNn] [D1o]', 'en', (), ())"/>
-                                                        </p> 
-                                                    </div>
+                                                    <xsl:call-template name="bio-circle"/>
                                                 </div>
                                                 <div class="col-md-5">    
-                                                    <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
-                                                        <div class="card timeline-panel-right">
-                                                            <div class="card-body">                                                                 
-                                                                <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
-                                                            </div>          
-                                                            <div class="card-footer">
-                                                                <h5><xsl:value-of select="./tei:label"/></h5>
-                                                            </div>                                                                 
-                                                        </div>
-                                                    </a>
+                                                    <xsl:call-template name="bio-el">
+                                                        <xsl:with-param name="img" select="$img"/>
+                                                        <xsl:with-param name="location" select="'right'"/>
+                                                    </xsl:call-template>
                                                 </div>                                                            
                                             </xsl:when>
                                         </xsl:choose>
