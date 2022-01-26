@@ -1,10 +1,18 @@
 body {
-    background: url("../images/letter-background.png") 0 0 repeat;
+    /*background: url("../images/letter-background.png") 0 0 repeat;*/
 }
+
+/*.card-header {
+    background: url("../images/letter-background.png") 0 0 repeat;    
+}
+
+.card-footer {
+    background: url("../images/letter-background.png") 0 0 repeat;
+}*/
 
 #wrapper-hero > .row {
     padding-top: 2em;
-    background: url("../images/letter-background.png") 0 0 repeat;
+/*    background: url("../images/letter-background.png") 0 0 repeat;*/
 }
 
 /* Datatables, provided by https://github.com/babslgam */
@@ -33,9 +41,9 @@ div.dataTables_filter {
 /* main navigation */
 
 .navbar {
-    /*border-bottom: 5px solid #615a60 !important;*/
-    border-bottom: none !important;
-    background-color: #F7F9F9;
+    border-bottom: 5px solid #615a60 !important;
+    /*border-bottom: none !important;*/
+    background-color: #fff;
 }
 
 .navbar-collapse {
@@ -84,7 +92,6 @@ div.dataTables_filter {
     margin-top: 1em;
     box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, .1);
     border-radius: .5rem;
-    background-color: #F7F9F9;
 }
 
 .index-card > .card-body {
@@ -313,13 +320,13 @@ a.btn-round:hover {
 }
 
 #carousel-body {
-    background-color: #F7F9F9;
-    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, .1);
-    border-radius: .5rem;
+    background-color: #fff;
+    /*box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, .1);*/
+    /*border-radius: .5rem;*/
     padding: 0;
     margin: 0;
-    border-bottom: 5px solid #615a60;
-    border-top: 5px solid #615a60;
+    /*border-bottom: 5px solid #615a60;*/
+    /*border-top: 5px solid #615a60;*/
 }
 
 #carousel-card {
@@ -334,7 +341,7 @@ a.btn-round:hover {
 /*    max-width: 80%;*/
     background-color:transparent;
     height: auto;
-    margin-top: 1.5em;
+    /*margin-top: 1.5em;*/
 }
 
 /* staticSearch */
