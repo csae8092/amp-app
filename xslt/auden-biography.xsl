@@ -42,8 +42,8 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">  
-                        <div class="card" style="border-bottom: 5px solid #b59890;border-top: 5px solid #b59890;margin-top:2em;">
-                            <div class="card-header text-center">
+                        <div class="card" style="margin-top:2em;">
+                            <div class="card-body text-center">
                                 <h1><xsl:value-of select="$doc_title"/></h1>
                                 <ul style="margin-top:1em;">
                                     <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@when, '-')[1]">                                    
