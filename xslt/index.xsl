@@ -64,7 +64,7 @@
                                                 <div class="carousel-item active">
                                                     <img src="images/daumenkino/DSC_0250.JPG" class="d-block" alt="..."/>
                                                     <!--<div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
-                                            </div>-->
+                                                    </div>-->
                                                 </div>
                                                 <div class="carousel-item">
                                                     <img src="images/daumenkino/DSC_0251.JPG" class="d-block w-100" alt="..."/>
@@ -135,7 +135,7 @@
                                 </a>
                             </div>   
                             <div class="col-md-4">
-                                <a href="#" class="index-link">                                                     
+                                <a href="musulin-biography.html" class="index-link">                                                     
                                     <div class="card index-card">
                                         <div class="card-body">
                                             <img src="images/index/stella-musulin_0237.jpg" class="d-block w-100" alt="..."/>
