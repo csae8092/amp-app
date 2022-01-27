@@ -45,7 +45,7 @@
                         <div class="card" style="margin-top:2em;">
                             <div class="card-body text-center">
                                 <h1><xsl:value-of select="$doc_title"/></h1>
-                                <ul style="margin-top:1em;">
+                                <ul style="margin-top:1em;padding-left:0;">
                                     <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@when, '-')[1]">                                    
                                         <li style="display:inline;list-style:none;margin-left:1em;">
                                             <a href="#{current-grouping-key()}" title="jump to date">

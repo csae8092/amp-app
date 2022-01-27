@@ -70,9 +70,9 @@
                                     <li class="nav-item dropdown-submenu">
                                         <a title="W. H. Auden" href="auden-biography.html" class="nav-link">W. H. Auden</a>
                                     </li>
-                                    <!--<li class="nav-item dropdown-submenu">
-                                        <a title="Level 1" href="#" class="nav-link">In Progress</a>
-                                    </li>-->
+                                    <li class="nav-item dropdown-submenu">
+                                        <a title="Stella Musulin" href="musulin-biography.html" class="nav-link">Stella Musulin</a>
+                                    </li>
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">
