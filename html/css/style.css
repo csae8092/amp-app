@@ -121,8 +121,9 @@ div.dataTables_filter {
     background-color: rgba(0, 0, 0, .6);
 }
 
-.modal-content {
+.timeline-modal {
     background-color: transparent;
+    border: 0;
 }
 
 button.close {

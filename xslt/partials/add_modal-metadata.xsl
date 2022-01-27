@@ -15,7 +15,7 @@
     <xsl:template name="modal-metadata">
         <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
+                <div class="modal-content timeline-modal">
                     <button type="button" class="ml-2 mb-1 close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
                     <div class="modal-body">                        
                         <div class="timeline-container timeline-theme-1">
@@ -36,6 +36,7 @@
             </div>
         </div>
         <script type="text/javascript">
+            // created with https://ilkeryilmaz.github.io/timelinejs/
             $('.js-timeline').Timeline({
                 autoplay: true,
             });
