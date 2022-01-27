@@ -14,11 +14,31 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>data/meta/musulin-biography.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>biographies</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>data/meta/auden-biography.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>auden-biography</String>
+                                        <String>biographies</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -58,7 +78,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>auden-biography</String>
+                                        <String>biographies</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -205,7 +225,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>auden-biography</String>
+                                    <String>biographies</String>
                                 </field>
                                 <field name="baseURL">
                                     <String></String>
@@ -244,7 +264,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${pd}/html/auden-biography.html</String>
+                                    <String>${pd}/html/${cfn}.html</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
