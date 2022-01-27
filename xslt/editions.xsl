@@ -154,7 +154,7 @@
                                             <xsl:call-template name="view-pagination">
                                                 <xsl:with-param name="reading-type" select="'reading'"/>
                                             </xsl:call-template>  
-                                        </div>   
+                                        </div>  
                                         
                                         <xsl:call-template name="view-type-no-img">
                                             <xsl:with-param name="reading-type" select="'reading'"/>

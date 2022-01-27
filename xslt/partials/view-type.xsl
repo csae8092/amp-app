@@ -121,27 +121,57 @@
                 <xsl:choose>
                     <xsl:when test="position() = 1">
                         <div class="tab-pane active" id="{$reading-type}-paginate-{position()}" tabindex="-1">
-                            <div class="card-body"> 
-                                <xsl:for-each select="current-group()[self::tei:p]">
-                                    <p>                                                        
-                                        <xsl:apply-templates>
-                                            <xsl:with-param name="view" select="$reading-type"/>
-                                        </xsl:apply-templates>
-                                    </p>
-                                </xsl:for-each>
+                            <div class="card-body">
+                                <xsl:choose>
+                                    <xsl:when test="$reading-type = 'reading'">
+                                        <div class="yes-index">
+                                            <xsl:for-each select="current-group()[self::tei:p]">
+                                                <p>                                                        
+                                                    <xsl:apply-templates>
+                                                        <xsl:with-param name="view" select="$reading-type"/>
+                                                    </xsl:apply-templates>
+                                                </p>
+                                            </xsl:for-each>
+                                        </div>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:for-each select="current-group()[self::tei:p]">
+                                            <p>                                                        
+                                                <xsl:apply-templates>
+                                                    <xsl:with-param name="view" select="$reading-type"/>
+                                                </xsl:apply-templates>
+                                            </p>
+                                        </xsl:for-each>
+                                    </xsl:otherwise>
+                                </xsl:choose>                                
                             </div>
                         </div>
                     </xsl:when>
                     <xsl:otherwise>
                         <div class="tab-pane fade" id="{$reading-type}-paginate-{position()}" tabindex="-1">
                             <div class="card-body"> 
-                                <xsl:for-each select="current-group()[self::tei:p]">
-                                    <p>                                                        
-                                        <xsl:apply-templates>
-                                            <xsl:with-param name="view" select="$reading-type"/>
-                                        </xsl:apply-templates>
-                                    </p>
-                                </xsl:for-each>
+                                <xsl:choose>
+                                    <xsl:when test="$reading-type = 'reading'">
+                                        <div class="yes-index">
+                                            <xsl:for-each select="current-group()[self::tei:p]">
+                                                <p>                                                        
+                                                    <xsl:apply-templates>
+                                                        <xsl:with-param name="view" select="$reading-type"/>
+                                                    </xsl:apply-templates>
+                                                </p>
+                                            </xsl:for-each>
+                                        </div>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:for-each select="current-group()[self::tei:p]">
+                                            <p>                                                        
+                                                <xsl:apply-templates>
+                                                    <xsl:with-param name="view" select="$reading-type"/>
+                                                </xsl:apply-templates>
+                                            </p>
+                                        </xsl:for-each>
+                                    </xsl:otherwise>
+                                </xsl:choose>
                             </div>
                         </div>
                     </xsl:otherwise>
