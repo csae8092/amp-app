@@ -114,6 +114,47 @@ div.dataTables_filter {
 
 /* timeline auden biography */
 
+/* js-timeline */
+
+
+#exampleModalLong {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.modal-content {
+    background-color: transparent;
+}
+
+button.close {
+    color: #fff;
+}
+
+.timeline-dots button {
+    color: #f1f1f1;
+}
+
+.timeline-dots li.slide-active button {
+    color: #b59890;
+}
+
+.timeline-list {
+    margin: 0 auto;
+    border-radius: .5rem;
+}
+
+.timeline-dots-wrap.bottom {
+    bottom: -60px;
+}
+
+.timeline-item {
+    background-color: #ddd;
+    /*border-radius: .5rem;*/
+}
+
+.timeline-horizontal .timeline-dots-wrap {
+    height: 60px;
+}
+
 #timeline-heading {
     margin: 0 auto;
     position: relative;
