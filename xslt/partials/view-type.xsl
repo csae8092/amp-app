@@ -152,15 +152,13 @@
                             <div class="card-body"> 
                                 <xsl:choose>
                                     <xsl:when test="$reading-type = 'reading'">
-                                        <div class="yes-index">
-                                            <xsl:for-each select="current-group()[self::tei:p]">
-                                                <p>                                                        
-                                                    <xsl:apply-templates>
-                                                        <xsl:with-param name="view" select="$reading-type"/>
-                                                    </xsl:apply-templates>
-                                                </p>
-                                            </xsl:for-each>
-                                        </div>
+                                        <xsl:for-each select="current-group()[self::tei:p]">
+                                            <p class="yes-index">                                                        
+                                                <xsl:apply-templates>
+                                                    <xsl:with-param name="view" select="$reading-type"/>
+                                                </xsl:apply-templates>
+                                            </p>
+                                        </xsl:for-each>                                        
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:for-each select="current-group()[self::tei:p]">
