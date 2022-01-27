@@ -78,7 +78,7 @@
                                         <xsl:for-each select="current-group()">
                                             <div class="row timeline">                                            
                                                 <xsl:choose>
-                                                    <xsl:when test="@type='correspondence' or @type='additional-materials' or @type='photos'">                                                        
+                                                    <xsl:when test="@type='event'">                                                        
                                                         <div class="col-md-5">    
                                                             <xsl:call-template name="bio-el">
                                                                 <xsl:with-param name="location" select="'left'"/>
@@ -95,7 +95,7 @@
                                                             </div>-->
                                                         </div>
                                                     </xsl:when>                                                    
-                                                    <xsl:when test="@type='event'">
+                                                    <xsl:when test="@type='correspondence' or @type='additional-materials' or @type='photos'">
                                                         <div class="col-md-5">
                                                             
                                                         </div>
