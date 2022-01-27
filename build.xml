@@ -4,6 +4,7 @@
     <property name="index" value="./data/meta/about.xml"/>
     <property name="description" value="./data/meta/description.xml"/>
     <property name="auden_bio" value="./data/meta/auden-biography.xml"/>
+    <property name="musulin_bio" value="./data/meta/musulin-biography.xml"/>
     <property name="target" value="./html"/>
     <property name="target_xml" value="./html/xml-view"/>
     <property name="xsl_editions" value="./xslt/editions.xsl"/>
@@ -16,7 +17,7 @@
     <!-- <property name="xsl_sf value="./xslt/surfance-reconstructions.xsl"/> -->
     <property name="xsl_search" value="./xslt/search.xsl"/>
     <property name="xsl_desc" value="./xslt/description.xsl"/>
-    <property name="xsl_auden_bio" value="./xslt/auden-biography.xsl"/>
+    <property name="xsl_bio" value="./xslt/biographies.xsl"/>
     <delete>
         <fileset dir="${target}" includes="*.html"/>
     </delete>
@@ -89,7 +90,11 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    <xslt in="${auden_bio}" out="${target}/auden-biography.html" style="${xsl_auden_bio}">
+    <xslt in="${auden_bio}" out="${target}/auden-biography.html" style="${xsl_bio}">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    <xslt in="${musulin_bio}" out="${target}/musulin-biography.html" style="${xsl_bio}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
