@@ -37,7 +37,7 @@
                 <style>
 
                 </style>                
-                <script type="text/javascript" src="dist/timelinejs/js/timeline.min.js"></script>
+                <script type="text/javascript" src="js/timelinejs/js/timeline.min.js"></script>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
