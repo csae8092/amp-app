@@ -72,7 +72,7 @@
                                         <xsl:for-each select="current-group()">
                                             <div class="row timeline">                                            
                                                 <xsl:choose>
-                                                    <xsl:when test="@type='correspondence'">                                                        
+                                                    <xsl:when test="@type='correspondence' or @type='additional-materials' or @type='photos'">                                                        
                                                         <div class="col-md-5">    
                                                             <xsl:call-template name="bio-el">
                                                                 <xsl:with-param name="img" select="$img"/>
@@ -89,32 +89,10 @@
                                                                 </div>                                                                    
                                                             </div>-->
                                                         </div>
-                                                    </xsl:when>
-                                                    <xsl:when test="@type='additional-materials'">
+                                                    </xsl:when>                                                    
+                                                    <xsl:when test="@type='event'">
                                                         <div class="col-md-5">
-                                                            <!--<div class="card timeline-panel" style="border:1px solid #615a60;">
-                                                                <div class="card-body">
-                                                                    
-                                                                </div>                                                                    
-                                                            </div>-->
-                                                        </div>                                                                
-                                                        <div class="col-md-2">
-                                                            <xsl:call-template name="bio-circle"/>
-                                                        </div>                                                                
-                                                        <div class="col-md-5">    
-                                                            <xsl:call-template name="bio-el">
-                                                                <xsl:with-param name="img" select="$img"/>
-                                                                <xsl:with-param name="location" select="'right'"/>
-                                                            </xsl:call-template>
-                                                        </div>                                                                
-                                                    </xsl:when>
-                                                    <xsl:when test="@type='photos'">
-                                                        <div class="col-md-5">
-                                                            <!--<div class="card timeline-panel" style="border:1px solid #615a60;">
-                                                                <div class="card-body">
-                                                                    
-                                                                </div>                                                                    
-                                                            </div>-->
+                                                            
                                                         </div>
                                                         <div class="col-md-2">
                                                             <xsl:call-template name="bio-circle"/>
