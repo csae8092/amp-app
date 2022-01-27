@@ -594,7 +594,7 @@ fieldset.ssFieldset > span > input {
     border: 1px solid #b59890;
     padding: .5em .5em 0 .5em;
     border-radius: .5rem .5rem 0 0;
-    border-bottom: 2px solid #F7F9F9;
+    border-bottom: 2px solid #fff;
     z-index: 99;
     margin-bottom: -2px;
 }
@@ -610,7 +610,7 @@ fieldset.ssFieldset > span > input {
     border: 1px solid #b59890;
     padding: 0 .5em .5em .5em;
     border-radius: 0 0 .5rem .5rem;
-    border-top: 2px solid #F7F9F9;
+    border-top: 2px solid #fff;
     z-index: 99;
     margin-top: -2px;
 }
