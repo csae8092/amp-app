@@ -24,6 +24,10 @@ jobs:
     - name: Reorganize data
       run: |
         ant -f copy-task.xml
+    - name: Add attributes
+      run: |
+        pip install acdh-tei-pyutils
+        ./attributes.sh
     - name: Build
       run: |
         ant

@@ -10,6 +10,7 @@
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="partials/html_footer.xsl"/>
+    <xsl:import href="partials/html_title_navigation.xsl"/>
     <xsl:import href="partials/osd-container.xsl"/>
     <xsl:import href="partials/tei-facsimile.xsl"/>
     <xsl:import href="partials/view-pagination.xsl"/>
@@ -67,7 +68,7 @@
                     <div class="container-fluid">  
                         <div class="card">
                             <div class="card-header">                                
-                                <h2><xsl:value-of select="$doc_title"/></h2>                                                                
+                                <xsl:call-template name="header-nav"/>                                                              
                             </div>
                             <div id="navBarLetters" style="margin-top:4em !important;">
                                 <ul class="nav nav-tabs" id="dropdown-lang">

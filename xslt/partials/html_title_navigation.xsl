@@ -20,67 +20,43 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
         </xsl:variable>
-        <div class="card-header">
-            <xsl:variable name="col" select="collection('../../data/editions')//tei:TEI"/>
-            <div class="row">
-                <div class="col-md-2 card-body">                    
-                    <xsl:for-each select="$col">
-                        <xsl:value-of select="@xml:id"/>
-                        <xsl:variable name="full_path_prev">
-                            <xsl:value-of select="document-uri(/)"/>
-                        </xsl:variable> 
-                        <xsl:variable name="prev" select="position() - 1"/>
-                        <xsl:choose>
-                            <xsl:when test="position() = $prev">
-                                <h2>
-                                    <a>
-                                        <xsl:attribute name="href">
-                                            <xsl:value-of select="$full_path_prev"/>
-                                        </xsl:attribute>
-                                        <svg class="arrow svg-inline--fa fa-chevron-left fa-w-10" title="previous" aria-labelledby="svg-inline--fa-title-1" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-1">previous</title><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg><!-- <i class="fas fa-chevron-left" title="previous"></i> -->
-                                    </a>                                    
-                                </h2>  
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:for-each>                                          
-                </div>                        
-                <div class="col-md-8 card-body">
-                    <h2 class="card-text" style="text-align:center;">
-                        <xsl:value-of select="$doc_title"/>
-                        <br/>
-                        <a href="#">
-                            <i class="fas fa-info" title="show more info about the document" data-toggle="modal" data-target="#exampleModalLong"/>
-                        </a> 
-                        |                                                 
-                        <a target="_blank">
+        <xsl:variable name="prev">
+            <xsl:value-of select="replace(.//tei:TEI/@prev, '.xml', '.html')"/>
+        </xsl:variable>
+        <xsl:variable name="next">
+            <xsl:value-of select="replace(.//tei:TEI/@next, '.xml', '.html')"/>
+        </xsl:variable>
+        <div class="row">
+            <div class="col-md-2">                        
+                <h2>
+                    <xsl:if test="string-length($prev) != 0">
+                        <a>
                             <xsl:attribute name="href">
-                                <xsl:value-of select="concat( '','?format=raw')"/>
+                                <xsl:value-of select="$prev"/>
                             </xsl:attribute>
-                            <i class="fas fa-download" title="show TEI source"/>
+                            <svg class="arrow svg-inline--fa fa-chevron-left fa-w-10" title="previous" aria-labelledby="svg-inline--fa-title-1" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-1">previous</title><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg><!-- <i class="fas fa-chevron-left" title="previous"></i> -->
                         </a>
-                    </h2>
-                </div>
-                <div class="col-md-2 card-body">
-                    <xsl:for-each select="$col">
-                        <xsl:variable name="full_path_next">
-                            <xsl:value-of select="document-uri(/)"/>
-                        </xsl:variable>
-                        <xsl:variable name="next" select="position() + 1"/>
-                        <xsl:choose>
-                            <xsl:when test="position() = $next">
-                                <h2>
-                                    <a>
-                                        <xsl:attribute name="href">
-                                            <xsl:value-of select="$full_path_next"/>
-                                        </xsl:attribute>
-                                        <svg class="arrow svg-inline--fa fa-chevron-left fa-w-10" title="previous" aria-labelledby="svg-inline--fa-title-1" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-1">previous</title><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg><!-- <i class="fas fa-chevron-left" title="previous"></i> -->
-                                    </a>                                    
-                                </h2>  
-                            </xsl:when>
-                        </xsl:choose>
-                    </xsl:for-each>                        
-                </div>
-            </div><!-- .row -->
-        </div><!-- .card-header -->       
+                    </xsl:if>
+                </h2>                        
+            </div>                        
+            <div class="col-md-8">
+                <h2 class="card-text" style="text-align:center;">
+                    <xsl:value-of select="$doc_title"/>                        
+                </h2>
+            </div>
+            <div class="col-md-2">
+                <h2 style="text-align:right;">
+                    <xsl:if test="string-length($next) != 0">
+                        <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="$next"/>
+                            </xsl:attribute>
+                            <svg class="arrow svg-inline--fa fa-chevron-right fa-w-10" title="next" aria-labelledby="svg-inline--fa-title-2" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-2">next</title><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg><!-- <i class="fas fa-chevron-right" title="next"></i> -->
+                        </a>
+                    </xsl:if>
+                </h2>                        
+            </div>
+        </div><!-- .row -->
+        <!-- .card-header -->          
     </xsl:template>
 </xsl:stylesheet>

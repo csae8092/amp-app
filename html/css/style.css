@@ -21,6 +21,9 @@ div.dataTables_filter {
   text-align:left !important;
 }
 
+.arrow {
+    max-width: 25px;
+}
 
 .dataTables_wrapper table {
   width:100%;
