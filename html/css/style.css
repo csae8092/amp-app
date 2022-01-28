@@ -126,8 +126,9 @@ div.dataTables_filter {
     border: 0;
 }
 
-#tei-logo {
-    margin-left: 10px;
+.tei-logo {
+    margin-top:2em;
+    padding-right:1em;
 }
 
 button.close {
