@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="amp-timeline__0001.xml">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">W. H. Auden Biography</title>
+            <author>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+               <name>Stoxreiter, Daniel</name>
+            </author>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+            <respStmt>
+               <resp>Automated document creation</resp>
+               <name>Stoxreiter, Daniel</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+                                    for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="dstoxreiter" when="2022-01-24">document created</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listEvent>
+            <event xml:id="amp-transcript__0035.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0233/">
+               <head xml:lang="en">
+                  <date when="1971-05-13">1971-05-13</date>
+               </head>
+               <label xml:lang="en">Telegram W. H. Auden to Stella Musulin 1971-05-13</label>
+            </event>
+            <event xml:id="amp-transcript__0011.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0051/">
+               <head xml:lang="en">
+                  <date when="1968-12-13">1968-12-13</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-12-13</label>
+            </event>
+            <event xml:id="amp-transcript__0018.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0087/">
+               <head xml:lang="en">
+                  <date when="1971-10-19">1971-10-19</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Stark Bewölkt" 1971-10-19</label>
+            </event>
+            <event xml:id="amp-transcript__0021.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0113/">
+               <head xml:lang="en">
+                  <date when="1961-10-13">1961-10-13</date>
+               </head>
+               <label xml:lang="en">Typed Letter Signed W. H. Auden to Stella Musulin 1961-10-13</label>
+            </event>
+            <event xml:id="amp-transcript__0059.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0031/">
+               <head xml:lang="en">
+                  <date when="1962-04-30">1962-04-30</date>
+               </head>
+               <label xml:lang="en">Envelope W. H. Auden to Stella Musulin 1962-04-30</label>
+            </event>
+            <event xml:id="amp-transcript__0024.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0125/">
+               <head xml:lang="en">
+                  <date when="1962-09-11">1962-09-11</date>
+               </head>
+               <label xml:lang="en">Letter W. H. Auden to Stella Musulin 1962-09-11</label>
+            </event>
+            <event xml:id="amp-transcript__0038.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0011/">
+               <head xml:lang="en">
+                  <date when="1965-03-15">1965-03-15</date>
+               </head>
+               <label xml:lang="en">Typed Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Joseph Weinheber" 1965-03-15</label>
+            </event>
+            <!--<event xml:id="amp-transcript__0058.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0107/">
+               <head xml:lang="en">
+                  <date when="?-?-15">[?]-[?]-[15]</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin [?]-[?]-[15]</label>
+            </event>-->
+            <event xml:id="amp-transcript__0010.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0047/">
+               <head xml:lang="en">
+                  <date when="1968-11-06">1968-11-06</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-11-06</label>
+            </event>
+            <event xml:id="amp-transcript__0007.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0035/">
+               <head xml:lang="en">
+                  <date when="1968-10-06">1968-10-06</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-06</label>
+            </event>
+            <event xml:id="amp-transcript__0050.xml"
+                   type="photos"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0247/">
+               <head xml:lang="en">
+                  <date when="1967-04-21">1967-04</date>
+               </head>
+               <label xml:lang="en">Photograph Otto Breicha of W. H. Auden and Mary McCarthy 1967-04</label>
+            </event>
+            <event xml:id="amp-transcript__0016.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0079/">
+               <head xml:lang="en">
+                  <date when="1970-09-18">1970-09-18</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1970-09-18</label>
+            </event>
+            <event xml:id="amp-transcript__0006.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0027/">
+               <head xml:lang="en">
+                  <date when="1968-02-06">1968-02-06</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-02-06</label>
+            </event>
+            <event xml:id="amp-transcript__0057.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0105/">
+               <head xml:lang="en">
+                  <date when="1961-01-25">1961-[?]-[25]</date>
+               </head>
+               <label xml:lang="en">Envelope W. H. Auden to Stella Musulin 1961-[?]-[25]</label>
+            </event>
+            <event xml:id="amp-transcript__0001.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0001/">
+               <head xml:lang="en">
+                  <date when="1963-05-12">1963-05-12</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1963-05-12</label>
+            </event>
+            <event xml:id="amp-transcript__0009.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0043/">
+               <head xml:lang="en">
+                  <date when="1968-10-15">1968-10-15</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-15</label>
+            </event>
+            <event xml:id="amp-transcript__0041.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0075/">
+               <head xml:lang="en">
+                  <date when="1970-07-06">1970-07-06</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1970-07-06</label>
+            </event>
+            <event xml:id="amp-transcript__0004.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0019/">
+               <head xml:lang="en">
+                  <date when="1966-02-03">1966-02-03</date>
+               </head>
+               <label xml:lang="en">Typed Letter Signed W. H. Auden to Stella Musulin 1966-02-03</label>
+            </event>
+            <event xml:id="amp-transcript__0049.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0243/">
+               <head xml:lang="en">
+                  <date when="1973-01-01">[1973]</date>
+               </head>
+               <label xml:lang="en">Invitation Card Österreichische Gesellschaft für Literatur Poetry Reading W. H. Auden [1973]</label>
+            </event>
+            <event xml:id="amp-transcript__0019.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0091/">
+               <head xml:lang="en">
+                  <date when="1972-02-22">1972-02-22</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1972-02-22</label>
+            </event>
+            <event xml:id="amp-transcript__0014.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0063/">
+               <head xml:lang="en">
+                  <date when="1969-05-21">1969-05-21</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1969-05-21</label>
+            </event>
+            <event xml:id="amp-transcript__0042.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0033/">
+               <head xml:lang="en">
+                  <date when="1968-10-04">1968-10-04</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescripts W. H. Auden "August 1968" and "Elegy" 1968-10-04</label>
+            </event>
+            <event xml:id="amp-transcript__0025.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0129/">
+               <head xml:lang="en">
+                  <date when="1962-10-17">1962-10-17</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1962-10-17</label>
+            </event>
+            <event xml:id="amp-transcript__0022.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0117/">
+               <head xml:lang="en">
+                  <date when="1961-08-16">1961-08-16</date>
+               </head>
+               <label xml:lang="en">Letter W. H. Auden to Stella Musulin 1961-08-16</label>
+            </event>
+            <event xml:id="amp-transcript__0039.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0009/">
+               <head xml:lang="en">
+                  <date when="1965-04-28">1965-04-28</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Joseph Weinheber" 1965-04-28 and with Typescript W. H. Auden Translation "Joseph Weinheber"</label>
+            </event>
+            <event xml:id="amp-transcript__0044.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0101/">
+               <head xml:lang="en">
+                  <date when="1968-10-24">1968-10-24</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-24</label>
+            </event>
+            <event xml:id="amp-transkript__0015.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0015/">
+               <head xml:lang="en">
+                  <date when="1965-09-29">1965-09-29</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1965-09-29</label>
+            </event>
+            <event xml:id="amp-transcript__0005.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0023/">
+               <head xml:lang="en">
+                  <date when="1967-11-08">1967-11-08</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1967-11-08</label>
+            </event>
+            <event xml:id="amp-transcript__0013.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0059/">
+               <head xml:lang="en">
+                  <date when="1969-01-04">1969-01-04</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1969-01-04</label>
+            </event>
+            <event xml:id="amp-transcript__0040.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0067/">
+               <head xml:lang="en">
+                  <date when="1969-06-10">1969-06-10</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1969-06-10</label>
+            </event>
+            <event xml:id="amp-transcript__0012.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0055/">
+               <head xml:lang="en">
+                  <date when="1968-12-29">1968-12-29</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-12-29</label>
+            </event>
+            <event xml:id="amp-transcript__0052.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0171/">
+               <head xml:lang="en">
+                  <date when="1972-08-21">1972-08</date>
+               </head>
+               <label xml:lang="en">Typescript Hilde Spiel Translation W. H. Auden Statement to Austrian Tax Authorities 1972-08</label>
+            </event>
+            <event xml:id="amp-transcript__0008.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0039/">
+               <head xml:lang="en">
+                  <date when="1968-10-12">1968-10-12</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-12</label>
+            </event>
+            <event xml:id="amp-transcript__0002.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0007/">
+               <head xml:lang="en">
+                  <date when="1964-12-23">1964-12-23</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1964-12-23</label>
+            </event>
+            <event xml:id="amp-transcript__0055.xml"
+                   type="photos"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0235/">
+               <head xml:lang="en">
+                  <date when="1960-01-01">[1960]</date>
+               </head>
+               <label xml:lang="en">Photograph [?] of W. H. Auden, Chester Kallman, and Elsa Musulin [1960]</label>
+            </event>
+            <event xml:id="amp-transcript__0023.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0121/">
+               <head xml:lang="en">
+                  <date when="1962-07-23">1962-07-23</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1962-07-23</label>
+            </event>
+            <event xml:id="amp-transcript__0020.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0095/">
+               <head xml:lang="en">
+                  <date when="1973-09-24">1973-09-24</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1973-09-24</label>
+            </event>
+            <event xml:id="amp-transcript__0054.xml"
+                   type="photos"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0240/">
+               <head xml:lang="en">
+                  <date when="1960-01-01">[1960]</date>
+               </head>
+               <label xml:lang="en">Photographs [?] of W. H. Auden, Chester Kallman, and Elsa Musulin [1960]</label>
+            </event>
+            <event xml:id="amp-transcript__0045.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0109/">
+               <head xml:lang="en">
+                  <date when="1960-07-21">1960-07-21</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1960-07-21</label>
+            </event>
+            <event xml:id="amp-transcript__0015.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0071/">
+               <head xml:lang="en">
+                  <date when="1970-06-10">1970-06-10</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1970-06-10</label>
+            </event>
+            <event xml:id="amp-transcript__0017.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0083/">
+               <head xml:lang="en">
+                  <date when="1971-06-04">1971-06-04</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1971-06-04</label>
+            </event>        
+            <event xml:id="e0001"
+               type="event">
+               <head xml:lang="en">
+                  <date when="1957-10-04">1957-10-04</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">4 October 1957, Vienna</title>
+                  W. H. Auden and Chester Kallman purchase the house Hinterholz 6, 3062 Kirchstetten, in Lower Austria.
+                  <location>
+                     <geo>48.2082 -16.37169</geo>
+                  </location>
+               </desc>               
+            </event>
+         </listEvent>
+      </body>
+   </text>
+</TEI>

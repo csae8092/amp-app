@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0002.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin 1964-12-23</title>
+            <author>Auden, W. H.</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>1, 8</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1964-12-23" >1964-12-23</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"></placeName>
+               <date  when-iso="1964-12-23" >1964-12-23</date>
+            </correspAction>
+            <correspAction type="received">
+                <persName ref="#musulin-stella">Musulin, Stella</persName>
+                <placeName ref="#"></placeName>
+                <date></date>
+            </correspAction>
+         </correspDesc>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-17">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2021-09-21">text transcribed</change>
+         <change who="tfruehwirth" when="2021-09-20">text transcribed</change>
+         <change who="smayer tfruehwirth" when="2021-09-21">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="5694" lry="7752">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0007/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5696" lry="7748">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0008/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="4546" lry="3548">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0005/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="4550" lry="3560">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0006/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0007/" type="envelope"/>
+               <p>
+                  mit Luft Post
+               </p>
+               <p>
+                  Weinheber-Gedicht
+               </p>
+               <p>
+                  Die Baronin<lb/>
+                  Stella Musulin<lb/>
+                  <del>Fridau</del><lb/>
+                  <del>Obergrafendorf</del><lb/>
+                  <del>bei S. Pölten</del><lb/>
+                  <del>N Ö</del><lb/>
+                  Österreich
+               </p>
+               <p>
+                  Wien IV<lb/>
+                  Neulinggasse 26/14
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0008/" type="envelope"/>
+               <p>
+                  W H Auden<lb/>
+                  Berlin-Dahlem<lb/>
+                  Hubertusbaderstrasse 43<lb/>
+                  Deutschland.
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0005/" type="sheet"/>
+               <p>
+                  Dec 23<unclear>rd</unclear>
+               </p>
+               <p>
+                  Berlin-Dahlem<lb/>
+                  Hubertusbaderstrasse 43
+               </p>
+               <p>
+                  Dear Stella:<lb/>
+                  It was sweet of you to think of me at<lb/>
+                  Christmas , especially since it's a little einsam here.<lb/>
+                  Am beginning to know some local inhabitants. Oddly enough,<lb/>
+                  the ones I can talk to most easily ar from Ost-Berlin.<lb/>
+                  The most awful thing about the Bifk<unclear>e</unclear>s is that<lb/>
+                  they are so much nicer unter a little Druck.<lb/>
+                  When they feel their oats they are so apt to become<lb/>
+                  uppish.<lb/>
+                  If I'd known, I'd have warned you about The<lb/>
+                  National Review. I once reviewed a Charles Williams<lb/>
+                  book for them - never again. Of course you're right<lb/>
+                  about the lib-labs ostrich attitude to those who<lb/>
+                  wish to destroy them, but one cannot let one's name<lb/>
+                  be associated with shits.<lb/>
+                  Torture is the inequity which utterly bewilders me.<lb/>
+                  I know something about the evil in my own heart and<lb/>
+                  <del><unclear></unclear></del>in the <unclear>sort</unclear> of people I <del>know</del>meet, but I cannot conceive of myself<lb/>
+                  or them torturing anybody. Where do the torturers<lb/>
+                  come from? What class? Whom do they marry?<lb/>
+                  <del>Have you ever met one?</del> To what pubs do they go?<lb/>
+                  much love and best wishes for 1965<lb/>
+                  Wystan
+              </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0006/" type="sheet"/>
+         </div>
+      </body>
+   </text>
+</TEI>

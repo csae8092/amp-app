@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0004.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Typed Letter Signed W. H. Auden to Stella Musulin 1966-02-03</title>
+            <author>Auden, W. H.</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>1, 13</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1966-02-03" >1966-02-03</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"></placeName>
+               <date  when-iso="1966-02-03" >1966-02-03</date>
+            </correspAction>
+            <correspAction type="received">
+                <persName ref="#musulin-stella">Musulin, Stella</persName>
+                <placeName ref="#"></placeName>
+                <date></date>
+            </correspAction>
+         </correspDesc>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="tfruehwirth" when="2021-09-22">text transcribed</change>
+         <change who="smayer" when="2021-09-23">text transcribed</change>
+         <change who="smayer tfruehwirth" when="2021-09-24">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="4630" lry="2920">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0019/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="4630" lry="2928">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0020/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5574" lry="7376">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0021/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5572" lry="7370">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0022/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0019/" type="envelope"/>
+               <p>
+                  W.H.Auden<lb/>
+                  77 St Mark's Place<lb/>
+                  New York City 3<lb/>
+                  New York I0003<lb/>
+                  U.S.A.
+               </p>
+               <p>
+                  Air-Mail
+               </p>
+               <p>
+                  Die Baronin<lb/>
+                  Stella Musulin<lb/>
+                  Fridau<lb/>
+                  3200 Obergrafendorf<lb/>
+                  N.<unclear>Ö</unclear>.<lb/>
+                  Austria
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0020/" type="envelope"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0021/" type="sheet"/>
+               <p>
+                  77 St Mark's Place<lb/>
+                  New  York City 3<lb/>
+                  New York I0003
+               </p>
+               <p>
+                  Feb 3rd,I96<del>5</del>6
+               </p>
+               <p>
+                  Dear Stella:<lb/>
+                  Many thanks for your nice long letter. Stephen has a genius for<lb/>
+                  subtle misrepresentation. "Serious insistence on unseriousness'<lb/>
+                  telescopes two <del>cnvictions</del>distinct convictions of mine,falsifying both.<lb/>
+                  I) I believe it to be a serious moral error when an artist overestimates<lb/>
+                  the importance of art and, by implication,of himself. One must admit<lb/>
+                  that the <del>plotical</del> political history of Eur<del>i</del>ope, with <del>all its</del>the same horrors,<lb/>
+                  would be what it has been,if Dante,Shakespeare,Goethe,Titian,<lb/>
+                  Mo<del>x</del>zart,et al,had never existed.<lb/>
+                  2) I believe that the only way in which, to-day at any rate,one can<lb/>
+                  speak <del>seroiu</del> <del>s eriously</del>  seriously about serious matters( the alternati<del>c</del>ve<lb/>
+                  is silence) is comically. I am surprised to hear from you  that<lb/>
+                  Jews find this hard to accept. I have enormously admired - and been<lb/>
+                  influenced by - the tradition of Jewish humor. More than any other<lb/>
+                  people,surely,they have seen in serious matters,that is to say,human<lb/>
+                  suffering,<del>and</del> the contradictions of human existence,and the relation<lb/>
+                  between man and God,occasions for humorous expression.<lb/>
+                  e.g,: "If the rich could hire other people to die for them,the poor<lb/>
+                  cou<del>o</del>ld make a wonderful living", or "Truth rests with God alone,and<lb/>
+                  a little bit with me",or "God will provide - ah,if only He wou<del>o</del>ld till<lb/>
+                  He does so."<lb/>
+                  So! you encountered the one-whose-name-we-never-mention. Why Chest<del>r</del>er should<lb/>
+                  have been so foolish as  to invite him to a p<del>e</del>arty,I cannot imagine. If he<lb/>
+                  is to be seen at all,he <del>yy</del>must be seen alone. Incidentally,next time you see<lb/>
+                  Chester,scold him a) for not writing to me b) for not answering Harrison's<lb/>
+                  cable.<lb/>
+                  All well here.except for a leaking kit<del>v</del>chen roof. No doubt you read about<lb/>
+                  our Black-Out and Transit Strike.(My typewriter is on the blink,hence the<lb/>
+                  hiatuses.)  A <del>firen</del> friend of mine who teaches schyzophrenics,has a seventeen<lb/>
+                  year old girl who is interested in poetry. Asked what poets she liked,she<lb/>
+                  mentioned me. "I happen to know him quite well",said my friend. To which the<lb/>
+                  girl in astonishment:"You mean to say,he's still alive!".<lb/>
+                  Expect to get back to Kirchstetten about April 20th.<lb/>
+                  much love and greetings to son and mum-in-law<lb/>
+                  Wystan.
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0022/" type="sheet"/>
+         </div>
+      </body>
+   </text>
+</TEI>

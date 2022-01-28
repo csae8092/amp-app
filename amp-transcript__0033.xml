@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0033.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Aerogram Signed Edward Mendelson to Stella Musulin 1981-11-21</title>
+            <author>Mendelson, Edward</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>2, 13</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1981-11-21" >1981-11-21</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2021-12-14">text transcribed</change>
+         <change who="tfruehwirth" when="2021-12-14">text transcribed using Transkribus</change>
+         <change who="smayer tfruehwirth" when="2021-12-14">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="5112" lry="7094">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0229/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5108" lry="7096">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0230/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0229/" type="sheet"/>
+               <p>
+                  39 Claremont Ave, apt 31<lb/>
+                  New York NY  10027<lb/>
+               </p>
+               <p>
+                  21 Novembe<del>er</del>r  1981
+               </p>
+               <p>
+                  Dear Stella,<lb/>
+                  Delighted you got that EARLY AUDEN, and even more delighted you find<lb/>
+                  it worth looking into.  <del>As I suppose you've experienced yourself,</del>Is it a universal experience among authors to<lb/>
+                  be surprised that someone actually reads one's book?  I'm so familiar<lb/>
+                  with the thing by now, and so aware of its deficiencies, that I wish<lb/>
+                  I could recall the edition and rewrite the whole <del>thing from</del>book from the start.<lb/>
+                  Luckily, t<del>h</del>eaching, reviewing and miscellaneous annoyances keep the<lb/>
+                  mind elsewhere.  One of those miscellaneous annoy<del><unclear></unclear></del>ances was a move<lb/>
+                  from my o<del>d</del>ld flat to an<del>t</del>other one on the same floor in the same building.<lb/>
+                  The new address is up above, and the only change is in the apartment<lb/>
+                  number.  Phone number still 212 222-0679.<lb/>
+                  Yes, I saw the you<del>g</del>ng man who was doing advance work f<del>ro</del>or Robert Robinson,<lb/>
+                  but haven't heard from him since July.  I gather <del>wor</del>that work progresses,<lb/>
+                  though.  There was an hour on Wystan on BBC Radio the other week--a<lb/>
+                  "dramatization" with an actor reading the poems and lots of ominous<lb/>
+                  noises off.  I'm told it was fairly dreadful, but perh<del><unclear></unclear></del>aps the TV film<lb/>
+                  will be better.  I saw quite a good one from the BBC on Benjamin Britten.<lb/>
+                  Its only fault--and I'm not sure <del><unclear></unclear></del>this was a fault, given the usual tone<lb/>
+                  of TV journalism--was an awed tone of worship.<lb/>
+                  <del>A</del>Easy answers to important questions.  Those two volumes <del><unclear></unclear>f</del>by and about<lb/>
+                  Auden sound very attractive.  (Which publisher is interested?)  The<lb/>
+                  place to write for permissions is to the agents, specifically, to<lb/>
+                  Maureen Walters<lb/>
+                  Curtis Brown Ltd<lb/>
+                  575 Madison Avenue<lb/>
+                  New York NY  10022<lb/>
+                  USA<lb/>
+                  Mention my name, and things will be easier.  But they should be easy<lb/>
+                  anyway.<lb/>
+                  Now let me beg you for an easy answer.  I've heard from at<del>t<unclear></unclear></del> least two<lb/>
+                  different people that they had seen (or knew someone else who had seen)<lb/>
+                  a German text of your Wystan memoir in print.  Are they right, or are<lb/>
+                  they confusing this with an occasion when you read it aloud (and it was<lb/>
+                  reported)?  I had an Austrian student here this summer working on Wystan,<lb/>
+                  and I wanted to tell her about the piece, but didn't know where to find<lb/>
+                  it.  Please, please tell me if you printed it, and if so, where.  No need<lb/>
+                  for a long letter: just a "No, calm down, I never printed it" or a "Yes,<lb/>
+                  it appeared in such-in-such a journal" would be more than enough.  This is<lb/>
+                  the one min<del><unclear></unclear></del>or mystery of writings-about-Wystan I haven't been able to solve,<lb/>
+                  so please do help.<lb/>
+                  Have I told you <del><unclear></unclear>ny</del>any of my news?  I'm now at Columbia University permanently,<lb/>
+                  if I want to be.  I have a flat with a small guest room and bath--so please<lb/>
+                  take note if you're in th<del>e</del>is country for any reason.  I have a lady friend,<lb/>
+                  the first whom I expect to be with for a very long time, and we are quite<lb/>
+                  happy about things in general. Next June we'll be in Europe, certainly in<lb/>
+                  Paris, possibly father <del><unclear></unclear></del>south, <del>t</del>although we may put off the southern trip<lb/>
+                  for another year or so.  I haven't been across the Atlantic this year; too<lb/>
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0230/" type="sheet"/>
+               <p>
+                  Mendelson<lb/>
+                  39 Claremont Ave, apt 31<lb/>
+                  New York NY  10027
+               </p>
+               <p>
+                  Red<unclear>aktion</unclear> 11-12.<lb/>
+                  Kr<unclear>on</unclear>e<unclear>nz</unclear>ei<unclear>tung.</unclear> &#x00BD; 2-<unclear>5</unclear><lb/>
+                  M<unclear>or</unclear>gen  197<unclear>7.</unclear> &#x00B7;<lb/>
+                  1.Nu<unclear>mer.</unclear> <unclear>Heft.</unclear>
+               </p>
+               <p>
+                  Frau Baronin<lb/>
+                  Stella Musulin<lb/>
+                  Sch<del><unclear></unclear></del>lösselgasse 8/17<lb/>
+                  A-1080 Vienna<lb/>
+                  Austria
+               </p>
+               <p>
+                  preoccupied, too broke, too much to do in New York to feel much of an<lb/>
+                  i<del><unclear>p</unclear></del>mpulse to get away.  My years in New Haven always left me panting to<lb/>
+                  get overseas, but now I feel at home again.<lb/>
+                  Did you see Humphrey Carpenter's book on Wystan?  Not bad, as biographies<lb/>
+                  <unclear>g</unclear>o, but not very deep either.  It seems to have most of the facts right,<lb/>
+                  which is something.  Now a life of Chester is being written, by the woman<lb/>
+                  who recently married Chester's father, and who knew Chester since 1942.<lb/>
+                  Full of surprises and purple passages; Chester would be pleased, I think,<lb/>
+                  although I don't like to imagine how Wystan would have taken it.<lb/>
+                  A<unclear>ff</unclear>ection<unclear>a</unclear>tely,<lb/>
+                  Ed
+               </p>
+         </div>
+      </body>
+   </text>
+</TEI>

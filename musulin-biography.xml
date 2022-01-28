@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xmlns="http://www.tei-c.org/ns/1.0"
+     xml:id="amp-timeline__0001.xml">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Stella Musulin Biography</title>
+            <author>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+               <name>Stoxreiter, Daniel</name>
+            </author>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+            <respStmt>
+               <resp>Automated document creation</resp>
+               <name>Stoxreiter, Daniel</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+                                    for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="dstoxreiter" when="2022-01-24">document created</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <listEvent>
+            <event xml:id="amp-transcript__0047.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0143/">
+               <head xml:lang="en">
+                  <date when="1965-01-01">[1965]</date>
+               </head>
+               <label xml:lang="en">Typescript Stella Musulin Translation W. H. Auden "Joseph Weinheber" [1965]</label>
+            </event>
+            <event xml:id="amp-transcript__0046.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0141/">
+               <head xml:lang="en">
+                  <date when="1965-01-01">[1965]</date>
+               </head>
+               <label xml:lang="en">Autograph Notes Stella Musulin on Translation W. H. Auden "Joseph Weinheber" [1965]</label>
+            </event>
+            <event xml:id="amp-transcript__0029.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0215/">
+               <head xml:lang="en">
+                  <date when="1968-02-13">[1968-02-13]</date>
+               </head>
+               <label xml:lang="en">Autograph Notes Stella Musulin [1968-02-13]</label>
+            </event>
+            <event xml:id="amp-transcript__0053.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0219/">
+               <head xml:lang="en">
+                  <date when="1969-05-29">[1969]-05-29</date>
+               </head>
+               <label xml:lang="en">Typed Letter Stella Musulin to [Edith Silbermann] [1969]-05-29</label>
+            </event>
+            <event xml:id="amp-transcript__0027.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0155/">
+               <head xml:lang="en">
+                  <date when="1970-01-01">[1970]</date>
+               </head>
+               <label xml:lang="en">Typescript W. H. Auden "Freedom and Necessity in the Arts" [1970]</label>
+            </event>
+            <event xml:id="amp-transcript__0051.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0165/">
+               <head xml:lang="en">
+                  <date when="1970-01-01">[1970]</date>
+               </head>
+               <label xml:lang="en">Typed Notes [Janko Musulin] on W. H. Auden "Freedom and Necessity in the Arts" [1970]</label>
+            </event>
+            <event xml:id="amp-transcript__0052.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0171/">
+               <head xml:lang="en">
+                  <date when="1972-08-01">1972-08</date>
+               </head>
+               <label xml:lang="en">Typescript Hilde Spiel Translation W. H. Auden Statement to Austrian Tax Authorities 1972-08</label>
+            </event>
+            <event xml:id="amp-transcript__0049.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0243/">
+               <head xml:lang="en">
+                  <date when="1973-01-01">[1973]</date>
+               </head>
+               <label xml:lang="en">Invitation Card Österreichische Gesellschaft für Literatur Poetry Reading W. H. Auden [1973]</label>
+            </event>
+            <event xml:id="amp-transcript__0033.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0229/">
+               <head xml:lang="en">
+                  <date when="1981-11-21">1981-11-21</date>
+               </head>
+               <label xml:lang="en">Aerogram Signed Edward Mendelson to Stella Musulin 1981-11-21</label>
+            </event>
+            <event xml:id="amp-transcript__0034.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0231/">
+               <head xml:lang="en">
+                  <date when="1984-05-31">1984-05-31</date>
+               </head>
+               <label xml:lang="en">Typed Letter Signed Michael O'Sullivan to Stella Musulin 1984-05-31</label>
+            </event>
+            <event xml:id="amp-transcript__0036.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0241/">
+               <head xml:lang="en">
+                  <date when="1984-08-15">1984-08-15</date>
+               </head>
+               <label xml:lang="en">Autograph Note Michael O'Sullivan to Stella Musulin 1984-08-15</label>
+            </event>
+            <event xml:id="amp-transcript__0030.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0221/">
+               <head xml:lang="en">
+                  <date when="1985-11-29">1985-11-29</date>
+               </head>
+               <label xml:lang="en">Typed Letter Stella Musulin to Bruce Duncan 1985-11-29</label>
+            </event>
+            <event xml:id="amp-transcript__0031.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0223/">
+               <head xml:lang="en">
+                  <date when="1985-12-15">1985-12-15</date>
+               </head>
+               <label xml:lang="en">Typed Letter Stella Musulin to Edward Mendelson 1985-12-15</label>
+            </event>
+         </listEvent>
+      </body>
+   </text>
+</TEI>

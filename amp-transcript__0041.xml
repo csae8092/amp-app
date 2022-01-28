@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="amp-transcript__0041.xml"
+   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
+            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin 1970-07-06</title>
+            <author>Auden, W. H.</author>
+            <editor>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </editor>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <editionStmt>
+            <edition>AMP</edition>
+            <respStmt>
+               <resp>Transcription and commentary</resp>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+            </respStmt>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
+         </seriesStmt>
+         <sourceDesc>
+            <listWit>
+               <witness n="1">
+                  <msDesc>
+                     <msIdentifier>
+                        <country>A</country>
+                        <settlement>St. Pölten</settlement>
+                        <repository>State Collections of Lower Austria</repository>
+                        <collection>Stella Musulin (Depot)</collection>
+                        <idno>1, 28</idno>
+                     </msIdentifier>
+                     <history>
+                        <origin><origDate when-iso="1970-07-06" >1970-07-06</origDate></origin>
+                     </history>
+                  </msDesc>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"></placeName>
+               <date  when-iso="1970-07-06" >1970-07-06</date>
+            </correspAction>
+            <correspAction type="received">
+                <persName ref="#musulin-stella">Musulin, Stella</persName>
+                <placeName ref="#"></placeName>
+                <date></date>
+            </correspAction>
+         </correspDesc>
+         
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="pandorfer" when="2021-09-21">template populated with script "create_templates.py"</change>
+         <change who="smayer" when="2021-11-02">text transcribed</change>
+         <change who="tfruehwirth" when="2021-11-02">text transcribed</change>
+         <change who="smayer tfruehwirth" when="2021-11-08">transcriptions collated</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface ulx="0" uly="0" lrx="4584" lry="3508">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0075/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="4586" lry="3506">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0076/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5698" lry="7730">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0077/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5700" lry="7728">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0078/"/>
+      </surface>
+   </facsimile>
+   <text type="letter">
+      <body>
+         <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0075/" type="envelope"/>
+               <p>
+                  <unclear>Mit</unclear> Fl<unclear>ug</unclear>-P<unclear>ost</unclear>
+               </p>
+               <p>
+                  Bitte Weitersch<unclear>i</unclear>cken
+               </p>
+               <p>
+                  ENGLAND
+               </p>
+               <p>
+                  Die Baronin<lb/>
+                  Stella Mus<unclear>u</unclear>l<unclear>in</unclear><lb/>
+                  <del>W<unclear></unclear>en IV</del> <del>Wien III</del><lb/>
+                  <del>Neuling gasse 26/14</del>.
+               </p>
+               <p>
+                  2 Sea<unclear>f</unclear>orth<lb/>
+                  St. <unclear>J</unclear>ulian's Street<lb/>
+                  TENBY<lb/>
+                  Pembrokeshire
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0076/" type="envelope"/>
+               <p>
+                  W.H.Auden<lb/>
+                  3062 KIRCHSTETTEN<lb/>
+                  BEZ. ST. PÖLTEN<lb/>
+                  HINTERHOLZ 6<lb/>
+                  N.-Ö., AUSTRIA
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0077/" type="sheet"/>
+               <p>
+                  July 6<unclear>th.</unclear>
+               </p>
+               <p>
+                  3062 KIRCHSTETTEN<lb/>
+                  BEZ. ST. PÖLTEN<lb/>
+                  HINTERHOLZ 6<lb/>
+                  N.-Ö., AUSTRIA
+               </p>
+               <p>
+                  Dear Stella:<lb/>
+                  Have ju<unclear>s</unclear>t f<unclear>ini</unclear>sh<unclear>e</unclear>d reading Aust<unclear>ria"</unclear><lb/>
+                  by which I was en<unclear>c</unclear>hanted a<unclear>s</unclear> w<unclear>e</unclear>ll as<lb/>
+                  <unclear>in</unclear>structed. My! h<unclear>o</unclear>w er<unclear>u</unclear>d<unclear>ite</unclear> you are. Where did<lb/>
+                  you dig up all <unclear>thos</unclear>e stories ?<lb/>
+                  A <unclear>t</unclear>rifle alarmed that it may attract m<unclear>o</unclear>re<lb/>
+                  t<unclear>ou</unclear>rist<unclear>s</unclear>, which I'<unclear>m</unclear> sure you don't welc<unclear>om</unclear>e<lb/>
+                  any m<unclear>or</unclear>e than I do. (Thanks , <unclear>b</unclear>y t<unclear>he</unclear> wa<unclear>y</unclear>,<lb/>
+                  for the reference t<unclear>o</unclear> my garage.)<unclear>.</unclear><lb/>
+                  Am very <unclear>c</unclear>ur<unclear>iou</unclear>s to le<unclear>a</unclear>rn mo<unclear>re</unclear> about "The L<unclear>i</unclear>fe<lb/>
+                  and Adventure s of Peter Pros<unclear>ch</unclear>." Is it in print?<lb/>
+                  Shoul<unclear>d</unclear>n't it be tran<unclear>s</unclear>lated?<lb/>
+                  As you say, th<unclear>e</unclear> relati<unclear>on</unclear> <del><unclear>t</unclear></del>betw<unclear>e</unclear>n art and socie<unclear>ty</unclear><lb/>
+                  <unclear>i</unclear>s <unclear>v</unclear>e<unclear>r</unclear>y odd. Why should <unclear>th</unclear>e Vienna of 1<unclear>8</unclear>90-1918<lb/>
+                  ha<unclear>ve</unclear> pro<unclear>d</unclear>u<unclear>ce</unclear>d such a florescence<unclear>.</unclear>? (Chester can<lb/>
+                  ap<unclear>p</unclear>rec<unclear>i</unclear>ate Bruckner be<unclear>t</unclear>ter than I)<unclear>.</unclear>. Even odder to<lb/>
+                  me is the Biederm<unclear>a</unclear>yer pe<unclear>riod</unclear>. No one can<lb/>
+                  poss<unclear>i</unclear>bly app<unclear>rove</unclear> of Metternich's police sta<unclear>t</unclear>e,yet,<lb/>
+                  in a m<unclear>or</unclear>e l<unclear>i</unclear>beral mil<unclear>i</unclear>eu, could St<unclear>i</unclear>fter,<lb/>
+                  Ra<unclear>im</unclear>und, Nes<unclear>tro</unclear>y, have <unclear>wr</unclear>itten what they did?<lb/>
+                  Hope th<unclear>is</unclear> rea<unclear>c</unclear>hes y<unclear>ou</unclear>. Loo<unclear>king</unclear> forw<unclear>ard</unclear> to se<unclear>ing</unclear> y<unclear>ou</unclear><lb/>
+                  in Sept<unclear></unclear><lb/>
+                  love and ad<unclear>m</unclear>irat<unclear>ion</unclear>
+                  Wystan
+               </p>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0078/" type="sheet"/>
+         </div>
+      </body>
+   </text>
+</TEI>
