@@ -1,5 +1,6 @@
 # project specific
 *.html
+*.xml
 /saxon
 /static-search
 /html/static-search

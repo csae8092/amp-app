@@ -28,6 +28,7 @@
                                     title="{position()}"
                                     class="nav-link active"
                                     data-toggle="tab"
+                                    data-tab="{$reading-type}"
                                     href="#{$reading-type}-paginate-{position()}"
                                     style="border-radius:30px;">
                                     <xsl:value-of select="position()"/> 
@@ -40,6 +41,7 @@
                                     title="{position()}"
                                     class="nav-link"
                                     data-toggle="tab"
+                                    data-tab="{$reading-type}"
                                     href="#{$reading-type}-paginate-{position()}"
                                     style="border-radius:30px;">
                                     <xsl:value-of select="position()"/> 
@@ -52,6 +54,7 @@
                                     title="more"
                                     href="#"
                                     data-toggle="dropdown"
+                                    data-tab="{$reading-type}"
                                     class="nav-link dropdown-toggle"
                                     style="border-radius:30px;"
                                     >

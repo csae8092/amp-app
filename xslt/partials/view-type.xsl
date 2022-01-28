@@ -19,7 +19,7 @@
             <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                 
                 <xsl:choose>
                     <xsl:when test="position() = 1">                                                         
-                        <div class="tab-pane active" id="{$reading-type}-paginate-{position()}" tabindex="-1">
+                        <div class="pagination-tab tab-pane active" data-tab="{$reading-type}"  id="{$reading-type}-paginate-{position()}" tabindex="-1">
                             <div id="container-resize-{position()}" class="transcript row">
                                 <div id="text-resize-{position()}" class="text-re col-md-8">
                                     <div class="card-body">                                                                                                                                                                                       
@@ -65,7 +65,7 @@
                         </div>                                                         
                     </xsl:when>
                     <xsl:otherwise>
-                        <div class="tab-pane fade" id="{$reading-type}-paginate-{position()}" tabindex="-1">
+                        <div class="pagination-tab tab-pane fade" data-tab="{$reading-type}" id="{$reading-type}-paginate-{position()}" tabindex="-1">
                             <div id="container-resize-{position()}" class="transcript row">
                                 <div id="text-resize-{position()}" class="text-re col-md-8">                                                                
                                     <div class="card-body">                                                                                                                                                                                       
@@ -120,7 +120,7 @@
             <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                
                 <xsl:choose>
                     <xsl:when test="position() = 1">
-                        <div class="tab-pane active" id="{$reading-type}-paginate-{position()}" tabindex="-1">
+                        <div class="pagination-tab tab-pane active" data-tab="{$reading-type}" id="{$reading-type}-paginate-{position()}" tabindex="-1">
                             <div class="card-body">
                                 <xsl:choose>
                                     <xsl:when test="$reading-type = 'reading'">
@@ -148,7 +148,7 @@
                         </div>
                     </xsl:when>
                     <xsl:otherwise>
-                        <div class="tab-pane fade" id="{$reading-type}-paginate-{position()}" tabindex="-1">
+                        <div class="pagination-tab tab-pane fade" data-tab="{$reading-type}" id="{$reading-type}-paginate-{position()}" tabindex="-1">
                             <div class="card-body"> 
                                 <xsl:choose>
                                     <xsl:when test="$reading-type = 'reading'">

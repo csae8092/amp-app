@@ -66,8 +66,8 @@
                     
                     <div class="container-fluid">  
                         <div class="card">
-                            <div class="card-header">
-                                <h1><xsl:value-of select="$doc_title"/></h1>
+                            <div class="card-header">                                
+                                <h2><xsl:value-of select="$doc_title"/></h2>                                                                
                             </div>
                             <div id="navBarLetters" style="margin-top:4em !important;">
                                 <ul class="nav nav-tabs" id="dropdown-lang">
@@ -121,6 +121,11 @@
                                     <li class="nav-item">                                    
                                         <a title="Table" href="#xml-tab" data-toggle="tab" class="nav-link btn btn-round">
                                             TEI/XML view
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">                                    
+                                        <a href="{//tei:TEI/@xml:id}?format=raw" title="TEI Source">
+                                            <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
                                         </a>
                                     </li>
                                 </ul>
@@ -202,7 +207,8 @@
                         </div>
                     </div>
                     <xsl:call-template name="html_footer"/>
-                </div>                
+                </div>   
+                <script type="text/javascript" src="js/pagination-sync.js"></script>
             </body>
         </html>
     </xsl:template>

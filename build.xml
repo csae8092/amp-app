@@ -103,6 +103,16 @@
             <include name="*.JPG"/>
         </fileset>
     </copy>
+    <copy todir="${target}" flatten="true">
+        <fileset dir="data/editions">
+            <include name="**/*.xml"/>
+        </fileset>
+    </copy>
+    <copy todir="${target}" flatten="true">
+        <fileset dir="data/meta">
+            <include name="**/*.xml"/>
+        </fileset>
+    </copy>
     <replace dir="${target}" value="">
         <include name="*.html"/>
         <replacetoken> xmlns=""</replacetoken>
