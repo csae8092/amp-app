@@ -70,9 +70,28 @@
    </teiHeader>
    <text>
       <body>
-         <listEvent>            
-            <event xml:id="e0001"
+         <listEvent>
+            <event xml:id=""<!-- master copy -->
                type="event"
+               facs="optional--add-facs-or-delete-attr">
+               <head xml:lang="en">
+                  <date when="1957-10-04">1957-10-04</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">title</title>
+                  text
+                  <location>
+                     <geo>48.2082 -16.37169</geo>
+                  </location>
+                  <!-- 
+                     more option:
+                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html
+                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-event.html
+                  -->
+               </desc>               
+            </event>            
+            <event xml:id="ea001"
+               type="event_austria"
                facs="optional--add-facs-or-delete-attr">
                <head xml:lang="en">
                   <date when="1957-10-04">1957-10-04</date>
