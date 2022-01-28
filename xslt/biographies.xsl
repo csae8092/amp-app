@@ -46,7 +46,29 @@
                     <div class="container-fluid">  
                         <div class="card" style="margin-top:2em;">
                             <div class="card-body text-center" style="padding-bottom:0;">
-                                <h1><xsl:value-of select="substring-before($doc_title, ' Biography')"/></h1>                                
+                                <div class="row">
+                                    <div class="col-md-11">
+                                        <h2><xsl:value-of select="substring-before($doc_title, ' Biography')"/></h2>
+                                    </div>    
+                                    <div class="col-md-1">
+                                        <xsl:choose>
+                                            <xsl:when test="contains($doc_title, 'Musulin')">
+                                                <h2>
+                                                    <a href="musulin-biography.xml?format=raw" title="TEI Source">
+                                                        <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
+                                                    </a>
+                                                </h2>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <h2>
+                                                    <a href="auden-biography.xml?format=raw" title="TEI Source">
+                                                        <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
+                                                    </a>
+                                                </h2>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </div>
+                                </div> 
                             </div>   
                             <div class="card-body text-center">
                                 <ul style="margin-top:1em;padding-left:0;">
