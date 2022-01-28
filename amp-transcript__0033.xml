@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0033.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0033.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0032.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0034.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>2, 13</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1981-11-21" >1981-11-21</origDate></origin>
+                        <origin><origDate when-iso="1981-11-21">1981-11-21</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -111,7 +107,7 @@ for any purpose, even commercially.</p>
                   with the thing by now, and so aware of its deficiencies, that I wish<lb/>
                   I could recall the edition and rewrite the whole <del>thing from</del>book from the start.<lb/>
                   Luckily, t<del>h</del>eaching, reviewing and miscellaneous annoyances keep the<lb/>
-                  mind elsewhere.  One of those miscellaneous annoy<del><unclear></unclear></del>ances was a move<lb/>
+                  mind elsewhere.  One of those miscellaneous annoy<del><unclear/></del>ances was a move<lb/>
                   from my o<del>d</del>ld flat to an<del>t</del>other one on the same floor in the same building.<lb/>
                   The new address is up above, and the only change is in the apartment<lb/>
                   number.  Phone number still 212 222-0679.<lb/>
@@ -119,11 +115,11 @@ for any purpose, even commercially.</p>
                   but haven't heard from him since July.  I gather <del>wor</del>that work progresses,<lb/>
                   though.  There was an hour on Wystan on BBC Radio the other week--a<lb/>
                   "dramatization" with an actor reading the poems and lots of ominous<lb/>
-                  noises off.  I'm told it was fairly dreadful, but perh<del><unclear></unclear></del>aps the TV film<lb/>
+                  noises off.  I'm told it was fairly dreadful, but perh<del><unclear/></del>aps the TV film<lb/>
                   will be better.  I saw quite a good one from the BBC on Benjamin Britten.<lb/>
-                  Its only fault--and I'm not sure <del><unclear></unclear></del>this was a fault, given the usual tone<lb/>
+                  Its only fault--and I'm not sure <del><unclear/></del>this was a fault, given the usual tone<lb/>
                   of TV journalism--was an awed tone of worship.<lb/>
-                  <del>A</del>Easy answers to important questions.  Those two volumes <del><unclear></unclear>f</del>by and about<lb/>
+                  <del>A</del>Easy answers to important questions.  Those two volumes <del><unclear/>f</del>by and about<lb/>
                   Auden sound very attractive.  (Which publisher is interested?)  The<lb/>
                   place to write for permissions is to the agents, specifically, to<lb/>
                   Maureen Walters<lb/>
@@ -133,7 +129,7 @@ for any purpose, even commercially.</p>
                   USA<lb/>
                   Mention my name, and things will be easier.  But they should be easy<lb/>
                   anyway.<lb/>
-                  Now let me beg you for an easy answer.  I've heard from at<del>t<unclear></unclear></del> least two<lb/>
+                  Now let me beg you for an easy answer.  I've heard from at<del>t<unclear/></del> least two<lb/>
                   different people that they had seen (or knew someone else who had seen)<lb/>
                   a German text of your Wystan memoir in print.  Are they right, or are<lb/>
                   they confusing this with an occasion when you read it aloud (and it was<lb/>
@@ -142,14 +138,14 @@ for any purpose, even commercially.</p>
                   it.  Please, please tell me if you printed it, and if so, where.  No need<lb/>
                   for a long letter: just a "No, calm down, I never printed it" or a "Yes,<lb/>
                   it appeared in such-in-such a journal" would be more than enough.  This is<lb/>
-                  the one min<del><unclear></unclear></del>or mystery of writings-about-Wystan I haven't been able to solve,<lb/>
+                  the one min<del><unclear/></del>or mystery of writings-about-Wystan I haven't been able to solve,<lb/>
                   so please do help.<lb/>
-                  Have I told you <del><unclear></unclear>ny</del>any of my news?  I'm now at Columbia University permanently,<lb/>
+                  Have I told you <del><unclear/>ny</del>any of my news?  I'm now at Columbia University permanently,<lb/>
                   if I want to be.  I have a flat with a small guest room and bath--so please<lb/>
                   take note if you're in th<del>e</del>is country for any reason.  I have a lady friend,<lb/>
                   the first whom I expect to be with for a very long time, and we are quite<lb/>
                   happy about things in general. Next June we'll be in Europe, certainly in<lb/>
-                  Paris, possibly father <del><unclear></unclear></del>south, <del>t</del>although we may put off the southern trip<lb/>
+                  Paris, possibly father <del><unclear/></del>south, <del>t</del>although we may put off the southern trip<lb/>
                   for another year or so.  I haven't been across the Atlantic this year; too<lb/>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0230/" type="sheet"/>
@@ -160,14 +156,14 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Red<unclear>aktion</unclear> 11-12.<lb/>
-                  Kr<unclear>on</unclear>e<unclear>nz</unclear>ei<unclear>tung.</unclear> &#x00BD; 2-<unclear>5</unclear><lb/>
-                  M<unclear>or</unclear>gen  197<unclear>7.</unclear> &#x00B7;<lb/>
+                  Kr<unclear>on</unclear>e<unclear>nz</unclear>ei<unclear>tung.</unclear> ½ 2-<unclear>5</unclear><lb/>
+                  M<unclear>or</unclear>gen  197<unclear>7.</unclear> ·<lb/>
                   1.Nu<unclear>mer.</unclear> <unclear>Heft.</unclear>
                </p>
                <p>
                   Frau Baronin<lb/>
                   Stella Musulin<lb/>
-                  Sch<del><unclear></unclear></del>lösselgasse 8/17<lb/>
+                  Sch<del><unclear/></del>lösselgasse 8/17<lb/>
                   A-1080 Vienna<lb/>
                   Austria
                </p>

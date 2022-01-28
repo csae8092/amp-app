@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0023.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0023.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0022.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0024.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 4</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1962-07-23" >1962-07-23</origDate></origin>
+                        <origin><origDate when-iso="1962-07-23">1962-07-23</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1962-07-23" >1962-07-23</date>
+               <placeName ref="#"/>
+               <date when-iso="1962-07-23">1962-07-23</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -117,7 +113,7 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0121/" type="envelope"/>
                <p>
                   Die Baronin<lb/>
-                  Stella Mus<del><unclear></unclear></del><unclear>s</unclear>ulin<lb/>
+                  Stella Mus<del><unclear/></del><unclear>s</unclear>ulin<lb/>
                   Fridau<lb/>
                   Obergrabendorf,<lb/>
                   N. O <unclear>,</unclear> bei S. Pölten

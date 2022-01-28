@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0039.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0039.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0038.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0040.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 9</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1965-04-28" >1965-04-28</origDate></origin>
+                        <origin><origDate when-iso="1965-04-28">1965-04-28</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1965-04-28" >1965-04-28</date>
+               <placeName ref="#"/>
+               <date when-iso="1965-04-28">1965-04-28</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -170,7 +166,7 @@ for any purpose, even commercially.</p>
                   M<unclear>a</unclear>ny thanks for your letter. Will <unclear>tr</unclear>y and call you<lb/>
                   to-day by phone.<lb/>
                   I enclose a pr<unclear>o</unclear>se translation ma<unclear>d</unclear>e by me and a German friend<unclear>;</unclear><lb/>
-                  <unclear></unclear> <del><unclear></unclear></del> Sin<unclear>ce</unclear> the copy I sent you , <del><unclear></unclear></del> I ha<unclear>ve</unclear> made <unclear>a</unclear> few slig<unclear>h</unclear>t<lb/>
+                  <unclear/> <del><unclear/></del> Sin<unclear>ce</unclear> the copy I sent you , <del><unclear/></del> I ha<unclear>ve</unclear> made <unclear>a</unclear> few slig<unclear>h</unclear>t<lb/>
                   changes in stanza <unclear>3</unclear>. (see above)<lb/>
                   Could y<unclear>ou</unclear> che<unclear>c</unclear>k the translat<unclear>io</unclear>n for errors.<lb/>
                   love<lb/>
@@ -182,7 +178,7 @@ for any purpose, even commercially.</p>
                   Die Baronin<lb/>
                   Stella Musulin<lb/>
                   Fridau<lb/>
-                  Obergra<del><unclear></unclear></del><unclear></unclear>endorf<lb/>
+                  Obergra<del><unclear/></del><unclear/>endorf<lb/>
                   bei S. Pölten<lb/>
                   N.Ö.
                </p>
@@ -192,7 +188,7 @@ for any purpose, even commercially.</p>
                   Kirchstetten (<unclear>W</unclear>est<unclear>ba</unclear>h<unclear>n</unclear>)<lb/>
                   Hint<unclear>e</unclear>rholz# 6<lb/>
                   N.Ö<lb/>
-                  <unclear>&#x00B7;</unclear>
+                  <unclear>·</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0139/" type="sheet"/>
                <p>
@@ -224,7 +220,7 @@ for any purpose, even commercially.</p>
                <p>
                   Ja,ja,es muss gesagt werden,Machthaber,die grosses Unheil stifteten und B<unclear>ö</unclear>ses<lb/>
                   pl<del>na</del>anten,nahmen dich auf;f<unclear>ü</unclear>r wie lang,doch,wickelten sie dich ein,dich,der auf Goebbels<lb/>
-                  Angebot von Kultur "In Ruah lassen!" entgegnetest? <del>a</del>Aber  /?<unclear></unclear> Rag,Tag, Bobta<unclear>il ?</unclear>   <del>x</del>ziehen einen Stunk<lb/>
+                  Angebot von Kultur "In Ruah lassen!" entgegnetest? <del>a</del>Aber  /?<unclear/> Rag,Tag, Bobta<unclear>il ?</unclear>   <del>x</del>ziehen einen Stunk<lb/>
                   vor,und die Jungen verdammen dich ungelesen.
                </p>
                <p>

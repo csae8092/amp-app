@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0051.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0051.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0049.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0052.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -110,7 +106,7 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0165/" type="sheet"/>
                <p>
                   Einschub 1 ,<lb/>
-                  <del><unclear></unclear></del>Als ich zwischen sechs und zwölf Jahre alt war verbrachte ich<lb/>
+                  <del><unclear/></del>Als ich zwischen sechs und zwölf Jahre alt war verbrachte ich<lb/>
                   viele meiner wachen Stunden damit mir eine heilsame zweite Welt zu<lb/>
                   schaffen . Ihre <del>Grundelemente</del> Bausteine waren erstens eine<lb/>
                   Karlksteinlandschaft , die hauptsächlich .<del>...</del>von.<del>.</del>der Pennine Heide<lb/>

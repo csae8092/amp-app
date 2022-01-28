@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0022.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0022.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0021.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0023.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 3</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1961-08-16" >1961-08-16</origDate></origin>
+                        <origin><origDate when-iso="1961-08-16">1961-08-16</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -104,7 +100,7 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0117/" type="envelope"/>
                <p>
                   Die Baronin<lb/>
-                  Stella Mu<del><unclear></unclear></del><unclear>s</unclear>sil<unclear>i</unclear>n<lb/>
+                  Stella Mu<del><unclear/></del><unclear>s</unclear>sil<unclear>i</unclear>n<lb/>
                   Wien III<lb/>
                   Neulingasse 26.
                </p>
@@ -125,8 +121,8 @@ for any purpose, even commercially.</p>
                   N.-Ö., AUSTRIA
                </p>
                <p>
-                  D<del><unclear></unclear></del>ear Stella:<lb/>
-                  Del<unclear>ig</unclear>hted to hear y<unclear>o</unclear><del><unclear></unclear></del><unclear>u</unclear> a<unclear>r</unclear>e<lb/>
+                  D<del><unclear/></del>ear Stella:<lb/>
+                  Del<unclear>ig</unclear>hted to hear y<unclear>o</unclear><del><unclear/></del><unclear>u</unclear> a<unclear>r</unclear>e<lb/>
                   back and would love to see y<unclear>ou</unclear><lb/>
                   a<unclear>ny</unclear>time<unclear>:</unclear> Are you living in Wien or<lb/>
                   in Obergrabendorf.?<lb/>

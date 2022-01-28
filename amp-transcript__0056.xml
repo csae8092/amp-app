@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0056.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0056.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0053.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -105,8 +101,8 @@ for any purpose, even commercially.</p>
                   (see p<unclear>.</unclear> 16-17)
                </p>
                <p>
-                  <unclear>R. 2</unclear> Line <del><unclear></unclear></del>7 <del>Would</del> 'Chester'. Would it <unclear>be</unclear> helpful <unclear>a</unclear>t this<lb/>
-                  &#x2713;<unclear>f</unclear>irst mention of him to add the sur<unclear>n</unclear>ame , i.e.<lb/>
+                  <unclear>R. 2</unclear> Line <del><unclear/></del>7 <del>Would</del> 'Chester'. Would it <unclear>be</unclear> helpful <unclear>a</unclear>t this<lb/>
+                  ✓<unclear>f</unclear>irst mention of him to add the sur<unclear>n</unclear>ame , i.e.<lb/>
                   'Chester Kallman'. ?
                </p>
                <p>
@@ -118,15 +114,15 @@ for any purpose, even commercially.</p>
                   life as one" or "if his life as a whole" ?
                </p>
                <p>
-                  p&#x00B7;3 Para 2 Money pinched from Chesters jacket at party.<lb/>
-                  <unclear>I</unclear>ncident already referred to in bottom par<unclear>a</unclear> P&#x00B7;13<lb/>
+                  p·3 Para 2 Money pinched from Chesters jacket at party.<lb/>
+                  <unclear>I</unclear>ncident already referred to in bottom par<unclear>a</unclear> P·13<lb/>
                   of " Auden in Kirchs<unclear>t</unclear>etten ". Since this para is<lb/>
                   in brackets perhaps this is an indicatio<unclear>n</unclear> <unclear>t</unclear>hat<lb/>
                   you in<unclear>t</unclear>ended to omit it<unclear>?</unclear>
                </p>
                <p>
                   Chec<unclear>k</unclear> wi<unclear>th</unclear> <unclear>Müller</unclear> <lb/>
-                  wh<unclear>a</unclear>t is in his m&#x1E63; .
+                  wh<unclear>a</unclear>t is in his mṣ .
                </p>
                <p>
                   p3 Line <unclear>4</unclear> fr<unclear>om</unclear> bottom<lb/>
@@ -134,10 +130,10 @@ for any purpose, even commercially.</p>
                   <unclear>`</unclear>Kirchstetten<unclear>'</unclear> for <unclear>s</unclear>ake of clari<unclear>t</unclear>y ?
                </p>
                <p>
-                  P&#x00B7; 16. <del>Bottom <unclear></unclear></del> Last sentence <unclear></unclear> o<unclear>v</unclear>er <unclear>to</unclear> t<unclear>o</unclear>p P.17&#x2713;<lb/>
+                  P· 16. <del>Bottom <unclear/></del> Last sentence <unclear/> o<unclear>v</unclear>er <unclear>to</unclear> t<unclear>o</unclear>p P.17✓<lb/>
                   <unclear>I</unclear>ncident of "he who<unclear>s</unclear>e name w<unclear>e</unclear> never mention<unclear>'</unclear> at<lb/>
                   funeral. ? Repe<unclear>ti</unclear>tion of mention of this on<lb/>
-                  P&#x00B7;14 , to<unclear>p</unclear> para, of "Auden in Kirchstetten<unclear>".</unclear>
+                  P·14 , to<unclear>p</unclear> para, of "Auden in Kirchstetten<unclear>".</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0180/" type="sheet"/>
          </div>

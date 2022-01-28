@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0041.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0041.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0040.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0042.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 28</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1970-07-06" >1970-07-06</origDate></origin>
+                        <origin><origDate when-iso="1970-07-06">1970-07-06</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1970-07-06" >1970-07-06</date>
+               <placeName ref="#"/>
+               <date when-iso="1970-07-06">1970-07-06</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -127,7 +123,7 @@ for any purpose, even commercially.</p>
                <p>
                   Die Baronin<lb/>
                   Stella Mus<unclear>u</unclear>l<unclear>in</unclear><lb/>
-                  <del>W<unclear></unclear>en IV</del> <del>Wien III</del><lb/>
+                  <del>W<unclear/>en IV</del> <del>Wien III</del><lb/>
                   <del>Neuling gasse 26/14</del>.
                </p>
                <p>
@@ -176,7 +172,7 @@ for any purpose, even commercially.</p>
                   in a m<unclear>or</unclear>e l<unclear>i</unclear>beral mil<unclear>i</unclear>eu, could St<unclear>i</unclear>fter,<lb/>
                   Ra<unclear>im</unclear>und, Nes<unclear>tro</unclear>y, have <unclear>wr</unclear>itten what they did?<lb/>
                   Hope th<unclear>is</unclear> rea<unclear>c</unclear>hes y<unclear>ou</unclear>. Loo<unclear>king</unclear> forw<unclear>ard</unclear> to se<unclear>ing</unclear> y<unclear>ou</unclear><lb/>
-                  in Sept<unclear></unclear><lb/>
+                  in Sept<unclear/><lb/>
                   love and ad<unclear>m</unclear>irat<unclear>ion</unclear>
                   Wystan
                </p>

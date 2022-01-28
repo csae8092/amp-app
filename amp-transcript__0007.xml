@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0007.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0007.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0006.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0008.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 18</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-10-06" >1968-10-06</origDate></origin>
+                        <origin><origDate when-iso="1968-10-06">1968-10-06</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1968-10-06" >1968-10-06</date>
+               <placeName ref="#"/>
+               <date when-iso="1968-10-06">1968-10-06</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -150,7 +146,7 @@ for any purpose, even commercially.</p>
                   Am off to England to-morrow, so don't see how<lb/>
                   anything can now be arranged.<lb/>
                   If you think these can, please write me<lb/>
-                  &#x2105; Faber and Faber, 24 Russell Square , W.C. I<lb/>
+                  ℅ Faber and Faber, 24 Russell Square , W.C. I<lb/>
                   So sorry<lb/>
                   love<lb/>
                   Wystan.

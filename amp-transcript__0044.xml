@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0044.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0044.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0043.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0045.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 35</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-10-24" >1968-10-24</origDate></origin>
+                        <origin><origDate when-iso="1968-10-24">1968-10-24</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1968-10-24" >1968-10-24</date>
+               <placeName ref="#"/>
+               <date when-iso="1968-10-24">1968-10-24</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -111,7 +107,7 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0101/" type="sheet"/>
                <p>
                   from Peter Heyworth<lb/>
-                  32 BRYANSTON SQUARE LONDON W1 &#x00B7; AMBASSADOR 8906
+                  32 BRYANSTON SQUARE LONDON W1 · AMBASSADOR 8906
                </p>
                <p>
                   Oct 2<unclear>4th</unclear>
@@ -128,7 +124,7 @@ for any purpose, even commercially.</p>
                   W<unclear>hat</unclear> is Mr Langers f<unclear>ir</unclear>st name.? Doe<unclear>s</unclear><lb/>
                   he unde<unclear>rsta</unclear>nd English? I <unclear>must</unclear> w<unclear>ri</unclear>te<lb/>
                   him a note of welcome.<lb/>
-                  I le<unclear>a</unclear>ve <unclear></unclear>day week for Ne<unclear>w</unclear> Y<unclear>or</unclear>k.<lb/>
+                  I le<unclear>a</unclear>ve <unclear/>day week for Ne<unclear>w</unclear> Y<unclear>or</unclear>k.<lb/>
                   <unclear>A</unclear>ddress. 77 St Mark's Place. New<lb/>
                   York City. New York 10003.<lb/>
                   much love and than<unclear>k</unclear>s<lb/>

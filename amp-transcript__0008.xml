@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0008.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0008.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0007.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0009.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 19</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-10-12" >1968-10-12</origDate></origin>
+                        <origin><origDate when-iso="1968-10-12">1968-10-12</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1968-10-12" >1968-10-12</date>
+               <placeName ref="#"/>
+               <date when-iso="1968-10-12">1968-10-12</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -132,7 +128,7 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0040/" type="envelope"/>
                <p>
                   WH.Auden<lb/>
-                  &#x2105; Heyworth<lb/>
+                  ℅ Heyworth<lb/>
                   32 Bryanston Square<lb/>
                   London. <del><unclear>N.</unclear></del> W.I<lb/>
                   England
@@ -147,15 +143,15 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Dear Stella<unclear>.</unclear><lb/>
-                  Like an idiot, Ive<del><unclear></unclear></del> gone and<lb/>
-                  left my American Dr<del><unclear></unclear></del>iving Licence<lb/>
+                  Like an idiot, Ive<del><unclear/></del> gone and<lb/>
+                  left my American Dr<del><unclear/></del>iving Licence<lb/>
                   behind.<lb/>
                   It should be in an envelope in<lb/>
                   the drawer of my bed-table upstairs.<lb/>
                   Could you be an angel and look for<lb/>
                   it next time you are going to Fridau<lb/>
                   and a<unclear>e</unclear>r-mail to me<lb/>
-                  &#x2105; Mr Peter Heyworth<lb/>
+                  ℅ Mr Peter Heyworth<lb/>
                   32 Bryanston Square<lb/>
                   London. W.I.<lb/>
                   So sorry to be such a nuisance.<lb/>

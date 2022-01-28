@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0027.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0027.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0026.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0029.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -213,7 +209,7 @@ for any purpose, even commercially.</p>
                   text-book  on mining machinery or a manufacturer's catalogue: but I was not free<lb/>
                   to invent one.  In deciding how my world was to function,I <del>was </del> could choose between<lb/>
                   t<del><unclear>e</unclear></del>wo practical possibilit<del>es</del>ies  - a mine can be drained either by an adit or a pu<unclear>mp</unclear> -<lb/>
-                  but physic<del><unclear></unclear></del>al impossibili<del>es</del>ties and magic means were forbidden. <del><unclear>T</unclear></del>When I say forbidden,<lb/>
+                  but physic<del><unclear/></del>al impossibili<del>es</del>ties and magic means were forbidden. <del><unclear>T</unclear></del>When I say forbidden,<lb/>
                   I mean that I felt,in some obscure way,that they were morally forbidden. Then there<lb/>
                   came a day when the moral issue became quite conscious. As I was planning my<lb/>
                   Platonic Idea of a concentrating-mill,I ran into difficulties. I had to choose<lb/>
@@ -228,13 +224,13 @@ for any purpose, even commercially.</p>
                   (2
                </p>
                <p>
-                  <unclear>W</unclear>hen,later,I began to write poetry&#x2019;<unclear>I</unclear> found th<unclear>a</unclear>t,for me,<unclear>a</unclear>t least,the same<lb/>
+                  <unclear>W</unclear>hen,later,I began to write poetry’<unclear>I</unclear> found th<unclear>a</unclear>t,for me,<unclear>a</unclear>t least,the same<lb/>
                   obligation was binding. That is to say,I cannot accept the do<del><unclear>s</unclear></del>ctrine that,in<lb/>
                   poetry,there is a 'suspension of belief<del><unclear>e</unclear></del>'. A poet must never make a statement<lb/>
                   simply because it sounds poetically exciting: he must also bel<del>ei</del>ieve it to be<lb/>
                   true. This does not mean,of course,that one can only appreciate a poet whose<lb/>
                   beliefs happen to co-incide with one's own. It does mean,however,that one must<lb/>
-                  <del>n</del>b<unclear>e</unclear> convinced that the poet really believ<del><unclear></unclear></del>es what he says,however odd <del>that</del> the<lb/>
+                  <del>n</del>b<unclear>e</unclear> convinced that the poet really believ<del><unclear/></del>es what he says,however odd <del>that</del> the<lb/>
                   belief may seem to oneself.
                </p>
                <p>
@@ -246,15 +242,15 @@ for any purpose, even commercially.</p>
                   and writing poetry,there is,of course,a profound difference. A <del>fanatsy</del><lb/>
                   fantasy world exists only in the head of its creator: a poem is a public<lb/>
                   verbal object intended to be read and enjoyed by others. To become conscious<lb/>
-                  of others is to become conscious of historical time<del><unclear></unclear></del> in various ways. The<lb/>
+                  of others is to become conscious of historical time<del><unclear/></del> in various ways. The<lb/>
                   contents of a poem are necessarily past <del>expereinces</del> experiences,and the goal of<lb/>
                   a poem is <del>necessaily</del> necessarily in the future,since it cannot be read until<lb/>
                   it has been written. Again<unclear>,</unclear>to write a poem is to engage in an activity which<lb/>
                   human beings have practised for centuries. If one asks why human beings<lb/>
                   make poems or paint pictures or compose music,I can see two possible answers.<lb/>
-                  Firstly all the artistic media are forms of an activity pecul<del><unclear></unclear></del>iar to human<lb/>
+                  Firstly all the artistic media are forms of an activity pecul<del><unclear/></del>iar to human<lb/>
                   beings,namely,Personal Speech. Many animals have impersonal codes of<lb/>
-                  communications,visual,olfactory,auditory signals,b<del><unclear></unclear></del>y which they convey to<lb/>
+                  communications,visual,olfactory,auditory signals,b<del><unclear/></del>y which they convey to<lb/>
                   other members of their species vital information about food,territory,sex,<lb/>
                   the presence of <del>e<unclear>nm</unclear>ies</del> enemies,etc,and in social animals like the bee,such<lb/>
                   a co<unclear>d</unclear>e may be exceedingly comple<del>s</del>x. We,too,of course,often use words in the same<lb/>
@@ -313,7 +309,7 @@ for any purpose, even commercially.</p>
                   to what scientists are doing at this moment. Past works of art,on the<lb/>
                   other hand,are of the utmost importance to the contemporary <del>praticioner<unclear>.</unclear></del><lb/>
                   pra<unclear>c</unclear>tic<del>o</del>t<del>o</del>neroner. Every artist tries to pr<unclear>od</unclear>uce something new,but in the hope<lb/>
-                  that,in time,it will take its <del><unclear></unclear></del>proper place in the tradition of his art.<lb/>
+                  that,in time,it will take its <del><unclear/></del>proper place in the tradition of his art.<lb/>
                   <unclear>A</unclear>nd he cannot produce any<unclear>t</unclear>hing significantly original unless he knows<lb/>
                   well what has <del>been</del> already been done<unclear>;</unclear>w<del>ithout</del>,th<unclear>a</unclear>t is to say ,<del>even in</del> he cannot<lb/>
                   're<unclear>b</unclear>el' against the p<unclear>a</unclear>st without having a profound reverence for it.
@@ -483,7 +479,7 @@ for any purpose, even commercially.</p>
                <p>
                   I have added commas in lists after fin<unclear>al</unclear> item and bef<unclear>o</unclear>re etc<lb/>
                   since they are already <unclear>the</unclear>re in most o<unclear>f</unclear> the lists<unclear>-</unclear><lb/>
-                  I have a<unclear>ls</unclear>o <unclear>a</unclear>dded a <unclear>f</unclear>ew o<unclear>th</unclear>er comma<unclear></unclear> (<unclear>usually</unclear> <unclear>t</unclear>o co<unclear>m</unclear>ple<unclear>t</unclear>e a set <unclear>o</unclear>f <unclear>pa</unclear>renthetical comma<unclear>s)</unclear><lb/>
+                  I have a<unclear>ls</unclear>o <unclear>a</unclear>dded a <unclear>f</unclear>ew o<unclear>th</unclear>er comma<unclear/> (<unclear>usually</unclear> <unclear>t</unclear>o co<unclear>m</unclear>ple<unclear>t</unclear>e a set <unclear>o</unclear>f <unclear>pa</unclear>renthetical comma<unclear>s)</unclear><lb/>
                   I have n<unclear>ot</unclear> ch<unclear>an</unclear>ged colons <unclear>though</unclear> I wou<unclear>l</unclear>d <unclear>lik</unclear>e to <unclear>:</unclear> Are <unclear>th</unclear>ese A's ?
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0162/" type="sheet"/>

@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0013.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0013.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0012.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0014.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 24</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1969-01-04" >1969-01-04</origDate></origin>
+                        <origin><origDate when-iso="1969-01-04">1969-01-04</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1969-01-04" >1969-01-04</date>
+               <placeName ref="#"/>
+               <date when-iso="1969-01-04">1969-01-04</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -130,7 +126,7 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Die Baronin<lb/>
-                  Stella M<del><unclear></unclear></del>usul<unclear>i</unclear>n<lb/>
+                  Stella M<del><unclear/></del>usul<unclear>i</unclear>n<lb/>
                   Wien <del>IV</del><lb/>
                   Neulinggasse 26/14<lb/>
                   Austria.
@@ -163,10 +159,10 @@ for any purpose, even commercially.</p>
                   things he has the cheque for my Hausmeisterin.<lb/>
                   Address Otto Hoffmann. Wien VII. Karl Schweighofe<unclear>gas</unclear>se<lb/>
                   4/21. Tel. 93/88/155.<lb/>
-                  I hear that my old lawyer <del><unclear></unclear></del> is supervising<lb/>
+                  I hear that my old lawyer <del><unclear/></del> is supervising<lb/>
                   the case but have till now heard nothing from<lb/>
                   him. Again could you call h<unclear>im</unclear> for me.<lb/>
-                  Dr Walter Redlich. Wien <del><unclear></unclear></del>XIX . Paradisgasse 55.<lb/>
+                  Dr Walter Redlich. Wien <del><unclear/></del>XIX . Paradisgasse 55.<lb/>
                   Tel: 36/43/83.<lb/>
                   Terribly sorry to be such a nuisance, but<lb/>
                   I don't k<unclear>now</unclear> what to do. I can't get intouch<lb/>

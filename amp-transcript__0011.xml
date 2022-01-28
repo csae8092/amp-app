@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0011.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0011.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0010.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0012.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 22</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-12-13" >1968-12-13</origDate></origin>
+                        <origin><origDate when-iso="1968-12-13">1968-12-13</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1968-12-13" >1968-12-13</date>
+               <placeName ref="#"/>
+               <date when-iso="1968-12-13">1968-12-13</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -157,7 +153,7 @@ for any purpose, even commercially.</p>
                   between Vienna and Kirchstetten coll<unclear>e</unclear>ded with<lb/>
                   a Lastwagen and was killed.<lb/>
                   Chester is going to Vienna,but he was too<lb/>
-                  upset for <del><unclear></unclear></del>me to find out where he would<lb/>
+                  upset for <del><unclear/></del>me to find out where he would<lb/>
                   stay. I presume in Kirchstetten.<lb/>
                   If you can get in touch him and help him<lb/>
                   in any way (there are purely practical matters to<lb/>

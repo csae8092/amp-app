@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0009.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0009.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0008.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0010.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 20</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-10-15" >1968-10-15</origDate></origin>
+                        <origin><origDate when-iso="1968-10-15">1968-10-15</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1968-10-15" >1968-10-15</date>
+               <placeName ref="#"/>
+               <date when-iso="1968-10-15">1968-10-15</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -117,13 +113,13 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0043/" type="envelope"/>
                <p>
                   W.H.Auden<lb/>
-                  &#x2105; Heyworth<lb/>
+                  ℅ Heyworth<lb/>
                   32 Bryanston Square<lb/>
                   London. W.I.<lb/>
                   England
                </p>
                <p>
-                  <del><unclear></unclear></del>Air-M<unclear>ai</unclear>l
+                  <del><unclear/></del>Air-M<unclear>ai</unclear>l
                </p>
                <p>
                   Die Baronin<lb/>
@@ -138,8 +134,8 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0044/" type="envelope"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0045/" type="sheet"/>
                <p>
-                  &#x2105; Heyworth<lb/>
-                  32 BRYANSTON SQUARE LONDON W1 &#x00B7; AMBASSADOR 8906
+                  ℅ Heyworth<lb/>
+                  32 BRYANSTON SQUARE LONDON W1 · AMBASSADOR 8906
                </p>
                <p>
                   Tuesday

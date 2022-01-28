@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0031.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0031.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0030.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0032.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>2, 11</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1985-12-15" >1985-12-15</origDate></origin>
+                        <origin><origDate when-iso="1985-12-15">1985-12-15</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -122,7 +118,7 @@ for any purpose, even commercially.</p>
                   date.  "Write as fully as you can, double the length."  I<lb/>
                   protested that a) I don´t wish to chatter more feebly than I<lb/>
                   have already, b) I am ancient and frail, also lazy, c) the<lb/>
-                  first MSS only approximate to each other while containing m<del><unclear></unclear></del>kuch<lb/>
+                  first MSS only approximate to each other while containing m<del><unclear/></del>kuch<lb/>
                   the same material;  their tone differs.  But above all they<lb/>
                   have, whether bad or indifferent, a certain shape or form and<lb/>
                   you cannot just stuff more material into it which refers to<lb/>

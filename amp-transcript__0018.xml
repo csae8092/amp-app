@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0018.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0018.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0017.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0019.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 31</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1971-10-19" >1971-10-19</origDate></origin>
+                        <origin><origDate when-iso="1971-10-19">1971-10-19</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1971-10-19" >1971-10-19</date>
+               <placeName ref="#"/>
+               <date when-iso="1971-10-19">1971-10-19</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -134,7 +130,7 @@ for any purpose, even commercially.</p>
                   Oct 19 th .
                </p>
                <p>
-                  <unclear>&#x2105;</unclear> Spender<lb/>
+                  <unclear>℅</unclear> Spender<lb/>
                   15 Loudoun Rd<lb/>
                   Lond<unclear>e</unclear>n. N.W.8
                </p>

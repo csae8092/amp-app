@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0002.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0002.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0001.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0003.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 8</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1964-12-23" >1964-12-23</origDate></origin>
+                        <origin><origDate when-iso="1964-12-23">1964-12-23</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1964-12-23" >1964-12-23</date>
+               <placeName ref="#"/>
+               <date when-iso="1964-12-23">1964-12-23</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -167,7 +163,7 @@ for any purpose, even commercially.</p>
                   be associated with shits.<lb/>
                   Torture is the inequity which utterly bewilders me.<lb/>
                   I know something about the evil in my own heart and<lb/>
-                  <del><unclear></unclear></del>in the <unclear>sort</unclear> of people I <del>know</del>meet, but I cannot conceive of myself<lb/>
+                  <del><unclear/></del>in the <unclear>sort</unclear> of people I <del>know</del>meet, but I cannot conceive of myself<lb/>
                   or them torturing anybody. Where do the torturers<lb/>
                   come from? What class? Whom do they marry?<lb/>
                   <del>Have you ever met one?</del> To what pubs do they go?<lb/>

@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0046.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0046.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0037.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0047.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -97,12 +93,12 @@ for any purpose, even commercially.</p>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0141/" type="sheet"/>
                <p>
-                  1. In dem man <unclear>&#x2713;</unclear> dich &#8212; begrub &#x00B7;
+                  1. In dem man <unclear>✓</unclear> dich — begrub ·
                </p>
                <p>
                   2. Kategorisiert<unclear>.</unclear><lb/>
                   Amb<unclear>it-</unclear>Umwelt is a bit wea<unclear>k</unclear> but pro<unclear>b</unclear>ably<lb/>
-                  can't <unclear>b</unclear>e helped&#x00B7;
+                  can't <unclear>b</unclear>e helped·
                </p>
                <p>
                   <unclear>3</unclear>. Grosses Unheil stifteten und Böses planten .<lb/>
@@ -110,14 +106,14 @@ for any purpose, even commercially.</p>
                   <unclear>1</unclear> the act<unclear>io</unclear>n<lb/>
                   2 the intent.<lb/>
                   Übel wollens ?<lb/>
-                  Männer <unclear>&#x2713;</unclear> grossen Unheils und Übelwol<unclear>l</unclear>ens<unclear>.</unclear> ?
+                  Männer <unclear>✓</unclear> grossen Unheils und Übelwol<unclear>l</unclear>ens<unclear>.</unclear> ?
                </p>
                <p>
                   <unclear>5</unclear> . Alpdruck .(vom nicht vor)<lb/>
                   Stümper .
                </p>
                <p>
-                  <unclear>6.</unclear> <del><unclear>I</unclear>n str</del> Bei &#x2713; strömendem Re<unclear>g</unclear>en<lb/>
+                  <unclear>6.</unclear> <del><unclear>I</unclear>n str</del> Bei ✓ strömendem Re<unclear>g</unclear>en<lb/>
                </p>
                <p>
                   <unclear>7.</unclear> Hope ever<unclear>y</unclear>one won't thi<unclear>n</unclear>k <unclear>"</unclear>die Reiche<unclear>"</unclear><lb/>
@@ -125,7 +121,7 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   prosais<unclear>c</unclear>he<lb/>
-                  &#x0026; private Art
+                  &amp; private Art
                </p>
                <p>
                   8. Lächeln wir bei Hochzei<unclear>t</unclear>en , auf denen ?<lb/>
@@ -135,10 +131,10 @@ for any purpose, even commercially.</p>
                   ein Uno<unclear>r</unclear>t mit Posten fü<unclear>r</unclear> Folterer
                </p>
                <p>
-                  <unclear>9</unclear>. Frieden oder Frie<unclear>d</unclear>e <unclear>&#x2713;</unclear> ?
+                  <unclear>9</unclear>. Frieden oder Frie<unclear>d</unclear>e <unclear>✓</unclear> ?
                </p>
                <p>
-                  wie <unclear>w</unclear>u einst <unclear>&#x2713;</unclear> &#x00B7;
+                  wie <unclear>w</unclear>u einst <unclear>✓</unclear> ·
                </p>
                <p>
                   10. An das Regime? Wann bei jedem<lb/>
@@ -155,14 +151,14 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   12. Was ist der Abgrund?<lb/>
-                  statt Bratschen Violas oder Geigen &#x2052;
+                  statt Bratschen Violas oder Geigen ⁒
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0142/" type="sheet"/>
                <p>
                   Heute lächeln wir bei Hochzeiten ,<lb/>
                   bei <unclear>d</unclear>enen Braut u. Bräutigam schon<lb/>
                   auf der Welt waren als sich der Schatten<lb/>
-                  gehoben <unclear>od</unclear>er (vielmehr) &#x2713; weiter <unclear>&#x2713;</unclear> gerückt war<unclear>.</unclear>
+                  gehoben <unclear>od</unclear>er (vielmehr) ✓ weiter <unclear>✓</unclear> gerückt war<unclear>.</unclear>
                </p>
                <p>
                   1<unclear>2.</unclear><lb/>

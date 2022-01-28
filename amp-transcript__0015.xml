@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0015.xml"
-   xml:base="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xml:id="amp-transcript__0015.xml" xml:base="https://auden-musulin-papers.github.io/amp-app" prev="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0014.xml" next="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0016.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -64,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 27</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1970-06-10" >1970-06-10</origDate></origin>
+                        <origin><origDate when-iso="1970-06-10">1970-06-10</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -79,13 +75,13 @@ for any purpose, even commercially.</p>
          <correspDesc>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
-               <placeName ref="#"></placeName>
-               <date  when-iso="1970-06-10" >1970-06-10</date>
+               <placeName ref="#"/>
+               <date when-iso="1970-06-10">1970-06-10</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
-                <placeName ref="#"></placeName>
-                <date></date>
+                <placeName ref="#"/>
+                <date/>
             </correspAction>
          </correspDesc>
          
@@ -148,12 +144,12 @@ for any purpose, even commercially.</p>
                   Translati<unclear>on</unclear> just received. Thanks<lb/>
                   <unclear>e</unclear> m<unclear>i</unclear>lli<unclear>on</unclear>.<lb/>
                   On Saturday Chester <unclear>and</unclear> I have<lb/>
-                  to attend a wedding <del><unclear></unclear></del>near<lb/>
-                  Kr<del><unclear></unclear></del>ems at 3&#x00B7;0.p.m,which means<lb/>
-                  we shall have to lunch at 12&#x00B7;0<unclear>,</unclear><lb/>
+                  to attend a wedding <del><unclear/></del>near<lb/>
+                  Kr<del><unclear/></del>ems at 3·0.p.m,which means<lb/>
+                  we shall have to lunch at 12·0<unclear>,</unclear><lb/>
                   C<unclear>ou</unclear>ld you possibly make that<unclear>?</unclear><lb/>
                   If not,pe<unclear>rhaps</unclear> you c<unclear>ou</unclear>ld come<lb/>
-                  on Monday,<del>if &#x00B7;retur:</del> or <unclear>w</unclear>h<unclear>ich</unclear>ever day<lb/>
+                  on Monday,<del>if ·retur:</del> or <unclear>w</unclear>h<unclear>ich</unclear>ever day<lb/>
                   you <unclear>w</unclear>ill be re<unclear>t</unclear>urning to Vienna<lb/>
                   fr<unclear>om</unclear> Fridau<unclear>.</unclear><lb/>
                   love and again thanks ever<lb/>
