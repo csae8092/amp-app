@@ -37,9 +37,13 @@
         </div>
         <script type="text/javascript">
             // created with https://ilkeryilmaz.github.io/timelinejs/
-            $('.js-timeline').Timeline({
-                autoplay: true,
-            });
+            $('.fa-play-circle').click(function () {
+                if ($('.timeline-list').length == 0) {
+                    $('.js-timeline').Timeline({
+                        autoplay: true,
+                    });
+                }
+            });            
         </script>
     </xsl:template>
     
