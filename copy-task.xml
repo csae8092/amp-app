@@ -55,8 +55,8 @@
             <include name="*0049.xml"/>
             <include name="*0037.xml"/>
             <include name="*0026.xml"/>
-            <!-- <include name="*0061.xml"/>
-            <include name="*0060.xml"/> -->
+            <include name="*0061.xml"/>
+            <include name="*0060.xml"/>
         </fileset>
     </move>
 
