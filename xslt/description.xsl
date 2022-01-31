@@ -39,7 +39,8 @@
                                      </div>
                                      <div class="col-md-6">
                                          <div class="flex-md-row mb-4 align-items-center">
-                                             <img class="card-img-right flex-auto d-md-block" src="{replace(//tei:figure/tei:graphic/@url, '../images', 'images')}" alt="{//tei:figure/tei:head}"/>
+                                             <xsl:variable name="img" select="replace(//tei:figure/tei:graphic/@url, '../images', 'images')"/>
+                                             <img class="card-img-right flex-auto d-md-block" src="{replace($img, '.JPG', '_800x1128.JPG')}" alt="{//tei:figure/tei:head}"/>
                                              <p style="text-align:right;"><small><xsl:value-of select="//tei:figure/tei:figDesc"/></small></p>
                                          </div>
                                      </div>
