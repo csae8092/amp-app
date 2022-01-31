@@ -22,7 +22,7 @@
                             <div class="js-timeline">  
                                 <xsl:for-each select="//tei:event">  
                                     <xsl:variable name="img" select="concat(@facs, 'full/full/0/default.jpg')"/>
-                                    <div data-time="{./tei:head/tei:date/@when}">
+                                    <div data-time="{./tei:head/tei:date/@when-iso}">
                                         <xsl:call-template name="bio-el">
                                             <xsl:with-param name="img" select="$img"/>
                                             <xsl:with-param name="location" select="'false'"/>
@@ -35,16 +35,8 @@
                 </div>
             </div>
         </div>
-        <script type="text/javascript">
-            // created with https://ilkeryilmaz.github.io/timelinejs/
-            $('.fa-play-circle').click(function () {
-                if ($('.timeline-list').length == 0) {
-                    $('.js-timeline').Timeline({
-                        autoplay: true,
-                    });
-                }
-            });            
-        </script>
+        <script type="text/javascript" src="js/timeline-leaflet.js"/>           
+        
     </xsl:template>
     
 </xsl:stylesheet>

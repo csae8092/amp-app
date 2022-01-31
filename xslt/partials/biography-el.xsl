@@ -20,6 +20,11 @@
                 <div class="row">
                     <div class="col-md-5">
                         <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
+                        <xsl:if test="./tei:desc/tei:location">
+                            <xsl:variable name="lat" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[1]"/>
+                            <xsl:variable name="long" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[2]"/>
+                            <div class="leaflet-maps-modal" lat="{$lat}" long="{$long}"></div>
+                        </xsl:if>
                     </div>
                     <div class="col-md-7">
                         <xsl:choose>
@@ -30,7 +35,7 @@
                             </xsl:when>
                             <xsl:when test="./tei:desc">
                                 <h6><xsl:value-of select="./tei:desc/tei:title"/></h6>
-                                <span><xsl:value-of select="./tei:desc/text()"/></span>
+                                <span><xsl:value-of select="./tei:desc/text()"/></span>                               
                             </xsl:when>
                         </xsl:choose>
                     </div>
@@ -48,7 +53,13 @@
                             <xsl:when test="./tei:desc">
                                 <h6><xsl:value-of select="./tei:desc/tei:title"/></h6>
                                 <span><xsl:value-of select="./tei:desc/text()"/></span>
-                            </xsl:when>
+                                
+                                <xsl:if test="./tei:desc/tei:location">
+                                    <xsl:variable name="lat" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[1]"/>
+                                    <xsl:variable name="long" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[2]"/>
+                                    <div class="leaflet-maps" lat="{$lat}" long="{$long}"></div>
+                                </xsl:if>
+                            </xsl:when>                            
                         </xsl:choose>                        
                     </div>
                 </div>

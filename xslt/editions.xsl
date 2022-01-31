@@ -66,6 +66,13 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">  
+                        <div class="text-right tei-logo">                           
+                            <h1>
+                                <a href="{//tei:TEI/@xml:id}?format=raw" title="TEI Source">
+                                    <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
+                                </a>
+                            </h1>                         
+                        </div>
                         <div class="card">
                             <div class="card-header">                                
                                 <xsl:call-template name="header-nav"/>                                                              
@@ -123,12 +130,7 @@
                                         <a title="Table" href="#xml-tab" data-toggle="tab" class="nav-link btn btn-round">
                                             TEI/XML view
                                         </a>
-                                    </li>
-                                    <li class="nav-item">                                    
-                                        <a href="{//tei:TEI/@xml:id}?format=raw" title="TEI Source">
-                                            <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
-                                        </a>
-                                    </li>
+                                    </li>                                    
                                 </ul>
                             </div>
                             <div class="tab-content">
