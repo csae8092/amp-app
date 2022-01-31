@@ -309,6 +309,21 @@ button.close {
     transform: scale(1.05);
 }
 
+/* leaflet */
+
+.leaflet-maps {
+    height: 200px;
+    margin-top: 1em;
+    border-radius: 1rem;
+    border: 2px solid rgba(0, 0, 0, .1);
+}
+
+.leaflet-maps-modal {
+    height: 200px;
+    margin-top: 1em;
+    border: 1px solid #000;
+}
+
 /* slider button */
 .btn-round {
     border: 1px solid #000;
