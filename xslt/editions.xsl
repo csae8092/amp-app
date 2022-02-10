@@ -222,7 +222,18 @@
             <br/>
         </xsl:if>
     </xsl:template>
-        <xsl:template match="tei:l">
+    <xsl:template match="tei:lg">
+        <xsl:param name="view"/>
+        <xsl:choose>
+            <xsl:when test="$view = 'diplomatic' or $view = 'commentary' or $view = 'reading'">
+                <p><xsl:apply-templates/></p>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:l">
         <xsl:param name="view"/>
         <xsl:choose>
             <xsl:when test="$view = 'diplomatic' or $view = 'commentary' or $view = 'reading'">
