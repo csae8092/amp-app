@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xml:id="team_0001.xml">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Team</title>
+            <author>
+               <name>Mayer, Sandra</name>
+               <name>Frühwirth, Timo</name>
+               <name>Andorfer, Peter</name>
+			      <name>Quigley, Sean</name>
+               <name>Stoxreiter, Daniel</name>
+            </author>
+            <funder>
+               <name>FWF Austrian Science Fund</name>
+               <address>
+                  <street>Sensengasse 1</street>
+                  <postCode>1090 Vienna</postCode>
+                  <placeName>
+                     <country>A</country>
+                     <settlement>Vienna</settlement>
+                  </placeName>
+               </address>
+            </funder>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
+            <pubPlace>Vienna</pubPlace>
+            <date when="2021">2021</date>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                  <p>You are free to: Share — copy and redistribute the material in any medium or format; adapt — remix, transform, and build upon the material
+                     for any purpose, even commercially.</p>
+                  <p>The licensor cannot revoke these freedoms as long as you follow the license terms. Under the following terms:</p>
+                  <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p>
+                  <p>Notices:</p>
+                  <p>You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation. No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.</p>
+               </licence>
+               <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
+            </availability>
+         </publicationStmt>
+		   <notesStmt>
+		      <note>This XML/TEI file was created by Sean Quigley. It was converted from Markdown to TEI-compliant XML using OxGarage Conversion.</note>
+		   </notesStmt>
+         <sourceDesc>
+            <p>born digital</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc status="draft">
+         <change who="smayer" when="2021-12-17">Markdown file created</change>
+         <change who="squigley" when="2022-02-02">XML/TEI file created</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div>
+            <head>
+               <hi rend="bold">Team</hi>
+            </head>
+            <div>
+               <head>
+                  <hi rend="bold">
+                     <ref target="https://www.oeaw.ac.at/acdh/team/current-team/peter-andorfer">Peter Andorfer</ref>
+                  </hi> - Research Software Engineer</head>
+               <p>Peter Andorfer is a research software engineer at the Austrian Academy of Sciences and its Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH). In the current project he is in charge the architecture of the project's software stack.</p>
+            </div>
+            <div>
+               <head>
+                  <hi rend="bold">
+                     <ref target="https://www.oeaw.ac.at/acdh/team/current-team/timo-sebastian-fruehwirth">Timo Frühwirth</ref>
+                  </hi> - Researcher and Deputy PI</head>
+               <p>Timo Frühwirth is a PhD student at the Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH) of the Austrian Academy of Sciences. His research focuses on life writing, material culture, and twentieth-century poetry - especially in the context of W. H. Auden's Austrian period. He is co-editor of the Auden Musulin Papers digital edition and co-author of the edition's scholarly commentary.</p>
+            </div>
+            <div>
+               <head>
+                  <hi rend="bold">Sandra Mayer</hi> - Principal Investigator</head>
+               <p>Sandra Mayer is a literary and cultural historian at the Austrian Academy of Sciences and its Austrian Centre for Digital Humanities and Cultural Heritage. Her research focuses on the areas of life writing, authorship and celebrity, transnational cultural encounters and reception processes. She is the author of a monograph on <hi rend="italic">Oscar Wilde in Vienna</hi> (Brill 2018) and has (co-)edited books and special issues on themes such as <hi rend="italic">Life Writing and Celebrity</hi> (Routledge 2019), "The Author in the Popular Imagination" (<hi rend="italic">Forum for Modern Language Studies</hi> 2018), and "Life Writing and the Transnational" (<hi rend="italic">Comparative Critical Studies</hi> 2022). (<ref target="http://www.sandramayer.org">http://www.sandramayer.org</ref>)</p>
+            </div>
+            <div>
+               <head>
+                  <hi rend="bold">Daniel Stoxreiter</hi> - Research Software Engineer</head>
+               <p>Daniel Stoxreiter is a research software engineer at the Austrian Academy of Sciences and its Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH). In the current project he is in charge of the Digital Edition website developement.</p>
+            </div>
+            <div>
+               <head>
+                  <hi rend="bold">Sean Quigley</hi> - ACDH-CH Intern</head>
+               <p>Sean Quigley is a master's student in English and American Studies at the University of Vienna. His research interests include Restoration comedy, American modernist poetry, and mid-century avant-garde poetry movements. He is writing his master's thesis on the little magazines of the "Mimeo Revolution." Before moving into literary studies, he worked in the transportation industry developing a mobility-on-demand mobile app.</p>
+            </div>
+         </div>
+         <div>
+            <head>
+               <hi rend="bold">Co-Investigators &amp; Project Partners</hi>
+            </head>
+            <div>
+               <head>
+                  <hi rend="bold">Simon Brenner</hi> - Project Partner</head>
+               <p>Simon Brenner is a PhD student and project assistant at the Computer Vision Lab, TU Wien. In his research he investigates the digital restoration of graphical cultural heritage (e.g., as found in medieval manuscripts or on etruscan bronze mirrors) based on multispectral and 3D imaging methods, with a special emphasis on assessing the quality of the results obtained. He teaches practical 3D reconstuction at TU Wien and FH Kärnten. Within the Auden Musulin Papers project he is responsible for extracting and visualizing text passages only conserved in the form of indentations on sheets of paper.</p>
+            </div>
+            <div>
+               <head>
+                  <hi rend="bold">Edward Mendelson</hi> - Co-Investigator</head>
+               <p>Edward Mendelson is Lionel Trilling Professor in the Humanities at Columbia University. He is the literary executor of the Estate of W. H. Auden, editor of <hi rend="italic">The Complete Works of W. H. Auden</hi> (Princeton University Press), and author of major contributions to Auden scholarship, including <hi rend="italic">Early Auden, Later Auden: A Critical Biography</hi> (Princeton University Press 2017). He is co-editor of the Auden Musulin Papers digital edition and co-author of the edition's scholarly commentary.</p>
+            </div>
+            <div>
+               <head>
+                  <hi rend="bold">Helmut Neundlinger</hi> - Co-Investigator</head>
+               <p>Helmut Neundlinger studied Philosophy and Literature at the University of Vienna. He is Head of The Archives of Contemporary Arts at Danube University Krems. This collection of literary and music estates contains the Austrian Auden Papers left after Auden’s death in 1973. Neundlinger works as a literary scholar, publicist, writer and musician. In 2015 he was responsible for redesigning the exhibition in the W. H. Auden Memorial Museum in Kirchstetten, Lower Austria. In 2018 he edited the volume <hi rend="italic">Thanksgiving für ein Habitat. W. H. in Kirchstetten</hi> (Literaturedition Niederösterreich).</p>
+            </div>
+            <div>
+               <head>
+                  <hi rend="bold">Monika Seidl</hi> - Co-Investigator</head>
+               <p>Monika Seidl is Professor of Cultural Studies in the Department of English and American Studies at the University of Vienna. Her main areas of research include British Cultural Studies, popular culture, gender studies, as well as the multi-medial adaptation of literary classics. An expert on British literature of the 1930s and its connections with the German-speaking world, she has co-edited the seminal essay collection <hi rend="italic">Silence Turned into Objects: W. H. Auden in Kirchstetten</hi> (Literaturedition Niederösterreich 2014). She is co-editor of the Auden Musulin Papers digital edition and contributor to the edition's scholarly commentary.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

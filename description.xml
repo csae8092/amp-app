@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xml:id="amp-transcript__0001.xml">
+   xml:id="project_description_0001.xml">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Project Description</title>
+            <title>Project Description</title>
             <author>
                <name>Mayer, Sandra</name>
                <name>Frühwirth, Timo</name>
@@ -23,14 +22,6 @@
                </address>
             </funder>
          </titleStmt>
-         <editionStmt>
-            <edition>AMP</edition>
-            <respStmt>
-               <resp>Transcription and commentary</resp>
-               <name>Mayer, Sandra</name>
-               <name>Frühwirth, Timo</name>
-            </respStmt>
-         </editionStmt>
          <publicationStmt>
             <publisher>Austrian Centre for Digital Humanities and Cultural Heritage</publisher>
             <pubPlace>Vienna</pubPlace>
@@ -47,9 +38,6 @@
                <p>Copyright literary texts W. H. Auden Estate of W. H. Auden.</p>
             </availability>
          </publicationStmt>
-         <seriesStmt>
-            <p>Machine-Readable Transcriptions of the Auden Musulin Papers</p>
-         </seriesStmt>
          <sourceDesc>
             <p>born digital</p>
          </sourceDesc>
