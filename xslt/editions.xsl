@@ -59,6 +59,9 @@
                         position:absolute;
                         border-top: 10px solid ccc;
                     }
+                    .container-fluid {
+                        max-width: 100%;
+                    }
                 </style>
             </head>
             <body class="page">
