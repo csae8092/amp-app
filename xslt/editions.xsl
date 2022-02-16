@@ -225,6 +225,28 @@
             <br/>
         </xsl:if>
     </xsl:template>
+    <xsl:template match="tei:lg">
+        <xsl:param name="view"/>
+        <xsl:choose>
+            <xsl:when test="$view = 'diplomatic' or $view = 'commentary' or $view = 'reading'">
+                <p><xsl:apply-templates/></p>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:l">
+        <xsl:param name="view"/>
+        <xsl:choose>
+            <xsl:when test="$view = 'diplomatic' or $view = 'commentary' or $view = 'reading'">
+                <xsl:apply-templates/><br />
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     <xsl:template match="tei:unclear">
         <xsl:param name="view"/>
         <xsl:choose>
@@ -235,6 +257,17 @@
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>     
+    </xsl:template>
+    <xsl:template match="tei:space">
+        <xsl:param name="view"/>
+        <xsl:choose>
+            <xsl:when test="$view = 'diplomatic' or $view = 'commentary'">
+                <xsl:value-of select="string-join((for $i in 1 to @quantity return '&#x00A0;'),'')"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>    
     </xsl:template>
     <xsl:template match="tei:del">
         <xsl:param name="view"/>
