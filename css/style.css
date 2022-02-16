@@ -358,7 +358,7 @@ p {
 }
 
 .card-header > p, .card-body > p {
-    padding: 1em;
+    /*padding: 1em;*/
 }
 
 h4 {
