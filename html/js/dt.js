@@ -25,6 +25,9 @@ function createDataTable(containerElement, order, pageLength) {
             "'<'row'<'col-sm-6 offset-sm-6'p>>'",
         responsive: true,
         pageLength: 50,
+        oLanguage: {
+            "sSearch": "Search titles and dates:"            
+        },
         buttons: [{
             extend: 'copyHtml5',
             text: '<i class="far fa-copy"/>',

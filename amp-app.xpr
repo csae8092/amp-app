@@ -19,8 +19,8 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>toc</String>
-                                        <String>photos</String>
                                         <String>memoirs</String>
+                                        <String>photos</String>
                                         <String>additional-materials</String>
                                     </list>
                                 </field>
@@ -37,26 +37,6 @@
                                         <Byte>2</Byte>
                                         <Byte>2</Byte>
                                         <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>html/css/style.css</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>search</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
                                         <Byte>2</Byte>
                                     </list>
                                 </field>
@@ -128,6 +108,26 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>biographies</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>html/css/style.css</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>search</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
