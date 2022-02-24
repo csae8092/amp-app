@@ -87,7 +87,9 @@
             </div>
             <div>
                <head>
-                  <hi rend="bold">Daniel Stoxreiter</hi> - Research Software Engineer</head>
+                  <hi rend="bold">
+                     <ref target="https://www.oeaw.ac.at/acdh/team/current-team/daniel-stoxreiter">Daniel Stoxreiter</ref>
+                  </hi> - Research Software Engineer</head>
                <p>Daniel Stoxreiter is a research software engineer at the Austrian Academy of Sciences and its Austrian Centre for Digital Humanities and Cultural Heritage (ACDH-CH). In the AMP project he is in charge of the Digital Edition website developement.</p>
             </div>
             <div>

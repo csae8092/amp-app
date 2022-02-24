@@ -91,7 +91,7 @@ for any purpose, even commercially.</p>
    <text type="letter">
       <body>
          <div xml:id="transcription">
-            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0251/" type="nan"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0251/" type="sheet"/>
                <p>
                   NEULINGGASSE 26/14<lb/>
                   1030 WIEN<lb/>
@@ -120,7 +120,7 @@ for any purpose, even commercially.</p>
                   Stella Musulin <unclear>´</unclear><lb/>
                   Stella Musulin.
                </p>
-            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0252/" type="nan"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0252/" type="sheet"/>
          </div>
       </body>
    </text>

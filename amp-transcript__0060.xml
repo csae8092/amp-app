@@ -91,7 +91,7 @@ for any purpose, even commercially.</p>
    <text type="letter">
       <body>
          <div xml:id="transcription">
-            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0253/" type="nan"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0253/" type="sheet"/>
                <p>
                   <unclear>A2</unclear>
                </p>
@@ -118,7 +118,7 @@ for any purpose, even commercially.</p>
                   Ihr<lb/>
                   (Dr.Wolfgang Kraus)
                </p>
-            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0254/" type="nan"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0254/" type="sheet"/>
          </div>
       </body>
    </text>

@@ -432,7 +432,7 @@
                   <title xml:lang="en">4 October 1957, Vienna</title>
                   W. H. Auden and Chester Kallman purchase the house Hinterholz 6, 3062 Kirchstetten, in Lower Austria.
                   <location>
-                     <geo>48.2082 -16.37169</geo>
+                     <geo>48.2082 16.37169</geo>
                   </location>
                </desc>
             </event>
@@ -444,7 +444,7 @@
                   <title xml:lang="en">4 October 1962, Vienna</title>
                   W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The Austrian actor Wolfgang Gasser reads German-language translations of Auden's poems.
                   <location>
-                     <geo>48.2082 -16.37169</geo>
+                     <geo>48.2082 16.37169</geo>
                   </location>
                </desc>
             </event>
@@ -456,7 +456,7 @@
                   <title xml:lang="en">17 May 1963, Vienna</title>
                   W. H. Auden participates in an international Rudolf Kassner symposium at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]: on the last day of the six-day congress, he speaks about the "Begegnung mit dem Werk Rudolf Kassners" ["Encounter with the Work of Rudolf Kassner"].
                   <location>
-                     <geo>48.2082 -16.37169</geo>
+                     <geo>48.2082 16.37169</geo>
                   </location>
                </desc>
             </event>
@@ -468,7 +468,7 @@
                   <title xml:lang="en">24 May 1965, Vienna</title>
                   W. H. Auden gives a lecture on T. S. Eliot at the Naturhistorisches Museum Wien [Natural History Museum Vienna]. The event has been co-organized by the Austro-British Society, the British Council in Austria, and the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
                   <location>
-                     <geo>48.2082 -16.37169</geo>
+                     <geo>48.2082 16.37169</geo>
                   </location>
                </desc>
             </event>
@@ -481,7 +481,7 @@
                   <title xml:lang="en">24 to 26 April 1967, Vienna</title>
                   W. H. Auden participates in a round table on Literatur als Tradition und Revolution [Literature as Tradition and Revolution] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. Other participants include the American writer Mary McCarthy, the dissident Soviet literary scholar Efim (Grigorievich) Etkind (Russian Ефим Григорьевич Эткинд), the British writer Philip Toynbee, and the German literary critic Marcel Reich-Ranicki. 
                   <location>
-                     <geo>48.2082 -16.37169</geo>
+                     <geo>48.2082 16.37169</geo>
                   </location>
                </desc>
             </event>
@@ -493,7 +493,31 @@
                   <title xml:lang="en">29 September 1970, Vienna</title>
                   W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The actor Peter W. Jost reads German-language translations of Auden's poems.
                   <location>
-                     <geo>48.2082 -16.37169</geo>
+                     <geo>48.2082 16.37169</geo>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="ea007" type="event_austria">
+               <head xml:lang="en">
+                  <date when-iso="1973-09-28">1973-09-28</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">28 September 1973, Vienna</title>
+                  W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature] to mark the publication <hi rend="italic">Gedichte/Poems</hi>, a bilingual edition of Auden's poems. The actor and theatre director Achim Benning reads from the German-language translations of Auden's poems in this volume.
+                  <location>
+                     <geo>48.2082 16.37169</geo>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="ea008" type="event_austria">
+               <head xml:lang="en">
+                  <date when-iso="1973-09-29">1973-09-29</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">29 September 1973, Vienna</title>
+                  W. H. Auden dies at the Hotel Altenburgerhof after a reading from the new German/English edition of his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
+                  <location>
+                     <geo>48.2082 16.37169</geo>
                   </location>
                </desc>
             </event>
