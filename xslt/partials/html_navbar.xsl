@@ -82,7 +82,7 @@
                                         <a title="Description" href="description.html" class="nav-link">Description</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Team" href="#" class="nav-link">Team</a>
+                                        <a title="Team" href="team.html" class="nav-link">Team</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a title="Editorial Declaration" href="#" class="nav-link">Editorial Declaration</a>
