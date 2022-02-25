@@ -622,6 +622,18 @@ fieldset.ssFieldset > span > input {
   height: auto;
 }
 
+/* display transcripts text */
+
+div.text-re {
+    display: flex;
+    align-items: center;
+}
+
+div.text-re div.card-body {
+    display: grid;
+    justify-content: center;
+}
+
 /* expanding and descreasing osd images */
 .expand-wrapper {
     margin: 1em;

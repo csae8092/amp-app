@@ -58,7 +58,47 @@
             <p></p>
             <div>
                <head>Transcription Guidelines</head>
-               <p></p>
+               <div>
+                  <head>
+                     1. Diplomatic transcriptions represent the spelling, punctuation, layout, and revisions as they appear, with minimal editorial intervention or interpretation.
+                  </head>
+                  <p>
+                     1.1. Spelling<lb/>
+                     1.1.1. The original spelling in both manuscripts and typescripts is retained, even if irregular (example: Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Freedom and Necessity in the Arts" 1970-05-21, page 9, line 8).<lb/>
+                     1.1.2. Signs that cannot be transcribed with certainty are marked up as 'unclear' (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1973-09-24, page 3, line 9).<lb/>
+                     1.1.3. Manuscript signs are not marked up as 'unclear' when they can be identified as a consistent and typical feature of the respective author's handwriting (example: "address", Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-15, page 3, line 25).<lb/>
+                     1.1.4. Signatures are not marked up as 'unclear'.<lb/>
+                     1.1.5. Signs that cannot be transcribed are marked up as 'illegible' (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-12, page 3, line 7).
+                  </p>
+                  <p>
+                     1.2. Punctuation and Spaces<lb/>
+                     1.2.1. The original punctuation and spaces are retained, even if irregular (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-12, page 3, line 4).<lb/>
+                     1.2.2. Punctuation signs that cannot be transcribed with certainty are marked up as 'unclear' and rendered by symbols that represent a graphical approximation (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1965-09-29, page 3, line 16).<lb/>
+                     1.2.3. When spaces before or after punctuation marks are significantly smaller than the spaces separating words in the surrounding text, no spaces are transcribed (example: Letter W. H. Auden to Stella Musulin 1962-09-11, page 3, line 12).<lb/>
+                     1.2.4. In manuscripts, the length of spaces between words is regularized (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-12, page 3, line 6).<lb/>
+                     1.2.5. In typescripts, the number of spaces is preserved (example: Typescript Stella Musulin "In Retrospect" [?], page 1, line 2).
+                  </p>
+                  <p>
+                     1.3. Original line breaks and divisions between blocks of text are retained.
+                  </p>
+                  <p>
+                     1.4. Revisions<lb/>
+                     1.4.1. The transcriptions represent deletions, additions, and corrections (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1964-12-23, page 3, line 26).<lb/>
+                     1.4.2. For overwritings in typescripts, we have accepted the orthographically or grammatically accurate versions as corrections, even if the actual sequences of textual layers cannot be reconstructed (example: Typescript Stella Musulin "In Retrospect" [?], page 1, line 27).
+                  </p>
+                  <p>
+                     1.5. Pre-printed Components and Postal Additions<lb/>
+                     1.5.1. Pre-printed letter heads and sender addresses are transcribed (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-06, page 2, lines 1-3).<lb/>
+                     1.5.2. Image captions in postcards are transcribed (example: Autograph Note Signed Michael O'Sullivan to Stella Musulin [?], page 1, lines 1-2, 12-15).<lb/>
+                     1.5.3. Postmarks and stamps are not transcribed.<lb/>
+                     1.5.4. Pre-printed postal text and images in telegrams and aerograms are not rendered in the transcriptions (example: Telegram W. H. Auden to Stella Musulin 1971-05-13).
+                  </p>
+               </div>
+               <div>
+                  <head>
+                     2. Reading views represent regularized versions of diplomatic transcriptions.
+                  </head>
+               </div>
             </div>
             <div>
                <head></head>
