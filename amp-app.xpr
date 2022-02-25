@@ -14,11 +14,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/meta/team.xml</String>
+                                    <String>html/amp-transcript__0002.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>team</String>
+                                        <String>editions</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -54,11 +54,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/editions/</String>
+                                    <String>data/meta/auden-biography.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>editions</String>
+                                        <String>biographies</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -74,11 +74,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/meta/musulin-biography.xml</String>
+                                    <String>data/meta/team.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>biographies</String>
+                                        <String>team</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -143,11 +143,31 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/meta/auden-biography.xml</String>
+                                    <String>data/meta/musulin-biography.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
                                         <String>biographies</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/editions/</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>editions</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -918,7 +938,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>toc</String>
+                                    <String>team</String>
                                 </field>
                                 <field name="baseURL">
                                     <String></String>
@@ -936,7 +956,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/xslt/toc.xsl</String>
+                                    <String>${pdu}/xslt/team.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
@@ -957,7 +977,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${pd}/html/toc.html</String>
+                                    <String>${pd}/html/${cfn}.html</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
@@ -1001,7 +1021,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>team</String>
+                                    <String>toc</String>
                                 </field>
                                 <field name="baseURL">
                                     <String></String>
@@ -1019,7 +1039,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/xslt/team.xsl</String>
+                                    <String>${pdu}/xslt/toc.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
@@ -1040,7 +1060,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${pd}/html/${cfn}.html</String>
+                                    <String>${pd}/html/toc.html</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>
