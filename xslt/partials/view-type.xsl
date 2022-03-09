@@ -39,7 +39,7 @@
                                             <p style="{
                                                 if (@hand = '#handwritten') then
                                                 ($hand) else if (@hand = '#typed') then
-                                                ($typed) else if (ancestor::tei:text/@hand = '#printed') then
+                                                ($typed) else if (@hand = '#printed') then
                                                 ($printed) else
                                                 ()
                                                 }">
@@ -96,7 +96,7 @@
                                             <p style="{
                                                 if (@hand = '#handwritten') then
                                                 ($hand) else if (@hand = '#typed') then
-                                                ($typed) else if (ancestor::tei:text/@hand = '#printed') then
+                                                ($typed) else if (@hand = '#printed') then
                                                 ($printed) else
                                                 ()
                                                 }">
