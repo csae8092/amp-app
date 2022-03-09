@@ -15,7 +15,10 @@
     
     <xsl:template name="view-type-img">
         <xsl:param name="reading-type"></xsl:param>
-        <div class="tab-content">
+        <xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 18px;'"/>
+        <xsl:variable name="typed" select="'font-family: Courier New, monospace; font-size: 18px;'"/>
+        
+        <div class="tab-content" style="{if (ancestor::tei:text/@hand = '#handwritten') then ($hand) else if (ancestor::tei:text/@hand = '#typed') then ($typed) else ()}">
             <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                 
                 <xsl:choose>
                     <xsl:when test="position() = 1">                                                         
@@ -25,7 +28,7 @@
                                 <div id="text-resize-{position()}" class="text-re col-md-6"> 
                                     <div class="card-body">
                                         <xsl:for-each select="current-group()[self::tei:p]">
-                                            <p>
+                                            <p style="{if (@hand = '#handwritten') then ($hand) else if (@hand = '#typed') then ($typed) else ()}">
                                                 <xsl:apply-templates>
                                                     <xsl:with-param name="view" select="$reading-type"/>
                                                 </xsl:apply-templates>
@@ -76,7 +79,7 @@
                                 <div id="text-resize-{position()}" class="text-re col-md-6">                                                                
                                     <div class="card-body">                                                                                                                                                                                       
                                         <xsl:for-each select="current-group()[self::tei:p]">
-                                            <p>
+                                            <p style="{if (@hand = '#handwritten') then ($hand) else if (@hand = '#typed') then ($typed) else ()}">
                                                 <xsl:apply-templates>
                                                     <xsl:with-param name="view" select="$reading-type"/>
                                                 </xsl:apply-templates>
