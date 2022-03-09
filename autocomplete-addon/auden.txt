@@ -78,8 +78,6 @@ static-search/stems/adress.json
 static-search/stems/advanc.json
 static-search/stems/adventur.json
 static-search/stems/advis.json
-static-search/stems/aer-mail.json
-static-search/stems/aer.json
 static-search/stems/aesthet.json
 static-search/stems/affect.json
 static-search/stems/affection.json
@@ -90,6 +88,7 @@ static-search/stems/age.json
 static-search/stems/ager.json
 static-search/stems/agre.json
 static-search/stems/aim.json
+static-search/stems/air-mail.json
 static-search/stems/air.json
 static-search/stems/aktion.json
 static-search/stems/akustria.json

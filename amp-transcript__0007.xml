@@ -107,30 +107,30 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0038/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0035/" type="envelope"/>
                <p>
-                  Eil-Brief
+                  <hi rend="underline">Eil<unclear>·</unclear>Brief</hi>
                </p>
                <p>
-                  Die Baronin<lb/>
+                  Die Ba<unclear>r</unclear>onin<lb/>
                   Stella Musulin<lb/>
-                  1030 Wien <del>IV</del><lb/>
+                  <hi rend="underline">1030</hi> Wien <del>IV</del><lb/>
                   Neulingasse 26
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0036/" type="envelope"/>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN, BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
-                  <unclear>Arrival</unclear>, Christiane
+                  A<unclear>rri</unclear>val, Christiane
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0037/" type="sheet"/>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN, BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
@@ -141,12 +141,12 @@ for any purpose, even commercially.</p>
                <p>
                   Dear Stella:<lb/>
                   I got your telegram yesterday just before<lb/>
-                  lunch. Tried twice in the afternoon and once<lb/>
+                  lu<unclear>n</unclear>ch. Tried twice in the afternoon and once<lb/>
                   this morning to reach you , but umsonst.<lb/>
-                  Am off to England to-morrow, so don't see how<lb/>
-                  anything can now be arranged.<lb/>
+                  Am off to England to-morrow, s<unclear>o</unclear> don't see how<lb/>
+                  anything can now be arranged<unclear>.</unclear><lb/>
                   If you think these can, please write me<lb/>
-                  ℅ Faber and Faber, 24 Russell Square , W.C. I<lb/>
+                  ℅ Faber and Faber, 24 Russell Square,W.C<unclear>.</unclear> I<lb/>
                   So sorry<lb/>
                   love<lb/>
                   Wystan.

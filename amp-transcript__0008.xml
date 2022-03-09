@@ -107,34 +107,34 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0042/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0039/" type="envelope"/>
                <p>
-                  Air-Mail
+                  <hi rend="underline">Air-Mail</hi>
                </p>
                <p>
-                  Left US driving<lb/>
-                  licence behind .
+                  <unclear>L</unclear>eft US driving<lb/>
+                  licence behind <unclear>·</unclear>
                </p>
                <p>
                   Die Baroninin<lb/>
                   Stella Musulin<lb/>
                   <del>Vi</del> Wien I<del>V</del>II<lb/>
                   Neulinggasse 26<lb/>
-                  Austria
+                  Au<hi rend="underline">str</hi>ia
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0040/" type="envelope"/>
                <p>
-                  WH.Auden<lb/>
+                  WH<unclear>_</unclear>Auden<lb/>
                   ℅ Heyworth<lb/>
-                  32 Bryanston Square<lb/>
-                  London. <del><unclear>N.</unclear></del> W.I<lb/>
+                  32 Bryanston Sq<unclear>u</unclear>are<lb/>
+                  London. <del><unclear>N.,</unclear></del> W.I<lb/>
                   England
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0041/" type="sheet"/>
-               <p>
+               <p hand="#printed">
                   CHRIST CHURCH,<lb/>
                   OXFORD.
                </p>
@@ -143,17 +143,17 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Dear Stella<unclear>.</unclear><lb/>
-                  Like an idiot, Ive<del><gap/></del> gone and<lb/>
-                  left my American Dr<del><gap/></del>iving Licence<lb/>
+                  Like an idiot<unclear>,</unclear> I<unclear>v</unclear>e<del><gap reason="deleted"/></del> gone and<lb/>
+                  left my American Dr<del><gap reason="deleted"/></del>iving Licence<lb/>
                   behind.<lb/>
-                  It should be in an envelope in<lb/>
+                  It sh<unclear>ou</unclear>ld be in an envelope in<lb/>
                   the drawer of my bed-table upstairs.<lb/>
                   Could you be an angel and look for<lb/>
-                  it next time you are going to Fridau<lb/>
-                  and a<unclear>e</unclear>r-mail to me<lb/>
+                  it next time you ar<unclear>e</unclear> going to Fridau<lb/>
+                  and air-mail to me<lb/>
                   ℅ Mr Peter Heyworth<lb/>
                   32 Bryanston Square<lb/>
-                  London. W.I.<lb/>
+                  London . W .I .<lb/>
                   So sorry to be such a nuisance.<lb/>
                   love<lb/>
                   Wystan
