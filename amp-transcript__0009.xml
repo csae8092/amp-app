@@ -107,26 +107,26 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0046/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0043/" type="envelope"/>
                <p>
-                  W.H.Auden<lb/>
+                  W<unclear>.</unclear>H<unclear>.</unclear>Auden<lb/>
                   ℅ Heyworth<lb/>
                   32 Bryanston Square<lb/>
                   London. W.I.<lb/>
                   England
                </p>
                <p>
-                  <del><gap/></del>Air-M<unclear>ai</unclear>l
+                  <del><gap reason="deleted"/></del>A<hi rend="underline">ir-M<unclear>ail</unclear></hi>
                </p>
                <p>
                   Die Baronin<lb/>
                   Stella Musulin<lb/>
                   Wien <del>IV</del>III<lb/>
                   Neulinggasse 26<lb/>
-                  Austria .
+                  A<hi rend="underline">ustria </hi>.
                </p>
                <p>
                   Re Czech refugees .
@@ -134,8 +134,10 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0044/" type="envelope"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0045/" type="sheet"/>
                <p>
-                  ℅ Heyworth<lb/>
-                  32 BRYANSTON SQUARE LONDON W1 · AMBASSADOR 8906
+                  ℅ Heyworth
+               </p>
+               <p hand="#printed">
+                  32 BRYANSTON SQUARE <space quantity="1" unit="char"/>LONDON W1 · AMBASSADOR 8906
                </p>
                <p>
                   Tuesday
@@ -143,31 +145,31 @@ for any purpose, even commercially.</p>
                <p>
                   Dear Stella:<lb/>
                   Got back from Oxford yesterday and found your<lb/>
-                  letter waiting.<lb/>
+                  lett<unclear>e</unclear>r waiting.<lb/>
                   1) I think I ought to take the couple in , but<lb/>
                   I must leave it to you to decide whether<lb/>
-                  they are O.K. If they are , all rooms, including<lb/>
-                  my study ( which can't be heated are open to them.<lb/>
-                  2). How much money will they need to keep going?<lb/>
+                  they are O.K. If they are , all rooms, includi<unclear>ng</unclear><lb/>
+                  my study ( which can't be heated are open to them<unclear>.</unclear><lb/>
+                  2). How much money will they need to keep going ?<lb/>
                   And how shall I make the arrangements for payment.<lb/>
                   3) Will they be able to find work or emigrate before<lb/>
-                  I return in April , when <unclear>I</unclear>'m afraid there will<lb/>
+                  I return in April,<unclear>w</unclear>hen <unclear>I</unclear>'m afraid there will<lb/>
                   not be room for them.?<lb/>
                   4) I'm worried about how they will get gas-cylinders<lb/>
-                  for cooking from Neulengbach, since, presumably, they<lb/>
+                  for cooking from Neulengbach ,since, presumably <unclear>.</unclear> they<lb/>
                   have no car. I expect someone in the village<lb/>
                   will help.<lb/>
-                  5). If and when they come, I must know in advance<lb/>
+                  5). <unclear>If</unclear> and when they come, I must know in advance<lb/>
                   so that I can write a note to the<lb/>
                   Burgomeister.<lb/>
-                  Shall be here <unclear>in</unclear> my a<unclear>ddre</unclear>ss until O<unclear>ct</unclear> 31.st After that<lb/>
-                  77 St Mark's Place .N.Y.C<unclear>.</unclear> N.Y 10003 .<lb/>
+                  Shall be here <unclear>in</unclear> my address until Oc<unclear>t</unclear> 31.st After that<lb/>
+                  77 St Mark's Place .N.Y.C. N.Y 10003 .<lb/>
                   love<lb/>
                   Wystan
                </p>
                <p>
                   Here, I suggest<lb/>
-                  you contact<lb/>
+                  you cont<unclear>a</unclear>ct<lb/>
                   Otto Hoffmann.<lb/>
                   Wien VII<lb/>
                   Karl Schweighofgasse<lb/>
