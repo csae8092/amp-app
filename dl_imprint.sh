@@ -1,6 +1,6 @@
 # bin/bash
 
-REDMINE_ID={{cookiecutter.redmine_id}}
+REDMINE_ID=20226
 IMPRINT_XML=./data/imprint.xml
 rm ${IMPRINT_XML}
 echo '<?xml version="1.0" encoding="UTF-8"?>'
