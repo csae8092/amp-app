@@ -125,6 +125,11 @@
             <include name="**/*.xml"/>
         </fileset>
     </copy>
+    <copy todir="${target}" flatten="true">
+        <fileset dir="data">
+            <include name="imprint.xml"/>
+        </fileset>
+    </copy>
     <replace dir="${target}" value="">
         <include name="*.html"/>
         <replacetoken> xmlns=""</replacetoken>
