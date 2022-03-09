@@ -107,29 +107,29 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0026/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0023/" type="envelope"/>
                <p>
-                  W.H. Auden<lb/>
+                  W.H.Auden<lb/>
                   77 St Mark's Place<lb/>
                   New York City<lb/>
                   New York 10003<lb/>
                   U.<unclear>S.</unclear>A
                </p>
                <p>
-                  Air-Mail
+                  Ai<hi rend="underline">r-M</hi>ail
                </p>
                <p>
-                  Death of Emma Eiermann
+                  Death ofEmma Eiermann .
                </p>
                <p>
                   Die Baronin<lb/>
                   Stella Musulin<lb/>
                   Wien III<lb/>
-                  <del><unclear/></del>Neulingasse 26<lb/>
-                  Austria
+                  <del><gap reason="deleted"/></del> Neulingasse 26<lb/>
+                  Au<hi rend="underline">st</hi>ria
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0024/" type="envelope"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0025/" type="sheet"/>
@@ -143,19 +143,19 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Dear Stella.<lb/>
-                  A disaster has happened. Frau Eiermann<lb/>
+                  A disaster has ha<unclear>p</unclear>pened. Frau Eiermann<lb/>
                   died of a heart-attack on Nov 4th.<lb/>
-                  (Have just hea<unclear>rd</unclear> this from my lawyer.)<unclear>.</unclear><lb/>
+                  (Ha<unclear>v</unclear> just hea<unclear>r</unclear>d this from my lawyer.)<unclear>.</unclear><lb/>
                   A minor worry connected with this is what<lb/>
                   is happening to her cats and ours. I suppose<lb/>
                   they will probably have to be destroyed.<lb/>
                   Next time you are travelling between Fridau<lb/>
-                  and Wien, could you be a dear and stop<lb/>
+                  and Wien , could you be a dear and stop<lb/>
                   in Kirchstetten to see what is happening.<lb/>
                   Incedentally, in case you should need it my lawyers<lb/>
                   name and address is Dr Walter Redlich. Wien I.<lb/>
-                  Wipplingerstrasse. 24-26.<lb/>
-                  Canterbury was quite fun. The Archbishop came<lb/>
+                  Wipplingerstrasse<unclear>,</unclear> 24-26.<lb/>
+                  Canterbury was quite <unclear>f</unclear>un. The Archbishop came<lb/>
                   to my first lecture.<lb/>
                   love<lb/>
                   Wystan

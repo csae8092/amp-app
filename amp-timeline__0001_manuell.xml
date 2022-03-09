@@ -106,6 +106,19 @@
             <event xml:id="ea002"
                type="event_austria">
                <head xml:lang="en">
+                  <date from-iso="1960-08-04" to-iso="1960-08-06">1960-08-04--1960-08-06</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">4-6 August 1960, Kirchstetten, Lower Austria</title>
+                  German composer Hans Werner Henze (1926-2012) visits Auden and Kallmann, the authors of the English libretto for his three-act opera <hi rend="italic">Elegy for Young Lovers</hi> (1961). In Auden and Kallman's guest book, Henze writes: "with love and gratitude and pride to have such a beautiful libretto!"
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea003"
+               type="event_austria">
+               <head xml:lang="en">
                   <date when-iso="1962-10-04">1962-10-04</date>
                </head>
                <desc>
@@ -116,7 +129,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea003"
+            <event xml:id="ea004"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1963-05-17">1963-05-17</date>
@@ -129,7 +142,20 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea004"
+            <event xml:id="ei001"
+               type="event_international">
+               <head xml:lang="en">
+                  <date notBefore-iso="1965-01-01" notAfter-iso="1965-12-31">1965-01-01--1965-12-31</date><!-- ISO time span format -->
+               </head>
+               <desc>
+                  <title xml:lang="en">1965, Frankfurt am Main</title>
+                  Herbert Heckmann's German translation of Auden's poem "Josef Weinheber" appears in the <hi rend="italic">Neue Rundschau</hi> (volume 76, issue 3)
+                  <location>
+                     <geo>geo:50.110556 8.682222</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea005"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1965-05-24">1965-05-24</date>
@@ -142,7 +168,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea005"
+            <event xml:id="ea006"
                type="event_austria">
                <head xml:lang="en">
                   <date notBefore-iso="1967-04-24" notAfter-iso="1967-04-26">1967-04-24--1967-04-26</date><!-- ISO time span format -->
@@ -155,7 +181,33 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea006"
+            <event xml:id="ea007"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date from-iso="1967-09-10" to-iso="1967-09-13">1967-09-10--1967-09-13</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">10-13 September 1967, Kirchstetten, Lower Austria</title>
+                  The English poet and critic Stephen Spender (1909-1995), a life-long friend of Auden's, and his wife Natasha visit Auden and Kallman. 
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea008"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date when-iso="1969-05-28">1969-05-28</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">28 May 1969, Kirchstetten, Lower Austria</title>
+                  Stella Musulin introduces Auden and Kallman to the Austrian historian, journalist, and intellectual Friedrich Heer (1916-1983); in Auden and Kallman's guest book, she notes : "Tag einer historischen Begegnung! [Day of a historical encounter!]" <!-- reference to Typed Letter Stella Musulin [to Edith Silbermann] [1969-05-29] -->
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea009"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1970-09-29">1970-09-29</date>
@@ -168,7 +220,20 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea007"
+            <event xml:id="ea010"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date when-iso="1972-06-09">1972-06-09</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">9 June 1972, Kirchstetten, Lower Austria</title>
+                  Joseph Brodsky (1940-1996), Nobel-Prize-winning Russian-American poet and essayist, visits Auden and Kallman. Their Kirchstetten guest book contains the following poem by Brodsky: "Visit Russia / Our Russia's a country of Birches / and axes and ikones and Churches / Without any priest / and crosses. At least / Our Russia's a country of SEARCHES."
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea011"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1973-09-28">1973-09-28</date>
@@ -181,7 +246,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea008"
+            <event xml:id="ea012"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1973-09-29">1973-09-29</date>
@@ -191,6 +256,19 @@
                   W. H. Auden dies at the Hotel Altenburgerhof after a reading from the new German/English edition of his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
                   <location>
                      <geo>48.2082 16.37169</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea013"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date when-iso="1973-10-04">1973-10-04</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">4 October 1973, Kirchstetten, Lower Austria</title>
+                  W. H. Auden is buried in the local church graveyard of Kirchstetten. The funeral - attended by, among others, Auden's brother John, Stephen Spender, Sonia Orwell, and Charles Monteith - includes an ecumenical service led by Revd Bruce Duncan, chaplain to the British ambassadors to Austria, Hungary, and Czechoslovakia
+                  <location>
+                     <geo>48.183333 15.816667</geo>
                   </location>
                </desc>               
             </event>

@@ -107,7 +107,7 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0022/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#typed">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0019/" type="envelope"/>
@@ -115,17 +115,17 @@ for any purpose, even commercially.</p>
                   W.H.Auden<lb/>
                   77 St Mark's Place<lb/>
                   New York City 3<lb/>
-                  New York I0003<lb/>
+                  New York IOOO3<lb/>
                   U.S.A.
                </p>
                <p>
-                  Air-Mail
+                  <hi rend="underline">Air-Mail</hi>
                </p>
                <p>
                   Die Baronin<lb/>
                   Stella Musulin<lb/>
                   Fridau<lb/>
-                  3200 Obergrafendorf<lb/>
+                  32<del>o</del>OO Obergrafendorf<lb/>
                   N.<unclear>Ö</unclear>.<lb/>
                   Austria
                </p>
@@ -133,8 +133,8 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0021/" type="sheet"/>
                <p>
                   77 St Mark's Place<lb/>
-                  New  York City 3<lb/>
-                  New York I0003
+                  New <space quantity="1" unit="char"/>York City 3<lb/>
+                  New York IOOO3
                </p>
                <p>
                   Feb 3rd,I96<del>5</del>6
@@ -143,15 +143,15 @@ for any purpose, even commercially.</p>
                   Dear Stella:<lb/>
                   Many thanks for your nice long letter. Stephen has a genius for<lb/>
                   subtle misrepresentation. "Serious insistence on unseriousness'<lb/>
-                  telescopes two <del>cnvictions</del>distinct convictions of mine,falsifying both.<lb/>
+                  telescopes two <del>cnvictuons</del>distinct convictions of mine,falsifying both.<lb/>
                   I) I believe it to be a serious moral error when an artist overestimates<lb/>
-                  the importance of art and, by implication,of himself. One must admit<lb/>
-                  that the <del>plotical</del> political history of Eur<del>i</del>ope, with <del>all its</del>the same horrors,<lb/>
+                  the importance of art and,by implication,of himself. One must admit<lb/>
+                  that the <del>plotical</del> political history of Eur<del>i</del>ope,with <del>all its</del>the same horrors,<lb/>
                   would be what it has been,if Dante,Shakespeare,Goethe,Titian,<lb/>
                   Mo<del>x</del>zart,et al,had never existed.<lb/>
-                  2) I believe that the only way in which, to-day at any rate,one can<lb/>
-                  speak <del>seroiu</del> <del>s eriously</del>  seriously about serious matters( the alternati<del>c</del>ve<lb/>
-                  is silence) is comically. I am surprised to hear from you  that<lb/>
+                  2) I believe that the only way in which,to-day at any rate,one can<lb/>
+                  speak <del>seroiu</del> <del>s eriously</del> <hi rend="underline">seriously</hi> about serious matters(the alternati<del>c</del>ve<lb/>
+                  is silence) is comically. I am surprised to hear from you that<lb/>
                   Jews find this hard to accept. I have enormously admired - and been<lb/>
                   influenced by - the tradition of Jewish humor. More than any other<lb/>
                   people,surely,they have seen in serious matters,that is to say,human<lb/>
@@ -162,18 +162,18 @@ for any purpose, even commercially.</p>
                   a little bit with me",or "God will provide - ah,if only He wou<del>o</del>ld till<lb/>
                   He does so."<lb/>
                   So! you encountered the one-whose-name-we-never-mention. Why Chest<del>r</del>er should<lb/>
-                  have been so foolish as  to invite him to a p<del>e</del>arty,I cannot imagine. If he<lb/>
-                  is to be seen at all,he <del>yy</del>must be seen alone. Incidentally,next time you see<lb/>
+                  have been so foolish as <space quantity="1" unit="char"/>to invite him to a p<del>e</del>arty,I cannot imagine. If he<lb/>
+                  is to be seen at all,he <del>jy</del>must be seen alone. Incidentally,next time you see<lb/>
                   Chester,scold him a) for not writing to me b) for not answering Harrison's<lb/>
                   cable.<lb/>
                   All well here.except for a leaking kit<del>v</del>chen roof. No doubt you read about<lb/>
                   our Black-Out and Transit Strike.(My typewriter is on the blink,hence the<lb/>
-                  hiatuses.)  A <del>firen</del> friend of mine who teaches schyzophrenics,has a seventeen<lb/>
+                  hiatuses.) <space quantity="1" unit="char"/>A <del>firen</del> friend of mine who teaches schyzophrenics,has a seventeen<lb/>
                   year old girl who is interested in poetry. Asked what poets she liked,she<lb/>
-                  mentioned me. "I happen to know him quite well",said my friend. To which the<lb/>
-                  girl in astonishment:"You mean to say,he's still alive!".<lb/>
+                  mentioned me. "<del>i</del>I happen to know him quite well",said my friend. To which the<lb/>
+                  girl in astonishment:"You mean to say,he's still <hi rend="underline">alive</hi>!".<lb/>
                   Expect to get back to Kirchstetten about April 20th.<lb/>
-                  much love and greetings to son and mum-in-law<lb/>
+                  much love and <unclear>g</unclear>reetings to son and mum-in-law<lb/>
                   Wystan.
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0022/" type="sheet"/>

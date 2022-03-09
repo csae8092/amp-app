@@ -107,12 +107,12 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0006/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0007/" type="envelope"/>
                <p>
-                  mit Luft Post
+                  <hi rend="underline">mit Luft Post</hi>
                </p>
                <p>
                   Weinheber-Gedicht
@@ -122,9 +122,9 @@ for any purpose, even commercially.</p>
                   Stella Musulin<lb/>
                   <del>Fridau</del><lb/>
                   <del>Obergrafendorf</del><lb/>
-                  <del>bei S. Pölten</del><lb/>
-                  <del>N Ö</del><lb/>
-                  Österreich
+                  <del>bei<unclear>.</unclear> S. Pölten</del><lb/>
+                  <del>NÖ</del><lb/>
+                  Osterreich
                </p>
                <p>
                   Wien IV<lb/>
@@ -133,41 +133,41 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0008/" type="envelope"/>
                <p>
                   W H Auden<lb/>
-                  Berlin-Dahlem<lb/>
+                  Berlin<unclear>-</unclear>Dahlem<lb/>
                   Hubertusbaderstrasse 43<lb/>
-                  Deutschland.
+                  Deut<unclear>s</unclear>c<unclear>h</unclear>land<unclear>·</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0005/" type="sheet"/>
                <p>
-                  Dec 23<unclear>rd</unclear>
+                  Dec 23rd
                </p>
                <p>
-                  Berlin-Dahlem<lb/>
+                  Berlin<unclear>.</unclear>Dahlem<lb/>
                   Hubertusbaderstrasse 43
                </p>
                <p>
                   Dear Stella:<lb/>
-                  It was sweet of you to think of me at<lb/>
-                  Christmas , especially since it's a little einsam here.<lb/>
+                  It <hi rend="underline">was</hi> sweet of you to think of me at<lb/>
+                  Christmas ,especially since it's a little einsam here.<lb/>
                   Am beginning to know some local inhabitants. Oddly enough,<lb/>
-                  the ones I can talk to most easily ar from Ost-Berlin.<lb/>
-                  The most awful thing about the Bifk<unclear>e</unclear>s is that<lb/>
-                  they are so much nicer unter a little Druck.<lb/>
+                  the ones I can talk to most easily ar from <unclear>O</unclear>st-Berlin<unclear>,</unclear><lb/>
+                  The most awful thi<unclear>ng</unclear> about the Bifk<unclear>e</unclear>s is that<lb/>
+                  they are so much nicer under a little <hi rend="underline">Druck</hi>.<lb/>
                   When they feel their oats they are so apt to become<lb/>
                   uppish.<lb/>
-                  If I'd known, I'd have warned you about The<lb/>
-                  National Review. I once reviewed a Charles Williams<lb/>
-                  book for them - never again. Of course you're right<lb/>
+                  If I'd known,I'd have warned you about <hi rend="underline"><unclear>T</unclear>he<lb/>
+                  National Review</hi>. I once reviewed a Charles Williams<lb/>
+                  book for them - never again. Of course <unclear>y</unclear>ou're right<lb/>
                   about the lib-labs ostrich attitude to those who<lb/>
                   wish to destroy them, but one cannot let one's name<lb/>
                   be associated with shits.<lb/>
-                  Torture is the inequity which utterly bewilders me.<lb/>
+                  Torture is the iniquity which utterly bewilders me.<lb/>
                   I know something about the evil in my own heart and<lb/>
-                  <del><unclear/></del>in the <unclear>sort</unclear> of people I <del>know</del>meet, but I cannot conceive of myself<lb/>
+                  <del><gap reason="deleted"/></del><unclear>i</unclear>n the <unclear>s</unclear>o<unclear>r</unclear>t of people I <del>know</del>meet, but I cannot conceive of myself<lb/>
                   or them torturing anybody. Where do the torturers<lb/>
                   come from? What class? Whom do they marry?<lb/>
-                  <del>Have you ever met one?</del> To what pubs do they go?<lb/>
-                  much love and best wishes for 1965<lb/>
+                  <del>Have you ever met one<unclear>?</unclear></del> To what pubs do they go?<lb/>
+                  much love and best wishes for 1<unclear>9</unclear>65<lb/>
                   Wystan
               </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0006/" type="sheet"/>

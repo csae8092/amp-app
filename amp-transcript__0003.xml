@@ -107,28 +107,28 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0018/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0015/" type="envelope"/>
                <p>
-                  Eil-Post
+                  <hi rend="underline">Eil-Post</hi>
                </p>
                <p>
-                  Die Baronin<lb/>
+                  <unclear>D</unclear>ie Baronin<lb/>
                   Stella Musulin<lb/>
                   Wien III<lb/>
-                  Neulinggasse 26 .
+                  Neu<unclear>l</unclear>ingg<unclear>a</unclear>sse 26 .
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0016/" type="envelope"/>
-               <p>
+               <p hand="#typed">
                   W. H. AUDEN<lb/>
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
-                  <unclear>1. Buch</unclear> Neulinggasse<lb/>
+                  <unclear>1·</unclear> Buch Ne<unclear>u</unclear>linggasse<lb/>
                   26/14<lb/>
                   27.9.<lb/>
                   beigefügter Brief<lb/>
@@ -136,12 +136,12 @@ for any purpose, even commercially.</p>
                   feste Adresse
                </p>
                <p>
-                  aus München a<unclear>n</unclear><lb/>
-                  4:5:6: <unclear>nicht</unclear><lb/>
-                  da
+                  aus München a<unclear>m</unclear><lb/>
+                  4<unclear>:</unclear>5<unclear>:</unclear>6<unclear>:</unclear> <unclear>nic</unclear>ht<lb/>
+                  d<unclear>a</unclear>
                </p>
                <p>
-                  no mail saturday
+                  <unclear>n</unclear>o m<unclear>ai</unclear>l saturday
                </p>
                <p>
                   2<unclear>6</unclear>/
@@ -150,10 +150,10 @@ for any purpose, even commercially.</p>
                <p>
                   Mittwoch
                </p>
-               <p>
+               <p hand="#typed">
                   W. H. AUDEN
                </p>
-               <p>
+               <p hand="#typed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
@@ -161,20 +161,20 @@ for any purpose, even commercially.</p>
                <p>
                   Dear Stella:<lb/>
                   Many thanks for your letter. Shall be delighted to<lb/>
-                  see you both any day any time. I can't get<lb/>
+                  see you both anyday any time. I can't get<lb/>
                   to Vienna this week. Will you be there next<lb/>
-                  Tuesday? I have to go to a reception at<lb/>
-                  Amerika Haus 6-8. If you were free, it<lb/>
-                  would be fun to have dinner to-gether. I<lb/>
+                  T<unclear>u</unclear>esday? I have to go to <unclear>a</unclear> reception at<lb/>
+                  Amerika Haus 6-8. If you were free,it<lb/>
+                  woul<unclear>d</unclear> be fun t<unclear>o</unclear> have dinner to-gether. I<lb/>
                   certainly shan't stay at the do after <unclear>7</unclear>·30.<lb/>
-                  I <unclear>agree</unclear> about the cutting. Will keep it till<lb/>
+                  I ag<unclear>re</unclear>e about the cutting. Will keep it till<lb/>
                   you come or bring it with me next week.<lb/>
                   love<lb/>
                   Wystan
                </p>
                <p>
-                  P. S. The N.D.R arrived. Translation quite good,<lb/>
-                  but why turn bars into Theke?
+                  P.S. The N.D.R arri<unclear>ve</unclear>d. Translation quite good,<lb/>
+                  but <hi rend="underline">why</hi> turn <hi rend="underline">bars</hi> into <hi rend="underline">Theke</hi>?
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0018/" type="sheet"/>
          </div>

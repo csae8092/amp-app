@@ -97,7 +97,7 @@
                </head>
                <desc>
                   <title xml:lang="en">16 July 1915, Dale Castle, Pembrokeshire, Wales</title>
-                  Stella Mary Bellairs Lloyd-Philipps is born to Rhodri Vaughan Lloyd-Philipps (1874-1950) and his second wife, Margaret Colville. 
+                  Stella Mary Bellairs Lloyd-Philipps is born to Rhodri Vaughan Lloyd-Philipps (1874-1950) and his second wife, Margaret Colville 
                   <location>
                      <geo>51.7075 -5.1774</geo>
                   </location>
@@ -113,6 +113,110 @@
                   Stella Lloyd-Philipps marries Janko Musulin von Gomirje (1916-1978)
                   <location>
                      <geo>47.773056 15.316389</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e003"
+               type="event">
+               <head xml:lang="en">
+                  <date when-iso="1948-01-11">1948-01-11</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">11 January 1948, xxx, Austria</title>
+                  Birth of son Marko Musulin
+                  <location>
+                     <geo></geo> <!-- research and add birth place! -->
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e004"
+               type="event">
+               <head xml:lang="en">
+                  <date notBefore-iso="1971-01-01" notAfter-iso="1971-12-31">1971-01-01--1971-12-31</date><!-- ISO time span format -->
+               </head>
+               <desc>
+                  <title xml:lang="en">1971, London</title>
+                  Publication of Stella Musulin's monograph <hi rend="italic">Austria: People and Landscape</hi> with Faber and Faber, including a foreword by W. H. Auden; the book's American edition - once more including Auden's foreword - came out in 1972 with Praeger Publishers under the title <hi rend="italic">Austria and the Austrians</hi>
+                  <location>
+                     <geo>51.521418561139775 -0.1226937151948393</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e005"
+               type="event">
+               <head xml:lang="en">
+                  <date notBefore-iso="1975-01-01" notAfter-iso="1975-12-31">1975-01-01--1975-12-31</date><!-- ISO time span format -->
+               </head>
+               <desc>
+                  <title xml:lang="en">1975, London</title>
+                  Publication of Stella Musulin's monograph <hi rend="italic">Vienna in the Age of Metternich: From Napoleon to Revolution, 1805-1848</hi> with Faber and Faber
+                  <location>
+                     <geo>51.521418561139775 -0.1226937151948393</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e006"
+               type="event">
+               <head xml:lang="en">
+                  <date when-iso="1976-06-28">1976-06-28</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">28 June 1976, Austrian Institute, London</title>
+                  Stella Musulin delivers a lecture on "Auden in Kirchstetten" at the Austrian Institute in London Kensington
+                  <location>
+                     <geo>51.500163 -0.168038</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e007"
+               type="event">
+               <head xml:lang="en">
+                  <date when-iso="1977-05-05">1977-05-05</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">5 May 1977, Palais Pálffy, Vienna</title>
+                  Stella Musulin delivers a lecture on "W. H. Auden und die Österreicher" [W. H. Auden and the Austrians] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]
+                  <location>
+                     <geo>48.206194 16.367389</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e008"
+               type="event">
+               <head xml:lang="en">
+                  <date when-iso="1978-03-06">1978-03-06</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">6 March 1978, Fridau, Ober-Grafendorf, Lower Austria, Austria</title>
+                  Janko Musulin dies, aged 61, after being diagnosed with a brain tumour the previous year
+                  <location>
+                     <geo>48.149444 15.555833</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e009"
+               type="event">
+               <head xml:lang="en">
+                  <date notBefore-iso="1995-01-01" notAfter-iso="1995-12-31">1995-01-01--1975-12-31</date><!-- ISO time span format -->
+               </head>
+               <desc>
+                  <title xml:lang="en">1995, Oxford</title>
+                  Stella Musulin's Auden memoir "Auden in Kirchstetten" appears in Katherine Bucknell and Nicholas Jenkins' edited volume <hi rend="italic">'In Solitude, for Company': W. H. Auden After 1940. Unpublished Prose and Recent Criticism</hi>, published by Clarendon Press
+                  <location>
+                     <geo>51.752 -1.2578</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e010"
+               type="event">
+               <head xml:lang="en">
+                  <date when-iso="1996-01-21">1996-01-21</date> <!-- double-check! -->
+               </head>
+               <desc>
+                  <title xml:lang="en">21 January 1996, Fridau, Ober-Grafendorf, Lower Austria, Austria</title>
+                  Stella Musulin dies, aged 80
+                  <location>
+                     <geo>48.149444 15.555833</geo>
                   </location>
                </desc>               
             </event>

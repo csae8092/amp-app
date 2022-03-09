@@ -107,12 +107,12 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0030/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0027/" type="envelope"/>
                <p>
-                  W.H.Auden<lb/>
+                  W<unclear>.</unclear>H<unclear>:</unclear>Auden<lb/>
                   77 St Mark's Place<lb/>
                   New York City<lb/>
                   New York 10003<lb/>
@@ -123,7 +123,7 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Die Baronin<lb/>
-                  Stella M<del><unclear/></del>usulin<lb/>
+                  Stella M<del><gap reason="deleted"/></del>usulin<lb/>
                   Vienna III<lb/>
                   26 Neulingasse<lb/>
                   Austria
@@ -135,28 +135,28 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0028/" type="envelope"/>
                <p>
                   52 6320<lb/>
-                  W<unclear>an</unclear>dl:<lb/>
-                  Elizabeth<unclear>:</unclear><lb/>
-                  Austria. 
+                  Wa<unclear>n</unclear>dl<unclear>;</unclear><lb/>
+                  Elizabeth <unclear>.</unclear><lb/>
+                  Austria <unclear>.</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0029/" type="sheet"/>
                <p>
-                  77 St Mark's Place<lb/>
-                  N.Y.C 3.
+                  Feb 6th<unclear>,</unclear>
                </p>
                <p>
-                  Feb 6th.
+                  77 St Mark's Place<lb/>
+                  N.Y.C 3.
                </p>
                <p>
                   Dear Stella.<lb/>
                   I shall be arriving in Vienna next<lb/>
                   Monday morning (12th) and staying till<lb/>
                   the 16th in order to interview a<lb/>
-                  prospective couple to take the Eiermanns place.<lb/>
+                  prospective couple to take the Eiermanns place<unclear>.</unclear><lb/>
                   Expect to be staying at the Hotel<lb/>
-                  Königin von Hungarn .<lb/>
+                  <hi rend="underline">Königin von Hungarn <unclear>.</unclear></hi><lb/>
                   Will phone you. Do hope you are<lb/>
-                  around.<lb/>
+                  around<unclear>·</unclear><lb/>
                   love<lb/>
                   Wystan
                </p>
