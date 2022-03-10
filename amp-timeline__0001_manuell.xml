@@ -210,6 +210,19 @@
             <event xml:id="ea009"
                type="event_austria">
                <head xml:lang="en">
+                  <date from-iso="1969-07-15" to-iso="1969-07-16">1969-07-15--1969-07-16</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">15-16 July 1969, Kirchstetten, Lower Austria</title>
+                  Russian-American composer Nicolas Nabokov (1903-1978) visits Auden and Kallman, authors of the libretto for his opera <hi rend="italic">Love's Labour's Lost</hi> (1971)
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea010"
+               type="event_austria">
+               <head xml:lang="en">
                   <date when-iso="1970-09-29">1970-09-29</date>
                </head>
                <desc>
@@ -220,7 +233,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea010"
+            <event xml:id="ea011"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1972-06-09">1972-06-09</date>
@@ -233,7 +246,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea011"
+            <event xml:id="ea012"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1973-09-28">1973-09-28</date>
@@ -246,7 +259,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea012"
+            <event xml:id="ea013"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1973-09-29">1973-09-29</date>
@@ -259,7 +272,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea013"
+            <event xml:id="ea014"
                type="event_austria">
                <head xml:lang="en">
                   <date when-iso="1973-10-04">1973-10-04</date>

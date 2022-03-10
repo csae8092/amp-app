@@ -132,6 +132,19 @@
             <event xml:id="e004"
                type="event">
                <head xml:lang="en">
+                  <date when-iso="1969-05-28">1969-05-28</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">28 May 1969, Kirchstetten, Lower Austria</title>
+                  Stella Musulin introduces Auden and Kallman to the Austrian historian, journalist, and intellectual Friedrich Heer (1916-1983); in Auden and Kallman's guest book, she notes : "Tag einer historischen Begegnung! [Day of a historical encounter!]" <!-- reference to Typed Letter Stella Musulin [to Edith Silbermann] [1969-05-29] -->
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e005"
+               type="event">
+               <head xml:lang="en">
                   <date notBefore-iso="1971-01-01" notAfter-iso="1971-12-31">1971-01-01--1971-12-31</date><!-- ISO time span format -->
                </head>
                <desc>
@@ -142,7 +155,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e005"
+            <event xml:id="e006"
                type="event">
                <head xml:lang="en">
                   <date notBefore-iso="1975-01-01" notAfter-iso="1975-12-31">1975-01-01--1975-12-31</date><!-- ISO time span format -->
@@ -155,7 +168,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e006"
+            <event xml:id="e007"
                type="event">
                <head xml:lang="en">
                   <date when-iso="1976-06-28">1976-06-28</date>
@@ -168,7 +181,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e007"
+            <event xml:id="e008"
                type="event">
                <head xml:lang="en">
                   <date when-iso="1977-05-05">1977-05-05</date>
@@ -181,7 +194,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e008"
+            <event xml:id="e009"
                type="event">
                <head xml:lang="en">
                   <date when-iso="1978-03-06">1978-03-06</date>
@@ -194,7 +207,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e009"
+            <event xml:id="e010"
                type="event">
                <head xml:lang="en">
                   <date notBefore-iso="1995-01-01" notAfter-iso="1995-12-31">1995-01-01--1975-12-31</date><!-- ISO time span format -->
@@ -207,7 +220,7 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e010"
+            <event xml:id="e011"
                type="event">
                <head xml:lang="en">
                   <date when-iso="1996-01-21">1996-01-21</date> <!-- double-check! -->
