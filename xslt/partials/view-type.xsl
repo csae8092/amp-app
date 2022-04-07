@@ -70,11 +70,13 @@
                                             <script type="text/javascript" src="js/osd_single.js"></script>
                                             <div id="{$osd_container_id2}">
                                                 <xsl:if test="@facs">    
-                                                    <xsl:variable name="iiif-ext" select="'full/full/0/default.jpg'"/> 
+                                                    <xsl:variable name="iiif-ext" select="'.jp2/full/full/0/default.jpg'"/> 
+                                                    <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
                                                     <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
+                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
                                                     <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'), $( document ).ready(resize('{position()}'))]">
                                                         <xsl:attribute name="src">
-                                                            <xsl:value-of select="concat(@facs , $iiif-ext)"/>
+                                                            <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                         </xsl:attribute>
                                                     </img>                                                                
                                                 </xsl:if>                                
@@ -125,14 +127,16 @@
                                             <!-- image container accessed by OSD script -->
                                             <script type="text/javascript" src="js/osd_single.js"></script>
                                             <div id="{$osd_container_id2}">
-                                                <xsl:if test="@facs">    
-                                                    <xsl:variable name="iiif-ext" select="'full/full/0/default.jpg'"/> 
+                                                <xsl:if test="@facs">                                                      
+                                                    <xsl:variable name="iiif-ext" select="'.jp2/full/full/0/default.jpg'"/> 
+                                                    <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
                                                     <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
+                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
                                                     <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'), $( document ).ready(resize('{position()}'))]">
                                                         <xsl:attribute name="src">
-                                                            <xsl:value-of select="concat(@facs , $iiif-ext)"/>
+                                                            <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                         </xsl:attribute>
-                                                    </img>                                                                
+                                                    </img> 
                                                 </xsl:if>                                
                                             </div>                                
                                         </div>  

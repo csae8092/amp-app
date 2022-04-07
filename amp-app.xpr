@@ -14,6 +14,75 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>data/meta/description.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>description</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/editions/</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>editions</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/meta/about.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>toc</String>
+                                        <String>memoirs</String>
+                                        <String>photos</String>
+                                        <String>additional-materials</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                        <String>XSL</String>
+                                        <String>XSL</String>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>html/amp-transcript__0002.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -94,80 +163,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/meta/about.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>toc</String>
-                                        <String>memoirs</String>
-                                        <String>photos</String>
-                                        <String>additional-materials</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                        <String>XSL</String>
-                                        <String>XSL</String>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>data/meta/description.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>description</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>data/meta/musulin-biography.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
                                         <String>biographies</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>data/editions/</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>editions</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -393,7 +393,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="openInBrowser">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="outputResource">
                                     <String>${pd}/html/description.html</String>
@@ -408,7 +408,7 @@
                                     <Boolean>false</Boolean>
                                 </field>
                                 <field name="showInHTMLPane">
-                                    <Boolean>false</Boolean>
+                                    <Boolean>true</Boolean>
                                 </field>
                                 <field name="showInXMLPane">
                                     <Boolean>false</Boolean>
