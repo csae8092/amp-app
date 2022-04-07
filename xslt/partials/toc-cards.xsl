@@ -27,12 +27,14 @@
                     </xsl:attribute>
                     <div class="card index-card" style="margin:.2em !important;">                                 
                         <div class="card-body">
-                            <xsl:variable name="iiif-ext" select="'full/full/0/default.jpg'"/>
+                            <xsl:variable name="iiif-ext" select="'.jp2/full/,300/0/default.jpg'"/> 
+                            <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
+                            <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>
                             <img>
                                 <xsl:attribute name="src">
-                                    <xsl:value-of select="concat(//tei:pb[1]/@facs, $iiif-ext)"/>
+                                    <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                 </xsl:attribute>
-                            </img>
+                            </img>                            
                         </div>
                         <div class="card-header">                                                      
                             <p style="padding: .2em!important;margin:0!important;"><xsl:value-of select="//tei:title[@level='a']"/></p>
