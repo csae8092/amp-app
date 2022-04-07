@@ -22,6 +22,7 @@
                                         <String>additional-materials</String>
                                         <String>memoirs</String>
                                         <String>photos</String>
+                                        <String>index</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -30,10 +31,12 @@
                                         <String>XSL</String>
                                         <String>XSL</String>
                                         <String>XSL</String>
+                                        <String>XSL</String>
                                     </list>
                                 </field>
                                 <field name="scenarioStorageLocations">
                                     <list>
+                                        <Byte>2</Byte>
                                         <Byte>2</Byte>
                                         <Byte>2</Byte>
                                         <Byte>2</Byte>

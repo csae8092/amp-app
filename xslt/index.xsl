@@ -43,10 +43,10 @@
                                 </div>
                             </div>
                             <div class="col-md-3" style="padding:0!important;">
-                                <div class="card" id="carousel-card">
+                                <!--<div class="card" id="carousel-card">
                                     <div class="card-body" id="carousel-body">
                                         <div id="audenIndexCarousel" class="container carousel carousel-fade" data-ride="carousel">
-                                            <!--<ol class="carousel-indicators">
+                                            <!-\-<ol class="carousel-indicators">
                                                 <li data-target="#audenIndexCarousel" data-slide-to="0" class="active"></li>
                                                 <li data-target="#audenIndexCarousel" data-slide-to="1"></li>
                                                 <li data-target="#audenIndexCarousel" data-slide-to="2"></li>
@@ -59,12 +59,12 @@
                                                 <li data-target="#audenIndexCarousel" data-slide-to="9"></li>
                                                 <li data-target="#audenIndexCarousel" data-slide-to="10"></li>
                                                 <li data-target="#audenIndexCarousel" data-slide-to="11"></li>                                       
-                                            </ol>-->
+                                            </ol>-\->
                                             <div class="carousel-inner">
                                                 <div class="carousel-item active">
                                                     <img src="images/daumenkino/DSC_0250.JPG" class="d-block" alt="..."/>
-                                                    <!--<div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
-                                                    </div>-->
+                                                    <!-\-<div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
+                                                    </div>-\->
                                                 </div>
                                                 <div class="carousel-item">
                                                     <img src="images/daumenkino/DSC_0251.JPG" class="d-block w-100" alt="..."/>
@@ -102,7 +102,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>                                 
+                                </div>-->                                 
                             </div>
                             <div class="col-md-1" style="padding:0!important;">
                             </div>
