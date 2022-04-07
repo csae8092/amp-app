@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>2, 15</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1971-05-13">1971-05-13</origDate></origin>
+                        <origin><origDate notBefore="1971-05-13" notAfter="1971-05-13">1971-05-13</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -71,6 +71,19 @@ for any purpose, even commercially.</p>
          <langUsage>
             <language ident="en">English</language>
          </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"/>
+               <date notBefore="1971-05-13" notAfter="1971-05-13">1971-05-13</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#musulin-stella">Musulin, Stella</persName>
+               <placeName ref="#"/>
+               <date/>
+            </correspAction>
+         </correspDesc>
          
       </profileDesc>
       <revisionDesc status="draft">
@@ -88,15 +101,15 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0234/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#typed">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0233/" type="sheet"/>
                <p>
-                  MUSULIN NEULINGGASSE  26/14  1030/WIEN
+                  MUSULIN NEULINGGASSE <space quantity="1" unit="char"/>26/14 <space quantity="1" unit="char"/>1030/WIEN
                </p>
                <p>
-                  =  KOMMEN SAMSTAG =  LOVE  WYSTAN
+                  = <space quantity="1" unit="char"/>KOMMEN SAMSTAG = <space quantity="1" unit="char"/>LOVE <space quantity="1" unit="char"/>WYSTAN
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0234/" type="sheet"/>
          </div>

@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 30</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1971-06-04">1971-06-04</origDate></origin>
+                        <origin><origDate notBefore="1971-06-04" notAfter="1971-06-04">1971-06-04</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1971-06-04">1971-06-04</date>
+               <date notBefore="1971-06-04" notAfter="1971-06-04">1971-06-04</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,12 +107,12 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0086/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0083/" type="envelope"/>
                <p>
-                  "A Certain Wo<unclear>r</unclear>ld.<unclear>"</unclear>
+                  "A Certain World<unclear>"</unclear>.
                </p>
                <p>
                   Die Baronin<lb/>
@@ -122,7 +122,9 @@ for any purpose, even commercially.</p>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0084/" type="envelope"/>
                <p>
-                  WH<unclear>.</unclear> Auden<lb/>
+                  WH Auden<lb/>
+               </p>
+               <p hand="#printed">
                   3062 KIRCHSTETTEN<lb/>
                   BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
@@ -132,7 +134,7 @@ for any purpose, even commercially.</p>
                <p>
                   June 4th.
                </p>
-               <p>
+               <p hand="#printed">
                   3062 KIRCHSTETTEN<lb/>
                   BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
@@ -140,11 +142,11 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Dear Stella:<lb/>
-                  I have <unclear>a</unclear> copy of A Cert<unclear>a</unclear>in World<lb/>
-                  for you ,t<unclear>o</unclear> p<unclear>ick</unclear> up any ti<unclear>m</unclear>e at<lb/>
+                  I have <unclear>a</unclear> copy of <hi rend="underline">A Cert<unclear>a</unclear>in World</hi><lb/>
+                  for you ,t<unclear>o</unclear> pi<unclear>c</unclear>k up any time at<lb/>
                   your convenience.<lb/>
-                  l<unclear>ov</unclear>e<lb/>
-                  Wyst<unclear>a</unclear>n
+                  love<lb/>
+                  Wystan
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0086/" type="sheet"/>
          </div>

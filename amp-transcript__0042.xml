@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 17</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-10-04">1968-10-04</origDate></origin>
+                        <origin><origDate notBefore="1968-10-04" notAfter="1968-10-04">1968-10-04</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1968-10-04">1968-10-04</date>
+               <date notBefore="1968-10-04" notAfter="1968-10-04">1968-10-04</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,27 +107,27 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0104/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#typed">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0033/" type="envelope"/>
-               <p>
+               <p hand="#handwritten">
                   Die Baronin<lb/>
-                  S<del><gap/></del>tella Musulin<lb/>
+                  S<del><unclear>e</unclear></del>tella Musulin<lb/>
                   <del>1040</del> Wien <del>IV</del><lb/>
                   Neulingasse 26
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0034/" type="envelope"/>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN, BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0103/" type="sheet"/>
                <p>
-                  AUGUST I<del>(</del>968
+                  <hi rend="underline">AUGUST I<del>(</del>968</hi>
                </p>
-               <p>
+               <lg>
                   <l>The ogre does what ogres can,</l>
                   <l>Deeds quite impossible for man,</l>
                   <l>but one prize is beyond his reach:</l>
@@ -136,28 +136,30 @@ for any purpose, even commercially.</p>
                   <l>Among its desperate and slain,</l>
                   <l>The ogre stalks with hands on hips,</l>
                   <l>While drivel gushes from his lips.</l>
-                  ___
-               </p>
+               </lg>
                <p>
+                  <space quantity="9" unit="char"/>___
+               </p>
+               <p hand="#handwritten">
                   Dear Stell<unclear>a</unclear>,<lb/>
-                  Terrib<unclear>l</unclear>y sorry <unclear>a</unclear>bou<unclear>t</unclear> <unclear>l</unclear>ast Sun<unclear>d</unclear>ay.<lb/>
+                  Terribly sorry about <unclear>l</unclear>ast Sunday.<lb/>
                   Since I had no idea whe<unclear>n</unclear> we should be<lb/>
-                  a<unclear>b</unclear>le to get to you, I tho<unclear>ught</unclear> it wa<unclear>s</unclear> unfair<lb/>
-                  t<unclear>o</unclear> <unclear>the</unclear> kitchen not to cancel.<lb/>
-                  Ha<unclear>ve</unclear> a ni<unclear>c</unclear>e <unclear>win</unclear>ter and <unclear>will</unclear> <unclear>s</unclear>e<unclear>e</unclear> <unclear>you</unclear>, I h<unclear>o</unclear>p<unclear>e</unclear>,<lb/>
-                  early in Ap<unclear>ril.</unclear><lb/>
-                  l<unclear>o</unclear>ve<lb/>
-                  Wys<unclear>tan</unclear>
+                  a<unclear>b</unclear>le to get to you, I tho<unclear>u</unclear>g<unclear>ht</unclear> it was unfair<lb/>
+                  to t<unclear>he</unclear> kitchen not to cancel.<lb/>
+                  Ha<unclear>ve</unclear> a ni<unclear>c</unclear>e <unclear>win</unclear>ter and <unclear>wi</unclear>ll see you, I hop<unclear>e</unclear>,<lb/>
+                  early in Apr<unclear>il</unclear><lb/>
+                  love<lb/>
+                  Wystan
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0104/" type="sheet"/>
                <p>
-                  ELEGY<lb/>
-                  (In Memoriam Emma Eiermann. <del>ob</del><lb/>
-                  ob.Nov 4th,I967)
+                  <hi rend="underline">ELEGY</hi><lb/>
+                  (<hi rend="underline">In Memoriam Emma Eiermann</hi>. <del>ob</del><lb/>
+                  <hi rend="underline">ob.Nov 4th,I967)</hi>
                </p>
-               <p>
-                  <l>Liebe Frau Emma,</l>
-                  <l>na,was hast Du denn gemacht?</l>
+               <lg>
+                  <l><hi rend="underline">Liebe Frau Emma</hi>,</l>
+                  <l><hi rend="underline">na,was hast Du denn gemacht?</hi></l>
                   <l>You who always made</l>
                   <l>such conscience of our comfort,</l>
                   <l>Oh,how could you go and die,</l>
@@ -178,7 +180,7 @@ for any purpose, even commercially.</p>
                   <l>all had to be put away.</l>
                   <l>You came with the house,</l>
                   <l>you and your brother Josef,</l>
-                  <l><del>Sudeten deutsche,</del> Sudetendeutsche,</l>
+                  <l><del>Sudeten deutsche,</del> <hi rend="underline">Sudetendeutsche</hi>,</l>
                   <l>made homeless paupers when Czechs</l>
                   <l>got their turn to be brutal:</l>
                   <l>but catastrophe</l>
@@ -206,8 +208,8 @@ for any purpose, even commercially.</p>
                   <l>let Youth pick a fruit</l>
                   <l>or flower,out you would storm,</l>
                   <l>arms whirling,screaming abuse</l>
-               </p>
-               <p>
+               </lg>
+               <lg>
                   <l>in peasant German</l>
                   <l>at startled Americans</l>
                   <l>who had meant no harm,</l>
@@ -227,8 +229,10 @@ for any purpose, even commercially.</p>
                   <l>with ten years to consider,</l>
                   <l>astonished at how</l>
                   <l>vivid they are to recall:</l>
-                  <l>Du Gute,schlaf in Ruhe.</l>
-                  ___
+                  <l><hi rend="underline">Du Gute,schlaf in Ruhe</hi>.</l>
+               </lg>
+               <p>
+                  <space quantity="8" unit="char"/>___
                </p>
          </div>
       </body>

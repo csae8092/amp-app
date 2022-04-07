@@ -60,7 +60,7 @@ for any purpose, even commercially.<span class="tnc"><span class="tc">&lt;</span
                         <span class="tnc"><span class="tc">&lt;</span>idno<span class="tc">&gt;</span></span>1, 16<span class="tnc"><span class="tc">&lt;</span>/idno<span class="tc">&gt;</span></span>
                      <span class="tnc"><span class="tc">&lt;</span>/msIdentifier<span class="tc">&gt;</span></span>
                      <span class="tnc"><span class="tc">&lt;</span>history<span class="tc">&gt;</span></span>
-                        <span class="tnc"><span class="tc">&lt;</span>origin<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>origDate<span class="ac"> when-iso</span><span class="avc">="1962-04-30"</span><span class="tc">&gt;</span></span>1962-04-30<span class="tnc"><span class="tc">&lt;</span>/origDate<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/origin<span class="tc">&gt;</span></span>
+                        <span class="tnc"><span class="tc">&lt;</span>origin<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>origDate<span class="ac"> notBefore</span><span class="avc">="1962-04-30"</span><span class="ac"> notAfter</span><span class="avc">="1962-04-30"</span><span class="tc">&gt;</span></span>1962-04-30<span class="tnc"><span class="tc">&lt;</span>/origDate<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/origin<span class="tc">&gt;</span></span>
                      <span class="tnc"><span class="tc">&lt;</span>/history<span class="tc">&gt;</span></span>
                   <span class="tnc"><span class="tc">&lt;</span>/msDesc<span class="tc">&gt;</span></span>
                <span class="tnc"><span class="tc">&lt;</span>/witness<span class="tc">&gt;</span></span>
@@ -71,6 +71,19 @@ for any purpose, even commercially.<span class="tnc"><span class="tc">&lt;</span
          <span class="tnc"><span class="tc">&lt;</span>langUsage<span class="tc">&gt;</span></span>
             <span class="tnc"><span class="tc">&lt;</span>language<span class="ac"> ident</span><span class="avc">="en"</span><span class="tc">&gt;</span></span>English<span class="tnc"><span class="tc">&lt;</span>/language<span class="tc">&gt;</span></span>
          <span class="tnc"><span class="tc">&lt;</span>/langUsage<span class="tc">&gt;</span></span>
+         
+         <span class="tnc"><span class="tc">&lt;</span>correspDesc<span class="tc">&gt;</span></span>
+            <span class="tnc"><span class="tc">&lt;</span>correspAction<span class="ac"> type</span><span class="avc">="sent"</span><span class="tc">&gt;</span></span>
+               <span class="tnc"><span class="tc">&lt;</span>persName<span class="ac"> ref</span><span class="avc">="#auden-w-h"</span><span class="tc">&gt;</span></span>Auden, W. H.<span class="tnc"><span class="tc">&lt;</span>/persName<span class="tc">&gt;</span></span>
+               <span class="tnc"><span class="tc">&lt;</span>placeName<span class="ac"> ref</span><span class="avc">="#"</span><span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/placeName<span class="tc">&gt;</span></span>
+               <span class="tnc"><span class="tc">&lt;</span>date<span class="ac"> notBefore</span><span class="avc">="1962-04-30"</span><span class="ac"> notAfter</span><span class="avc">="1962-04-30"</span><span class="tc">&gt;</span></span>1962-04-30<span class="tnc"><span class="tc">&lt;</span>/date<span class="tc">&gt;</span></span>
+            <span class="tnc"><span class="tc">&lt;</span>/correspAction<span class="tc">&gt;</span></span>
+            <span class="tnc"><span class="tc">&lt;</span>correspAction<span class="ac"> type</span><span class="avc">="received"</span><span class="tc">&gt;</span></span>
+               <span class="tnc"><span class="tc">&lt;</span>persName<span class="ac"> ref</span><span class="avc">="#musulin-stella"</span><span class="tc">&gt;</span></span>Musulin, Stella<span class="tnc"><span class="tc">&lt;</span>/persName<span class="tc">&gt;</span></span>
+               <span class="tnc"><span class="tc">&lt;</span>placeName<span class="ac"> ref</span><span class="avc">="#"</span><span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/placeName<span class="tc">&gt;</span></span>
+               <span class="tnc"><span class="tc">&lt;</span>date<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/date<span class="tc">&gt;</span></span>
+            <span class="tnc"><span class="tc">&lt;</span>/correspAction<span class="tc">&gt;</span></span>
+         <span class="tnc"><span class="tc">&lt;</span>/correspDesc<span class="tc">&gt;</span></span>
          
       <span class="tnc"><span class="tc">&lt;</span>/profileDesc<span class="tc">&gt;</span></span>
       <span class="tnc"><span class="tc">&lt;</span>revisionDesc<span class="ac"> status</span><span class="avc">="draft"</span><span class="tc">&gt;</span></span>
@@ -88,21 +101,23 @@ for any purpose, even commercially.<span class="tnc"><span class="tc">&lt;</span
          <span class="tnc"><span class="tc">&lt;</span>graphic<span class="ac"> url</span><span class="avc">="https://iiif.acdh.oeaw.ac.at/amp/amp_0032/"</span><span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/graphic<span class="tc">&gt;</span></span>
       <span class="tnc"><span class="tc">&lt;</span>/surface<span class="tc">&gt;</span></span>
    <span class="tnc"><span class="tc">&lt;</span>/facsimile<span class="tc">&gt;</span></span>
-   <span class="tnc"><span class="tc">&lt;</span>text<span class="ac"> type</span><span class="avc">="letter"</span><span class="tc">&gt;</span></span>
+   <span class="tnc"><span class="tc">&lt;</span>text<span class="ac"> type</span><span class="avc">="letter"</span><span class="ac"> hand</span><span class="avc">="#handwritten"</span><span class="tc">&gt;</span></span>
       <span class="tnc"><span class="tc">&lt;</span>body<span class="tc">&gt;</span></span>
          <span class="tnc"><span class="tc">&lt;</span>div<span class="ac"> xml:id</span><span class="avc">="transcription"</span><span class="tc">&gt;</span></span>
             <span class="tnc"><span class="tc">&lt;</span>pb<span class="ac"> facs</span><span class="avc">="https://iiif.acdh.oeaw.ac.at/amp/amp_0031/"</span><span class="ac"> type</span><span class="avc">="envelope"</span><span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/pb<span class="tc">&gt;</span></span>
                <span class="tnc"><span class="tc">&lt;</span>p<span class="tc">&gt;</span></span>
-                  <span class="tnc"><span class="tc">&lt;</span>gap<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/gap<span class="tc">&gt;</span></span>
+                  <span class="tnc"><span class="tc">&lt;</span>gap<span class="ac"> reason</span><span class="avc">="illegible"</span><span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/gap<span class="tc">&gt;</span></span>
                <span class="tnc"><span class="tc">&lt;</span>/p<span class="tc">&gt;</span></span>
                <span class="tnc"><span class="tc">&lt;</span>p<span class="tc">&gt;</span></span>
-                  Die Baro<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>n<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span>in Stell<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>a<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span> Mu<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>sso<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span>lin<span class="tnc"><span class="tc">&lt;</span>lb<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/lb<span class="tc">&gt;</span></span>
+                  Die Baro<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>n<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span>in Stell<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>a<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span> Mus<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>so<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span>lin<span class="tnc"><span class="tc">&lt;</span>lb<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/lb<span class="tc">&gt;</span></span>
                   Wien III<span class="tnc"><span class="tc">&lt;</span>lb<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/lb<span class="tc">&gt;</span></span>
                   Neulingasse 26.
                <span class="tnc"><span class="tc">&lt;</span>/p<span class="tc">&gt;</span></span>
             <span class="tnc"><span class="tc">&lt;</span>pb<span class="ac"> facs</span><span class="avc">="https://iiif.acdh.oeaw.ac.at/amp/amp_0032/"</span><span class="ac"> type</span><span class="avc">="envelope"</span><span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/pb<span class="tc">&gt;</span></span>
                <span class="tnc"><span class="tc">&lt;</span>p<span class="tc">&gt;</span></span>
-                  W<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>.<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span>H Auden<span class="tnc"><span class="tc">&lt;</span>lb<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/lb<span class="tc">&gt;</span></span>
+                  W<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>.<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span>H<span class="tnc"><span class="tc">&lt;</span>unclear<span class="tc">&gt;</span></span>.<span class="tnc"><span class="tc">&lt;</span>/unclear<span class="tc">&gt;</span></span> Auden
+               <span class="tnc"><span class="tc">&lt;</span>/p<span class="tc">&gt;</span></span>
+               <span class="tnc"><span class="tc">&lt;</span>p<span class="ac"> hand</span><span class="avc">="#printed"</span><span class="tc">&gt;</span></span>
                   KIRCHSTETTEN (WESTBAHN)<span class="tnc"><span class="tc">&lt;</span>lb<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/lb<span class="tc">&gt;</span></span>
                   HINTERHOLZ 6<span class="tnc"><span class="tc">&lt;</span>lb<span class="tc">&gt;</span></span><span class="tnc"><span class="tc">&lt;</span>/lb<span class="tc">&gt;</span></span>
                   N.-Ö., AUSTRIA

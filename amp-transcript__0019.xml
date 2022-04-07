@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 32</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1972-02-22">1972-02-22</origDate></origin>
+                        <origin><origDate notBefore="1972-02-22" notAfter="1972-02-22">1972-02-22</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1972-02-22">1972-02-22</date>
+               <date notBefore="1972-02-22" notAfter="1972-02-22">1972-02-22</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,7 +107,7 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0094/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0091/" type="envelope"/>
@@ -115,39 +115,40 @@ for any purpose, even commercially.</p>
                   W<unclear>.</unclear>H.Auden<lb/>
                   77 St Mark's Place<lb/>
                   New York City<lb/>
-                  N.Y. 10003<lb/>
+                  N.Y . 10003<lb/>
                   U.S.A
                </p>
               <p>
-                 Not <unclear>q</unclear>uitti<unclear>ng</unclear> <unclear>Kir</unclear>chstetten ·
+                 Not <unclear>q</unclear>uitti<unclear>n</unclear>g Kirchstetten <unclear>·</unclear>
               </p>
               <p>
                   Die Baronin<lb/>
                   Stella Musulin<lb/>
                   Fridau<lb/>
-                  Obergra<unclear>f</unclear>endorf<lb/>
-                  N.Ö<lb/>
-                  Aust<unclear>r</unclear>ia
+                  Obergrabendorf<lb/>
+                  N. Ö<lb/>
+                  Austria
                </p>
                <p>
                   3200
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0092/" type="envelope"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0093/" type="sheet"/>
+            
+               <p>
+                  Feb 22nd, 1972
+               </p>
                <p>
                   77 St Mark's Place<lb/>
                   New York City<lb/>
                   N.Y. 10003
                </p>
                <p>
-                  Feb 22<unclear>nd</unclear>, <unclear>19</unclear>72
-               </p>
-               <p>
                   Dear Stella<unclear>;</unclear><lb/>
-                  M<unclear>an</unclear>y thanks f<unclear>o</unclear>r your letter. Whate<unclear>ve</unclear>r<lb/>
-                  <unclear>m</unclear>a<unclear>d</unclear>e y<unclear>ou</unclear> imagine I w<unclear>as</unclear> quitting Kirchst<unclear>et</unclear>ten<unclear>?</unclear><unclear>,</unclear><lb/>
-                  Of course I'm not. The c<unclear>hang</unclear>e is tha<unclear>t</unclear> I<lb/>
-                  s<unclear>ha</unclear>ll b<unclear>e</unclear> spending <unclear>m</unclear>y winters in Oxford<lb/>
+                  Many thanks for your letter<unclear>,</unclear> Whate<unclear>ve</unclear>r<lb/>
+                  ma<unclear>d</unclear>e you imagine I was quitting Kirchst<unclear>e</unclear>tten<unclear>?</unclear><lb/>
+                  Of course I'm not<unclear>,</unclear> The change is that I<lb/>
+                  shall be spending my winters in Oxford<lb/>
                   not in New York.<lb/>
                   love<lb/>
                   Wystan

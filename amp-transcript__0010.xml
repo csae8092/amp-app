@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 21</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-11-06">1968-11-06</origDate></origin>
+                        <origin><origDate notBefore="1968-11-06" notAfter="1968-11-06">1968-11-06</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1968-11-06">1968-11-06</date>
+               <date notBefore="1968-11-06" notAfter="1968-11-06">1968-11-06</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,7 +107,7 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0050/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0047/" type="envelope"/>
@@ -119,7 +119,7 @@ for any purpose, even commercially.</p>
                   U.S.A<unclear>.</unclear>
                </p>
                <p>
-                  Air-Mail
+                  A<hi rend="underline">ir-Mail</hi>
                </p>
                <p>
                   Die Baronin<lb/>
@@ -141,7 +141,7 @@ for any purpose, even commercially.</p>
                <p>
                   Dear Stella:<lb/>
                   Many thanks for your letter. Of course,<lb/>
-                  selfishly, I'm rather reli<del>v</del>eved. How horrid<lb/>
+                  selfishly, I'm rather reli<unclear><del>v</del></unclear>eved. How horrid<lb/>
                   one is !<lb/>
                   The U.S. is grim.<lb/>
                   love<lb/>

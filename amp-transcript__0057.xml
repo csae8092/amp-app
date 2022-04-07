@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 37</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate notBefore="1961-01-25" notAfter="1961-12-25">1961-[?]-[25]</origDate></origin>
+                        <origin><origDate notBefore="1961-04-25" notAfter="1961-10-25">1961-[?]-[25]</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -71,6 +71,19 @@ for any purpose, even commercially.</p>
          <langUsage>
             <language ident="en">English</language>
          </langUsage>
+                
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"/>
+               <date notBefore="1961-04-25" notAfter="1961-10-25">1961-[?]-[25]</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#musulin-stella">Musulin, Stella</persName>
+               <placeName ref="#"/>
+               <date/>
+            </correspAction>
+         </correspDesc>
          
       </profileDesc>
       <revisionDesc status="draft">
@@ -88,7 +101,7 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0106/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#typed">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0105/" type="envelope"/>
@@ -98,15 +111,17 @@ for any purpose, even commercially.</p>
                   <del>WIEN III</del><lb/>
                   <del>Neulinggasse 26</del>
                </p>
-               <p>
+               <p hand="#handwritten">
                   FRIDAU<lb/>
                   OBERGRAFENDORF<lb/>
-                  BEI ST.PÖLTEN<lb/>
+                  BEI ST<unclear>-</unclear>PÖLTEN<lb/>
                   N.Ö.
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0106/" type="envelope"/>
                <p>
-                  W.H.Auden<lb/>
+                  W.H.Auden
+               </p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA

@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 28</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1970-07-06">1970-07-06</origDate></origin>
+                        <origin><origDate notBefore="1970-07-06" notAfter="1970-07-06">1970-07-06</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1970-07-06">1970-07-06</date>
+               <date notBefore="1970-07-06" notAfter="1970-07-06">1970-07-06</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,15 +107,15 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0078/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0075/" type="envelope"/>
                <p>
-                  <unclear>Mit</unclear> Fl<unclear>ug</unclear>-P<unclear>ost</unclear>
+                  M<unclear>i</unclear>t Fl<unclear>u</unclear>g-P<unclear>os</unclear>t
                </p>
                <p>
-                  Bitte Weitersch<unclear>i</unclear>cken
+                  <hi rend="underline">Bitte Weiterschicken</hi>
                </p>
                <p>
                   ENGLAND
@@ -123,18 +123,20 @@ for any purpose, even commercially.</p>
                <p>
                   Die Baronin<lb/>
                   Stella Mus<unclear>u</unclear>l<unclear>in</unclear><lb/>
-                  <del>W<gap/>en IV</del> <del>Wien III</del><lb/>
+                  <del>W<gap reason="deleted"/>en IV</del> <del>Wien III</del><lb/>
                   <del>Neuling gasse 26/14</del>.
                </p>
                <p>
                   2 Sea<unclear>f</unclear>orth<lb/>
                   St. <unclear>J</unclear>ulian's Street<lb/>
-                  TENBY<lb/>
+                  <hi rend="underline">TENBY</hi><lb/>
                   Pembrokeshire
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0076/" type="envelope"/>
                <p>
-                  W.H.Auden<lb/>
+                  W<unclear>.</unclear>H.Auden
+               </p>
+               <p hand="#printed">
                   3062 KIRCHSTETTEN<lb/>
                   BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
@@ -142,9 +144,9 @@ for any purpose, even commercially.</p>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0077/" type="sheet"/>
                <p>
-                  July 6<unclear>th.</unclear>
+                  July 6th<unclear>.</unclear>
                </p>
-               <p>
+               <p hand="#printed">
                   3062 KIRCHSTETTEN<lb/>
                   BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
@@ -152,27 +154,27 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Dear Stella:<lb/>
-                  Have ju<unclear>s</unclear>t f<unclear>ini</unclear>sh<unclear>e</unclear>d reading Aust<unclear>ria"</unclear><lb/>
-                  by which I was en<unclear>c</unclear>hanted a<unclear>s</unclear> w<unclear>e</unclear>ll as<lb/>
-                  <unclear>in</unclear>structed. My! h<unclear>o</unclear>w er<unclear>u</unclear>d<unclear>ite</unclear> you are. Where did<lb/>
-                  you dig up all <unclear>thos</unclear>e stories ?<lb/>
-                  A <unclear>t</unclear>rifle alarmed that it may attract m<unclear>o</unclear>re<lb/>
-                  t<unclear>ou</unclear>rist<unclear>s</unclear>, which I'<unclear>m</unclear> sure you don't welc<unclear>om</unclear>e<lb/>
-                  any m<unclear>or</unclear>e than I do. (Thanks , <unclear>b</unclear>y t<unclear>he</unclear> wa<unclear>y</unclear>,<lb/>
-                  for the reference t<unclear>o</unclear> my garage.)<unclear>.</unclear><lb/>
-                  Am very <unclear>c</unclear>ur<unclear>iou</unclear>s to le<unclear>a</unclear>rn mo<unclear>re</unclear> about "The L<unclear>i</unclear>fe<lb/>
-                  and Adventure s of Peter Pros<unclear>ch</unclear>." Is it in print?<lb/>
-                  Shoul<unclear>d</unclear>n't it be tran<unclear>s</unclear>lated?<lb/>
-                  As you say, th<unclear>e</unclear> relati<unclear>on</unclear> <del><unclear>t</unclear></del>betw<unclear>e</unclear>n art and socie<unclear>ty</unclear><lb/>
-                  <unclear>i</unclear>s <unclear>v</unclear>e<unclear>r</unclear>y odd. Why should <unclear>th</unclear>e Vienna of 1<unclear>8</unclear>90-1918<lb/>
-                  ha<unclear>ve</unclear> pro<unclear>d</unclear>u<unclear>ce</unclear>d such a florescence<unclear>.</unclear>? (Chester can<lb/>
-                  ap<unclear>p</unclear>rec<unclear>i</unclear>ate Bruckner be<unclear>t</unclear>ter than I)<unclear>.</unclear>. Even odder to<lb/>
-                  me is the Biederm<unclear>a</unclear>yer pe<unclear>riod</unclear>. No one can<lb/>
-                  poss<unclear>i</unclear>bly app<unclear>rove</unclear> of Metternich's police sta<unclear>t</unclear>e,yet,<lb/>
-                  in a m<unclear>or</unclear>e l<unclear>i</unclear>beral mil<unclear>i</unclear>eu, could St<unclear>i</unclear>fter,<lb/>
-                  Ra<unclear>im</unclear>und, Nes<unclear>tro</unclear>y, have <unclear>wr</unclear>itten what they did?<lb/>
-                  Hope th<unclear>is</unclear> rea<unclear>c</unclear>hes y<unclear>ou</unclear>. Loo<unclear>king</unclear> forw<unclear>ard</unclear> to se<unclear>ing</unclear> y<unclear>ou</unclear><lb/>
-                  in Sept<gap/><lb/>
+                  Have just f<unclear>in</unclear>ish<unclear>e</unclear>d reading <hi rend="underline">Aust<unclear>ria"</unclear></hi><lb/>
+                  by which I was enchanted a<unclear>s</unclear> w<unclear>e</unclear>ll as<lb/>
+                  <unclear>i</unclear>nstructed. My<unclear>!</unclear> how er<unclear>u</unclear>dit<unclear>e</unclear> you are<unclear>,</unclear> Where <hi rend="underline">did</hi><lb/>
+                  you dig up all th<unclear>os</unclear>e stories ?<lb/>
+                  A trifle alarmed that it may attract more<lb/>
+                  to<unclear>u</unclear>rist<unclear>s</unclear>,which I'<unclear>m</unclear> sure you don't welco<unclear>m</unclear>e<lb/>
+                  any m<unclear>or</unclear>e than I do. (Thanks , by t<unclear>he</unclear> way,<lb/>
+                  for the reference to my garage.)<unclear>.</unclear><lb/>
+                  Am very cur<unclear>iou</unclear>s to learn mor<unclear>e</unclear> about "<hi rend="underline">The L<unclear>i</unclear>fe</hi><lb/>
+                  <hi rend="underline">and A<unclear>d</unclear>venture s of Peter Prosch</hi>.<unclear>"</unclear> Is it in print?<lb/>
+                  Shoul<unclear>d</unclear>n't it be translated?<lb/>
+                  As you say, the relati<unclear>on</unclear> <unclear>b</unclear>etw<unclear>e</unclear>n art and society<lb/>
+                  <unclear>i</unclear>s <unclear>v</unclear>ery odd. Why should <unclear>th</unclear>e Vienna of 1<unclear>8</unclear>90-1918<lb/>
+                  ha<unclear>ve</unclear> pro<unclear>d</unclear>uced such a florescence<unclear>,</unclear>? (Chester can<lb/>
+                  appreciate Bruckner better than I)<unclear>.</unclear>. Even odder to<lb/>
+                  me is the Biedermayer peri<unclear>od,</unclear> No one can<lb/>
+                  possibly approv<unclear>e</unclear> of Metternich's police state,yet,<lb/>
+                  in a more liberal mil<del>e</del>ieu, could St<unclear>i</unclear>fter,<lb/>
+                  Rai<unclear>m</unclear>und, Nestroy, have <unclear>wr</unclear>itten what they did?<lb/>
+                  Hope this reaches yo<unclear>u.</unclear> Loo<unclear>k</unclear>ing forw<unclear>ar</unclear>d to se<unclear>e</unclear>ing yo<unclear>u</unclear><lb/>
+                  in Sept<unclear><gap reason="illegible"/></unclear><lb/>
                   love and ad<unclear>m</unclear>irat<unclear>ion</unclear>
                   Wystan
                </p>

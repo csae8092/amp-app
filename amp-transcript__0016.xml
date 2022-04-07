@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 29</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1970-09-18">1970-09-18</origDate></origin>
+                        <origin><origDate notBefore="1970-09-18" notAfter="1970-09-18">1970-09-18</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1970-09-18">1970-09-18</date>
+               <date notBefore="1970-09-18" notAfter="1970-09-18">1970-09-18</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,12 +107,12 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0082/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0079/" type="envelope"/>
                <p>
-                  <unclear>Ex</unclear>p<unclear>r</unclear>ess.
+                  <hi rend="underline"><unclear>Ex</unclear>press<unclear>.</unclear></hi>
                </p>
                <p>
                   Die Baronin<lb/>
@@ -124,6 +124,8 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0080/" type="envelope"/>
                <p>
                   W<unclear>.H.</unclear> Auden<lb/>
+               </p>
+               <p hand="#printed">
                   3062 KIRCHSTETTEN<lb/>
                   BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
@@ -133,17 +135,17 @@ for any purpose, even commercially.</p>
                <p>
                   Sept 18th.
                </p>
-               <p>
+               <p hand="#printed">
                   3062 KIRCHSTETTEN<lb/>
                   BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
-                  Dear S<unclear>t</unclear>ella.<lb/>
-                  Del<unclear>ig</unclear>ht<unclear>e</unclear>d to hear you <unclear>a</unclear>re<lb/>
+                  Dear Stella.<lb/>
+                  Del<unclear>i</unclear>ght<unclear>e</unclear>d to hear you are<lb/>
                   back.<lb/>
-                  C<unclear>o</unclear>ul<unclear>d</unclear> you and your mother<lb/>
+                  Could you and your mother<lb/>
                   come to lunch <del><unclear>on</unclear></del> next Tuesday ?<lb/>
                   love<lb/>
                   Wystan

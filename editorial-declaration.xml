@@ -81,7 +81,8 @@
                      1.3.2. Punctuation signs that cannot be transcribed with certainty are rendered by UTF-8/Unicode symbols that represent a graphical approximation, marked up as <![CDATA[<]]>unclear<![CDATA[>]]> in XML, and represented in grey on the web page (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1965-09-29, page 3, line 16).<lb/>
                      1.3.3. When spaces before or after punctuation marks are significantly smaller than the spaces separating words in the surrounding text, no spaces are transcribed (example: Letter W. H. Auden to Stella Musulin 1962-09-11, page 3, line 12).<lb/>
                      1.3.4. For manuscripts, the length of spaces between words is regularized (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-12, page 3, line 6).<lb/>
-                     1.3.5. For typescripts, the number of spaces is preserved and marked up as <![CDATA[<]]>space<![CDATA[>]]> in XML (example: Typescript Stella Musulin "In Retrospect" [?], page 1, line 2).
+                     1.3.5. For typescripts, the number of spaces within sentences is preserved and marked up as <![CDATA[<]]>space<![CDATA[>]]> in XML (example: Typescript Stella Musulin "In Retrospect" [?], page 1, line 2).
+                     1.3.6. In typescripts, line-inital spaces are preserved and marked up as <![CDATA[<]]>space<![CDATA[>]]> if they can plausibly be interpreted as indentations.
                   </p>
                   <p>
                      1.4. Original line breaks and divisions between blocks of text are retained.
@@ -98,7 +99,9 @@
                      1.7. Revisions<lb/>
                      1.7.1. The transcriptions represent deletions of text (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1964-12-23, page 3, line 26).<lb/>
                      1.7.2. For overwritings in typescripts, we have accepted the orthographically or grammatically accurate versions as corrections, even if the actual sequences of textual layers cannot be reconstructed (example: Typescript Stella Musulin "In Retrospect" [?], page 1, line 27).
-                     1.7.3. For transcriptions of typescripts, we accept overwritings of text with the letter 'x' as indicating deletions.
+                     1.7.3. For transcriptions of typescripts, we accept the use of the signs 'x', 'm', 'z', and '-' as indicating deletions where such deletion seems plausible.
+                     1.7.4. When additions are inserted into manuscripts or typescripts, surrounding spaces are included in ways that are coherent with the general use of spaces in the respective texts (that especially concerns spaces after punctuation in typescripts).
+                     1.7.5. When additions replace deleted words in typescripts, they are inserted directly after the deletions without additional spaces.
                   </p>
                   <p>
                      1.8. Pre-printed Components and Postal Additions<lb/>

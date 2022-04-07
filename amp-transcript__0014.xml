@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 25</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1969-05-21">1969-05-21</origDate></origin>
+                        <origin><origDate notBefore="1969-05-21" notAfter="1969-05-21">1969-05-21</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1969-05-21">1969-05-21</date>
+               <date notBefore="1969-05-21" notAfter="1969-05-21">1969-05-21</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,47 +107,49 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0066/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0063/" type="envelope"/>
                <p>
-                  Express
+                  <hi rend="underline">Express</hi>
                </p>
                <p>
-                  "<unclear>Lo</unclear>nging to hear ab<unclear>ou</unclear>t<lb/>
-                  royal visit .<unclear>"</unclear>
+                  "<unclear>L</unclear>onging to hear abo<unclear>u</unclear>t<lb/>
+                  royal visi<unclear>t</unclear> .<unclear>"</unclear>
                </p>
                <p>
                   Die Baronin<lb/>
-                  Stella Musul<unclear>im</unclear><lb/>
+                  Stella Musuli<unclear>m</unclear><lb/>
                   Wien III<lb/>
                   Neulinggasse 26/14
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0064/" type="envelope"/>
                <p>
-                  W<unclear>.H.</unclear> Auden<lb/>
+                  W<unclear>H.</unclear> Auden
+               </p>
+               <p hand="#printed">
                   KIRCHSTETTEN, BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0065/" type="sheet"/>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN, BEZ. ST. PÖLTEN<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
-                  May 21 st.. <unclear>19</unclear>69
+                  May 21 st<unclear>.</unclear>. 1969
                </p>
                <p>
                   Dear Stella<unclear>,</unclear><lb/>
-                  Ma<unclear>n</unclear>y thank f<unclear>o</unclear> you<unclear>r</unclear> card<unclear>,</unclear> Had<lb/>
-                  tried several times t<unclear>o</unclear> reach you<lb/>
+                  Ma<unclear>n</unclear>y thank f<unclear>o</unclear> your card<unclear>,</unclear> Had<lb/>
+                  tried several <unclear>ti</unclear>mes t<unclear>o</unclear> reach you<lb/>
                   by phone,but w<unclear>ithou</unclear>t succ<unclear>e</unclear>ss<lb/>
-                  Wednesday <del>lunch</del> May 28th is fine<lb/>
-                  for us,and we sh<unclear>a</unclear>ll much look<lb/>
-                  forward to seeing you both.<lb/>
+                  Wed<unclear>n</unclear>esday <del>lunch</del> May 28th is fine<lb/>
+                  for us,and we shall much look<lb/>
+                  forward to seeing you both<unclear>-</unclear><lb/>
                   <del>H</del> Longing to hear about the<lb/>
                   Royal v<unclear>s</unclear>it.<lb/>
                   love<lb/>

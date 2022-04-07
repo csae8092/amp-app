@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 4</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1962-07-23">1962-07-23</origDate></origin>
+                        <origin><origDate notBefore="1962-07-23" notAfter="1962-07-23">1962-07-23</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1962-07-23">1962-07-23</date>
+               <date notBefore="1962-07-23" notAfter="1962-07-23">1962-07-23</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,41 +107,43 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0124/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0121/" type="envelope"/>
                <p>
                   Die Baronin<lb/>
-                  Stella Mus<del><gap/></del><unclear>s</unclear>ulin<lb/>
+                  Stella Mus<del><gap reason="deleted"/></del><unclear>s</unclear>ulin<lb/>
                   Fridau<lb/>
-                  Obergrabendorf,<lb/>
+                  <unclear>O</unclear>bergrabendorf,<lb/>
                   N. O <unclear>,</unclear> bei S. Pölten
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0122/" type="envelope"/>
                <p>
-                  W.H.Auden<lb/>
+                  W.H.Auden
+               </p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0123/" type="sheet"/>
                <p>
-                  July 23<unclear>rd</unclear>.
+                  July 23rd.
                </p>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
                   Dear Stella:<lb/>
-                  H<unclear>ow</unclear> are you and w<unclear>h</unclear>ere are<lb/>
+                  How are you and where are<lb/>
                   you?<lb/>
-                  If in Fridau,we w<unclear>ould</unclear> l<unclear>ov</unclear>e to<lb/>
-                  see you. Am exp<unclear>ect</unclear>ing Christiane<lb/>
-                  Zimmer here about <del><unclear>th</unclear></del> Augu<unclear>s</unclear>t 5th.<lb/>
-                  <unclear>W</unclear>y<unclear>s</unclear>t<unclear>a</unclear>n
+                  If in Fridau,we would love to<lb/>
+                  see you. Am expecting Christiane<lb/>
+                  Zimmer here about <del><gap reason="deleted"/></del> August 5th.<lb/>
+                  Wystan
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0124/" type="sheet"/>
          </div>

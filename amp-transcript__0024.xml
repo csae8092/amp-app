@@ -3,7 +3,7 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Letter W. H. Auden to Stella Musulin 1962-09-11</title>
+            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin 1962-09-11</title>
             <author>Auden, W. H.</author>
             <editor>
                <name>Mayer, Sandra</name>
@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 5</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1962-09-11">1962-09-11</origDate></origin>
+                        <origin><origDate notBefore="1962-09-11" notAfter="1962-09-11">1962-09-11</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -71,6 +71,19 @@ for any purpose, even commercially.</p>
          <langUsage>
             <language ident="en">English</language>
          </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"/>
+               <date notBefore="1962-09-11" notAfter="1962-09-11">1962-09-11</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#musulin-stella">Musulin, Stella</persName>
+               <placeName ref="#"/>
+               <date/>
+            </correspAction>
+         </correspDesc>
          
       </profileDesc>
       <revisionDesc status="draft">
@@ -94,7 +107,7 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0128/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0125/" type="envelope"/>
@@ -109,7 +122,9 @@ for any purpose, even commercially.</p>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0126/" type="envelope"/>
                <p>
-                  <unclear>W.H</unclear> Aud<unclear>en</unclear><lb/>
+                  W<unclear>.H</unclear> Auden<lb/>
+               </p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
@@ -118,20 +133,20 @@ for any purpose, even commercially.</p>
                <p>
                  Dienstag. 
                </p>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
-                  Dea<unclear>r</unclear> <del>Sell</del> Stella:<lb/>
-                  Ma<unclear>n</unclear>y thanks for your card.<lb/>
-                  Cant get i<unclear>m</unclear> t<unclear>o</unclear> Vien<unclear>n</unclear>a bef<unclear>or</unclear>e<lb/>
-                  F<unclear>rid</unclear>ay<unclear>,</unclear> but do come and see us<lb/>
-                  ei<unclear>ther</unclear> on your w<unclear>a</unclear>y to or from<lb/>
-                  Fri<unclear>d</unclear>au,or let <unclear>us</unclear> kn<unclear>ow</unclear> when we<lb/>
-                  could c<unclear>a</unclear>ll .<lb/>
-                  Wys<unclear>ta</unclear>n
+                  Dear <del>Sell</del> Stella:<lb/>
+                  Many thanks for your card.<lb/>
+                  Cant get i<unclear>m</unclear> t<unclear>o</unclear> Vienna before<lb/>
+                  <unclear>Fr</unclear>iday<unclear>,</unclear> but do come and see us<lb/>
+                  eith<unclear>e</unclear>r on your way to or from<lb/>
+                  Fridau,or let us know when we<lb/>
+                  could call <unclear>,_</unclear><lb/>
+                  Wystan
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0128/" type="sheet"/>
          </div>

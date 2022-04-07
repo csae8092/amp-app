@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 2</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1961-10-13">1961-10-13</origDate></origin>
+                        <origin><origDate notBefore="1961-10-13" notAfter="1961-10-13">1961-10-13</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1961-10-13">1961-10-13</date>
+               <date notBefore="1961-10-13" notAfter="1961-10-13">1961-10-13</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,25 +107,27 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0116/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#typed">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0113/" type="envelope"/>
-               <p>
+               <p hand="#handwritten">
                   Die Baroni<unclear>n</unclear><lb/>
-                  St<unclear>e</unclear>lla von Muss<unclear>o</unclear>lin<lb/>
-                  Wien III<lb/>
-                  Neulin<unclear>g</unclear>asse 26 .
+                  Stella von Mussolin<lb/>
+                  <hi rend="underline">Wien III</hi><lb/>
+                  Neulingasse 26 <unclear>,</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0114/" type="envelope"/>
-               <p>
+               <p hand="#handwritten">
                   W.H.Auden<lb/>
+               </p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0115/" type="sheet"/>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
@@ -141,7 +143,9 @@ for any purpose, even commercially.</p>
                   and Herr Fritsch would be O.K.for us,so just<lb/>
                   drop us a p.c.when you fix the day.<lb/>
                   longing to see you<lb/>
-                  Wystan           
+               </p>
+               <p hand="#handwritten">   
+                  Wystan
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0116/" type="sheet"/>
          </div>

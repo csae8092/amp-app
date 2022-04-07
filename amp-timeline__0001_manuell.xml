@@ -93,7 +93,7 @@
             <event xml:id="ea001"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1957-10-04">1957-10-04</date>
+                  <date notBefore="1957-10-04" notAfter="1957-10-04">1957-10-04</date>
                </head>
                <desc>
                   <title xml:lang="en">4 October 1957, Vienna</title>
@@ -104,9 +104,22 @@
                </desc>               
             </event>
             <event xml:id="ea002"
+               type="event">
+               <head xml:lang="en">
+                  <date notBefore="1959-06-01" notAfter="1959-10-31">1959-06-01--1959-10-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">summer of 1959, Kirchstetten, Lower Austria</title>
+                  Auden meets Stella Musulin for the first time. The meeting is initiated by Auden's and Musulin's mutual friend, Christiane Zimmer (1902-1987), Hugo von Hofmannsthal's daughter, who had emigrated to the United States. <!-- link to PMB -->
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea003"
                type="event_austria">
                <head xml:lang="en">
-                  <date from-iso="1960-08-04" to-iso="1960-08-06">1960-08-04--1960-08-06</date>
+                  <date notBefore="1960-08-04" notAfter="1960-08-06">1960-08-04--1960-08-06</date>
                </head>
                <desc>
                   <title xml:lang="en">4-6 August 1960, Kirchstetten, Lower Austria</title>
@@ -116,10 +129,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea003"
+            <event xml:id="ea004"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1962-10-04">1962-10-04</date>
+                  <date notBefore="1962-10-04" notAfter="1962-10-04">1962-10-04</date>
                </head>
                <desc>
                   <title xml:lang="en">4 October 1962, Vienna</title>
@@ -129,10 +142,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea004"
+            <event xml:id="ea005"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1963-05-17">1963-05-17</date>
+                  <date notBefore="1963-05-17" notAfter="1963-05-17">1963-05-17</date>
                </head>
                <desc>
                   <title xml:lang="en">17 May 1963, Vienna</title>
@@ -145,7 +158,20 @@
             <event xml:id="ei001"
                type="event_international">
                <head xml:lang="en">
-                  <date notBefore-iso="1965-01-01" notAfter-iso="1965-12-31">1965-01-01--1965-12-31</date><!-- ISO time span format -->
+                  <date notBefore="1964-10-01" notAfter="1965-03-31">1964-10-01--1965-03-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">winter 1964/65, Berlin</title>
+                  Auden spends six months in Berlin as guest of the Ford Foundation and their artists-in-residence programme <!-- reference letters to Musulin 1964-12-23 and 1965-03-15 -->
+                  <location>
+                     <geo>52.533333 13.166667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ei002"
+               type="event_international">
+               <head xml:lang="en">
+                  <date notBefore="1965-01-01" notAfter="1965-12-31">1965-01-01--1965-12-31</date>
                </head>
                <desc>
                   <title xml:lang="en">1965, Frankfurt am Main</title>
@@ -155,10 +181,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea005"
+            <event xml:id="ea006"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1965-05-24">1965-05-24</date>
+                  <date notBefore="1965-05-24" notAfter="1965-05-24">1965-05-24</date>
                </head>
                <desc>
                   <title xml:lang="en">24 May 1965, Vienna</title>
@@ -168,10 +194,49 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea006"
+            <event xml:id="ea007"
                type="event_austria">
                <head xml:lang="en">
-                  <date notBefore-iso="1967-04-24" notAfter-iso="1967-04-26">1967-04-24--1967-04-26</date><!-- ISO time span format -->
+                  <date notBefore="1966-08-06" notAfter="1966-08-06">1966-08-06</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">6 August 1966, Salzburg</title>
+                  Hans Werner Henze's opera The Bassarids, with a libretto by Auden and Kallman, premières at the Salzburg Festival; the German translation of the libretto is produced by Maria Bosse-Sporleder
+                  <location>
+                     <geo>47.8 13.033333</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea008"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1966-10-25" notAfter="1966-10-25">1966-10-25</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">25 October 1966, Vienna</title>
+                  Auden is awarded the Austrian State Prize for European Literature by Federal Minister of Education Theodor Piffl-Per&#269;evi&#263;; the laudatory speech is delivered by Austrian writer and critic Hilde Spiel, one of the prize judges
+                  <location>
+                     <geo>48.208333 16.373056</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea009"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1967-01-05" notAfter="1967-01-05">1967-01-05</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">5 January 1967</title>
+                  Austrian television broadcasts the TV opera <hi rend="italics">Inzwischen</hi>, with a musical setting of a part of Auden’s "For the Time Being" (translated into German by Austrian writer Gerhard Fritsch as "Hier und Jetzt") by composer Paul Kont, featuring Helmut Qualtinger as Herod
+                  <location>
+                     <geo></geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea010"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1967-04-24" notAfter="1967-04-26">1967-04-24--1967-04-26</date>
                </head>
                <desc>
                   <title xml:lang="en">24 to 26 April 1967, Vienna</title>
@@ -181,10 +246,23 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea007"
+            <event xml:id="ea011"
                type="event_austria">
                <head xml:lang="en">
-                  <date from-iso="1967-09-10" to-iso="1967-09-13">1967-09-10--1967-09-13</date>
+                  <date notBefore="1967-09-03" notAfter="1967-09-03">1967-09-03</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">3 September 1967</title>
+                  A 28-minute episode titled "W. H. Auden" of the documentary feature <hi rend="italics">Das österreichische Porträt</hi> [The Austrian Portrait], portraying Auden's life and work at Kirchstetten, is broadcast on Austrian national TV
+                  <location>
+                     <geo></geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea012"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1967-09-10" notAfter="1967-09-13">1967-09-10--1967-09-13</date>
                </head>
                <desc>
                   <title xml:lang="en">10-13 September 1967, Kirchstetten, Lower Austria</title>
@@ -194,10 +272,49 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea008"
+            <event xml:id="ea013"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1969-05-28">1969-05-28</date>
+                  <date notBefore="1968-07-25" notAfter="1968-07-25">1968-07-25</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">25 July 1968, Salzburg</title>
+                  Auden delivers the opening address "Worte und Noten" [Words and Musical Notes] at the Salzburg Festival
+                  <location>
+                     <geo>47.8 13.033333</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea014"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1968-10-01" notAfter="1968-10-15">1968-10-01--1968-10-15</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">October 1968, Kirchstetten, Lower Austria</title>
+                  Auden offers to put up a Czech refugee couple at his house in Kirchstetten during his absence, responding to the refugee crisis following the Soviet invasion of Czechoslovakia in August 1968 <!-- reference/link to letter 1968-10-15, Stella Musulin memoir -->
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea015"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1968-12-13" notAfter="1968-12-13">1968-12-13</date> <!-- check date -->
+               </head>
+               <desc>
+                  <title xml:lang="en">13 December 1968, Lower Austria</title>
+                  Yannis Boras, Chester Kallman's Greek boyfriend, dies in a road accident while driving Auden's car between Vienna and Kirchstetten <!-- reference/link to letters 1968-12-13, 1968-12-29, 1969-01-04 -->
+                  <location>
+                     <geo>48.15 15.5</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="ea016"
+               type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1969-05-28" notAfter="1969-05-28">1969-05-28</date>
                </head>
                <desc>
                   <title xml:lang="en">28 May 1969, Kirchstetten, Lower Austria</title>
@@ -207,10 +324,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea009"
+            <event xml:id="ea017"
                type="event_austria">
                <head xml:lang="en">
-                  <date from-iso="1969-07-15" to-iso="1969-07-16">1969-07-15--1969-07-16</date>
+                  <date notBefore="1969-07-15" notAfter="1969-07-16">1969-07-15--1969-07-16</date>
                </head>
                <desc>
                   <title xml:lang="en">15-16 July 1969, Kirchstetten, Lower Austria</title>
@@ -220,10 +337,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea010"
+            <event xml:id="ea018"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1970-09-29">1970-09-29</date>
+                  <date notBefore="1970-09-29" notAfter="1970-09-29">1970-09-29</date>
                </head>
                <desc>
                   <title xml:lang="en">29 September 1970, Vienna</title>
@@ -233,10 +350,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea011"
+            <event xml:id="ea019"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1972-06-09">1972-06-09</date>
+                  <date notBefore="1972-06-09" notAfter="1972-06-09">1972-06-09</date>
                </head>
                <desc>
                   <title xml:lang="en">9 June 1972, Kirchstetten, Lower Austria</title>
@@ -246,10 +363,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea012"
+            <event xml:id="ea020"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1973-09-28">1973-09-28</date>
+                  <date notBefore="1973-09-28" notAfter="1973-09-28">1973-09-28</date>
                </head>
                <desc>
                   <title xml:lang="en">28 September 1973, Vienna</title>
@@ -259,10 +376,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea013"
+            <event xml:id="ea021"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1973-09-29">1973-09-29</date>
+                  <date notBefore="1973-09-29" notAfter="1973-09-29">1973-09-29</date>
                </head>
                <desc>
                   <title xml:lang="en">29 September 1973, Vienna</title>
@@ -272,10 +389,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea014"
+            <event xml:id="ea022"
                type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1973-10-04">1973-10-04</date>
+                  <date notBefore="1973-10-04" notAfter="1973-10-04">1973-10-04</date>
                </head>
                <desc>
                   <title xml:lang="en">4 October 1973, Kirchstetten, Lower Austria</title>

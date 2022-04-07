@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 10</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1965-03-15">1965-03-15</origDate></origin>
+                        <origin><origDate notBefore="1965-03-15" notAfter="1965-03-15">1965-03-15</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1965-03-15">1965-03-15</date>
+               <date notBefore="1965-03-15" notAfter="1965-03-15">1965-03-15</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -119,34 +119,36 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0138/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#typed">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0011/" type="envelope"/>
-               <p>
+               <p hand="#handwritten">
                   Die Baronin<lb/>
                   S<unclear>t</unclear>ella Musulin<lb/>
                   <del>Fridau</del><lb/>
-                  <del>Obergrabe<unclear>m</unclear>d<unclear>o</unclear>o<unclear>rf</unclear></del><lb/>
+                  <del>Obergrabe<unclear>m</unclear>d<unclear>o</unclear>r<unclear>f</unclear></del><lb/>
                   <del>b<unclear>e</unclear>i S. Pölten</del><lb/>
                   <del>N.Ö</del><lb/>
                   Osterreich
                </p>
-               <p>
+               <p hand="#handwritten">
                   Wien III<lb/>
                   Neuling<unclear>g</unclear>. 2<unclear>6</unclear>/1<unclear>4</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0012/" type="envelope"/>
-               <p>
+               <p hand="#handwritten">
                   W.H. Auden<lb/>
-                  Berlin-Dahle<unclear>m</unclear><lb/>
+                  Berlin-Dahlem<lb/>
                   Hubertusbaderstrasse <unclear>4</unclear>3<lb/>
                   Germany
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0133/" type="sheet"/>
                <p>
-                  <l>JOSEPH WEINHEBER</l>
-                  <l>(I892-I945)</l>
+                  <hi rend="underline">JOSEPH WEINHEBER</hi><lb/>
+                  (<hi rend="underline">I892-I945)</hi>
+               </p>
+               <lg>
                   <l>Reachi<del>j</del>ng my gate a narrow</l>
                   <l>Lane from the village</l>
                   <l>Passes on into a wood:</l>
@@ -155,8 +157,10 @@ for any purpose, even commercially.</p>
                   <l>And look through the fence</l>
                   <l>Of your garden where(under</l>
                   <l>The circs they had to)</l>
-                  <l>They buried you like a lo<unclear>v</unclear>ed</l>
+                  <l>They buried you like a loved</l>
                   <l>Old family dog.</l>
+               </lg>   
+               <lg>   
                   <l>Categorised enemies</l>
                   <l>Twenty years ago,</l>
                   <l>Now next-door neighbors,we might</l>
@@ -167,26 +171,32 @@ for any purpose, even commercially.</p>
                   <l>Had many a long</l>
                   <l>Language on syntax,commas,</l>
                   <l>Versification.</l>
+               </lg>   
+               <lg>   
                   <l>Yes,yes,it has to be said:</l>
                   <l>Men of great damage</l>
                   <l>And malengine took you up.</l>
                   <l>Did they,though,ever</l>
                   <l>Take you in,who to Goebbels'</l>
                   <l>Offer of culture</l>
-                  <l>Countered In Ruah lassen!?</l>
+                  <l>Countered <hi rend="underline">In Ruah lassen!</hi>?</l>
                   <l>But the crowd prefers</l>
                   <l>A nasty stink and the young</l>
                   <l>Condemn you unread.</l>
+               </lg>   
+               <lg>   
                   <l>What,had you ever heard of</l>
                   <l>Franz J<unclear>ä</unclear>gerst<unclear>ä</unclear>tter,</l>
                   <l>The St.Radegund peasant</l>
                   <l>Who said his lonely</l>
-                  <l>Nein to the Aryan State</l>
+                  <l><hi rend="underline">Nein</hi> to the Aryan State</l>
                   <l>And was beheaded,</l>
                   <l>Would your heart,as Austrian,</l>
                   <l>As poet,have told you?</l>
                   <l>Good care,of course,was taken</l>
                   <l>You should hear nothing,</l>
+               </lg>   
+               <lg>   
                   <l>Be unprepared for a day</l>
                   <l>That was bound to come,</l>
                   <l>A season of dread and tears</l>
@@ -195,15 +205,15 @@ for any purpose, even commercially.</p>
                   <l>You destroyed yourself.</l>
                   <l>Retribution was ever</l>
                   <l>A bungler at it:</l>
-                  <l>Dies alles ist furchtbar,hier</l>
-                  <l>Nur Schweigen gem<unclear>ä</unclear>ss. (<unclear>I</unclear>)</l>
-               </p>
+                  <l><hi rend="underline">Dies alles ist furchtbar,hier</hi></l>
+                  <l><hi rend="underline">Nur Schweigen gem<unclear>ä</unclear>ss</hi>.(I)</l>
+               </lg>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0134/" type="sheet"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0135/" type="sheet"/>
                <p>
                   (2
                </p>
-               <p>
+               <lg>
                   <l>Unmarked by me,unmourned for,</l>
                   <l>The hour of your death,</l>
                   <l>Unhailed by you the moment</l>
@@ -214,6 +224,8 @@ for any purpose, even commercially.</p>
                   <l>That changed our Cosmos,</l>
                   <l>The annus mirabilis</l>
                   <l>When Parity fell.</l>
+               </lg>
+               <lg>
                   <l>Already the realms that lost</l>
                   <l>Were properly warm</l>
                   <l>And over-eating,their crimes</l>
@@ -224,6 +236,8 @@ for any purpose, even commercially.</p>
                   <l>The shock was fading,</l>
                   <l>Their kidnapped physicists felt</l>
                   <l>No longer homesick.</l>
+               </lg>
+               <lg>
                   <l>To-day we smile at weddings</l>
                   <l>Where bride and bridegroom</l>
                   <l>Were both born since the Shadow</l>
@@ -234,6 +248,8 @@ for any purpose, even commercially.</p>
                   <l>Jobs for torturers</l>
                   <l>(In what bars are they welcome?</l>
                   <l>What girls marry them?),</l>
+               </lg>
+               <lg>   
                   <l>Or her nutritive surface</l>
                   <l>At peace all over.</l>
                   <l>No one,so far as we know,</l>
@@ -244,6 +260,8 @@ for any purpose, even commercially.</p>
                   <l>On apparatus</l>
                   <l>Inside which harmless matter</l>
                   <l>Turns homicidal.</l>
+               </lg>
+               <lg>
                   <l>Here,though,I feel as at home</l>
                   <l>As you did: the same</l>
                   <l>Short-lived creatures re-utter</l>
@@ -254,13 +272,13 @@ for any purpose, even commercially.</p>
                   <l>Till boisterous Fall</l>
                   <l>When at each stammering gust</l>
                   <l>Apples thump the ground.</l>
-               </p>
+               </lg>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0136/" type="sheet"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0137/" type="sheet"/>
                <p>
                   (3
                </p>
-               <p>
+               <lg>
                   <l>Looking across <del>u</del>our valley</l>
                   <l>Where,hidden from view,</l>
                   <l>Sichelbach tottles westward</l>
@@ -271,6 +289,8 @@ for any purpose, even commercially.</p>
                   <l>To bow to,mountains</l>
                   <l>Soaring behind me,ahead</l>
                   <l>A noble river,</l>
+               </lg>
+               <lg>
                   <l>I would respect you also,</l>
                   <l>Neighbor and colleague,</l>
                   <l>For even my English ear</l>
@@ -279,24 +299,26 @@ for any purpose, even commercially.</p>
                   <l>Of one who was graced</l>
                   <l>To hear the viols playing</l>
                   <l>On the impaled green,</l>
-                  <l>Committed thereafter den</l>
-                  <l>Abgrund zu nennen. (2)</l>
+                  <l>Committed thereafter <hi rend="underline">den</hi></l>
+                  <l><hi rend="underline">Abgrund zu nennen</hi>.(2)</l>
+               </lg>
+               <p>
                   ___<lb/>
-                  <del>N</del>  I) Quotation from W<del>8</del><unclear>'</unclear>s poem Auf das Unabwendbare.<lb/>
-                  2) Quotation from W's poem Kammermusik.<lb/>
+                  <del>N</del> <space quantity="1" unit="char"/>I) Quotation from W<del>8</del><unclear>'</unclear>s poem <hi rend="underline">Auf das Unabwendbare</hi>.<lb/>
+                  <space quantity="3" unit="char"/>2) Quotation from W's poem <hi rend="underline">Kammermusik</hi>.<lb/>
                   __
                </p>
                <p>
-                  Dear Stella:<lb/>
-                  Kirchstetten is intending to have a ceremony in memory of the twentieth<lb/>
-                  anniversary of Weinheber'<del>w</del>s  death.  Herewith my effort to do my<lb/>
-                  Gemeindepflicht.<lb/>
-                  love<lb/>
-                  Wystan.
+                  <space quantity="8" unit="char"/>Dear Stella:<lb/>
+                  Kirchstetten is intending to have a cer<del>o</del>emony in memory of the twentieth<lb/>
+                  anniversary of Weinheber'<del>w</del>s <space quantity="1" unit="char"/>death. <space quantity="1" unit="char"/>Herewith my effort to do my<lb/>
+                  <hi rend="underline">Gemeindepflicht.</hi><lb/>
+                  <space quantity="16" unit="char"/>love<lb/>
+                  Wystan.<!-- markup handwriting -->
                </p>
-               <p>
-                  P.S. Expect to re<unclear>tu</unclear>rn K April 22nd. Do hope you<lb/>
-                  <unclear>w</unclear>il<unclear>l</unclear> be around.
+               <p hand="#handwritten">
+                  P.S. Expect to return K April 22nd. Do hope you<lb/>
+                  wil<unclear>l</unclear> be around<unclear>.</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0138/" type="sheet"/>
          </div>

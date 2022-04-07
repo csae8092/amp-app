@@ -3,7 +3,7 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Letter W. H. Auden to Stella Musulin 1961-08-16</title>
+            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin 1961-08-16</title>
             <author>Auden, W. H.</author>
             <editor>
                <name>Mayer, Sandra</name>
@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 3</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1961-08-16">1961-08-16</origDate></origin>
+                        <origin><origDate notBefore="1961-08-16" notAfter="1961-08-16">1961-08-16</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -71,6 +71,19 @@ for any purpose, even commercially.</p>
          <langUsage>
             <language ident="en">English</language>
          </langUsage>
+         
+         <correspDesc>
+            <correspAction type="sent">
+               <persName ref="#auden-w-h">Auden, W. H.</persName>
+               <placeName ref="#"/>
+               <date notBefore="1961-08-16" notAfter="1961-08-16">1961-08-16</date>
+            </correspAction>
+            <correspAction type="received">
+               <persName ref="#musulin-stella">Musulin, Stella</persName>
+               <placeName ref="#"/>
+               <date/>
+            </correspAction>
+         </correspDesc>
          
       </profileDesc>
       <revisionDesc status="draft">
@@ -94,41 +107,43 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0120/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0117/" type="envelope"/>
                <p>
                   Die Baronin<lb/>
-                  Stella Mu<del><gap/></del><unclear>s</unclear>sil<unclear>i</unclear>n<lb/>
-                  Wien III<lb/>
+                  Stella Mu<del><gap reason="deleted"/></del><unclear>s</unclear>silin<lb/>
+                  <hi rend="underline">Wien III</hi><lb/>
                   Neulingasse 26.
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0118/" type="envelope"/>
                <p>
-                  <unclear>W</unclear>.H.Aude<unclear>n</unclear><lb/>
+                  W.H.Auden
+               </p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
               </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0119/" type="sheet"/>
                <p>
-                  Au<unclear>gus</unclear>t 16<unclear>th</unclear>
+                  August 16th
                </p>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
-                  D<del><gap/></del>ear Stella:<lb/>
-                  Del<unclear>ig</unclear>hted to hear y<unclear>o</unclear><del><gap/></del><unclear>u</unclear> a<unclear>r</unclear>e<lb/>
-                  back and would love to see y<unclear>ou</unclear><lb/>
-                  a<unclear>ny</unclear>time<unclear>:</unclear> Are you living in Wien or<lb/>
+                  <del>De</del>Dear Stella:<lb/>
+                  Del<unclear>i</unclear>ghted to hear yo<del><gap reason="deleted"/></del><unclear>u</unclear> are<lb/>
+                  back and would love to see you<lb/>
+                  anytime<unclear>:</unclear> Are you living in Wien or<lb/>
                   in Obergrabendorf.?<lb/>
-                  I read your piece in Die Presse<lb/>
-                  la<unclear>s</unclear>t S<unclear>un</unclear>da<unclear>y</unclear> <unclear>wi</unclear>th gre<unclear>a</unclear>t in<unclear>ter</unclear>e<unclear>s</unclear>t<unclear>,</unclear><lb/>
-                  you<unclear>rs</unclear> ever<lb/>
+                  I read your piece in <hi rend="underline">Die Presse</hi><lb/>
+                  last Sunday <unclear>wi</unclear>th great int<unclear>e</unclear>re<unclear>s</unclear>t<unclear>,</unclear><lb/>
+                  yours ever<lb/>
                   Wystan
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0120/" type="sheet"/>

@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 23</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-12-29">1968-12-29</origDate></origin>
+                        <origin><origDate notBefore="1968-12-29" notAfter="1968-12-29">1968-12-29</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1968-12-29">1968-12-29</date>
+               <date notBefore="1968-12-29" notAfter="1968-12-29">1968-12-29</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,21 +107,21 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0058/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0055/" type="envelope"/>
-               <p>
+               <p hand="#typed">
                   W.H.Auden<lb/>
                   77 St Mark's Place<lb/>
                   New York City<lb/>
-                  New York I0003<lb/>
+                  New York IOOO3<lb/>
                   U.S.A.
                </p>
-               <p>
+               <p hand="#typed">
                   Air-Mail
                </p>
-               <p>
+               <p hand="#typed">
                   Die Baronin<lb/>
                   Stella Musulin<lb/>
                   Wien <del>IV</del>III<lb/>
@@ -129,7 +129,7 @@ for any purpose, even commercially.</p>
                   Austria
                </p>
                <p>
-                  <unclear>Death</unclear> <unclear>-</unclear>Boras
+                  <gap reason="illegible"/> <unclear>-</unclear>B<unclear>ora</unclear>s
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0056/" type="envelope"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0057/" type="sheet"/>
@@ -144,18 +144,18 @@ for any purpose, even commercially.</p>
                <p>
                   Dear Stella:<lb/>
                   I am in despair. I wrote to my lawyer<lb/>
-                  and to our factotum,Otto Ho<unclear>l</unclear>fmann to find<lb/>
+                  and to our factotum , Otto Ho<unclear>l</unclear>fmann to find<lb/>
                   out details about the accident and the<lb/>
-                  whereabouts and c<unclear>ondition</unclear> of the car,but have<lb/>
-                  not heard a word. Chester postpones h<unclear>is</unclear><lb/>
-                  visit to Vienna and I d<unclear>ont</unclear> know his plans.<lb/>
+                  whereabout<unclear>s</unclear> and condition of the car, but have<lb/>
+                  not heard a word. Chester postpones h<gap reason="illegible"/><lb/>
+                  visit to Vienna and I dont know his plans.<lb/>
                   Could you possibly ring Ho<unclear>l</unclear>fmann to see if<lb/>
                   he knows anything .<lb/>
                   Adress. <unclear>W</unclear>ien VII, Schweighofergasse 4/21<lb/>
-                  Tel : 93/88/155. .<lb/>
-                  The Registration Number of my car is W. 618-948.<lb/>
+                  Tel : <unclear>9</unclear>3/88/155. .<lb/>
+                  <unclear>Th</unclear>e Registrati<unclear>on</unclear> Number of my car is W. 618-948.<lb/>
                   love<lb/>
-                  Wystan.
+                  Wystan .
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0058/" type="sheet"/>
          </div>

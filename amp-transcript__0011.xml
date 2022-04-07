@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 22</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-12-13">1968-12-13</origDate></origin>
+                        <origin><origDate notBefore="1968-12-13" notAfter="1968-12-13">1968-12-13</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1968-12-13">1968-12-13</date>
+               <date notBefore="1968-12-13" notAfter="1968-12-13">1968-12-13</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,7 +107,7 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0054/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0051/" type="envelope"/>
@@ -116,10 +116,10 @@ for any purpose, even commercially.</p>
                   77 St Mark's Place<lb/>
                   New York City<lb/>
                   New York 10003<lb/>
-                  U.S.A.
+                  U.S.A<unclear>.</unclear>
                </p>
                <p>
-                  Air-Mail
+                  <hi rend="underline">Air-Mail</hi>
                </p>
                <p>
                   Death Jean Boras
@@ -137,30 +137,30 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0052/" type="envelope"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0053/" type="sheet"/>
                <p>
+                  Dec 13th <unclear>'</unclear>
+               </p>
+               <p>
                   7 St Mark's Place<lb/>
                   New York City<lb/>
                   N.Y. 10003<lb/>
-                  <del>U.</del>
-               </p>
-               <p>
-                  Dec 13th <unclear>'</unclear>
+                  <del><gap reason="deleted"/></del>
                </p>
                <p>
                   Dear Stella:<lb/>
                   Chester has just telephoned me from Athens to say<lb/>
-                  that his Greek fr<unclear>i</unclear>end Jean Boras,whom I<lb/>
+                  that <unclear>his</unclear> Greek fr<unclear>i</unclear>end Jean Boras,whom I<lb/>
                   think you have met, while driving my car<lb/>
                   between Vienna and Kirchstetten coll<unclear>e</unclear>ded with<lb/>
                   a Lastwagen and was killed.<lb/>
                   Chester is going to Vienna,but he was too<lb/>
-                  upset for <del><gap/></del>me to find out where he would<lb/>
+                  upset for <del><gap reason="deleted"/></del><unclear>m</unclear>e to find out where he would<lb/>
                   stay. I presume in Kirchstetten.<lb/>
                   If you can get in touch him and help him<lb/>
                   in any way (there are purely practical matters to<lb/>
-                  be cons<unclear>i</unclear>de<unclear>re</unclear>d,like the car-papers and insurance policy)<lb/>
-                  I should be most grateful<unclear>.</unclear><lb/>
+                  be cons<unclear>i</unclear>de<unclear>re</unclear>d,like the car<unclear>-</unclear>papers and insurance policy)<lb/>
+                  I should be most grateful<unclear>,</unclear><lb/>
                   love<lb/>
-                  Wystan<unclear>.</unclear>
+                  Wystan<unclear>,</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0054/" type="sheet"/>
                <p>

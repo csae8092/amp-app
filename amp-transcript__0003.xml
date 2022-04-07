@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 12</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1965-09-29">1965-09-29</origDate></origin>
+                        <origin><origDate notBefore="1965-09-29" notAfter="1965-09-29">1965-09-29</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1965-09-29">1965-09-29</date>
+               <date notBefore="1965-09-29" notAfter="1965-09-29">1965-09-29</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -163,7 +163,7 @@ for any purpose, even commercially.</p>
                   Many thanks for your letter. Shall be delighted to<lb/>
                   see you both anyday any time. I can't get<lb/>
                   to Vienna this week. Will you be there next<lb/>
-                  T<unclear>u</unclear>esday? I have to go to <unclear>a</unclear> reception at<lb/>
+                  T<unclear>u</unclear>esday? I have to go to a reception at<lb/>
                   Amerika Haus 6-8. If you were free,it<lb/>
                   woul<unclear>d</unclear> be fun t<unclear>o</unclear> have dinner to-gether. I<lb/>
                   certainly shan't stay at the do after <unclear>7</unclear>·30.<lb/>

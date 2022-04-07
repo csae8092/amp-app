@@ -3,7 +3,7 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin [?]-[?]-[15]</title>
+            <title level="a">Autograph Letter Signed W. H. Auden to Stella Musulin [?]</title>
             <author>Auden, W. H.</author>
             <editor>
                <name>Mayer, Sandra</name>
@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 37</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate>[?]-[?]-[15]</origDate></origin>
+                        <origin><origDate notBefore="1960-07-22" notAfter="1965-09-28">[?]</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date>[?]-[?]-[15]</date>
+               <date notBefore="1960-07-22" notAfter="1965-09-28">[?]</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -101,29 +101,29 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0108/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0107/" type="sheet"/>
-            <p>
-               Können Sie Mittwoch<lb/>
-               <unclear>a</unclear>ns<unclear>t</unclear>att Donne<unclear>r</unclear>st<unclear>a</unclear>g zum Abendessen ko<unclear>m</unclear>men<lb/>
-            </p>
-            <p>
-               Auden
-            </p>
                <p>
-                  S<unclear>o</unclear>nntag.
+                  K<unclear>ö</unclear>nnen Sie Mittwoch<lb/>
+                  <unclear>a</unclear>ns<unclear>t</unclear>att Donnerstag zum Abend<unclear>e</unclear>ssen kommen<lb/>
                </p>
                <p>
+                  Auden
+               </p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
+                  <unclear>S</unclear>onntag.
+               </p>
+               <p>
                   Dear Stella:<lb/>
-                  Good. W<unclear>i</unclear>ll be at your place<lb/>
-                  on Thu<unclear>r</unclear>sday (1<unclear>9</unclear>th) at 6.p.<unclear>m.</unclear><lb/>
+                  Good. Will be at your place<lb/>
+                  on Thu<unclear>r</unclear>sday (19th) at 6.p.m<unclear>.</unclear><lb/>
                   Wystan
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0108/" type="sheet"/>

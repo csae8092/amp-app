@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 14</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1967-11-08">1967-11-08</origDate></origin>
+                        <origin><origDate notBefore="1967-11-08" notAfter="1967-11-08">1967-11-08</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1967-11-08">1967-11-08</date>
+               <date notBefore="1967-11-08" notAfter="1967-11-08">1967-11-08</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>

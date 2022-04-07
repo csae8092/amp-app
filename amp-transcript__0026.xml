@@ -3,7 +3,7 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Autograph Note W. H. Auden [?]</title>
+            <title level="a">Autograph Notes W. H. Auden Stella Musulin [?]</title>
             <author>O'Sullivan, Michael</author>
             <editor>
                <name>Mayer, Sandra</name>
@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>2, 21</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate>[?]</origDate></origin>
+                        <origin><origDate notBefore="1960-07-21" notAfter="1973-09-28">[?]</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -88,7 +88,7 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0250/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0249/" type="nan"/>
@@ -96,12 +96,12 @@ for any purpose, even commercially.</p>
                   W<unclear>,</unclear>H.Auden<lb/>
                   ℅ Spender<lb/>
                   15 Loudoun Rd<lb/>
-                  S<unclear>t</unclear> Jo<unclear>h</unclear>n's Woo<unclear>d</unclear><lb/>
-                  L<unclear>o</unclear>ndon. N.W. <unclear>8</unclear>
+                  St John's Wood<lb/>
+                  London. N.W. <unclear>8</unclear>
                </p>
                <p>
-                  Johann-S<unclear>tr</unclear>auß-<unclear>G</unclear>a<unclear>ss</unclear>e 28<unclear>.</unclear><lb/>
-                  1040 W<unclear>i</unclear>en .
+                  Johann-Strauß-Gasse 28 <unclear>.</unclear><lb/>
+                  1040 Wien .
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0250/" type="nan"/>
          </div>

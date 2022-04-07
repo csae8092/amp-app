@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 24</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1969-01-04">1969-01-04</origDate></origin>
+                        <origin><origDate notBefore="1969-01-04" notAfter="1969-01-04">1969-01-04</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1969-01-04">1969-01-04</date>
+               <date notBefore="1969-01-04" notAfter="1969-01-04">1969-01-04</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,29 +107,29 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0062/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
-            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0059/" type="envelope"/>
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0059/" type="envelope"/>    
+               <p>
+                  <hi rend="underline">Air<unclear>∼</unclear>Mail</hi>
+               </p>
                <p>
                   W<unclear>.</unclear>H.Auden<lb/>
                   77 St Mark's Place<lb/>
                   New York City<lb/>
-                  New York 10003<lb/>
-                  U.S.A
-               </p>
-               <p>
-                  Air-Mail
+                  New Yo<unclear>r</unclear>k 10003<lb/>
+                  U.S<unclear>,</unclear>A.
                </p>
                <p>
                   Boras
                </p>
                <p>
                   Die Baronin<lb/>
-                  Stella M<del><gap/></del>usul<unclear>i</unclear>n<lb/>
+                  Stella M<unclear>u</unclear>sulin<lb/>
                   Wien <del>IV</del><lb/>
-                  Neulinggasse 26/14<lb/>
-                  Austria.
+                  Neulinggasse 2<unclear>6</unclear>/14<lb/>
+                  Austria<unclear>,</unclear>
                </p>
                <p>
                   1030
@@ -137,7 +137,7 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0060/" type="envelope"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0061/" type="sheet"/>
                <p>
-                  77 St Mark's Place<lb/>
+                  <unclear>7</unclear>7 St Mark's Place<lb/>
                   New York City<lb/>
                   New Y<unclear>or</unclear>k 10003<lb/>
                   U.S.A.
@@ -147,31 +147,31 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   Dear Stella:<lb/>
-                  Many thanks for your letter. I ga<unclear>th</unclear>er<lb/>
-                  that in the end, Chester deci<unclear>de</unclear>d not to<lb/>
+                  Many thanks for your letter. I gather<lb/>
+                  that,in the end, Chester deci<unclear>de</unclear>d not t<unclear>o</unclear><lb/>
                   go to Vienna.<lb/>
                   Meanwhile, I am in despair about the<lb/>
                   practical matter of the whereabouts and<lb/>
-                  c<unclear>ondition</unclear> of the car<unclear>.</unclear> No answer from Ho<unclear>l</unclear>fman.<lb/>
-                  Can he be dead, too<unclear>?</unclear> I shoul<unclear>d</unclear> be m<unclear>o</unclear>st<lb/>
+                  condition of the car<unclear>.</unclear> <unclear>N</unclear>o answer from Ho<unclear>l</unclear>fman.<lb/>
+                  Can he be dead, too<unclear>?</unclear> I shoul<unclear>d</unclear> be most<lb/>
                   grateful if you would call him or on h<unclear>i</unclear>m.<lb/>
                   to find out what is the matter. Among other<lb/>
-                  things he has the cheque for my Hausmeisterin.<lb/>
-                  Address Otto Hoffmann. Wien VII. Karl Schweighofe<unclear>gas</unclear>se<lb/>
+                  things he has the cheques for my Hausmeisterin.<lb/>
+                  Address Otto Hoff<unclear>m</unclear>a<unclear>n</unclear>n. Wien VII. Karl S<unclear>c</unclear>hweighofegasse<lb/>
                   4/21. Tel. 93/88/155.<lb/>
-                  I hear that my old lawyer <del><gap/></del> is supervising<lb/>
+                  I hear that my old lawyer <del><gap reason="deleted"/></del> is supervising<lb/>
                   the case but have till now heard nothing from<lb/>
-                  him. Again could you call h<unclear>im</unclear> for me.<lb/>
-                  Dr Walter Redlich. Wien <del><gap/></del>XIX . Paradisgasse 55.<lb/>
+                  him. Again coul<unclear>d</unclear> you call hi<unclear>m</unclear> for me.<lb/>
+                  Dr Walter Redlich. Wien <unclear>X</unclear>IX . Paradisgasse 55.<lb/>
                   Tel: 36/43/83.<lb/>
-                  Terribly sorry to be such a nuisance, but<lb/>
+                  Terribly sorry to be such a nuis<unclear>a</unclear>nce, <unclear>b</unclear>ut<lb/>
                   I don't k<unclear>now</unclear> what to do. I can't get intouch<lb/>
-                  <unclear>with</unclear> the Insurance till I know more<lb/>
-                  love   Wystan<unclear>.</unclear>
+                  <gap reason="illegible"/> the Insurance till I know more<lb/>
+                  love   Wystan<unclear>-·</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0062/" type="sheet"/>
                <p>
-                  7
+                  <unclear>7</unclear>
                </p>
          </div>
       </body>

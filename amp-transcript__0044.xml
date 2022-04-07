@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 35</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1968-10-24">1968-10-24</origDate></origin>
+                        <origin><origDate notBefore="1968-10-24" notAfter="1968-10-24">1968-10-24</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1968-10-24">1968-10-24</date>
+               <date notBefore="1968-10-24" notAfter="1968-10-24">1968-10-24</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -101,33 +101,33 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0102/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0101/" type="sheet"/>
-               <p>
+               <p hand="#printed">
                   from Peter Heyworth<lb/>
-                  32 BRYANSTON SQUARE LONDON W1 · AMBASSADOR 8906
+                  32 BRYANSTON SQUARE <space quantity="1" unit="char"/>LONDON W1 <space quantity="1" unit="char"/>· <space quantity="1" unit="char"/>AMBASSADOR 8906
                </p>
                <p>
-                  Oct 2<unclear>4th</unclear>
+                  Oct 24th
                </p>
                <p>
                   Dear Stella:<lb/>
-                  Many thanks for your lette<unclear>r</unclear> <unclear>a</unclear>nd the<lb/>
-                  Dr<unclear>vivng</unclear> l<unclear>ic</unclear>ence <unclear>wh</unclear>ich I am mu<unclear>c</unclear>h relieved<lb/>
+                  Many thanks for your lette<unclear>r</unclear> and the<lb/>
+                  Dr<unclear>viv</unclear>ing li<unclear>c</unclear>ence <unclear>w</unclear>hich I am mu<unclear>c</unclear>h relieved<lb/>
                   to get.<lb/>
                   I can't possibly have the Langers<lb/>
-                  shive<unclear>r</unclear>ing,so I enclose a <unclear>c</unclear>heque for<lb/>
-                  S.2000 for extra fuel,and <unclear>wi</unclear>ll send<lb/>
-                  m<unclear>or</unclear>e if an<unclear>d</unclear> when nee<unclear>d</unclear>ed.<lb/>
-                  W<unclear>hat</unclear> is Mr Langers f<unclear>ir</unclear>st name.? Doe<unclear>s</unclear><lb/>
-                  he unde<unclear>rsta</unclear>nd English? I <unclear>must</unclear> w<unclear>ri</unclear>te<lb/>
+                  shivering,so I enclose a cheque for<lb/>
+                  S.2000 for extra fuel,and will send<lb/>
+                  more if and when needed.<lb/>
+                  Wh<unclear>a</unclear>t is Mr Langers first name.? Does<lb/>
+                  he underst<unclear>a</unclear>nd English? I <unclear>m</unclear>u<unclear>s</unclear>t w<unclear>ri</unclear>te<lb/>
                   him a note of welcome.<lb/>
-                  I le<unclear>a</unclear>ve <gap/>day week for Ne<unclear>w</unclear> Y<unclear>or</unclear>k.<lb/>
+                  I leave <unclear><del><gap reason="deleted"/></del>to-</unclear>day week for Ne<unclear>w</unclear> York.<lb/>
                   <unclear>A</unclear>ddress. 77 St Mark's Place. New<lb/>
                   York City. New York 10003.<lb/>
-                  much love and than<unclear>k</unclear>s<lb/>
+                  much love and thanks<lb/>
                   Wystan
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0102/" type="sheet"/>

@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 1</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1960-07-21">1960-07-21</origDate></origin>
+                        <origin><origDate notBefore="1960-07-21" notAfter="1960-07-21">1960-07-21</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1960-07-21">1960-07-21</date>
+               <date notBefore="1960-07-21" notAfter="1960-07-21">1960-07-21</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,7 +107,7 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0112/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0109/" type="envelope"/>
@@ -128,22 +128,22 @@ for any purpose, even commercially.</p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0110/" type="envelope"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0111/" type="sheet"/>
                <p>
-                  Kirste<unclear>t</unclear>ten.
+                  Kirstetten.
                </p>
                <p>
-                  Thu<unclear>r</unclear>sd<unclear>a</unclear>y
+                  Thursday
                </p>
-               <p>
+               <p hand="#printed">
                   <del>CHRIST CHURCH,</del><lb/>
                   <del>OXFORD.</del>
                </p>
                <p>
-                  Dear Baroness Mus<unclear>u</unclear>lin:<lb/>
-                  Deli<unclear>g</unclear>hted to get your ca<unclear>rd</unclear>. We<lb/>
-                  shall look forw<unclear>ar</unclear>d to seein<unclear>g</unclear> you<lb/>
-                  <unclear>o</unclear>n Sat<unclear>ur</unclear>day <unclear>a</unclear>fter<unclear>noon</unclear>.<lb/>
-                  We have a gramop<unclear>h</unclear>one no<unclear>w</unclear> and a<lb/>
-                  tape-re<unclear>cord</unclear>e<unclear>r</unclear>.<lb/>
+                  Dear Baroness Musulin:<lb/>
+                  Delighted to get your ca<unclear>rd</unclear>. We<lb/>
+                  shall look forw<unclear>a</unclear>rd to seeing you<lb/>
+                  on Saturday aftern<unclear>o</unclear>on.<lb/>
+                  We have a gramophone now <hi rend="underline">and</hi> a<lb/>
+                  tape-rec<unclear>o</unclear>rder.<lb/>
                   yours sinc<unclear>e</unclear>rely<lb/>
                   Wystan Auden
                </p>

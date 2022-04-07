@@ -93,7 +93,7 @@
             <event xml:id="e001"
                type="event">
                <head xml:lang="en">
-                  <date when-iso="1915-07-16">1915-07-16</date>
+                  <date notBefore="1915-07-16" notAfter="1915-07-16">1915-07-16</date>
                </head>
                <desc>
                   <title xml:lang="en">16 July 1915, Dale Castle, Pembrokeshire, Wales</title>
@@ -106,7 +106,7 @@
             <event xml:id="e002"
                type="event">
                <head xml:lang="en">
-                  <date when-iso="1946-06-23">1946-06-23</date>
+                  <date notBefore="1946-06-23" notAfter="1946-06-23">1946-06-23</date>
                </head>
                <desc>
                   <title xml:lang="en">23 June 1946, Mariazell, Styria, Austria</title>
@@ -119,7 +119,7 @@
             <event xml:id="e003"
                type="event">
                <head xml:lang="en">
-                  <date when-iso="1948-01-11">1948-01-11</date>
+                  <date notBefore="1948-01-11" notAfter="1948-01-11">1948-01-11</date>
                </head>
                <desc>
                   <title xml:lang="en">11 January 1948, xxx, Austria</title>
@@ -132,7 +132,20 @@
             <event xml:id="e004"
                type="event">
                <head xml:lang="en">
-                  <date when-iso="1969-05-28">1969-05-28</date>
+                  <date notBefore="1959-06-01" notAfter="1959-10-31">1959-06-01--1959-10-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">summer of 1959, Kirchstetten, Lower Austria</title>
+                  Stella Musulin meets W. H. Auden and Chester Kallman for the first time at their Kirchstetten home. The meeting is initiated by Musulin's and Auden's mutual friend, Christiane Zimmer (1902-1987), Hugo von Hofmannsthal's daughter, who had emigrated to the United States. <!-- link to PMB -->
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>               
+            </event>
+            <event xml:id="e005"
+               type="event">
+               <head xml:lang="en">
+                  <date notBefore="1969-05-28" notAfter="1969-05-28">1969-05-28</date>
                </head>
                <desc>
                   <title xml:lang="en">28 May 1969, Kirchstetten, Lower Austria</title>
@@ -142,10 +155,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e005"
+            <event xml:id="e006"
                type="event">
                <head xml:lang="en">
-                  <date notBefore-iso="1971-01-01" notAfter-iso="1971-12-31">1971-01-01--1971-12-31</date><!-- ISO time span format -->
+                  <date notBefore="1971-01-01" notAfter="1971-12-31">1971-01-01--1971-12-31</date>
                </head>
                <desc>
                   <title xml:lang="en">1971, London</title>
@@ -155,10 +168,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e006"
+            <event xml:id="e007"
                type="event">
                <head xml:lang="en">
-                  <date notBefore-iso="1975-01-01" notAfter-iso="1975-12-31">1975-01-01--1975-12-31</date><!-- ISO time span format -->
+                  <date notBefore="1975-01-01" notAfter="1975-12-31">1975-01-01--1975-12-31</date>
                </head>
                <desc>
                   <title xml:lang="en">1975, London</title>
@@ -168,10 +181,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e007"
+            <event xml:id="e008"
                type="event">
                <head xml:lang="en">
-                  <date when-iso="1976-06-28">1976-06-28</date>
+                  <date notBefore="1976-06-28" notAfter="1976-06-28">1976-06-28</date>
                </head>
                <desc>
                   <title xml:lang="en">28 June 1976, Austrian Institute, London</title>
@@ -181,10 +194,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e008"
+            <event xml:id="e009"
                type="event">
                <head xml:lang="en">
-                  <date when-iso="1977-05-05">1977-05-05</date>
+                  <date notBefore="1977-05-05" notAfter="1977-05-05">1977-05-05</date>
                </head>
                <desc>
                   <title xml:lang="en">5 May 1977, Palais Pálffy, Vienna</title>
@@ -194,10 +207,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e009"
+            <event xml:id="e010"
                type="event">
                <head xml:lang="en">
-                  <date when-iso="1978-03-06">1978-03-06</date>
+                  <date notBefore="1978-03-06" notAfter="1978-03-06">1978-03-06</date>
                </head>
                <desc>
                   <title xml:lang="en">6 March 1978, Fridau, Ober-Grafendorf, Lower Austria, Austria</title>
@@ -207,10 +220,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e010"
+            <event xml:id="e011"
                type="event">
                <head xml:lang="en">
-                  <date notBefore-iso="1995-01-01" notAfter-iso="1995-12-31">1995-01-01--1975-12-31</date><!-- ISO time span format -->
+                  <date notBefore="1995-01-01" notAfter="1995-12-31">1995-01-01--1975-12-31</date>
                </head>
                <desc>
                   <title xml:lang="en">1995, Oxford</title>
@@ -220,10 +233,10 @@
                   </location>
                </desc>               
             </event>
-            <event xml:id="e011"
+            <event xml:id="e012"
                type="event">
                <head xml:lang="en">
-                  <date when-iso="1996-01-21">1996-01-21</date> <!-- double-check! -->
+                  <date notBefore="1996-01-21" notAfter="1996-01-21">1996-01-21</date> <!-- double-check! -->
                </head>
                <desc>
                   <title xml:lang="en">21 January 1996, Fridau, Ober-Grafendorf, Lower Austria, Austria</title>

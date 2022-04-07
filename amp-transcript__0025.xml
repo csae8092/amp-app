@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 6</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1962-10-17">1962-10-17</origDate></origin>
+                        <origin><origDate notBefore="1962-10-17" notAfter="1962-10-17">1962-10-17</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1962-10-17">1962-10-17</date>
+               <date notBefore="1962-10-17" notAfter="1962-10-17">1962-10-17</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -107,38 +107,40 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0132/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#handwritten">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0129/" type="envelope"/>
                <p>
-                  Dine<unclear>s</unclear> <unclear>with</unclear> Pfa<unclear>rr</unclear>er.
+                  Dines wi<unclear>th</unclear> Pfa<unclear>rr</unclear>er.
                </p>
                <p>
                   Die Baronin<lb/>
-                  St<unclear>e</unclear>ll<unclear>a</unclear> Musulin<lb/>
+                  Stella Musulin<lb/>
                   Wien III<lb/>
                   Neulinggasse 26.
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0130/" type="envelope"/>
                <p>
                   WH<unclear>.</unclear>Auden<unclear>.</unclear><lb/>
+               </p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0131/" type="sheet"/>
-               <p>
+               <p hand="#printed">
                   KIRCHSTETTEN (WESTBAHN)<lb/>
                   HINTERHOLZ 6<lb/>
                   N.-Ö., AUSTRIA
                </p>
                <p>
                   Dear Stella:<lb/>
-                  Friday or Satu<unclear>r</unclear>d<unclear>a</unclear>y fine,except<lb/>
-                  we dine <unclear>wi</unclear>t<unclear>h</unclear> the Pfarrer Saturd<unclear>a</unclear>y e<unclear>v</unclear>e<unclear>ning</unclear>.<lb/>
-                  Do c<unclear>om</unclear>e to l<unclear>u</unclear>nch.<lb/>
-                  Wysta<unclear>n</unclear>.
+                  Friday or Satu<unclear>r</unclear>day fine,except<lb/>
+                  we dine <unclear>wi</unclear>t<unclear>h</unclear> the Pfarrer Saturday eve<unclear>ni</unclear>ng.<lb/>
+                  Do come to l<unclear>u</unclear>nch.<lb/>
+                  Wystan.
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0132/" type="sheet"/>
          </div>
