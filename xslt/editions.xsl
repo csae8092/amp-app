@@ -279,5 +279,38 @@
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>        
-    </xsl:template>    
+    </xsl:template> 
+    <xsl:template match="tei:gap">
+        <xsl:param name="view"/>
+        <xsl:choose>
+            <xsl:when test="$view = 'diplomatic' or $view = 'commentary'">
+                <xsl:choose>
+                    <xsl:when test="@reason='deleted'">
+                        <del>
+                            <abbr>
+                                <xsl:attribute name="title">
+                                    <xsl:value-of select="data(@reason)"/>
+                                </xsl:attribute>
+                                [<xsl:apply-templates/>]
+                            </abbr>
+                        </del>
+                    </xsl:when>
+                    <xsl:when test="@reason='illegible'">
+                        <abbr>
+                            <xsl:attribute name="title">
+                                <xsl:value-of select="data(@reason)"/>
+                            </xsl:attribute>
+                            [<xsl:apply-templates/>]
+                        </abbr>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        [<xsl:apply-templates/>]
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>  
+    </xsl:template>
 </xsl:stylesheet>
