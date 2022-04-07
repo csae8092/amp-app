@@ -64,7 +64,7 @@
                     }
                 </style>
             </head>
-            <body class="page">
+            <body class="page" onload="diplomaticLoad(this)">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
@@ -80,237 +80,190 @@
                             <div class="card-header">                                
                                 <xsl:call-template name="header-nav"/>                                                              
                             </div>
-                            <div id="navBarLetters" style="margin-top:4em !important;">
-                                <ul class="nav nav-tabs" id="dropdown-lang">
-                                    <li class="nav-item">
-                                        <xsl:choose>
-                                            <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060']">
-                                                <a title="back to all letters" href="additional-materials.html" class="nav-link btn btn-round btn-backlink">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                    </svg>
-                                                </a>  
-                                            </xsl:when>
-                                            <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0055', '0048', '0054', '0050']">
-                                                <a title="back to all letters" href="photos.html" class="nav-link btn btn-round btn-backlink">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                    </svg>
-                                                </a>  
-                                            </xsl:when>
-                                            <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0028']">
-                                                <a title="back to all letters" href="memoirs.html" class="nav-link btn btn-round btn-backlink">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                    </svg>
-                                                </a>  
-                                            </xsl:when>
-                                            <xsl:when test="not(substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060','0055', '0048', '0054', '0050','0028'])">
-                                                <a title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                    </svg>
-                                                </a>  
-                                            </xsl:when>
-                                        </xsl:choose>                                        
-                                    </li>
-                                    <li class="nav-item">                                    
-                                        <a title="Cards" href="#diplomatic-tab" data-toggle="tab" class="nav-link btn btn-round active">
-                                            diplomatic view
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">                                    
-                                        <a title="Table" href="#commentary-tab" data-toggle="tab" class="nav-link btn btn-round">
-                                            commentary view
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">                                    
-                                        <a title="Table" href="#reading-tab" data-toggle="tab" class="nav-link btn btn-round">
-                                            reading view
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">                                    
-                                        <a title="Table" href="#xml-tab" data-toggle="tab" class="nav-link btn btn-round">
-                                            TEI/XML view
-                                        </a>
-                                    </li>                                    
-                                </ul>
-                            </div>
-                            <div class="tab-content">
-                                 <div class="tab-pane active" id="diplomatic-tab" tabindex="-1">                                     
-                                     <xsl:for-each select="//tei:div[@xml:id='transcription']">                                             
-                                         
-                                         <div class="pagination-top">
-                                             <xsl:call-template name="view-pagination">
-                                                 <xsl:with-param name="reading-type" select="'diplomatic'"/>
-                                             </xsl:call-template>  
-                                         </div> 
-                                         
-                                         <xsl:call-template name="view-type-img">
-                                             <xsl:with-param name="reading-type" select="'diplomatic'"/>
-                                         </xsl:call-template>
-                                         
-                                         <div class="pagination-bottom">
-                                             <xsl:call-template name="view-pagination">
-                                                 <xsl:with-param name="reading-type" select="'diplomatic'"/>
-                                             </xsl:call-template>  
-                                         </div>                                         
-                                         
-                                     </xsl:for-each>                                     
-                                 </div>
-                                <div class="tab-pane fade" id="reading-tab" tabindex="-1">
-                                    <xsl:for-each select="//tei:div[@xml:id='transcription']">
-                                        
-                                        <div class="pagination-top">
-                                            <xsl:call-template name="view-pagination">
-                                                <xsl:with-param name="reading-type" select="'reading'"/>
-                                            </xsl:call-template>  
-                                        </div>  
-                                        
-                                        <xsl:call-template name="view-type-no-img">
-                                            <xsl:with-param name="reading-type" select="'reading'"/>
-                                        </xsl:call-template>
-                                        
-                                        <div class="pagination-bottom">
-                                            <xsl:call-template name="view-pagination">
-                                                <xsl:with-param name="reading-type" select="'reading'"/>
-                                            </xsl:call-template>  
-                                        </div>   
-                                        
-                                    </xsl:for-each>                                            
+                            <div class="row">
+                                <div class="col-md-6 justify-content-center">
+                                    <div class="navBarLetters text-center" style="margin:2em auto;display:block;">
+                                        <ul class="nav nav-tabs" id="dropdown-lang" style="display:inline-flex;">
+                                            <li class="nav-item">
+                                                <xsl:choose>
+                                                    <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060']">
+                                                        <a title="back to all letters" href="additional-materials.html" class="nav-link btn btn-round btn-backlink">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                                            </svg>
+                                                        </a>  
+                                                    </xsl:when>
+                                                    <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0055', '0048', '0054', '0050']">
+                                                        <a title="back to all letters" href="photos.html" class="nav-link btn btn-round btn-backlink">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                                            </svg>
+                                                        </a>  
+                                                    </xsl:when>
+                                                    <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0028']">
+                                                        <a title="back to all letters" href="memoirs.html" class="nav-link btn btn-round btn-backlink">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                                            </svg>
+                                                        </a>  
+                                                    </xsl:when>
+                                                    <xsl:when test="not(substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060','0055', '0048', '0054', '0050','0028'])">
+                                                        <a title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                                            </svg>
+                                                        </a>  
+                                                    </xsl:when>
+                                                </xsl:choose>                                        
+                                            </li>
+                                            <li class="nav-item">                                    
+                                                <a title="diplomatic"
+                                                    onclick="diplomaticClick(this)"
+                                                    class="nav-link btn btn-round active"
+                                                    id="diplomatic-link">
+                                                    diplomatic view
+                                                </a>
+                                            </li>                                    
+                                            <li class="nav-item">                                    
+                                                <a title="reading"
+                                                    onclick="readingClick(this)"
+                                                    class="nav-link btn btn-round"
+                                                    id="reading-link">
+                                                    reading view
+                                                </a>
+                                            </li>                                                                        
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="tab-pane fade" id="commentary-tab" tabindex="-1">
-                                    <xsl:for-each select="//tei:div[@xml:id='transcription']">                                        
-                                        
-                                        <div class="pagination-top">
-                                            <xsl:call-template name="view-pagination">
-                                                <xsl:with-param name="reading-type" select="'commentary'"/>
-                                            </xsl:call-template>  
-                                        </div>   
-                                        
-                                        <xsl:call-template name="view-type-no-img">
-                                            <xsl:with-param name="reading-type" select="'commentary'"/>
-                                        </xsl:call-template>
-                                        
-                                        <div class="pagination-bottom">
-                                            <xsl:call-template name="view-pagination">
-                                                <xsl:with-param name="reading-type" select="'commentary'"/>
-                                            </xsl:call-template>  
-                                        </div> 
-                                        
-                                    </xsl:for-each>                                    
-                                </div>
-                                <div class="tab-pane fade" id="xml-tab" tabindex="-1">
-                                    <div class="card-body">                                
-                                        <iframe frameborder="0" scrolling="yes" width="100%" height="800px">
-                                            <xsl:attribute name="src">
-                                                <xsl:value-of select="concat('xml-view/',replace(tokenize(base-uri(.),'/')[last()],'.xml','.html'))"/>
-                                            </xsl:attribute>
-                                        </iframe>
+                                <div class="col-md-6">
+                                    <div class="navBarLetters text-center" style="margin: 2em auto;display:block;">
+                                        <label style="margin-top:.2em;margin-bottom:0;">
+                                            <strong>display format options:</strong>
+                                        </label>
+                                        <ul class="nav nav-tabs" style="display:inline-flex;">                                            
+                                            <li class="nav-item">                                    
+                                                <a title="deletions"
+                                                    onclick="deletions(this)"
+                                                    class="nav-link btn badge-link red"
+                                                    id="deletions-link">
+                                                    deletions
+                                                </a>
+                                            </li>                                    
+                                            <li class="nav-item">                                    
+                                                <a title="unclear"
+                                                    onclick="unclear(this)"
+                                                    class="nav-link btn badge-link yellow"
+                                                    id="unclear-link">
+                                                    unclear
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">                                    
+                                                <a title="underline"
+                                                    onclick="underline(this)"
+                                                    class="nav-link btn badge-link blue"
+                                                    id="underline-link">
+                                                    underline
+                                                </a>
+                                            </li> 
+                                            <li class="nav-item">                                    
+                                                <a title="whitespaces"
+                                                    onclick="space(this)"
+                                                    class="nav-link btn badge-link green"
+                                                    id="whitespaces-link">
+                                                    whitespaces
+                                                </a>
+                                            </li> 
+                                            <li class="nav-item">                                    
+                                                <a title="clear"
+                                                    onclick="clearAll(this)"
+                                                    class="nav-link btn badge-link"
+                                                    id="clear-link">
+                                                    clear
+                                                </a>
+                                            </li> 
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                            
+                             <xsl:for-each select="//tei:div[@xml:id='transcription']">                                             
+                                 
+                                 <div class="pagination-top">
+                                     <xsl:call-template name="view-pagination"/>
+                                 </div> 
+                                 
+                                 <xsl:call-template name="view-type-img"/>
+
+                                 <div class="pagination-bottom">
+                                     <xsl:call-template name="view-pagination"/>
+                                 </div>                                         
+                                 
+                             </xsl:for-each>     
+                            
+                        </div><!-- .card -->
+                    </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
-                </div>   
+                </div><!-- .site -->
                 <script type="text/javascript" src="js/pagination-sync.js"></script>
+                <script type="text/javascript" src="js/edition-view-functions.js"></script>
             </body>
         </html>
     </xsl:template>
                     
     <xsl:template match="tei:lb">
-        <xsl:param name="view"/>
-        <xsl:if test="$view = 'diplomatic' or $view = 'commentary'">
-            <br/>
-        </xsl:if>
+        <br/>        
     </xsl:template>
     <xsl:template match="tei:lg">
-        <xsl:param name="view"/>
-        <xsl:choose>
-            <xsl:when test="$view = 'diplomatic' or $view = 'commentary' or $view = 'reading'">
-                <p><xsl:apply-templates/></p>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <p><xsl:apply-templates/></p>
     </xsl:template>
     <xsl:template match="tei:l">
-        <xsl:param name="view"/>
+        <xsl:apply-templates/><br />
+    </xsl:template>
+    <xsl:template match="tei:unclear">
+        <span class="abbr" title="unclear">
+            <xsl:apply-templates/>
+        </span> 
+    </xsl:template>
+    <xsl:template match="tei:space">
+        <span class="space">
+            <xsl:value-of select="string-join((for $i in 1 to @quantity return '&#x00A0;'),'')"/>
+        </span>
+    </xsl:template>
+    <xsl:template match="tei:del">
+        <span class="del"><xsl:apply-templates/></span>      
+    </xsl:template> 
+    <xsl:template match="tei:gap">
         <xsl:choose>
-            <xsl:when test="$view = 'diplomatic' or $view = 'commentary' or $view = 'reading'">
-                <xsl:apply-templates/><br />
+            <xsl:when test="@reason='deleted'">
+                <span class="del">
+                    <span class="abbr">
+                        <xsl:attribute name="title">
+                            <xsl:value-of select="data(@reason)"/>
+                        </xsl:attribute>
+                        <xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
+                    </span>
+                </span>
+            </xsl:when>
+            <xsl:when test="@reason='illegible'">
+                <span class="abbr">
+                    <xsl:attribute name="title">
+                        <xsl:value-of select="data(@reason)"/>
+                    </xsl:attribute>
+                    <xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
+                </span>
+            </xsl:when>
+        </xsl:choose> 
+    </xsl:template>
+    <xsl:template match="tei:hi">
+        <xsl:choose>
+            <xsl:when test="@rend='underline'">
+                <span class="hi-underline">
+                    <xsl:apply-templates/>
+                </span>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
-    <xsl:template match="tei:unclear">
-        <xsl:param name="view"/>
-        <xsl:choose>
-            <xsl:when test="$view = 'diplomatic' or $view = 'commentary'">
-                <abbr title="unclear"><xsl:apply-templates/></abbr>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>     
-    </xsl:template>
-    <xsl:template match="tei:space">
-        <xsl:param name="view"/>
-        <xsl:choose>
-            <xsl:when test="$view = 'diplomatic' or $view = 'commentary'">
-                <xsl:value-of select="string-join((for $i in 1 to @quantity return '&#x00A0;'),'')"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>    
-    </xsl:template>
-    <xsl:template match="tei:del">
-        <xsl:param name="view"/>
-        <xsl:choose>
-            <xsl:when test="$view = 'diplomatic' or $view = 'commentary' or $view = 'reading'">
-                <del><xsl:apply-templates/></del>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>        
-    </xsl:template> 
-    <xsl:template match="tei:gap">
-        <xsl:param name="view"/>
-        <xsl:choose>
-            <xsl:when test="$view = 'diplomatic' or $view = 'commentary'">
-                <xsl:choose>
-                    <xsl:when test="@reason='deleted'">
-                        <del>
-                            <abbr>
-                                <xsl:attribute name="title">
-                                    <xsl:value-of select="data(@reason)"/>
-                                </xsl:attribute>
-                                [<xsl:apply-templates/>]
-                            </abbr>
-                        </del>
-                    </xsl:when>
-                    <xsl:when test="@reason='illegible'">
-                        <abbr>
-                            <xsl:attribute name="title">
-                                <xsl:value-of select="data(@reason)"/>
-                            </xsl:attribute>
-                            [<xsl:apply-templates/>]
-                        </abbr>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        [<xsl:apply-templates/>]
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>  
     </xsl:template>
 </xsl:stylesheet>

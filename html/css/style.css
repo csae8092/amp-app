@@ -10,6 +10,10 @@ body {
     background: url("../images/letter-background.png") 0 0 repeat;
 }*/
 
+.fade {
+    display: none;
+}
+
 #wrapper-hero > .row {
     padding-top: 2em;
 /*    background: url("../images/letter-background.png") 0 0 repeat;*/
@@ -58,7 +62,7 @@ div.dataTables_filter {
     margin-left: 2em;
 }
 
-#navBarLetters {
+.navBarLetters {
     margin: 1em auto;
     border: 0 !important;
 }
@@ -624,6 +628,12 @@ fieldset.ssFieldset > span > input {
 
 /* display transcripts text */
 
+.transcript {
+    padding: 0 !important;
+    border-top: 5px solid #b59890 ; 
+    border-bottom: 5px solid #b59890 ;
+}
+
 div.text-re {
     display: flex;
     align-items: center;
@@ -666,19 +676,14 @@ div.text-re div.card-body {
     text-align:center;
     display:block;    
 }
-
 .pagination .nav .nav-item .nav-link {
 
 }
 
 .pagination-top > .pagination .nav {
     display: inline-flex !important;
-    border: 1px solid #b59890;
-    padding: .5em .5em 0 .5em;
-    border-radius: .5rem .5rem 0 0;
-    border-bottom: 2px solid #fff;
+    padding: .5em;
     z-index: 99;
-    margin-bottom: -2px;
 }
 
 .pagination-bottom > .pagination {
@@ -689,13 +694,85 @@ div.text-re div.card-body {
 
 .pagination-bottom > .pagination .nav {
     display: inline-flex !important;
-    border: 1px solid #b59890;
-    padding: 0 .5em .5em .5em;
-    border-radius: 0 0 .5rem .5rem;
-    border-top: 2px solid #fff;
+    padding: .5em;
     z-index: 99;
-    margin-top: -2px;
 }
+
+/* ############################
+ * ############################
+ * EDITIONS view properties 
+ * ###########################*/
+
+.fade-all {
+    display: none;
+}
+
+.unclear[title] {
+    position: relative;
+    text-decoration: underline dotted;
+}
+
+.unclear[title]:hover::after,
+.unclear[title]:focus::after {
+    content: attr(title);
+    position: absolute;
+    left: 0;
+    width: auto;
+    white-space: nowrap;
+    background-color: #f1f1f1;
+    border-radius: .25rem;
+    font-size: 16px;
+    padding: 3px 5px;
+    z-index: 99;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.reading-view-font {
+    font-family: "Times New Roman", serif !important;
+    font-size: 22px !important;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.red {
+    background-color: #ffe6e6;
+}
+
+.blue {
+    background-color: #e1d4ff;
+}
+
+.white {
+    background-color: #ffffff;
+}
+
+.yellow {
+    background-color: #faf8ca;
+}
+
+.green {
+    background-color: #c9ffcf;
+}
+
+.badge-item {
+    border-radius: .25rem;
+}
+
+.badge-link {
+    border-radius: .25rem;
+    padding: .2em;
+    margin: 0 .5em;
+}
+
 
 /* XML raw style */
 .tnc {

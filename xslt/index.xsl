@@ -151,11 +151,11 @@
                     <xsl:call-template name="html_footer"/>
                 </div>
             </body>
-            <script type="text/javascript">
+            <!--<script type="text/javascript">
                 $('.carousel').carousel({
                     interval: 2000
                 });
-            </script>
+            </script>-->
             <script type="text/javascript" src="autocomplete-addon/autocomplete-download-only.js"></script>
         </html>
     </xsl:template>

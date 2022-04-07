@@ -14,7 +14,6 @@
     </doc>
     
     <xsl:template name="view-type-img">
-        <xsl:param name="reading-type"></xsl:param>
         <xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 22px;'"/>
         <xsl:variable name="typed" select="'font-family: Courier New, monospace; font-size: 18px;'"/>
         <xsl:variable name="printed" select="'font-family: Arial, serif; font-size: 18px;'"/>
@@ -30,7 +29,7 @@
             <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                 
                 <xsl:choose>
                     <xsl:when test="position() = 1">                                                         
-                        <div class="pagination-tab tab-pane active" data-tab="{$reading-type}"  id="{$reading-type}-paginate-{position()}" tabindex="-1">
+                        <div class="pagination-tab tab-pane active" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
                             <div id="container-resize-{position()}" class="transcript row">  
                                 
                                 <div id="text-resize-{position()}" class="text-re col-md-6"> 
@@ -43,16 +42,14 @@
                                                 ($printed) else
                                                 ()
                                                 }">
-                                                <xsl:apply-templates>
-                                                    <xsl:with-param name="view" select="$reading-type"/>
-                                                </xsl:apply-templates>
+                                                <xsl:apply-templates/>
                                             </p>
                                         </xsl:for-each>  
                                     </div>                                                                      
                                 </div>   
                                 
                                 <div id="img-resize-{position()}"
-                                     class="col-md-6 card-header"
+                                     class="col-md-6 card-header osd-viewer"
                                      style="padding: 1em;">
                                     <div class="expand-wrapper" style="cursor:col-resize;">
                                         <svg id="img-expand-{position()}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
@@ -90,7 +87,7 @@
                         </div>                                                         
                     </xsl:when>
                     <xsl:otherwise>
-                        <div class="pagination-tab tab-pane fade" data-tab="{$reading-type}" id="{$reading-type}-paginate-{position()}" tabindex="-1">
+                        <div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-{position()}" tabindex="-1">
                             <div id="container-resize-{position()}" class="transcript row">
                                 <div id="text-resize-{position()}" class="text-re col-md-6">                                                                
                                     <div class="card-body">                                                                                                                                                                                       
@@ -102,15 +99,13 @@
                                                 ($printed) else
                                                 ()
                                                 }">
-                                                <xsl:apply-templates>
-                                                    <xsl:with-param name="view" select="$reading-type"/>
-                                                </xsl:apply-templates>
+                                                <xsl:apply-templates/>
                                             </p>
                                         </xsl:for-each>
                                     </div>
                                 </div>                                                     
                                 <div id="img-resize-{position()}" 
-                                     class="col-md-6 card-header"
+                                    class="col-md-6 card-header osd-viewer"
                                      style="padding: 1em;">
                                     <div class="expand-wrapper" style="cursor:col-resize;">
                                         <svg id="img-expand-{position()}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
@@ -150,7 +145,7 @@
             </xsl:for-each-group>   
         </div>
     </xsl:template>
-    <xsl:template name="view-type-no-img">
+    <!--<xsl:template name="view-type-no-img">
         <xsl:param name="reading-type"></xsl:param>
         <div class="tab-content">
             <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                
@@ -212,5 +207,5 @@
                 </xsl:choose>                                                
             </xsl:for-each-group>
         </div>
-    </xsl:template>
+    </xsl:template>-->
 </xsl:stylesheet>

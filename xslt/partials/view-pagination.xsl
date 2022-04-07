@@ -13,7 +13,6 @@
     </doc>
     
     <xsl:template name="view-pagination">
-        <xsl:param name="reading-type"></xsl:param>
         <xsl:variable 
             name="vseq" 
             select="//tei:pb"
@@ -28,8 +27,8 @@
                                     title="{position()}"
                                     class="nav-link active"
                                     data-toggle="tab"
-                                    data-tab="{$reading-type}"
-                                    href="#{$reading-type}-paginate-{position()}"
+                                    data-tab="paginate"
+                                    href="#paginate-{position()}"
                                     style="border-radius:30px;">
                                     <xsl:value-of select="position()"/> 
                                 </a>                                                    
@@ -41,8 +40,8 @@
                                     title="{position()}"
                                     class="nav-link"
                                     data-toggle="tab"
-                                    data-tab="{$reading-type}"
-                                    href="#{$reading-type}-paginate-{position()}"
+                                    data-tab="paginate"
+                                    href="#paginate-{position()}"
                                     style="border-radius:30px;">
                                     <xsl:value-of select="position()"/> 
                                 </a>                                                    
@@ -54,7 +53,7 @@
                                     title="more"
                                     href="#"
                                     data-toggle="dropdown"
-                                    data-tab="{$reading-type}"
+                                    data-tab="paginate"
                                     class="nav-link dropdown-toggle"
                                     style="border-radius:30px;"
                                     >
@@ -69,8 +68,9 @@
                                                     style="display:inline-block;">
                                                     <a
                                                         title="{position()}"
-                                                        href="#{$reading-type}-paginate-{position()}"
+                                                        href="#paginate-{position()}"
                                                         class="nav-link"
+                                                        data-tab="paginate"
                                                         data-toggle="tab"
                                                         style="border-radius:30px;">
                                                         <xsl:value-of select="position()"/>
