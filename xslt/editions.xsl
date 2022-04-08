@@ -124,8 +124,8 @@
                                             <table class="table">
                                                 <tbody>           
                                                     <tr>
-                                                        <th style="font-weight:normal!important;border-top:none;padding:.1em;">change view</th>
-                                                        <th style="font-weight:normal!important;border-top:none;padding:.1em;">change highlight options</th>
+                                                        <th style="font-weight:normal!important;border-top:none;padding:.1em;">annotation views</th>
+                                                        <th style="font-weight:normal!important;border-top:none;padding:.1em;">annotation options</th>
                                                     </tr>
                                                     <tr>         
                                                         <td>                                                            
@@ -139,7 +139,7 @@
                                                                         class="nav-link btn btn-round active"
                                                                         id="diplomatic-link">
                                                                         diplomatic
-                                                                    </a>
+                                                                    </a>                                                                  
                                                                 </li>                                    
                                                                 <li>                                    
                                                                     <a title="reading"
@@ -153,46 +153,84 @@
                                                         </td>
                                                         <td>                                                            
                                                             <ul class="nav nav-tabs options-menu" style="display:block;">       
-                                                                <li>                                    
-                                                                    <a title="deletions"
+                                                                <li>       
+                                                                    <label>deletions</label>
+                                                                    <label class="switch">
+                                                                        <input title="deletions"
+                                                                            type="checkbox"
+                                                                            onclick="deletions(this)"
+                                                                            data="#ffe6e6"
+                                                                            id="deletions-link"/>
+                                                                        <span id="deletions-link2" class="i-slider round"></span>                                                                        
+                                                                    </label>                                                                    
+                                                                    <!--<a title="deletions"
                                                                         onclick="deletions(this)"
                                                                         class="nav-link btn badge-link red"
                                                                         id="deletions-link">
                                                                         deletions
-                                                                    </a>
+                                                                    </a>-->
                                                                 </li>                                    
-                                                                <li>                                    
-                                                                    <a title="unclear"
+                                                                <li>
+                                                                    <label>unclear</label>
+                                                                    <label class="switch">
+                                                                        <input title="unclear"
+                                                                            type="checkbox"
+                                                                            onclick="unclear(this)"
+                                                                            data="#faf8ca"
+                                                                            id="unclear-link"/>
+                                                                        <span id="unclear-link2" class="i-slider round"></span>                                                                        
+                                                                    </label>                                                                    
+                                                                    <!--<a title="unclear"
                                                                         onclick="unclear(this)"
                                                                         class="nav-link btn badge-link yellow"
                                                                         id="unclear-link">
                                                                         unclear
-                                                                    </a>
-                                                                </li>
-                                                                <li>                                    
-                                                                    <a title="underline"
+                                                                    </a>-->
+                                                                </li>                                                                
+                                                            </ul>
+                                                            <ul class="nav nav-tabs options-menu" style="display:block;">      
+                                                                <li>      
+                                                                    <label>highlighting</label>
+                                                                    <label class="switch">
+                                                                        <input title="underline"
+                                                                            type="checkbox"
+                                                                            onclick="underline(this)"
+                                                                            data="#e1d4ff"
+                                                                            id="underline-link"/>
+                                                                        <span id="underline-link2" class="i-slider round"></span>                                                                        
+                                                                    </label>                                                                    
+                                                                    <!--<a title="underline"
                                                                         onclick="underline(this)"
                                                                         class="nav-link btn badge-link blue"
                                                                         id="underline-link">
                                                                         highlighting
-                                                                    </a>
+                                                                    </a>-->
                                                                 </li> 
-                                                                <li>                                    
-                                                                    <a title="whitespaces"
+                                                                <li>   
+                                                                    <label>whitespaces</label>
+                                                                    <label class="switch">
+                                                                        <input title="whitespaces"
+                                                                            type="checkbox"
+                                                                            onclick="space(this)"
+                                                                            data="#c9ffcf"
+                                                                            id="whitespaces-link"/>
+                                                                        <span id="whitespaces-link2" class="i-slider round"></span>                                                                        
+                                                                    </label>                                                                    
+                                                                    <!--<a title="whitespaces"
                                                                         onclick="space(this)"
                                                                         class="nav-link btn badge-link green"
                                                                         id="whitespaces-link">
                                                                         whitespaces
-                                                                    </a>
+                                                                    </a>-->
                                                                 </li> 
-                                                                <li>                                    
+                                                                <!--<li>                                    
                                                                     <a title="clear"
                                                                         onclick="clearAll(this)"
                                                                         class="nav-link btn badge-link"
                                                                         id="clear-link">
                                                                         clear all
                                                                     </a>
-                                                                </li> 
+                                                                </li>--> 
                                                             </ul>
                                                         </td>
                                                     </tr>                                                    

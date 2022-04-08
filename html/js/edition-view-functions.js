@@ -134,11 +134,13 @@ function deletions(el) {
         $(".del").each(function() {
             $(this).removeClass("strikethrough badge-item red");
         });
+        $("#deletions-link2, #deletions-link").removeClass("red");
     } else {
         element.addClass("active");
         $(".del").each(function() {
             $(this).addClass("strikethrough badge-item red");
         });
+        $("#deletions-link2, #deletions-link").addClass("red");
     }
 }
 
@@ -149,11 +151,13 @@ function unclear(el) {
         $(".abbr").each(function() {
             $(this).removeClass("unclear badge-item yellow");
         });
+        $("#unclear-link2, #unclear-link").removeClass("yellow");
     } else {
         element.addClass("active");
         $(".abbr").each(function() {
             $(this).addClass("unclear badge-item yellow");
         });
+        $("#unclear-link2, #unclear-link").addClass("yellow");
     }
 }
 
@@ -165,12 +169,14 @@ function space(el) {
             $(this).addClass("fade");
             $(this).removeClass("badge-item green");
         });
+        $("#whitespaces-link2, #whitespaces-link").removeClass("green");
     } else {
         element.addClass("active");
         $(".space").each(function() {
             $(this).removeClass("fade");
             $(this).addClass("badge-item green");
         });
+        $("#whitespaces-link2, #whitespaces-link").addClass("green");
     }
 }
 
@@ -181,11 +187,13 @@ function underline(el) {
         $(".hi-underline").each(function() {
             $(this).removeClass("underline badge-item blue");
         });
+        $("#underline-link2, #underline-link").removeClass("blue");
     } else {
         element.addClass("active");
         $(".hi-underline").each(function() {
             $(this).addClass("underline badge-item blue");
         });
+        $("#underline-link2, #underline-link").addClass("blue");
     }
 }
 
@@ -208,6 +216,10 @@ function clearAll(el) {
     $("#whitespaces-link").removeClass("active");
     $("#underline-link").removeClass("active");
     $("#deletions-link").removeClass("active");
+    $("#underline-link2, #underline-link").removeClass("blue");
+    $("#unclear-link2, #unclear-link").removeClass("yellow");
+    $("#whitespaces-link2, #whitespaces-link").removeClass("green");
+    $("#deletions-link2, #deletions-link").removeClass("red");
     $("p").each(function() {
         $(this).removeClass("reading-view-font");
     });
