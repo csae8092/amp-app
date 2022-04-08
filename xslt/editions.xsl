@@ -80,7 +80,7 @@
                             </h1>                         
                         </div>
                         <div class="card">
-                            <div class="card-header">                                
+                            <div class="card-body" style="padding: 1em 0 0 0 !important;">                                
                                 <div class="col-md-12">
                                     <h3>
                                     <xsl:choose>
@@ -118,18 +118,15 @@
                                 
                                 <xsl:call-template name="header-nav"/>    
                                 
-                                <div class="row">
-                                    <div class="col-md-6 justify-content-center">
-                                        <div class="navBarLetters text-center" style="margin:2em auto 1em auto;display:block;">                                            
+                                <div class="row justify-content-center" style="margin:1em auto 0 auto;display:grid;">
+                                    <div class="col-md-12">
+                                        <div class="navBarLetters text-center">                                            
                                             <table class="table">
                                                 <tbody>                                                    
-                                                    <tr>
-                                                        <td style="width:50%;">
-                                                            
-                                                        </td>
-                                                        <td style="width:50%;">
-                                                            <ul class="nav nav-tabs" id="dropdown-lang" style="display:block;">   
-                                                                <li>
+                                                    <tr>                                                        
+                                                        <td>
+                                                            <ul class="nav nav-tabs options-menu" style="display:block;">   
+                                                                <li style="margin-bottom: 1em;">
                                                                     <strong>change transcript views</strong>
                                                                 </li>
                                                                 <li>                                    
@@ -150,19 +147,9 @@
                                                                 </li>                                                                        
                                                             </ul>
                                                         </td>
-                                                    </tr>                                                    
-                                                </tbody>
-                                            </table>                                            
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="navBarLetters text-center" style="margin:2em auto 1em auto;display:block;">                                            
-                                            <table class="table">
-                                                <tbody>
-                                                    <tr>                                                        
-                                                        <td style="width:50%;">
-                                                            <ul class="nav nav-tabs" style="display:block;">        
-                                                                <li>
+                                                        <td>
+                                                            <ul class="nav nav-tabs options-menu" style="display:block;">        
+                                                                <li style="margin-bottom: 1em;">
                                                                     <strong>change text highlight options</strong>
                                                                 </li>
                                                                 <li>                                    
@@ -207,14 +194,11 @@
                                                                 </li> 
                                                             </ul>
                                                         </td>
-                                                        <td style="width:50%;">
-                                                            
-                                                        </td>
-                                                    </tr>
+                                                    </tr>                                                    
                                                 </tbody>
                                             </table>                                            
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             </div>
                             

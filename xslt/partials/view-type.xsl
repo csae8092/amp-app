@@ -31,7 +31,7 @@
                     <xsl:when test="position() = 1">                                                         
                         <div class="pagination-tab tab-pane active" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
                             <div class="expand-wrapper text-center">            
-                                <input title="change size" id="img-expand-{position()}" type="range" min="1" max="100" value="50" class="slider"/>
+                                <input title="change size" id="img-expand-{position()}" type="range" min="1" max="400" value="201" class="slider"/>
                             </div>
                             <div id="container-resize-{position()}" class="transcript row">  
                                 
@@ -53,7 +53,7 @@
                                 
                                 <div id="img-resize-{position()}"
                                      class="col-md-6 card-header osd-viewer"
-                                     style="padding: 1em;">                                    
+                                     style="padding: 1em;background-color: #dedede;">                                    
                                     <!--<hr/> -->                                             
                                     <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
                                     <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
@@ -85,7 +85,7 @@
                     <xsl:otherwise>
                         <div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-{position()}" tabindex="-1">
                             <div class="expand-wrapper text-center">            
-                                <input title="change size" id="img-expand-{position()}" type="range" min="1" max="100" value="50" class="slider"/>
+                                <input title="change size" id="img-expand-{position()}" type="range" min="1" max="400" value="201" class="slider"/>
                             </div>
                             <div id="container-resize-{position()}" class="transcript row">
                                 <div id="text-resize-{position()}" class="text-re col-md-6">                                                                
@@ -105,7 +105,7 @@
                                 </div>                                                     
                                 <div id="img-resize-{position()}" 
                                     class="col-md-6 card-header osd-viewer"
-                                     style="padding: 1em;">                                    
+                                    style="padding: 1em;background-color: #dedede;">                                    
                                     <!--<hr/> -->                                             
                                     <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
                                     <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>

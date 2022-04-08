@@ -1,6 +1,6 @@
 function load_image(facs_id, osd_container_id, osd_container_id2) {
     $('#' + osd_container_id).css({
-        'height': '800px'
+        'height': '1000px'
     });
     // OpenSeaDragon Image Viewer
     var image = $('#' + facs_id);
