@@ -37,7 +37,7 @@
                                 
                                 <div id="text-resize-{position()}" class="text-re col-md-6"> 
                                     <div class="card-body">
-                                        <xsl:for-each select="current-group()[self::tei:p]">
+                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
                                             <p style="{
                                                 if (@hand = '#handwritten') then
                                                 ($hand) else if (@hand = '#typed') then
@@ -90,7 +90,7 @@
                             <div id="container-resize-{position()}" class="transcript row">
                                 <div id="text-resize-{position()}" class="text-re col-md-6">                                                                
                                     <div class="card-body">                                                                                                                                                                                       
-                                        <xsl:for-each select="current-group()[self::tei:p]">
+                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
                                             <p style="{
                                                 if (@hand = '#handwritten') then
                                                 ($hand) else if (@hand = '#typed') then

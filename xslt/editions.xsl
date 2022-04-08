@@ -159,7 +159,6 @@
                                                                         <input title="deletions"
                                                                             type="checkbox"
                                                                             onclick="deletions(this)"
-                                                                            data="#ffe6e6"
                                                                             id="deletions-link"/>
                                                                         <span id="deletions-link2" class="i-slider round"></span>                                                                        
                                                                     </label>                                                                    
@@ -176,7 +175,6 @@
                                                                         <input title="unclear"
                                                                             type="checkbox"
                                                                             onclick="unclear(this)"
-                                                                            data="#faf8ca"
                                                                             id="unclear-link"/>
                                                                         <span id="unclear-link2" class="i-slider round"></span>                                                                        
                                                                     </label>                                                                    
@@ -195,7 +193,6 @@
                                                                         <input title="underline"
                                                                             type="checkbox"
                                                                             onclick="underline(this)"
-                                                                            data="#e1d4ff"
                                                                             id="underline-link"/>
                                                                         <span id="underline-link2" class="i-slider round"></span>                                                                        
                                                                     </label>                                                                    
@@ -212,7 +209,6 @@
                                                                         <input title="whitespaces"
                                                                             type="checkbox"
                                                                             onclick="space(this)"
-                                                                            data="#c9ffcf"
                                                                             id="whitespaces-link"/>
                                                                         <span id="whitespaces-link2" class="i-slider round"></span>                                                                        
                                                                     </label>                                                                    
