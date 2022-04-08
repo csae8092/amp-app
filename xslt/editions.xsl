@@ -122,12 +122,16 @@
                                     <div class="col-md-12">
                                         <div class="navBarLetters text-center">                                            
                                             <table class="table">
-                                                <tbody>                                                    
-                                                    <tr>                                                        
-                                                        <td>
+                                                <tbody>           
+                                                    <tr>
+                                                        <th style="font-weight:normal!important;border-top:none;padding:.1em;">change view</th>
+                                                        <th style="font-weight:normal!important;border-top:none;padding:.1em;">change highlight options</th>
+                                                    </tr>
+                                                    <tr>         
+                                                        <td>                                                            
                                                             <ul class="nav nav-tabs options-menu" style="display:block;">   
                                                                 <li style="margin-bottom: 1em;">
-                                                                    <strong>change transcript views</strong>
+                                                                    
                                                                 </li>
                                                                 <li>                                    
                                                                     <a title="diplomatic"
@@ -147,11 +151,8 @@
                                                                 </li>                                                                        
                                                             </ul>
                                                         </td>
-                                                        <td>
-                                                            <ul class="nav nav-tabs options-menu" style="display:block;">        
-                                                                <li style="margin-bottom: 1em;">
-                                                                    <strong>change text highlight options</strong>
-                                                                </li>
+                                                        <td>                                                            
+                                                            <ul class="nav nav-tabs options-menu" style="display:block;">       
                                                                 <li>                                    
                                                                     <a title="deletions"
                                                                         onclick="deletions(this)"

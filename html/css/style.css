@@ -63,7 +63,7 @@ div.dataTables_filter {
 }
 
 .navBarLetters {
-    margin: 1em auto;
+    margin: 0 auto;
     border: 0 !important;
 }
 
@@ -751,6 +751,9 @@ div.text-re div.card-body {
 .options-menu {
     width: 400px;
 }
+.options-menu li {
+    display: inline-block;
+}
 
 .fade-all {
     display: none;
@@ -819,7 +822,7 @@ div.text-re div.card-body {
 .badge-link {
     border-radius: .25rem;
     padding: .2em;
-    margin: 0 .5em;
+    margin: 0 .1em;
 }
 
 
