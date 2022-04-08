@@ -223,4 +223,10 @@ function clearAll(el) {
     $("p").each(function() {
         $(this).removeClass("reading-view-font");
     });
+    $("input").each(function() {
+        if(this.checked) {
+            // console.log($(this));
+            this.checked = false;
+        }        
+    });
 }

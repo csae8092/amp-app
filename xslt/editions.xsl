@@ -121,7 +121,7 @@
                                 <div class="row justify-content-center" style="margin:1em auto 0 auto;display:grid;">
                                     <div class="col-md-12">
                                         <div class="navBarLetters text-center">                                            
-                                            <table class="table">
+                                            <table class="table" style="margin-bottom:0;">
                                                 <tbody>           
                                                     <tr>
                                                         <th style="font-weight:normal!important;border-top:none;padding:.1em;">annotation views</th>
@@ -218,20 +218,21 @@
                                                                         id="whitespaces-link">
                                                                         whitespaces
                                                                     </a>-->
-                                                                </li> 
-                                                                <!--<li>                                    
-                                                                    <a title="clear"
-                                                                        onclick="clearAll(this)"
-                                                                        class="nav-link btn badge-link"
-                                                                        id="clear-link">
-                                                                        clear all
-                                                                    </a>
-                                                                </li>--> 
+                                                                </li>                                                                 
                                                             </ul>
                                                         </td>
-                                                    </tr>                                                    
+                                                    </tr>      
                                                 </tbody>
-                                            </table>                                            
+                                            </table>   
+                                        </div>
+                                        <div class="text-center">
+                                            <a title="clear"
+                                                style="width:20%;margin:0 auto 1em auto;"
+                                                onclick="clearAll(this)"
+                                                class="nav-link btn badge-link text-center"
+                                                id="clear-link">
+                                                clear all
+                                            </a>
                                         </div>
                                     </div>                                    
                                 </div>
