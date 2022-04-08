@@ -30,7 +30,7 @@
                                         <a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden-Musulin Correspondence</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Surface reconstructions" href="#" class="nav-link">Surface reconstructions</a>
+                                        <a style="color:lightgrey!important;" title="Surface reconstructions" class="nav-link">Surface reconstructions (in progress)</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a>
@@ -44,26 +44,28 @@
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">
-                                <a title="Indexes" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span></a>
+                                <a style="color:lightgrey!important;" title="Indexes" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes  (in progress)<span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Persons" href="#" class="nav-link">Persons</a>
+                                        <a style="color:lightgrey!important;"  title="Persons" class="nav-link">Persons (in progress)</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Institutions" href="#" class="nav-link">Institutions</a>
+                                        <a style="color:lightgrey!important;"  title="Institutions" class="nav-link">Institutions (in progress)</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Works" href="#" class="nav-link">Works</a>
+                                        <a style="color:lightgrey!important;"  title="Works" class="nav-link">Works (in progress)</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Places" href="#" class="nav-link">Places</a>
+                                        <a style="color:lightgrey!important;"  title="Places" class="nav-link">Places (in progress)</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Events" href="#" class="nav-link">Events</a>
+                                        <a style="color:lightgrey!important;"  title="Events" class="nav-link">Events (in progress)</a>
                                     </li>
                                 </ul>                                
                             </li>                            
-                            <li class="nav-item"><a title="Relations" href="#" class="nav-link">Relations</a></li>
+                            <li class="nav-item">
+                                <a style="color:lightgrey!important;" title="Relations" class="nav-link">Relations (in progress)</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a title="Biographies" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
@@ -85,13 +87,13 @@
                                         <a title="Team" href="team.html" class="nav-link">Team</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Editorial Declaration" href="#" class="nav-link">Editorial Declaration</a>
+                                        <a style="color:lightgrey!important;"  title="Editorial Declaration" class="nav-link">Editorial Declaration (in progress)</a>
                                     </li>
                                     <!--<li class="nav-item dropdown-submenu">
                                         <a title="Instruction for using the edition" href="#" class="nav-link">Instruction for using the edition</a>
                                     </li>-->
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Technical Documentation" href="#" class="nav-link">Technical Documentation</a>
+                                        <a style="color:lightgrey!important;"  title="Technical Documentation" class="nav-link">Technical Documentation (in progress)</a>
                                     </li>
                                 </ul>                                
                             </li>                            
