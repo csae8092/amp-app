@@ -630,8 +630,8 @@ fieldset.ssFieldset > span > input {
 
 .transcript {
     padding: 0 !important;
-    border-top: 5px solid #b59890 ; 
-    border-bottom: 5px solid #b59890 ;
+    border-top: 3px solid #b59890 ; 
+    border-bottom: 3px solid #b59890 ;
 }
 
 div.text-re {
@@ -646,7 +646,53 @@ div.text-re div.card-body {
 
 /* expanding and descreasing osd images */
 .expand-wrapper {
-    margin: 1em;
+    cursor:col-resize;
+    margin:0 auto;
+    margin-bottom: -.5em;
+}
+
+/* slider */
+
+.expand-wrapper {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #b59890; /* Grey background */
+  outline: none; /* Remove outline */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: .7; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f1f1f1;
+    cursor: col-resize; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f1f1f1;
+    cursor: col-resize; /* Cursor on hover */
 }
 
 .img-expand:hover {

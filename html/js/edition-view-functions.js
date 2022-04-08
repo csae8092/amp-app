@@ -41,6 +41,9 @@ function diplomaticClick(el) {
             $(this).removeClass("col-md-12");
             $(this).addClass("col-md-6");            
         });
+        $(".expand-wrapper").each(function() {
+            $(this).removeClass("fade");
+        });
     }
 }
 
@@ -83,6 +86,9 @@ function readingClick(el) {
         $(".osd-viewer").each(function() {
             $(this).addClass("fade-all");
         });
+        $(".expand-wrapper").each(function() {
+            $(this).addClass("fade");
+        });
     } else {
         element.addClass("active");
         $(".abbr").each(function() {
@@ -109,6 +115,9 @@ function readingClick(el) {
         $(".text-re").each(function() {
             $(this).removeClass("col-md-6");
             $(this).addClass("col-md-12");            
+        });
+        $(".expand-wrapper").each(function() {
+            $(this).addClass("fade");
         });
     }
 }

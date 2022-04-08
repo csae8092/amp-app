@@ -30,6 +30,9 @@
                 <xsl:choose>
                     <xsl:when test="position() = 1">                                                         
                         <div class="pagination-tab tab-pane active" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
+                            <div class="expand-wrapper text-center">            
+                                <input title="change size" id="img-expand-{position()}" type="range" min="1" max="100" value="50" class="slider"/>
+                            </div>
                             <div id="container-resize-{position()}" class="transcript row">  
                                 
                                 <div id="text-resize-{position()}" class="text-re col-md-6"> 
@@ -50,14 +53,7 @@
                                 
                                 <div id="img-resize-{position()}"
                                      class="col-md-6 card-header osd-viewer"
-                                     style="padding: 1em;">
-                                    <div class="expand-wrapper" style="cursor:col-resize;">
-                                        <svg id="img-expand-{position()}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
-                                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
-                                            <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
-                                        </svg>
-                                        <p><small>change size</small></p>
-                                    </div>
+                                     style="padding: 1em;">                                    
                                     <!--<hr/> -->                                             
                                     <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
                                     <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
@@ -88,6 +84,9 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-{position()}" tabindex="-1">
+                            <div class="expand-wrapper text-center">            
+                                <input title="change size" id="img-expand-{position()}" type="range" min="1" max="100" value="50" class="slider"/>
+                            </div>
                             <div id="container-resize-{position()}" class="transcript row">
                                 <div id="text-resize-{position()}" class="text-re col-md-6">                                                                
                                     <div class="card-body">                                                                                                                                                                                       
@@ -106,14 +105,7 @@
                                 </div>                                                     
                                 <div id="img-resize-{position()}" 
                                     class="col-md-6 card-header osd-viewer"
-                                     style="padding: 1em;">
-                                    <div class="expand-wrapper" style="cursor:col-resize;">
-                                        <svg id="img-expand-{position()}" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16">
-                                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
-                                            <path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"/>
-                                        </svg>
-                                        <p><small>change size</small></p>
-                                    </div>
+                                     style="padding: 1em;">                                    
                                     <!--<hr/> -->                                             
                                     <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
                                     <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
@@ -145,67 +137,4 @@
             </xsl:for-each-group>   
         </div>
     </xsl:template>
-    <!--<xsl:template name="view-type-no-img">
-        <xsl:param name="reading-type"></xsl:param>
-        <div class="tab-content">
-            <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                
-                <xsl:choose>
-                    <xsl:when test="position() = 1">
-                        <div class="pagination-tab tab-pane active" data-tab="{$reading-type}" id="{$reading-type}-paginate-{position()}" tabindex="-1">
-                            <div class="card-body">
-                                <xsl:choose>
-                                    <xsl:when test="$reading-type = 'reading'">
-                                        <div class="yes-index">
-                                            <xsl:for-each select="current-group()[self::tei:p]">
-                                                <p>                                                        
-                                                    <xsl:apply-templates>
-                                                        <xsl:with-param name="view" select="$reading-type"/>
-                                                    </xsl:apply-templates>
-                                                </p>
-                                            </xsl:for-each>
-                                        </div>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:for-each select="current-group()[self::tei:p]">
-                                            <p>                                                        
-                                                <xsl:apply-templates>
-                                                    <xsl:with-param name="view" select="$reading-type"/>
-                                                </xsl:apply-templates>
-                                            </p>
-                                        </xsl:for-each>
-                                    </xsl:otherwise>
-                                </xsl:choose>                                
-                            </div>
-                        </div>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <div class="pagination-tab tab-pane fade" data-tab="{$reading-type}" id="{$reading-type}-paginate-{position()}" tabindex="-1">
-                            <div class="card-body"> 
-                                <xsl:choose>
-                                    <xsl:when test="$reading-type = 'reading'">
-                                        <xsl:for-each select="current-group()[self::tei:p]">
-                                            <p class="yes-index">                                                        
-                                                <xsl:apply-templates>
-                                                    <xsl:with-param name="view" select="$reading-type"/>
-                                                </xsl:apply-templates>
-                                            </p>
-                                        </xsl:for-each>                                        
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:for-each select="current-group()[self::tei:p]">
-                                            <p>                                                        
-                                                <xsl:apply-templates>
-                                                    <xsl:with-param name="view" select="$reading-type"/>
-                                                </xsl:apply-templates>
-                                            </p>
-                                        </xsl:for-each>
-                                    </xsl:otherwise>
-                                </xsl:choose>
-                            </div>
-                        </div>
-                    </xsl:otherwise>
-                </xsl:choose>                                                
-            </xsl:for-each-group>
-        </div>
-    </xsl:template>-->
 </xsl:stylesheet>

@@ -50,14 +50,17 @@
                     .transcript {
                         padding: 1em 0;
                     }
-                    .text-re::before {
+                    /*.text-re::before {
                         content: '';
                         background-color: #ccc;
-                        right: 0;
-                        width: 4px;
+                        right: .05em;
+                        width: 10px;
                         height: 100%;
                         position:absolute;
                         border-top: 10px solid ccc;
+                    }*/
+                    .card-body {
+                        padding: 4em 1em;
                     }
                     .container-fluid {
                         max-width: 100%;
@@ -78,110 +81,139 @@
                         </div>
                         <div class="card">
                             <div class="card-header">                                
-                                <xsl:call-template name="header-nav"/>                                                              
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 justify-content-center">
-                                    <div class="navBarLetters text-center" style="margin:2em auto;display:block;">
-                                        <ul class="nav nav-tabs" id="dropdown-lang" style="display:inline-flex;">
-                                            <li class="nav-item">
-                                                <xsl:choose>
-                                                    <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060']">
-                                                        <a title="back to all letters" href="additional-materials.html" class="nav-link btn btn-round btn-backlink">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                            </svg>
-                                                        </a>  
-                                                    </xsl:when>
-                                                    <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0055', '0048', '0054', '0050']">
-                                                        <a title="back to all letters" href="photos.html" class="nav-link btn btn-round btn-backlink">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                            </svg>
-                                                        </a>  
-                                                    </xsl:when>
-                                                    <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0028']">
-                                                        <a title="back to all letters" href="memoirs.html" class="nav-link btn btn-round btn-backlink">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                            </svg>
-                                                        </a>  
-                                                    </xsl:when>
-                                                    <xsl:when test="not(substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060','0055', '0048', '0054', '0050','0028'])">
-                                                        <a title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                                <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                            </svg>
-                                                        </a>  
-                                                    </xsl:when>
-                                                </xsl:choose>                                        
-                                            </li>
-                                            <li class="nav-item">                                    
-                                                <a title="diplomatic"
-                                                    onclick="diplomaticClick(this)"
-                                                    class="nav-link btn btn-round active"
-                                                    id="diplomatic-link">
-                                                    diplomatic view
-                                                </a>
-                                            </li>                                    
-                                            <li class="nav-item">                                    
-                                                <a title="reading"
-                                                    onclick="readingClick(this)"
-                                                    class="nav-link btn btn-round"
-                                                    id="reading-link">
-                                                    reading view
-                                                </a>
-                                            </li>                                                                        
-                                        </ul>
-                                    </div>
+                                <div class="col-md-12">
+                                    <h3>
+                                    <xsl:choose>
+                                        <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060']">
+                                            <a title="back to all letters" href="additional-materials.html" class="nav-link btn btn-round btn-backlink">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                                </svg>
+                                            </a>  
+                                        </xsl:when>
+                                        <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0055', '0048', '0054', '0050']">
+                                            <a title="back to all letters" href="photos.html" class="nav-link btn btn-round btn-backlink">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                                </svg>
+                                            </a>  
+                                        </xsl:when>
+                                        <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0028']">
+                                            <a title="back to all letters" href="memoirs.html" class="nav-link btn btn-round btn-backlink">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                                </svg>
+                                            </a>  
+                                        </xsl:when>
+                                        <xsl:when test="not(substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060','0055', '0048', '0054', '0050','0028'])">
+                                            <a title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                                </svg>
+                                            </a>  
+                                        </xsl:when>
+                                    </xsl:choose>
+                                    </h3>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="navBarLetters text-center" style="margin: 2em auto;display:block;">
-                                        <label style="margin-top:.2em;margin-bottom:0;">
-                                            <strong>display format options:</strong>
-                                        </label>
-                                        <ul class="nav nav-tabs" style="display:inline-flex;">                                            
-                                            <li class="nav-item">                                    
-                                                <a title="deletions"
-                                                    onclick="deletions(this)"
-                                                    class="nav-link btn badge-link red"
-                                                    id="deletions-link">
-                                                    deletions
-                                                </a>
-                                            </li>                                    
-                                            <li class="nav-item">                                    
-                                                <a title="unclear"
-                                                    onclick="unclear(this)"
-                                                    class="nav-link btn badge-link yellow"
-                                                    id="unclear-link">
-                                                    unclear
-                                                </a>
-                                            </li>
-                                            <li class="nav-item">                                    
-                                                <a title="underline"
-                                                    onclick="underline(this)"
-                                                    class="nav-link btn badge-link blue"
-                                                    id="underline-link">
-                                                    underline
-                                                </a>
-                                            </li> 
-                                            <li class="nav-item">                                    
-                                                <a title="whitespaces"
-                                                    onclick="space(this)"
-                                                    class="nav-link btn badge-link green"
-                                                    id="whitespaces-link">
-                                                    whitespaces
-                                                </a>
-                                            </li> 
-                                            <li class="nav-item">                                    
-                                                <a title="clear"
-                                                    onclick="clearAll(this)"
-                                                    class="nav-link btn badge-link"
-                                                    id="clear-link">
-                                                    clear
-                                                </a>
-                                            </li> 
-                                        </ul>
+                                
+                                <xsl:call-template name="header-nav"/>    
+                                
+                                <div class="row">
+                                    <div class="col-md-6 justify-content-center">
+                                        <div class="navBarLetters text-center" style="margin:2em auto 1em auto;display:block;">                                            
+                                            <table class="table">
+                                                <tbody>                                                    
+                                                    <tr>
+                                                        <td style="width:50%;">
+                                                            
+                                                        </td>
+                                                        <td style="width:50%;">
+                                                            <ul class="nav nav-tabs" id="dropdown-lang" style="display:block;">   
+                                                                <li>
+                                                                    <strong>change transcript views</strong>
+                                                                </li>
+                                                                <li>                                    
+                                                                    <a title="diplomatic"
+                                                                        onclick="diplomaticClick(this)"
+                                                                        class="nav-link btn btn-round active"
+                                                                        id="diplomatic-link">
+                                                                        diplomatic
+                                                                    </a>
+                                                                </li>                                    
+                                                                <li>                                    
+                                                                    <a title="reading"
+                                                                        onclick="readingClick(this)"
+                                                                        class="nav-link btn btn-round"
+                                                                        id="reading-link">
+                                                                        reading
+                                                                    </a>
+                                                                </li>                                                                        
+                                                            </ul>
+                                                        </td>
+                                                    </tr>                                                    
+                                                </tbody>
+                                            </table>                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="navBarLetters text-center" style="margin:2em auto 1em auto;display:block;">                                            
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>                                                        
+                                                        <td style="width:50%;">
+                                                            <ul class="nav nav-tabs" style="display:block;">        
+                                                                <li>
+                                                                    <strong>change text highlight options</strong>
+                                                                </li>
+                                                                <li>                                    
+                                                                    <a title="deletions"
+                                                                        onclick="deletions(this)"
+                                                                        class="nav-link btn badge-link red"
+                                                                        id="deletions-link">
+                                                                        deletions
+                                                                    </a>
+                                                                </li>                                    
+                                                                <li>                                    
+                                                                    <a title="unclear"
+                                                                        onclick="unclear(this)"
+                                                                        class="nav-link btn badge-link yellow"
+                                                                        id="unclear-link">
+                                                                        unclear
+                                                                    </a>
+                                                                </li>
+                                                                <li>                                    
+                                                                    <a title="underline"
+                                                                        onclick="underline(this)"
+                                                                        class="nav-link btn badge-link blue"
+                                                                        id="underline-link">
+                                                                        highlighting
+                                                                    </a>
+                                                                </li> 
+                                                                <li>                                    
+                                                                    <a title="whitespaces"
+                                                                        onclick="space(this)"
+                                                                        class="nav-link btn badge-link green"
+                                                                        id="whitespaces-link">
+                                                                        whitespaces
+                                                                    </a>
+                                                                </li> 
+                                                                <li>                                    
+                                                                    <a title="clear"
+                                                                        onclick="clearAll(this)"
+                                                                        class="nav-link btn badge-link"
+                                                                        id="clear-link">
+                                                                        clear all
+                                                                    </a>
+                                                                </li> 
+                                                            </ul>
+                                                        </td>
+                                                        <td style="width:50%;">
+                                                            
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>                                            
+                                        </div>
                                     </div>
                                 </div>
                             </div>

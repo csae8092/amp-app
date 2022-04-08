@@ -95,7 +95,8 @@
                         </xsl:otherwise>
                     </xsl:choose>                                                                                                        
                 </xsl:for-each>                                                                                                
-            </ul>
+            </ul>            
         </div>
+        
     </xsl:template> 
 </xsl:stylesheet>
