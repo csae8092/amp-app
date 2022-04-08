@@ -33,11 +33,5 @@ function resize(position) {
             isResizing = false;
         });
     });
-    var slider = document.getElementById(`img-expand-${position}`);
-
-    // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function() {
-        output.innerHTML = this.value;
-    }
 }
 
