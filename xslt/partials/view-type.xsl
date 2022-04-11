@@ -38,7 +38,7 @@
                                 <div id="text-resize-{position()}" class="text-re col-md-6"> 
                                     <div class="card-body">
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                            <p style="{
+                                            <p class="yes-index" style="{
                                                 if (@hand = '#handwritten') then
                                                 ($hand) else if (@hand = '#typed') then
                                                 ($typed) else if (@hand = '#printed') then

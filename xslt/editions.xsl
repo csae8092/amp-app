@@ -24,13 +24,7 @@
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
-                </xsl:call-template>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
-                <meta name="Document type" class="staticSearch_desc">
-                    <xsl:attribute name="content">
-                        <xsl:value-of select="//tei:text/@type"/>
-                    </xsl:attribute>
-                </meta>
+                </xsl:call-template>                
                 <meta name="Date of publication" class="staticSearch_date">
                     <xsl:attribute name="content">
                         <xsl:value-of select="//tei:correspAction/tei:date/@when-iso"/>
@@ -38,7 +32,11 @@
                 </meta>
                 <meta name="docImage" class="staticSearch_docImage">
                     <xsl:attribute name="content">
-                        <xsl:value-of select="concat(//tei:pb[1]/@facs, 'full/full/0/default.jpg')"/>
+                        <xsl:variable name="iiif-ext" select="'.jp2/full/,200/0/default.jpg'"/> 
+                        <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
+                        <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
+                        <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>                        
+                        <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                     </xsl:attribute>
                 </meta>
                 <meta name="docTitle" class="staticSearch_docTitle">
@@ -66,6 +64,7 @@
                         max-width: 100%;
                     }
                 </style>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
             </head>
             <body class="page" onload="diplomaticLoad(this)">
                 <div class="hfeed site" id="page">

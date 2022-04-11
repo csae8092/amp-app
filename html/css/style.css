@@ -503,6 +503,10 @@ button#ssDoSearch {
     z-index:99;
 }
 
+.ssDateFilters {
+    margin-top: 5em;
+}
+
 form button svg {
     color: #b59890;
 }
