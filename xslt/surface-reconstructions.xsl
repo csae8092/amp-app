@@ -39,7 +39,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane active" id="cards-tab" tabindex="-1">  
-                                <div class="row">
+                                <div class="row text-center">
                                     <xsl:for-each select="collection('../data/editions/correspondence')//tei:TEI">
                                         <xsl:variable name="full_path">
                                             <xsl:value-of select="document-uri(/)"/>

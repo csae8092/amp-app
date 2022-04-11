@@ -105,7 +105,7 @@
                                 <div class="card" id="document-search-index">
                                     <div class="card-header">                                        
                                         <h5>Document search</h5>       
-                                        <p style="margin-bottom: 2em;">Explore the Auden Musulin collection with full-text search features.</p>
+                                        <p style="margin-bottom: 2em;">Explore the Auden Musulin Papers with full-text search features.</p>
                                         <form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="search.html" role="search">
                                             <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
                                             <button type="submit" class="navbar-search-icon">

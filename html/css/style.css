@@ -408,6 +408,7 @@ a.btn-round:hover {
 
 .container-fluid {
     max-width: 1500px;
+    margin-bottom: 2em;
 }
 
 /* Index Carousel / Slider */

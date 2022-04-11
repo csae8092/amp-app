@@ -41,7 +41,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane active" id="cards-tab" tabindex="-1">  
-                                <div class="row">
+                                <div class="row text-center">
                                     <xsl:call-template name="toc-cards">
                                         <xsl:with-param name="category" select="'additional-materials'"/>
                                     </xsl:call-template>
