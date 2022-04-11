@@ -96,7 +96,10 @@
                                         <a style="color:lightgrey!important;"  title="Technical Documentation" class="nav-link">Technical Documentation (in progress)</a>
                                     </li>
                                 </ul>                                
-                            </li>                            
+                            </li>  
+                            <li class="nav-item">
+                                <a href="search.html" title="Search" class="nav-link">Search</a>
+                            </li>
                         </ul>                       
                     </div>
                     <!-- .collapse navbar-collapse -->
