@@ -37,7 +37,7 @@
                 <style>
 
                 </style>                
-                <script type="text/javascript" src="js/timelinejs/js/timeline.min.js"></script>
+                <!--<script type="text/javascript" src="js/timelinejs/js/timeline.min.js"></script>-->
                 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
                     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
                     crossorigin=""/>
@@ -81,9 +81,9 @@
                                         </li>
                                     </xsl:for-each-group>
                                 </ul>
-                                <a href="#">
+                                <!--<a href="#">
                                     <i class="far fa-play-circle fa-3x" title="autoplay timeline" data-toggle="modal" data-target="#exampleModalLong"/>
-                                </a>
+                                </a>-->
                             </div>                            
                         </div>                     
                         <div class="row">
@@ -93,9 +93,10 @@
                                     <div class="timeline-wrapper" id="{current-grouping-key()}" style="padding-top:5em;">
                                         <div class="text-center">                                            
                                             <h2 id="timeline-heading">
-                                                <a href="#page" title="jump to the top" style="color:#fff;">
-                                                    <xsl:value-of select="current-grouping-key()"/>
-                                                </a>                                                
+                                                <xsl:value-of select="current-grouping-key()"/>
+                                                <a href="#page" title="jump to the top" style="color:#fff; font-size:12px;">
+                                                    <small>TOP</small>
+                                                </a>                                            
                                             </h2>
                                         </div>   
                                         <xsl:for-each select="current-group()">
@@ -136,7 +137,7 @@
                                         </xsl:for-each>                                        
                                     </div>
                                 </xsl:for-each-group> 
-                                <xsl:call-template name="modal-metadata"/>
+                                <!--<xsl:call-template name="modal-metadata"/>-->
                                 <script type="text/javascript">
                                     $('.timeline-circle').mouseover(function() {                                        
                                         var date = $(this).attr('data');
