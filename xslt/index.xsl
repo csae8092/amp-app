@@ -25,23 +25,19 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                 
-                    <div class="wrapper" id="wrapper-hero-amp">
+                    <div class="container-fluid-amp" id="wrapper-hero-amp">
                         <div class="row">
-                            <div class="col-md-8">
-                                <div class="wrapper">
-                                    <div class="container hero-dark" id="wrapper-hero-inner" tabindex="-1">
-                                        <div class="main-title">
-                                            <h1 style="color:#615a60;padding:.5em 0;">Auden Musulin Papers</h1>
-                                            <h2 style="color:#615a60;">A Digital Edition of W. H. Auden's Letters to Stella Musulin</h2>
-                                        </div>
-                                        <p>This website presents the letters and literary papers by Anglo-American poet W. H. Auden (1907-1973) in the estate of Welsh-Austrian writer and journalist Stella Musulin (1915-1996). Previously unpublished, they cast a fresh light on Auden's life and work in Austria.</p>  
-                                        <button class="btn btn-round">
-                                            <a href="description.html">Read More</a>
-                                        </button>
-                                    </div>
+                            <div class="col col-md-8">
+                                <div class="main-title">
+                                    <h1 style="color:#615a60;padding:.5em 0;">Auden Musulin Papers</h1>
+                                    <h2 style="color:#615a60;">A Digital Edition of W. H. Auden's Letters to Stella Musulin</h2>
                                 </div>
+                                <p>This website presents the letters and literary papers by Anglo-American poet W. H. Auden (1907-1973) in the estate of Welsh-Austrian writer and journalist Stella Musulin (1915-1996). Previously unpublished, they cast a fresh light on Auden's life and work in Austria.</p>  
+                                <button class="btn btn-round">
+                                    <a href="description.html">Read More</a>
+                                </button>
                             </div>
-                            <div class="col-md-3" style="padding:0!important;">                               
+                            <div class="col col-md-4" style="padding:0!important;">                               
                                 <!--<div class="card" id="carousel-card">
                                     <div class="card-body" id="carousel-body">
                                         <div id="audenIndexCarousel" class="container carousel slide" data-ride="carousel">
@@ -105,7 +101,7 @@
                                 <div class="card" id="document-search-index">
                                     <div class="card-header">                                        
                                         <h5>Document search</h5>       
-                                        <p style="margin-bottom: 2em;">Explore the Auden Musulin Papers with full-text search features.</p>
+                                        <p style="margin-bottom: 2em;">Explore all Auden Musulin Papers with full-text search features.</p>
                                         <form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="search.html" role="search">
                                             <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
                                             <button type="submit" class="navbar-search-icon">
@@ -113,12 +109,9 @@
                                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                                                 </svg>
                                             </button>
-                                        </form>
-                                        <p style="margin-top: .5em; padding-left: 10px"><a href="search.html" title="advanced search">advanced search</a></p>
+                                        </form>                                        
                                     </div>                                                                       
                                 </div>                                
-                            </div>
-                            <div class="col-md-1" style="padding:0!important;">
                             </div>
                         </div>
                         <div class="row auden-item">
@@ -159,27 +152,28 @@
                                 <img src="images/daumenkino/DSC_0262.JPG" class="d-block w-100" alt="..."/>
                             </div>                            
                         </div>                        
-                    </div>
-                    <div class="row scroll-link" style="background-color: #fff;">
-                        <div class="col-md-12">
-                            <div class="text-center" id="page-content-start">
-                                <h5>
-                                    <a href="#page-content-start">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
-                                            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
-                                        </svg>
-                                        <xsl:text> scroll down </xsl:text>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
-                                            <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
-                                        </svg>
-                                    </a>
-                                </h5>
+                    
+                        <div class="row scroll-link" style="background-color: #fff;">
+                            <div class="col col-md-12">
+                                <div class="text-center" id="page-content-start">
+                                    <h5>
+                                        <a href="#page-content-start">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                            </svg>
+                                            <xsl:text> scroll down </xsl:text>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                <path d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z"/>
+                                            </svg>
+                                        </a>
+                                    </h5>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="container-fluid">
-                        <div class="row" id="wrapper-content-amp">
-                            <div class="col-md-4">
+                    <div class="container-fluid-content" id="wrapper-content-amp">
+                        <div class="row">
+                            <div class="col col-md-4">
                                 <a href="toc.html" class="index-link">                                   
                                     <div class="card index-card">
                                         <div class="card-body">
@@ -191,7 +185,7 @@
                                     </div>                                     
                                 </a>                                    
                             </div>                            
-                            <div class="col-md-4">
+                            <div class="col col-md-4">
                                 <a href="auden-biography.html" class="index-link">  
                                     <div class="card index-card">
                                         <div class="card-body">
@@ -203,7 +197,7 @@
                                     </div>                                    
                                 </a>
                             </div>   
-                            <div class="col-md-4">
+                            <div class="col col-md-4">
                                 <a href="musulin-biography.html" class="index-link">                                                     
                                     <div class="card index-card">
                                         <div class="card-body">
@@ -217,7 +211,7 @@
                             </div>
                         </div>
                         <div class="row scroll-link" style="margin-top: 2em;">
-                            <div class="col-md-6">
+                            <div class="col col-md-6">
                                 <div class="text-center">
                                     <h5>
                                         <a href="#page">
@@ -232,7 +226,7 @@
                                     </h5>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col col-md-6">
                                 <div class="text-center">
                                     <h5>
                                         <a href="#wrapper-footer-full">

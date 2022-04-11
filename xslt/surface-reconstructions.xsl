@@ -23,7 +23,7 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     <div class="container-fluid">
-                        <div id="navBarLetters" style="margin-top:4em !important;">
+                        <div id="navBarLetters">
                             <ul class="nav nav-tabs" id="dropdown-lang">
                                 <li class="nav-item">                                    
                                     <a title="Cards" href="#cards-tab" data-toggle="tab" class="nav-link btn btn-round active">

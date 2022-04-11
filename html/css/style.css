@@ -14,6 +14,11 @@ body {
     display: none;
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 #wrapper-hero-amp > .row {
     padding-top: 2em;
 /*    background: url("../images/letter-background.png") 0 0 repeat;*/
@@ -62,9 +67,9 @@ div.dataTables_filter {
     margin-left: 2em;
 }
 
-.navBarLetters {
-    margin: 0 auto;
-    border: 0 !important;
+#navBarLetters {
+    margin: 2em auto 2em auto;
+    border: 0;
 }
 
 .nav-tabs {
@@ -83,11 +88,6 @@ div.dataTables_filter {
 
 .navbar .navbar-collapse .navbar-search:hover {
     border-color: #615a60;
-}
-
-.row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
 }
 
 /**** Font Aweseome ***/
@@ -407,8 +407,33 @@ a.btn-round:hover {
 }
 
 .container-fluid {
-    max-width: 1500px;
+    max-width: 1024px;
     margin-bottom: 2em;
+}
+
+.container-fluid-content {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.container-fluid-amp {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.container-fluid-amp > .row {
+    margin-right: 5em;
+    margin-left: 5em;
+}
+
+.container-fluid-amp > .row {
+    margin-right: 5em;
+    margin-left: 5em;
+}
+
+.container-fluid-amp > .row > .col {
+    padding-right: 4em;
+    padding-left: 4em;
 }
 
 /* Index Carousel / Slider */
@@ -416,19 +441,30 @@ a.btn-round:hover {
 #wrapper-hero-amp {
     background-color: #fff;
     padding-top:5.5%;
-    padding-bottom:6%;
+    padding-bottom:3%;
 }
 
 .row.auden-item {
-    padding-left:6em;
-    padding-right:6em;
-    margin-bottom:2em;
-    margin-top:2em;
+    margin: 5.5em auto;
+}
+
+.row.auden-item.auden-item {
+    padding-right: 2em;
+    padding-left: 2em;
+}
+
+.row > .scroll-link {
+    margin-bottom: 4%;
 }
 
 #wrapper-content-amp {
-    padding-top:5%;
-    padding-bottom:4%;
+    margin-top:3%;
+    margin-bottom:2%;
+    background-color: #F1F1F1;
+}
+
+#wrapper-content-amp > .row.scroll-link {
+    margin-top: 3%;
 }
 
 #wrapper-hero-inner {
@@ -439,6 +475,10 @@ a.btn-round:hover {
     font-size:18px;
     line-height:27px;
     color:#615a60;
+}
+
+#document-search-index {
+    margin-top: 10%;
 }
 
 #audenIndexCarousel {
@@ -505,7 +545,8 @@ button#ssDoSearch {
 }
 
 .ssDateFilters {
-    margin-top: 5em;
+    margin: 5em auto 0 auto;
+    text-align: center;
 }
 
 form button svg {
