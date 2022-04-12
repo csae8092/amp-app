@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 9</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate when-iso="1965-04-28">1965-04-28</origDate></origin>
+                        <origin><origDate notBefore="1965-04-28" notAfter="1965-04-28">1965-04-28</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date when-iso="1965-04-28">1965-04-28</date>
+               <date notBefore="1965-04-28" notAfter="1965-04-28">1965-04-28</date>
             </correspAction>
             <correspAction type="received">
                 <persName ref="#musulin-stella">Musulin, Stella</persName>
@@ -94,17 +94,17 @@ for any purpose, even commercially.</p>
       </revisionDesc>
    </teiHeader>
    <facsimile>
-      <surface ulx="0" uly="0" lrx="5692" lry="7746">
-         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0009/"/>
-      </surface>
-      <surface ulx="0" uly="0" lrx="5692" lry="7752">
-         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0010/"/>
-      </surface>
       <surface ulx="0" uly="0" lrx="4556" lry="3460">
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0013/"/>
       </surface>
       <surface ulx="0" uly="0" lrx="4546" lry="3458">
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0014/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5692" lry="7746">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0009/"/>
+      </surface>
+      <surface ulx="0" uly="0" lrx="5692" lry="7752">
+         <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0010/"/>
       </surface>
       <surface ulx="0" uly="0" lrx="5698" lry="7744">
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0139/"/>
@@ -113,13 +113,32 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0140/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#typed">
       <body>
          <div xml:id="transcription">
+            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0013/" type="envelope"/>
+               <p hand="#handwritten">
+                  Die Baronin<lb/>
+                  Stella Musulin<lb/>
+                  Fridau<lb/>
+                  Obergra<del><gap reason="deleted"/></del><gap reason="illegible"/>endorf<lb/>
+                  bei S. Pölten<lb/>
+                  N.Ö.
+               </p>
+               <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0014/" type="envelope"/>
+               <p hand="#handwritten">
+                  W<unclear>.</unclear>H<unclear>.</unclear> Auden<lb/>
+                  Kirchstetten (Westb<unclear>a</unclear>h<unclear>n</unclear>)<lb/>
+                  Hint<unclear>e</unclear>rholz# 6<lb/>
+                  N.Ö<lb/>
+                  <unclear>·</unclear>
+               </p>            
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0009/" type="sheet"/>
                <p>
-                  <l>JOSEPH WEINHEBER</l>
-                  <l>(I892-I945)</l>
+                  <hi rend="underline">JOSEPH WEINHEBER</hi><lb/>
+                  (<hi rend="underline">I892-I945)</hi>
+               </p>
+               <lg>
                   <l>Reaching my gate a narrow</l>
                   <l>Lane from the village</l>
                   <l>Passes on into a wood:</l>
@@ -130,6 +149,8 @@ for any purpose, even commercially.</p>
                   <l>The circs they had to)</l>
                   <l>They buried you like a loved</l>
                   <l>Old family dog.</l>
+               </lg>
+               <lg>   
                   <l>Categorised enemies</l>
                   <l>Twenty years ago,</l>
                   <l>Now next-door neighbors,we might</l>
@@ -140,179 +161,164 @@ for any purpose, even commercially.</p>
                   <l>Had many a long</l>
                   <l>Language on syntax,commas,</l>
                   <l>Versification.</l>
+               </lg>
+               <lg>
                   <l>Yes,yes,it has to be said:</l>
                   <l>Men of great damage</l>
                   <l>And malengine took you up.</l>
                   <l>Did they for long,though,</l>
                   <l>Take you in,who to Goebbel<del>l</del>s'</l>
                   <l>Offer of culture</l>
-                  <l>Countered In Ruah lassen!?</l>
+                  <l>Countered <hi rend="underline">In Ruah lassen</hi>!?</l>
                   <l>But Rag,Tag,Bobtail</l>
                   <l>Prefer a stink,and the young</l>
                   <l>Condemn you unread.</l>
-                  <l>What,had you ever heard of  etc</l>
-               </p>
-               <p>
+               </lg>
+               <l>What,had you ever heard of <space quantity="1" unit="char"/>etc</l>
+               <p hand="#handwritten">
                   Re<unclear>v .</unclear>
                </p>
-               <p>
+               <p hand="#handwritten">
                   re<unclear>v.</unclear>
                </p>
-               <p>
-                  Wednesd<unclear>a</unclear>y . Kirch<unclear>s</unclear>tetten
+               <p hand="#handwritten">
+                  Wednesday . Kirch<unclear>s</unclear>t<unclear>e</unclear>tten
                </p>
-               <p>
-                  De<unclear>ar</unclear> Stella:<lb/>
-                  M<unclear>a</unclear>ny thanks for your letter. Will <unclear>tr</unclear>y and call you<lb/>
+               <p hand="#handwritten">
+                  Dear Stella:<lb/>
+                  Many thanks for your letter. Will try and call you<lb/>
                   to-day by phone.<lb/>
                   I enclose a pr<unclear>o</unclear>se translation ma<unclear>d</unclear>e by me and a German friend<unclear>;</unclear><lb/>
-                  <gap/> <del><gap/></del> Sin<unclear>ce</unclear> the copy I sent you , <del><gap/></del> I ha<unclear>ve</unclear> made <unclear>a</unclear> few slig<unclear>h</unclear>t<lb/>
-                  changes in stanza <unclear>3</unclear>. (see above)<lb/>
-                  Could y<unclear>ou</unclear> che<unclear>c</unclear>k the translat<unclear>io</unclear>n for errors.<lb/>
+                  <gap reason="illegible"/> <del><gap reason="deleted"/></del> Sin<unclear>ce</unclear> the copy I sent you , <del><gap reason="deleted"/></del> I have made <unclear>a</unclear> few slig<unclear>h</unclear>t<lb/>
+                  changes in stanza 3. (see above)<lb/>
+                  Could you che<unclear>c</unclear>k the translat<unclear>io</unclear>n for errors.<lb/>
                   love<lb/>
                   Wystan.
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0010/" type="sheet"/>
-            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0013/" type="envelope"/>
-               <p>
-                  Die Baronin<lb/>
-                  Stella Musulin<lb/>
-                  Fridau<lb/>
-                  Obergra<del><gap/></del><gap/>endorf<lb/>
-                  bei S. Pölten<lb/>
-                  N.Ö.
-               </p>
-            <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0014/" type="envelope"/>
-               <p>
-                  W<unclear>.</unclear>H<unclear>.</unclear> Auden<lb/>
-                  Kirchstetten (<unclear>W</unclear>est<unclear>ba</unclear>h<unclear>n</unclear>)<lb/>
-                  Hint<unclear>e</unclear>rholz# 6<lb/>
-                  N.Ö<lb/>
-                  <unclear>·</unclear>
-               </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0139/" type="sheet"/>
                <p>
-                  JOSEPH WEINHEBER<lb/>
-                  (I892-I945)
+                  <hi rend="underline">JOSEPH WEINHEBER</hi><lb/>
+                  (<hi rend="underline">I892-I945)</hi>
                </p>
-               <p>
+               <p hand="#handwritten">
                   1
                </p>
                <p>
-                  <del>Von meiner Gartentur</del><lb/>
-                  Von meiner Gartent<unclear>ü</unclear>r f<unclear>ü</unclear><del>hh</del>rrt ein schmaler Pfad vom Dorf weiter in einen Wald. Auf<lb/>
+                  <space quantity="7" unit="char"/><del>Von meiner Gartentur</del><lb/>
+                  <space quantity="7" unit="char"/>Von meiner Gartent<unclear>ü</unclear>r f<unclear>ü</unclear><del>rh</del>hrt ein schmaler Pfad vom Dorf weiter in einen Wald. Auf<lb/>
                   meinen G<unclear>ä</unclear>ngen dorthin scheint es geh<unclear>ö</unclear>rig,stehen zu bleiben und durch den Zaun deines<lb/>
-                  Gartens zu schauen,in dem dich(die Umst<unclear>ä</unclear>nde verlangten es) wie einen alten geliebten<lb/>
+                  Gartens zu schauen,in dem🗴 dich(die Umst<unclear>ä</unclear>nde verlangten es) wie einen alten geliebten<lb/>
                   Familienhund begrub.
                </p>
-               <p>
+               <p hand="#handwritten">
                   2
                </p>
                <p>
-                  Vor zwanzig Jahren katergorisierte Feinde,jezt nah benachbart,w<unclear>ä</unclear>ren wir<lb/>
-                  vielleicht gute Freunde geworden,die eine gemeinsame Umwelt und Liebe f<unclear>ü</unclear>r das Wort<lb/>
-                  teilten,und h<unclear>ä</unclear>tten bei einem goldhellen K<unclear>r</unclear>emser l<unclear>ä</unclear>nge Gespr<unclear>ä</unclear>che uber Syntax,Kommas<lb/>
+                  <space quantity="7" unit="char"/>Vor zwanzig Jahren kat<hi rend="underline">erg</hi>orisierte🗴 Feinde,jezt nah benachbart,w<unclear>ä</unclear>ren wir<lb/>
+                  vielleicht gute Freunde geworden,die eine gemeinsame <hi rend="underline">Umwelt</hi> und Liebe f<unclear>ü</unclear>r das Wort<lb/>
+                  teilten,und h<unclear>ä</unclear>tten bei einem goldhellen Kremser <hi rend="underline">l<unclear>ä</unclear>nge</hi> Gespr<unclear>ä</unclear>che uber Syntax,Kommas<lb/>
                   und Verskunst gef<unclear>ü</unclear>hrt.
                </p>
-               <p>
+            <p hand="#handwritten">
                   3
                </p>
                <p>
-                  Ja,ja,es muss gesagt werden,Machthaber,die grosses Unheil stifteten und B<unclear>ö</unclear>ses<lb/>
-                  pl<del>na</del>anten,nahmen dich auf;f<unclear>ü</unclear>r wie lang,doch,wickelten sie dich ein,dich,der auf Goebbels<lb/>
-                  Angebot von Kultur "In Ruah lassen!" entgegnetest? <del>a</del>Aber  /?<gap/> Rag,Tag, Bobta<unclear>il ?</unclear>   <del>x</del>ziehen einen Stunk<lb/>
+                  <space quantity="6" unit="char"/>Ja,ja,es muss gesagt werden,Machthaber,die grosses Unheil stifteten und <hi rend="underline">B<unclear>ö</unclear>ses</hi><lb/>
+                  <hi rend="underline">pl<del>na</del>anten</hi>,nahmen dich auf;f<unclear>ü</unclear>r wie lang,doch,wickelten sie dich ein,dich,der auf Goebbels<lb/>
+                  Angebot von Kultur "In Ruah lassen!" entgegnetest? <del>a</del>Aber <space quantity="1" unit="char"/>/? <gap reason="illegible"/> Rag,Tag, Bobta<unclear>il ?</unclear> <space quantity="3" unit="char"/><del>x</del>ziehen einen Stunk<lb/>
                   vor,und die Jungen verdammen dich ungelesen.
                </p>
-               <p>
+            <p hand="#handwritten">
                   4
                </p>
                <p>
-                  Was wohl w<unclear>ü</unclear>rde dir,dem Osterreicher,dem Dichter,dein Herz gesagt haben,h<unclear>ä</unclear>ttest<lb/>
+                  <space quantity="6" unit="char"/>Was wohl w<unclear>ü</unclear>rde dir,dem Osterreicher,dem Dichter,dein Herz gesagt haben,h<unclear>ä</unclear>ttest<lb/>
                   du je von Franz J<unclear>ä</unclear>gerst<unclear>ä</unclear>tter,dem Sankt Radegunder Bauern,geh<unclear>ö</unclear>rt,der sein einsames<lb/>
                   Nein zu dem Arierstaat sagte und gek<unclear>ö</unclear>p<del>t</del>ft wurde? Naturlich sorgte man daf<unclear>ü</unclear>r,dass nichts<lb/>
                   davon zu Ohren kam,
                </p>
-               <p>
-                  5
+            <p hand="#handwritten">
+                  <unclear>5</unclear>
                </p>
                <p>
-                  dass du unvorbereitet auf einen Tag sein solltest,der kommen mu<del>u</del>sste,eine Zeit,<lb/>
-                  voller Schrecken,Tr<unclear>ä</unclear>nen und Aufl<unclear>ö</unclear>sung,in <del>s</del>dem du,vor Al<del>p</del>bdr<unclear>ü</unclear>ck erstarrt,dich selbst<lb/>
-                  vernichtetest? Vergeltung ging immer wie ein St<unclear>ü</unclear>mper vor. "Dies alles ist furchtbar,<lb/>
+                  <space quantity="5" unit="char"/>dass du unvorbereitet auf einen Tag sein solltest,der kommen mu<del>u</del>sste,eine Zeit,<lb/>
+                  voller Schrecken,Tr<unclear>ä</unclear>nen und Aufl<unclear>ö</unclear>sung,in <del>s</del>dem du,vor Al<del>p</del>bd<hi rend="underline">r<unclear>ü</unclear>c</hi>k erstarrt,dich selbst<lb/>
+                  vernichtetest? Vergeltung ging immer wie ein S<hi rend="underline">t<unclear>ü</unclear>mp</hi>er vor. "Dies alles ist furchtbar,<lb/>
                   hier nur Schweigen gem<unclear>ä</unclear>ss."
                </p>
-               <p>
+            <p hand="#handwritten">
                   6
                </p>
                <p>
-                  Unbemerkt und unbetrauert von mir die Stunde deines Todes,unbegr<unclear>ü</unclear>sst von dir<lb/>
+                  <space quantity="5" unit="char"/>Unbemerkt und unbetrauert von mir die Stunde deines Todes,unbegr<unclear>ü</unclear>sst von dir<lb/>
                   war der Augenblick,als ich,von der Vorsehung geleitet,Kirchstetten zuerst erblickte,<lb/>
                   an einem Oktobertag in str<unclear>ö</unclear>menden Regen,in einem Jahr,<del>s</del>das unsern Kosmos ver<unclear>ä</unclear>nderte<del>t</del> ,<lb/>
-                  dem annus mirabilis als die Parit<unclear>ä</unclear>t gest<unclear>ü</unclear>rzt wurde.<lb/>
+                  dem <hi rend="underline">annus mirabilis</hi> als die Parit<unclear>ä</unclear>t gest<unclear>ü</unclear>rzt wurde.<lb/>
                </p>
-               <p>
+            <p hand="#handwritten">
                   7
                </p>
                <p>
-                  Schon waren die Reiche,die verloren hatten,gen<unclear>ü</unclear>gend warm und sattgegessen,ihre<lb/>
+                  <space quantity="4" unit="char"/>Schon waren die Reiche,die verloren hatten,gen<unclear>ü</unclear>gend warm und sattgegessen,ihre<lb/>
                   Verbrechen waren auf prosaischer und privater Art,jene <unclear>Ä</unclear>rgernisse,Tote und Schutt,<lb/>
-                  l<unclear>ä</unclear>ngst weggeschafft: f<unclear>ü</unclear>r ihre Gesch<unclear>ä</unclear>ndeten ver<unclear>b</unclear>l<del>aa</del>llsste der Schock,ihre gewaltsam<lb/>
+                  l<unclear>ä</unclear>ngst weggeschafft: f<unclear>ü</unclear>r ihre Gesch<unclear>ä</unclear>ndeten ver<unclear>b</unclear>l<del>al</del>lasste der Schock,ihre gewaltsam<lb/>
                   entf<unclear>ü</unclear>hrten Physiker hatten kein Heimw<del>h</del>eh mehr.<lb/>
                </p>
-               <p>
+            <p hand="#handwritten">
                   8
                </p>
                <p>
-                  Heute lacheln wir bei Hochzeiten,auf denen sowohl Braut als Br<unclear>ä</unclear>utigam geboren<lb/>
+                  <space quantity="4" unit="char"/>Heute lacheln wir bei Hochzeiten,auf denen sowohl Braut als Br<unclear>ä</unclear>utigam geboren<lb/>
                   waren,als sich der Schatten gehoben oder vielmehr anderswohin ger<unclear>ü</unclear>ckt war. Bis<lb/>
                   <del>jezt</del> jetzt ist die Erde noch nie ohne ihren faulen Stellen,einen Unort mit<lb/>
                   Stellungen f<unclear>ü</unclear>r Folterer,(In welchen Bars sind sie willkommen? Welche M<unclear>ä</unclear>dchen<lb/>
                   heiraten sie?)
                </p>
-               <p>
+            <p hand="#handwritten">
                   <unclear>9</unclear>
                </p>
                <p>
-                  noch nie war <unclear>ü</unclear>berall Frieden auf ihrer n<unclear>ä</unclear>hrenden Oberfl<unclear>ä</unclear>che: so viel wir wissen,<lb/>
+                  <space quantity="3" unit="char"/>noch nie war <unclear>ü</unclear>berall Frieden auf ihrer n<unclear>ä</unclear>hrenden Oberfl<unclear>ä</unclear>che: so viel wir wissen,<lb/>
                   ist niemand je sicher gewesen,und deshalb <unclear>ü</unclear>berwachen brave Familienv<unclear>ä</unclear>ter,mit der<lb/>
                   Hingebung von M<unclear>ö</unclear>nchen,in geheimen Zonen,Ger<unclear>ä</unclear>te,in denen harmlose Substanz<lb/>
                   menschenm<unclear>ö</unclear>rderisch wird.
                </p>
-               <p>
+            <p hand="#handwritten">
                   10
                </p>
                <p>
-                  Doch hier f<unclear>ü</unclear>hl ich mich zuhause,wie du es tatst: dieselben kurzlebigen Gesch<unclear>ö</unclear>pfe<lb/>
-                  stimmen wieder dieselben sorglosenLieder an; Obstg<unclear>ä</unclear>rten halten fest an dem Regime,<lb/>
+                  <space quantity="4" unit="char"/>Doch hier f<unclear>ü</unclear>hl ich mich zuhause,wie <hi rend="underline">du es ta</hi>tst: dieselben kurzlebigen Gesch<unclear>ö</unclear>pfe<lb/>
+                  stimmen wieder dieselben sorglosen Lieder an; Obstg<unclear>ä</unclear>rten halten fest an dem Regime,<lb/>
                   das sie kennen,von des Aprils rasch zunehmenden Farbt<unclear>ö</unclear>nen bis zum ungest<unclear>ü</unclear>men Herbst,<lb/>
                   wann bei jedem stotternden Windstoss <unclear>Ä</unclear>pfel auf den Boden plumpsen.
                </p>
-               <p>
+            <p hand="#handwritten">
                   11
                </p>
                <p>
-                  Wenn ich <unclear>ü</unclear>ber unser Tal - human <del>un</del> bescheiden und sanft im Umriss - schaue,in dem<lb/>
+                  <space quantity="4" unit="char"/>Wenn ich <unclear>ü</unclear>ber unser Tal - human <del>un</del> bescheiden und sanft im Umriss - schaue,in dem<lb/>
                   der Sichelbach westwarts gurgelt,um sich mit dem Perschling zu vereinigen,bin ich<lb/>
                   mir bedeutendere Nachbarn ehrf<unclear>ü</unclear>rchtig bewusst,der Berge,die hinter mir aufragen,<lb/>
                   vor mir des noblen Flusses,
                </p>
-               <p>
+            <p hand="#handwritten">
                   12
                </p>
                <p>
-                  doch m<unclear>ö</unclear>cht ich auch dir Achtung erweisen,Nachbar und Kollege; denn selbst mein<lb/>
+                  <space quantity="4" unit="char"/>doch m<unclear>ö</unclear>cht ich auch dir Achtung erweisen,Nachbar und Kollege; denn selbst mein<lb/>
                   englisches Ohr erfasst in deinem Deutsch die Meisterschaft und den Tonfall einen<lb/>
                   dem es verg<unclear>ö</unclear>nnt war,auf dem umzaunten Rasen die Brat<del>ch</del>schen zu h<unclear>ö</unclear>ren,die er sich<lb/>
                   sp<unclear>ä</unclear>ter verpflichtet f<unclear>ü</unclear>hlte<del>t</del>,"den Abgrund zu nennen."
                </p>
                <p>
-                  ______
+                  <space quantity="25" unit="char"/>______
                </p>
                <p>
-                  <unclear>st</unclear>a<unclear>t</unclear>t Bra<unclear>t</unclear>
+                  sta<unclear>t</unclear>t Bra<unclear>t</unclear>
                </p>
                <p>
-                  M<unclear>y</unclear> dictionary gives Krethi und Plethi .<lb/>
+                  M<unclear>y</unclear> dictionary gives <hi rend="underline">Krethi und Plethi</hi> .<lb/>
                   I<unclear>s</unclear> that right<unclear>?</unclear>
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0140/" type="sheet"/>

@@ -10,859 +10,311 @@
             var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
             g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
           })();
-        </script><script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script><meta name="Document type" class="staticSearch_desc" content="letter" /><meta name="Date of publication" class="staticSearch_date" content="" /><meta name="docImage" class="staticSearch_docImage" content="https://iiif.acdh.oeaw.ac.at/amp/amp_0099/full/full/0/default.jpg" /><meta name="docTitle" class="staticSearch_docTitle" content="Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden &#34;Freedom and Necessity in the Arts&#34; 1970-05-21" /><style>
+        </script><meta name="Date of publication" class="staticSearch_date" content="" /><meta name="docImage" class="staticSearch_docImage" content="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0099.jp2/full/,200/0/default.jpg" /><meta name="docTitle" class="staticSearch_docTitle" content="Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden &#34;Freedom and Necessity in the Arts&#34; 1970-05-21" /><style>
                     .transcript {
                         padding: 1em 0;
                     }
-                    .text-re::before {
+                    /*.text-re::before {
                         content: '';
                         background-color: #ccc;
-                        right: 0;
-                        width: 4px;
+                        right: .05em;
+                        width: 10px;
                         height: 100%;
                         position:absolute;
                         border-top: 10px solid ccc;
+                    }*/
+                    .card-body {
+                        padding: 4em 1em;
                     }
                     .container-fluid {
                         max-width: 100%;
                     }
-                </style></head><body class="page"><div class="hfeed site" id="page"><div class="wrapper-fluid wrapper-navbar sticky-navbar" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg navbar-light"><div class="container"><a href="index.html" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="img-fluid" title="Auden Musulin Papers Logo" alt="Auden Musulin Papers Logo" itemprop="logo" /></a><a class="navbar-brand site-title-with-logo" rel="home" href="index.html" title="&#xA;            Auden Musulin Papers&#xA;        " itemprop="url"></a><span style="margin-left:-1.7em;" class="badge bg-light text-dark">in development</span><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"><ul id="main-menu" class="navbar-nav"><li class="nav-item dropdown"><a title="Papers" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Papers <span class="caret"></span></a><ul class=" dropdown-menu" role="menu"><li class="nav-item dropdown-submenu"><a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden-Musulin Correspondence</a></li><li class="nav-item dropdown-submenu"><a title="Surface reconstructions" href="#" class="nav-link">Surface reconstructions</a></li><li class="nav-item dropdown-submenu"><a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a></li><li class="nav-item dropdown-submenu"><a title="Photos" href="photos.html" class="nav-link">Photos</a></li><li class="nav-item dropdown-submenu"><a title="Additional materials" href="additional-materials.html" class="nav-link">Additional materials</a></li></ul></li><li class="nav-item dropdown"><a title="Indexes" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span></a><ul class=" dropdown-menu" role="menu"><li class="nav-item dropdown-submenu"><a title="Persons" href="#" class="nav-link">Persons</a></li><li class="nav-item dropdown-submenu"><a title="Institutions" href="#" class="nav-link">Institutions</a></li><li class="nav-item dropdown-submenu"><a title="Works" href="#" class="nav-link">Works</a></li><li class="nav-item dropdown-submenu"><a title="Places" href="#" class="nav-link">Places</a></li><li class="nav-item dropdown-submenu"><a title="Events" href="#" class="nav-link">Events</a></li></ul></li><li class="nav-item"><a title="Relations" href="#" class="nav-link">Relations</a></li><li class="nav-item dropdown"><a title="Biographies" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span></a><ul class=" dropdown-menu" role="menu"><li class="nav-item dropdown-submenu"><a title="W. H. Auden" href="auden-biography.html" class="nav-link">W. H. Auden</a></li><li class="nav-item dropdown-submenu"><a title="Stella Musulin" href="musulin-biography.html" class="nav-link">Stella Musulin</a></li></ul></li><li class="nav-item dropdown"><a title="Project" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Project <span class="caret"></span></a><ul class=" dropdown-menu" role="menu"><li class="nav-item dropdown-submenu"><a title="Description" href="description.html" class="nav-link">Description</a></li><li class="nav-item dropdown-submenu"><a title="Team" href="team.html" class="nav-link">Team</a></li><li class="nav-item dropdown-submenu"><a title="Editorial Declaration" href="#" class="nav-link">Editorial Declaration</a></li><li class="nav-item dropdown-submenu"><a title="Technical Documentation" href="#" class="nav-link">Technical Documentation</a></li></ul></li></ul><form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="search.html" role="search"><input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" /><button type="submit" class="navbar-search-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path></svg></button></form></div></div></nav></div><div class="container-fluid"><div class="text-right tei-logo"><h1><a href="amp-transcript__0043.xml?format=raw" title="TEI Source"><img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo" /></a></h1></div><div class="card"><div class="card-header"><div class="row"><div class="col-md-2"><h2><a href="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0042.html"><svg xmlns="http://www.w3.org/2000/svg" class="arrow svg-inline--fa fa-chevron-left fa-w-10" title="previous" aria-labelledby="svg-inline--fa-title-1" data-prefix="fas" data-icon="chevron-left" role="img" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-1">previous</title><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg></a></h2></div><div class="col-md-8"><h2 class="card-text" style="text-align:center;">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Freedom and Necessity in the Arts" 1970-05-21</h2></div><div class="col-md-2"><h2 style="text-align:right;"><a href="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0044.html"><svg xmlns="http://www.w3.org/2000/svg" class="arrow svg-inline--fa fa-chevron-right fa-w-10" title="next" aria-labelledby="svg-inline--fa-title-2" data-prefix="fas" data-icon="chevron-right" role="img" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-2">next</title><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></a></h2></div></div></div><div id="navBarLetters" style="margin-top:4em !important;"><ul class="nav nav-tabs" id="dropdown-lang"><li class="nav-item"><a title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16"><path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"></path></svg></a></li><li class="nav-item"><a title="Cards" href="#diplomatic-tab" data-toggle="tab" class="nav-link btn btn-round active">
-                                            diplomatic view
-                                        </a></li><li class="nav-item"><a title="Table" href="#commentary-tab" data-toggle="tab" class="nav-link btn btn-round">
-                                            commentary view
-                                        </a></li><li class="nav-item"><a title="Table" href="#reading-tab" data-toggle="tab" class="nav-link btn btn-round">
-                                            reading view
-                                        </a></li><li class="nav-item"><a title="Table" href="#xml-tab" data-toggle="tab" class="nav-link btn btn-round">
-                                            TEI/XML view
-                                        </a></li></ul></div><div class="tab-content"><div class="tab-pane active" id="diplomatic-tab" tabindex="-1"><div class="pagination-top"><div class="text-center pagination"><ul class="nav nav-tabs"><li class="nav-item"><a title="1" class="nav-link active" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-1" style="border-radius:30px;">1</a></li><li class="nav-item"><a title="2" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-2" style="border-radius:30px;">2</a></li><li class="nav-item"><a title="3" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-3" style="border-radius:30px;">3</a></li><li class="nav-item"><a title="4" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-4" style="border-radius:30px;">4</a></li><li class="nav-item"><a title="5" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-5" style="border-radius:30px;">5</a></li><li class="nav-item"><a title="6" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-6" style="border-radius:30px;">6</a></li><li class="nav-item"><a title="7" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-7" style="border-radius:30px;">7</a></li><li class="nav-item"><a title="8" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-8" style="border-radius:30px;">8</a></li><li class="nav-item"><a title="9" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-9" style="border-radius:30px;">9</a></li><li class="nav-item dropdown"><a title="more" href="#" data-toggle="dropdown" data-tab="diplomatic" class="nav-link dropdown-toggle" style="border-radius:30px;">
-                                    more <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="10" href="#diplomatic-paginate-10" class="nav-link" data-toggle="tab" style="border-radius:30px;">10</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="11" href="#diplomatic-paginate-11" class="nav-link" data-toggle="tab" style="border-radius:30px;">11</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="12" href="#diplomatic-paginate-12" class="nav-link" data-toggle="tab" style="border-radius:30px;">12</a></li></ul></li></ul></div></div><div class="tab-content" style="font-family: Courier New, monospace; font-size: 18px;"><div class="pagination-tab tab-pane active" data-tab="diplomatic" id="diplomatic-paginate-1" tabindex="-1"><div id="container-resize-1" class="transcript row"><div id="text-resize-1" class="text-re col-md-6"><div class="card-body"><p style="">
-                  FREEDOM AND NECESSITY IN THE ARTS
-               </p><p style="font-family: Times New Roman, serif; font-size: 22px;">
+                </style><script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script></head><body class="page" onload="diplomaticLoad(this)"><div class="hfeed site" id="page"><div class="wrapper-fluid wrapper-navbar sticky-navbar" id="wrapper-navbar"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg navbar-light"><div class="container"><a href="index.html" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="img-fluid" title="Auden Musulin Papers Logo" alt="Auden Musulin Papers Logo" itemprop="logo" /></a><a class="navbar-brand site-title-with-logo" rel="home" href="index.html" title="&#xA;            Auden Musulin Papers&#xA;        " itemprop="url"></a><span style="margin-left:-1.7em;" class="badge bg-light text-dark">in development</span><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown"><ul id="main-menu" class="navbar-nav"><li class="nav-item dropdown"><a title="Papers" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Papers <span class="caret"></span></a><ul class=" dropdown-menu" role="menu"><li class="nav-item dropdown-submenu"><a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden-Musulin Correspondence</a></li><li class="nav-item dropdown-submenu"><a style="color:lightgrey!important;" title="Surface reconstructions" class="nav-link">Surface reconstructions <small>(in progress)</small></a></li><li class="nav-item dropdown-submenu"><a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a></li><li class="nav-item dropdown-submenu"><a title="Photos" href="photos.html" class="nav-link">Photos</a></li><li class="nav-item dropdown-submenu"><a title="Additional materials" href="additional-materials.html" class="nav-link">Additional materials</a></li></ul></li><li class="nav-item dropdown"><a style="color:lightgrey!important;" title="Indexes" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes  <small>(in progress)</small><span class="caret"></span></a><ul class=" dropdown-menu" role="menu"><li class="nav-item dropdown-submenu"><a style="color:lightgrey!important;" title="Persons" class="nav-link">Persons <small>(in progress)</small></a></li><li class="nav-item dropdown-submenu"><a style="color:lightgrey!important;" title="Institutions" class="nav-link">Institutions <small>(in progress)</small></a></li><li class="nav-item dropdown-submenu"><a style="color:lightgrey!important;" title="Works" class="nav-link">Works <small>(in progress)</small></a></li><li class="nav-item dropdown-submenu"><a style="color:lightgrey!important;" title="Places" class="nav-link">Places <small>(in progress)</small></a></li><li class="nav-item dropdown-submenu"><a style="color:lightgrey!important;" title="Events" class="nav-link">Events <small>(in progress)</small></a></li></ul></li><li class="nav-item"><a style="color:lightgrey!important;" title="Relations" class="nav-link">Relations <small>(in progress)</small></a></li><li class="nav-item dropdown"><a title="Biographies" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span></a><ul class=" dropdown-menu" role="menu"><li class="nav-item dropdown-submenu"><a title="W. H. Auden" href="auden-biography.html" class="nav-link">W. H. Auden</a></li><li class="nav-item dropdown-submenu"><a title="Stella Musulin" href="musulin-biography.html" class="nav-link">Stella Musulin</a></li></ul></li><li class="nav-item dropdown"><a title="Project" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Project <span class="caret"></span></a><ul class=" dropdown-menu" role="menu"><li class="nav-item dropdown-submenu"><a title="Description" href="description.html" class="nav-link">Description</a></li><li class="nav-item dropdown-submenu"><a title="Team" href="team.html" class="nav-link">Team</a></li><li class="nav-item dropdown-submenu"><a style="color:lightgrey!important;" title="Editorial Declaration" class="nav-link">Editorial Declaration <small>(in progress)</small></a></li><li class="nav-item dropdown-submenu"><a style="color:lightgrey!important;" title="Technical Documentation" class="nav-link">Technical Documentation <small>(in progress)</small></a></li></ul></li><li class="nav-item"><a href="search.html" title="Search" class="nav-link">Search</a></li></ul></div></div></nav></div><div class="container-fluid"><div class="text-right tei-logo"><h1><a href="amp-transcript__0043.xml?format=raw" title="TEI Source"><img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo" /></a></h1></div><div class="card"><div class="card-body" style="padding: 1em 0 0 0 !important;"><div class="col-md-12"><h3><a title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16"><path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"></path></svg></a></h3></div><div class="row"><div class="col-md-2"><h2><a href="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0042.html"><svg xmlns="http://www.w3.org/2000/svg" class="arrow svg-inline--fa fa-chevron-left fa-w-10" title="previous" aria-labelledby="svg-inline--fa-title-1" data-prefix="fas" data-icon="chevron-left" role="img" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-1">previous</title><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg></a></h2></div><div class="col-md-8"><h2 class="card-text" style="text-align:center;">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Freedom and Necessity in the Arts" 1970-05-21</h2></div><div class="col-md-2"><h2 style="text-align:right;"><a href="https://auden-musulin-papers.github.io/amp-app/amp-transcript__0044.html"><svg xmlns="http://www.w3.org/2000/svg" class="arrow svg-inline--fa fa-chevron-right fa-w-10" title="next" aria-labelledby="svg-inline--fa-title-2" data-prefix="fas" data-icon="chevron-right" role="img" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-2">next</title><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg></a></h2></div></div><div class="row justify-content-center" style="margin:1em auto 0 auto;display:grid;"><div class="col-md-12"><div class="navBarLetters text-center"><table class="table" style="margin-bottom:0;"><tbody><tr><th style="font-weight:normal!important;border-top:none;padding:.1em;">annotation views</th><th style="font-weight:normal!important;border-top:none;padding:.1em;">annotation options</th></tr><tr><td><ul class="nav nav-tabs options-menu" style="display:block;"><li style="margin-bottom: 1em;"></li><li><a title="diplomatic" onclick="diplomaticClick(this)" class="nav-link btn btn-round active" id="diplomatic-link">
+                                                                        diplomatic
+                                                                    </a></li><li><a title="reading" onclick="readingClick(this)" class="nav-link btn btn-round" id="reading-link">
+                                                                        reading
+                                                                    </a></li></ul></td><td><ul class="nav nav-tabs options-menu" style="display:block;"><li><label>deletions</label><label class="switch"><input title="deletions" type="checkbox" onclick="deletions(this)" id="deletions-link" /><span id="deletions-link2" class="i-slider round"></span></label></li><li><label>unclear</label><label class="switch"><input title="unclear" type="checkbox" onclick="unclear(this)" id="unclear-link" /><span id="unclear-link2" class="i-slider round"></span></label></li></ul><ul class="nav nav-tabs options-menu" style="display:block;"><li><label>highlighting</label><label class="switch"><input title="underline" type="checkbox" onclick="underline(this)" id="underline-link" /><span id="underline-link2" class="i-slider round"></span></label></li><li><label>whitespaces</label><label class="switch"><input title="whitespaces" type="checkbox" onclick="space(this)" id="whitespaces-link" /><span id="whitespaces-link2" class="i-slider round"></span></label></li></ul></td></tr></tbody></table></div><div class="text-center"><a title="clear" style="width:20%;margin:0 auto 1em auto;" onclick="clearAll(this);" class="nav-link btn badge-link text-center" id="clear-link">
+                                                clear all
+                                            </a></div></div></div></div><div class="pagination-top"><div class="text-center pagination"><ul class="nav nav-tabs"><li class="nav-item"><a title="1" class="nav-link active" data-toggle="tab" data-tab="paginate" href="#paginate-1" style="border-radius:30px;">1</a></li><li class="nav-item"><a title="2" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-2" style="border-radius:30px;">2</a></li><li class="nav-item"><a title="3" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-3" style="border-radius:30px;">3</a></li><li class="nav-item"><a title="4" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-4" style="border-radius:30px;">4</a></li><li class="nav-item"><a title="5" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-5" style="border-radius:30px;">5</a></li><li class="nav-item"><a title="6" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-6" style="border-radius:30px;">6</a></li><li class="nav-item"><a title="7" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-7" style="border-radius:30px;">7</a></li><li class="nav-item"><a title="8" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-8" style="border-radius:30px;">8</a></li><li class="nav-item"><a title="9" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-9" style="border-radius:30px;">9</a></li><li class="nav-item dropdown"><a title="more" href="#" data-toggle="dropdown" data-tab="paginate" class="nav-link dropdown-toggle" style="border-radius:30px;">
+                                    more <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="10" href="#paginate-10" class="nav-link" data-tab="paginate" data-toggle="tab" style="border-radius:30px;">10</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="11" href="#paginate-11" class="nav-link" data-tab="paginate" data-toggle="tab" style="border-radius:30px;">11</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="12" href="#paginate-12" class="nav-link" data-tab="paginate" data-toggle="tab" style="border-radius:30px;">12</a></li></ul></li></ul></div></div><div class="tab-content" style="font-family: Courier New, monospace; font-size: 18px;"><div class="pagination-tab tab-pane active" data-tab="paginate" id="paginate-1" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-1" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-1" class="transcript row"><div id="text-resize-1" class="text-re col-md-6"><div class="card-body"><p class="yes-index" style="">
+                  <span class="hi-underline">FREEDOM AND NECESSITY IN THE ARTS</span>
+               </p><p class="yes-index" style="font-family: Times New Roman, serif; font-size: 22px;">
                   May 21st.
-               </p><p style="font-family: Times New Roman, serif; font-size: 22px;">
-                  Dear S<del>e</del>tella<abbr title="unclear">·</abbr><br />
+               </p><p class="yes-index" style="font-family: Times New Roman, serif; font-size: 22px;">
+                  Dear S<span class="del"><span class="abbr" title="unclear">e</span></span>tella<span class="abbr" title="unclear">·</span><br />
                   You're an angel. I have to deliver this<br />
-                  in Neulengbach on Sun<abbr title="unclear">day</abbr>, June 14th.<br />
+                  in Neulengbach on Sun<span class="abbr" title="unclear">day</span>, June 14th.<br />
                   In case your dictionary doesn't give it, the<br />
-                  German for the technical word buddle (page I, near<br />
-                  bottom) is Erzwaschtrog .<br />
+                  German for the technical word <span class="hi-underline">buddle</span> (page I, near<br />
+                  bottom) is <span class="hi-underline">Erzwaschtrog</span> .<br />
                   I hope there is an equivalent German euphemism<br />
-                  for <abbr title="unclear">"t</abbr>e Senior Citizen."<abbr title="unclear">,</abbr><br />
+                  for <span class="abbr" title="unclear">"t</span>e Senior Citizen."<span class="abbr" title="unclear">,</span><br />
                   If there is a special honary title of adress<br />
-                  for a Landeshaupt<abbr title="unclear">m</abbr>an,please supply.<br />
+                  for a <span class="hi-underline">Landeshaupt<span class="abbr" title="unclear">m</span>an</span>,please supply.<br />
                   love<br />
                   Wystan<br />
-                  P<abbr title="unclear">_</abbr>S. Adit= Stollen.<br />
-                  Concentrating Mill is,I <del>suspec</del>t<abbr title="unclear">G</abbr>uess, though I <abbr title="unclear">ma</abbr>y<br />
-                  be wrong , Vereinigungmühle <abbr title="unclear">.</abbr>
-               </p></div></div><div id="img-resize-1" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-1" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-1"><div id="sheet_container_d40e244" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e244"><img id="sheet_img_d40e244" onload="[load_image('sheet_img_d40e244','sheet_container_d40e244','sheet_container2_d40e244'), $( document ).ready(resize('1'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0099.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-2" tabindex="-1"><div id="container-resize-2" class="transcript row"><div id="text-resize-2" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-2" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-2" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-2"><div id="sheet_container_d40e333" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e333"><img id="sheet_img_d40e333" onload="[load_image('sheet_img_d40e333','sheet_container_d40e333','sheet_container2_d40e333'), $( document ).ready(resize('2'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0100.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-3" tabindex="-1"><div id="container-resize-3" class="transcript row"><div id="text-resize-3" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
-                  (<abbr title="unclear">1</abbr>
+                  P<span class="abbr" title="unclear">_</span>S. <span class="hi-underline">Adit</span>= <span class="hi-underline">Stollen</span>.<br />
+                  <span class="hi-underline">Concentrating Mill</span> is,I <span class="del">suspec</span>t<span class="abbr" title="unclear">G</span>uess, though I <span class="abbr" title="unclear">ma</span>y<br />
+                  be wrong , <span class="hi-underline">Vereinigungmühle</span> <span class="abbr" title="unclear">.</span>
+               </p></div></div><div id="img-resize-1" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-1"><div id="sheet_container_d40e244" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e244"><img id="sheet_img_d40e244" onload="[load_image('sheet_img_d40e244','sheet_container_d40e244','sheet_container2_d40e244'), $( document ).ready(resize('1'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0099.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-2" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-2" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-2" class="transcript row"><div id="text-resize-2" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-2" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-2"><div id="sheet_container_d40e333" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e333"><img id="sheet_img_d40e333" onload="[load_image('sheet_img_d40e333','sheet_container_d40e333','sheet_container2_d40e333'), $( document ).ready(resize('2'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0100.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-3" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-3" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-3" class="transcript row"><div id="text-resize-3" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
+                  (<span class="abbr" title="unclear">1</span>
                </p><p style="">
-                                   Sehr vee<del>rh</del>hrter Herr Landeshauptman<abbr title="unclear">n,</abbr>meine Damen und Herren:<br />
-                            I hope you will pardon me if I speak somewhat personally. I do so,<br />
-                  not out of vanity,but bec<del>ua</del>ause  I do <del>j</del>not wish to give the impression that I<br />
+                  <span class="space">                 </span>Sehr vee<span class="del">rh</span>hrter Herr Landeshauptman<span class="abbr" title="unclear">n,</span>meine Damen und Herren:<br />
+                  <span class="space">          </span>I hope you will pardon me if I speak somewhat personally. I do so,<br />
+                  not out of vanity,but bec<span class="del">ua</span>ause <span class="space"> </span>I do <span class="del">j</span>not wish to give the impression that I<br />
                   am attempting to lay down absolute laws which are valid for all. I give you my<br />
-                  experience<abbr title="unclear">s</abbr> as a poet,in the hope that you will be able to compare the<del>,</del>m with<br />
-                  yours<del>own</del>,and form your own judgment about them.<br />
-                     Most of what I <del>o</del>know about the writing of poetry,or at least about the kind I<br />
+                  experience<span class="abbr" title="unclear">s</span> as a poet,in the hope that you will be able to compare the<span class="del">,</span>m with<br />
+                  yours<span class="del"><span class="abbr" title="unclear">own</span></span>,and form your own judgment about them.<br />
+                  <span class="space">   </span>Most of what I <span class="del"><span class="abbr" title="unclear">o</span></span>know about the writing of poetry,or at least about the kind I<br />
                   am interested in writing,I discovered long before I took any interest in poetry<br />
                   itself.<br />
-                    Between the ages of six and twelve,I spent a great many of my waking hours in<br />
-                  the fab<del>o</del>rication of a private secondary sacred world,the basic elements of which<br />
-                  were <del>atO</del> a) a limestone landscape mainly derived from the Pennine Moors in the<br />
+                  <span class="space">  </span>Between the ages of six and twelve,I spent a great many of my waking hours in<br />
+                  the fab<span class="del">o</span>rication of a private secondary sacred world,the basic elements of which<br />
+                  were <span class="del"><span class="del"><span class="abbr" title="unclear">at</span></span><span class="abbr" title="unclear">O</span></span> a) a limestone landscape mainly derived from the Pennine Moors in the<br />
                   North of England and b) an industry - lead-mining.<br />
-                     It is no doubt psychologically significant that my sacred world was autistic -<br />
-                  that is to say,I had no wish to share it with others no<del>t</del>r could I have done so.<br />
+                  <span class="space">   </span>It is no doubt psychologically significant that my sacred world was autistic -<br />
+                  that is to say,I had no wish to share it with others no<span class="del">t</span>r could I have done so.<br />
                   However,though constructed for and inhabited by myself alone,I needed the help of<br />
                   others,my parents in particular,in collecting its basic materials; others had to<br />
-                  procure for me the necessary text-books on geology and machinery,maps,catalog<del>i</del>ues,<br />
-                  guide-books and photographs,and,when occasion offered<del>,to</del> ta<del>l</del>ke me down real mines,<br />
+                  procure for me the necessary text-books on geology and machinery,maps,catalog<span class="del">i</span>ues,<br />
+                  guide-books and photographs,and,when occasion offered<span class="del">,to</span> ta<span class="del">l</span>ke me down real mines,<br />
                   tasks which they performed with unfailing patience and generosity.<br />
-                      From this activity,I learned certain principles which I was later to find applied<br />
+                  <span class="space">    </span>From this activity,I learned certain principles which I was later to find applied<br />
                   to all artistic fabrication. First,whatever other elements it may include,the<br />
                   initial impulse to create a secondary world is a feeling of awe aroused by<br />
-                  encounters,in the Primary World,with sacred beings or events.  This feeling of awe<br />
-                  is an imperative,that is to<abbr title="unclear">´</abbr> say,one is not free to choose the object or the event<br />
+                  encounters,in the Primary World,with sacred beings or events. <span class="space"> </span>This feeling of awe<br />
+                  is an imperative,that is to<span class="abbr" title="unclear">´</span> say,one is not free to choose the object or the event<br />
                   that arouses it. Though every work of art is a secondary world,it cannot be<br />
-                  constructed ex nihilo,but is a selection from and a recombination of the contents of<br />
+                  constructed <span class="hi-underline">ex nihilo</span>,but is a selection from and a recombination of the contents of<br />
                   the Primary World. Even the 'purest' poem,in the French Symboliste sense,is<br />
                   made of words which are not the poet's private property,but the communal creation<br />
                   of the linguistic group to whom he belongs,so that their meaning can be looked up<br />
                   in a dictionary.<br />
-                       Secondly,in constructing my private world,I discovere<del>s</del>d that,though this was<br />
-                  a game,or rather precisely because it was a game - that is to say,not a necessity<br />
+                  <span class="space">     </span>Secondly,in constructing my private world,I discovere<span class="del">s</span>d that,though this was<br />
+                  a game,or rather precisely <span class="hi-underline">because it was a game</span> - that is to say,not a necessity<br />
                   like eating or sleeping,but something I was free to do or not as I chose - it<br />
                   could not be played without rules. Absolute freedom is meaningless: freedom can<br />
-                  only be realised in a choice between alternati<del>c</del>ves. A secondary world,be it a poem,<br />
+                  only be realised in a choice between alternati<span class="del">c</span>ves. A secondary world,be it a poem,<br />
                   or a game of football or bridge,must be as much a world of law as the Primary,the<br />
                   only difference being that in the world of games one is free to decide what its<br />
                   laws shall be. But to all games as to real life,Goethe's lines apply.
                </p><p style="">
-                     As regards my particu<del>al</del>l<abbr title="unclear">a</abbr>r lead-mining world,I decided,or rather,without conscious<br />
+                  <span class="space">              </span><span class="hi-underline">In der Beschr<span class="abbr" title="unclear">ä</span>nkung zeigt sich erst der Meister</span>,<br />
+                  <span class="space">              </span><span class="hi-underline">Und d<span class="del">s</span>as Gesetz nur kann uns Freiheit geben.</span><br />
+               </p><p style="">
+                  <span class="space">   </span>As regards my particu<span class="del">al</span>l<span class="abbr" title="unclear">a</span>r lead-mining world,I decided,or rather,without conscious<br />
                   decision I instinctively felt,that I must impose two restrictions upon my freedom<br />
                   of fantasy. In choosing what objects were to be included,I was free to select this<br />
                   and reject that,on condition that both were real objects in the Primary World,to<br />
                   choose,for example,between two kinds of water-turbine,which could be found in a<br />
-                  text-book  on mining machinery or a manufacturer's catalogue: but I was not free<br />
-                  to invent one.  In deciding how my world was to function,I <del>was </del> could choose between<br />
-                  t<del>e</del>wo practical possibilit<del>es</del>ies  - a mine can be drained either by an adit or a pump -<br />
-                  but physic<del></del>al impossibili<del>es</del>ties and magic means were forbidden. <del>T</del>When I say forbidden,<br />
+                  text-book <span class="space"> </span>on mining machinery or a manufacturer's catalogue: but I was not free<br />
+                  to invent one. <span class="space"> </span>In deciding how my world was to function,I <span class="del">was </span> could choose between<br />
+                  t<span class="del"><span class="abbr" title="unclear">e</span></span>wo practical possibilit<span class="del">es</span>ies <span class="space"> </span>- a mine can be drained either by an adit or a pump -<br />
+                  but physic<span class="del"><span class="del"><span class="abbr" title="deleted">[]</span></span></span>al impossibili<span class="del">es</span>ties and magic means were forbidden. <span class="del"><span class="abbr" title="unclear">T</span></span>When I say forbidden,<br />
                   I mean that I felt,in some obscure way,that they were morally forbidden. Then there<br />
                   came a day when the moral issue became quite conscious. As I was planning my<br />
                   Platonic Idea of a concentrating-mill,I ran into difficulties. I had to choose<br />
-                  between two types of a cer<del>at</del>tain machine for separating the sli<abbr title="unclear">m</abbr>es,called a buddle.<br />
-                  One type I found more sacred or '<del>beatiuful</del> beautiful',but the other type was,I<br />
+                  between two types of a cer<span class="del">at</span>tain machine for separating the sli<span class="abbr" title="unclear">m</span>es,called a buddle.<br />
+                  One type I found more sacred or '<span class="del">beat<span class="del">i</span>uful</span> beautiful',but the other type was,I<br />
                   knew from my reading,the more efficient. At this point I realised that it was my<br />
-                  moral duty to sacrifice my <del>aethetic</del> aesthetic preference to reality or truth.
-               </p></div></div><div id="img-resize-3" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-3" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-3"><div id="sheet_container_d40e336" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e336"><img id="sheet_img_d40e336" onload="[load_image('sheet_img_d40e336','sheet_container_d40e336','sheet_container2_d40e336'), $( document ).ready(resize('3'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0145.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-4" tabindex="-1"><div id="container-resize-4" class="transcript row"><div id="text-resize-4" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-4" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-4" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-4"><div id="sheet_container_d40e590" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e590"><img id="sheet_img_d40e590" onload="[load_image('sheet_img_d40e590','sheet_container_d40e590','sheet_container2_d40e590'), $( document ).ready(resize('4'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0146.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-5" tabindex="-1"><div id="container-resize-5" class="transcript row"><div id="text-resize-5" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
+                  moral duty to sacrifice my <span class="del">aethetic</span> aesthetic preference to reality or truth.
+               </p></div></div><div id="img-resize-3" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-3"><div id="sheet_container_d40e336" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e336"><img id="sheet_img_d40e336" onload="[load_image('sheet_img_d40e336','sheet_container_d40e336','sheet_container2_d40e336'), $( document ).ready(resize('3'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0145.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-4" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-4" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-4" class="transcript row"><div id="text-resize-4" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-4" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-4"><div id="sheet_container_d40e590" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e590"><img id="sheet_img_d40e590" onload="[load_image('sheet_img_d40e590','sheet_container_d40e590','sheet_container2_d40e590'), $( document ).ready(resize('4'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0146.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-5" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-5" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-5" class="transcript row"><div id="text-resize-5" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
                   (2
                </p><p style="">
-                      When,later,I began to write poetry’I found that,for me,at least,the same<br />
-                  obligation was binding. That is to say,I cannot accept the do<del>s</del>ctrine that,in<br />
-                  poetry,there is a 'suspension of belief<del>e</del>'. A poet must never make a statement<br />
-                  simply because it sounds poetically exciting: he must also bel<del>ei</del>ieve it to be<br />
+                  <span class="space">    </span>When,later,I began to write poetry’I found that,for me,at least,the same<br />
+                  obligation was binding. That is to say,I cannot accept the do<span class="del"><span class="abbr" title="unclear">s</span></span>ctrine that,in<br />
+                  poetry,there is a 'suspension of belief<span class="del"><span class="abbr" title="unclear">e</span></span>'. A poet must never make a statement<br />
+                  simply because it sounds poetically exciting: he must also bel<span class="del">ei</span>ieve it to be<br />
                   true. This does not mean,of course,that one can only appreciate a poet whose<br />
                   beliefs happen to co-incide with one's own. It does mean,however,that one must<br />
-                  <del>n</del>be convinced that the poet really believ<del></del>es what he says,however odd <del>that</del> the<br />
+                  <span class="del">n</span>be convinced that the poet really believ<span class="del"><span class="del"><span class="abbr" title="deleted">[]</span></span></span>es what he says,however odd <span class="del">that</span> the<br />
                   belief may seem to oneself.<br />
-                         Between constructing a private <del>fantsa</del>yfantasy world for oneself alone<br />
-                  and writing poetry,there is,of course,a profound difference. A <del>fanatsy</del><br />
+                  <span class="space">       </span>Between constructing a private <span class="del">fantsa</span>yfantasy world for oneself alone<br />
+                  and writing poetry,there is,of course,a profound difference. A <span class="del">fanatsy</span><br />
                   fantasy world exists only in the head of its creator: a poem is a public<br />
                   verbal object intended to be read and enjoyed by others. To become conscious<br />
                   of others is to become conscious of historical time/. in various ways. The<br />
-                  contents of a poem are necessarily past <del>expereinces</del> experiences,and the goal of<br />
-                  a poem is <del>necessaily</del> necessarily in the future,since it cannot be read until<br />
-                  it has been written. Again<abbr title="unclear">,</abbr>to write a poem is to engage in an activity which<br />
+                  contents of a poem are necessarily past <span class="del">expereinces</span> experiences,and the goal of<br />
+                  a poem is <span class="del">necessaily</span> necessarily in the future,since it cannot be read until<br />
+                  it has been written. Again<span class="abbr" title="unclear">,</span>to write a poem is to engage in an activity which<br />
                   human beings have practised for centuries. If one asks why human beings<br />
                   make poems or paint pictures or compose music,I can see two possible answers.<br />
-                  Firstly all the artistic media are forms of an activity pecul<del></del>iar to human<br />
+                  Firstly all the artistic media are forms of an activity pecul<span class="del"><span class="del"><span class="abbr" title="deleted">[]</span></span></span>iar to human<br />
                   beings,namely,Personal Speech. Many animals have impersonal codes of<br />
-                  communications,visual,olfactory,auditory signals,b<del></del>y which they convey to<br />
+                  communications,visual,olfactory,auditory signals,b<span class="del"><span class="del"><span class="abbr" title="deleted">[]</span></span></span>y which they convey to<br />
                   other members of their species vital information about food,territory,sex,<br />
-                  the presence of <del>enmies</del> enemies etc,and in social animals like the bee,such<br />
-                  a code may be exceedingly comple<del>s</del>x. We,too,of course,often use words in the same<br />
+                  the presence of <span class="del">e<span class="abbr" title="unclear">nm</span>ies</span> enemies etc,and in social animals like the bee,such<br />
+                  a code may be exceedingly comple<span class="del">s</span>x. We,too,of course,often use words in the same<br />
                   way,as when I ask a stranger the way to the railroad station. But when we<br />
-                  truly speak,we do something quite different. We <del>spak</del> speak as person to person<br />
-                  in order to disclose ourselves to others and share our exper<del>ei</del><abbr title="unclear">i</abbr>ences with<br />
+                  truly speak,we do something quite different. We <span class="del">spak</span> speak as person to person<br />
+                  in order to disclose ourselves to others and share our exper<span class="del">ei</span><span class="abbr" title="unclear">i</span>ences with<br />
                   them,not because we must,but becuase we enjoy doing so. This activity is<br />
                   sometimes quite erroneously called 'self-expression'. If I write a poem<br />
-                  about <del>ceratin</del> experiences I have had,I do so<del>,not bec</del> bec<del>ua</del><abbr title="unclear">a</abbr>use I think it<br />
-                  <del>may</del>should be of interest and value to others<del>,not</del>: the fact that it has till now<br />
-                  only been my exper<del>ei</del>ience is accidental. What the poet or any artist has to convey<br />
+                  about <span class="del">ceratin</span> experiences I have had,I do so<span class="del">,not bec</span> bec<span class="del">ua</span><span class="abbr" title="unclear">a</span>use I think it<br />
+                  <span class="del">may</span>should be of interest and value to others<span class="del">,not</span>: the fact that it has till now<br />
+                  only been my exper<span class="del">ei</span>ience is accidental. What the poet or any artist has to convey<br />
                   is a perception of a reality common to all,but seen from a unique perpsective,<br />
                   which it is his duty as well as his pleasure to share with others. To small<br />
                   truths as well as great,St Augustine's words apply.
                </p><p style="">
-                              The truth is neither mine nor his nor another's;but belongs<br />
-                              to us all whom Thou callest to partake of it: warning us<br />
-                              terribly,not to account it private to ourselves,lest we be<br />
-                              deprived of it.
+                  <span class="space">            </span><span class="hi-underline">The truth is neither mine nor his nor another's;but belongs</span><br />
+                  <span class="space">            </span><span class="hi-underline">to us all whom Thou callest to partake of it: warning us</span><br />
+                  <span class="space">            </span><span class="hi-underline">terribly,not to account it private to ourselves,lest we be</span><br />
+                  <span class="space">            </span><span class="hi-underline">deprived of it.</span>
                </p><p style="">
-                    Then the second impulse to artistic fabrication is the desire to transcend<br />
+                  <span class="space">  </span>Then the second impulse to artistic fabrication is the desire to transcend<br />
                   our mortality,by making objects which,unlike ourselves,are not subject to<br />
-                  natural death,but can remain <del>permantly</del> permanently 'on hand' in the world,<br />
+                  natural death,but can remain <span class="del">permantly</span> permanently 'on hand' in the world,<br />
                   long after we and our society have perished.<br />
-                     Every genuine work of art,I believe,exhibits two qualities,Nowness and<br />
+                  <span class="space">   </span>Every genuine work of art,I believe,exhibits two qualities,Nowness and<br />
                   Permanence. By Nowness I mean the quality which enables an art-historian<br />
                   to date a work,at least,approximately. If,for example,one listens to<br />
                   a composition by Palestrina and one by Mozart,one knows immediately that,<br />
                   quite aside from their artistic merits,Palestrina must have lived earlier<br />
                   than Mozart: he could not possibly have written as he did after Mozart.<br />
-                  By <del>p</del>Perman<del>a</del>ence,I mean  that the work continues to have relevance and<br />
-                  importance lo<abbr title="unclear">m</abbr>g after its creator is dead. In the history of Art,unlike<br />
+                  By <span class="del">p</span>Perman<span class="del">a</span>ence,I mean <span class="space"> </span>that the work continues to have relevance and<br />
+                  importance lo<span class="abbr" title="unclear">m</span>g after its creator is dead. In the history of Art,unlike<br />
                   the history of Science,no genuine work of art is made obsolete by a<br />
                   later work. Past science is of interest only to the historian of science,not<br />
                   to what scientists are doing at this moment. Past works of art,on the<br />
-                  other hand,are of the utmost importance to the contemporary <del>praticioner.</del><br />
-                  practic<del>o</del>t<del>o</del>neroner. Every artist tries to produce something new,but in the hope<br />
-                  that,in time,it will take its <del></del>proper place in the tradition of his art.<br />
+                  other hand,are of the utmost importance to the contemporary <span class="del">praticioner<span class="abbr" title="unclear">.</span></span><br />
+                  practic<span class="del">o</span>t<span class="del">o</span>neroner. Every artist tries to produce something new,but in the hope<br />
+                  that,in time,it will take its <span class="del"><span class="del"><span class="abbr" title="deleted">[]</span></span></span>proper place in the tradition of his art.<br />
                   And he cannot produce anything significantly original unless he knows<br />
-                  well what has <del>been</del> already been done<abbr title="unclear">;</abbr>w<del>ithout</del>,that is to say ,<del>even in</del> he cannot<br />
+                  well what has <span class="del">been</span> already been done<span class="abbr" title="unclear">;</span>w<span class="del">ithout</span>,that is to say ,<span class="del">even in</span> he cannot<br />
                   'rebel' against the past without having a profound reverence for it.
-               </p></div></div><div id="img-resize-5" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-5" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-5"><div id="sheet_container_d40e593" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e593"><img id="sheet_img_d40e593" onload="[load_image('sheet_img_d40e593','sheet_container_d40e593','sheet_container2_d40e593'), $( document ).ready(resize('5'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0147.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-6" tabindex="-1"><div id="container-resize-6" class="transcript row"><div id="text-resize-6" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-6" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-6" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-6"><div id="sheet_container_d40e841" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e841"><img id="sheet_img_d40e841" onload="[load_image('sheet_img_d40e841','sheet_container_d40e841','sheet_container2_d40e841'), $( document ).ready(resize('6'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0148.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-7" tabindex="-1"><div id="container-resize-7" class="transcript row"><div id="text-resize-7" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
+               </p></div></div><div id="img-resize-5" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-5"><div id="sheet_container_d40e593" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e593"><img id="sheet_img_d40e593" onload="[load_image('sheet_img_d40e593','sheet_container_d40e593','sheet_container2_d40e593'), $( document ).ready(resize('5'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0147.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-6" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-6" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-6" class="transcript row"><div id="text-resize-6" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-6" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-6"><div id="sheet_container_d40e841" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e841"><img id="sheet_img_d40e841" onload="[load_image('sheet_img_d40e841','sheet_container_d40e841','sheet_container2_d40e841'), $( document ).ready(resize('6'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0148.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-7" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-7" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-7" class="transcript row"><div id="text-resize-7" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
                   (3
                </p><p style="">
-                        There are periods in history when <del>art</del> the arts develop uninterruptedly,<br />
+                  <span class="space">      </span>There are periods in history when <span class="del">art</span> the arts develop uninterruptedly,<br />
                   each generation building on the achievements of the previous generation.<br />
                   There are other periods when radical breaks seem to be necessary. However,<br />
-                  <del>t</del>when they are,one will generally find that the 'radical' artist does not<br />
-                  <del>diswon</del> disown the past,but finds in works of a much earlier period or in<br />
-                  those of <del>anotehr</del> culture than his own,the clue as to what he should do now.<br />
+                  <span class="del">t</span>when they are,one will generally find that the 'radical' artist does not<br />
+                  <span class="del">diswon</span> disown the past,but finds in works of a much earlier period or in<br />
+                  those of <span class="del">anotehr</span> culture than his own,the clue as to what he should do now.<br />
                   In my own case,for example,I know how much I owe to Anglo-Saxon and<br />
-                  Medie<del>av</del>val Poetry.<br />
-                      When I <del>reveiw</del> review the contemporary artistic scene,<del>I</del><abbr title="unclear">i</abbr>t strikes me how<br />
-                  <del>extraorinary</del> extraordinarily fortunate men like Stravinsky,Picasso,Eliot,<br />
+                  Medie<span class="del">av</span>val Poetry.<br />
+                  <span class="space">    </span>When I <span class="del">revei<span class="abbr" title="unclear">w</span></span> review the contemporary artistic scene,<span class="del">I</span><span class="abbr" title="unclear">i</span>t strikes me how<br />
+                  <span class="del">extraorinary</span> extraordinarily fortunate men like Stravinsky,Picasso,Eliot,<br />
                   etc,that is,those persons we think of as the founders of 'modern' art,<br />
                   were in being born when they were,so that they came to manhood before<br />
-                  I9I4. Until the <del>Fis </del> First World War,western society was still pretty much<br />
+                  I9I4. Until the <span class="del">Fis </span> First World War,western society was still pretty much<br />
                   what it had been in the nineteenth century. This meant that for these artists,<br />
                   the felt need to create something new arose from an artistic imperative,<br />
-                  not a <del>histroi</del> historic imperative. No one asked himself:"What is the proper<br />
+                  not a <span class="del">histroi</span> historic imperative. No one asked himself:"What is the proper<br />
                   kind of music to compose or picture to paint or poem to write in the year<br />
-                  I9I2.?"  Secondly,their <del>audiences</del> contemporary audiences  were mostly<br />
-                  cons<del>r</del>ervative,but honestly so.  Those,for instance,who were scandalised by<br />
-                  Le Sacre du Printemps,may seem to us now to have been old <del>fgi</del> fogies,but<br />
+                  I9I2.?" <span class="space"> </span>Secondly,their <span class="del">audiences</span> contemporary audiences <span class="space"> </span>were mostly<br />
+                  cons<span class="del">r</span>ervative,but honestly so. <span class="space"> </span>Those,for instance,who were scandalised by<br />
+                  <span class="hi-underline">Le Sacre du Printemps</span>,may seem to us now to have been old <span class="del">fgi</span> fogies,but<br />
                   their reaction was genuine. They did not say to themselves:"Times have<br />
-                  changed and we must change with them in order <del>to be up to date." </del> not to<br />
+                  changed and we must change with them in order <span class="del">to be up to date." </span> not to<br />
                   be left behind."<br />
-                       Here are a few statements by Stravinsky to <del>whcih</del> which the young,<del>where</del><del>where</del>whether<br />
-                  artists or critics would do well to listen and <del>pknde </del> ponder over.
+                  <span class="space">     </span>Here are a few statements by Stravinsky to <span class="del">whcih</span> which the young,<span class="del">w<span class="abbr" title="unclear">h</span>ere</span><span class="del">where</span>whether<br />
+                  artists or critics would do well to listen and <span class="del">pknde </span> ponder over.
                </p><p style="">
-                            In my youth the new music grew out of,and in reaction to,traditions,<br />
-                            whereas it appears to be evolving to-day as much from social needs<br />
-                            as interior artistic ones...The status of <del>the</del> new music as a<br />
-                            category is another incomparable. It had none at all in my early<br />
-                            years,being in fact categorically opposed,and often with real<br />
-                            hostility. But the unsuccess of composers o<del>n</del>f my generation at<br />
-                            least kept them from trading on success,and our unsuccess may have<br />
-                            been less insidious than the automatic superlatives which nowadays<br />
-                            kill the new by absorbing it t<del>i</del>o death.<br />
-                                                   ***
+                  <span class="space">          </span><span class="hi-underline">In my youth the new music grew out of,and in reaction to,traditions</span>,<br />
+                  <span class="space">          </span><span class="hi-underline">whereas it appears to be evolving to-day as much from social needs</span><br />
+                  <span class="space">          </span><span class="hi-underline">as interior artistic ones...The status of <span class="del">the</span> new music as a</span><br />
+                  <span class="space">          </span><span class="hi-underline">category is another incomparable. It had none at all in my early</span><br />
+                  <span class="space">          </span><span class="hi-underline">years,being in fact categorically opposed,and often with real</span><br />
+                  <span class="space">          </span><span class="hi-underline">hostility. But the unsuccess of composers o<span class="del">n</span>f my generation at</span><br />
+                  <span class="space">          </span><span class="hi-underline">least kept them from trading on success,and our unsuccess may have</span><br />
+                  <span class="space">          </span><span class="hi-underline">been less insidious than the automatic superlatives which nowadays</span><br />
+                  <span class="space">          </span><span class="hi-underline">kill the new by absorbing it t<span class="del">i</span>o death.</span><br />
+                  <span class="space">                                 </span>***
                </p><p style="">
-                            The use of the new hardware naturally appears to the new musician<br />
-                            as "historically imperative"; but music is made out of musical<br />
-                            imperatives,and the awareness of historical processes is probably<br />
-                            best left to future and different kinds of wage-earners.<br />
-                                                   ***
+                  <span class="space">          </span><span class="hi-underline">The use of the new hardware naturally appears to the new musician</span><br />
+                  <span class="space">          </span>a<span class="hi-underline">s "historically imperative"; but music is made out of musical</span><br />
+                  <span class="space">          </span><span class="hi-underline">imperatives,and the awareness of historical processes is probably</span><br />
+                  <span class="space">          </span><span class="hi-underline">best left to future and different kinds of wage-earners</span>.<br />
+                  <span class="space">                                 </span>***
                </p><p style="">
-                   In times,like our own,of rapid social change and political crisis,there i<abbr title="unclear">s</abbr><br />
+                  <span class="space"> </span>In times,like our own,of rapid social change and political crisis,there i<span class="abbr" title="unclear">s</span><br />
                   always a danger of confusing the principles governing political action and<br />
-                  those governing artistic fabrication.  The most important of such confus<del>u</del>ions<br />
-                  are thr<del>r</del>ee.<br />
-                    Firstly,one may come to think of artistic fabrication as <del>s</del><abbr title="unclear">a</abbr> f<del>rom</del>orm of politic<abbr title="unclear">a</abbr>l<br />
-                  action. Every citizen,<del>artists</del>poets includ<del>i</del>ed,has a duty to be politically 'engagé',<br />
-                  that is,to <del>feel</del> play a responsible part in seeing that the society of which<br />
+                  those governing artistic fabrication. <span class="space"> </span>The most important of such confus<span class="del">u</span>ions<br />
+                  are thr<span class="del">r</span>ee.<br />
+                  <span class="space">  </span>Firstly,one may come to think of artistic fabrication as <span class="del">s</span><span class="abbr" title="unclear">a</span> f<span class="del">rom</span>orm of politic<span class="abbr" title="unclear">a</span>l<br />
+                  action. Every citizen,<span class="del">artists</span>poets includ<span class="del">i</span>ed,has a duty to be politically 'engagé',<br />
+                  that is,to <span class="del">feel</span> play a responsible part in seeing that the society of which<br />
                   he is a member shall function properly and improve. But the poet,qua poet,<br />
-                  has only one political function. Since lang<del>i</del>uage is his medium,it is his duty,<br />
-                  by his own example,to defend his <del>motehher</del>mothermother-tongue against corruption by demagogues,<br />
-                  journalists,the mass-media etc. As Karl Kraus<del>s</del> said:"Die Sprache ist die <del>Muuet</del><br />
-                  Mutter,nicht das Magd,des <del>d</del> <del>g</del>Gedankens",and when language loses its meaning,<br />
-                  its <del>palce</del> place is taken by violence. Of course,the poet may use political and<br />
+                  has only one political function. Since lang<span class="del">i</span>uage is his medium,it is his duty,<br />
+                  by his own example,to defend his <span class="del">mot<span class="del">eh</span>her</span>mothermother-tongue against corruption by demagogues,<br />
+                  journalists,the mass-media etc. As Karl Kraus<span class="del">s</span> said:"D<span class="hi-underline">ie Sprache ist die</span> <span class="del">Muuet</span><br />
+                  <span class="hi-underline">Mutter,nicht das Magd,des <span class="del">d</span> <span class="del">g</span>Gedankens"</span>,and when language loses its meaning,<br />
+                  its <span class="del">palce</span> place is taken by violence. Of course,the poet may use political and<br />
                   social events as subject-matter for poems - they are as much a part of human<br />
                   experience as love or nature - but he must never imagine that his poems have<br />
                   the power to affect the course of history. The political and social history<br />
-                  of Europe w<abbr title="unclear">o</abbr>uld be what it <del>ahs</del> has been if Dante,Shakepeare,Goethe,Micha<del>le</del>el<br />
-                  Angelo,Tit<del>ai</del>ian,Mozart,Beethoven,e<del>y</del>tc,<del>ahd</del> had never existed.
-               </p></div></div><div id="img-resize-7" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-7" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-7"><div id="sheet_container_d40e844" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e844"><img id="sheet_img_d40e844" onload="[load_image('sheet_img_d40e844','sheet_container_d40e844','sheet_container2_d40e844'), $( document ).ready(resize('7'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0149.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-8" tabindex="-1"><div id="container-resize-8" class="transcript row"><div id="text-resize-8" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-8" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-8" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-8"><div id="sheet_container_d40e1155" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1155"><img id="sheet_img_d40e1155" onload="[load_image('sheet_img_d40e1155','sheet_container_d40e1155','sheet_container2_d40e1155'), $( document ).ready(resize('8'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0150.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-9" tabindex="-1"><div id="container-resize-9" class="transcript row"><div id="text-resize-9" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
+                  of Europe w<span class="abbr" title="unclear">o</span>uld be what it <span class="del">ahs</span> has been if Dante,Shakepeare,Goethe,Micha<span class="del">le</span>el<br />
+                  Angelo,Tit<span class="del">ai</span>ian,Mozart,Beethoven,e<span class="del">y</span>tc,<span class="del">ahd</span> had never existed.
+               </p></div></div><div id="img-resize-7" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-7"><div id="sheet_container_d40e844" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e844"><img id="sheet_img_d40e844" onload="[load_image('sheet_img_d40e844','sheet_container_d40e844','sheet_container2_d40e844'), $( document ).ready(resize('7'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0149.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-8" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-8" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-8" class="transcript row"><div id="text-resize-8" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-8" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-8"><div id="sheet_container_d40e1155" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1155"><img id="sheet_img_d40e1155" onload="[load_image('sheet_img_d40e1155','sheet_container_d40e1155','sheet_container2_d40e1155'), $( document ).ready(resize('8'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0150.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-9" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-9" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-9" class="transcript row"><div id="text-resize-9" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
                   4
                </p><p style="">
-                     Where <del>politicla</del> political and social <del>eveils</del> evils are concerned,only<br />
-                  t<del>k</del>wo things are effective<del>*</del><abbr title="unclear">:</abbr> political action and straightforward,truthful,<br />
+                  <span class="space">   </span>Where <span class="del">politicla</span> political and social <span class="del">eveils</span> evils are concerned,only<br />
+                  t<span class="del">k</span>wo things are effective<span class="del">*</span><span class="abbr" title="unclear">:</span> political action and straightforward,truthful,<br />
                   detailed journalistic rapportage of the facts. The Arts are powerless.<br />
-                    The second confusion,of which Plato is the most famous example,is to take<br />
-                  arti<del>t</del>stic fabrication as the model for a good society. <del>The aim of any artist </del><br />
+                  <span class="space">  </span>The second confusion,of which Plato is the most famous example,is to take<br />
+                  arti<span class="del">t</span>stic fabrication as the model for a good society. <span class="del">The aim of any artist <span class="space"> </span></span><br />
                   Such a model,if put into practice,is bound to produce a tyrrany. The aim of<br />
-                  the artist<del>s</del> is to produce an object which is complete and will endure without<br />
-                  change. <del>A</del> In the 'city' of a poem,there are always the same inhabitants doing<br />
+                  the artist<span class="del">s</span> is to produce an object which is complete and will endure without<br />
+                  change. <span class="del">A</span> In the 'city' of a poem,there are always the same inhabitants doing<br />
                   exactly the same jobs for ever. A society which was really like a good poem,<br />
                   embodying the aesthetic virtues of order,economy and subordination of the detail<br />
                   to the whole,would be a nightmare of horror for,given the historical reality of<br />
                   actual men,such a society could only come into being through selective breeding,<br />
-                  ex<del>y</del>termination  of the physically and mentally unfit,absolute obedience to<br />
-                  its <del>D</del>director,a alrge slave cla<del>a</del>ss kept out of sight in <del>f</del>cellars and the<br />
-                  strictest censure<del>e</del>ship of the Arts,forbidding anything to be said which <del>was</del> is<br />
-                  <del>not</del> out of keeping with the official 'line.'<br />
-                     The third confusion,typical of our western <del>civilisat</del> 'free' <del>soncietis</del><br />
+                  ex<span class="del">y</span>termination <span class="space"> </span>of the physically and mentally unfit,absolute obedience to<br />
+                  its <span class="del">D</span>director,a alrge slave cla<span class="del">a</span>ss kept out of sight in <span class="del">f</span>cellars and the<br />
+                  strictest censure<span class="del">e</span>ship of the Arts,forbidding anything to be said which <span class="del">was</span> is<br />
+                  <span class="del">not</span> out of keeping with the official 'line.'<br />
+                  <span class="space">   </span>The third confusion,typical of our western <span class="del">civilisat</span> 'free' <span class="del">soncietis</span><br />
                   societies at this time,is the opposite of Plato's,namely to take political<br />
-                  act<del>u</del>ion as the model for arti<del>t</del>stic fabrication. Political action is a necessity,<br />
-                  that is to say,a<del>y</del>t very moment something has to be done,and <del>politicla</del> it<br />
+                  act<span class="del">u</span>ion as the model for arti<span class="del">t</span>stic fabrication. Political action is a necessity,<br />
+                  that is to say,a<span class="del">y</span>t very moment something has to be done,and <span class="del">politicla</span> it<br />
                   is momentary - action at this moment is immeiately followed by another action<br />
-                  at the next.  Artistic fabrication,on the other hand,is <del>voluntarily</del> voluntary-<br />
+                  at the next. <span class="space"> </span>Artistic fabrication,on the other hand,is <span class="del">voluntarily</span> voluntary-<br />
                   the alternative to one work of art can be no work of art - and the artistic<br />
                   object is permanent,that is to say,immune to historical change. The attempt<br />
-                  to model arti<del>t</del>stic fabrication o<del>s</del>n political action can therefore,only<br />
-                  reduce it to momentary <del>(h </del> a<del>d</del>nd arbitrary 'happenings',a conformism with<br />
+                  to model arti<span class="del">t</span>stic fabrication o<span class="del">s</span>n political action can therefore,only<br />
+                  reduce it to momentary <span class="del">(<span class="abbr" title="unclear">h</span> </span> a<span class="del">d</span>nd arbitrary 'happenings',a conformism with<br />
                   the tyrrany of the immediate moment which is far more enslaving and<br />
                   destructive of integrity than any conformism with past tradition.
                </p><p style="font-family: Times New Roman, serif; font-size: 22px;">
-                  i<abbr title="unclear">n</abbr>sert<br />
-                  4<abbr title="unclear">`</abbr>a
+                  i<span class="abbr" title="unclear">n</span>sert<br />
+                  4<span class="abbr" title="unclear">`</span>a
                </p><p style="">
-                     What then,can the Arts do for us? In my opi<del>o</del>nion,they can do two things.<br />
-                  They can,as Dr Johns<del>t</del>on said,'enable us a little better to enjoy life or a<br />
-                  little better to <del>enjoy</del>endure it". And,<del>becaase</del> because they are objects <del>permant</del><br />
-                  permanently on hand in the world,they are the chief means by which the <del>lvi</del><br />
+                  <span class="space">   </span>What then,can the Arts do for us? In my opi<span class="del">o</span>nion,they can do two things.<br />
+                  They can,as Dr Johns<span class="del">t</span>on said,'enable us a little better to enjoy life or a<br />
+                  little better to <span class="del">enjoy</span>endure it". And,<span class="del">bec<span class="abbr" title="unclear">aas</span>e</span> because they are objects <span class="del">permant</span><br />
+                  permanently on hand in the world,they are the chief means by which the <span class="del">lvi</span><br />
                   living are able to break bread with the dead,and,without a communication<br />
                   with the dead,I do not believe that a fully human civilised life is possible.<br />
-                    Perhaps,too,in our age,the mere making of a work of art is itself a<br />
+                  <span class="space">  </span>Perhaps,too,in our age,the mere making of a work of art is itself a<br />
                   political act. So long as artists exist,making what they please or think<br />
-                  they ought to make,even if <del>the worlks</del> their wor<del>l</del>ks are not terribly good,they<br />
+                  they ought to make,even if <span class="del">the worlks</span> their wor<span class="del">l</span>ks are not terribly good,they<br />
                   remind the Management of something managers need to be reminded of,namely,<br />
-                  that the managed are people with faces,not anonymous numbers,that Homo<br />
-                  Laborans is also Homo Ludens.<br />
-                           And now,I hope those of you who know no English will forgive me i<del>s</del>f<br />
-                  I conclude<del>d</del> these remarks with a light poem of my own,entitled<br />
-                  Doggerel <del>of</del> by a Senior Citizen.
-               </p></div></div><div id="img-resize-9" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-9" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-9"><div id="sheet_container_d40e1157" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1157"><img id="sheet_img_d40e1157" onload="[load_image('sheet_img_d40e1157','sheet_container_d40e1157','sheet_container2_d40e1157'), $( document ).ready(resize('9'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0151.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-10" tabindex="-1"><div id="container-resize-10" class="transcript row"><div id="text-resize-10" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-10" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-10" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-10"><div id="sheet_container_d40e1378" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1378"><img id="sheet_img_d40e1378" onload="[load_image('sheet_img_d40e1378','sheet_container_d40e1378','sheet_container2_d40e1378'), $( document ).ready(resize('10'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0152.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-11" tabindex="-1"><div id="container-resize-11" class="transcript row"><div id="text-resize-11" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
+                  that the managed are people with faces,not anonymous numbers,that <span class="hi-underline">Homo</span><br />
+                  <span class="hi-underline">Laborans</span> is also <span class="hi-underline">Homo Ludens.</span><br />
+                  <span class="space">         </span>And now,I hope those of you who know no English will forgive me i<span class="del">s</span>f<br />
+                  I conclude<span class="del">d</span> these remarks with a light poem of my own,entitled<br />
+                  <span class="hi-underline">Doggerel <span class="del">of</span> by a Senior Citizen</span>.
+               </p></div></div><div id="img-resize-9" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-9"><div id="sheet_container_d40e1157" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1157"><img id="sheet_img_d40e1157" onload="[load_image('sheet_img_d40e1157','sheet_container_d40e1157','sheet_container2_d40e1157'), $( document ).ready(resize('9'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0151.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-10" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-10" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-10" class="transcript row"><div id="text-resize-10" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-10" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-10"><div id="sheet_container_d40e1378" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1378"><img id="sheet_img_d40e1378" onload="[load_image('sheet_img_d40e1378','sheet_container_d40e1378','sheet_container2_d40e1378'), $( document ).ready(resize('10'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0152.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-11" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-11" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-11" class="transcript row"><div id="text-resize-11" class="text-re col-md-6"><div class="card-body"><p style="font-family: Times New Roman, serif; font-size: 22px;">
                   (4a
                </p><p style="font-family: Times New Roman, serif; font-size: 22px;">
                   insert into next page
                </p><p style="">
-                         At this p<del>in</del>oint,a little digression on the subject of 'free' verse,which<br />
+                  <span class="space">       </span>At this p<span class="del">in</span>oint,a little digression on the subject of 'free' verse,which<br />
                   seems now to be almost universal among young poets. Though excellent<br />
-                  examples,the poems of D.H.Lawrence,for example,exist,i<del>n my opinion </del>they are,<abbr title="unclear">in</abbr> my opinio<abbr title="unclear">n</abbr><br />
+                  examples,the poems of D.H.Lawrence,for example,exist,i<span class="del">n my opinion </span>they are,<span class="abbr" title="unclear">in</span> my opinio<span class="abbr" title="unclear">n</span><br />
                   the exception,not the rule. The great virtue of formal metrical rules is<br />
-                  that they forbid automatic <del>reposnse</del> resp<del>i</del>onses and,by forcing the <del>piet</del> poet<br />
-                  to have second thoughts,free <del>f</del>him f<del>or</del>rom the fetters of self. All too often,the<br />
+                  that they forbid automatic <span class="del">reposnse</span> resp<span class="del">i</span>onses and,by forcing the <span class="del">piet</span> poet<br />
+                  to have second thoughts,free <span class="del">f</span>him f<span class="del">or</span>rom the fetters of self. All too often,the<br />
                   result of not having a fixed form to be true to,is a self-indulgence which in<br />
-                  the detached reader can only cause boredom. Further,in my exper<del>ei</del>ience ,contrary<br />
-                  to what one might exp<del>s</del>ect,the <del>writers o</del> free-verse poets sound much more<br />
+                  the detached reader can only cause boredom. Further,in my exper<span class="del">ei</span>ience ,contrary<br />
+                  to what one might exp<span class="del">s</span>ect,the <span class="del">writers o</span> free-verse poets sound much more<br />
                   like each other than those who write in fixed forms. Whatever freedom may do,<br />
                   it does not,it would seem,make for originality.
-               </p></div></div><div id="img-resize-11" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-11" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-11"><div id="sheet_container_d40e1380" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1380"><img id="sheet_img_d40e1380" onload="[load_image('sheet_img_d40e1380','sheet_container_d40e1380','sheet_container2_d40e1380'), $( document ).ready(resize('11'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0153.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="diplomatic" id="diplomatic-paginate-12" tabindex="-1"><div id="container-resize-12" class="transcript row"><div id="text-resize-12" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-12" class="col-md-6 card-header" style="padding: 1em;"><div class="expand-wrapper" style="cursor:col-resize;"><svg xmlns="http://www.w3.org/2000/svg" id="img-expand-12" width="24" height="24" fill="currentColor" class="bi bi-aspect-ratio" viewBox="0 0 16 16"><path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h13A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5v-9zM1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"></path><path d="M2 4.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1H3v2.5a.5.5 0 0 1-1 0v-3zm12 7a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H13V8.5a.5.5 0 0 1 1 0v3z"></path></svg><p><small>change size</small></p></div><div id="viewer-12"><div id="sheet_container_d40e1439" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1439"><img id="sheet_img_d40e1439" onload="[load_image('sheet_img_d40e1439','sheet_container_d40e1439','sheet_container2_d40e1439'), $( document ).ready(resize('12'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0154.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div></div><div class="pagination-bottom"><div class="text-center pagination"><ul class="nav nav-tabs"><li class="nav-item"><a title="1" class="nav-link active" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-1" style="border-radius:30px;">1</a></li><li class="nav-item"><a title="2" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-2" style="border-radius:30px;">2</a></li><li class="nav-item"><a title="3" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-3" style="border-radius:30px;">3</a></li><li class="nav-item"><a title="4" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-4" style="border-radius:30px;">4</a></li><li class="nav-item"><a title="5" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-5" style="border-radius:30px;">5</a></li><li class="nav-item"><a title="6" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-6" style="border-radius:30px;">6</a></li><li class="nav-item"><a title="7" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-7" style="border-radius:30px;">7</a></li><li class="nav-item"><a title="8" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-8" style="border-radius:30px;">8</a></li><li class="nav-item"><a title="9" class="nav-link" data-toggle="tab" data-tab="diplomatic" href="#diplomatic-paginate-9" style="border-radius:30px;">9</a></li><li class="nav-item dropdown"><a title="more" href="#" data-toggle="dropdown" data-tab="diplomatic" class="nav-link dropdown-toggle" style="border-radius:30px;">
-                                    more <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="10" href="#diplomatic-paginate-10" class="nav-link" data-toggle="tab" style="border-radius:30px;">10</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="11" href="#diplomatic-paginate-11" class="nav-link" data-toggle="tab" style="border-radius:30px;">11</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="12" href="#diplomatic-paginate-12" class="nav-link" data-toggle="tab" style="border-radius:30px;">12</a></li></ul></li></ul></div></div></div><div class="tab-pane fade" id="reading-tab" tabindex="-1"><div class="pagination-top"><div class="text-center pagination"><ul class="nav nav-tabs"><li class="nav-item"><a title="1" class="nav-link active" data-toggle="tab" data-tab="reading" href="#reading-paginate-1" style="border-radius:30px;">1</a></li><li class="nav-item"><a title="2" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-2" style="border-radius:30px;">2</a></li><li class="nav-item"><a title="3" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-3" style="border-radius:30px;">3</a></li><li class="nav-item"><a title="4" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-4" style="border-radius:30px;">4</a></li><li class="nav-item"><a title="5" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-5" style="border-radius:30px;">5</a></li><li class="nav-item"><a title="6" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-6" style="border-radius:30px;">6</a></li><li class="nav-item"><a title="7" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-7" style="border-radius:30px;">7</a></li><li class="nav-item"><a title="8" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-8" style="border-radius:30px;">8</a></li><li class="nav-item"><a title="9" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-9" style="border-radius:30px;">9</a></li><li class="nav-item dropdown"><a title="more" href="#" data-toggle="dropdown" data-tab="reading" class="nav-link dropdown-toggle" style="border-radius:30px;">
-                                    more <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="10" href="#reading-paginate-10" class="nav-link" data-toggle="tab" style="border-radius:30px;">10</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="11" href="#reading-paginate-11" class="nav-link" data-toggle="tab" style="border-radius:30px;">11</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="12" href="#reading-paginate-12" class="nav-link" data-toggle="tab" style="border-radius:30px;">12</a></li></ul></li></ul></div></div><div class="tab-content"><div class="pagination-tab tab-pane active" data-tab="reading" id="reading-paginate-1" tabindex="-1"><div class="card-body"><div class="yes-index"><p>
-                  FREEDOM AND NECESSITY IN THE ARTS
-               </p><p>
-                  May 21st.
-               </p><p>
-                  Dear S<del>e</del>tella·
-                  You're an angel. I have to deliver this
-                  in Neulengbach on Sunday, June 14th.
-                  In case your dictionary doesn't give it, the
-                  German for the technical word buddle (page I, near
-                  bottom) is Erzwaschtrog .
-                  I hope there is an equivalent German euphemism
-                  for "te Senior Citizen.",
-                  If there is a special honary title of adress
-                  for a Landeshauptman,please supply.
-                  love
-                  Wystan
-                  P_S. Adit= Stollen.
-                  Concentrating Mill is,I <del>suspec</del>tGuess, though I may
-                  be wrong , Vereinigungmühle .
-               </p></div></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-2" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-3" tabindex="-1"><div class="card-body"><p class="yes-index">
-                  (1
-               </p><p class="yes-index">
-                  Sehr vee<del>rh</del>hrter Herr Landeshauptmann,meine Damen und Herren:
-                  I hope you will pardon me if I speak somewhat personally. I do so,
-                  not out of vanity,but bec<del>ua</del>ause I do <del>j</del>not wish to give the impression that I
-                  am attempting to lay down absolute laws which are valid for all. I give you my
-                  experiences as a poet,in the hope that you will be able to compare the<del>,</del>m with
-                  yours<del>own</del>,and form your own judgment about them.
-                  Most of what I <del>o</del>know about the writing of poetry,or at least about the kind I
-                  am interested in writing,I discovered long before I took any interest in poetry
-                  itself.
-                  Between the ages of six and twelve,I spent a great many of my waking hours in
-                  the fab<del>o</del>rication of a private secondary sacred world,the basic elements of which
-                  were <del>atO</del> a) a limestone landscape mainly derived from the Pennine Moors in the
-                  North of England and b) an industry - lead-mining.
-                  It is no doubt psychologically significant that my sacred world was autistic -
-                  that is to say,I had no wish to share it with others no<del>t</del>r could I have done so.
-                  However,though constructed for and inhabited by myself alone,I needed the help of
-                  others,my parents in particular,in collecting its basic materials; others had to
-                  procure for me the necessary text-books on geology and machinery,maps,catalog<del>i</del>ues,
-                  guide-books and photographs,and,when occasion offered<del>,to</del> ta<del>l</del>ke me down real mines,
-                  tasks which they performed with unfailing patience and generosity.
-                  From this activity,I learned certain principles which I was later to find applied
-                  to all artistic fabrication. First,whatever other elements it may include,the
-                  initial impulse to create a secondary world is a feeling of awe aroused by
-                  encounters,in the Primary World,with sacred beings or events. This feeling of awe
-                  is an imperative,that is to´ say,one is not free to choose the object or the event
-                  that arouses it. Though every work of art is a secondary world,it cannot be
-                  constructed ex nihilo,but is a selection from and a recombination of the contents of
-                  the Primary World. Even the 'purest' poem,in the French Symboliste sense,is
-                  made of words which are not the poet's private property,but the communal creation
-                  of the linguistic group to whom he belongs,so that their meaning can be looked up
-                  in a dictionary.
-                  Secondly,in constructing my private world,I discovere<del>s</del>d that,though this was
-                  a game,or rather precisely because it was a game - that is to say,not a necessity
-                  like eating or sleeping,but something I was free to do or not as I chose - it
-                  could not be played without rules. Absolute freedom is meaningless: freedom can
-                  only be realised in a choice between alternati<del>c</del>ves. A secondary world,be it a poem,
-                  or a game of football or bridge,must be as much a world of law as the Primary,the
-                  only difference being that in the world of games one is free to decide what its
-                  laws shall be. But to all games as to real life,Goethe's lines apply.
-               </p><p class="yes-index">
-                  As regards my particu<del>al</del>lar lead-mining world,I decided,or rather,without conscious
-                  decision I instinctively felt,that I must impose two restrictions upon my freedom
-                  of fantasy. In choosing what objects were to be included,I was free to select this
-                  and reject that,on condition that both were real objects in the Primary World,to
-                  choose,for example,between two kinds of water-turbine,which could be found in a
-                  text-book on mining machinery or a manufacturer's catalogue: but I was not free
-                  to invent one. In deciding how my world was to function,I <del>was </del> could choose between
-                  t<del>e</del>wo practical possibilit<del>es</del>ies - a mine can be drained either by an adit or a pump -
-                  but physic<del></del>al impossibili<del>es</del>ties and magic means were forbidden. <del>T</del>When I say forbidden,
-                  I mean that I felt,in some obscure way,that they were morally forbidden. Then there
-                  came a day when the moral issue became quite conscious. As I was planning my
-                  Platonic Idea of a concentrating-mill,I ran into difficulties. I had to choose
-                  between two types of a cer<del>at</del>tain machine for separating the slimes,called a buddle.
-                  One type I found more sacred or '<del>beatiuful</del> beautiful',but the other type was,I
-                  knew from my reading,the more efficient. At this point I realised that it was my
-                  moral duty to sacrifice my <del>aethetic</del> aesthetic preference to reality or truth.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-4" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-5" tabindex="-1"><div class="card-body"><p class="yes-index">
-                  (2
-               </p><p class="yes-index">
-                  When,later,I began to write poetry’I found that,for me,at least,the same
-                  obligation was binding. That is to say,I cannot accept the do<del>s</del>ctrine that,in
-                  poetry,there is a 'suspension of belief<del>e</del>'. A poet must never make a statement
-                  simply because it sounds poetically exciting: he must also bel<del>ei</del>ieve it to be
-                  true. This does not mean,of course,that one can only appreciate a poet whose
-                  beliefs happen to co-incide with one's own. It does mean,however,that one must
-                  <del>n</del>be convinced that the poet really believ<del></del>es what he says,however odd <del>that</del> the
-                  belief may seem to oneself.
-                  Between constructing a private <del>fantsa</del>yfantasy world for oneself alone
-                  and writing poetry,there is,of course,a profound difference. A <del>fanatsy</del>
-                  fantasy world exists only in the head of its creator: a poem is a public
-                  verbal object intended to be read and enjoyed by others. To become conscious
-                  of others is to become conscious of historical time/. in various ways. The
-                  contents of a poem are necessarily past <del>expereinces</del> experiences,and the goal of
-                  a poem is <del>necessaily</del> necessarily in the future,since it cannot be read until
-                  it has been written. Again,to write a poem is to engage in an activity which
-                  human beings have practised for centuries. If one asks why human beings
-                  make poems or paint pictures or compose music,I can see two possible answers.
-                  Firstly all the artistic media are forms of an activity pecul<del></del>iar to human
-                  beings,namely,Personal Speech. Many animals have impersonal codes of
-                  communications,visual,olfactory,auditory signals,b<del></del>y which they convey to
-                  other members of their species vital information about food,territory,sex,
-                  the presence of <del>enmies</del> enemies etc,and in social animals like the bee,such
-                  a code may be exceedingly comple<del>s</del>x. We,too,of course,often use words in the same
-                  way,as when I ask a stranger the way to the railroad station. But when we
-                  truly speak,we do something quite different. We <del>spak</del> speak as person to person
-                  in order to disclose ourselves to others and share our exper<del>ei</del>iences with
-                  them,not because we must,but becuase we enjoy doing so. This activity is
-                  sometimes quite erroneously called 'self-expression'. If I write a poem
-                  about <del>ceratin</del> experiences I have had,I do so<del>,not bec</del> bec<del>ua</del>ause I think it
-                  <del>may</del>should be of interest and value to others<del>,not</del>: the fact that it has till now
-                  only been my exper<del>ei</del>ience is accidental. What the poet or any artist has to convey
-                  is a perception of a reality common to all,but seen from a unique perpsective,
-                  which it is his duty as well as his pleasure to share with others. To small
-                  truths as well as great,St Augustine's words apply.
-               </p><p class="yes-index">
-                  The truth is neither mine nor his nor another's;but belongs
-                  to us all whom Thou callest to partake of it: warning us
-                  terribly,not to account it private to ourselves,lest we be
-                  deprived of it.
-               </p><p class="yes-index">
-                  Then the second impulse to artistic fabrication is the desire to transcend
-                  our mortality,by making objects which,unlike ourselves,are not subject to
-                  natural death,but can remain <del>permantly</del> permanently 'on hand' in the world,
-                  long after we and our society have perished.
-                  Every genuine work of art,I believe,exhibits two qualities,Nowness and
-                  Permanence. By Nowness I mean the quality which enables an art-historian
-                  to date a work,at least,approximately. If,for example,one listens to
-                  a composition by Palestrina and one by Mozart,one knows immediately that,
-                  quite aside from their artistic merits,Palestrina must have lived earlier
-                  than Mozart: he could not possibly have written as he did after Mozart.
-                  By <del>p</del>Perman<del>a</del>ence,I mean that the work continues to have relevance and
-                  importance lomg after its creator is dead. In the history of Art,unlike
-                  the history of Science,no genuine work of art is made obsolete by a
-                  later work. Past science is of interest only to the historian of science,not
-                  to what scientists are doing at this moment. Past works of art,on the
-                  other hand,are of the utmost importance to the contemporary <del>praticioner.</del>
-                  practic<del>o</del>t<del>o</del>neroner. Every artist tries to produce something new,but in the hope
-                  that,in time,it will take its <del></del>proper place in the tradition of his art.
-                  And he cannot produce anything significantly original unless he knows
-                  well what has <del>been</del> already been done;w<del>ithout</del>,that is to say ,<del>even in</del> he cannot
-                  'rebel' against the past without having a profound reverence for it.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-6" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-7" tabindex="-1"><div class="card-body"><p class="yes-index">
-                  (3
-               </p><p class="yes-index">
-                  There are periods in history when <del>art</del> the arts develop uninterruptedly,
-                  each generation building on the achievements of the previous generation.
-                  There are other periods when radical breaks seem to be necessary. However,
-                  <del>t</del>when they are,one will generally find that the 'radical' artist does not
-                  <del>diswon</del> disown the past,but finds in works of a much earlier period or in
-                  those of <del>anotehr</del> culture than his own,the clue as to what he should do now.
-                  In my own case,for example,I know how much I owe to Anglo-Saxon and
-                  Medie<del>av</del>val Poetry.
-                  When I <del>reveiw</del> review the contemporary artistic scene,<del>I</del>it strikes me how
-                  <del>extraorinary</del> extraordinarily fortunate men like Stravinsky,Picasso,Eliot,
-                  etc,that is,those persons we think of as the founders of 'modern' art,
-                  were in being born when they were,so that they came to manhood before
-                  I9I4. Until the <del>Fis </del> First World War,western society was still pretty much
-                  what it had been in the nineteenth century. This meant that for these artists,
-                  the felt need to create something new arose from an artistic imperative,
-                  not a <del>histroi</del> historic imperative. No one asked himself:"What is the proper
-                  kind of music to compose or picture to paint or poem to write in the year
-                  I9I2.?" Secondly,their <del>audiences</del> contemporary audiences were mostly
-                  cons<del>r</del>ervative,but honestly so. Those,for instance,who were scandalised by
-                  Le Sacre du Printemps,may seem to us now to have been old <del>fgi</del> fogies,but
-                  their reaction was genuine. They did not say to themselves:"Times have
-                  changed and we must change with them in order <del>to be up to date." </del> not to
-                  be left behind."
-                  Here are a few statements by Stravinsky to <del>whcih</del> which the young,<del>where</del><del>where</del>whether
-                  artists or critics would do well to listen and <del>pknde </del> ponder over.
-               </p><p class="yes-index">
-                  In my youth the new music grew out of,and in reaction to,traditions,
-                  whereas it appears to be evolving to-day as much from social needs
-                  as interior artistic ones...The status of <del>the</del> new music as a
-                  category is another incomparable. It had none at all in my early
-                  years,being in fact categorically opposed,and often with real
-                  hostility. But the unsuccess of composers o<del>n</del>f my generation at
-                  least kept them from trading on success,and our unsuccess may have
-                  been less insidious than the automatic superlatives which nowadays
-                  kill the new by absorbing it t<del>i</del>o death.
-                  ***
-               </p><p class="yes-index">
-                  The use of the new hardware naturally appears to the new musician
-                  as "historically imperative"; but music is made out of musical
-                  imperatives,and the awareness of historical processes is probably
-                  best left to future and different kinds of wage-earners.
-                  ***
-               </p><p class="yes-index">
-                  In times,like our own,of rapid social change and political crisis,there is
-                  always a danger of confusing the principles governing political action and
-                  those governing artistic fabrication. The most important of such confus<del>u</del>ions
-                  are thr<del>r</del>ee.
-                  Firstly,one may come to think of artistic fabrication as <del>s</del>a f<del>rom</del>orm of political
-                  action. Every citizen,<del>artists</del>poets includ<del>i</del>ed,has a duty to be politically 'engagé',
-                  that is,to <del>feel</del> play a responsible part in seeing that the society of which
-                  he is a member shall function properly and improve. But the poet,qua poet,
-                  has only one political function. Since lang<del>i</del>uage is his medium,it is his duty,
-                  by his own example,to defend his <del>motehher</del>mothermother-tongue against corruption by demagogues,
-                  journalists,the mass-media etc. As Karl Kraus<del>s</del> said:"Die Sprache ist die <del>Muuet</del>
-                  Mutter,nicht das Magd,des <del>d</del> <del>g</del>Gedankens",and when language loses its meaning,
-                  its <del>palce</del> place is taken by violence. Of course,the poet may use political and
-                  social events as subject-matter for poems - they are as much a part of human
-                  experience as love or nature - but he must never imagine that his poems have
-                  the power to affect the course of history. The political and social history
-                  of Europe would be what it <del>ahs</del> has been if Dante,Shakepeare,Goethe,Micha<del>le</del>el
-                  Angelo,Tit<del>ai</del>ian,Mozart,Beethoven,e<del>y</del>tc,<del>ahd</del> had never existed.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-8" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-9" tabindex="-1"><div class="card-body"><p class="yes-index">
-                  4
-               </p><p class="yes-index">
-                  Where <del>politicla</del> political and social <del>eveils</del> evils are concerned,only
-                  t<del>k</del>wo things are effective<del>*</del>: political action and straightforward,truthful,
-                  detailed journalistic rapportage of the facts. The Arts are powerless.
-                  The second confusion,of which Plato is the most famous example,is to take
-                  arti<del>t</del>stic fabrication as the model for a good society. <del>The aim of any artist </del>
-                  Such a model,if put into practice,is bound to produce a tyrrany. The aim of
-                  the artist<del>s</del> is to produce an object which is complete and will endure without
-                  change. <del>A</del> In the 'city' of a poem,there are always the same inhabitants doing
-                  exactly the same jobs for ever. A society which was really like a good poem,
-                  embodying the aesthetic virtues of order,economy and subordination of the detail
-                  to the whole,would be a nightmare of horror for,given the historical reality of
-                  actual men,such a society could only come into being through selective breeding,
-                  ex<del>y</del>termination of the physically and mentally unfit,absolute obedience to
-                  its <del>D</del>director,a alrge slave cla<del>a</del>ss kept out of sight in <del>f</del>cellars and the
-                  strictest censure<del>e</del>ship of the Arts,forbidding anything to be said which <del>was</del> is
-                  <del>not</del> out of keeping with the official 'line.'
-                  The third confusion,typical of our western <del>civilisat</del> 'free' <del>soncietis</del>
-                  societies at this time,is the opposite of Plato's,namely to take political
-                  act<del>u</del>ion as the model for arti<del>t</del>stic fabrication. Political action is a necessity,
-                  that is to say,a<del>y</del>t very moment something has to be done,and <del>politicla</del> it
-                  is momentary - action at this moment is immeiately followed by another action
-                  at the next. Artistic fabrication,on the other hand,is <del>voluntarily</del> voluntary-
-                  the alternative to one work of art can be no work of art - and the artistic
-                  object is permanent,that is to say,immune to historical change. The attempt
-                  to model arti<del>t</del>stic fabrication o<del>s</del>n political action can therefore,only
-                  reduce it to momentary <del>(h </del> a<del>d</del>nd arbitrary 'happenings',a conformism with
-                  the tyrrany of the immediate moment which is far more enslaving and
-                  destructive of integrity than any conformism with past tradition.
-               </p><p class="yes-index">
-                  insert
-                  4`a
-               </p><p class="yes-index">
-                  What then,can the Arts do for us? In my opi<del>o</del>nion,they can do two things.
-                  They can,as Dr Johns<del>t</del>on said,'enable us a little better to enjoy life or a
-                  little better to <del>enjoy</del>endure it". And,<del>becaase</del> because they are objects <del>permant</del>
-                  permanently on hand in the world,they are the chief means by which the <del>lvi</del>
-                  living are able to break bread with the dead,and,without a communication
-                  with the dead,I do not believe that a fully human civilised life is possible.
-                  Perhaps,too,in our age,the mere making of a work of art is itself a
-                  political act. So long as artists exist,making what they please or think
-                  they ought to make,even if <del>the worlks</del> their wor<del>l</del>ks are not terribly good,they
-                  remind the Management of something managers need to be reminded of,namely,
-                  that the managed are people with faces,not anonymous numbers,that Homo
-                  Laborans is also Homo Ludens.
-                  And now,I hope those of you who know no English will forgive me i<del>s</del>f
-                  I conclude<del>d</del> these remarks with a light poem of my own,entitled
-                  Doggerel <del>of</del> by a Senior Citizen.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-10" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-11" tabindex="-1"><div class="card-body"><p class="yes-index">
-                  (4a
-               </p><p class="yes-index">
-                  insert into next page
-               </p><p class="yes-index">
-                  At this p<del>in</del>oint,a little digression on the subject of 'free' verse,which
-                  seems now to be almost universal among young poets. Though excellent
-                  examples,the poems of D.H.Lawrence,for example,exist,i<del>n my opinion </del>they are,in my opinion
-                  the exception,not the rule. The great virtue of formal metrical rules is
-                  that they forbid automatic <del>reposnse</del> resp<del>i</del>onses and,by forcing the <del>piet</del> poet
-                  to have second thoughts,free <del>f</del>him f<del>or</del>rom the fetters of self. All too often,the
-                  result of not having a fixed form to be true to,is a self-indulgence which in
-                  the detached reader can only cause boredom. Further,in my exper<del>ei</del>ience ,contrary
-                  to what one might exp<del>s</del>ect,the <del>writers o</del> free-verse poets sound much more
-                  like each other than those who write in fixed forms. Whatever freedom may do,
-                  it does not,it would seem,make for originality.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="reading" id="reading-paginate-12" tabindex="-1"><div class="card-body"></div></div></div><div class="pagination-bottom"><div class="text-center pagination"><ul class="nav nav-tabs"><li class="nav-item"><a title="1" class="nav-link active" data-toggle="tab" data-tab="reading" href="#reading-paginate-1" style="border-radius:30px;">1</a></li><li class="nav-item"><a title="2" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-2" style="border-radius:30px;">2</a></li><li class="nav-item"><a title="3" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-3" style="border-radius:30px;">3</a></li><li class="nav-item"><a title="4" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-4" style="border-radius:30px;">4</a></li><li class="nav-item"><a title="5" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-5" style="border-radius:30px;">5</a></li><li class="nav-item"><a title="6" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-6" style="border-radius:30px;">6</a></li><li class="nav-item"><a title="7" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-7" style="border-radius:30px;">7</a></li><li class="nav-item"><a title="8" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-8" style="border-radius:30px;">8</a></li><li class="nav-item"><a title="9" class="nav-link" data-toggle="tab" data-tab="reading" href="#reading-paginate-9" style="border-radius:30px;">9</a></li><li class="nav-item dropdown"><a title="more" href="#" data-toggle="dropdown" data-tab="reading" class="nav-link dropdown-toggle" style="border-radius:30px;">
-                                    more <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="10" href="#reading-paginate-10" class="nav-link" data-toggle="tab" style="border-radius:30px;">10</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="11" href="#reading-paginate-11" class="nav-link" data-toggle="tab" style="border-radius:30px;">11</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="12" href="#reading-paginate-12" class="nav-link" data-toggle="tab" style="border-radius:30px;">12</a></li></ul></li></ul></div></div></div><div class="tab-pane fade" id="commentary-tab" tabindex="-1"><div class="pagination-top"><div class="text-center pagination"><ul class="nav nav-tabs"><li class="nav-item"><a title="1" class="nav-link active" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-1" style="border-radius:30px;">1</a></li><li class="nav-item"><a title="2" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-2" style="border-radius:30px;">2</a></li><li class="nav-item"><a title="3" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-3" style="border-radius:30px;">3</a></li><li class="nav-item"><a title="4" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-4" style="border-radius:30px;">4</a></li><li class="nav-item"><a title="5" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-5" style="border-radius:30px;">5</a></li><li class="nav-item"><a title="6" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-6" style="border-radius:30px;">6</a></li><li class="nav-item"><a title="7" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-7" style="border-radius:30px;">7</a></li><li class="nav-item"><a title="8" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-8" style="border-radius:30px;">8</a></li><li class="nav-item"><a title="9" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-9" style="border-radius:30px;">9</a></li><li class="nav-item dropdown"><a title="more" href="#" data-toggle="dropdown" data-tab="commentary" class="nav-link dropdown-toggle" style="border-radius:30px;">
-                                    more <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="10" href="#commentary-paginate-10" class="nav-link" data-toggle="tab" style="border-radius:30px;">10</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="11" href="#commentary-paginate-11" class="nav-link" data-toggle="tab" style="border-radius:30px;">11</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="12" href="#commentary-paginate-12" class="nav-link" data-toggle="tab" style="border-radius:30px;">12</a></li></ul></li></ul></div></div><div class="tab-content"><div class="pagination-tab tab-pane active" data-tab="commentary" id="commentary-paginate-1" tabindex="-1"><div class="card-body"><p>
-                  FREEDOM AND NECESSITY IN THE ARTS
-               </p><p>
-                  May 21st.
-               </p><p>
-                  Dear S<del>e</del>tella<abbr title="unclear">·</abbr><br />
-                  You're an angel. I have to deliver this<br />
-                  in Neulengbach on Sun<abbr title="unclear">day</abbr>, June 14th.<br />
-                  In case your dictionary doesn't give it, the<br />
-                  German for the technical word buddle (page I, near<br />
-                  bottom) is Erzwaschtrog .<br />
-                  I hope there is an equivalent German euphemism<br />
-                  for <abbr title="unclear">"t</abbr>e Senior Citizen."<abbr title="unclear">,</abbr><br />
-                  If there is a special honary title of adress<br />
-                  for a Landeshaupt<abbr title="unclear">m</abbr>an,please supply.<br />
-                  love<br />
-                  Wystan<br />
-                  P<abbr title="unclear">_</abbr>S. Adit= Stollen.<br />
-                  Concentrating Mill is,I <del>suspec</del>t<abbr title="unclear">G</abbr>uess, though I <abbr title="unclear">ma</abbr>y<br />
-                  be wrong , Vereinigungmühle <abbr title="unclear">.</abbr>
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-2" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-3" tabindex="-1"><div class="card-body"><p>
-                  (<abbr title="unclear">1</abbr>
-               </p><p>
-                                   Sehr vee<del>rh</del>hrter Herr Landeshauptman<abbr title="unclear">n,</abbr>meine Damen und Herren:<br />
-                            I hope you will pardon me if I speak somewhat personally. I do so,<br />
-                  not out of vanity,but bec<del>ua</del>ause  I do <del>j</del>not wish to give the impression that I<br />
-                  am attempting to lay down absolute laws which are valid for all. I give you my<br />
-                  experience<abbr title="unclear">s</abbr> as a poet,in the hope that you will be able to compare the<del>,</del>m with<br />
-                  yours<del>own</del>,and form your own judgment about them.<br />
-                     Most of what I <del>o</del>know about the writing of poetry,or at least about the kind I<br />
-                  am interested in writing,I discovered long before I took any interest in poetry<br />
-                  itself.<br />
-                    Between the ages of six and twelve,I spent a great many of my waking hours in<br />
-                  the fab<del>o</del>rication of a private secondary sacred world,the basic elements of which<br />
-                  were <del>atO</del> a) a limestone landscape mainly derived from the Pennine Moors in the<br />
-                  North of England and b) an industry - lead-mining.<br />
-                     It is no doubt psychologically significant that my sacred world was autistic -<br />
-                  that is to say,I had no wish to share it with others no<del>t</del>r could I have done so.<br />
-                  However,though constructed for and inhabited by myself alone,I needed the help of<br />
-                  others,my parents in particular,in collecting its basic materials; others had to<br />
-                  procure for me the necessary text-books on geology and machinery,maps,catalog<del>i</del>ues,<br />
-                  guide-books and photographs,and,when occasion offered<del>,to</del> ta<del>l</del>ke me down real mines,<br />
-                  tasks which they performed with unfailing patience and generosity.<br />
-                      From this activity,I learned certain principles which I was later to find applied<br />
-                  to all artistic fabrication. First,whatever other elements it may include,the<br />
-                  initial impulse to create a secondary world is a feeling of awe aroused by<br />
-                  encounters,in the Primary World,with sacred beings or events.  This feeling of awe<br />
-                  is an imperative,that is to<abbr title="unclear">´</abbr> say,one is not free to choose the object or the event<br />
-                  that arouses it. Though every work of art is a secondary world,it cannot be<br />
-                  constructed ex nihilo,but is a selection from and a recombination of the contents of<br />
-                  the Primary World. Even the 'purest' poem,in the French Symboliste sense,is<br />
-                  made of words which are not the poet's private property,but the communal creation<br />
-                  of the linguistic group to whom he belongs,so that their meaning can be looked up<br />
-                  in a dictionary.<br />
-                       Secondly,in constructing my private world,I discovere<del>s</del>d that,though this was<br />
-                  a game,or rather precisely because it was a game - that is to say,not a necessity<br />
-                  like eating or sleeping,but something I was free to do or not as I chose - it<br />
-                  could not be played without rules. Absolute freedom is meaningless: freedom can<br />
-                  only be realised in a choice between alternati<del>c</del>ves. A secondary world,be it a poem,<br />
-                  or a game of football or bridge,must be as much a world of law as the Primary,the<br />
-                  only difference being that in the world of games one is free to decide what its<br />
-                  laws shall be. But to all games as to real life,Goethe's lines apply.
-               </p><p>
-                     As regards my particu<del>al</del>l<abbr title="unclear">a</abbr>r lead-mining world,I decided,or rather,without conscious<br />
-                  decision I instinctively felt,that I must impose two restrictions upon my freedom<br />
-                  of fantasy. In choosing what objects were to be included,I was free to select this<br />
-                  and reject that,on condition that both were real objects in the Primary World,to<br />
-                  choose,for example,between two kinds of water-turbine,which could be found in a<br />
-                  text-book  on mining machinery or a manufacturer's catalogue: but I was not free<br />
-                  to invent one.  In deciding how my world was to function,I <del>was </del> could choose between<br />
-                  t<del>e</del>wo practical possibilit<del>es</del>ies  - a mine can be drained either by an adit or a pump -<br />
-                  but physic<del></del>al impossibili<del>es</del>ties and magic means were forbidden. <del>T</del>When I say forbidden,<br />
-                  I mean that I felt,in some obscure way,that they were morally forbidden. Then there<br />
-                  came a day when the moral issue became quite conscious. As I was planning my<br />
-                  Platonic Idea of a concentrating-mill,I ran into difficulties. I had to choose<br />
-                  between two types of a cer<del>at</del>tain machine for separating the sli<abbr title="unclear">m</abbr>es,called a buddle.<br />
-                  One type I found more sacred or '<del>beatiuful</del> beautiful',but the other type was,I<br />
-                  knew from my reading,the more efficient. At this point I realised that it was my<br />
-                  moral duty to sacrifice my <del>aethetic</del> aesthetic preference to reality or truth.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-4" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-5" tabindex="-1"><div class="card-body"><p>
-                  (2
-               </p><p>
-                      When,later,I began to write poetry’I found that,for me,at least,the same<br />
-                  obligation was binding. That is to say,I cannot accept the do<del>s</del>ctrine that,in<br />
-                  poetry,there is a 'suspension of belief<del>e</del>'. A poet must never make a statement<br />
-                  simply because it sounds poetically exciting: he must also bel<del>ei</del>ieve it to be<br />
-                  true. This does not mean,of course,that one can only appreciate a poet whose<br />
-                  beliefs happen to co-incide with one's own. It does mean,however,that one must<br />
-                  <del>n</del>be convinced that the poet really believ<del></del>es what he says,however odd <del>that</del> the<br />
-                  belief may seem to oneself.<br />
-                         Between constructing a private <del>fantsa</del>yfantasy world for oneself alone<br />
-                  and writing poetry,there is,of course,a profound difference. A <del>fanatsy</del><br />
-                  fantasy world exists only in the head of its creator: a poem is a public<br />
-                  verbal object intended to be read and enjoyed by others. To become conscious<br />
-                  of others is to become conscious of historical time/. in various ways. The<br />
-                  contents of a poem are necessarily past <del>expereinces</del> experiences,and the goal of<br />
-                  a poem is <del>necessaily</del> necessarily in the future,since it cannot be read until<br />
-                  it has been written. Again<abbr title="unclear">,</abbr>to write a poem is to engage in an activity which<br />
-                  human beings have practised for centuries. If one asks why human beings<br />
-                  make poems or paint pictures or compose music,I can see two possible answers.<br />
-                  Firstly all the artistic media are forms of an activity pecul<del></del>iar to human<br />
-                  beings,namely,Personal Speech. Many animals have impersonal codes of<br />
-                  communications,visual,olfactory,auditory signals,b<del></del>y which they convey to<br />
-                  other members of their species vital information about food,territory,sex,<br />
-                  the presence of <del>enmies</del> enemies etc,and in social animals like the bee,such<br />
-                  a code may be exceedingly comple<del>s</del>x. We,too,of course,often use words in the same<br />
-                  way,as when I ask a stranger the way to the railroad station. But when we<br />
-                  truly speak,we do something quite different. We <del>spak</del> speak as person to person<br />
-                  in order to disclose ourselves to others and share our exper<del>ei</del><abbr title="unclear">i</abbr>ences with<br />
-                  them,not because we must,but becuase we enjoy doing so. This activity is<br />
-                  sometimes quite erroneously called 'self-expression'. If I write a poem<br />
-                  about <del>ceratin</del> experiences I have had,I do so<del>,not bec</del> bec<del>ua</del><abbr title="unclear">a</abbr>use I think it<br />
-                  <del>may</del>should be of interest and value to others<del>,not</del>: the fact that it has till now<br />
-                  only been my exper<del>ei</del>ience is accidental. What the poet or any artist has to convey<br />
-                  is a perception of a reality common to all,but seen from a unique perpsective,<br />
-                  which it is his duty as well as his pleasure to share with others. To small<br />
-                  truths as well as great,St Augustine's words apply.
-               </p><p>
-                              The truth is neither mine nor his nor another's;but belongs<br />
-                              to us all whom Thou callest to partake of it: warning us<br />
-                              terribly,not to account it private to ourselves,lest we be<br />
-                              deprived of it.
-               </p><p>
-                    Then the second impulse to artistic fabrication is the desire to transcend<br />
-                  our mortality,by making objects which,unlike ourselves,are not subject to<br />
-                  natural death,but can remain <del>permantly</del> permanently 'on hand' in the world,<br />
-                  long after we and our society have perished.<br />
-                     Every genuine work of art,I believe,exhibits two qualities,Nowness and<br />
-                  Permanence. By Nowness I mean the quality which enables an art-historian<br />
-                  to date a work,at least,approximately. If,for example,one listens to<br />
-                  a composition by Palestrina and one by Mozart,one knows immediately that,<br />
-                  quite aside from their artistic merits,Palestrina must have lived earlier<br />
-                  than Mozart: he could not possibly have written as he did after Mozart.<br />
-                  By <del>p</del>Perman<del>a</del>ence,I mean  that the work continues to have relevance and<br />
-                  importance lo<abbr title="unclear">m</abbr>g after its creator is dead. In the history of Art,unlike<br />
-                  the history of Science,no genuine work of art is made obsolete by a<br />
-                  later work. Past science is of interest only to the historian of science,not<br />
-                  to what scientists are doing at this moment. Past works of art,on the<br />
-                  other hand,are of the utmost importance to the contemporary <del>praticioner.</del><br />
-                  practic<del>o</del>t<del>o</del>neroner. Every artist tries to produce something new,but in the hope<br />
-                  that,in time,it will take its <del></del>proper place in the tradition of his art.<br />
-                  And he cannot produce anything significantly original unless he knows<br />
-                  well what has <del>been</del> already been done<abbr title="unclear">;</abbr>w<del>ithout</del>,that is to say ,<del>even in</del> he cannot<br />
-                  'rebel' against the past without having a profound reverence for it.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-6" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-7" tabindex="-1"><div class="card-body"><p>
-                  (3
-               </p><p>
-                        There are periods in history when <del>art</del> the arts develop uninterruptedly,<br />
-                  each generation building on the achievements of the previous generation.<br />
-                  There are other periods when radical breaks seem to be necessary. However,<br />
-                  <del>t</del>when they are,one will generally find that the 'radical' artist does not<br />
-                  <del>diswon</del> disown the past,but finds in works of a much earlier period or in<br />
-                  those of <del>anotehr</del> culture than his own,the clue as to what he should do now.<br />
-                  In my own case,for example,I know how much I owe to Anglo-Saxon and<br />
-                  Medie<del>av</del>val Poetry.<br />
-                      When I <del>reveiw</del> review the contemporary artistic scene,<del>I</del><abbr title="unclear">i</abbr>t strikes me how<br />
-                  <del>extraorinary</del> extraordinarily fortunate men like Stravinsky,Picasso,Eliot,<br />
-                  etc,that is,those persons we think of as the founders of 'modern' art,<br />
-                  were in being born when they were,so that they came to manhood before<br />
-                  I9I4. Until the <del>Fis </del> First World War,western society was still pretty much<br />
-                  what it had been in the nineteenth century. This meant that for these artists,<br />
-                  the felt need to create something new arose from an artistic imperative,<br />
-                  not a <del>histroi</del> historic imperative. No one asked himself:"What is the proper<br />
-                  kind of music to compose or picture to paint or poem to write in the year<br />
-                  I9I2.?"  Secondly,their <del>audiences</del> contemporary audiences  were mostly<br />
-                  cons<del>r</del>ervative,but honestly so.  Those,for instance,who were scandalised by<br />
-                  Le Sacre du Printemps,may seem to us now to have been old <del>fgi</del> fogies,but<br />
-                  their reaction was genuine. They did not say to themselves:"Times have<br />
-                  changed and we must change with them in order <del>to be up to date." </del> not to<br />
-                  be left behind."<br />
-                       Here are a few statements by Stravinsky to <del>whcih</del> which the young,<del>where</del><del>where</del>whether<br />
-                  artists or critics would do well to listen and <del>pknde </del> ponder over.
-               </p><p>
-                            In my youth the new music grew out of,and in reaction to,traditions,<br />
-                            whereas it appears to be evolving to-day as much from social needs<br />
-                            as interior artistic ones...The status of <del>the</del> new music as a<br />
-                            category is another incomparable. It had none at all in my early<br />
-                            years,being in fact categorically opposed,and often with real<br />
-                            hostility. But the unsuccess of composers o<del>n</del>f my generation at<br />
-                            least kept them from trading on success,and our unsuccess may have<br />
-                            been less insidious than the automatic superlatives which nowadays<br />
-                            kill the new by absorbing it t<del>i</del>o death.<br />
-                                                   ***
-               </p><p>
-                            The use of the new hardware naturally appears to the new musician<br />
-                            as "historically imperative"; but music is made out of musical<br />
-                            imperatives,and the awareness of historical processes is probably<br />
-                            best left to future and different kinds of wage-earners.<br />
-                                                   ***
-               </p><p>
-                   In times,like our own,of rapid social change and political crisis,there i<abbr title="unclear">s</abbr><br />
-                  always a danger of confusing the principles governing political action and<br />
-                  those governing artistic fabrication.  The most important of such confus<del>u</del>ions<br />
-                  are thr<del>r</del>ee.<br />
-                    Firstly,one may come to think of artistic fabrication as <del>s</del><abbr title="unclear">a</abbr> f<del>rom</del>orm of politic<abbr title="unclear">a</abbr>l<br />
-                  action. Every citizen,<del>artists</del>poets includ<del>i</del>ed,has a duty to be politically 'engagé',<br />
-                  that is,to <del>feel</del> play a responsible part in seeing that the society of which<br />
-                  he is a member shall function properly and improve. But the poet,qua poet,<br />
-                  has only one political function. Since lang<del>i</del>uage is his medium,it is his duty,<br />
-                  by his own example,to defend his <del>motehher</del>mothermother-tongue against corruption by demagogues,<br />
-                  journalists,the mass-media etc. As Karl Kraus<del>s</del> said:"Die Sprache ist die <del>Muuet</del><br />
-                  Mutter,nicht das Magd,des <del>d</del> <del>g</del>Gedankens",and when language loses its meaning,<br />
-                  its <del>palce</del> place is taken by violence. Of course,the poet may use political and<br />
-                  social events as subject-matter for poems - they are as much a part of human<br />
-                  experience as love or nature - but he must never imagine that his poems have<br />
-                  the power to affect the course of history. The political and social history<br />
-                  of Europe w<abbr title="unclear">o</abbr>uld be what it <del>ahs</del> has been if Dante,Shakepeare,Goethe,Micha<del>le</del>el<br />
-                  Angelo,Tit<del>ai</del>ian,Mozart,Beethoven,e<del>y</del>tc,<del>ahd</del> had never existed.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-8" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-9" tabindex="-1"><div class="card-body"><p>
-                  4
-               </p><p>
-                     Where <del>politicla</del> political and social <del>eveils</del> evils are concerned,only<br />
-                  t<del>k</del>wo things are effective<del>*</del><abbr title="unclear">:</abbr> political action and straightforward,truthful,<br />
-                  detailed journalistic rapportage of the facts. The Arts are powerless.<br />
-                    The second confusion,of which Plato is the most famous example,is to take<br />
-                  arti<del>t</del>stic fabrication as the model for a good society. <del>The aim of any artist </del><br />
-                  Such a model,if put into practice,is bound to produce a tyrrany. The aim of<br />
-                  the artist<del>s</del> is to produce an object which is complete and will endure without<br />
-                  change. <del>A</del> In the 'city' of a poem,there are always the same inhabitants doing<br />
-                  exactly the same jobs for ever. A society which was really like a good poem,<br />
-                  embodying the aesthetic virtues of order,economy and subordination of the detail<br />
-                  to the whole,would be a nightmare of horror for,given the historical reality of<br />
-                  actual men,such a society could only come into being through selective breeding,<br />
-                  ex<del>y</del>termination  of the physically and mentally unfit,absolute obedience to<br />
-                  its <del>D</del>director,a alrge slave cla<del>a</del>ss kept out of sight in <del>f</del>cellars and the<br />
-                  strictest censure<del>e</del>ship of the Arts,forbidding anything to be said which <del>was</del> is<br />
-                  <del>not</del> out of keeping with the official 'line.'<br />
-                     The third confusion,typical of our western <del>civilisat</del> 'free' <del>soncietis</del><br />
-                  societies at this time,is the opposite of Plato's,namely to take political<br />
-                  act<del>u</del>ion as the model for arti<del>t</del>stic fabrication. Political action is a necessity,<br />
-                  that is to say,a<del>y</del>t very moment something has to be done,and <del>politicla</del> it<br />
-                  is momentary - action at this moment is immeiately followed by another action<br />
-                  at the next.  Artistic fabrication,on the other hand,is <del>voluntarily</del> voluntary-<br />
-                  the alternative to one work of art can be no work of art - and the artistic<br />
-                  object is permanent,that is to say,immune to historical change. The attempt<br />
-                  to model arti<del>t</del>stic fabrication o<del>s</del>n political action can therefore,only<br />
-                  reduce it to momentary <del>(h </del> a<del>d</del>nd arbitrary 'happenings',a conformism with<br />
-                  the tyrrany of the immediate moment which is far more enslaving and<br />
-                  destructive of integrity than any conformism with past tradition.
-               </p><p>
-                  i<abbr title="unclear">n</abbr>sert<br />
-                  4<abbr title="unclear">`</abbr>a
-               </p><p>
-                     What then,can the Arts do for us? In my opi<del>o</del>nion,they can do two things.<br />
-                  They can,as Dr Johns<del>t</del>on said,'enable us a little better to enjoy life or a<br />
-                  little better to <del>enjoy</del>endure it". And,<del>becaase</del> because they are objects <del>permant</del><br />
-                  permanently on hand in the world,they are the chief means by which the <del>lvi</del><br />
-                  living are able to break bread with the dead,and,without a communication<br />
-                  with the dead,I do not believe that a fully human civilised life is possible.<br />
-                    Perhaps,too,in our age,the mere making of a work of art is itself a<br />
-                  political act. So long as artists exist,making what they please or think<br />
-                  they ought to make,even if <del>the worlks</del> their wor<del>l</del>ks are not terribly good,they<br />
-                  remind the Management of something managers need to be reminded of,namely,<br />
-                  that the managed are people with faces,not anonymous numbers,that Homo<br />
-                  Laborans is also Homo Ludens.<br />
-                           And now,I hope those of you who know no English will forgive me i<del>s</del>f<br />
-                  I conclude<del>d</del> these remarks with a light poem of my own,entitled<br />
-                  Doggerel <del>of</del> by a Senior Citizen.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-10" tabindex="-1"><div class="card-body"></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-11" tabindex="-1"><div class="card-body"><p>
-                  (4a
-               </p><p>
-                  insert into next page
-               </p><p>
-                         At this p<del>in</del>oint,a little digression on the subject of 'free' verse,which<br />
-                  seems now to be almost universal among young poets. Though excellent<br />
-                  examples,the poems of D.H.Lawrence,for example,exist,i<del>n my opinion </del>they are,<abbr title="unclear">in</abbr> my opinio<abbr title="unclear">n</abbr><br />
-                  the exception,not the rule. The great virtue of formal metrical rules is<br />
-                  that they forbid automatic <del>reposnse</del> resp<del>i</del>onses and,by forcing the <del>piet</del> poet<br />
-                  to have second thoughts,free <del>f</del>him f<del>or</del>rom the fetters of self. All too often,the<br />
-                  result of not having a fixed form to be true to,is a self-indulgence which in<br />
-                  the detached reader can only cause boredom. Further,in my exper<del>ei</del>ience ,contrary<br />
-                  to what one might exp<del>s</del>ect,the <del>writers o</del> free-verse poets sound much more<br />
-                  like each other than those who write in fixed forms. Whatever freedom may do,<br />
-                  it does not,it would seem,make for originality.
-               </p></div></div><div class="pagination-tab tab-pane fade" data-tab="commentary" id="commentary-paginate-12" tabindex="-1"><div class="card-body"></div></div></div><div class="pagination-bottom"><div class="text-center pagination"><ul class="nav nav-tabs"><li class="nav-item"><a title="1" class="nav-link active" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-1" style="border-radius:30px;">1</a></li><li class="nav-item"><a title="2" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-2" style="border-radius:30px;">2</a></li><li class="nav-item"><a title="3" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-3" style="border-radius:30px;">3</a></li><li class="nav-item"><a title="4" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-4" style="border-radius:30px;">4</a></li><li class="nav-item"><a title="5" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-5" style="border-radius:30px;">5</a></li><li class="nav-item"><a title="6" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-6" style="border-radius:30px;">6</a></li><li class="nav-item"><a title="7" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-7" style="border-radius:30px;">7</a></li><li class="nav-item"><a title="8" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-8" style="border-radius:30px;">8</a></li><li class="nav-item"><a title="9" class="nav-link" data-toggle="tab" data-tab="commentary" href="#commentary-paginate-9" style="border-radius:30px;">9</a></li><li class="nav-item dropdown"><a title="more" href="#" data-toggle="dropdown" data-tab="commentary" class="nav-link dropdown-toggle" style="border-radius:30px;">
-                                    more <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="10" href="#commentary-paginate-10" class="nav-link" data-toggle="tab" style="border-radius:30px;">10</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="11" href="#commentary-paginate-11" class="nav-link" data-toggle="tab" style="border-radius:30px;">11</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="12" href="#commentary-paginate-12" class="nav-link" data-toggle="tab" style="border-radius:30px;">12</a></li></ul></li></ul></div></div></div><div class="tab-pane fade" id="xml-tab" tabindex="-1"><div class="card-body"><iframe frameborder="0" scrolling="yes" width="100%" height="800px" src="xml-view/amp-transcript__0043.html"></iframe></div></div></div></div></div><div class="wrapper fundament-default-footer" id="wrapper-footer-full" style="margin-top: 4em;"><div class="container" id="footer-full-content" tabindex="-1"><div class="footer-separator">
+               </p></div></div><div id="img-resize-11" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-11"><div id="sheet_container_d40e1380" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1380"><img id="sheet_img_d40e1380" onload="[load_image('sheet_img_d40e1380','sheet_container_d40e1380','sheet_container2_d40e1380'), $( document ).ready(resize('11'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0153.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div><div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-12" tabindex="-1"><div class="expand-wrapper text-center"><input title="change size" id="img-expand-12" type="range" min="1" max="400" value="201" class="slider" /></div><div id="container-resize-12" class="transcript row"><div id="text-resize-12" class="text-re col-md-6"><div class="card-body"></div></div><div id="img-resize-12" class="col-md-6 card-header osd-viewer" style="padding: 1em;background-color: #dedede;"><div id="viewer-12"><div id="sheet_container_d40e1439" style="padding:.5em;"><script type="text/javascript" src="js/osd_single.js"></script><div id="sheet_container2_d40e1439"><img id="sheet_img_d40e1439" onload="[load_image('sheet_img_d40e1439','sheet_container_d40e1439','sheet_container2_d40e1439'), $( document ).ready(resize('12'))]" src="https://iiif.acdh.oeaw.ac.at/iiif/images/amp/amp_0154.jp2/full/full/0/default.jpg" /></div></div></div></div></div></div></div><div class="pagination-bottom"><div class="text-center pagination"><ul class="nav nav-tabs"><li class="nav-item"><a title="1" class="nav-link active" data-toggle="tab" data-tab="paginate" href="#paginate-1" style="border-radius:30px;">1</a></li><li class="nav-item"><a title="2" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-2" style="border-radius:30px;">2</a></li><li class="nav-item"><a title="3" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-3" style="border-radius:30px;">3</a></li><li class="nav-item"><a title="4" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-4" style="border-radius:30px;">4</a></li><li class="nav-item"><a title="5" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-5" style="border-radius:30px;">5</a></li><li class="nav-item"><a title="6" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-6" style="border-radius:30px;">6</a></li><li class="nav-item"><a title="7" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-7" style="border-radius:30px;">7</a></li><li class="nav-item"><a title="8" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-8" style="border-radius:30px;">8</a></li><li class="nav-item"><a title="9" class="nav-link" data-toggle="tab" data-tab="paginate" href="#paginate-9" style="border-radius:30px;">9</a></li><li class="nav-item dropdown"><a title="more" href="#" data-toggle="dropdown" data-tab="paginate" class="nav-link dropdown-toggle" style="border-radius:30px;">
+                                    more <span class="caret"></span></a><ul class="dropdown-menu" role="menu"><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="10" href="#paginate-10" class="nav-link" data-tab="paginate" data-toggle="tab" style="border-radius:30px;">10</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="11" href="#paginate-11" class="nav-link" data-tab="paginate" data-toggle="tab" style="border-radius:30px;">11</a></li><li class="nav-item dropdown-submenu" style="display:inline-block;"><a title="12" href="#paginate-12" class="nav-link" data-tab="paginate" data-toggle="tab" style="border-radius:30px;">12</a></li></ul></li></ul></div></div></div></div><div class="wrapper fundament-default-footer" id="wrapper-footer-full"><div class="container" id="footer-full-content" tabindex="-1"><div class="footer-separator">
                     CONTACT
                 </div><div class="row"><div class="footer-widget col-lg-1 col-md-2 col-sm-2 col-xs-6  ml-auto text-center "><div class="textwidget custom-html-widget"><a href="https://www.oeaw.ac.at/acdh"><img src="https://fundament.acdh.oeaw.ac.at/common-assets/images/acdh_logo.svg" class="image" alt="ACDH Logo" style="max-width: 100%; height: auto;" title="ACDH Logo" /></a></div></div><div class="footer-widget col-lg-4 col-md-3 col-sm-3"><div class="textwidget custom-html-widget"><p>
                                 ACDH-CH OEAW
@@ -878,4 +330,4 @@
                                 T: +43 1 51581-2200
                                 <br />
                                 E: <a href="mailto:acdh@oeaw.ac.at">acdh@oeaw.ac.at</a></p></div></div><div class="footer-widget col-lg-4 col-md-3 col-sm-4"><h6 class="font-weight-bold">PROJECT PARTNERS</h6><div class="container"><div class="row"><div class="col-lg-6 col-md-6 col-sm-12"><div class="flex-md-row mb-4 align-items-center"><a href="https://www.fwf.ac.at/en/"><img class="card-img-right flex-auto d-md-block" src="https://www.fwf.ac.at/fileadmin/files/Images/News_Presse/Presse/Logo/fwf-logo_var2.jpg" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 140px; height: auto; margin-top:1em;" title="FWF Der Wissenschaftsfond" /></a></div></div><div class="col-lg-6 col-md-6 col-sm-12"><div class="flex-md-row mb-4 align-items-center"><a href="https://www.univie.ac.at/en/"><img class="card-img-right flex-auto d-md-block" src="https://communications.univie.ac.at/fileadmin/user_upload/d_oeffentlichkeitsarbeit/Logos/2016-02/Uni_Logo_2016.jpg" alt="Universität Wien Logo" style="max-width: 160px; height: auto; vertical-align: middle;" title="Universität Wien" /></a></div></div></div><div class="row"><div class="col-lg-6 col-md-6 col-sm-12"><div class="flex-md-row mb-4 align-items-center"><a href="https://www.donau-uni.ac.at/en.html"><img class="card-img-right flex-auto d-md-block" src="https://upload.wikimedia.org/wikipedia/de/2/2f/Donau_Universit%C3%A4t_Krems.svg" alt="Donau Universität Krems Logo" style="max-width: 120px; height: auto; vertical-align: middle;" title="Donau Universität Krems " /></a></div></div><div class="col-lg-6 col-md-6 col-sm-12"><div class="flex-md-row mb-4 align-items-center"><a href="https://cvl.tuwien.ac.at/"><img class="card-img-right flex-auto d-md-block" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px; height: auto; padding: .5em;" title="Computer Vision Lab" /></a></div></div></div></div></div><div class="footer-widget col-lg-3 col-md-4 col-sm-3 ml-auto"><div class="row"><div class="textwidget custom-html-widget"><h6 class="font-weight-bold">HELPDESK</h6><p>ACDH-CH runs a helpdesk offering advice for questions related to various digital humanities topics.</p><p><a class="helpdesk-button" href="mailto:acdh-helpdesk@oeaw.ac.at">ASK US!</a></p></div></div><div class="row"><div class="custom-html-widget" style="margin-left:0 !important;"><div class="row"><div class="textwidget custom-html-widget"><p style="margin-bottom:0 !important;">Social: </p></div></div><div class="row"><div class="custom-html-widget col-md-4"><a id="github-logo" title="Auden Musulin on GitHub" href="https://github.com/Auden-Musulin-Papers" class="nav-link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-4.466 19.59c-.405.078-.534-.171-.534-.384v-2.195c0-.747-.262-1.233-.55-1.481 1.782-.198 3.654-.875 3.654-3.947 0-.874-.312-1.588-.823-2.147.082-.202.356-1.016-.079-2.117 0 0-.671-.215-2.198.82-.64-.18-1.324-.267-2.004-.271-.68.003-1.364.091-2.003.269-1.528-1.035-2.2-.82-2.2-.82-.434 1.102-.16 1.915-.077 2.118-.512.56-.824 1.273-.824 2.147 0 3.064 1.867 3.751 3.645 3.954-.229.2-.436.552-.508 1.07-.457.204-1.614.557-2.328-.666 0 0-.423-.768-1.227-.825 0 0-.78-.01-.055.487 0 0 .525.246.889 1.17 0 0 .463 1.428 2.688.944v1.489c0 .211-.129.459-.528.385-3.18-1.057-5.472-4.056-5.472-7.59 0-4.419 3.582-8 8-8s8 3.581 8 8c0 3.533-2.289 6.531-5.466 7.59z"></path></svg></a></div><div class="custom-html-widget col-md-4"><a id="twitter-logo" title="Auden Musulin on Twitter" href="https://twitter.com/amp_oeaw" class="nav-link" target="_blank"><img class="card-img-right flex-auto d-md-block" style="max-width: 32px;height:auto;" title="2021 Twitter Logo Blue" alt="2021 Twitter Logo Blue" src="images/2021-twitter-logo-blue.png" /></a></div></div></div></div></div></div></div></div><div class="footer-imprint-bar" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;">
-            © Copyright OEAW | <a href="imprint.html">Impressum/Imprint</a></div><script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script><script type="text/javascript" src="js/dt.js"></script></div><script type="text/javascript" src="js/pagination-sync.js"></script></body></html>
+            © Copyright OEAW | <a href="imprint.html">Impressum/Imprint</a></div><script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script><script type="text/javascript" src="js/dt.js"></script></div><script type="text/javascript" src="js/pagination-sync.js"></script><script type="text/javascript" src="js/edition-view-functions.js"></script></body></html>
