@@ -31,12 +31,12 @@ jobs:
     - name: Build
       run: |
         ant
-    - name: Build Index
-      run: |
-        ./build_index.sh
-    - name: Build static search filenames
-      run: |
-        html/autocomplete-addon/script.sh
+    # - name: Build Index
+    #   run: |
+    #     ./build_index.sh
+    # - name: Build static search filenames
+    #   run: |
+    #     html/autocomplete-addon/script.sh
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
