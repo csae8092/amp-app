@@ -30,7 +30,7 @@
                                         <a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden-Musulin Correspondence</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;" title="Surface reconstructions" class="nav-link">Surface reconstructions (in progress)</a>
+                                        <a style="color:lightgrey!important;" title="Surface reconstructions" class="nav-link">Surface reconstructions <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a>
@@ -44,27 +44,27 @@
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">
-                                <a style="color:lightgrey!important;" title="Indexes" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes  (in progress)<span class="caret"></span></a>
+                                <a style="color:lightgrey!important;" title="Indexes" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes  <small>(in progress)</small><span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Persons" class="nav-link">Persons (in progress)</a>
+                                        <a style="color:lightgrey!important;"  title="Persons" class="nav-link">Persons <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Institutions" class="nav-link">Institutions (in progress)</a>
+                                        <a style="color:lightgrey!important;"  title="Institutions" class="nav-link">Institutions <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Works" class="nav-link">Works (in progress)</a>
+                                        <a style="color:lightgrey!important;"  title="Works" class="nav-link">Works <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Places" class="nav-link">Places (in progress)</a>
+                                        <a style="color:lightgrey!important;"  title="Places" class="nav-link">Places <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Events" class="nav-link">Events (in progress)</a>
+                                        <a style="color:lightgrey!important;"  title="Events" class="nav-link">Events <small>(in progress)</small></a>
                                     </li>
                                 </ul>                                
                             </li>                            
                             <li class="nav-item">
-                                <a style="color:lightgrey!important;" title="Relations" class="nav-link">Relations (in progress)</a>
+                                <a style="color:lightgrey!important;" title="Relations" class="nav-link">Relations <small>(in progress)</small></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a title="Biographies" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span></a>
@@ -87,13 +87,13 @@
                                         <a title="Team" href="team.html" class="nav-link">Team</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Editorial Declaration" class="nav-link">Editorial Declaration (in progress)</a>
+                                        <a style="color:lightgrey!important;"  title="Editorial Declaration" class="nav-link">Editorial Declaration <small>(in progress)</small></a>
                                     </li>
                                     <!--<li class="nav-item dropdown-submenu">
                                         <a title="Instruction for using the edition" href="#" class="nav-link">Instruction for using the edition</a>
                                     </li>-->
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Technical Documentation" class="nav-link">Technical Documentation (in progress)</a>
+                                        <a style="color:lightgrey!important;"  title="Technical Documentation" class="nav-link">Technical Documentation <small>(in progress)</small></a>
                                     </li>
                                 </ul>                                
                             </li>  

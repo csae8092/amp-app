@@ -33,5 +33,18 @@ function resize(position) {
             isResizing = false;
         });
     });
-}
 
+    // function getOSD() {
+    //     let viewerID = `canvas`;
+    //     let viewer = $(viewerID).children('div');
+    //     let style = viewer.attr('style');
+    //     console.log(style);
+    //     var regex = /\d+px/g;
+    //     var match = regex.exec(style);
+    //     console.log(match[0]);
+    //     console.log(match);
+    //     $('#clear-link').on("click", function() {
+    //         viewer.css({"height": match[0], "width": match[0]});
+    //     });
+    // };
+}

@@ -36,10 +36,12 @@ function diplomaticClick(el) {
         $(".osd-viewer").each(function() {
             $(this).removeClass("fade-all");
             $(this).addClass("col-md-6");
+            $(this).css("max-width","50%");
         });
         $(".text-re").each(function() {
             $(this).removeClass("col-md-12");
-            $(this).addClass("col-md-6");            
+            $(this).addClass("col-md-6");         
+            $(this).css("max-width","50%");   
         });
         $(".expand-wrapper").each(function() {
             $(this).removeClass("fade");

@@ -227,7 +227,7 @@
                                         <div class="text-center">
                                             <a title="clear"
                                                 style="width:20%;margin:0 auto 1em auto;"
-                                                onclick="clearAll(this)"
+                                                onclick="clearAll(this);"
                                                 class="nav-link btn badge-link text-center"
                                                 id="clear-link">
                                                 clear all
