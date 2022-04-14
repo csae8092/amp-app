@@ -18,6 +18,10 @@
         <xsl:variable name="typed" select="'font-family: Courier New, monospace; font-size: 18px;'"/>
         <xsl:variable name="printed" select="'font-family: Arial, serif; font-size: 18px;'"/>
         
+        <div class="pagination-top">
+            <xsl:call-template name="view-pagination"/>
+        </div> 
+        
         <div class="tab-content"
             style="{
                 if (ancestor::tei:text/@hand = '#handwritten') then 
@@ -55,22 +59,21 @@
                                      class="col-md-6 card-header osd-viewer"
                                      style="padding: 1em;background-color: #dedede;">                                    
                                     <!--<hr/> -->                                             
-                                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
-                                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
+                                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
+                                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
                                     <div id="viewer-{position()}">
                                         <div id="spinner_{$osd_container_id}" class="text-center">
                                             <div class="loader"></div>
                                         </div>
                                         <div id="{$osd_container_id}" style="padding:.5em;">
-                                            <!-- image container accessed by OSD script -->                                            
-                                            <script type="text/javascript" src="js/osd_single.js"></script>
+                                            <!-- image container accessed by OSD script -->                                           
                                             <div id="{$osd_container_id2}">
                                                 <xsl:if test="@facs">    
-                                                    <xsl:variable name="iiif-ext" select="'.jp2/full/full/0/default.jpg'"/> 
-                                                    <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
-                                                    <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
+                                                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif '"/> 
+                                                    <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
+                                                    <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
                                                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>                                                    
-                                                    <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}')),hideLoading({$osd_container_id})]">
+                                                    <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]">
                                                         <xsl:attribute name="src">
                                                             <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                         </xsl:attribute>
@@ -110,28 +113,27 @@
                                     class="col-md-6 card-header osd-viewer"
                                     style="padding: 1em;background-color: #dedede;">                                    
                                     <!--<hr/> -->                                             
-                                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
-                                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
+                                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
+                                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
                                     <div id="viewer-{position()}">
                                         <div id="spinner_{$osd_container_id}" class="text-center">
                                             <div class="loader"></div>
                                         </div>
                                         <div id="{$osd_container_id}" style="padding:.5em;">
-                                            <!-- image container accessed by OSD script -->
-                                            <script type="text/javascript" src="js/osd_single.js"></script>
+                                            <!-- image container accessed by OSD script -->                                            
                                             <div id="{$osd_container_id2}">
                                                 <xsl:if test="@facs">                                                      
-                                                    <xsl:variable name="iiif-ext" select="'.jp2/full/full/0/default.jpg'"/> 
-                                                    <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
-                                                    <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
+                                                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif '"/> 
+                                                    <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
+                                                    <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
                                                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                                                    <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}')),hideLoading({$osd_container_id})]">
+                                                    <img id="{$facs_id}">
                                                         <xsl:attribute name="src">
                                                             <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                         </xsl:attribute>
                                                     </img> 
                                                 </xsl:if>                                
-                                            </div>                                
+                                            </div>                                            
                                         </div>  
                                     </div>
                                         
@@ -142,5 +144,10 @@
                 </xsl:choose>                
             </xsl:for-each-group>   
         </div>
+        
+        <div class="pagination-bottom">
+            <xsl:call-template name="view-pagination"/>
+        </div>    
+        
     </xsl:template>
 </xsl:stylesheet>

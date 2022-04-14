@@ -79,6 +79,9 @@
                     }
                 </style>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+                <script type="text/javascript" src="js/osd_single.js"></script>
+                <script type="text/javascript" src="js/pagination-sync.js"></script>
+                <script type="text/javascript" src="js/edition-view-functions.js"></script>
             </head>
             <body class="page" onload="diplomaticLoad(this)">
                 <div class="hfeed site" id="page">
@@ -253,24 +256,14 @@
                             
                              <xsl:for-each select="//tei:div[@xml:id='transcription']">                                             
                                  
-                                 <div class="pagination-top">
-                                     <xsl:call-template name="view-pagination"/>
-                                 </div> 
-                                 
                                  <xsl:call-template name="view-type-img"/>
 
-                                 <div class="pagination-bottom">
-                                     <xsl:call-template name="view-pagination"/>
-                                 </div>                                         
-                                 
                              </xsl:for-each>     
                             
                         </div><!-- .card -->
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
-                </div><!-- .site -->
-                <script type="text/javascript" src="js/pagination-sync.js"></script>
-                <script type="text/javascript" src="js/edition-view-functions.js"></script>
+                </div><!-- .site -->                
             </body>
         </html>
     </xsl:template>
