@@ -38,6 +38,10 @@ function diplomaticClick(el) {
             $(this).addClass("col-md-6");
             $(this).css("max-width","50%");
         });
+        $(".pagination-tab.active .transcript .osd-viewer")
+            .children("div")
+            .children("div")
+            .css({"width":"914px","height":"914px"});
         $(".text-re").each(function() {
             $(this).removeClass("col-md-12");
             $(this).addClass("col-md-6");         
