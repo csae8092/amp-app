@@ -58,16 +58,19 @@
                                     <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
                                     <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
                                     <div id="viewer-{position()}">
+                                        <div id="spinner_{$osd_container_id}" class="text-center">
+                                            <div class="loader"></div>
+                                        </div>
                                         <div id="{$osd_container_id}" style="padding:.5em;">
-                                            <!-- image container accessed by OSD script -->
+                                            <!-- image container accessed by OSD script -->                                            
                                             <script type="text/javascript" src="js/osd_single.js"></script>
                                             <div id="{$osd_container_id2}">
                                                 <xsl:if test="@facs">    
                                                     <xsl:variable name="iiif-ext" select="'.jp2/full/full/0/default.jpg'"/> 
                                                     <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
                                                     <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
-                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                                                    <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'), $( document ).ready(resize('{position()}'))]">
+                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>                                                    
+                                                    <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}')),hideLoading({$osd_container_id})]">
                                                         <xsl:attribute name="src">
                                                             <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                         </xsl:attribute>
@@ -110,6 +113,9 @@
                                     <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
                                     <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
                                     <div id="viewer-{position()}">
+                                        <div id="spinner_{$osd_container_id}" class="text-center">
+                                            <div class="loader"></div>
+                                        </div>
                                         <div id="{$osd_container_id}" style="padding:.5em;">
                                             <!-- image container accessed by OSD script -->
                                             <script type="text/javascript" src="js/osd_single.js"></script>
@@ -119,7 +125,7 @@
                                                     <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
                                                     <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
                                                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                                                    <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'), $( document ).ready(resize('{position()}'))]">
+                                                    <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}')),hideLoading({$osd_container_id})]">
                                                         <xsl:attribute name="src">
                                                             <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                         </xsl:attribute>

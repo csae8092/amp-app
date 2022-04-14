@@ -1006,6 +1006,24 @@ input:checked + .i-slider:before {
     color: #0000cd;
 }
 
+/* loader for OSD images or other loading sequences */
+
+.loader {
+    border: 8px solid #fff; /* Light grey */
+    border-top: 8px solid #b59890; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    animation: spin 2s linear infinite;
+    margin: 5em auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /*media queries for responsive design on smartphones*/
 /*                                                  */
 /*                                                  */

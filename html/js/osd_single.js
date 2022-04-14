@@ -15,5 +15,26 @@ function load_image(facs_id, osd_container_id, osd_container_id2) {
         // imageLoaderLimit: 10,
         tileSources: imageURL
     });
+    // hides static images
     $('#' + osd_container_id2).remove();
+
+    // hide loading spinner if image fully loaded status changes
+    // see issue: https://github.com/openseadragon/openseadragon/issues/1262
+
+    viewer.addHandler('open', function() {
+      var tiledImage = viewer.world.getItemAt(0);
+      if (tiledImage.getFullyLoaded()) {
+        hideLoading();
+      } else {
+        tiledImage.addOnceHandler('fully-loaded-change', hideLoading);
+      }
+    });
+
 };
+
+function hideLoading(osd_container_id) {
+    var container = $(osd_container_id).attr("id");    
+    var spinnerID = "spinner_" + container;
+    // console.log(spinnerID);
+    $("#" + spinnerID ).remove();
+}
