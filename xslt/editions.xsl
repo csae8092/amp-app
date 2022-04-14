@@ -26,9 +26,23 @@
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>                
                 <meta name="Date of publication" class="staticSearch_date">
-                    <xsl:attribute name="content">
-                        <xsl:value-of select="//tei:correspAction/tei:date/@when-iso"/>
-                    </xsl:attribute>
+                    <xsl:choose>
+                        <xsl:when test="//tei:origin/tei:origDate/@notBefore">
+                            <xsl:attribute name="content">
+                                <xsl:value-of select="//tei:origin/tei:origDate/@notBefore"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:when test="//tei:origin/tei:origDate/@when-iso">
+                            <xsl:attribute name="content">
+                                <xsl:value-of select="//tei:origin/tei:origDate/@when-iso"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="content">
+                                <xsl:value-of select="//tei:origin/tei:origDate"/>
+                            </xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>                    
                 </meta>
                 <meta name="docImage" class="staticSearch_docImage">
                     <xsl:attribute name="content">
