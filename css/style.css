@@ -19,6 +19,21 @@ body {
     margin-right: 0;
 }
 
+#show-text {
+    cursor: pointer;  
+}
+
+.about-text-hidden > table > tbody > tr > th,
+.about-text-hidden > table > tbody > tr > td {
+    border: none;
+    padding: .2em;
+}
+
+.navBarLetters > table > tbody > tr > th,
+.navBarLetters > table > tbody > tr > td {
+    border: none;
+}
+
 #wrapper-hero-amp > .row {
     padding-top: 2em;
 /*    background: url("../images/letter-background.png") 0 0 repeat;*/
@@ -36,7 +51,7 @@ div.dataTables_filter {
 }
 
 .arrow {
-    max-width: 25px;
+    max-width: 18px;
 }
 
 .dataTables_wrapper table {
@@ -139,8 +154,12 @@ div.dataTables_filter {
 }
 
 .tei-logo {
-    margin-top:2em;
-    padding-right:1em;
+    padding-right:2em;
+}
+
+#title-nav {
+    border-bottom: 1px dashed #dedede;
+    margin-bottom: 1em;
 }
 
 button.close {
@@ -875,10 +894,14 @@ input:checked + .i-slider:before {
 }
 
 .options-menu {
-    width: 400px;
+    width: 100%;
 }
 .options-menu li {
     display: inline-block;
+}
+
+.navBarLetters > table > tbody > tr > td {
+    padding: .2em;
 }
 
 .fade-all {
@@ -944,7 +967,6 @@ input:checked + .i-slider:before {
 #clear-link {
     background-color: #f1f1f1;
     padding: .5em 1em;
-    margin-left: 1em;
 }
 
 .badge-item {

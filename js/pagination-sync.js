@@ -1,7 +1,7 @@
 $('.pagination .nav-tabs li a').click(function (e) {     
     //get selected href
     var href = $(this).attr('href');
-    var dataTab = href.split('-')[0].replace('#', '');
+    var dataTab = $(this).attr('data-tab');
 
     //set all nav tabs to inactive
     $('.pagination .nav-tabs li a[data-tab="'+dataTab+'"]').removeClass('active');
