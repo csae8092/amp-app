@@ -26,12 +26,13 @@ body {
 .about-text-hidden > table > tbody > tr > th,
 .about-text-hidden > table > tbody > tr > td {
     border: none;
-    padding: .2em;
+    padding: .5em;
 }
 
 .about-text-hidden > table > tbody > tr > th {
     width: 15%;
     max-width: 15%;
+    border-right: 1px solid #dedede;
 }
 
 
@@ -39,6 +40,13 @@ body {
 .navBarLetters > table > tbody > tr > th,
 .navBarLetters > table > tbody > tr > td {
     border: none;
+}
+
+
+.navBarLetters > table > tbody > tr > td {
+    padding: .2em;
+    vertical-align: middle;
+    border: 1px dashed #dedede;
 }
 
 #wrapper-hero-amp > .row {
@@ -900,15 +908,30 @@ input:checked + .i-slider:before {
   border-radius: 50%;
 }
 
-.options-menu {
+.options-menu2 {
     width: 100%;
+    display:flex;
+    justify-content: space-evenly;
 }
-.options-menu li {
+
+.options-menu1 {
+    width: 100%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.options-menu2 li {
     display: inline-block;
 }
 
-.navBarLetters > table > tbody > tr > td {
-    padding: .2em;
+label {
+    margin-bottom: 0;
+}
+
+.options-menu1 li {
+    display: inline-block;
+    width: 33%;
+    justify-content: space-between;
 }
 
 .fade-all {
@@ -972,7 +995,6 @@ input:checked + .i-slider:before {
 }
 
 #clear-link {
-    background-color: #f1f1f1;
     padding: .5em 1em;
 }
 
