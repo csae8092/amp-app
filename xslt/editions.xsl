@@ -97,7 +97,7 @@
                                             <xsl:value-of select="$doc_title"/>                        
                                         </h5>                                                                               
                                         <div class="about-text-hidden fade">
-                                            <table class="table">
+                                            <table class="table" style="width:50%;max-width:50%;">
                                                 <tbody>
                                                     <tr>
                                                         <th>URI</th>
@@ -114,7 +114,7 @@
                                                         <td><xsl:value-of select="//tei:titleStmt/tei:author"/></td>
                                                     </tr>
                                                     <tr>
-                                                        <th>Editor</th>
+                                                        <th>Editor(s)</th>
                                                         <td>
                                                             <ul style="list-style:none; padding-left:0;margin-bottom:0;">
                                                                 <xsl:for-each select="//tei:titleStmt/tei:editor/tei:name">
@@ -161,6 +161,39 @@
                                                             </ul>                                                                                                                     
                                                         </td>
                                                     </tr>
+                                                    <tr>                                                
+                                                        <xsl:variable name="citation-link" 
+                                                            select="concat('https://amp.acdh.oeaw.ac.at/',
+                                                            replace(//tei:TEI/@xml:id, '.xml', '.html'))"/>                                                           
+                                                        <th>Cite this source</th>
+                                                        <td>
+                                                            <xsl:value-of select="concat(//tei:author,
+                                                                ', ',
+                                                                //tei:title[@level='a'],
+                                                                '. ')"/>
+                                                            
+                                                            <xsl:value-of select="concat(
+                                                                'In: ', //tei:title[@level='s'],
+                                                                '. '
+                                                                )"/>
+                                                            
+                                                            <xsl:value-of select="concat(
+                                                                'Hg. ', replace(//tei:editor/tei:name[1], ',', ''),
+                                                                ', ', replace(//tei:editor/tei:name[2], ',', ''),
+                                                                ', Andorfer Peter, Stoxreiter Daniel')"/>
+                                                            
+                                                            <xsl:text> (</xsl:text>
+                                                            <a href="{lower-case($citation-link)}">
+                                                                <xsl:value-of 
+                                                                    select="lower-case($citation-link)"/>
+                                                            </a>
+                                                            <xsl:text>), accessed on </xsl:text>
+                                                            <span class="citationDate">
+                                                                <xsl:value-of select="format-date(current-date(),  '[D].[M].[Y]')"/>
+                                                            </span>
+                                                            <xsl:text>.</xsl:text>
+                                                        </td>                                                                                                               
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -180,6 +213,7 @@
                                                  }  
                                             });
                                         </script>
+                                        <script type="text/javascript" src="js/citation-date.js"></script>
                                     </div>
                                     <!--<div class="col-md-2 text-right tei-logo">                           
                                         <h1>

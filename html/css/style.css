@@ -29,6 +29,13 @@ body {
     padding: .2em;
 }
 
+.about-text-hidden > table > tbody > tr > th {
+    width: 15%;
+    max-width: 15%;
+}
+
+
+
 .navBarLetters > table > tbody > tr > th,
 .navBarLetters > table > tbody > tr > td {
     border: none;
