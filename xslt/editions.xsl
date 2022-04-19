@@ -92,20 +92,23 @@
                                 <xsl:call-template name="header-nav"/>
                                 
                                 <div class="row hide-reading"> 
-                                    <div class="col-md-10">
+                                    <div class="col-md-12">
                                         <h5 class="card-text" style="text-align:left;">
                                             <xsl:value-of select="$doc_title"/>                        
-                                        </h5>
-                                        <div>
-                                            <a target="_blank"
-                                                title="archived source file"
-                                                href="{//tei:publicationStmt/tei:idno[@type='handle']}">
-                                                <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='handle']"/>
-                                            </a>
-                                        </div>                                        
+                                        </h5>                                                                               
                                         <div class="about-text-hidden fade">
                                             <table class="table">
                                                 <tbody>
+                                                    <tr>
+                                                        <th>URI</th>
+                                                        <td>
+                                                            <a target="_blank"
+                                                                title="archived source file"
+                                                                href="{//tei:publicationStmt/tei:idno[@type='handle']}">
+                                                                <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='handle']"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
                                                     <tr>
                                                         <th>Author</th>
                                                         <td><xsl:value-of select="//tei:titleStmt/tei:author"/></td>
@@ -133,33 +136,58 @@
                                                                 //tei:publicationStmt/tei:date)"/>
                                                         </td>
                                                     </tr>
+                                                    <tr>
+                                                        <th>TEI</th>
+                                                        <td>
+                                                            <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}" title="TEI Source">
+                                                                <img alt="TEI Logo" src="images/TEI_Logo_36px.png"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>IIIF Endpoint(s)</th>
+                                                        <td>
+                                                            <ul style="list-style:none;margin-bottom:0;padding-left:0;">
+                                                                <xsl:variable name="iiif-ext" select="'.jpg/info.json'"/> 
+                                                                <xsl:variable name="iiif-domain" select="'https://loris.acdh.oeaw.ac.at/uuid:/auden-musulin-papers/'"/>                                                            
+                                                                <xsl:for-each select="//tei:pb">
+                                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
+                                                                    <li>
+                                                                        <a href="{concat($iiif-domain, $facs_item, $iiif-ext)}">
+                                                                            <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
+                                                                        </a>
+                                                                    </li>                                                                    
+                                                                </xsl:for-each>   
+                                                            </ul>                                                                                                                     
+                                                        </td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                         <div style="margin-bottom:1em;">
-                                            <a style="font-style:italic;" href="#" id="show-text">show more</a>
+                                            <a style="font-style:italic;" href="#" id="show-text">show metadata</a>
                                         </div>
                                         <script type="text/javascript">
                                             $('#show-text').click(function () {
                                                 if ($('.about-text-hidden').hasClass('fade') == true) {
                                                     $('.about-text-hidden').removeClass('fade')
                                                     .addClass('active');
-                                                    $(this).html('show less');
+                                                    $(this).html('hide metadata');
                                                 } else {
                                                     $('.about-text-hidden').removeClass('active')
                                                     .addClass('fade');
-                                                    $(this).html('show more');
+                                                    $(this).html('show metadata');
                                                  }  
                                             });
                                         </script>
                                     </div>
-                                    <div class="col-md-2 text-right tei-logo">                           
+                                    <!--<div class="col-md-2 text-right tei-logo">                           
                                         <h1>
                                             <a href="{//tei:TEI/@xml:id}?format=raw" title="TEI Source">
                                                 <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
                                             </a>
                                         </h1>                         
-                                    </div>
+                                    </div>-->
                                 </div>
                                 
                                 <!--   adding annotation view and options   -->
