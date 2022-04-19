@@ -18,8 +18,8 @@
                     <table class="table" style="margin-bottom:0;">
                         <tbody>           
                             <tr>         
-                                <td style="text-align:left;width:20%;">                                                            
-                                    <ul class="nav nav-tabs options-menu" style="display:block;">  
+                                <td style="text-align:left;width:50%;">                                                            
+                                    <ul class="nav nav-tabs options-menu1">  
                                         <li>                                    
                                             <a title="diplomatic"
                                                 onclick="editionClick(this)"
@@ -46,8 +46,8 @@
                                         </li>                                                                        
                                     </ul>
                                 </td>
-                                <td style="text-align:center;width:60%;">                                                            
-                                    <ul class="nav nav-tabs options-menu" style="display:block;">       
+                                <td style="text-align:center;width:40%;">                                                            
+                                    <ul class="nav nav-tabs options-menu2">       
                                         <li>       
                                             <label>deletions</label>
                                             <label class="switch">
@@ -114,7 +114,7 @@
                                         </li>
                                     </ul>
                                 </td>
-                                <td style="text-align:center;width:20%;">
+                                <td style="text-align:center;width:10%;">
                                     <a title="clear"                                        
                                         onclick="clearAll(this);"
                                         class="nav-link badge-link"
