@@ -15,6 +15,7 @@
     <xsl:import href="partials/tei-facsimile.xsl"/>
     <xsl:import href="partials/view-pagination.xsl"/>
     <xsl:import href="partials/view-type.xsl"/>
+    <xsl:import href="partials/annotation-options.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
@@ -78,192 +79,109 @@
                         max-width: 100%;
                     }
                 </style>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
-                <script type="text/javascript" src="js/osd_single.js"></script>
-                <script type="text/javascript" src="js/pagination-sync.js"></script>
-                <script type="text/javascript" src="js/edition-view-functions.js"></script>
+                               
             </head>
             <body class="page" onload="diplomaticLoad(this)">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">  
-                        <div class="text-right tei-logo">                           
-                            <h1>
-                                <a href="{//tei:TEI/@xml:id}?format=raw" title="TEI Source">
-                                    <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
-                                </a>
-                            </h1>                         
-                        </div>
                         <div class="card">
-                            <div class="card-body" style="padding: 1em 0 0 0 !important;">                                
-                                <div class="col-md-12">
-                                    <h3>
-                                    <xsl:choose>
-                                        <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060']">
-                                            <a title="back to all letters" href="additional-materials.html" class="nav-link btn btn-round btn-backlink">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                </svg>
-                                            </a>  
-                                        </xsl:when>
-                                        <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0055', '0048', '0054', '0050']">
-                                            <a title="back to all letters" href="photos.html" class="nav-link btn btn-round btn-backlink">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                </svg>
-                                            </a>  
-                                        </xsl:when>
-                                        <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0028']">
-                                            <a title="back to all letters" href="memoirs.html" class="nav-link btn btn-round btn-backlink">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                </svg>
-                                            </a>  
-                                        </xsl:when>
-                                        <xsl:when test="not(substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060','0055', '0048', '0054', '0050','0028'])">
-                                            <a title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                                    <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                                </svg>
-                                            </a>  
-                                        </xsl:when>
-                                    </xsl:choose>
-                                    </h3>
-                                </div>
+                            <div class="card-body" style="padding: .5em 0 0 0 !important;">
                                 
-                                <xsl:call-template name="header-nav"/>    
+                                <xsl:call-template name="header-nav"/>
                                 
-                                <div class="row justify-content-center" style="margin:1em auto 0 auto;display:grid;">
-                                    <div class="col-md-12">
-                                        <div class="navBarLetters text-center">                                            
-                                            <table class="table" style="margin-bottom:0;">
-                                                <tbody>           
-                                                    <tr>
-                                                        <th style="font-weight:normal!important;border-top:none;padding:.1em;">annotation views</th>
-                                                        <th style="font-weight:normal!important;border-top:none;padding:.1em;">annotation options</th>
-                                                    </tr>
-                                                    <tr>         
-                                                        <td>                                                            
-                                                            <ul class="nav nav-tabs options-menu" style="display:block;">   
-                                                                <li style="margin-bottom: 1em;">
-                                                                    
-                                                                </li>
-                                                                <li>                                    
-                                                                    <a title="diplomatic"
-                                                                        onclick="diplomaticClick(this)"
-                                                                        class="nav-link btn btn-round active"
-                                                                        id="diplomatic-link">
-                                                                        diplomatic
-                                                                    </a>                                                                  
-                                                                </li>                                    
-                                                                <li>                                    
-                                                                    <a title="reading"
-                                                                        onclick="readingClick(this)"
-                                                                        class="nav-link btn btn-round"
-                                                                        id="reading-link">
-                                                                        reading
-                                                                    </a>
-                                                                </li>                                                                        
-                                                            </ul>
-                                                        </td>
-                                                        <td>                                                            
-                                                            <ul class="nav nav-tabs options-menu" style="display:block;">       
-                                                                <li>       
-                                                                    <label>deletions</label>
-                                                                    <label class="switch">
-                                                                        <input title="deletions"
-                                                                            type="checkbox"
-                                                                            onclick="deletions(this)"
-                                                                            id="deletions-link"/>
-                                                                        <span id="deletions-link2" class="i-slider round"></span>                                                                        
-                                                                    </label>                                                                    
-                                                                    <!--<a title="deletions"
-                                                                        onclick="deletions(this)"
-                                                                        class="nav-link btn badge-link red"
-                                                                        id="deletions-link">
-                                                                        deletions
-                                                                    </a>-->
-                                                                </li>                                    
-                                                                <li>
-                                                                    <label>unclear</label>
-                                                                    <label class="switch">
-                                                                        <input title="unclear"
-                                                                            type="checkbox"
-                                                                            onclick="unclear(this)"
-                                                                            id="unclear-link"/>
-                                                                        <span id="unclear-link2" class="i-slider round"></span>                                                                        
-                                                                    </label>                                                                    
-                                                                    <!--<a title="unclear"
-                                                                        onclick="unclear(this)"
-                                                                        class="nav-link btn badge-link yellow"
-                                                                        id="unclear-link">
-                                                                        unclear
-                                                                    </a>-->
-                                                                </li>                                                                
-                                                            </ul>
-                                                            <ul class="nav nav-tabs options-menu" style="display:block;">      
-                                                                <li>      
-                                                                    <label>highlighting</label>
-                                                                    <label class="switch">
-                                                                        <input title="underline"
-                                                                            type="checkbox"
-                                                                            onclick="underline(this)"
-                                                                            id="underline-link"/>
-                                                                        <span id="underline-link2" class="i-slider round"></span>                                                                        
-                                                                    </label>                                                                    
-                                                                    <!--<a title="underline"
-                                                                        onclick="underline(this)"
-                                                                        class="nav-link btn badge-link blue"
-                                                                        id="underline-link">
-                                                                        highlighting
-                                                                    </a>-->
-                                                                </li> 
-                                                                <li>   
-                                                                    <label>whitespaces</label>
-                                                                    <label class="switch">
-                                                                        <input title="whitespaces"
-                                                                            type="checkbox"
-                                                                            onclick="space(this)"
-                                                                            id="whitespaces-link"/>
-                                                                        <span id="whitespaces-link2" class="i-slider round"></span>                                                                        
-                                                                    </label>                                                                    
-                                                                    <!--<a title="whitespaces"
-                                                                        onclick="space(this)"
-                                                                        class="nav-link btn badge-link green"
-                                                                        id="whitespaces-link">
-                                                                        whitespaces
-                                                                    </a>-->
-                                                                </li>                                                                 
-                                                            </ul>
-                                                        </td>
-                                                    </tr>      
-                                                </tbody>
-                                            </table>   
-                                        </div>
-                                        <div class="text-center">
-                                            <a title="clear"
-                                                style="width:20%;margin:0 auto 1em auto;"
-                                                onclick="clearAll(this);"
-                                                class="nav-link btn badge-link text-center"
-                                                id="clear-link">
-                                                clear all
+                                <div class="row hide-reading"> 
+                                    <div class="col-md-10">
+                                        <h5 class="card-text" style="text-align:left;">
+                                            <xsl:value-of select="$doc_title"/>                        
+                                        </h5>
+                                        <div>
+                                            <a target="_blank"
+                                                title="archived source file"
+                                                href="{//tei:publicationStmt/tei:idno[@type='handle']}">
+                                                <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='handle']"/>
                                             </a>
+                                        </div>                                        
+                                        <div class="about-text-hidden fade">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Author</th>
+                                                        <td><xsl:value-of select="//tei:titleStmt/tei:author"/></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Editor</th>
+                                                        <td>
+                                                            <ul style="list-style:none; padding-left:0;margin-bottom:0;">
+                                                                <xsl:for-each select="//tei:titleStmt/tei:editor/tei:name">
+                                                                    <li>
+                                                                        <xsl:value-of select="."/>
+                                                                    </li>
+                                                                </xsl:for-each>                                                               
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Publisher</th>
+                                                        <td>
+                                                            <xsl:value-of select="concat(
+                                                                //tei:publicationStmt/tei:publisher,
+                                                                ', ',
+                                                                //tei:publicationStmt/tei:pubPlace,
+                                                                ' ' ,
+                                                                //tei:publicationStmt/tei:date)"/>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                    </div>                                    
+                                        <div style="margin-bottom:1em;">
+                                            <a style="font-style:italic;" href="#" id="show-text">show more</a>
+                                        </div>
+                                        <script type="text/javascript">
+                                            $('#show-text').click(function () {
+                                                if ($('.about-text-hidden').hasClass('fade') == true) {
+                                                    $('.about-text-hidden').removeClass('fade')
+                                                    .addClass('active');
+                                                    $(this).html('show less');
+                                                } else {
+                                                    $('.about-text-hidden').removeClass('active')
+                                                    .addClass('fade');
+                                                    $(this).html('show more');
+                                                 }  
+                                            });
+                                        </script>
+                                    </div>
+                                    <div class="col-md-2 text-right tei-logo">                           
+                                        <h1>
+                                            <a href="{//tei:TEI/@xml:id}?format=raw" title="TEI Source">
+                                                <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
+                                            </a>
+                                        </h1>                         
+                                    </div>
                                 </div>
+                                
+                                <!--   adding annotation view and options   -->
+                                <xsl:call-template name="annotation-options"/>
+                                
                             </div>
                             
+                            <!--   add edition text and facsimile   -->
                              <xsl:for-each select="//tei:div[@xml:id='transcription']">                                             
                                  
                                  <xsl:call-template name="view-type-img"/>
-
+    
                              </xsl:for-each>     
                             
                         </div><!-- .card -->
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
-                </div><!-- .site -->                
+                </div><!-- .site -->         
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+                <script type="text/javascript" src="js/osd_single.js"></script> 
+                <script type="text/javascript" src="js/pagination-sync.js"></script>
+                <script type="text/javascript" src="js/edition-view-functions.js"></script>                
             </body>
         </html>
     </xsl:template>
