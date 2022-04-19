@@ -7,7 +7,7 @@
     version="2.0">
     <xsl:template match="/" name="html_footer">
         
-        <div class="wrapper fundament-default-footer" id="wrapper-footer-full">
+        <div class="wrapper fundament-default-footer hide-reading" id="wrapper-footer-full">
             <div class="container" id="footer-full-content" tabindex="-1">
                 <div class="footer-separator">
                     CONTACT
@@ -115,7 +115,7 @@
             </div>
         </div>
         <!-- #wrapper-footer-full -->
-        <div class="footer-imprint-bar" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;" >
+        <div class="footer-imprint-bar hide-reading" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;" >
             © Copyright OEAW | <a href="imprint.html">Impressum/Imprint</a>
         </div>        
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script>

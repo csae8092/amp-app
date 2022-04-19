@@ -9,7 +9,7 @@
         <xsl:param name="site_title">
             Auden Musulin Papers
         </xsl:param>
-        <div class="wrapper-fluid wrapper-navbar sticky-navbar" id="wrapper-navbar" >
+        <div class="wrapper-fluid wrapper-navbar sticky-navbar hide-reading" id="wrapper-navbar" >
             <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">

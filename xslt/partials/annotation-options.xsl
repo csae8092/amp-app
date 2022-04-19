@@ -18,14 +18,22 @@
                     <table class="table" style="margin-bottom:0;">
                         <tbody>           
                             <tr>         
-                                <td style="text-align:left;width:15%;">                                                            
-                                    <ul class="nav nav-tabs options-menu" style="display:block;">   
+                                <td style="text-align:left;width:20%;">                                                            
+                                    <ul class="nav nav-tabs options-menu" style="display:block;">  
+                                        <li>                                    
+                                            <a title="diplomatic"
+                                                onclick="editionClick(this)"
+                                                class="nav-link btn btn-round active"
+                                                id="edition-link">
+                                                Edition
+                                            </a>                                                                  
+                                        </li>
                                         <li>                                    
                                             <a title="diplomatic"
                                                 onclick="diplomaticClick(this)"
-                                                class="nav-link btn btn-round active"
+                                                class="nav-link btn btn-round"
                                                 id="diplomatic-link">
-                                                diplomatic
+                                                Diplomatic
                                             </a>                                                                  
                                         </li>                                    
                                         <li>                                    
@@ -33,12 +41,12 @@
                                                 onclick="readingClick(this)"
                                                 class="nav-link btn btn-round"
                                                 id="reading-link">
-                                                reading
+                                                Reading
                                             </a>
                                         </li>                                                                        
                                     </ul>
                                 </td>
-                                <td style="text-align:center;width:70%;">                                                            
+                                <td style="text-align:center;width:60%;">                                                            
                                     <ul class="nav nav-tabs options-menu" style="display:block;">       
                                         <li>       
                                             <label>deletions</label>
@@ -106,7 +114,7 @@
                                         </li>
                                     </ul>
                                 </td>
-                                <td style="text-align:center;width:15%;">
+                                <td style="text-align:center;width:20%;">
                                     <a title="clear"                                        
                                         onclick="clearAll(this);"
                                         class="nav-link badge-link"
