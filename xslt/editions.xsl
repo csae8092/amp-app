@@ -148,8 +148,8 @@
                                                         <th>IIIF Endpoint(s)</th>
                                                         <td>
                                                             <ul style="list-style:none;margin-bottom:0;padding-left:0;">
-                                                                <xsl:variable name="iiif-ext" select="'.jpg/info.json'"/> 
-                                                                <xsl:variable name="iiif-domain" select="'https://loris.acdh.oeaw.ac.at/uuid:/auden-musulin-papers/'"/>                                                            
+                                                                <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=info.json'"/> 
+                                                                <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>                                                            
                                                                 <xsl:for-each select="//tei:pb">
                                                                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
                                                                     <li>
