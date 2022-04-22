@@ -56,7 +56,7 @@ function editionClick(el) {
         });
         $(".hide-reading").each(function() {
             $(this).removeClass("fade");
-        });
+        });        
     }
 }
 
@@ -136,6 +136,13 @@ function diplomaticLoad(el) {
     $(".hi-underline").each(function() {
         $(this).addClass("underline");
     });
+    $("input").each(function() {
+        this.checked = true;
+    });
+    deletions("#deletions-link");
+    unclear("#unclear-link");
+    space("#whitespaces-link");
+    underline("#underline-link");
 }
 
 function readingClick(el) {
@@ -157,15 +164,6 @@ function readingClick(el) {
         });
         $("p").each(function() {
             $(this).removeClass("reading-view-font");
-        });
-        $(".osd-viewer").each(function() {
-            $(this).addClass("fade-all");
-        });
-        $(".expand-wrapper").each(function() {
-            $(this).addClass("fade");
-        });
-        $(".hide-reading").each(function() {
-            $(this).removeClass("fade");
         });
     } else {
         element.addClass("active");
@@ -202,7 +200,7 @@ function readingClick(el) {
         });
         $(".hide-reading").each(function() {
             $(this).addClass("fade");
-        });
+        });      
     }
 }
 

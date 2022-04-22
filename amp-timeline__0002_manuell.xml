@@ -71,9 +71,9 @@
    <text>
       <body>
          <listEvent>
-            <event xml:id="xyz"
+<!--            <event xml:id="xyz"
                type="event"
-               facs="optional--add-facs-or-delete-attr"><!-- event template -->
+               facs="optional-\-add-facs-or-delete-attr"><!-\- event template -\->
                <head xml:lang="en">
                   <date when-iso="1957-10-04">1957-10-04</date>
                </head>
@@ -82,14 +82,14 @@
                   text
                   <location>
                      <geo></geo>
-                  </location>
+                  </location>-->
                   <!-- 
                      more option:
                      https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html
                      https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-event.html
                   -->
-               </desc>               
-            </event> 
+               <!--</desc>               
+            </event>--> 
             <event xml:id="e001"
                type="event">
                <head xml:lang="en">
@@ -100,6 +100,14 @@
                   Stella Mary Bellairs Lloyd-Philipps is born to Rhodri Vaughan Lloyd-Philipps (1874-1950) and his second wife, Margaret Colville 
                   <location>
                      <geo>51.7075 -5.1774</geo>
+                     <address>
+                        <placeName>
+                           <settlement>Dale</settlement>
+                           <region>Pembrokeshire</region>
+                           <country>Wales</country>
+                           <country>United Kingdom</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -113,6 +121,14 @@
                   Stella Lloyd-Philipps marries Janko Musulin von Gomirje (1916-1978)
                   <location>
                      <geo>47.773056 15.316389</geo>
+                     <address>
+                        <street>Benedictus-Platz 1</street>
+                        <postCode>8630</postCode>
+                        <placeName>
+                           <settlement>Mariazell</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -122,7 +138,7 @@
                   <date notBefore="1948-01-11" notAfter="1948-01-11">1948-01-11</date>
                </head>
                <desc>
-                  <title xml:lang="en">11 January 1948, xxx, Austria</title>
+                  <title xml:lang="en">11 January 1948</title>
                   Birth of son Marko Musulin
                   <location>
                      <geo></geo> <!-- research and add birth place! -->
@@ -135,10 +151,18 @@
                   <date notBefore="1959-06-01" notAfter="1959-10-31">1959-06-01--1959-10-31</date>
                </head>
                <desc>
-                  <title xml:lang="en">summer of 1959, Kirchstetten, Lower Austria</title>
+                  <title xml:lang="en">Summer 1959, Kirchstetten, Lower Austria</title>
                   Stella Musulin meets W. H. Auden and Chester Kallman for the first time at their Kirchstetten home. The meeting is initiated by Musulin's and Auden's mutual friend, Christiane Zimmer (1902-1987), Hugo von Hofmannsthal's daughter, who had emigrated to the United States. <!-- link to PMB -->
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -149,9 +173,17 @@
                </head>
                <desc>
                   <title xml:lang="en">28 May 1969, Kirchstetten, Lower Austria</title>
-                  Stella Musulin introduces Auden and Kallman to the Austrian historian, journalist, and intellectual Friedrich Heer (1916-1983); in Auden and Kallman's guest book, she notes : "Tag einer historischen Begegnung! [Day of a historical encounter!]" <!-- reference to Typed Letter Stella Musulin [to Edith Silbermann] [1969-05-29] -->
+                  Musulin introduces Auden and Kallman to the Austrian historian, journalist, and intellectual Friedrich Heer (1916-1983); in Auden and Kallman's guest book, she notes : "Tag einer historischen Begegnung! [Day of a historical encounter!]" <!-- reference to Typed Letter Stella Musulin [to Edith Silbermann] [1969-05-29] -->
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -162,10 +194,10 @@
                </head>
                <desc>
                   <title xml:lang="en">1971, London</title>
-                  Publication of Stella Musulin's monograph <hi rend="italic">Austria: People and Landscape</hi> with Faber and Faber, including a foreword by W. H. Auden; the book's American edition - once more including Auden's foreword - came out in 1972 with Praeger Publishers under the title <hi rend="italic">Austria and the Austrians</hi>
-                  <location>
+                  Publication of Musulin's monograph <hi rend="italic">Austria: People and Landscape</hi>, including a foreword by Auden, with Faber and Faber; the book's American edition - once more including Auden's foreword - came out in 1972 with Praeger Publishers, entitled <hi rend="italic">Austria and the Austrians</hi>
+<!--                  <location>
                      <geo>51.521418561139775 -0.1226937151948393</geo>
-                  </location>
+                  </location>-->
                </desc>               
             </event>
             <event xml:id="e007"
@@ -175,10 +207,10 @@
                </head>
                <desc>
                   <title xml:lang="en">1975, London</title>
-                  Publication of Stella Musulin's monograph <hi rend="italic">Vienna in the Age of Metternich: From Napoleon to Revolution, 1805-1848</hi> with Faber and Faber
-                  <location>
+                  Publication of Musulin's monograph <hi rend="italic">Vienna in the Age of Metternich: From Napoleon to Revolution, 1805-1848</hi> with Faber and Faber
+<!--                  <location>
                      <geo>51.521418561139775 -0.1226937151948393</geo>
-                  </location>
+                  </location>-->
                </desc>               
             </event>
             <event xml:id="e008"
@@ -188,9 +220,17 @@
                </head>
                <desc>
                   <title xml:lang="en">28 June 1976, Austrian Institute, London</title>
-                  Stella Musulin delivers a lecture on "Auden in Kirchstetten" at the Austrian Institute in London Kensington
+                  Musulin delivers a lecture on "Auden in Kirchstetten" at the Austrian Institute (now the Austrian Cultural Forum) in London Kensington
                   <location>
                      <geo>51.500163 -0.168038</geo>
+                     <address>
+                        <street>28 Rutland Gate</street>
+                        <postCode>SW7 1PQ</postCode>
+                        <placeName>
+                           <settlement>London</settlement>
+                           <country>United Kingdom</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -201,9 +241,17 @@
                </head>
                <desc>
                   <title xml:lang="en">5 May 1977, Palais Pálffy, Vienna</title>
-                  Stella Musulin delivers a lecture on "W. H. Auden und die Österreicher" [W. H. Auden and the Austrians] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]
+                  Musulin delivers a lecture on "W. H. Auden und die Österreicher" [W. H. Auden and the Austrians] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]
                   <location>
-                     <geo>48.206194 16.367389</geo>
+                     <geo>48.206461484687104 16.367831169832673</geo>
+                     <address>
+                        <street>Josefsplatz 6</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -216,21 +264,29 @@
                   <title xml:lang="en">6 March 1978, Fridau, Ober-Grafendorf, Lower Austria, Austria</title>
                   Janko Musulin dies, aged 61, after being diagnosed with a brain tumour the previous year
                   <location>
-                     <geo>48.149444 15.555833</geo>
+                     <geo>48.14951510783656 15.556408050584443</geo>
+                     <address>
+                        <street>Fridau 7</street>
+                        <postCode>3200</postCode>
+                        <placeName>
+                           <settlement>Fridau</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
             <event xml:id="e011"
                type="event">
                <head xml:lang="en">
-                  <date notBefore="1995-01-01" notAfter="1995-12-31">1995-01-01--1975-12-31</date>
+                  <date notBefore="1995-01-01" notAfter="1995-12-31">1995-01-01--1995-12-31</date>
                </head>
                <desc>
                   <title xml:lang="en">1995, Oxford</title>
                   Stella Musulin's Auden memoir "Auden in Kirchstetten" appears in Katherine Bucknell and Nicholas Jenkins' edited volume <hi rend="italic">'In Solitude, for Company': W. H. Auden After 1940. Unpublished Prose and Recent Criticism</hi>, published by Clarendon Press
-                  <location>
+<!--                  <location>
                      <geo>51.752 -1.2578</geo>
-                  </location>
+                  </location>-->
                </desc>               
             </event>
             <event xml:id="e012"
@@ -242,7 +298,15 @@
                   <title xml:lang="en">21 January 1996, Fridau, Ober-Grafendorf, Lower Austria, Austria</title>
                   Stella Musulin dies, aged 80
                   <location>
-                     <geo>48.149444 15.555833</geo>
+                     <geo>48.14951510783656 15.556408050584443</geo>
+                     <address>
+                        <street>Fridau 7</street>
+                        <postCode>3200</postCode>
+                        <placeName>
+                           <settlement>Fridau</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>

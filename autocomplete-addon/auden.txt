@@ -101,7 +101,6 @@ static-search/stems/anglo-american.json
 static-search/stems/anglo.json
 static-search/stems/angst.json
 static-search/stems/annoy.json
-static-search/stems/annus.json
 static-search/stems/anreicherung.json
 static-search/stems/anreicherungs-meil.json
 static-search/stems/answer.json
@@ -438,7 +437,6 @@ static-search/stems/easier.json
 static-search/stems/eat.json
 static-search/stems/ebenso.json
 static-search/stems/ecumen.json
-static-search/stems/edicht.json
 static-search/stems/edit.json
 static-search/stems/editor.json
 static-search/stems/edward.json
@@ -1021,7 +1019,6 @@ static-search/stems/mind.json
 static-search/stems/mine.json
 static-search/stems/minor.json
 static-search/stems/mir.json
-static-search/stems/mirabili.json
 static-search/stems/miscellan.json
 static-search/stems/miss.json
 static-search/stems/missprint.json
@@ -1298,6 +1295,7 @@ static-search/stems/robert.json
 static-search/stems/robinson.json
 static-search/stems/rough.json
 static-search/stems/royal.json
+static-search/stems/ruah.json
 static-search/stems/rudolf.json
 static-search/stems/rule.json
 static-search/stems/saal.json
@@ -1524,7 +1522,6 @@ static-search/stems/tun.json
 static-search/stems/turbin.json
 static-search/stems/typ.json
 static-search/stems/type.json
-static-search/stems/uah.json
 static-search/stems/uhr.json
 static-search/stems/uittig.json
 static-search/stems/ulian.json

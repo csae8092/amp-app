@@ -3,7 +3,7 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Typed Notes [Janko Musulin] on W. H. Auden "Freedom and Necessity in the Arts" [1970]</title>
+            <title level="a">Typed Notes [Janko Musulin] on W. H. Auden "Freedom and Necessity in the Arts" 1970-05-19--1970-06-10</title>
             <author>[Janko Musulin]</author>
             <editor>
                <name>Mayer, Sandra</name>
@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>2, 5</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate notBefore="1970-01-01" notAfter="1970-12-31">[1970]</origDate></origin>
+                        <origin><origDate notBefore="1970-05-19" notAfter="1970-06-10">1970-05-19--1970-06-10</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -100,38 +100,44 @@ for any purpose, even commercially.</p>
          <graphic url="https://iiif.acdh.oeaw.ac.at/amp/amp_0170/"/>
       </surface>
    </facsimile>
-   <text type="letter">
+   <text type="letter" hand="#typed">
       <body>
          <div xml:id="transcription">
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0165/" type="sheet"/>
                <p>
                   Einschub 1 ,<lb/>
-                  <del><gap/></del>Als ich zwischen sechs und zwölf Jahre alt war verbrachte ich<lb/>
+                  <space quantity="7" unit="char"/><del><gap reason="deleted"/></del>Als ich zwischen sechs und zwölf Jahre alt war verbrachte ich<lb/>
                   viele meiner wachen Stunden damit mir eine heilsame zweite Welt zu<lb/>
                   schaffen . Ihre <del>Grundelemente</del> Bausteine waren erstens eine<lb/>
-                  Karlksteinlandschaft , die hauptsächlich .<del>...</del>von.<del>.</del>der Pennine Heide<lb/>
-                  herrührte und zweitens ein Werk - die Bleigruben .<lb/>
+                  Karlksteinlandschaft , die hauptsächlich .<del>.....</del>von der Pennine Heide<lb/>
+                  herrührte und zweitens ein Werk - die Bleigruben .
+               </p>
+               <p>
                   Einschub 2<lb/>
-                  Zweitens , während ich meine höchst-eigene Welt aufbaute ,<lb/>
+                  <space quantity="7" unit="char"/>Zweitens , während ich meine höchst-eigene Welt aufbaute ,<lb/>
                   musste ich feststellen , dass hier nicht ohne Regeln <del>gespielt</del>vorgegangen werden konnte<lb/>
                   <del>werden konnte</del> - obwohl, oder gerade weil es hier um ein Spiel<lb/>
                   ging , nicht eine Notwendigkeit wie essen oder schlafen , um etwas, das<lb/>
                   mir frei stand , das ich tun oder lassen konnte, wie es mir<lb/>
-                  passte<lb/>
+                  passte
+               </p>
+               <p>
                   Eimschub 3<lb/>
-                  Während ich meine <del>Pläne</del>Vorstellungen für einen <del>zentral-Meiler</del>Anreicherungs-Meiler entwarf, stiess<lb/>
+                  <space quantity="5" unit="char"/>Während ich meine <del>Pläne</del>Vorstellungen für einen <del>zentral-Meiler</del>Anreicherungs-Meiler entwarf, stiess<lb/>
                   ich auf Schwierigkeiten: Ich musste zwischen zwei Arten von<lb/>
                   Maschienen wählen , die d<del>ie</del>er Absonderung des Schlamms d<del>urchführen</del><lb/>
                   dienen , sie werden ' buddle ' genannt , Der eine Typ kam mir<lb/>
                   ' heilsamer ' , schöner vor aber der andere, das wusste ich bereits aus<lb/>
-                  meiner <unclear>L</unclear>ekture funktionierte besser   ....................<lb/>
-                  Als ich später    <unclear>G</unclear>edichte zu schreiben begann stellte ich fest ,<lb/>
+                  meiner <unclear>L</unclear>ekture funktionierte besser <space quantity="2" unit="char"/>....................<lb/>
+                  <space quantity="6" unit="char"/>Als ich später <space quantity="3" unit="char"/>Gedichte zu schreiben begann stellte ich fest ,<lb/>
                   dass für mich genau die gleiche Verpflichtung gültig war . Das<lb/>
                   heisst, ich ich kann die Do<del><unclear>j</unclear></del>ktrin nicht akzeptieren derzufolge man<lb/>
                   in der Poesie <del>vom Zwang der Glaubwürdigkeit</del> vorübergehend vom Zwang<lb/>
-                  zur Glaubwürdigkeit entbunden werden kann  .<lb/>
+                  zur Glaubwürdigkeit entbunden werden kann <space quantity="1" unit="char"/>.
+               </p>
+               <p>
                   Einschub 4<lb/>
-                  Eine eigene Phantasiewelt für sich <del>selbst aufbauen</del> allein
+                  <space quantity="7" unit="char"/>Eine eigene Phantasiewelt für sich <del>selbst aufbauen</del> allein
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0166/" type="sheet"/>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0167/" type="sheet"/>
@@ -140,27 +146,37 @@ for any purpose, even commercially.</p>
                </p>
                <p>
                   aufbauen und Gedichte schreiben , das ist gewiss auf profunde Weise etwas<lb/>
-                  anderes. "<lb/>
-                  Einschub 5<lb/>
-                  " Die Wissenschaften früherer Tage sind nur für die Studenten der<lb/>
+                  anderes. "
+               </p>
+               <p>
+                  <space quantity="5" unit="char"/>Einschub 5<lb/>
+                  <space quantity="3" unit="char"/>" Die Wissenschaften früherer Tage sind nur für die Studenten der<lb/>
                   Wissenschaftsgeschichte von Interesse , sie haben keinen Bezug auf das ,<lb/>
-                  was Wissenschaftler in diesem Augenblick tun "<lb/>
-                  Einschub 6<lb/>
-                  Gründer der " modernen Kunst " ansehen , Glück, weil sie just in<lb/>
+                  was Wissenschaftler in diesem Augenblick tun "
+               </p>
+               <p>
+                  <space quantity="4" unit="char"/>Einschub 6<lb/>
+                  <space quantity="5" unit="char"/>Gründer der " modernen Kunst " ansehen , Glück, weil sie just in<lb/>
                   diesem Augenblick auf die Welt kamen , mithin vor 1914 erwachsene<lb/>
-                  Männer waren .<lb/>
+                  Männer waren .
+               </p>
+               <p>
                   Einschub 7<lb/>
-                  In meinen jungen Jahren hatte sie gar keinen , sie befand sich im<lb/>
+                  <space quantity="4" unit="char"/>In meinen jungen Jahren hatte sie gar keinen , sie befand sich im<lb/>
                   Zustand kategorischen Gegensatzes , häufig in wirk<del><unclear>o</unclear></del>licher<lb/>
-                  Feindschaft<lb/>
+                  Feindschaft
+               </p>
+               <p>   
                   Einschub 8<lb/>
-                  In Zeiten wie der unseren , in Zeiten rascher sozialer <unclear>V</unclear>eränderungen<lb/>
+                  <space quantity="5" unit="char"/>In Zeiten wie der unseren , in Zeiten rascher sozialer Veränderungen<lb/>
                   und politischer Krise , besteht immer die Gefahr die auf<lb/>
                   politische Aktion anwendbaren Prinzipien mit jenen zu verwechseln ,<lb/>
-                  die das künstlerische Schaffen bestimmen.<lb/>
+                  die das künstlerische Schaffen bestimmen.
+               </p>
+               <p>
                   Einschub 9<lb/>
-                  heisst auf verantwortliche Weise am richtigen Funktionieren<lb/>
-                  der <unclear>G</unclear>esellschaft, der er angehört, wie an ihrer <unclear>V</unclear>erbesserung ,<lb/>
+                  <space quantity="4" unit="char"/>heisst auf verantwortliche Weise am richtigen Funktionieren<lb/>
+                  der Gesellschaft, der er angehört, wie an ihrer Verbesserung ,<lb/>
                   mitzuwirken . "
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0168/" type="sheet"/>
@@ -169,16 +185,18 @@ for any purpose, even commercially.</p>
                   - 3 -
                </p>
                <p>
-                  Einschub 10<lb/>
-                  Politisches <del><unclear>h</unclear></del>Handel<del>t</del>n kommt aus Notwendigkeit , das<lb/>
-                  heisst : In jedem Augenblick muss etwas getan werden , für den<lb/>
-                  Augenblick - der Aktion des Augenblickes folgt die des nächsten<lb/>
-                  Augenblicks .<lb/>
+                  Einschub 1o<lb/>
+                  <space quantity="11" unit="char"/>Politisches <del><unclear>h</unclear></del>Handel<del>t</del>n kommt aus Notwendigkeit , das<lb/>
+                  <space quantity="3" unit="char"/>heisst : In jedem Augenblick muss etwas getan werden , für den<lb/>
+                  <space quantity="3" unit="char"/>Augenblick - der Aktion des Augenblickes folgt die des nächsten<lb/>
+                  <space quantity="3" unit="char"/>Augenblicks .
+               </p>
+               <p>
                   E<del>u</del>inschub 11<lb/>
-                  Noch eine weitere Erfahrung, dieich gemacht habe : Im Gegensatz<lb/>
-                  zu dem, was man erwarten würde,klingen die freien <unclear>V</unclear>erse viel<lb/>
-                  ähnlicher als <del>jene</del> die Verse von Dichtern , die in vorgegebenen<lb/>
-                  Formen schreiben "
+                  <space quantity="7" unit="char"/>Noch eine weitere Erfahrung, dieich gemacht habe : Im Gegensatz<lb/>
+                  <space quantity="4" unit="char"/>zu dem, was man erwarten würde,klingen die freien Verse viel<lb/>
+                  <space quantity="4" unit="char"/>ähnlicher als <del>jene</del> die Verse von Dichtern , die in vorgegebenen<lb/>
+                  <space quantity="4" unit="char"/>Formen schreiben "
                </p>
             <pb facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0170/" type="sheet"/>
          </div>

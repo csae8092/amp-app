@@ -71,25 +71,25 @@
    <text>
       <body>
          <listEvent>
-            <event xml:id="xyz"
+<!--            <event xml:id="xyz"
                type="event"
-               facs="optional--add-facs-or-delete-attr"><!-- event template -->
+               facs="optional-\-add-facs-or-delete-attr">
                <head xml:lang="en">
-                  <date when-iso="1957-10-04">1957-10-04</date>
+                  <date notBefore="1957-10-04" notAfter="1957-10-04">1957-10-04</date>
                </head>
                <desc>
                   <title xml:lang="en">title</title>
                   text
                   <location>
                      <geo></geo>
-                  </location>
+                  </location>-->
                   <!-- 
                      more option:
                      https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html
                      https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-event.html
                   -->
-               </desc>               
-            </event>            
+               <!--</desc>               
+            </event>-->            
             <event xml:id="ea001"
                type="event_austria">
                <head xml:lang="en">
@@ -99,7 +99,15 @@
                   <title xml:lang="en">4 October 1957, Vienna</title>
                   W. H. Auden and Chester Kallman purchase the house Hinterholz 6, 3062 Kirchstetten, in Lower Austria.
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.21269546633091 16.36939645634053</geo>
+                     <address>
+                        <street>Wipplingerstraße 18</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -109,10 +117,18 @@
                   <date notBefore="1959-06-01" notAfter="1959-10-31">1959-06-01--1959-10-31</date>
                </head>
                <desc>
-                  <title xml:lang="en">summer of 1959, Kirchstetten, Lower Austria</title>
-                  Auden meets Stella Musulin for the first time. The meeting is initiated by Auden's and Musulin's mutual friend, Christiane Zimmer (1902-1987), Hugo von Hofmannsthal's daughter, who had emigrated to the United States. <!-- link to PMB -->
+                  <title xml:lang="en">Summer 1959, Kirchstetten, Lower Austria</title>
+                  Auden meets Stella Musulin for the first time. The meeting is initiated by Auden's and Musulin's mutual friend, Christiane Zimmer (1902-1987), Hugo von Hofmannsthal's daughter, who had emigrated to the United States.<!-- link Christiane Zimmer and Hugo von Hofmannsthal to PMB -->
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -125,7 +141,15 @@
                   <title xml:lang="en">4-6 August 1960, Kirchstetten, Lower Austria</title>
                   German composer Hans Werner Henze (1926-2012) visits Auden and Kallmann, the authors of the English libretto for his three-act opera <hi rend="italic">Elegy for Young Lovers</hi> (1961). In Auden and Kallman's guest book, Henze writes: "with love and gratitude and pride to have such a beautiful libretto!"
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -136,9 +160,9 @@
                </head>
                <desc>
                   <title xml:lang="en">4 October 1962, Vienna</title>
-                  W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The Austrian actor Wolfgang Gasser reads German-language translations of Auden's poems.
+                  Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The Austrian actor Wolfgang Gasser reads German-language translations of Auden's poems.
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.20849 16.37208</geo>
                   </location>
                </desc>               
             </event>
@@ -149,22 +173,30 @@
                </head>
                <desc>
                   <title xml:lang="en">17 May 1963, Vienna</title>
-                  W. H. Auden participates in an international Rudolf Kassner symposium at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]: on the last day of the six-day congress, he speaks about the "Begegnung mit dem Werk Rudolf Kassners" ["Encounter with the Work of Rudolf Kassner"].
+                  Auden participates in an international Rudolf Kassner symposium at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]: on the last day of the six-day congress, he speaks about the "Begegnung mit dem Werk Rudolf Kassners" ["Encounter with the Work of Rudolf Kassner"].
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.20849 16.37208</geo>
                   </location>
                </desc>               
             </event>
             <event xml:id="ei001"
                type="event_international">
                <head xml:lang="en">
-                  <date notBefore="1964-10-01" notAfter="1965-03-31">1964-10-01--1965-03-31</date>
+                  <date notBefore="1964-09-30" notAfter="1965-03-22">winter 1964-1965</date>
                </head>
                <desc>
-                  <title xml:lang="en">winter 1964/65, Berlin</title>
-                  Auden spends six months in Berlin as guest of the Ford Foundation and their artists-in-residence programme <!-- reference letters to Musulin 1964-12-23 and 1965-03-15 -->
+                  <title xml:lang="en">Winter 1964/65, Berlin</title>
+                  Auden spends six months in Berlin as guest of the Ford Foundation and their artists-in-residence programme, taking up residence at Hubertusbader Straße 43 in Dahlem <!-- reference letters to Musulin 1964-12-23 and 1965-03-15 -->
                   <location>
-                     <geo>52.533333 13.166667</geo>
+                     <geo>52.47967694245993 13.276187048436705</geo>
+                     <address>
+                        <street>Hubertusbader Straße 43</street>
+                        <postCode>14193</postCode>
+                        <placeName>
+                           <settlement>Berlin</settlement>
+                           <country>Germany</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -176,9 +208,9 @@
                <desc>
                   <title xml:lang="en">1965, Frankfurt am Main</title>
                   Herbert Heckmann's German translation of Auden's poem "Josef Weinheber" appears in the <hi rend="italic">Neue Rundschau</hi> (volume 76, issue 3)
-                  <location>
-                     <geo>geo:50.110556 8.682222</geo>
-                  </location>
+<!--                  <location>
+                     <geo>50.11552 8.68417</geo>
+                  </location>-->
                </desc>               
             </event>
             <event xml:id="ea006"
@@ -187,10 +219,18 @@
                   <date notBefore="1965-05-24" notAfter="1965-05-24">1965-05-24</date>
                </head>
                <desc>
-                  <title xml:lang="en">24 May 1965, Vienna</title>
-                  W. H. Auden gives a lecture on T. S. Eliot at the Naturhistorisches Museum Wien [Natural History Museum Vienna]. The event has been co-organized by the Austro-British Society, the British Council in Austria, and the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
+                  <title xml:lang="en">24 May 1965, Natural History Museum, Vienna</title>
+                  Auden gives a lecture on T. S. Eliot at the Naturhistorisches Museum Wien [Natural History Museum Vienna]. The event has been co-organized by the Austro-British Society, the British Council in Austria, and the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.20541218975421 16.359759267981232</geo>
+                     <address>
+                        <street>Burgring 7</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -200,10 +240,18 @@
                   <date notBefore="1966-08-06" notAfter="1966-08-06">1966-08-06</date>
                </head>
                <desc>
-                  <title xml:lang="en">6 August 1966, Salzburg</title>
-                  Hans Werner Henze's opera The Bassarids, with a libretto by Auden and Kallman, premières at the Salzburg Festival; the German translation of the libretto is produced by Maria Bosse-Sporleder
+                  <title xml:lang="en">6 August 1966, Large Festival Hall, Salzburg</title>
+                  Hans Werner Henze's opera <hi rend="italic">The Bassarids</hi>, with a libretto by Auden and Kallman, premières at the Salzburg Festival; the German translation of the libretto is produced by Maria Bosse-Sporleder
                   <location>
-                     <geo>47.8 13.033333</geo>
+                     <geo>47.79910808978453 13.041122827494169</geo>
+                     <address>
+                        <street>Hofstallgasse 1</street>
+                        <postCode>5020</postCode>
+                        <placeName>
+                           <settlement>Salzburg</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -214,9 +262,9 @@
                </head>
                <desc>
                   <title xml:lang="en">25 October 1966, Vienna</title>
-                  Auden is awarded the Austrian State Prize for European Literature by Federal Minister of Education Theodor Piffl-Per&#269;evi&#263;; the laudatory speech is delivered by Austrian writer and critic Hilde Spiel, one of the prize judges
+                  Auden is awarded the Austrian State Prize for European Literature by Federal Minister of Education Theodor Piffl-Per&#269;evi&#263;; the laudatory speech is delivered by Austrian writer and critic Hilde Spiel, one of the prize judges (next to writer Gerhard Fritsch and Wolfgang Kraus of the Austrian Society for Literature)
                   <location>
-                     <geo>48.208333 16.373056</geo>
+                     <geo>48.20849 16.37208</geo>
                   </location>
                </desc>               
             </event>
@@ -227,9 +275,9 @@
                </head>
                <desc>
                   <title xml:lang="en">5 January 1967</title>
-                  Austrian television broadcasts the TV opera <hi rend="italics">Inzwischen</hi>, with a musical setting of a part of Auden’s "For the Time Being" (translated into German by Austrian writer Gerhard Fritsch as "Hier und Jetzt") by composer Paul Kont, featuring Helmut Qualtinger as Herod
+                  Austrian television broadcasts the TV opera <hi rend="italics">Inzwischen</hi>, with a musical setting of a part of Auden’s "For the Time Being" (translated into German by Gerhard Fritsch as "Hier und Jetzt") by composer Paul Kont, featuring Helmut Qualtinger as Herod
                   <location>
-                     <geo></geo>
+                     <geo>47.33333 13.33333</geo>
                   </location>
                </desc>               
             </event>
@@ -239,10 +287,18 @@
                   <date notBefore="1967-04-24" notAfter="1967-04-26">1967-04-24--1967-04-26</date>
                </head>
                <desc>
-                  <title xml:lang="en">24 to 26 April 1967, Vienna</title>
-                  W. H. Auden participates in a round table on Literatur als Tradition und Revolution [Literature as Tradition and Revolution] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. Other participants include the American writer Mary McCarthy, the dissident Soviet literary scholar Efim (Grigorievich) Etkind (Russian Ефим Григорьевич Эткинд), the British writer Philip Toynbee, and the German literary critic Marcel Reich-Ranicki. 
+                  <title xml:lang="en">24-26 April 1967, Palais Pálffy and Redoutensaal, Vienna</title>
+                  Auden participates in a round table on "Literatur als Tradition und Revolution" [Literature as Tradition and Revolution] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. Other participants include the American writer Mary McCarthy, the dissident Soviet literary scholar Efim (Grigorievich) Etkind (Russian Ефим Григорьевич Эткинд), the British writer Philip Toynbee, and the German literary critic Marcel Reich-Ranicki. 
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.20707943277017, 16.367047540843927</geo>
+                     <address>
+                        <street>Josefsplatz 4</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -255,7 +311,7 @@
                   <title xml:lang="en">3 September 1967</title>
                   A 28-minute episode titled "W. H. Auden" of the documentary feature <hi rend="italics">Das österreichische Porträt</hi> [The Austrian Portrait], portraying Auden's life and work at Kirchstetten, is broadcast on Austrian national TV
                   <location>
-                     <geo></geo>
+                     <geo>47.33333 13.33333</geo>
                   </location>
                </desc>               
             </event>
@@ -266,9 +322,17 @@
                </head>
                <desc>
                   <title xml:lang="en">10-13 September 1967, Kirchstetten, Lower Austria</title>
-                  The English poet and critic Stephen Spender (1909-1995), a life-long friend of Auden's, and his wife Natasha visit Auden and Kallman. 
+                  The English poet and critic Stephen Spender (1909-1995), a life-long friend of Auden's, and his wife Natasha visit Auden and Kallman 
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -278,39 +342,47 @@
                   <date notBefore="1968-07-25" notAfter="1968-07-25">1968-07-25</date>
                </head>
                <desc>
-                  <title xml:lang="en">25 July 1968, Salzburg</title>
+                  <title xml:lang="en">25 July 1968, Large Festival Hall, Salzburg</title>
                   Auden delivers the opening address "Worte und Noten" [Words and Musical Notes] at the Salzburg Festival
                   <location>
-                     <geo>47.8 13.033333</geo>
+                     <geo>47.79910808978453 13.041122827494169</geo>
+                     <address>
+                        <street>Hofstallgasse 1</street>
+                        <postCode>5020</postCode>
+                        <placeName>
+                           <settlement>Salzburg</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea014"
-               type="event_austria">
+            <event xml:id="ei003"
+               type="event_international">
                <head xml:lang="en">
-                  <date notBefore="1968-10-01" notAfter="1968-10-15">1968-10-01--1968-10-15</date>
+                  <date notBefore="1968-08-20" notAfter="1968-08-21">1968-08-20--1968-08-21</date>
                </head>
                <desc>
-                  <title xml:lang="en">October 1968, Kirchstetten, Lower Austria</title>
-                  Auden offers to put up a Czech refugee couple at his house in Kirchstetten during his absence, responding to the refugee crisis following the Soviet invasion of Czechoslovakia in August 1968 <!-- reference/link to letter 1968-10-15, Stella Musulin memoir -->
+                  <title xml:lang="en">August 1968, Warsaw Pact invasion of Czechoslovakia</title>
+                  Soviet Union led troops invade Czechoslovakia<!-- reference/link to letter 1968-10-15, Stella Musulin memoir -->
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>50.08292, 14.46672</geo>
                   </location>
                </desc>               
             </event>
-            <event xml:id="ea015"
+<!--            <event xml:id="ea015"
                type="event_austria">
                <head xml:lang="en">
-                  <date notBefore="1968-12-13" notAfter="1968-12-13">1968-12-13</date> <!-- check date -->
+                  <date notBefore="1968-12-13" notAfter="1968-12-13">1968-12-13</date> <!-\- check date -\->
                </head>
                <desc>
                   <title xml:lang="en">13 December 1968, Lower Austria</title>
-                  Yannis Boras, Chester Kallman's Greek boyfriend, dies in a road accident while driving Auden's car between Vienna and Kirchstetten <!-- reference/link to letters 1968-12-13, 1968-12-29, 1969-01-04 -->
+                  Yannis Boras, Chester Kallman's Greek boyfriend, dies in a road accident while driving Auden's car between Vienna and Kirchstetten <!-\- reference/link to letters 1968-12-13, 1968-12-29, 1969-01-04 -\->
                   <location>
                      <geo>48.15 15.5</geo>
                   </location>
                </desc>               
-            </event>
+            </event>-->
             <event xml:id="ea016"
                type="event_austria">
                <head xml:lang="en">
@@ -320,7 +392,15 @@
                   <title xml:lang="en">28 May 1969, Kirchstetten, Lower Austria</title>
                   Stella Musulin introduces Auden and Kallman to the Austrian historian, journalist, and intellectual Friedrich Heer (1916-1983); in Auden and Kallman's guest book, she notes : "Tag einer historischen Begegnung! [Day of a historical encounter!]" <!-- reference to Typed Letter Stella Musulin [to Edith Silbermann] [1969-05-29] -->
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -331,9 +411,17 @@
                </head>
                <desc>
                   <title xml:lang="en">15-16 July 1969, Kirchstetten, Lower Austria</title>
-                  Russian-American composer Nicolas Nabokov (1903-1978) visits Auden and Kallman, authors of the libretto for his opera <hi rend="italic">Love's Labour's Lost</hi> (1971)
+                  Russian-American composer Nicolas Nabokov (Николай Дмитриевич Набоков, 1903-1978) visits Auden and Kallman, authors of the libretto for his opera <hi rend="italic">Love's Labour's Lost</hi> (1971)
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -343,23 +431,39 @@
                   <date notBefore="1970-09-29" notAfter="1970-09-29">1970-09-29</date>
                </head>
                <desc>
-                  <title xml:lang="en">29 September 1970, Vienna</title>
-                  W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The actor Peter W. Jost reads German-language translations of Auden's poems.
+                  <title xml:lang="en">29 September 1970, Palais Pálffy, Vienna</title>
+                  Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The actor Peter W. Jost reads German-language translations of Auden's poems.
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.206461484687104 16.367831169832673</geo>
+                     <address>
+                        <street>Josefsplatz 6</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
             <event xml:id="ea019"
                type="event_austria">
                <head xml:lang="en">
-                  <date notBefore="1972-06-09" notAfter="1972-06-09">1972-06-09</date>
+                  <date notBefore="1972-06-06" notAfter="1972-06-06">1972-06-06</date>
                </head>
                <desc>
-                  <title xml:lang="en">9 June 1972, Kirchstetten, Lower Austria</title>
-                  Joseph Brodsky (1940-1996), Nobel-Prize-winning Russian-American poet and essayist, visits Auden and Kallman. Their Kirchstetten guest book contains the following poem by Brodsky: "Visit Russia / Our Russia's a country of Birches / and axes and ikones and Churches / Without any priest / and crosses. At least / Our Russia's a country of SEARCHES."
+                  <title xml:lang="en">6 June 1972, Kirchstetten, Lower Austria</title>
+                  Exiled from the Soviet Union, Joseph Brodsky (Иосиф Александрович Бродский, 1940-1996), later Nobel-Prize-winning Russian-American poet and essayist, arrives at Kirchstetten, where he stays with Auden and Kallman for three weeks. Their Kirchstetten guest book contains the following poem by Brodsky: "Visit Russia / Our Russia's a country of Birches / and axes and ikones and Churches / Without any priest / and crosses. At least / Our Russia's a country of SEARCHES."
                   <location>
-                     <geo>48.183333 15.816667</geo>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -369,23 +473,39 @@
                   <date notBefore="1973-09-28" notAfter="1973-09-28">1973-09-28</date>
                </head>
                <desc>
-                  <title xml:lang="en">28 September 1973, Vienna</title>
-                  W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature] to mark the publication <hi rend="italic">Gedichte/Poems</hi>, a bilingual edition of Auden's poems. The actor and theatre director Achim Benning reads from the German-language translations of Auden's poems in this volume.
+                  <title xml:lang="en">28 September 1973, Palais Pálffy, Vienna</title>
+                  Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature] to mark the publication of <hi rend="italic">Gedichte/Poems</hi>, a bilingual edition of Auden's poems. The actor and theatre director Achim Benning reads from the German-language translations of Auden's poems in this volume.
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.206461484687104 16.367831169832673</geo>
+                     <address>
+                        <street>Josefsplatz 6</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
             <event xml:id="ea021"
                type="event_austria">
                <head xml:lang="en">
-                  <date notBefore="1973-09-29" notAfter="1973-09-29">1973-09-29</date>
+                  <date notBefore="1973-09-28" notAfter="1973-09-28">1973-09-28--1973-09-29</date>
                </head>
                <desc>
-                  <title xml:lang="en">29 September 1973, Vienna</title>
-                  W. H. Auden dies at the Hotel Altenburgerhof after a reading from the new German/English edition of his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
+                  <title xml:lang="en">28-29 September 1973, Hotel Altenburger Hof, Vienna</title>
+                  Auden dies at the Hotel Altenburger Hof after a reading from the new German/English edition of his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.203752791300154 16.371171998668522</geo>
+                     <address>
+                        <street>Walfischgasse 5</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>               
             </event>
@@ -396,7 +516,7 @@
                </head>
                <desc>
                   <title xml:lang="en">4 October 1973, Kirchstetten, Lower Austria</title>
-                  W. H. Auden is buried in the local church graveyard of Kirchstetten. The funeral - attended by, among others, Auden's brother John, Stephen Spender, Sonia Orwell, and Charles Monteith - includes an ecumenical service led by Revd Bruce Duncan, chaplain to the British ambassadors to Austria, Hungary, and Czechoslovakia
+                  Auden is buried in the local church graveyard of Kirchstetten. The funeral - attended by, among others, Auden's brother John, Stephen Spender, Sonia Orwell, and Charles Monteith - includes an ecumenical service led by Revd Bruce Duncan, chaplain to the British ambassadors to Austria, Hungary, and Czechoslovakia
                   <location>
                      <geo>48.183333 15.816667</geo>
                   </location>
