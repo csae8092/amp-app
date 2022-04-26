@@ -100,7 +100,7 @@
                                             <table class="table" style="width:50%;max-width:50%;">
                                                 <tbody>
                                                     <tr>
-                                                        <th>URI</th>
+                                                        <th>PID</th>
                                                         <td>
                                                             <a target="_blank"
                                                                 title="archived source file"
@@ -137,12 +137,22 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <th>TEI</th>
+                                                        <th>Download</th>
                                                         <td>
-                                                            <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}" title="TEI Source">
-                                                                <img alt="TEI Logo" src="images/TEI_Logo_36px.png"/>
-                                                            </a>
-                                                        </td>
+                                                            <ul style="list-style:none;padding-left:0;margin-bottom:0;">
+                                                                <li style="display:inline;margin-right:1em;">
+                                                                    <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}" title="TEI">
+                                                                        <img alt="TEI Logo" src="images/TEI_Logo_36px.png"/>
+                                                                    </a>
+                                                                </li>
+                                                                <li style="display:inline;margin-right:1em;">
+                                                                    <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=metadata')}" title="RDF metadata">
+                                                                        <img border="0" src="http://www.w3.org/RDF/icons/rdf_w3c_icon.48"
+                                                                            alt="RDF metadata"/>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>                                                            
+                                                        </td>                                                        
                                                     </tr>
                                                     <tr>
                                                         <th>IIIF Endpoint(s)</th>
