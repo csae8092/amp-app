@@ -996,9 +996,9 @@ static-search/stems/meaningless.json
 static-search/stems/mehr.json
 static-search/stems/meiler.json
 static-search/stems/mein.json
+static-search/stems/meinem.json
 static-search/stems/meinen.json
 static-search/stems/meiner.json
-static-search/stems/meinm.json
 static-search/stems/memoir.json
 static-search/stems/memoirist.json
 static-search/stems/memori.json
@@ -1042,7 +1042,6 @@ static-search/stems/muddl.json
 static-search/stems/muh.json
 static-search/stems/mulin.json
 static-search/stems/muller.json
-static-search/stems/mus.json
 static-search/stems/musilin.json
 static-search/stems/musl.json
 static-search/stems/muslin.json
@@ -1072,6 +1071,7 @@ static-search/stems/nahmen.json
 static-search/stems/nake.json
 static-search/stems/naturwissenschaftl.json
 static-search/stems/natürlich.json
+static-search/stems/natürlichein.json
 static-search/stems/natürlichkeit.json
 static-search/stems/ncident.json
 static-search/stems/necess.json

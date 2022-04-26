@@ -91,6 +91,8 @@
                      1.5. Underline
                      1.5.1. Underlines are marked up as <![CDATA[<]]>hi rend="underline"<![CDATA[>]]> and graphically represented on the web page.
                      1.5.2. Underlines are not represented if the form part of signatures.
+                     1.5.3. Underlines in typescripts are rendered precisely and include, for instance, empty spaces before or after words; transcriptions of underlines in manuscripts ignore underlined spaces before or after words.
+                     1.5.4. In longer underlined passages, apparently random interruptions in underlines are ignored.<!-- 0027, 0043, 0062 -->
                   </p>
                   <p>
                      1.6. Characters whose legibility is impaired by smudges and overwritings are marked up as <![CDATA[<]]>unclear<![CDATA[>]]> in XML and represented in grey on the web page.
@@ -98,10 +100,12 @@
                   <p>
                      1.7. Revisions<lb/>
                      1.7.1. The transcriptions represent deletions of text (example: Autograph Letter Signed W. H. Auden to Stella Musulin 1964-12-23, page 3, line 26).<lb/>
-                     1.7.2. For overwritings in typescripts, we have accepted the orthographically or grammatically accurate versions as corrections, even if the actual sequences of textual layers cannot be reconstructed (example: Typescript Stella Musulin "In Retrospect" [?], page 1, line 27).
+                     1.7.2. For overwritings in manuscripts and typescripts, we have accepted the orthographically or grammatically accurate versions as corrections, even if the actual sequences of textual layers cannot be reconstructed (example: Typescript Stella Musulin "In Retrospect" [?], page 1, line 27).
                      1.7.3. For transcriptions of typescripts, we accept the use of the signs 'x', 'm', 'z', and '-' as indicating deletions where such deletion seems plausible.
                      1.7.4. When additions are inserted into manuscripts or typescripts, surrounding spaces are included in ways that are coherent with the general use of spaces in the respective texts (that especially concerns spaces after punctuation in typescripts).
                      1.7.5. When additions replace deleted words in typescripts, they are inserted directly after the deletions without additional spaces.
+                     1.7.6. When it is uncertain whether characters have been deleted, the passage in question is marked up as <![CDATA[<]]>unclear<![CDATA[>]]><![CDATA[<]]>del<![CDATA[>]]><![CDATA[<]]>gap reason="deleted"/<![CDATA[>]]><![CDATA[<]]>del/<![CDATA[>]]><![CDATA[<]]>unclear/<![CDATA[>]]>.
+                     1.7.7. For typescripts by Musulin, we accept handwritten underlines of deleted passages as cancelled deletions.
                   </p>
                   <p>
                      1.8. Pre-printed Components and Postal Additions<lb/>

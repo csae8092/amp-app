@@ -7,7 +7,8 @@ function resize(position) {
             left_container = $(`#text-resize-${position}`),
             right_container = $(`#img-resize-${position}`),
             handle = $(`#img-expand-${position}`),
-            viewer = $(`#viewer-${position}`).children('div');
+            viewer = $(`#viewer-${position}`).children('div'),
+            text = $(left_container).children('div');
         
         handle.on('mousedown', function (e) {
             isResizing = true;
@@ -19,14 +20,28 @@ function resize(position) {
             if (!isResizing) 
                 return;
             
-            // console.log(container.offset());
-            let offsetRight = container.width() - (e.clientX - container.offset().left);
-            // console.log(offsetRight);
+            let offsetLeft = container.width() - (e.clientX + container.offset().left);
+            let offsetRight = container.width() - handle.val();
+
+            if (handle.val() < 936) {
+                left_container.css('max-width', `${container.width() - offsetLeft}px`);
+                right_container.css('max-width', `${offsetLeft}px`);
+                viewer.css('width', `${offsetLeft}px`);
+                viewer.css('height', `${offsetLeft}px`);
+            } else if (handle.val() > 936) {
+                left_container.css('max-width', `${handle.val()}px`);
+                text.css('width', `${handle.val()}px`);
+                right_container.css('max-width', `${offsetRight}px`);
+                viewer.css('width', `${offsetRight}px`);
+                viewer.css('height', `${offsetRight}px`);
+            } else if (handle.val() === 936) {
+                left_container.css('max-width', '50%');
+                text.css('width', '50%');
+                right_container.css('max-width', '50%');
+                viewer.css('width', '914px');
+                viewer.css('height', '914px');
+            }
             
-            left_container.css('max-width', container.width() - offsetRight);
-            right_container.css('max-width', offsetRight);
-            viewer.css('width', offsetRight);
-            viewer.css('height', offsetRight);
 
         }).on('mouseup', function (e) {
             // stop resizing
