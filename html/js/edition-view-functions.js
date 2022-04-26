@@ -52,7 +52,7 @@ function editionClick(el) {
             $(this).removeClass("fade");
         });
         $(".expand-wrapper input").each(function() {
-            $(this).val(201);
+            $(this).val(936);
         });
         $(".hide-reading").each(function() {
             $(this).removeClass("fade");
@@ -114,7 +114,7 @@ function diplomaticClick(el) {
             $(this).removeClass("fade");
         });
         $(".expand-wrapper input").each(function() {
-            $(this).val(201);
+            $(this).val(936);
         });
         $(".hide-reading").each(function() {
             $(this).addClass("fade");
