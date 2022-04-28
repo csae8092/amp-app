@@ -1,5 +1,5 @@
-function original(el) {
-    textFeaturesAll("text-features-link");
+// function original(el) {
+    // textFeaturesAll("text-features-link");
     // $(".expand-wrapper").each(function() {
     //     $(this).removeClass("fade");
     // });
@@ -26,15 +26,15 @@ function original(el) {
     //     $(this).addClass("col-md-6");         
     //     $(this).css("max-width","50%");   
     // });
-    if ($("#unclear-link").prop( "checked" ) && $("#whitespaces-link").prop( "checked" ) && $("#deleted-link").prop( "checked" ) && $("#underline-link").prop( "checked" )) {
-        $("#text-features-link").prop("checked", true);
-        $("#text-features-link").addClass("active");
-    }
-    if ($("#unclear-link").prop( "checked" ) == false && $("#whitespaces-link").prop( "checked" ) == false && $("#deleted-link").prop( "checked" ) == false && $("#underline-link").prop( "checked" ) == false) {
-        $("#text-features-link").prop("checked", false);
-        $("#text-features-link").removeClass("active");
-    }
-}
+    // if ($("#unclear-link").prop( "checked" ) && $("#whitespaces-link").prop( "checked" ) && $("#deleted-link").prop( "checked" ) && $("#underline-link").prop( "checked" )) {
+    //     $("#text-features-link").prop('checked', true);
+    //     $("#text-features-link").addClass("active");
+    // }
+    // if ($("#unclear-link").prop( "checked" ) == false || $("#whitespaces-link").prop( "checked" ) == false || $("#deleted-link").prop( "checked" ) == false || $("#underline-link").prop( "checked" ) == false) {
+    //     $("#text-features-link").prop('checked', false);
+    //     $("#text-features-link").removeClass("active");
+    // }
+// }
 
 function fullScreen(el) {
     var element = $(el);
@@ -124,19 +124,23 @@ function textFeaturesAll(el) {
             .addClass("fade");
         });
         $("#deleted-link2, #deleted-link").removeClass("red");
+        $("#deleted-link").removeClass("active");
         $(".abbr").each(function() {
             $(this).removeClass("unclear badge-item yellow");
         });
         $("#unclear-link2, #unclear-link").removeClass("yellow");
+        $("#unclear-link").removeClass("active");
         $(".space").each(function() {
             $(this).addClass("fade");
             $(this).removeClass("badge-item green");
         });
         $("#whitespaces-link2, #whitespaces-link").removeClass("green");
+        $("#whitespaces-link").removeClass("active");
         $(".hi-underline").each(function() {
             $(this).removeClass("underline badge-item blue");
         });
         $("#underline-link2, #underline-link").removeClass("blue");
+        $("#underline-link").removeClass("active");
         if ($("#unclear-link").prop( "checked" )) {
             $("#unclear-link").prop('checked', false);
         }
@@ -156,19 +160,23 @@ function textFeaturesAll(el) {
             .removeClass("fade");
         });
         $("#deleted-link2, #deleted-link").addClass("red");
+        $("#deleted-link").addClass("active");
         $(".abbr").each(function() {
             $(this).addClass("unclear badge-item yellow");
         });
         $("#unclear-link2, #unclear-link").addClass("yellow");
+        $("#unclear-link").addClass("active");
         $(".space").each(function() {
             $(this).removeClass("fade");
             $(this).addClass("badge-item green");
         });
         $("#whitespaces-link2, #whitespaces-link").addClass("green");
+        $("#whitespaces-link").addClass("active");
         $(".hi-underline").each(function() {
             $(this).addClass("underline badge-item blue");
         });
         $("#underline-link2, #underline-link").addClass("blue");
+        $("#underline-link").addClass("active");
         if ($("#unclear-link").prop( "checked" ) == false) {
             $("#unclear-link").prop('checked', true);
         }
@@ -252,9 +260,11 @@ function textFeatures(el, reset) {
     }
     if ($("#unclear-link").prop( "checked" ) && $("#whitespaces-link").prop( "checked" ) && $("#deleted-link").prop( "checked" ) && $("#underline-link").prop( "checked" )) {
         $("#text-features-link").prop('checked', true);
+        $("#text-features-link").addClass("active");
     }
-    if ($("#unclear-link").prop( "checked" ) == false && $("#whitespaces-link").prop( "checked" ) == false && $("#deleted-link").prop( "checked" ) == false && $("#underline-link").prop( "checked" ) == false) {
+    if ($("#unclear-link").prop( "checked" ) == false || $("#whitespaces-link").prop( "checked" ) == false || $("#deleted-link").prop( "checked" ) == false || $("#underline-link").prop( "checked" ) == false) {
         $("#text-features-link").prop('checked', false);
+        $("#text-features-link").removeClass("active");
     }
     
 }

@@ -79,7 +79,7 @@
                                     </a>
                                 </td>
                                 <td style="text-align:right;width:40%;border: 1px dashed #dedede;">   
-                                    <label>Text features</label>
+                                    <label>Original text features</label>
                                     <label class="switch">
                                         <input title="text features"
                                             type="checkbox"

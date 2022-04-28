@@ -81,7 +81,7 @@
                 </style>
                                
             </head>
-            <body class="page" onload="original(this)">
+            <body class="page">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
@@ -278,22 +278,20 @@
         </span>
     </xsl:template>
     <xsl:template match="tei:del">
-        <span class="del"><xsl:apply-templates/></span>      
+        <span class="del fade"><xsl:apply-templates/></span>      
     </xsl:template> 
     <xsl:template match="tei:gap">
         <xsl:choose>
             <xsl:when test="@reason='deleted'">
-                <span class="del">
-                    <span class="abbr gap">
-                        <xsl:attribute name="alt">
-                            <xsl:value-of select="data(@reason)"/>
-                        </xsl:attribute>
-                        <xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
-                    </span>
-                </span>
+                <span class="del gap">
+                    <xsl:attribute name="alt">
+                        <xsl:value-of select="data(@reason)"/>
+                    </xsl:attribute>
+                    <xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
+                </span>                
             </xsl:when>
             <xsl:when test="@reason='illegible'">
-                <span class="abbr gap">
+                <span class="gap">
                     <xsl:attribute name="alt">
                         <xsl:value-of select="data(@reason)"/>
                     </xsl:attribute>
