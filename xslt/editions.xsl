@@ -249,11 +249,11 @@
                         </div><!-- .card -->
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
-                </div><!-- .site -->         
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
-                <script type="text/javascript" src="js/osd_single.js"></script> 
+                </div><!-- .site -->  
                 <script type="text/javascript" src="js/pagination-sync.js"></script>
-                <script type="text/javascript" src="js/edition-view-functions.js"></script>                
+                <script type="text/javascript" src="js/edition-view-functions.js"></script> 
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+                <script type="text/javascript" src="js/osd_single.js"></script>
             </body>
         </html>
     </xsl:template>
@@ -268,7 +268,7 @@
         <xsl:apply-templates/><br />
     </xsl:template>
     <xsl:template match="tei:unclear">
-        <span class="abbr" title="unclear">
+        <span class="abbr" alt="unclear">
             <xsl:apply-templates/>
         </span> 
     </xsl:template>
@@ -284,8 +284,8 @@
         <xsl:choose>
             <xsl:when test="@reason='deleted'">
                 <span class="del">
-                    <span class="abbr">
-                        <xsl:attribute name="title">
+                    <span class="abbr gap">
+                        <xsl:attribute name="alt">
                             <xsl:value-of select="data(@reason)"/>
                         </xsl:attribute>
                         <xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>
@@ -293,8 +293,8 @@
                 </span>
             </xsl:when>
             <xsl:when test="@reason='illegible'">
-                <span class="abbr">
-                    <xsl:attribute name="title">
+                <span class="abbr gap">
+                    <xsl:attribute name="alt">
                         <xsl:value-of select="data(@reason)"/>
                     </xsl:attribute>
                     <xsl:text>[</xsl:text><xsl:apply-templates/><xsl:text>]</xsl:text>

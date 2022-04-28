@@ -10,6 +10,10 @@ body {
     background: url("../images/letter-background.png") 0 0 repeat;
 }*/
 
+.capitalize {
+    text-transform: capitalize;
+}
+
 .fade {
     display: none;
 }
@@ -442,7 +446,7 @@ a.btn-round:hover {
 
 .container-fluid {
     max-width: 1024px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .container-fluid-content {
@@ -492,7 +496,6 @@ a.btn-round:hover {
 }
 
 #wrapper-content-amp {
-    margin-top:3%;
     margin-bottom:2%;
     background-color: #F1F1F1;
 }
@@ -501,13 +504,22 @@ a.btn-round:hover {
     margin-top: 3%;
 }
 
+#wrapper-hero-content::after {
+    background-color: rgba(250,250,250,.5);
+}
+
+#wrapper-hero-content {
+    padding: 2em 0;
+    background-position: top;
+}
+
 #wrapper-hero-inner {
-    padding: 0 3em;
+    padding: 2em;    
 }
 
 #wrapper-hero-inner p {
-    font-size:18px;
-    line-height:27px;
+    font-size:22px;
+    line-height:31px;
     color:#615a60;
 }
 
@@ -604,7 +616,7 @@ li > label {
 
 .navbar-search-icon {
     background-color: transparent;
-    margin-left: -30px;
+    margin-left: -45px;
     margin-top: 4px;
     border: none;
 }
@@ -938,16 +950,22 @@ label {
     display: none;
 }
 
-.unclear[title] {
-    position: relative;
-    text-decoration: underline dotted;
+.unclear[alt]::after {
+    opacity: 0;
+    content: "";
 }
 
-.unclear[title]:hover::after,
-.unclear[title]:focus::after {
-    content: attr(title);
+.unclear[alt] {
+    position: relative;
+    /*text-decoration: underline dotted;*/  
+}
+
+.unclear[alt]:hover::after,
+.unclear[alt]:focus::after {
+    content: attr(alt);
     position: absolute;
-    left: 0;
+    left: -50px;
+    top: 25px;
     width: auto;
     white-space: nowrap;
     background-color: #f1f1f1;
@@ -955,6 +973,36 @@ label {
     font-size: 16px;
     padding: 3px 5px;
     z-index: 99;
+    transition: opacity  0s linear 1s;
+    opacity: 1;
+}
+.gap[alt]::after {
+    opacity: 0;
+    content: "";
+}
+
+.gap[alt] {
+    position: relative;
+    transition: content 3s, background-color 3s;
+    /*text-decoration: underline dotted;*/
+    
+}
+
+.gap[alt]:hover::after,
+.gap[alt]:focus::after {
+    content: attr(alt);
+    position: absolute;
+    left: 10px;
+    top: 25px;
+    width: auto;
+    white-space: nowrap;
+    background-color: #f1f1f1;
+    border-radius: .25rem;
+    font-size: 16px;
+    padding: 3px 5px;
+    z-index: 99;
+    transition: opacity  0s linear 1s;
+    opacity: 1;
 }
 
 .strikethrough {
@@ -987,7 +1035,7 @@ label {
 }
 
 .yellow {
-    background-color: #faf8ca;
+    background-color: #f1f1f1;
 }
 
 .green {

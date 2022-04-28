@@ -1,3 +1,26 @@
+function diplomaticLoad(el) {
+    $(".abbr").each(function() {
+        // console.log($(this));
+        $(this).addClass("unclear");
+    });
+    $(".space").each(function() {
+        $(this).removeClass("fade");
+    });
+    $(".del").each(function() {
+        $(this).addClass("strikethrough");
+    });
+    $(".hi-underline").each(function() {
+        $(this).addClass("underline");
+    });
+    $("input").each(function() {
+        this.checked = true;
+    });
+    deletions("#deletions-link");
+    unclear("#unclear-link");
+    space("#whitespaces-link");
+    underline("#underline-link");
+}
+
 function editionClick(el) {
     var element = $(el);
     if ( element.hasClass("active") ) {
@@ -120,29 +143,6 @@ function diplomaticClick(el) {
             $(this).addClass("fade");
         });
     }
-}
-
-function diplomaticLoad(el) {
-    $(".abbr").each(function() {
-        // console.log($(this));
-        $(this).addClass("unclear");
-    });
-    $(".space").each(function() {
-        $(this).removeClass("fade");
-    });
-    $(".del").each(function() {
-        $(this).addClass("strikethrough");
-    });
-    $(".hi-underline").each(function() {
-        $(this).addClass("underline");
-    });
-    $("input").each(function() {
-        this.checked = true;
-    });
-    deletions("#deletions-link");
-    unclear("#unclear-link");
-    space("#whitespaces-link");
-    underline("#underline-link");
 }
 
 function readingClick(el) {

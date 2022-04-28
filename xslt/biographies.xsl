@@ -73,7 +73,7 @@
                             </div>   
                             <div class="card-body text-center">
                                 <ul style="margin-top:1em;padding-left:0;">
-                                    <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@when-iso, '-')[1]">                                    
+                                    <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                    
                                         <li style="display:inline;list-style:none;margin-left:1em;">
                                             <a href="#{current-grouping-key()}" title="jump to date">
                                                 <xsl:value-of select="current-grouping-key()"/>
@@ -88,7 +88,7 @@
                         </div>                     
                         <div class="row">
                             <div class="col-md-12">                                
-                                <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@when-iso, '-')[1]">                                    
+                                <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                    
                                     <!--<xsl:variable name="panel-id" select="concat(generate-id(), '-', position())"/>-->                                                                        
                                     <div class="timeline-wrapper" id="{current-grouping-key()}" style="padding-top:5em;">
                                         <div class="text-center">                                            
@@ -102,7 +102,7 @@
                                         <xsl:for-each select="current-group()">
                                             <div class="row timeline">                                            
                                                 <xsl:choose>
-                                                    <xsl:when test="@type='event_austria'">                                                        
+                                                    <xsl:when test="contains(@type, 'event')">                                                        
                                                         <div class="col-md-5">    
                                                             <xsl:call-template name="bio-el">
                                                                 <xsl:with-param name="location" select="'left'"/>
@@ -167,6 +167,8 @@
             <script type="text/javascript" src="js/leaflet.js"/>
         </html>
     </xsl:template>
-                    
+    <xsl:template match="tei:hi">
+        <span class="italic"><xsl:apply-templates/></span>
+    </xsl:template>                
     
 </xsl:stylesheet>

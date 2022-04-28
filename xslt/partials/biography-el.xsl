@@ -19,8 +19,10 @@
             <xsl:when test="$location = 'false'">
                 <div class="row">
                     <div class="col-md-5">
-                        <img title="{./tei:label}" alt="{./tei:label}" src="{$img}"/>
-                        <xsl:if test="./tei:desc/tei:location">
+                        <img title="{if (./tei:label) then(./tei:label) else (./tei:desc/tei:title)}"
+                             alt="{if (./tei:label) then(./tei:label) else (./tei:desc/tei:title)}"
+                             src="{$img}"/>
+                        <xsl:if test="./tei:desc/tei:location/tei:geo/text()">
                             <xsl:variable name="lat" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[1]"/>
                             <xsl:variable name="long" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[2]"/>
                             <div class="leaflet-maps-modal" lat="{$lat}" long="{$long}"></div>
@@ -35,7 +37,12 @@
                             </xsl:when>
                             <xsl:when test="./tei:desc">
                                 <h6><xsl:value-of select="./tei:desc/tei:title"/></h6>
-                                <span><xsl:value-of select="./tei:desc/text()"/></span>                               
+                                <span><xsl:value-of select="./tei:desc/text()"/></span>    
+                                <ul>
+                                    <xsl:for-each select="./tei:desc/tei:location/tei:address/tei:placeName/*">
+                                        <li><xsl:apply-templates/></li>
+                                    </xsl:for-each>
+                                </ul>
                             </xsl:when>
                         </xsl:choose>
                     </div>
@@ -53,8 +60,24 @@
                             <xsl:when test="./tei:desc">
                                 <h6><xsl:value-of select="./tei:desc/tei:title"/></h6>
                                 <span><xsl:value-of select="./tei:desc/text()"/></span>
+                                <table class="table">
+                                    <tbody>
+                                        <xsl:for-each select="./tei:desc/tei:location/tei:address/tei:placeName/*">
+                                            <tr>
+                                                <th class="capitalize"
+                                                    style="border:none;border-right: 1px solid #f1f1f1;width:25%;padding:.2em;">
+                                                    <xsl:value-of select="name()"/>
+                                                </th>
+                                                <td style="border:none;padding:.2em;.5em;">
+                                                    <xsl:apply-templates/>
+                                                </td>
+                                            </tr>
+                                        </xsl:for-each>
+                                    </tbody>
+                                    
+                                </table>
                                 
-                                <xsl:if test="./tei:desc/tei:location">
+                                <xsl:if test="./tei:desc/tei:location/tei:geo/text()">
                                     <xsl:variable name="lat" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[1]"/>
                                     <xsl:variable name="long" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[2]"/>
                                     <div class="leaflet-maps" lat="{$lat}" long="{$long}"></div>
