@@ -70,26 +70,7 @@
    </teiHeader>
    <text>
       <body>
-         <listEvent>
-<!--            <event xml:id="xyz"
-               type="event"
-               facs="optional-\-add-facs-or-delete-attr">
-               <head xml:lang="en">
-                  <date notBefore="1957-10-04" notAfter="1957-10-04">1957-10-04</date>
-               </head>
-               <desc>
-                  <title xml:lang="en">title</title>
-                  text
-                  <location>
-                     <geo></geo>
-                  </location>-->
-                  <!-- 
-                     more option:
-                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html
-                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-event.html
-                  -->
-               <!--</desc>               
-            </event>-->            
+         <listEvent>           
             <event xml:id="ea001"
                type="event_austria">
                <head xml:lang="en">
@@ -290,7 +271,7 @@
                   <title xml:lang="en">24-26 April 1967, Palais Pálffy and Redoutensaal, Vienna</title>
                   Auden participates in a round table on "Literatur als Tradition und Revolution" [Literature as Tradition and Revolution] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. Other participants include the American writer Mary McCarthy, the dissident Soviet literary scholar Efim (Grigorievich) Etkind (Russian Ефим Григорьевич Эткинд), the British writer Philip Toynbee, and the German literary critic Marcel Reich-Ranicki. 
                   <location>
-                     <geo>48.20707943277017, 16.367047540843927</geo>
+                     <geo>48.20707943277017 16.367047540843927</geo>
                      <address>
                         <street>Josefsplatz 4</street>
                         <postCode>1010</postCode>
@@ -366,7 +347,7 @@
                   <title xml:lang="en">August 1968, Warsaw Pact invasion of Czechoslovakia</title>
                   Soviet Union led troops invade Czechoslovakia<!-- reference/link to letter 1968-10-15, Stella Musulin memoir -->
                   <location>
-                     <geo>50.08292, 14.46672</geo>
+                     <geo>50.08292 14.46672</geo>
                   </location>
                </desc>               
             </event>

@@ -71,25 +71,6 @@
    <text>
       <body>
          <listEvent>
-<!--            <event xml:id="xyz"
-               type="event"
-               facs="optional-\-add-facs-or-delete-attr"><!-\- event template -\->
-               <head xml:lang="en">
-                  <date when-iso="1957-10-04">1957-10-04</date>
-               </head>
-               <desc>
-                  <title xml:lang="en">title</title>
-                  text
-                  <location>
-                     <geo></geo>
-                  </location>-->
-                  <!-- 
-                     more option:
-                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html
-                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-event.html
-                  -->
-               <!--</desc>               
-            </event>--> 
             <event xml:id="e001"
                type="event">
                <head xml:lang="en">

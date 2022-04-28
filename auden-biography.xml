@@ -70,55 +70,79 @@
    </teiHeader>
    <text>
       <body>
-         <listEvent><!--<event xml:id="amp-transcript__0058.xml"
-                   type="correspondence"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0107/">
+         <listEvent>
+            <event xml:id="amp-transcript__0054.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0240/">
                <head xml:lang="en">
-                  <date when-iso="?-?-15">[?]-[?]-[15]</date>
+                  <date>[1960]</date>
                </head>
-               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin [?]-[?]-[15]</label>
-            </event>-->
-            <event xml:id="ea005" type="event_austria">
-               <head xml:lang="en">
-                  <date notBefore-iso="1967-04-24"
-                        notAfter-iso="1967-04-26"
-                        when-iso="1967-04-26">1967-04-24--1967-04-26</date>
-                  <!-- ISO time span format -->
-               </head>
-               <desc>
-                  <title xml:lang="en">24 to 26 April 1967, Vienna</title>
-                  W. H. Auden participates in a round table on Literatur als Tradition und Revolution [Literature as Tradition and Revolution] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. Other participants include the American writer Mary McCarthy, the dissident Soviet literary scholar Efim (Grigorievich) Etkind (Russian Ефим Григорьевич Эткинд), the British writer Philip Toynbee, and the German literary critic Marcel Reich-Ranicki. 
-                  <location>
-                     <geo>48.2082 16.37169</geo>
-                  </location>
-               </desc>
-            </event>
-            <event xml:id="xyz" type="event" facs="optional--add-facs-or-delete-attr"><!-- event template -->
-               <head xml:lang="en">
-                  <date when-iso="1957-10-04">1957-10-04</date>
-               </head>
-               <desc>
-                  <title xml:lang="en">title</title>
-                  text
-                  <location>
-                     <geo/>
-                  </location>
-                  <!-- 
-                     more option:
-                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html
-                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-event.html
-                  -->
-               </desc>
+               <label xml:lang="en">Photographs [?] of W. H. Auden, Chester Kallman, and Elsa Musulin [1960]</label>
             </event>
             <event xml:id="ea001" type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1957-10-04">1957-10-04</date>
+                  <date notBefore="1957-10-04" notAfter="1957-10-04">1957-10-04</date>
                </head>
                <desc>
                   <title xml:lang="en">4 October 1957, Vienna</title>
                   W. H. Auden and Chester Kallman purchase the house Hinterholz 6, 3062 Kirchstetten, in Lower Austria.
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.21269546633091 16.36939645634053</geo>
+                     <address>
+                        <street>Wipplingerstraße 18</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="ea002" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1959-06-01" notAfter="1959-10-31">1959-06-01--1959-10-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">Summer 1959, Kirchstetten, Lower Austria</title>
+                  Auden meets Stella Musulin for the first time. The meeting is initiated by Auden's and Musulin's mutual friend, Christiane Zimmer (1902-1987), Hugo von Hofmannsthal's daughter, who had emigrated to the United States.<!-- link Christiane Zimmer and Hugo von Hofmannsthal to PMB --><location>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="amp-transcript__0045.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0109/">
+               <head xml:lang="en">
+                  <date notBefore="1960-07-21" notAfter="1960-07-21">1960-07-21</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1960-07-21</label>
+            </event>
+            <event xml:id="ea003" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1960-08-04" notAfter="1960-08-06">1960-08-04--1960-08-06</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">4-6 August 1960, Kirchstetten, Lower Austria</title>
+                  German composer Hans Werner Henze (1926-2012) visits Auden and Kallmann, the authors of the English libretto for his three-act opera <hi rend="italic">Elegy for Young Lovers</hi> (1961). In Auden and Kallman's guest book, Henze writes: "with love and gratitude and pride to have such a beautiful libretto!"
+                  <location>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>
             </event>
@@ -126,55 +150,39 @@
                    type="additional-materials"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0235/">
                <head xml:lang="en">
-                  <date when-iso="1960-01-01">[1960]</date>
+                  <date notBefore="1960-01-01" notAfter="1960-12-31">[1960]</date>
                </head>
                <label xml:lang="en">Photograph [?] of W. H. Auden, Chester Kallman, and Elsa Musulin [1960]</label>
-            </event>
-            <event xml:id="amp-transcript__0054.xml"
-                   type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0240/">
-               <head xml:lang="en">
-                  <date when-iso="1960-01-01">[1960]</date>
-               </head>
-               <label xml:lang="en">Photographs [?] of W. H. Auden, Chester Kallman, and Elsa Musulin [1960]</label>
-            </event>
-            <event xml:id="amp-transcript__0045.xml"
-                   type="correspondence"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0109/">
-               <head xml:lang="en">
-                  <date when-iso="1960-07-21">1960-07-21</date>
-               </head>
-               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1960-07-21</label>
-            </event>
-            <event xml:id="amp-transcript__0057.xml"
-                   type="correspondence"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0105/">
-               <head xml:lang="en">
-                  <date when-iso="1961-01-25">1961-[?]-[25]</date>
-               </head>
-               <label xml:lang="en">Envelope W. H. Auden to Stella Musulin 1961-[?]-[25]</label>
             </event>
             <event xml:id="amp-transcript__0022.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0117/">
                <head xml:lang="en">
-                  <date when-iso="1961-08-16">1961-08-16</date>
+                  <date notBefore="1961-08-16" notAfter="1961-08-16">1961-08-16</date>
                </head>
-               <label xml:lang="en">Letter W. H. Auden to Stella Musulin 1961-08-16</label>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1961-08-16</label>
             </event>
             <event xml:id="amp-transcript__0021.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0113/">
                <head xml:lang="en">
-                  <date when-iso="1961-10-13">1961-10-13</date>
+                  <date notBefore="1961-10-13" notAfter="1961-10-13">1961-10-13</date>
                </head>
                <label xml:lang="en">Typed Letter Signed W. H. Auden to Stella Musulin 1961-10-13</label>
+            </event>
+            <event xml:id="amp-transcript__0057.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0105/">
+               <head xml:lang="en">
+                  <date notBefore="1961-04-25" notAfter="1961-10-25">1961-[?]-[25]</date>
+               </head>
+               <label xml:lang="en">Envelope W. H. Auden to Stella Musulin 1961-[?]-[25]</label>
             </event>
             <event xml:id="amp-transcript__0059.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0031/">
                <head xml:lang="en">
-                  <date when-iso="1962-04-30">1962-04-30</date>
+                  <date notBefore="1962-04-30" notAfter="1962-04-30">1962-04-30</date>
                </head>
                <label xml:lang="en">Envelope W. H. Auden to Stella Musulin 1962-04-30</label>
             </event>
@@ -182,7 +190,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0121/">
                <head xml:lang="en">
-                  <date when-iso="1962-07-23">1962-07-23</date>
+                  <date notBefore="1962-07-23" notAfter="1962-07-23">1962-07-23</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1962-07-23</label>
             </event>
@@ -190,19 +198,19 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0125/">
                <head xml:lang="en">
-                  <date when-iso="1962-09-11">1962-09-11</date>
+                  <date notBefore="1962-09-11" notAfter="1962-09-11">1962-09-11</date>
                </head>
-               <label xml:lang="en">Letter W. H. Auden to Stella Musulin 1962-09-11</label>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1962-09-11</label>
             </event>
-            <event xml:id="ea002" type="event_austria">
+            <event xml:id="ea004" type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1962-10-04">1962-10-04</date>
+                  <date notBefore="1962-10-04" notAfter="1962-10-04">1962-10-04</date>
                </head>
                <desc>
                   <title xml:lang="en">4 October 1962, Vienna</title>
-                  W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The Austrian actor Wolfgang Gasser reads German-language translations of Auden's poems.
+                  Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The Austrian actor Wolfgang Gasser reads German-language translations of Auden's poems.
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.20849 16.37208</geo>
                   </location>
                </desc>
             </event>
@@ -210,7 +218,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0129/">
                <head xml:lang="en">
-                  <date when-iso="1962-10-17">1962-10-17</date>
+                  <date notBefore="1962-10-17" notAfter="1962-10-17">1962-10-17</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1962-10-17</label>
             </event>
@@ -218,19 +226,19 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0001/">
                <head xml:lang="en">
-                  <date when-iso="1963-05-12">1963-05-12</date>
+                  <date notBefore="1963-05-12" notAfter="1963-05-12">1963-05-12</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1963-05-12</label>
             </event>
-            <event xml:id="ea003" type="event_austria">
+            <event xml:id="ea005" type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1963-05-17">1963-05-17</date>
+                  <date notBefore="1963-05-17" notAfter="1963-05-17">1963-05-17</date>
                </head>
                <desc>
                   <title xml:lang="en">17 May 1963, Vienna</title>
-                  W. H. Auden participates in an international Rudolf Kassner symposium at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]: on the last day of the six-day congress, he speaks about the "Begegnung mit dem Werk Rudolf Kassners" ["Encounter with the Work of Rudolf Kassner"].
+                  Auden participates in an international Rudolf Kassner symposium at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]: on the last day of the six-day congress, he speaks about the "Begegnung mit dem Werk Rudolf Kassners" ["Encounter with the Work of Rudolf Kassner"].
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.20849 16.37208</geo>
                   </location>
                </desc>
             </event>
@@ -238,7 +246,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0007/">
                <head xml:lang="en">
-                  <date when-iso="1964-12-23">1964-12-23</date>
+                  <date notBefore="1964-12-23" notAfter="1964-12-23">1964-12-23</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1964-12-23</label>
             </event>
@@ -246,59 +254,201 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0011/">
                <head xml:lang="en">
-                  <date when-iso="1965-03-15">1965-03-15</date>
+                  <date notBefore="1965-03-15" notAfter="1965-03-15">1965-03-15</date>
                </head>
                <label xml:lang="en">Typed Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Joseph Weinheber" 1965-03-15</label>
             </event>
+            <event xml:id="ei001" type="event_international">
+               <head xml:lang="en">
+                  <date notBefore="1964-09-30" notAfter="1965-03-22">winter 1964-1965</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">Winter 1964/65, Berlin</title>
+                  Auden spends six months in Berlin as guest of the Ford Foundation and their artists-in-residence programme, taking up residence at Hubertusbader Straße 43 in Dahlem <!-- reference letters to Musulin 1964-12-23 and 1965-03-15 --><location>
+                     <geo>52.47967694245993 13.276187048436705</geo>
+                     <address>
+                        <street>Hubertusbader Straße 43</street>
+                        <postCode>14193</postCode>
+                        <placeName>
+                           <settlement>Berlin</settlement>
+                           <country>Germany</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
             <event xml:id="amp-transcript__0039.xml"
                    type="correspondence"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0009/">
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0013/">
                <head xml:lang="en">
-                  <date when-iso="1965-04-28">1965-04-28</date>
+                  <date notBefore="1965-04-28" notAfter="1965-04-28">1965-04-28</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Joseph Weinheber" 1965-04-28 and with Typescript W. H. Auden Translation "Joseph Weinheber"</label>
             </event>
-            <event xml:id="ea004" type="event_austria">
+            <event xml:id="ea006" type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1965-05-24">1965-05-24</date>
+                  <date notBefore="1965-05-24" notAfter="1965-05-24">1965-05-24</date>
                </head>
                <desc>
-                  <title xml:lang="en">24 May 1965, Vienna</title>
-                  W. H. Auden gives a lecture on T. S. Eliot at the Naturhistorisches Museum Wien [Natural History Museum Vienna]. The event has been co-organized by the Austro-British Society, the British Council in Austria, and the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
+                  <title xml:lang="en">24 May 1965, Natural History Museum, Vienna</title>
+                  Auden gives a lecture on T. S. Eliot at the Naturhistorisches Museum Wien [Natural History Museum Vienna]. The event has been co-organized by the Austro-British Society, the British Council in Austria, and the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.20541218975421 16.359759267981232</geo>
+                     <address>
+                        <street>Burgring 7</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>
+            </event>
+            <event xml:id="amp-transcript__0058.xml"
+                   type="correspondence"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0107/">
+               <head xml:lang="en">
+                  <date notBefore="1960-07-22" notAfter="1965-09-28">[?]</date>
+               </head>
+               <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin [?]</label>
             </event>
             <event xml:id="amp-transkript__0015.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0015/">
                <head xml:lang="en">
-                  <date when-iso="1965-09-29">1965-09-29</date>
+                  <date notBefore="1965-09-29" notAfter="1965-09-29">1965-09-29</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1965-09-29</label>
+            </event>
+            <event xml:id="ei002" type="event_international">
+               <head xml:lang="en">
+                  <date notBefore="1965-01-01" notAfter="1965-12-31">1965-01-01--1965-12-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">1965, Frankfurt am Main</title>
+                  Herbert Heckmann's German translation of Auden's poem "Josef Weinheber" appears in the <hi rend="italic">Neue Rundschau</hi> (volume 76, issue 3)
+<!--                  <location>
+                     <geo>50.11552 8.68417</geo>
+                  </location>--></desc>
             </event>
             <event xml:id="amp-transcript__0004.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0019/">
                <head xml:lang="en">
-                  <date when-iso="1966-02-03">1966-02-03</date>
+                  <date notBefore="1966-02-03" notAfter="1966-02-03">1966-02-03</date>
                </head>
                <label xml:lang="en">Typed Letter Signed W. H. Auden to Stella Musulin 1966-02-03</label>
+            </event>
+            <event xml:id="ea007" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1966-08-06" notAfter="1966-08-06">1966-08-06</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">6 August 1966, Large Festival Hall, Salzburg</title>
+                  Hans Werner Henze's opera <hi rend="italic">The Bassarids</hi>, with a libretto by Auden and Kallman, premières at the Salzburg Festival; the German translation of the libretto is produced by Maria Bosse-Sporleder
+                  <location>
+                     <geo>47.79910808978453 13.041122827494169</geo>
+                     <address>
+                        <street>Hofstallgasse 1</street>
+                        <postCode>5020</postCode>
+                        <placeName>
+                           <settlement>Salzburg</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="ea008" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1966-10-25" notAfter="1966-10-25">1966-10-25</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">25 October 1966, Vienna</title>
+                  Auden is awarded the Austrian State Prize for European Literature by Federal Minister of Education Theodor Piffl-Perčević; the laudatory speech is delivered by Austrian writer and critic Hilde Spiel, one of the prize judges (next to writer Gerhard Fritsch and Wolfgang Kraus of the Austrian Society for Literature)
+                  <location>
+                     <geo>48.20849 16.37208</geo>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="ea009" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1967-01-05" notAfter="1967-01-05">1967-01-05</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">5 January 1967</title>
+                  Austrian television broadcasts the TV opera <hi rend="italics">Inzwischen</hi>, with a musical setting of a part of Auden’s "For the Time Being" (translated into German by Gerhard Fritsch as "Hier und Jetzt") by composer Paul Kont, featuring Helmut Qualtinger as Herod
+                  <location>
+                     <geo>47.33333 13.33333</geo>
+                  </location>
+               </desc>
             </event>
             <event xml:id="amp-transcript__0050.xml"
                    type="additional-materials"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0247/">
                <head xml:lang="en">
-                  <date when-iso="1967-04-01">1967-04</date>
+                  <date notBefore="1967-04-24" notAfter="1967-04-26">1967-04</date>
                </head>
                <label xml:lang="en">Photograph Otto Breicha of W. H. Auden and Mary McCarthy 1967-04</label>
+            </event>
+            <event xml:id="ea010" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1967-04-24" notAfter="1967-04-26">1967-04-24--1967-04-26</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">24-26 April 1967, Palais Pálffy and Redoutensaal, Vienna</title>
+                  Auden participates in a round table on "Literatur als Tradition und Revolution" [Literature as Tradition and Revolution] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. Other participants include the American writer Mary McCarthy, the dissident Soviet literary scholar Efim (Grigorievich) Etkind (Russian Ефим Григорьевич Эткинд), the British writer Philip Toynbee, and the German literary critic Marcel Reich-Ranicki. 
+                  <location>
+                     <geo>48.20707943277017 16.367047540843927</geo>
+                     <address>
+                        <street>Josefsplatz 4</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="ea011" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1967-09-03" notAfter="1967-09-03">1967-09-03</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">3 September 1967</title>
+                  A 28-minute episode titled "W. H. Auden" of the documentary feature <hi rend="italics">Das österreichische Porträt</hi> [The Austrian Portrait], portraying Auden's life and work at Kirchstetten, is broadcast on Austrian national TV
+                  <location>
+                     <geo>47.33333 13.33333</geo>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="ea012" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1967-09-10" notAfter="1967-09-13">1967-09-10--1967-09-13</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">10-13 September 1967, Kirchstetten, Lower Austria</title>
+                  The English poet and critic Stephen Spender (1909-1995), a life-long friend of Auden's, and his wife Natasha visit Auden and Kallman 
+                  <location>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
             </event>
             <event xml:id="amp-transcript__0005.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0023/">
                <head xml:lang="en">
-                  <date when-iso="1967-11-08">1967-11-08</date>
+                  <date notBefore="1967-11-08" notAfter="1967-11-08">1967-11-08</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1967-11-08</label>
             </event>
@@ -306,15 +456,46 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0027/">
                <head xml:lang="en">
-                  <date when-iso="1968-02-06">1968-02-06</date>
+                  <date notBefore="1968-02-06" notAfter="1968-02-06">1968-02-06</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-02-06</label>
+            </event>
+            <event xml:id="ea013" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1968-07-25" notAfter="1968-07-25">1968-07-25</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">25 July 1968, Large Festival Hall, Salzburg</title>
+                  Auden delivers the opening address "Worte und Noten" [Words and Musical Notes] at the Salzburg Festival
+                  <location>
+                     <geo>47.79910808978453 13.041122827494169</geo>
+                     <address>
+                        <street>Hofstallgasse 1</street>
+                        <postCode>5020</postCode>
+                        <placeName>
+                           <settlement>Salzburg</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="ei003" type="event_international">
+               <head xml:lang="en">
+                  <date notBefore="1968-08-20" notAfter="1968-08-21">1968-08-20--1968-08-21</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">August 1968, Warsaw Pact invasion of Czechoslovakia</title>
+                  Soviet Union led troops invade Czechoslovakia<!-- reference/link to letter 1968-10-15, Stella Musulin memoir --><location>
+                     <geo>50.08292 14.46672</geo>
+                  </location>
+               </desc>
             </event>
             <event xml:id="amp-transcript__0042.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0033/">
                <head xml:lang="en">
-                  <date when-iso="1968-10-04">1968-10-04</date>
+                  <date notBefore="1968-10-04" notAfter="1968-10-04">1968-10-04</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescripts W. H. Auden "August 1968" and "Elegy" 1968-10-04</label>
             </event>
@@ -322,7 +503,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0035/">
                <head xml:lang="en">
-                  <date when-iso="1968-10-06">1968-10-06</date>
+                  <date notBefore="1968-10-06" notAfter="1968-10-06">1968-10-06</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-06</label>
             </event>
@@ -330,7 +511,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0039/">
                <head xml:lang="en">
-                  <date when-iso="1968-10-12">1968-10-12</date>
+                  <date notBefore="1968-10-12" notAfter="1968-10-12">1968-10-12</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-12</label>
             </event>
@@ -338,7 +519,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0043/">
                <head xml:lang="en">
-                  <date when-iso="1968-10-15">1968-10-15</date>
+                  <date notBefore="1968-10-15" notAfter="1968-10-15">1968-10-15</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-15</label>
             </event>
@@ -346,7 +527,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0101/">
                <head xml:lang="en">
-                  <date when-iso="1968-10-24">1968-10-24</date>
+                  <date notBefore="1968-10-24" notAfter="1968-10-24">1968-10-24</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-10-24</label>
             </event>
@@ -354,7 +535,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0047/">
                <head xml:lang="en">
-                  <date when-iso="1968-11-06">1968-11-06</date>
+                  <date notBefore="1968-11-06" notAfter="1968-11-06">1968-11-06</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-11-06</label>
             </event>
@@ -362,7 +543,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0051/">
                <head xml:lang="en">
-                  <date when-iso="1968-12-13">1968-12-13</date>
+                  <date notBefore="1968-12-13" notAfter="1968-12-13">1968-12-13</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-12-13</label>
             </event>
@@ -370,7 +551,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0055/">
                <head xml:lang="en">
-                  <date when-iso="1968-12-29">1968-12-29</date>
+                  <date notBefore="1968-12-29" notAfter="1968-12-29">1968-12-29</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1968-12-29</label>
             </event>
@@ -378,7 +559,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0059/">
                <head xml:lang="en">
-                  <date when-iso="1969-01-04">1969-01-04</date>
+                  <date notBefore="1969-01-04" notAfter="1969-01-04">1969-01-04</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1969-01-04</label>
             </event>
@@ -386,23 +567,62 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0063/">
                <head xml:lang="en">
-                  <date when-iso="1969-05-21">1969-05-21</date>
+                  <date notBefore="1969-05-21" notAfter="1969-05-21">1969-05-21</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1969-05-21</label>
+            </event>
+            <event xml:id="ea016" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1969-05-28" notAfter="1969-05-28">1969-05-28</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">28 May 1969, Kirchstetten, Lower Austria</title>
+                  Stella Musulin introduces Auden and Kallman to the Austrian historian, journalist, and intellectual Friedrich Heer (1916-1983); in Auden and Kallman's guest book, she notes : "Tag einer historischen Begegnung! [Day of a historical encounter!]" <!-- reference to Typed Letter Stella Musulin [to Edith Silbermann] [1969-05-29] --><location>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
             </event>
             <event xml:id="amp-transcript__0040.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0067/">
                <head xml:lang="en">
-                  <date when-iso="1969-06-10">1969-06-10</date>
+                  <date notBefore="1969-06-10" notAfter="1969-06-10">1969-06-10</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1969-06-10</label>
+            </event>
+            <event xml:id="ea017" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1969-07-15" notAfter="1969-07-16">1969-07-15--1969-07-16</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">15-16 July 1969, Kirchstetten, Lower Austria</title>
+                  Russian-American composer Nicolas Nabokov (Николай Дмитриевич Набоков, 1903-1978) visits Auden and Kallman, authors of the libretto for his opera <hi rend="italic">Love's Labour's Lost</hi> (1971)
+                  <location>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
             </event>
             <event xml:id="amp-transcript__0043.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0099/">
                <head xml:lang="en">
-                  <date when-iso="1970-05-21">1970-05-21</date>
+                  <date notBefore="1970-05-21" notAfter="1970-05-21">1970-05-21</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Freedom and Necessity in the Arts" 1970-05-21</label>
             </event>
@@ -410,7 +630,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0071/">
                <head xml:lang="en">
-                  <date when-iso="1970-06-10">1970-06-10</date>
+                  <date notBefore="1970-06-10" notAfter="1970-06-10">1970-06-10</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1970-06-10</label>
             </event>
@@ -418,7 +638,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0075/">
                <head xml:lang="en">
-                  <date when-iso="1970-07-06">1970-07-06</date>
+                  <date notBefore="1970-07-06" notAfter="1970-07-06">1970-07-06</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1970-07-06</label>
             </event>
@@ -426,19 +646,27 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0079/">
                <head xml:lang="en">
-                  <date when-iso="1970-09-18">1970-09-18</date>
+                  <date notBefore="1970-09-18" notAfter="1970-09-18">1970-09-18</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1970-09-18</label>
             </event>
-            <event xml:id="ea006" type="event_austria">
+            <event xml:id="ea018" type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1970-09-29">1970-09-29</date>
+                  <date notBefore="1970-09-29" notAfter="1970-09-29">1970-09-29</date>
                </head>
                <desc>
-                  <title xml:lang="en">29 September 1970, Vienna</title>
-                  W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The actor Peter W. Jost reads German-language translations of Auden's poems.
+                  <title xml:lang="en">29 September 1970, Palais Pálffy, Vienna</title>
+                  Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The actor Peter W. Jost reads German-language translations of Auden's poems.
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.206461484687104 16.367831169832673</geo>
+                     <address>
+                        <street>Josefsplatz 6</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>
             </event>
@@ -446,7 +674,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0233/">
                <head xml:lang="en">
-                  <date when-iso="1971-05-13">1971-05-13</date>
+                  <date notBefore="1971-05-13" notAfter="1971-05-13">1971-05-13</date>
                </head>
                <label xml:lang="en">Telegram W. H. Auden to Stella Musulin 1971-05-13</label>
             </event>
@@ -454,7 +682,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0083/">
                <head xml:lang="en">
-                  <date when-iso="1971-06-04">1971-06-04</date>
+                  <date notBefore="1971-06-04" notAfter="1971-06-04">1971-06-04</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1971-06-04</label>
             </event>
@@ -462,7 +690,7 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0087/">
                <head xml:lang="en">
-                  <date when-iso="1971-10-19">1971-10-19</date>
+                  <date notBefore="1971-10-19" notAfter="1971-10-19">1971-10-19</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin with Typescript W. H. Auden "Stark Bewölkt" 1971-10-19</label>
             </event>
@@ -470,57 +698,105 @@
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0091/">
                <head xml:lang="en">
-                  <date when-iso="1972-02-22">1972-02-22</date>
+                  <date notBefore="1972-02-22" notAfter="1972-02-22">1972-02-22</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1972-02-22</label>
+            </event>
+            <event xml:id="ea019" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1972-06-06" notAfter="1972-06-06">1972-06-06</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">6 June 1972, Kirchstetten, Lower Austria</title>
+                  Exiled from the Soviet Union, Joseph Brodsky (Иосиф Александрович Бродский, 1940-1996), later Nobel-Prize-winning Russian-American poet and essayist, arrives at Kirchstetten, where he stays with Auden and Kallman for three weeks. Their Kirchstetten guest book contains the following poem by Brodsky: "Visit Russia / Our Russia's a country of Birches / and axes and ikones and Churches / Without any priest / and crosses. At least / Our Russia's a country of SEARCHES."
+                  <location>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
             </event>
             <event xml:id="amp-transcript__0052.xml"
                    type="photos"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0171/">
                <head xml:lang="en">
-                  <date when-iso="1972-08-01">1972-08</date>
+                  <date notBefore="1972-07-26" notAfter="1972-08-25">1972-07-26--1972-08-25</date>
                </head>
-               <label xml:lang="en">Typescript Hilde Spiel Translation W. H. Auden Statement to Austrian Tax Authorities 1972-08</label>
-            </event>
-            <event xml:id="amp-transcript__0049.xml"
-                   type="photos"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0243/">
-               <head xml:lang="en">
-                  <date when-iso="1973-01-01">[1973]</date>
-               </head>
-               <label xml:lang="en">Invitation Card Österreichische Gesellschaft für Literatur Poetry Reading W. H. Auden [1973]</label>
+               <label xml:lang="en">Typescript Hilde Spiel Translation W. H. Auden Statement to Austrian Tax Authorities 1972-07-26--1972-08-25</label>
             </event>
             <event xml:id="amp-transcript__0020.xml"
                    type="correspondence"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0095/">
                <head xml:lang="en">
-                  <date when-iso="1973-09-24">1973-09-24</date>
+                  <date notBefore="1973-09-24" notAfter="1973-09-24">1973-09-24</date>
                </head>
                <label xml:lang="en">Autograph Letter Signed W. H. Auden to Stella Musulin 1973-09-24</label>
             </event>
-            <event xml:id="ea007" type="event_austria">
+            <event xml:id="ea020" type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1973-09-28">1973-09-28</date>
+                  <date notBefore="1973-09-28" notAfter="1973-09-28">1973-09-28</date>
                </head>
                <desc>
-                  <title xml:lang="en">28 September 1973, Vienna</title>
-                  W. H. Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature] to mark the publication <hi rend="italic">Gedichte/Poems</hi>, a bilingual edition of Auden's poems. The actor and theatre director Achim Benning reads from the German-language translations of Auden's poems in this volume.
+                  <title xml:lang="en">28 September 1973, Palais Pálffy, Vienna</title>
+                  Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature] to mark the publication of <hi rend="italic">Gedichte/Poems</hi>, a bilingual edition of Auden's poems. The actor and theatre director Achim Benning reads from the German-language translations of Auden's poems in this volume.
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.206461484687104 16.367831169832673</geo>
+                     <address>
+                        <street>Josefsplatz 6</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>
             </event>
-            <event xml:id="ea008" type="event_austria">
+            <event xml:id="ea021" type="event_austria">
                <head xml:lang="en">
-                  <date when-iso="1973-09-29">1973-09-29</date>
+                  <date notBefore="1973-09-28" notAfter="1973-09-28">1973-09-28--1973-09-29</date>
                </head>
                <desc>
-                  <title xml:lang="en">29 September 1973, Vienna</title>
-                  W. H. Auden dies at the Hotel Altenburgerhof after a reading from the new German/English edition of his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
+                  <title xml:lang="en">28-29 September 1973, Hotel Altenburger Hof, Vienna</title>
+                  Auden dies at the Hotel Altenburger Hof after a reading from the new German/English edition of his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature].
                   <location>
-                     <geo>48.2082 16.37169</geo>
+                     <geo>48.203752791300154 16.371171998668522</geo>
+                     <address>
+                        <street>Walfischgasse 5</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>
+            </event>
+            <event xml:id="ea022" type="event_austria">
+               <head xml:lang="en">
+                  <date notBefore="1973-10-04" notAfter="1973-10-04">1973-10-04</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">4 October 1973, Kirchstetten, Lower Austria</title>
+                  Auden is buried in the local church graveyard of Kirchstetten. The funeral - attended by, among others, Auden's brother John, Stephen Spender, Sonia Orwell, and Charles Monteith - includes an ecumenical service led by Revd Bruce Duncan, chaplain to the British ambassadors to Austria, Hungary, and Czechoslovakia
+                  <location>
+                     <geo>48.183333 15.816667</geo>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="amp-transcript__0049.xml"
+                   type="photos"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0243/">
+               <head xml:lang="en">
+                  <date notBefore="1973-01-01" notAfter="1973-12-31">[1973]</date>
+               </head>
+               <label xml:lang="en">Invitation Card Österreichische Gesellschaft für Literatur Poetry Reading W. H. Auden [1973]</label>
             </event>
          </listEvent>
       </body>

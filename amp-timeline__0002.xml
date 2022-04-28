@@ -71,59 +71,27 @@
    <text>
       <body>
          <listEvent>
-            <event xml:id="amp-transcript__0031.xml"
+            <event xml:id="amp-transcript__0046.xml"
                    type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0223/">
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0141/">
                <head xml:lang="en">
-                  <date when-iso="1985-12-15">1985-12-15</date>
+                  <date notBefore="1965-04-28" notAfter="1965-12-31">[1965]</date>
                </head>
-               <label xml:lang="en">Typed Letter Stella Musulin to Edward Mendelson 1985-12-15</label>
+               <label xml:lang="en">Autograph Notes Stella Musulin on Translation W. H. Auden "Joseph Weinheber" [1965]</label>
             </event>
-            <event xml:id="amp-transcript__0034.xml"
+            <event xml:id="amp-transcript__0036.xml"
                    type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0231/">
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0241/">
                <head xml:lang="en">
-                  <date when-iso="1984-05-31">1984-05-31</date>
+                  <date notBefore="1984-08-15" notAfter="1984-08-15">1984-08-15</date>
                </head>
-               <label xml:lang="en">Typed Letter Signed Michael O'Sullivan to Stella Musulin 1984-05-31</label>
-            </event>
-            <event xml:id="amp-transcript__0047.xml"
-                   type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0143/">
-               <head xml:lang="en">
-                  <date when-iso="1965-01-01">[1965]</date>
-               </head>
-               <label xml:lang="en">Typescript Stella Musulin Translation W. H. Auden "Joseph Weinheber" [1965]</label>
-            </event>
-            <event xml:id="amp-transcript__0027.xml"
-                   type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0155/">
-               <head xml:lang="en">
-                  <date when-iso="1970-01-01">[1970]</date>
-               </head>
-               <label xml:lang="en">Typescript W. H. Auden "Freedom and Necessity in the Arts" [1970]</label>
-            </event>
-            <event xml:id="amp-transcript__0053.xml"
-                   type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0219/">
-               <head xml:lang="en">
-                  <date when-iso="1969-05-29">[1969]-05-29</date>
-               </head>
-               <label xml:lang="en">Typed Letter Stella Musulin to [Edith Silbermann] [1969]-05-29</label>
-            </event>
-            <event xml:id="amp-transcript__0029.xml"
-                   type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0215/">
-               <head xml:lang="en">
-                  <date when-iso="1968-02-13">[1968-02-13]</date>
-               </head>
-               <label xml:lang="en">Autograph Notes Stella Musulin [1968-02-13]</label>
+               <label xml:lang="en">Autograph Note Michael O'Sullivan to Stella Musulin 1984-08-15</label>
             </event>
             <event xml:id="amp-transcript__0049.xml"
                    type="additional-materials"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0243/">
                <head xml:lang="en">
-                  <date when-iso="1973-01-01">[1973]</date>
+                  <date notBefore="1973-01-01" notAfter="1973-12-31">[1973]</date>
                </head>
                <label xml:lang="en">Invitation Card Österreichische Gesellschaft für Literatur Poetry Reading W. H. Auden [1973]</label>
             </event>
@@ -131,39 +99,79 @@
                    type="additional-materials"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0251/">
                <head xml:lang="en">
-                  <date when-iso="1977-04-05">1977-04-05</date>
+                  <date notBefore="1977-04-05" notAfter="1977-04-05">1977-04-05</date>
                </head>
                <label xml:lang="en">Typed Letter Signed Stella Musulin to Wolfgang Kraus 1977-04-05</label>
             </event>
-            <event xml:id="amp-transcript__0046.xml"
+            <event xml:id="amp-transcript__0047.xml"
                    type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0141/">
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0143/">
                <head xml:lang="en">
-                  <date when-iso="1965-01-01">[1965]</date>
+                  <date notBefore="1965-04-28" notAfter="1965-12-31">[1965]</date>
                </head>
-               <label xml:lang="en">Autograph Notes Stella Musulin on Translation W. H. Auden "Joseph Weinheber" [1965]</label>
+               <label xml:lang="en">Typescript Stella Musulin Translation W. H. Auden "Joseph Weinheber" [1965]</label>
             </event>
-            <event xml:id="amp-transcript__0052.xml"
-                   type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0171/">
+            <event xml:id="amp-transcript__0028.xml"
+                   type="memoirs"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0181/">
                <head xml:lang="en">
-                  <date when-iso="1972-08-01">1972-08</date>
+                  <date notBefore="1985-11-29" notAfter="1990-03-13">[?]</date>
                </head>
-               <label xml:lang="en">Typescript Hilde Spiel Translation W. H. Auden Statement to Austrian Tax Authorities 1972-08</label>
+               <label xml:lang="en">Typescript Stella Musulin "In Retrospect" [?]</label>
             </event>
-            <event xml:id="amp-transcript__0036.xml"
-                   type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0241/">
+            <event xml:id="amp-transcript__0048.xml"
+                   type="photos"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0237/">
                <head xml:lang="en">
-                  <date when-iso="1984-08-15">1984-08-15</date>
+                  <date>[?]</date>
                </head>
-               <label xml:lang="en">Autograph Note Michael O'Sullivan to Stella Musulin 1984-08-15</label>
+               <label xml:lang="en">Photograph Rudolf Blaha of Stella Musulin [?]</label>
+            </event>
+            <event xml:id="amp-transcript__0031.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0223/">
+               <head xml:lang="en">
+                  <date notBefore="1985-12-15" notAfter="1985-12-15">1985-12-15</date>
+               </head>
+               <label xml:lang="en">Typed Letter Stella Musulin to Edward Mendelson 1985-12-15</label>
+            </event>
+            <event xml:id="amp-transcript__0053.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0219/">
+               <head xml:lang="en">
+                  <date>[1969]-05-29</date>
+               </head>
+               <label xml:lang="en">Typed Letter Stella Musulin to [Edith Silbermann] [1969]-05-29</label>
+            </event>
+            <event xml:id="amp-transcript__0033.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0229/">
+               <head xml:lang="en">
+                  <date notBefore="1981-11-21" notAfter="1981-11-21">1981-11-21</date>
+               </head>
+               <label xml:lang="en">Aerogram Signed Edward Mendelson to Stella Musulin 1981-11-21</label>
+            </event>
+            <event xml:id="amp-transcript__0029.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0215/">
+               <head xml:lang="en">
+                  <date notBefore="1968-02-13" notAfter="1968-02-14">[1968-02-13]</date>
+               </head>
+               <label xml:lang="en">Autograph Notes Stella Musulin [1968-02-13]</label>
+            </event>
+            <event xml:id="amp-transcript__0051.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0165/">
+               <head xml:lang="en">
+                  <date notBefore="1970-05-19" notAfter="1970-06-10">1970-05-19--1970-06-10</date>
+               </head>
+               <label xml:lang="en">Typed Notes [Janko Musulin] on W. H. Auden "Freedom and Necessity in the Arts" 1970-05-19--1970-06-10</label>
             </event>
             <event xml:id="amp-transcript__0030.xml"
                    type="additional-materials"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0221/">
                <head xml:lang="en">
-                  <date when-iso="1985-11-29">1985-11-29</date>
+                  <date notBefore="1985-11-29" notAfter="1985-11-29">1985-11-29</date>
                </head>
                <label xml:lang="en">Typed Letter Stella Musulin to Bruce Duncan 1985-11-29</label>
             </event>
@@ -171,64 +179,245 @@
                    type="additional-materials"
                    facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0253/">
                <head xml:lang="en">
-                  <date when-iso="1977-03-22">1977-03-22</date>
+                  <date notBefore="1977-03-22" notAfter="1977-03-22">1977-03-22</date>
                </head>
                <label xml:lang="en">Typed Letter Wolfgang Kraus to Stella Musulin 1977-03-22</label>
             </event>
-            <event xml:id="amp-transcript__0033.xml"
+            <event xml:id="amp-transcript__0034.xml"
                    type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0229/">
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0231/">
                <head xml:lang="en">
-                  <date when-iso="1981-11-21">1981-11-21</date>
+                  <date notBefore="1984-05-31" notAfter="1984-05-31">1984-05-31</date>
                </head>
-               <label xml:lang="en">Aerogram Signed Edward Mendelson to Stella Musulin 1981-11-21</label>
+               <label xml:lang="en">Typed Letter Signed Michael O'Sullivan to Stella Musulin 1984-05-31</label>
             </event>
-            <event xml:id="amp-transcript__0051.xml"
+            <event xml:id="amp-transcript__0052.xml"
                    type="additional-materials"
-                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0165/">
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0171/">
                <head xml:lang="en">
-                  <date when-iso="1970-01-01">[1970]</date>
+                  <date notBefore="1972-07-26" notAfter="1972-08-25">1972-07-26--1972-08-25</date>
                </head>
-               <label xml:lang="en">Typed Notes [Janko Musulin] on W. H. Auden "Freedom and Necessity in the Arts" [1970]</label>
+               <label xml:lang="en">Typescript Hilde Spiel Translation W. H. Auden Statement to Austrian Tax Authorities 1972-07-26--1972-08-25</label>
             </event>
-            <event xml:id="xyz" type="event" facs="optional--add-facs-or-delete-attr"><!-- event template -->
+            <event xml:id="amp-transcript__0037.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0245/">
                <head xml:lang="en">
-                  <date when-iso="1957-10-04">1957-10-04</date>
+                  <date>[?]</date>
                </head>
-               <desc>
-                  <title xml:lang="en">title</title>
-                  text
-                  <location>
-                     <geo/>
-                  </location>
-                  <!-- 
-                     more option:
-                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-desc.html
-                     https://tei-c.org/release/doc/tei-p5-doc/en/html/ref-event.html
-                  -->
-               </desc>
+               <label xml:lang="en">Autograph Note Signed Michael O'Sullivan to Stella Musulin [?]</label>
+            </event>
+            <event xml:id="amp-transcript__0027.xml"
+                   type="additional-materials"
+                   facs="https://iiif.acdh.oeaw.ac.at/amp/amp_0155/">
+               <head xml:lang="en">
+                  <date notBefore="1970-01-01" notAfter="1970-12-31">[1970]</date>
+               </head>
+               <label xml:lang="en">Typescript W. H. Auden "Freedom and Necessity in the Arts" [1970]</label>
             </event>
             <event xml:id="e001" type="event">
                <head xml:lang="en">
-                  <date when-iso="1915-07-16">1915-07-16</date>
+                  <date notBefore="1915-07-16" notAfter="1915-07-16">1915-07-16</date>
                </head>
                <desc>
                   <title xml:lang="en">16 July 1915, Dale Castle, Pembrokeshire, Wales</title>
-                  Stella Mary Bellairs Lloyd-Philipps is born to Rhodri Vaughan Lloyd-Philipps (1874-1950) and his second wife, Margaret Colville. 
+                  Stella Mary Bellairs Lloyd-Philipps is born to Rhodri Vaughan Lloyd-Philipps (1874-1950) and his second wife, Margaret Colville 
                   <location>
                      <geo>51.7075 -5.1774</geo>
+                     <address>
+                        <placeName>
+                           <settlement>Dale</settlement>
+                           <region>Pembrokeshire</region>
+                           <country>Wales</country>
+                           <country>United Kingdom</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>
             </event>
             <event xml:id="e002" type="event">
                <head xml:lang="en">
-                  <date when-iso="1946-06-23">1946-06-23</date>
+                  <date notBefore="1946-06-23" notAfter="1946-06-23">1946-06-23</date>
                </head>
                <desc>
                   <title xml:lang="en">23 June 1946, Mariazell, Styria, Austria</title>
                   Stella Lloyd-Philipps marries Janko Musulin von Gomirje (1916-1978)
                   <location>
                      <geo>47.773056 15.316389</geo>
+                     <address>
+                        <street>Benedictus-Platz 1</street>
+                        <postCode>8630</postCode>
+                        <placeName>
+                           <settlement>Mariazell</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="e003" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1948-01-11" notAfter="1948-01-11">1948-01-11</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">11 January 1948</title>
+                  Birth of son Marko Musulin
+                  <location>
+                     <geo/>
+                     <!-- research and add birth place! -->
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="e004" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1959-06-01" notAfter="1959-10-31">1959-06-01--1959-10-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">Summer 1959, Kirchstetten, Lower Austria</title>
+                  Stella Musulin meets W. H. Auden and Chester Kallman for the first time at their Kirchstetten home. The meeting is initiated by Musulin's and Auden's mutual friend, Christiane Zimmer (1902-1987), Hugo von Hofmannsthal's daughter, who had emigrated to the United States. <!-- link to PMB --><location>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="e005" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1969-05-28" notAfter="1969-05-28">1969-05-28</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">28 May 1969, Kirchstetten, Lower Austria</title>
+                  Musulin introduces Auden and Kallman to the Austrian historian, journalist, and intellectual Friedrich Heer (1916-1983); in Auden and Kallman's guest book, she notes : "Tag einer historischen Begegnung! [Day of a historical encounter!]" <!-- reference to Typed Letter Stella Musulin [to Edith Silbermann] [1969-05-29] --><location>
+                     <geo>48.18153367563077 15.811562798177427</geo>
+                     <address>
+                        <street>Hinterholz 6</street>
+                        <postCode>3062</postCode>
+                        <placeName>
+                           <settlement>Kirchstetten</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="e006" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1971-01-01" notAfter="1971-12-31">1971-01-01--1971-12-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">1971, London</title>
+                  Publication of Musulin's monograph <hi rend="italic">Austria: People and Landscape</hi>, including a foreword by Auden, with Faber and Faber; the book's American edition - once more including Auden's foreword - came out in 1972 with Praeger Publishers, entitled <hi rend="italic">Austria and the Austrians</hi>
+                  <!--                  <location>
+                     <geo>51.521418561139775 -0.1226937151948393</geo>
+                  </location>-->
+               </desc>
+            </event>
+            <event xml:id="e007" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1975-01-01" notAfter="1975-12-31">1975-01-01--1975-12-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">1975, London</title>
+                  Publication of Musulin's monograph <hi rend="italic">Vienna in the Age of Metternich: From Napoleon to Revolution, 1805-1848</hi> with Faber and Faber
+<!--                  <location>
+                     <geo>51.521418561139775 -0.1226937151948393</geo>
+                  </location>--></desc>
+            </event>
+            <event xml:id="e008" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1976-06-28" notAfter="1976-06-28">1976-06-28</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">28 June 1976, Austrian Institute, London</title>
+                  Musulin delivers a lecture on "Auden in Kirchstetten" at the Austrian Institute (now the Austrian Cultural Forum) in London Kensington
+                  <location>
+                     <geo>51.500163 -0.168038</geo>
+                     <address>
+                        <street>28 Rutland Gate</street>
+                        <postCode>SW7 1PQ</postCode>
+                        <placeName>
+                           <settlement>London</settlement>
+                           <country>United Kingdom</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="e009" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1977-05-05" notAfter="1977-05-05">1977-05-05</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">5 May 1977, Palais Pálffy, Vienna</title>
+                  Musulin delivers a lecture on "W. H. Auden und die Österreicher" [W. H. Auden and the Austrians] at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]
+                  <location>
+                     <geo>48.206461484687104 16.367831169832673</geo>
+                     <address>
+                        <street>Josefsplatz 6</street>
+                        <postCode>1010</postCode>
+                        <placeName>
+                           <settlement>Vienna</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="e010" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1978-03-06" notAfter="1978-03-06">1978-03-06</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">6 March 1978, Fridau, Ober-Grafendorf, Lower Austria, Austria</title>
+                  Janko Musulin dies, aged 61, after being diagnosed with a brain tumour the previous year
+                  <location>
+                     <geo>48.14951510783656 15.556408050584443</geo>
+                     <address>
+                        <street>Fridau 7</street>
+                        <postCode>3200</postCode>
+                        <placeName>
+                           <settlement>Fridau</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
+                  </location>
+               </desc>
+            </event>
+            <event xml:id="e011" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1995-01-01" notAfter="1995-12-31">1995-01-01--1995-12-31</date>
+               </head>
+               <desc>
+                  <title xml:lang="en">1995, Oxford</title>
+                  Stella Musulin's Auden memoir "Auden in Kirchstetten" appears in Katherine Bucknell and Nicholas Jenkins' edited volume <hi rend="italic">'In Solitude, for Company': W. H. Auden After 1940. Unpublished Prose and Recent Criticism</hi>, published by Clarendon Press
+<!--                  <location>
+                     <geo>51.752 -1.2578</geo>
+                  </location>--></desc>
+            </event>
+            <event xml:id="e012" type="event">
+               <head xml:lang="en">
+                  <date notBefore="1996-01-21" notAfter="1996-01-21">1996-01-21</date>
+                  <!-- double-check! -->
+               </head>
+               <desc>
+                  <title xml:lang="en">21 January 1996, Fridau, Ober-Grafendorf, Lower Austria, Austria</title>
+                  Stella Musulin dies, aged 80
+                  <location>
+                     <geo>48.14951510783656 15.556408050584443</geo>
+                     <address>
+                        <street>Fridau 7</street>
+                        <postCode>3200</postCode>
+                        <placeName>
+                           <settlement>Fridau</settlement>
+                           <country>Austria</country>
+                        </placeName>
+                     </address>
                   </location>
                </desc>
             </event>
