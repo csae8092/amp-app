@@ -81,7 +81,7 @@
                 </style>
                                
             </head>
-            <body class="page" onload="diplomaticLoad(this)">
+            <body class="page" onload="original(this)">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     

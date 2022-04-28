@@ -18,111 +18,170 @@
                     <table class="table" style="margin-bottom:0;">
                         <tbody>           
                             <tr>         
-                                <td style="text-align:left;width:50%;">                                                            
+                                <!--<td style="text-align:left;width:20%;">                                                            
                                     <ul class="nav nav-tabs options-menu1">  
                                         <li>                                    
-                                            <a title="diplomatic"
-                                                onclick="editionClick(this)"
+                                            <a title="full screen on/off"
+                                                onclick="fullScreen(this)"
                                                 class="nav-link btn btn-round active"
-                                                id="edition-link">
-                                                Edition
+                                                id="fullscreen-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen active" viewBox="0 0 16 16">
+                                                    <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit fade" viewBox="0 0 16 16">
+                                                    <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
+                                                </svg>
                                             </a>                                                                  
                                         </li>
                                         <li>                                    
-                                            <a title="diplomatic"
-                                                onclick="diplomaticClick(this)"
-                                                class="nav-link btn btn-round"
-                                                id="diplomatic-link">
-                                                Diplomatic
+                                            <a title="facsimile on/off"
+                                                onclick="facsimileOnOff(this)"
+                                                class="nav-link btn btn-round active"
+                                                id="facsimile-link">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image active" viewBox="0 0 16 16">
+                                                    <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                                    <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+                                                </svg>
                                             </a>                                                                  
-                                        </li>                                    
-                                        <li>                                    
-                                            <a title="reading"
-                                                onclick="readingClick(this)"
+                                        </li>    
+                                        <!-\-<li>                                    
+                                            <a title="show original view"
+                                                onclick="original(this)"
                                                 class="nav-link btn btn-round"
-                                                id="reading-link">
-                                                Reading
+                                                id="original-link">
+                                                Original
                                             </a>
-                                        </li>                                                                        
+                                        </li>-\->
                                     </ul>
+                                </td>-->
+                                <td style="width:5%;border: 1px dashed #dedede;">
+                                    <a title="full screen on/off"
+                                        onclick="fullScreen(this)"
+                                        class="nav-link btn btn-round active"
+                                        id="fullscreen-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen active" viewBox="0 0 16 16">
+                                            <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
+                                        </svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit fade" viewBox="0 0 16 16">
+                                            <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
+                                        </svg>
+                                    </a>
                                 </td>
-                                <td style="text-align:center;width:40%;">                                                            
-                                    <ul class="nav nav-tabs options-menu2">       
-                                        <li>       
-                                            <label>deletions</label>
+                                <td style="text-align:left;width:5%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;"> 
+                                    <a title="facsimile on/off"
+                                        onclick="facsimileOnOff(this)"
+                                        class="nav-link btn btn-round active"
+                                        id="facsimile-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-image active" viewBox="0 0 16 16">
+                                            <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                            <path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1h12z"/>
+                                        </svg>
+                                    </a>
+                                </td>
+                                <td style="text-align:right;width:40%;border: 1px dashed #dedede;">   
+                                    <label>Text features</label>
+                                    <label class="switch">
+                                        <input title="text features"
+                                            type="checkbox"
+                                            onclick="textFeaturesAll(this)"
+                                            id="text-features-link"/>
+                                        <span id="text-features-link2" class="i-slider round"></span>                                                                        
+                                    </label>  
+                                </td>
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
+                                    <label>Deleted</label>
+                                    <label class="switch">
+                                        <input title="deleted"
+                                            type="checkbox"
+                                            onclick="textFeatures(this, null)"
+                                            id="deleted-link"/>
+                                        <span id="deleted-link2" class="i-slider round"></span>                                                                        
+                                    </label>   
+                                </td>
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
+                                    <label>Unclear</label>
+                                    <label class="switch">
+                                        <input title="unclear"
+                                            type="checkbox"
+                                            onclick="textFeatures(this, null)"
+                                            id="unclear-link"/>
+                                        <span id="unclear-link2" class="i-slider round"></span>                                                                        
+                                    </label>  
+                                </td>
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
+                                    <label>Underlined</label>
+                                    <label class="switch">
+                                        <input title="underlined"
+                                            type="checkbox"
+                                            onclick="textFeatures(this, null)"
+                                            id="underline-link"/>
+                                        <span id="underline-link2" class="i-slider round"></span>                                                                        
+                                    </label>      
+                                </td>
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;border-right: 1px dashed #dedede;">  
+                                    <label>Spaced</label>
+                                    <label class="switch">
+                                        <input title="spaced"
+                                            type="checkbox"
+                                            onclick="textFeatures(this, null)"
+                                            id="whitespaces-link"/>
+                                        <span id="whitespaces-link2" class="i-slider round"></span>                                                                        
+                                    </label>    
+                                </td>
+                                <!--<td style="text-align:center;width:80%;">  
+                                    <ul class="nav nav-tabs options-menu2">     
+                                        <li style="border-right: 2px dotted #f1f1f1;">       
+                                            <label>Text features</label>
                                             <label class="switch">
-                                                <input title="deletions"
+                                                <input title="text features"
                                                     type="checkbox"
-                                                    onclick="deletions(this)"
-                                                    id="deletions-link"/>
-                                                <span id="deletions-link2" class="i-slider round"></span>                                                                        
+                                                    onclick="textFeaturesAll(this)"
+                                                    id="text-features-link"/>
+                                                <span id="text-features-link2" class="i-slider round"></span>                                                                        
                                             </label>                                                                    
-                                            <!--<a title="deletions"
-                                                onclick="deletions(this)"
-                                                class="nav-link btn badge-link red"
-                                                id="deletions-link">
-                                                deletions
-                                            </a>-->
+                                        </li>
+                                        <li>       
+                                            <label>Deleted</label>
+                                            <label class="switch">
+                                                <input title="deleted"
+                                                    type="checkbox"
+                                                    onclick="textFeatures(this, null)"
+                                                    id="deleted-link"/>
+                                                <span id="deleted-link2" class="i-slider round"></span>                                                                        
+                                            </label>                                                                    
                                         </li>                                    
                                         <li>
-                                            <label>unclear</label>
+                                            <label>Unclear</label>
                                             <label class="switch">
                                                 <input title="unclear"
                                                     type="checkbox"
-                                                    onclick="unclear(this)"
+                                                    onclick="textFeatures(this, null)"
                                                     id="unclear-link"/>
                                                 <span id="unclear-link2" class="i-slider round"></span>                                                                        
                                             </label>                                                                    
-                                            <!--<a title="unclear"
-                                                onclick="unclear(this)"
-                                                class="nav-link btn badge-link yellow"
-                                                id="unclear-link">
-                                                unclear
-                                            </a>-->
                                         </li> 
                                         <li>      
-                                            <label>highlighting</label>
+                                            <label>Underlined</label>
                                             <label class="switch">
-                                                <input title="underline"
+                                                <input title="underlined"
                                                     type="checkbox"
-                                                    onclick="underline(this)"
+                                                    onclick="textFeatures(this, null)"
                                                     id="underline-link"/>
                                                 <span id="underline-link2" class="i-slider round"></span>                                                                        
                                             </label>                                                                    
-                                            <!--<a title="underline"
-                                                onclick="underline(this)"
-                                                class="nav-link btn badge-link blue"
-                                                id="underline-link">
-                                                highlighting
-                                            </a>-->
                                         </li>
                                         <li>   
-                                            <label>whitespaces</label>
+                                            <label>Spaced</label>
                                             <label class="switch">
-                                                <input title="whitespaces"
+                                                <input title="spaced"
                                                     type="checkbox"
-                                                    onclick="space(this)"
+                                                    onclick="textFeatures(this, null)"
                                                     id="whitespaces-link"/>
                                                 <span id="whitespaces-link2" class="i-slider round"></span>                                                                        
                                             </label>                                                                    
-                                            <!--<a title="whitespaces"
-                                                onclick="space(this)"
-                                                class="nav-link btn badge-link green"
-                                                id="whitespaces-link">
-                                                whitespaces
-                                            </a>-->
                                         </li>
                                     </ul>
-                                </td>
-                                <td style="text-align:center;width:10%;">
-                                    <a title="clear"                                        
-                                        onclick="clearAll(this);"
-                                        class="nav-link badge-link"
-                                        id="clear-link"
-                                        href="#">
-                                        clear all
-                                    </a>
-                                </td>
+                                </td>-->                                
                             </tr>      
                         </tbody>
                     </table>   
