@@ -67,7 +67,7 @@
                                         </svg>
                                     </a>
                                 </td>
-                                <td style="text-align:left;width:5%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;"> 
+                                <td style="text-align:center;width:5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;"> 
                                     <a title="facsimile on/off"
                                         onclick="facsimileOnOff(this)"
                                         class="nav-link btn btn-round active"
@@ -78,7 +78,46 @@
                                         </svg>
                                     </a>
                                 </td>
-                                <td style="text-align:right;width:40%;border: 1px dashed #dedede;">   
+                                <td style="text-align:left;width:7.5%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;"> 
+                                    <select class="custom-select" 
+                                        id="select-fontsize"
+                                        onchange="fontsizeSelect(this)">
+                                        <option selected="selected" value="default">
+                                            Default                                                                                                                     
+                                        </option> 
+                                        <option value="font-size-26">
+                                            26px                                                                                                                    
+                                        </option>
+                                        <option value="font-size-22">
+                                            22px                                                                                                                    
+                                        </option>
+                                        <option value="font-size-18">
+                                            18px                                                                                                                     
+                                        </option>
+                                        <option value="font-size-14">
+                                            14px                                                                                                                     
+                                        </option>  
+                                    </select>
+                                </td>
+                                <td style="text-align:left;width:15%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;">
+                                    <select class="custom-select" 
+                                        id="select-font"
+                                        onchange="fontSelect(this)">
+                                        <option value="default" selected="selected">
+                                            Default                                                                                                                     
+                                        </option>
+                                        <option value="times-new-roman">
+                                            Times New Roman                                                                                                                     
+                                        </option>
+                                        <option value="courier-new">
+                                            Courier New                                                                                                                      
+                                        </option>
+                                        <option value="arial-serif">
+                                            Arial                                                                                                                     
+                                        </option>  
+                                    </select>
+                                </td>                                                                
+                                <td style="text-align:right;width:17.5%;border: 1px dashed #dedede;">   
                                     <label>Original text features</label>
                                     <label class="switch">
                                         <input title="text features"

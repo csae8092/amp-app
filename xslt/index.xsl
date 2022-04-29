@@ -72,16 +72,16 @@
                                     <h1 style="color:#615a60;padding:.5em 0;">Auden Musulin Papers</h1>
                                     <h2 style="color:#615a60;">A Digital Edition of W. H. Auden's Letters to Stella Musulin</h2>
                                 </div>
-                                <p>This website presents the letters and literary papers by Anglo-American poet W. H. Auden (1907-1973) in the estate of Welsh-Austrian writer and journalist Stella Musulin (1915-1996). Previously unpublished, they cast a fresh light on Auden's life and work in Austria.</p>  
+                                <p style="font-size:22px;">This website presents the letters and literary papers by Anglo-American poet W. H. Auden (1907-1973) in the estate of Welsh-Austrian writer and journalist Stella Musulin (1915-1996). Previously unpublished, they cast a fresh light on Auden's life and work in Austria.</p>  
                                 <button class="btn btn-round">
-                                    <a href="description.html">Read More</a>
+                                    <a href="description.html" style="font-size:18px;">Read More</a>
                                 </button>
                             </div>
                             <div class="col-md-4" style="margin-top:2em;">
                                 <div class="card">
                                     <div class="card-header">                                        
                                         <h5>Document search</h5>       
-                                        <p style="margin-bottom:.5em;">Explore the Auden Musulin Papers through full-text search.</p>
+                                        <p style="margin-bottom:.5em;font-size:22px;">Explore the Auden Musulin Papers through full-text search.</p>
                                         <form class="form-inline my-2 my-lg-0 navbar-search-form"
                                             method="get"
                                             action="search.html"
