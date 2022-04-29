@@ -23,6 +23,34 @@ body {
     margin-right: 0;
 }
 
+.times-new-roman {
+    font-family: 'Times New Roman', serif !important;  
+}
+.courier-new {
+    font-family: 'Courier New', monospace !important;  
+}
+
+.arial-serif {
+    font-family: 'Arial', serif !important;
+}
+
+.font-size-26 {
+     font-size: 26px !important;
+}
+
+.font-size-22 {
+     font-size: 22px !important;
+}
+
+.font-size-18 {
+     font-size: 18px !important;
+}
+
+.font-size-14 {
+     font-size: 14px !important;
+}
+
+
 #show-text {
     cursor: pointer;  
 }

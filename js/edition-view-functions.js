@@ -1,41 +1,41 @@
-// function original(el) {
-    // textFeaturesAll("text-features-link");
-    // $(".expand-wrapper").each(function() {
-    //     $(this).removeClass("fade");
-    // });
-    // $(".hide-reading").each(function() {
-    //     $(this).removeClass("fade");
-    // });
-    // $(".bi-fullscreen").each(function() {
-    //     $(this).removeClass("fade");
-    // }); 
-    // $(".bi-fullscreen-exit").each(function() {
-    //     $(this).addClass("fade");
-    // }); 
-    // $(".osd-viewer").each(function() {
-    //     $(this).removeClass("fade-all");
-    //     $(this).addClass("col-md-6");
-    //     $(this).css("max-width","50%");
-    // });
-    // $(".pagination-tab.active .transcript .osd-viewer")
-    //     .children("div")
-    //     .children("div")
-    //     .css({"width":"914px","height":"914px"});
-    // $(".text-re").each(function() {
-    //     $(this).removeClass("col-md-12");
-    //     $(this).addClass("col-md-6");         
-    //     $(this).css("max-width","50%");   
-    // });
-    // if ($("#unclear-link").prop( "checked" ) && $("#whitespaces-link").prop( "checked" ) && $("#deleted-link").prop( "checked" ) && $("#underline-link").prop( "checked" )) {
-    //     $("#text-features-link").prop('checked', true);
-    //     $("#text-features-link").addClass("active");
-    // }
-    // if ($("#unclear-link").prop( "checked" ) == false || $("#whitespaces-link").prop( "checked" ) == false || $("#deleted-link").prop( "checked" ) == false || $("#underline-link").prop( "checked" ) == false) {
-    //     $("#text-features-link").prop('checked', false);
-    //     $("#text-features-link").removeClass("active");
-    // }
-// }
 
+/*
+    Dropdown select to change font family.
+*/
+function fontSelect(el) {
+    var element = $(el);
+    var val = element.val();
+    $("p").each(function() {
+        $(this).removeClass("times-new-roman")
+        .removeClass("courier-new")
+        .removeClass("arial-serif");
+        if(val !== "default") {
+            $(this).addClass(val);
+        }
+    });
+}
+
+/*
+    Dropdown select to change font size.
+*/
+function fontsizeSelect(el) {
+    var element = $(el);
+    var val = element.val();
+    $("p").each(function() {
+        $(this).removeClass("font-size-26")
+        .removeClass("font-size-22")
+        .removeClass("font-size-18")
+        .removeClass("font-size-14");
+        if(val !== "default") {
+            $(this).addClass(val);
+        }
+    });
+}
+
+/*
+    Switch to create a custom full screen by hiding navbar, footer,
+    title and metadata.
+*/
 function fullScreen(el) {
     var element = $(el);
     if ( element.hasClass("active") ) {
@@ -69,6 +69,9 @@ function fullScreen(el) {
     }
 }
 
+/*
+    Switch to show or hide osd image viewer
+*/
 function facsimileOnOff(el) {
     if (jQuery.type(el) === "string") {
         var element = $(`#${el}`);
@@ -108,7 +111,9 @@ function facsimileOnOff(el) {
     }
 }
 
-
+/*
+    Original text features button to switch all text features on or off
+*/
 function textFeaturesAll(el) {
     if (jQuery.type(el) === "string") {
         var element = $(`#${el}`);
@@ -192,7 +197,10 @@ function textFeaturesAll(el) {
     }
 }
 
-function textFeatures(el, reset) {
+/*
+    Single text features depending on input el.
+*/
+function textFeatures(el) {
     if (jQuery.type(el) === "string") {
         var element = $(`#${el}`);
         var id = el;    
@@ -258,17 +266,68 @@ function textFeatures(el, reset) {
         }
         
     }
-    if ($("#unclear-link").prop( "checked" ) && $("#whitespaces-link").prop( "checked" ) && $("#deleted-link").prop( "checked" ) && $("#underline-link").prop( "checked" )) {
+    /*
+        If all or not all text features are selected the main original text features
+        link will automatically be switched on or off.
+    */
+    if ($("#unclear-link").prop( "checked" ) && 
+            $("#whitespaces-link").prop( "checked" ) && 
+            $("#deleted-link").prop( "checked" ) && 
+            $("#underline-link").prop( "checked" )) {
+
         $("#text-features-link").prop('checked', true);
         $("#text-features-link").addClass("active");
+
     }
-    if ($("#unclear-link").prop( "checked" ) == false || $("#whitespaces-link").prop( "checked" ) == false || $("#deleted-link").prop( "checked" ) == false || $("#underline-link").prop( "checked" ) == false) {
+    if ($("#unclear-link").prop( "checked" ) == false || 
+            $("#whitespaces-link").prop( "checked" ) == false || 
+            $("#deleted-link").prop( "checked" ) == false || 
+            $("#underline-link").prop( "checked" ) == false) {
+
         $("#text-features-link").prop('checked', false);
         $("#text-features-link").removeClass("active");
+
     }
     
 }
 
+// function original(el) {
+    // textFeaturesAll("text-features-link");
+    // $(".expand-wrapper").each(function() {
+    //     $(this).removeClass("fade");
+    // });
+    // $(".hide-reading").each(function() {
+    //     $(this).removeClass("fade");
+    // });
+    // $(".bi-fullscreen").each(function() {
+    //     $(this).removeClass("fade");
+    // }); 
+    // $(".bi-fullscreen-exit").each(function() {
+    //     $(this).addClass("fade");
+    // }); 
+    // $(".osd-viewer").each(function() {
+    //     $(this).removeClass("fade-all");
+    //     $(this).addClass("col-md-6");
+    //     $(this).css("max-width","50%");
+    // });
+    // $(".pagination-tab.active .transcript .osd-viewer")
+    //     .children("div")
+    //     .children("div")
+    //     .css({"width":"914px","height":"914px"});
+    // $(".text-re").each(function() {
+    //     $(this).removeClass("col-md-12");
+    //     $(this).addClass("col-md-6");         
+    //     $(this).css("max-width","50%");   
+    // });
+    // if ($("#unclear-link").prop( "checked" ) && $("#whitespaces-link").prop( "checked" ) && $("#deleted-link").prop( "checked" ) && $("#underline-link").prop( "checked" )) {
+    //     $("#text-features-link").prop('checked', true);
+    //     $("#text-features-link").addClass("active");
+    // }
+    // if ($("#unclear-link").prop( "checked" ) == false || $("#whitespaces-link").prop( "checked" ) == false || $("#deleted-link").prop( "checked" ) == false || $("#underline-link").prop( "checked" ) == false) {
+    //     $("#text-features-link").prop('checked', false);
+    //     $("#text-features-link").removeClass("active");
+    // }
+// }
 
 // function editionClick(el) {
 //     var element = $(el);
