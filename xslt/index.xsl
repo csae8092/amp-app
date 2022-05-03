@@ -329,7 +329,7 @@
                     interval: 2000
                 });
             </script>-->
-            <script type="text/javascript" src="autocomplete-addon/autocomplete-download-only.js"></script>
+            <!--<script type="text/javascript" src="autocomplete-addon/autocomplete-download-only.js"></script>-->
         </html>
     </xsl:template>
     <xsl:template match="tei:div//tei:head">
