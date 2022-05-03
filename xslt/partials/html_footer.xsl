@@ -29,14 +29,14 @@
                                 Austrian Academy of Sciences
                             </p>
                             <p>
-                                Sonnenfelsgasse 19
+                                Bäckerstraße 13
                                 <br/>
                                 1010 Vienna
                             </p>
                             <p>
                                 T: +43 1 51581-2200
                                 <br/>
-                                E: <a href="mailto:acdh@oeaw.ac.at">acdh@oeaw.ac.at</a>
+                                E: <a href="mailto:acdh-ch-helpdesk@oeaw.ac.at">acdh-ch-helpdesk@oeaw.ac.at</a>
                             </p>
                         </div>
                     </div>
@@ -84,7 +84,7 @@
                                 <h6 class="font-weight-bold">HELPDESK</h6>
                                 <p>ACDH-CH runs a helpdesk offering advice for questions related to various digital humanities topics.</p>
                                 <p>
-                                    <a class="helpdesk-button" href="mailto:acdh-helpdesk@oeaw.ac.at">ASK US!</a>
+                                    <a class="helpdesk-button" href="mailto:acdh-ch-helpdesk@oeaw.ac.at">ASK US!</a>
                                 </p>
                             </div>
                         </div>
