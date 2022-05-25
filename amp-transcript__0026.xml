@@ -3,8 +3,9 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Autograph Notes W. H. Auden Stella Musulin [?]</title>
-            <author>O'Sullivan, Michael</author>
+            <title level="a">Autograph Notes W. H. Auden Stella Musulin 1959-06-01--1973-09-28</title>
+            <author>Auden, W. H.</author>
+            <author>Musulin, Stella</author>
             <editor>
                <name>Mayer, Sandra</name>
                <name>Frühwirth, Timo</name>
@@ -60,7 +61,7 @@ for any purpose, even commercially.</p>
                         <idno>2, 21</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate notBefore="1960-07-21" notAfter="1973-09-28">[?]</origDate></origin>
+                        <origin><origDate notBefore="1959-06-01" notAfter="1973-09-28">1959-06-01--1973-09-28</origDate></origin>
                      </history>
                   </msDesc>
                </witness>

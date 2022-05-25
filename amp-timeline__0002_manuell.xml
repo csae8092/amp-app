@@ -90,6 +90,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/6285840</idno>
                </desc>               
             </event>
             <event xml:id="e002"
@@ -111,6 +112,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/6941442</idno>
                </desc>               
             </event>
             <event xml:id="e003"
@@ -145,6 +147,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/11704028</idno>
                </desc>               
             </event>
             <event xml:id="e005"
@@ -166,6 +169,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/11704028</idno>
                </desc>               
             </event>
             <event xml:id="e006"
@@ -213,6 +217,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2645801</idno>
                </desc>               
             </event>
             <event xml:id="e009"
@@ -234,6 +239,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2775259</idno>
                </desc>               
             </event>
             <event xml:id="e010"
@@ -255,6 +261,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2779247</idno>
                </desc>               
             </event>
             <event xml:id="e011"
@@ -289,6 +296,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2779247</idno>
                </desc>               
             </event>
          </listEvent>

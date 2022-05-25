@@ -3,8 +3,9 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Typescript Stella Musulin Translation W. H. Auden "Joseph Weinheber" [1965]</title>
+            <title level="a">Typescript Stella Musulin Translation W. H. Auden "Joseph Weinheber" 1965-04-28--1965-12-31</title>
             <author>Musulin, Stella</author>
+            <author>Musulin, Elsa</author>
             <editor>
                <name>Mayer, Sandra</name>
                <name>Frühwirth, Timo</name>
@@ -60,7 +61,7 @@ for any purpose, even commercially.</p>
                         <idno>2, 2</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate notBefore="1965-04-28" notAfter="1965-12-31">[1965]</origDate></origin>
+                        <origin><origDate notBefore="1965-04-28" notAfter="1965-12-31">1965-04-28--1965-12-31</origDate></origin>
                      </history>
                   </msDesc>
                </witness>

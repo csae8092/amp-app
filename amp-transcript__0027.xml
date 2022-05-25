@@ -3,8 +3,9 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Typescript W. H. Auden "Freedom and Necessity in the Arts" [1970]</title>
+            <title level="a">Typescript W. H. Auden "Freedom and Necessity in the Arts" 1970-05-21--1995-12-31</title>
             <author>Auden, W. H.</author>
+            <author>Musulin, Stella</author>
             <editor>
                <name>Mayer, Sandra</name>
                <name>Frühwirth, Timo</name>
@@ -60,7 +61,7 @@ for any purpose, even commercially.</p>
                         <idno>2, 4</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate notBefore="1970-01-01" notAfter="1970-12-31">[1970]</origDate></origin>
+                        <origin><origDate notBefore="1970-05-21" notAfter="1995-12-31">1970-05-21--1995-12-31</origDate></origin>
                      </history>
                   </msDesc>
                </witness>

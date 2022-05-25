@@ -3,7 +3,7 @@
       <fileDesc>
          <titleStmt>
             <title level="s">Auden Musulin Papers: A Digital Edition of W. H. Auden´s Letters to Stella Musulin (FWF P 33754)</title>
-            <title level="a">Envelope W. H. Auden to Stella Musulin 1961-[?]-[25]</title>
+            <title level="a">Envelope W. H. Auden to Stella Musulin 1961-04-25--1961-10-25</title>
             <author>Auden, W. H.</author>
             <editor>
                <name>Mayer, Sandra</name>
@@ -60,7 +60,7 @@ for any purpose, even commercially.</p>
                         <idno>1, 37</idno>
                      </msIdentifier>
                      <history>
-                        <origin><origDate notBefore="1961-04-25" notAfter="1961-10-25">1961-[?]-[25]</origDate></origin>
+                        <origin><origDate notBefore="1961-04-25" notAfter="1961-10-25">1961-04-25--1961-10-25</origDate></origin>
                      </history>
                   </msDesc>
                </witness>
@@ -76,7 +76,7 @@ for any purpose, even commercially.</p>
             <correspAction type="sent">
                <persName ref="#auden-w-h">Auden, W. H.</persName>
                <placeName ref="#"/>
-               <date notBefore="1961-04-25" notAfter="1961-10-25">1961-[?]-[25]</date>
+               <date notBefore="1961-04-25" notAfter="1961-10-25">1961-04-25--1961-10-25</date>
             </correspAction>
             <correspAction type="received">
                <persName ref="#musulin-stella">Musulin, Stella</persName>

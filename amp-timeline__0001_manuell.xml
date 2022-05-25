@@ -90,6 +90,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2775259</idno>
                </desc>               
             </event>
             <event xml:id="ea002"
@@ -111,6 +112,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/11704028</idno>
                </desc>               
             </event>
             <event xml:id="ea003"
@@ -132,6 +134,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/11704028</idno>
                </desc>               
             </event>
             <event xml:id="ea004"
@@ -142,9 +145,11 @@
                <desc>
                   <title xml:lang="en">4 October 1962, Vienna</title>
                   Auden reads from his poems at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]. The Austrian actor Wolfgang Gasser reads German-language translations of Auden's poems.
+                  <placeName>Vienna</placeName>
                   <location>
                      <geo>48.20849 16.37208</geo>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2761369</idno>
                </desc>               
             </event>
             <event xml:id="ea005"
@@ -155,9 +160,11 @@
                <desc>
                   <title xml:lang="en">17 May 1963, Vienna</title>
                   Auden participates in an international Rudolf Kassner symposium at the Österreichische Gesellschaft für Literatur [Austrian Society for Literature]: on the last day of the six-day congress, he speaks about the "Begegnung mit dem Werk Rudolf Kassners" ["Encounter with the Work of Rudolf Kassner"].
+                  <placeName>Vienna</placeName>
                   <location>
                      <geo>48.20849 16.37208</geo>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2761369</idno>
                </desc>               
             </event>
             <event xml:id="ei001"
@@ -179,6 +186,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2939440</idno>
                </desc>               
             </event>
             <event xml:id="ei002"
@@ -213,6 +221,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/12232642</idno>
                </desc>               
             </event>
             <event xml:id="ea007"
@@ -234,6 +243,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/6956623</idno>
                </desc>               
             </event>
             <event xml:id="ea008"
@@ -244,9 +254,11 @@
                <desc>
                   <title xml:lang="en">25 October 1966, Vienna</title>
                   Auden is awarded the Austrian State Prize for European Literature by Federal Minister of Education Theodor Piffl-Per&#269;evi&#263;; the laudatory speech is delivered by Austrian writer and critic Hilde Spiel, one of the prize judges (next to writer Gerhard Fritsch and Wolfgang Kraus of the Austrian Society for Literature)
+                  <placeName>Vienna</placeName>
                   <location>
                      <geo>48.20849 16.37208</geo>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2761369</idno>
                </desc>               
             </event>
             <event xml:id="ea009"
@@ -257,9 +269,11 @@
                <desc>
                   <title xml:lang="en">5 January 1967</title>
                   Austrian television broadcasts the TV opera <hi rend="italics">Inzwischen</hi>, with a musical setting of a part of Auden’s "For the Time Being" (translated into German by Gerhard Fritsch as "Hier und Jetzt") by composer Paul Kont, featuring Helmut Qualtinger as Herod
+                  <placeName>Austria</placeName>
                   <location>
                      <geo>47.33333 13.33333</geo>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2782113</idno>
                </desc>               
             </event>
             <event xml:id="ea010"
@@ -281,6 +295,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/6354988</idno>
                </desc>               
             </event>
             <event xml:id="ea011"
@@ -291,9 +306,11 @@
                <desc>
                   <title xml:lang="en">3 September 1967</title>
                   A 28-minute episode titled "W. H. Auden" of the documentary feature <hi rend="italics">Das österreichische Porträt</hi> [The Austrian Portrait], portraying Auden's life and work at Kirchstetten, is broadcast on Austrian national TV
+                  <placeName>Austria</placeName>
                   <location>
                      <geo>47.33333 13.33333</geo>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2782113</idno>
                </desc>               
             </event>
             <event xml:id="ea012"
@@ -315,6 +332,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/11704028</idno>
                </desc>               
             </event>
             <event xml:id="ea013"
@@ -336,6 +354,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/6956623</idno>
                </desc>               
             </event>
             <event xml:id="ei003"
@@ -346,9 +365,11 @@
                <desc>
                   <title xml:lang="en">August 1968, Warsaw Pact invasion of Czechoslovakia</title>
                   Soviet Union led troops invade Czechoslovakia<!-- reference/link to letter 1968-10-15, Stella Musulin memoir -->
+                  <placeName>Czechoslovakia</placeName>
                   <location>
                      <geo>50.08292 14.46672</geo>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/8505031</idno>
                </desc>               
             </event>
 <!--            <event xml:id="ea015"
@@ -383,6 +404,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/11704028</idno>
                </desc>               
             </event>
             <event xml:id="ea017"
@@ -404,6 +426,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/11704028</idno>
                </desc>               
             </event>
             <event xml:id="ea018"
@@ -425,6 +448,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2775259</idno>
                </desc>               
             </event>
             <event xml:id="ea019"
@@ -446,6 +470,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/11704028</idno>
                </desc>               
             </event>
             <event xml:id="ea020"
@@ -467,6 +492,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2775259</idno>
                </desc>               
             </event>
             <event xml:id="ea021"
@@ -488,6 +514,7 @@
                         </placeName>
                      </address>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/2775259</idno>
                </desc>               
             </event>
             <event xml:id="ea022"
@@ -501,6 +528,7 @@
                   <location>
                      <geo>48.183333 15.816667</geo>
                   </location>
+                  <idno type="geonames">https://www.geonames.org/7871886</idno>
                </desc>               
             </event>
          </listEvent>
