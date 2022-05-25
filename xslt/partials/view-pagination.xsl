@@ -13,23 +13,30 @@
     </doc>
     
     <xsl:template name="view-pagination">
-        <xsl:param name="reading-type"></xsl:param>
         <xsl:variable 
             name="vseq" 
             select="//tei:pb"
             as="item()*"/>
+        
         <div class="text-center pagination">
             <ul class="nav nav-tabs">
                 <xsl:for-each select="$vseq">
+                    <!--  var to create container ids to insert facsimiles to one individual container each   -->
+                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
+                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
+                    <xsl:variable name="iiif-ext" select="'.jp2/full/full/0/default.jpg'"/> 
+                    <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
+                    <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
+                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>   
                     <xsl:choose>
                         <xsl:when test="position() = 1">
                             <li class="nav-item">
-                                <a
+                                <a                                   
                                     title="{position()}"
                                     class="nav-link active"
                                     data-toggle="tab"
-                                    data-tab="{$reading-type}"
-                                    href="#{$reading-type}-paginate-{position()}"
+                                    data-tab="paginate"
+                                    href="#paginate-{position()}"
                                     style="border-radius:30px;">
                                     <xsl:value-of select="position()"/> 
                                 </a>                                                    
@@ -38,11 +45,12 @@
                         <xsl:when test="position() = [1,2,3,4,5,6,7,8,9]">
                             <li class="nav-item">
                                 <a
+                                    onclick="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]"
                                     title="{position()}"
                                     class="nav-link"
                                     data-toggle="tab"
-                                    data-tab="{$reading-type}"
-                                    href="#{$reading-type}-paginate-{position()}"
+                                    data-tab="paginate"
+                                    href="#paginate-{position()}"
                                     style="border-radius:30px;">
                                     <xsl:value-of select="position()"/> 
                                 </a>                                                    
@@ -54,7 +62,7 @@
                                     title="more"
                                     href="#"
                                     data-toggle="dropdown"
-                                    data-tab="{$reading-type}"
+                                    data-tab="paginate"
                                     class="nav-link dropdown-toggle"
                                     style="border-radius:30px;"
                                     >
@@ -62,15 +70,21 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <xsl:for-each select="$vseq">
+                                        <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
+                                        <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
+                                        <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
+                                        <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/> 
                                         <xsl:choose>
                                             <xsl:when test="position() > 9">
                                                 <li
                                                     class="nav-item dropdown-submenu"
                                                     style="display:inline-block;">
                                                     <a
+                                                        onclick="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]"
                                                         title="{position()}"
-                                                        href="#{$reading-type}-paginate-{position()}"
+                                                        href="#paginate-{position()}"
                                                         class="nav-link"
+                                                        data-tab="paginate"
                                                         data-toggle="tab"
                                                         style="border-radius:30px;">
                                                         <xsl:value-of select="position()"/>
@@ -95,7 +109,8 @@
                         </xsl:otherwise>
                     </xsl:choose>                                                                                                        
                 </xsl:for-each>                                                                                                
-            </ul>
+            </ul>            
         </div>
+        
     </xsl:template> 
 </xsl:stylesheet>

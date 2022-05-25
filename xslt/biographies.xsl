@@ -37,7 +37,7 @@
                 <style>
 
                 </style>                
-                <script type="text/javascript" src="js/timelinejs/js/timeline.min.js"></script>
+                <!--<script type="text/javascript" src="js/timelinejs/js/timeline.min.js"></script>-->
                 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
                     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
                     crossorigin=""/>
@@ -73,7 +73,7 @@
                             </div>   
                             <div class="card-body text-center">
                                 <ul style="margin-top:1em;padding-left:0;">
-                                    <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@when-iso, '-')[1]">                                    
+                                    <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                    
                                         <li style="display:inline;list-style:none;margin-left:1em;">
                                             <a href="#{current-grouping-key()}" title="jump to date">
                                                 <xsl:value-of select="current-grouping-key()"/>
@@ -81,27 +81,28 @@
                                         </li>
                                     </xsl:for-each-group>
                                 </ul>
-                                <a href="#">
+                                <!--<a href="#">
                                     <i class="far fa-play-circle fa-3x" title="autoplay timeline" data-toggle="modal" data-target="#exampleModalLong"/>
-                                </a>
+                                </a>-->
                             </div>                            
                         </div>                     
                         <div class="row">
                             <div class="col-md-12">                                
-                                <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@when-iso, '-')[1]">                                    
+                                <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                    
                                     <!--<xsl:variable name="panel-id" select="concat(generate-id(), '-', position())"/>-->                                                                        
                                     <div class="timeline-wrapper" id="{current-grouping-key()}" style="padding-top:5em;">
                                         <div class="text-center">                                            
                                             <h2 id="timeline-heading">
-                                                <a href="#page" title="jump to the top" style="color:#fff;">
-                                                    <xsl:value-of select="current-grouping-key()"/>
-                                                </a>                                                
+                                                <xsl:value-of select="current-grouping-key()"/>
+                                                <a href="#page" title="jump to the top" style="color:#fff; font-size:12px;">
+                                                    <small>TOP</small>
+                                                </a>                                            
                                             </h2>
                                         </div>   
                                         <xsl:for-each select="current-group()">
                                             <div class="row timeline">                                            
                                                 <xsl:choose>
-                                                    <xsl:when test="@type='event_austria'">                                                        
+                                                    <xsl:when test="contains(@type, 'event')">                                                        
                                                         <div class="col-md-5">    
                                                             <xsl:call-template name="bio-el">
                                                                 <xsl:with-param name="location" select="'left'"/>
@@ -136,7 +137,7 @@
                                         </xsl:for-each>                                        
                                     </div>
                                 </xsl:for-each-group> 
-                                <xsl:call-template name="modal-metadata"/>
+                                <!--<xsl:call-template name="modal-metadata"/>-->
                                 <script type="text/javascript">
                                     $('.timeline-circle').mouseover(function() {                                        
                                         var date = $(this).attr('data');
@@ -166,6 +167,8 @@
             <script type="text/javascript" src="js/leaflet.js"/>
         </html>
     </xsl:template>
-                    
+    <xsl:template match="tei:hi">
+        <span class="italic"><xsl:apply-templates/></span>
+    </xsl:template>                
     
 </xsl:stylesheet>

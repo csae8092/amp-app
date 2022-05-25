@@ -73,7 +73,7 @@
                     </div>
                 </div>
             </body>
-            <script type="text/javascript" src="autocomplete-addon/autocomplete.js"></script>
+            <!--<script type="text/javascript" src="autocomplete-addon/autocomplete.js"></script>-->
         </html>
     </xsl:template>
     

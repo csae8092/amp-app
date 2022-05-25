@@ -13,7 +13,7 @@
     </doc>
     
     <xsl:template name="bio-circle">
-        <xsl:variable name="d" as="xs:date" select="./tei:head/tei:date/@when-iso"/>
+        <xsl:variable name="d" as="xs:date" select="./tei:head/tei:date/@notAfter"/>
         <xsl:variable name="date-formated" select="format-date($d, '[MNn] [D1o]', 'en', (), ())"/>
         <div class="timeline-circle text-center" data="{$date-formated}">       
             <!--<p style="font-family: FreeMono, monospace;margin-bottom:0;padding: 0 .5em">

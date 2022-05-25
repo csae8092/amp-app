@@ -9,7 +9,7 @@
         <xsl:param name="site_title">
             Auden Musulin Papers
         </xsl:param>
-        <div class="wrapper-fluid wrapper-navbar sticky-navbar" id="wrapper-navbar" >
+        <div class="wrapper-fluid wrapper-navbar sticky-navbar hide-reading" id="wrapper-navbar" >
             <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
@@ -30,7 +30,7 @@
                                         <a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden-Musulin Correspondence</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Surface reconstructions" href="#" class="nav-link">Surface reconstructions</a>
+                                        <a style="color:lightgrey!important;" title="Surface reconstructions" class="nav-link">Surface reconstructions <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a>
@@ -38,32 +38,34 @@
                                     <li class="nav-item dropdown-submenu">
                                         <a title="Photos" href="photos.html" class="nav-link">Photos</a>
                                     </li>
-                                    <li class="nav-item dropdown-submenu">
+                                    <!-- <li class="nav-item dropdown-submenu">
                                         <a title="Additional materials" href="additional-materials.html" class="nav-link">Additional materials</a>
-                                    </li>
+                                    </li> -->
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">
-                                <a title="Indexes" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span></a>
+                                <a style="color:lightgrey!important;" title="Indexes" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes  <small>(in progress)</small><span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Persons" href="#" class="nav-link">Persons</a>
+                                        <a style="color:lightgrey!important;"  title="Persons" class="nav-link">Persons <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Institutions" href="#" class="nav-link">Institutions</a>
+                                        <a style="color:lightgrey!important;"  title="Institutions" class="nav-link">Institutions <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Works" href="#" class="nav-link">Works</a>
+                                        <a style="color:lightgrey!important;"  title="Works" class="nav-link">Works <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Places" href="#" class="nav-link">Places</a>
+                                        <a style="color:lightgrey!important;"  title="Places" class="nav-link">Places <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Events" href="#" class="nav-link">Events</a>
+                                        <a style="color:lightgrey!important;"  title="Events" class="nav-link">Events <small>(in progress)</small></a>
                                     </li>
                                 </ul>                                
                             </li>                            
-                            <li class="nav-item"><a title="Relations" href="#" class="nav-link">Relations</a></li>
+                            <li class="nav-item">
+                                <a style="color:lightgrey!important;" title="Relations" class="nav-link">Relations <small>(in progress)</small></a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a title="Biographies" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
@@ -85,25 +87,20 @@
                                         <a title="Team" href="team.html" class="nav-link">Team</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Editorial Declaration" href="#" class="nav-link">Editorial Declaration</a>
+                                        <a style="color:lightgrey!important;"  title="Editorial Declaration" class="nav-link">Editorial Declaration <small>(in progress)</small></a>
                                     </li>
                                     <!--<li class="nav-item dropdown-submenu">
                                         <a title="Instruction for using the edition" href="#" class="nav-link">Instruction for using the edition</a>
                                     </li>-->
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Technical Documentation" href="#" class="nav-link">Technical Documentation</a>
+                                        <a style="color:lightgrey!important;"  title="Technical Documentation" class="nav-link">Technical Documentation <small>(in progress)</small></a>
                                     </li>
                                 </ul>                                
-                            </li>                            
-                        </ul>                        
-                        <form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="search.html" role="search">
-                            <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
-                            <button type="submit" class="navbar-search-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                </svg>
-                            </button>
-                        </form>
+                            </li>  
+                            <li class="nav-item">
+                                <a href="search.html" title="Search" class="nav-link">Search</a>
+                            </li>
+                        </ul>                       
                     </div>
                     <!-- .collapse navbar-collapse -->
                 </div>
