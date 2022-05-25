@@ -177,7 +177,7 @@
                                                             replace(//tei:TEI/@xml:id, '.xml', '.html'))"/>                                                           
                                                         <th>Cite this source</th>
                                                         <td>
-                                                            <xsl:value-of select="concat(//tei:author,
+                                                            <xsl:value-of select="concat(//tei:author[1],
                                                                 ', ',
                                                                 //tei:title[@level='a'],
                                                                 '. ')"/>
