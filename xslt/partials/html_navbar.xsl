@@ -38,9 +38,9 @@
                                     <li class="nav-item dropdown-submenu">
                                         <a title="Photos" href="photos.html" class="nav-link">Photos</a>
                                     </li>
-                                    <li class="nav-item dropdown-submenu">
+                                    <!-- <li class="nav-item dropdown-submenu">
                                         <a title="Additional materials" href="additional-materials.html" class="nav-link">Additional materials</a>
-                                    </li>
+                                    </li> -->
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">
