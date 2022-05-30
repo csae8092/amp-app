@@ -7,6 +7,7 @@
     <property name="musulin_bio" value="./data/meta/musulin-biography.xml"/>
     <property name="team" value="./data/meta/team.xml"/>
     <property name="imprint" value="./data/imprint.xml"/>
+    <property name="editorial-decl" value="./data/meta/editorial-declaration.xml"/>
     <property name="target" value="./html"/>
     <!-- <property name="target_xml" value="./html/xml-view"/> -->
     <property name="xsl_editions" value="./xslt/editions.xsl"/>
@@ -22,6 +23,7 @@
     <property name="xsl_bio" value="./xslt/biographies.xsl"/>
     <property name="xsl_team" value="./xslt/team.xsl"/>
     <property name="xsl_imprint" value="./xslt/imprint.xsl"/>
+    <property name="xsl_edit" value="./xslt/editorial-declaration.xsl"/>
     <delete>
         <fileset dir="${target}" includes="*.html"/>
     </delete>
@@ -94,6 +96,10 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
     <xslt in="${description}" out="${target}/description.html" style="${xsl_desc}">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    <xslt in="${editorial-decl}" out="${target}/editorial-declaration.html" style="${xsl_edit}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
