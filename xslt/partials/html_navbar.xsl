@@ -36,11 +36,11 @@
                                         <a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Photos" href="photos.html" class="nav-link">Photos</a>
+                                        <a style="color:lightgrey!important;" title="Photos" class="nav-link">Photos <small>(in progress)</small></a>
                                     </li>
-                                    <!-- <li class="nav-item dropdown-submenu">
-                                        <a title="Additional materials" href="additional-materials.html" class="nav-link">Additional materials</a>
-                                    </li> -->
+                                    <li class="nav-item dropdown-submenu">
+                                         <a style="color:lightgrey!important;" title="Additional materials" class="nav-link">Additional materials <small>(in progress)</small></a>
+                                    </li> 
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">

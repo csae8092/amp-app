@@ -60,7 +60,7 @@
                             <xsl:when test="./tei:desc">
                                 <h6><xsl:value-of select="./tei:desc/tei:title"/></h6>
                                 <span><xsl:value-of select="./tei:desc/text()"/></span>
-                                <table class="table">
+                                <!--<table class="table">
                                     <tbody>
                                         <xsl:for-each select="./tei:desc/tei:location/tei:address/tei:placeName/*">
                                             <tr>
@@ -75,7 +75,7 @@
                                         </xsl:for-each>
                                     </tbody>
                                     
-                                </table>
+                                </table>-->
                                 
                                 <xsl:if test="./tei:desc/tei:location/tei:geo/text()">
                                     <xsl:variable name="lat" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[1]"/>

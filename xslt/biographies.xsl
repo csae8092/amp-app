@@ -119,7 +119,7 @@
                                                             </div>-->
                                                         </div>
                                                     </xsl:when>                                                    
-                                                    <xsl:when test="@type='correspondence' or @type='additional-materials' or @type='photos'">
+                                                    <xsl:when test="@type='correspondence'">  <!-- or @type='additional-materials' or @type='photos' -->
                                                         <div class="col-md-5">
                                                             
                                                         </div>

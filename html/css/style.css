@@ -1151,7 +1151,10 @@ td > label {
 /* loader for OSD images or other loading sequences */
 
 .loader {
-    border: 8px solid #fff; /* Light grey */
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border: 8px solid #f1f1f1; /* Light grey */
     border-top: 8px solid #b59890; /* Blue */
     border-radius: 50%;
     width: 50px;
@@ -1160,6 +1163,7 @@ td > label {
     animation: spin 2s linear infinite;
     margin: 5em auto;
 }
+
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
