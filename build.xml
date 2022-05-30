@@ -118,14 +118,14 @@
             <include name="*.JPG"/>
         </fileset>
     </copy>
-    <copy todir="${target}" flatten="true">
+    <!-- <copy todir="${target}" flatten="true">
         <fileset dir="data/editions">
             <include name="**/*.xml"/>
         </fileset>
-    </copy>
+    </copy> -->
     <copy todir="${target}" flatten="true">
         <fileset dir="data/meta">
-            <include name="**/*.xml"/>
+            <include name="**/*-biography.xml"/>
         </fileset>
     </copy>
     <copy todir="${target}" flatten="true">

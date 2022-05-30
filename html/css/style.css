@@ -23,6 +23,18 @@ body {
     margin-right: 0;
 }
 
+.numbered > li {
+  display: block;
+  list-style: none !important;
+  padding: .5em;
+}
+
+.numbered > li::before {
+  display: inline-block;
+  content: attr(data-no) ". ";
+  text-indent: -3em;
+}
+
 .times-new-roman {
     font-family: 'Times New Roman', serif !important;  
 }

@@ -83,7 +83,7 @@
                                         id="select-fontsize"
                                         onchange="fontsizeSelect(this)">
                                         <option selected="selected" value="default">
-                                            Default                                                                                                                     
+                                            Default font size                                                                                                                     
                                         </option> 
                                         <option value="font-size-26">
                                             26px                                                                                                                    
@@ -104,7 +104,7 @@
                                         id="select-font"
                                         onchange="fontSelect(this)">
                                         <option value="default" selected="selected">
-                                            Default                                                                                                                     
+                                            Default font                                                                                                                     
                                         </option>
                                         <option value="times-new-roman">
                                             Times New Roman                                                                                                                     
@@ -158,7 +158,7 @@
                                     </label>      
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;border-right: 1px dashed #dedede;">  
-                                    <label>Spaced</label>
+                                    <label>Original white space</label>
                                     <label class="switch">
                                         <input title="spaced"
                                             type="checkbox"

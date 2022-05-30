@@ -87,7 +87,7 @@
                                         <a title="Team" href="team.html" class="nav-link">Team</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Editorial Declaration" class="nav-link">Editorial Declaration <small>(in progress)</small></a>
+                                        <a href="editorial-declaration.html" title="Editorial Declaration" class="nav-link">Editorial Declaration</a>
                                     </li>
                                     <!--<li class="nav-item dropdown-submenu">
                                         <a title="Instruction for using the edition" href="#" class="nav-link">Instruction for using the edition</a>
