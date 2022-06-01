@@ -262,7 +262,9 @@
         <br/>        
     </xsl:template>
     <xsl:template match="tei:lg">
-        <p><xsl:apply-templates/></p>
+        <span style="display:block;margin: 1em 0;">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     <xsl:template match="tei:l">
         <xsl:apply-templates/><br />
