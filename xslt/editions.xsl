@@ -171,37 +171,19 @@
                                                             </ul>                                                                                                                     
                                                         </td>
                                                     </tr>
-                                                    <tr>                                                
-                                                        <xsl:variable name="citation-link" 
-                                                            select="concat('https://amp.acdh.oeaw.ac.at/',
-                                                            replace(//tei:TEI/@xml:id, '.xml', '.html'))"/>                                                           
-                                                        <th>Cite this source</th>
+                                                    <tr>                                                                                                       
+                                                        <th>Cite this Source (MLA 9th Edition)</th>
                                                         <td>
-                                                            <xsl:value-of select="concat(//tei:author[1],
-                                                                ', ',
-                                                                //tei:title[@level='a'],
-                                                                '. ')"/>
-                                                            
                                                             <xsl:value-of select="concat(
-                                                                'In: ', //tei:title[@level='s'],
-                                                                '. '
-                                                                )"/>
-                                                            
-                                                            <xsl:value-of select="concat(
-                                                                'Hg. ', replace(//tei:editor/tei:name[1], ',', ''),
-                                                                ', ', replace(//tei:editor/tei:name[2], ',', ''),
-                                                                ', Andorfer Peter, Stoxreiter Daniel')"/>
-                                                            
-                                                            <xsl:text> (</xsl:text>
-                                                            <a href="{lower-case($citation-link)}">
-                                                                <xsl:value-of 
-                                                                    select="lower-case($citation-link)"/>
-                                                            </a>
-                                                            <xsl:text>), accessed on </xsl:text>
-                                                            <span class="citationDate">
-                                                                <xsl:value-of select="format-date(current-date(),  '[D].[M].[Y]')"/>
-                                                            </span>
-                                                            <xsl:text>.</xsl:text>
+                                                                'Andorfer Peter, ', 
+                                                                replace(//tei:editor/tei:name[1], ',', ''),
+                                                                ', ', 
+                                                                replace(//tei:editor/tei:name[2], ',', ''),
+                                                                ', Mendelson Edward, Neundlinger Helmut and Stoxreiter Daniel')"/>     
+                                                            <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
+                                                            <a href="https://amp.acdh.oeaw.ac.at">
+                                                                amp.acdh.oeaw.ac.at
+                                                            </a><xsl:text>.</xsl:text>                                                         
                                                         </td>                                                                                                               
                                                     </tr>
                                                 </tbody>
