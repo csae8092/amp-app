@@ -287,7 +287,7 @@
     <xsl:template match="tei:hi">
         <xsl:choose>
             <xsl:when test="@rend='underline'">
-                <span class="hi-underline">
+                <span class="hi-underline italic">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>

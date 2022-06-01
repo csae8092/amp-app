@@ -143,6 +143,7 @@ function textFeaturesAll(el) {
         $("#whitespaces-link").removeClass("active");
         $(".hi-underline").each(function() {
             $(this).removeClass("underline badge-item blue");
+            $(this).addClass("italic");
         });
         $("#underline-link2, #underline-link").removeClass("blue");
         $("#underline-link").removeClass("active");
@@ -179,6 +180,7 @@ function textFeaturesAll(el) {
         $("#whitespaces-link").addClass("active");
         $(".hi-underline").each(function() {
             $(this).addClass("underline badge-item blue");
+            $(this).removeClass("italic");
         });
         $("#underline-link2, #underline-link").addClass("blue");
         $("#underline-link").addClass("active");
@@ -233,6 +235,7 @@ function textFeatures(el) {
         if (id === "underline-link") {
             $(".hi-underline").each(function() {
                 $(this).removeClass("underline badge-item blue");
+                $(this).addClass("italic");
             });
             $("#underline-link2, #underline-link").removeClass("blue");
         }
@@ -261,6 +264,7 @@ function textFeatures(el) {
         if (id === "underline-link") {
             $(".hi-underline").each(function() {
                 $(this).addClass("underline badge-item blue");
+                $(this).removeClass("italic");
             });
             $("#underline-link2, #underline-link").addClass("blue");
         }
