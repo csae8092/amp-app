@@ -74,7 +74,7 @@
                             <div class="card-body text-center">
                                 <ul style="margin-top:1em;padding-left:0;">
                                     <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                    
-                                        <li style="display:inline;list-style:none;margin-left:1em;">
+                                        <li style="display:inline;list-style:none;margin-left:1em;white-space:nowrap;">
                                             <a href="#{current-grouping-key()}" title="jump to date">
                                                 <xsl:value-of select="current-grouping-key()"/>
                                             </a>

@@ -38,9 +38,9 @@
                                     <li class="nav-item dropdown-submenu">
                                         <a style="color:lightgrey!important;" title="Photos" class="nav-link">Photos <small>(in progress)</small></a>
                                     </li>
-                                    <li class="nav-item dropdown-submenu">
+                                    <!--<li class="nav-item dropdown-submenu">
                                          <a style="color:lightgrey!important;" title="Additional materials" class="nav-link">Additional materials <small>(in progress)</small></a>
-                                    </li> 
+                                    </li>--> 
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">
@@ -63,9 +63,6 @@
                                     </li>
                                 </ul>                                
                             </li>                            
-                            <li class="nav-item">
-                                <a style="color:lightgrey!important;" title="Relations" class="nav-link">Relations <small>(in progress)</small></a>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a title="Biographies" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
