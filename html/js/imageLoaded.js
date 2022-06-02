@@ -1,7 +1,5 @@
 function hideLoader(el) {
     if (IsImageOk(el) == true) {
-        console.log(IsImageOk(el));
-        console.log(el);
         hideLoading(el);
     }
 }
@@ -19,6 +17,5 @@ function IsImageOk(img) {
 }
 
 function hideLoading(el) {
-    console.log(el.previousSibling);
-    el.previousSibling.remove();
+    el.previousElementSibling.remove();
 }

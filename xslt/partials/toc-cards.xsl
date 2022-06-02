@@ -33,7 +33,7 @@
                             <div class="text-center">
                                 <div class="loader-toc"></div>
                             </div>
-                            <img class="evelope-card" onload="hideLoader(this)">
+                            <img onload="hideLoader(this)">
                                 <xsl:attribute name="src">
                                     <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                 </xsl:attribute>
