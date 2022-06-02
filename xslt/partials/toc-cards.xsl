@@ -30,7 +30,10 @@
                             <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=full/,150/0/default.jpg'"/> 
                             <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/> 
                             <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>
-                            <img>
+                            <div class="text-center">
+                                <div class="loader-toc"></div>
+                            </div>
+                            <img class="evelope-card" onload="hideLoader(this)">
                                 <xsl:attribute name="src">
                                     <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                 </xsl:attribute>
