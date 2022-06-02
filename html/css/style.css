@@ -1057,6 +1057,10 @@ td > label {
     font-size: 22px !important;
 }
 
+.navbar .navbar-nav {
+    margin-right: 0 !important;
+}
+
 .underline {
     text-decoration: underline;
 }
