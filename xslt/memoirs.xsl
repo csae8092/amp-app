@@ -68,6 +68,7 @@
                             createDataTable('tocTable')
                         });
                     </script>
+                    <script type="text/javascript" src="js/imageLoaded.js"></script>
                 </div>
             </body>
         </html>
