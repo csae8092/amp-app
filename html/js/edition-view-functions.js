@@ -5,7 +5,7 @@
 function fontSelect(el) {
     var element = $(el);
     var val = element.val();
-    $("p").each(function() {
+    $("p.yes-index").each(function() {
         $(this).removeClass("times-new-roman")
         .removeClass("courier-new")
         .removeClass("arial-serif");
@@ -21,7 +21,7 @@ function fontSelect(el) {
 function fontsizeSelect(el) {
     var element = $(el);
     var val = element.val();
-    $("p").each(function() {
+    $("p.yes-index").each(function() {
         $(this).removeClass("font-size-26")
         .removeClass("font-size-22")
         .removeClass("font-size-18")
