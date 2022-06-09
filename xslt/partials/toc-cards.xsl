@@ -15,7 +15,7 @@
     <xsl:template name="toc-cards">
         <xsl:param name="category"></xsl:param>
         <xsl:for-each select="collection(concat('../../data/editions/', $category))//tei:TEI">
-            <xsl:sort select="//tei:origDate/@when-iso"/>
+            <xsl:sort select="//tei:origDate/@notAfter"/>
             <xsl:variable name="full_path">
                 <xsl:value-of select="document-uri(/)"/>
             </xsl:variable>                                
@@ -27,10 +27,13 @@
                     </xsl:attribute>
                     <div class="card index-card" style="margin:.2em !important;">                                 
                         <div class="card-body">
-                            <xsl:variable name="iiif-ext" select="'.jp2/full/,300/0/default.jpg'"/> 
-                            <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
+                            <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=full/,150/0/default.jpg'"/> 
+                            <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/> 
                             <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>
-                            <img>
+                            <div class="text-center">
+                                <div class="loader-toc"></div>
+                            </div>
+                            <img onload="hideLoader(this)">
                                 <xsl:attribute name="src">
                                     <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                 </xsl:attribute>

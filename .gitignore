@@ -1,12 +1,13 @@
 # project specific
-*.html
-*.xml
+/html/*.html
+/html/*.xml
 /saxon
 /static-search
 /html/static-search
 /html/js/arche_api_functions
 /html/autocomplete-addon/auden.txt
 /data
+/venv-amp
 
 
 # Byte-compiled / optimized / DLL files

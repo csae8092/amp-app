@@ -7,10 +7,11 @@
     <property name="musulin_bio" value="./data/meta/musulin-biography.xml"/>
     <property name="team" value="./data/meta/team.xml"/>
     <property name="imprint" value="./data/imprint.xml"/>
+    <property name="editorial-decl" value="./data/meta/editorial-declaration.xml"/>
     <property name="target" value="./html"/>
-    <property name="target_xml" value="./html/xml-view"/>
+    <!-- <property name="target_xml" value="./html/xml-view"/> -->
     <property name="xsl_editions" value="./xslt/editions.xsl"/>
-    <property name="xsl_editions_xml" value="./xslt/editions-xml.xsl"/>
+    <!-- <property name="xsl_editions_xml" value="./xslt/editions-xml.xsl"/> -->
     <property name="xsl_index" value="./xslt/index.xsl"/>
     <property name="xsl_toc" value="./xslt/toc.xsl"/>
     <property name="xsl_memoirs" value="./xslt/memoirs.xsl"/>
@@ -22,11 +23,15 @@
     <property name="xsl_bio" value="./xslt/biographies.xsl"/>
     <property name="xsl_team" value="./xslt/team.xsl"/>
     <property name="xsl_imprint" value="./xslt/imprint.xsl"/>
+    <property name="xsl_edit" value="./xslt/editorial-declaration.xsl"/>
     <delete>
         <fileset dir="${target}" includes="*.html"/>
     </delete>
+    <delete>
+        <fileset dir="${target}" includes="*.xml"/>
+    </delete>
     <delete dir="${target}/static-search"/>
-    <xslt style="${xsl_editions_xml}"  basedir="${editions}/correspondence" destdir="${target_xml}" includes="*.xml">
+    <!-- <xslt style="${xsl_editions_xml}"  basedir="${editions}/correspondence" destdir="${target_xml}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -37,7 +42,7 @@
     <xslt style="${xsl_editions_xml}"  basedir="${editions}/photos" destdir="${target_xml}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    </xslt> -->
     <!-- <xslt style="${xsl_editions_xml}"  basedir="${editions}/surfance-reconstructions" destdir="${target_xml}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
@@ -94,6 +99,10 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+    <xslt in="${editorial-decl}" out="${target}/editorial-declaration.html" style="${xsl_edit}">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
     <xslt in="${auden_bio}" out="${target}/auden-biography.html" style="${xsl_bio}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
@@ -115,14 +124,14 @@
             <include name="*.JPG"/>
         </fileset>
     </copy>
-    <copy todir="${target}" flatten="true">
+    <!-- <copy todir="${target}" flatten="true">
         <fileset dir="data/editions">
             <include name="**/*.xml"/>
         </fileset>
-    </copy>
+    </copy> -->
     <copy todir="${target}" flatten="true">
         <fileset dir="data/meta">
-            <include name="**/*.xml"/>
+            <include name="**/*-biography.xml"/>
         </fileset>
     </copy>
     <copy todir="${target}" flatten="true">

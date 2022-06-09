@@ -7,3 +7,5 @@ unzip main
 mv amp-data-main/data ./data
 rm -rf amp-data-main
 rm main.zip
+
+rm -rf ./data/tmp

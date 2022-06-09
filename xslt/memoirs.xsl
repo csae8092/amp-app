@@ -19,14 +19,13 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
-                <meta name="Document type" class="staticSearch_desc" content="table of content"/>
             </head>
             
             <body class="page">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     <div class="container-fluid">
-                        <div id="navBarLetters" style="margin-top:4em !important;">
+                        <div id="navBarLetters">
                             <ul class="nav nav-tabs" id="dropdown-lang">
                                 <li class="nav-item">                                    
                                     <a title="Cards" href="#cards-tab" data-toggle="tab" class="nav-link btn btn-round active">
@@ -42,7 +41,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane active" id="cards-tab" tabindex="-1">  
-                                <div class="row">
+                                <div class="row text-center">
                                     <xsl:call-template name="toc-cards">
                                         <xsl:with-param name="category" select="'memoirs'"/>
                                     </xsl:call-template>
@@ -69,6 +68,7 @@
                             createDataTable('tocTable')
                         });
                     </script>
+                    <script type="text/javascript" src="js/imageLoaded.js"></script>
                 </div>
             </body>
         </html>

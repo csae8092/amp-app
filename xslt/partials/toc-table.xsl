@@ -25,7 +25,7 @@
             </thead>
             <tbody>
                 <xsl:for-each select="collection(concat('../../data/editions/', $category))//tei:TEI">
-                    <xsl:sort select="//tei:origDate/@when-iso"/>
+                    <xsl:sort select="//tei:origDate/@notAfter"/>
                     <xsl:variable name="full_path">
                         <xsl:value-of select="document-uri(/)"/>
                     </xsl:variable>
