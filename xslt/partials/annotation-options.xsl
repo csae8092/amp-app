@@ -118,109 +118,20 @@
                                     </select>
                                 </td>                                                                
                                 <td style="text-align:right;width:15%;border: 1px dashed #dedede;">   
-                                    <label>Original text features</label>
-                                    <label class="switch">
-                                        <input title="text features"
-                                            type="checkbox"
-                                            onclick="textFeaturesAll(this)"
-                                            id="text-features-link"/>
-                                        <span id="text-features-link2" class="i-slider round"></span>                                                                        
-                                    </label>  
+                                    <annotation-slider opt="text-features"></annotation-slider> 
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
-                                    <label>Deleted</label>
-                                    <label class="switch">
-                                        <input title="deleted"
-                                            type="checkbox"
-                                            onclick="textFeatures(this, null)"
-                                            id="deleted-link"/>
-                                        <span id="deleted-link2" class="i-slider round"></span>                                                                        
-                                    </label>   
+                                    <annotation-slider opt="deleted"></annotation-slider>  
+                                </td>
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">   
+                                    <annotation-slider opt="unclear"></annotation-slider>  
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
-                                    <label>Unclear</label>
-                                    <label class="switch">
-                                        <input title="unclear"
-                                            type="checkbox"
-                                            onclick="textFeatures(this, null)"
-                                            id="unclear-link"/>
-                                        <span id="unclear-link2" class="i-slider round"></span>                                                                        
-                                    </label>  
-                                </td>
-                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
-                                    <label>Underlined</label>
-                                    <label class="switch">
-                                        <input title="underlined"
-                                            type="checkbox"
-                                            onclick="textFeatures(this, null)"
-                                            id="underline-link"/>
-                                        <span id="underline-link2" class="i-slider round"></span>                                                                        
-                                    </label>      
+                                    <annotation-slider opt="underlined"></annotation-slider>      
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;border-right: 1px dashed #dedede;">  
-                                    <label>Original white space</label>
-                                    <label class="switch">
-                                        <input title="spaced"
-                                            type="checkbox"
-                                            onclick="textFeatures(this, null)"
-                                            id="whitespaces-link"/>
-                                        <span id="whitespaces-link2" class="i-slider round"></span>                                                                        
-                                    </label>    
+                                    <annotation-slider opt="whitespace"></annotation-slider>   
                                 </td>
-                                <!--<td style="text-align:center;width:80%;">  
-                                    <ul class="nav nav-tabs options-menu2">     
-                                        <li style="border-right: 2px dotted #f1f1f1;">       
-                                            <label>Text features</label>
-                                            <label class="switch">
-                                                <input title="text features"
-                                                    type="checkbox"
-                                                    onclick="textFeaturesAll(this)"
-                                                    id="text-features-link"/>
-                                                <span id="text-features-link2" class="i-slider round"></span>                                                                        
-                                            </label>                                                                    
-                                        </li>
-                                        <li>       
-                                            <label>Deleted</label>
-                                            <label class="switch">
-                                                <input title="deleted"
-                                                    type="checkbox"
-                                                    onclick="textFeatures(this, null)"
-                                                    id="deleted-link"/>
-                                                <span id="deleted-link2" class="i-slider round"></span>                                                                        
-                                            </label>                                                                    
-                                        </li>                                    
-                                        <li>
-                                            <label>Unclear</label>
-                                            <label class="switch">
-                                                <input title="unclear"
-                                                    type="checkbox"
-                                                    onclick="textFeatures(this, null)"
-                                                    id="unclear-link"/>
-                                                <span id="unclear-link2" class="i-slider round"></span>                                                                        
-                                            </label>                                                                    
-                                        </li> 
-                                        <li>      
-                                            <label>Underlined</label>
-                                            <label class="switch">
-                                                <input title="underlined"
-                                                    type="checkbox"
-                                                    onclick="textFeatures(this, null)"
-                                                    id="underline-link"/>
-                                                <span id="underline-link2" class="i-slider round"></span>                                                                        
-                                            </label>                                                                    
-                                        </li>
-                                        <li>   
-                                            <label>Spaced</label>
-                                            <label class="switch">
-                                                <input title="spaced"
-                                                    type="checkbox"
-                                                    onclick="textFeatures(this, null)"
-                                                    id="whitespaces-link"/>
-                                                <span id="whitespaces-link2" class="i-slider round"></span>                                                                        
-                                            </label>                                                                    
-                                        </li>
-                                    </ul>
-                                </td>-->                                
                             </tr>      
                         </tbody>
                     </table>   
