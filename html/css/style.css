@@ -136,6 +136,10 @@ div.dataTables_filter {
     background-color: #fff;
 }
 
+.navbar .navbar-nav {
+    margin-right: 0 !important;
+}
+
 .navbar-collapse {
     margin-left: 2em;
 }
@@ -989,36 +993,10 @@ label {
     display: none;
 }
 
-.unclear[alt]::after {
-    opacity: 0;
-    content: "";
-}
-
-.unclear[alt] {
-    position: relative;
-    /*text-decoration: underline dotted;*/  
-}
-
 td > label {
     margin-right: .5em;
 }
 
-.unclear[alt]:hover::after,
-.unclear[alt]:focus::after {
-    content: attr(alt);
-    position: absolute;
-    left: -50px;
-    top: 25px;
-    width: auto;
-    white-space: nowrap;
-    background-color: #f1f1f1;
-    border-radius: .25rem;
-    font-size: 16px;
-    padding: 3px 5px;
-    z-index: 99;
-    transition: opacity  0s linear 1s;
-    opacity: 1;
-}
 .gap[alt]::after {
     opacity: 0;
     content: "";
@@ -1048,17 +1026,44 @@ td > label {
     opacity: 1;
 }
 
-.strikethrough {
-    text-decoration: line-through;
-}
-
 .reading-view-font {
     font-family: "Times New Roman", serif !important;
     font-size: 22px !important;
 }
 
-.navbar .navbar-nav {
-    margin-right: 0 !important;
+.unclear[alt]::after {
+    opacity: 0;
+    content: "";
+}
+
+.unclear[alt] {
+    position: relative;
+    /*text-decoration: underline dotted;*/  
+}
+
+.unclear[alt]:hover::after,
+.unclear[alt]:focus::after {
+    content: attr(alt);
+    position: absolute;
+    left: -50px;
+    top: 25px;
+    width: auto;
+    white-space: nowrap;
+    background-color: #f1f1f1;
+    border-radius: .25rem;
+    font-size: 16px;
+    padding: 3px 5px;
+    z-index: 99;
+    transition: opacity  0s linear 1s;
+    opacity: 1;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.whitespace {
+    
 }
 
 .underline {

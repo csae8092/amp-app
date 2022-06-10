@@ -9,7 +9,10 @@ const options = {
             html_class: 'del',
             css_class: 'strikethrough',
             hide: true,
-            all_features: false,
+            features: {
+                all: false,
+                class: 'single-feature',
+            },
         },
         {
             opt: 'underlined',
@@ -19,7 +22,10 @@ const options = {
             html_class: 'hi-underline',
             css_class: ['underline', 'italic'],
             hide: false,
-            all_features: false,
+            features: {
+                all: false,
+                class: 'single-feature',
+            },
         },
         {
             opt: 'whitespace',
@@ -29,7 +35,10 @@ const options = {
             html_class: 'space',
             css_class: 'whitespace',
             hide: false,
-            all_features: false,
+            features: {
+                all: false,
+                class: 'single-feature',
+            },
         },
         {
             opt: 'unclear',
@@ -39,7 +48,10 @@ const options = {
             html_class: 'abbr',
             css_class: 'unclear',
             hide: false,
-            all_features: false,
+            features: {
+                all: false,
+                class: 'single-feature',
+            },
         },
         {
             opt: 'text-features',
@@ -49,9 +61,20 @@ const options = {
             html_class: 'undefined',
             css_class: 'undefined',
             hide: false,
-            all_features: true,
+            features: {
+                all: true,
+                class: 'all-features',
+            },
         }
-    ]
+    ],
+    span_element: {
+        css_class : "badge-item",
+    },
+    active_class: "active",
+    rendered_element: {
+        label_class: "switch",
+        slider_class: "i-slider round",
+    }
 }
 
 
@@ -72,9 +95,11 @@ class AnnotationSlider extends HTMLElement {
     textFeatures() {
         const id = this.getAttribute("id");
         const variant = options.variants.find((v) => v.opt === id);
-        const all = variant.all_features;
-        const variants = options.variants.filter((v) => v.all_features === false);
-        const none_variant = options.variants.find((v) => v.all_features === true);
+        const all = variant.features.all;
+        const variants = options.variants.filter((v) => v.features.all === false);
+        const none_variant = options.variants.find((v) => v.features.all === true);
+        const style = options.span_element;
+        const active = options.active_class;
         const remove = (html_class, css_class, color, hide) => {
             document.querySelectorAll(`.${html_class}`).forEach((el) => {                
                 if (typeof css_class === "object") {
@@ -89,9 +114,9 @@ class AnnotationSlider extends HTMLElement {
                     el.classList.remove(css_class);
                 }
                 el.classList.remove(color);
-                el.classList.remove("badge-item");
+                el.classList.add(style.css_class);
                 if (hide) {
-                    el.classList.add("fade");
+                    el.style.display = "none";
                 }                
             });
         };
@@ -109,16 +134,16 @@ class AnnotationSlider extends HTMLElement {
                     el.classList.add(css_class);
                 }                 
                 el.classList.add(color);
-                el.classList.add("badge-item");
+                el.classList.add(style.css_class);
                 if (hide) {
-                    el.classList.remove("fade");
+                    el.style.display = "inline";
                 }   
             });
         };
 
         if (all) {
-            if ( this.classList.contains("active") ) {
-                this.classList.remove("active");    
+            if ( this.classList.contains(active) ) {
+                this.classList.remove(active);    
                 variants.forEach((el) => {
                     const color = el.color;
                     const html_class = el.html_class;
@@ -128,11 +153,11 @@ class AnnotationSlider extends HTMLElement {
                     document.getElementById(el.opt_slider).classList.remove(color);
                     if (document.getElementById(el.opt).checked === true) {
                         document.getElementById(el.opt).checked = false;
-                        document.getElementById(el.opt).classList.remove("active");
+                        document.getElementById(el.opt).classList.remove(active);
                     } 
                 });                
             } else {
-                this.classList.add("active");
+                this.classList.add(active);
                 variants.forEach((el) => {                    
                     const color = el.color;
                     const html_class = el.html_class;
@@ -142,23 +167,23 @@ class AnnotationSlider extends HTMLElement {
                     document.getElementById(el.opt_slider).classList.add(color);
                     if (document.getElementById(el.opt).checked === false) {
                         document.getElementById(el.opt).checked = true;       
-                        document.getElementById(el.opt).classList.add("active");                 
+                        document.getElementById(el.opt).classList.add(active);                 
                     }     
                 });                
             }
         } else {
-            const opt = variant.opt;
+            // const opt = variant.opt;
             const color = variant.color;
             const html_class = variant.html_class;
             const css_class = variant.css_class;
             const hide = variant.hide;
-            if ( this.classList.contains("active") ) {
-                this.classList.remove("active");            
+            if ( this.classList.contains(active) ) {
+                this.classList.remove(active);            
                 remove(html_class, css_class, color, hide);
                 document.getElementById(variant.opt_slider).classList.remove(color);
                 this.classList.remove(color);
             } else {
-                this.classList.add("active");
+                this.classList.add(active);
                 add(html_class, css_class, color, hide);
                 document.getElementById(variant.opt_slider).classList.add(color);
                 this.classList.add(color);
@@ -167,46 +192,37 @@ class AnnotationSlider extends HTMLElement {
                 If all or not all text features are selected the original text features
                 link will automatically be switched on or off.
             */
-            const variants_checked = document.querySelectorAll("input.single-feature:checked");
+            const variants_checked = document.querySelectorAll(`input.${variant.features.class}:checked`);
             if (variants_checked.length === variants.length) {
                 document.getElementById(none_variant.opt).checked = true;
-                document.getElementById(none_variant.opt).classList.add("active");
+                document.getElementById(none_variant.opt).classList.add(active);
             } else {
                 document.getElementById(none_variant.opt).checked = false;
-                document.getElementById(none_variant.opt).classList.remove("active");
+                document.getElementById(none_variant.opt).classList.remove(active);
             }
         }
     }
 
     render() {
         const opt = this.getAttribute("opt");
+        console.log(opt);
         const variant = options.variants.find((v) => v.opt === opt);
+        console.log(variant);
         const title = variant.title;
-        const all = variant.all_features;
         const opt_slider = variant.opt_slider;
-        if (all) {
-            this.innerHTML = `
-                <label>${title}</label>
-                <label class="switch">
-                    <input title="${title}"
-                        type="checkbox"
-                        id="${opt}"
-                        class="all-features"/>
-                    <span id="${opt_slider}r" class="i-slider round"></span>                                                                        
-                </label> 
-            `;
-        } else {
-            this.innerHTML = `
-                <label>${title}</label>
-                <label class="switch">
-                    <input title="${title}"
-                        type="checkbox"
-                        id="${opt}"
-                        class="single-feature"/>
-                    <span id="${opt_slider}" class="i-slider round"></span>                                                                        
-                </label> 
-            `;
-        }
+        console.log(opt_slider);
+        const rendered_element = options.rendered_element;
+        console.log(rendered_element);
+        this.innerHTML = `
+            <label>${title}</label>
+            <label class="${rendered_element.label_class}">
+                <input title="${title}"
+                    type="checkbox"
+                    id="${opt}"
+                    class="${variant.features.class}"/>
+                <span id="${opt_slider}" class="${rendered_element.slider_class}"></span>                                                                        
+            </label> 
+        `;
     }
 
     attributeChangedCallback(attr, oldValue, newValue) {

@@ -263,7 +263,7 @@
         </span>
     </xsl:template>
     <xsl:template match="tei:del">
-        <span class="del fade"><xsl:apply-templates/></span>      
+        <span class="del" style="display:none;"><xsl:apply-templates/></span>      
     </xsl:template> 
     <xsl:template match="tei:gap">
         <xsl:choose>
