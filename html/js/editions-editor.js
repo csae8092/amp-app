@@ -3,48 +3,53 @@ const options = {
     variants : [
         {
             opt: 'deleted',
+            opt_slider: 'deleted-slider',
             title: 'Deleted',
             color: 'red',
-            htmlClass: 'del',
-            cssClass: 'strikethrough',
+            html_class: 'del',
+            css_class: 'strikethrough',
             hide: true,
-            allFeatures: false,
+            all_features: false,
         },
         {
             opt: 'underlined',
+            opt_slider: 'underlined-slider',
             title: 'Underlined',
             color: 'blue',
-            htmlClass: 'hi-underline',
-            cssClass: ['underline', 'italic'],
+            html_class: 'hi-underline',
+            css_class: ['underline', 'italic'],
             hide: false,
-            allFeatures: false,
+            all_features: false,
         },
         {
             opt: 'whitespace',
+            opt_slider: 'whitespace-slider',
             title: 'Original white spaces',
             color: 'green',
-            htmlClass: 'space',
-            cssClass: 'whitespace',
+            html_class: 'space',
+            css_class: 'whitespace',
             hide: false,
-            allFeatures: false,
+            all_features: false,
         },
         {
             opt: 'unclear',
+            opt_slider: 'unclear-slider',
             title: 'Unclear',
             color: 'grey',
-            htmlClass: 'abbr',
-            cssClass: 'unclear',
+            html_class: 'abbr',
+            css_class: 'unclear',
             hide: false,
-            allFeatures: false,
+            all_features: false,
         },
         {
             opt: 'text-features',
+            opt_slider: 'text-features-slider',
             title: 'Original text features',
             color: 'grey',
-            htmlClass: 'undefined',
-            cssClass: 'undefined',
+            html_class: 'undefined',
+            css_class: 'undefined',
             hide: false,
-            allFeatures: true,
+            all_features: true,
         }
     ]
 }
@@ -67,13 +72,13 @@ class AnnotationSlider extends HTMLElement {
     textFeatures() {
         const id = this.getAttribute("id");
         const variant = options.variants.find((v) => v.opt === id);
-        const all = variant.allFeatures;
-        const variants = options.variants.filter((v) => v.allFeatures === false);
-        const noneVariant = options.variants.find((v) => v.allFeatures === true);
-        const remove = function (htmlClass, cssClass, color, hide) {
-            document.querySelectorAll(`.${htmlClass}`).forEach(function(el) {                
-                if (typeof cssClass === "object") {
-                    cssClass.forEach((css) => {
+        const all = variant.all_features;
+        const variants = options.variants.filter((v) => v.all_features === false);
+        const none_variant = options.variants.find((v) => v.all_features === true);
+        const remove = (html_class, css_class, color, hide) => {
+            document.querySelectorAll(`.${html_class}`).forEach((el) => {                
+                if (typeof css_class === "object") {
+                    css_class.forEach((css) => {
                         if (el.classList.contains(css)) {
                             el.classList.remove(css);
                         } else {
@@ -81,7 +86,7 @@ class AnnotationSlider extends HTMLElement {
                         }
                     });
                 } else {
-                    el.classList.remove(cssClass);
+                    el.classList.remove(css_class);
                 }
                 el.classList.remove(color);
                 el.classList.remove("badge-item");
@@ -90,10 +95,10 @@ class AnnotationSlider extends HTMLElement {
                 }                
             });
         };
-        const add = function (htmlClass, cssClass, color, hide) {
-            document.querySelectorAll(`.${htmlClass}`).forEach(function(el) {
-                if (typeof cssClass === "object") {
-                    cssClass.forEach((css) => {
+        const add = (html_class, css_class, color, hide) => {
+            document.querySelectorAll(`.${html_class}`).forEach((el) => {
+                if (typeof css_class === "object") {
+                    css_class.forEach((css) => {
                         if (el.classList.contains(css)) {
                             el.classList.remove(css);
                         } else {
@@ -101,7 +106,7 @@ class AnnotationSlider extends HTMLElement {
                         }
                     });
                 } else {
-                    el.classList.add(cssClass);
+                    el.classList.add(css_class);
                 }                 
                 el.classList.add(color);
                 el.classList.add("badge-item");
@@ -116,11 +121,11 @@ class AnnotationSlider extends HTMLElement {
                 this.classList.remove("active");    
                 variants.forEach((el) => {
                     const color = el.color;
-                    const htmlClass = el.htmlClass;
-                    const cssClass = el.cssClass;
+                    const html_class = el.html_class;
+                    const css_class = el.css_class;
                     const hide = el.hide;
-                    remove(htmlClass, cssClass, color, hide);
-                    document.getElementById(`${el.opt}-link`).classList.remove(color);
+                    remove(html_class, css_class, color, hide);
+                    document.getElementById(el.opt_slider).classList.remove(color);
                     if (document.getElementById(el.opt).checked === true) {
                         document.getElementById(el.opt).checked = false;
                         document.getElementById(el.opt).classList.remove("active");
@@ -130,11 +135,11 @@ class AnnotationSlider extends HTMLElement {
                 this.classList.add("active");
                 variants.forEach((el) => {                    
                     const color = el.color;
-                    const htmlClass = el.htmlClass;
-                    const cssClass = el.cssClass;
+                    const html_class = el.html_class;
+                    const css_class = el.css_class;
                     const hide = el.hide;
-                    add(htmlClass, cssClass, color, hide);
-                    document.getElementById(`${el.opt}-link`).classList.add(color);
+                    add(html_class, css_class, color, hide);
+                    document.getElementById(el.opt_slider).classList.add(color);
                     if (document.getElementById(el.opt).checked === false) {
                         document.getElementById(el.opt).checked = true;       
                         document.getElementById(el.opt).classList.add("active");                 
@@ -144,18 +149,18 @@ class AnnotationSlider extends HTMLElement {
         } else {
             const opt = variant.opt;
             const color = variant.color;
-            const htmlClass = variant.htmlClass;
-            const cssClass = variant.cssClass;
+            const html_class = variant.html_class;
+            const css_class = variant.css_class;
             const hide = variant.hide;
             if ( this.classList.contains("active") ) {
                 this.classList.remove("active");            
-                remove(htmlClass, cssClass, color, hide);
-                document.getElementById(`${opt}-link`).classList.remove(color);
+                remove(html_class, css_class, color, hide);
+                document.getElementById(variant.opt_slider).classList.remove(color);
                 this.classList.remove(color);
             } else {
                 this.classList.add("active");
-                add(htmlClass, cssClass, color, hide);
-                document.getElementById(`${opt}-link`).classList.add(color);
+                add(html_class, css_class, color, hide);
+                document.getElementById(variant.opt_slider).classList.add(color);
                 this.classList.add(color);
             }
             /*
@@ -164,11 +169,11 @@ class AnnotationSlider extends HTMLElement {
             */
             const variants_checked = document.querySelectorAll("input.single-feature:checked");
             if (variants_checked.length === variants.length) {
-                document.getElementById(noneVariant.opt).checked = true;
-                document.getElementById(noneVariant.opt).classList.add("active");
+                document.getElementById(none_variant.opt).checked = true;
+                document.getElementById(none_variant.opt).classList.add("active");
             } else {
-                document.getElementById(noneVariant.opt).checked = false;
-                document.getElementById(noneVariant.opt).classList.remove("active");
+                document.getElementById(none_variant.opt).checked = false;
+                document.getElementById(none_variant.opt).classList.remove("active");
             }
         }
     }
@@ -177,7 +182,8 @@ class AnnotationSlider extends HTMLElement {
         const opt = this.getAttribute("opt");
         const variant = options.variants.find((v) => v.opt === opt);
         const title = variant.title;
-        const all = variant.allFeatures;
+        const all = variant.all_features;
+        const opt_slider = variant.opt_slider;
         if (all) {
             this.innerHTML = `
                 <label>${title}</label>
@@ -186,7 +192,7 @@ class AnnotationSlider extends HTMLElement {
                         type="checkbox"
                         id="${opt}"
                         class="all-features"/>
-                    <span id="${opt}-link" class="i-slider round"></span>                                                                        
+                    <span id="${opt_slider}r" class="i-slider round"></span>                                                                        
                 </label> 
             `;
         } else {
@@ -197,7 +203,7 @@ class AnnotationSlider extends HTMLElement {
                         type="checkbox"
                         id="${opt}"
                         class="single-feature"/>
-                    <span id="${opt}-link" class="i-slider round"></span>                                                                        
+                    <span id="${opt_slider}" class="i-slider round"></span>                                                                        
                 </label> 
             `;
         }
