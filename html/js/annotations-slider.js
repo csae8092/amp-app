@@ -205,14 +205,10 @@ class AnnotationSlider extends HTMLElement {
 
     render() {
         const opt = this.getAttribute("opt");
-        console.log(opt);
         const variant = options.variants.find((v) => v.opt === opt);
-        console.log(variant);
         const title = variant.title;
         const opt_slider = variant.opt_slider;
-        console.log(opt_slider);
         const rendered_element = options.rendered_element;
-        console.log(rendered_element);
         this.innerHTML = `
             <label>${title}</label>
             <label class="${rendered_element.label_class}">
