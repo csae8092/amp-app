@@ -238,6 +238,7 @@
                 <script type="text/javascript" src="js/osd_single.js"></script>
                 <script type="text/javascript" src="js/annotations-slider.js"></script>
                 <script type="text/javascript" src="js/fullsize.js"></script> 
+                <script type="text/javascript" src="js/image-switch.js"></script> 
             </body>
         </html>
     </xsl:template>

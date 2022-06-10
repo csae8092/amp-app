@@ -2,7 +2,7 @@ const options_fullsize = {
     name: 'Create full size mode',
     variants:  [
         {
-            opt: 'edition',
+            opt: 'edition-fullsize',
             title: 'full screen on/off',
             hide: {
                 hidden: true,
@@ -39,7 +39,7 @@ class FullSize extends HTMLElement {
 
     fullScrean() {
         const id = this.getAttribute("id");
-        const opt = options_fullsize
+        // const opt = options_fullsize;
         const variant = options_fullsize.variants.find((v) => v.opt === id);
         const active = options_fullsize.active_class;
         const hide = variant.hide.class_to_hide;
