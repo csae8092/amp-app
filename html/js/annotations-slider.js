@@ -1,4 +1,4 @@
-const options = {
+const options_annotation_slider = {
     name: 'Text Annotations',
     variants : [
         {
@@ -94,12 +94,12 @@ class AnnotationSlider extends HTMLElement {
 
     textFeatures() {
         const id = this.getAttribute("id");
-        const variant = options.variants.find((v) => v.opt === id);
+        const variant = options_annotation_slider.variants.find((v) => v.opt === id);
         const all = variant.features.all;
-        const variants = options.variants.filter((v) => v.features.all === false);
-        const none_variant = options.variants.find((v) => v.features.all === true);
-        const style = options.span_element;
-        const active = options.active_class;
+        const variants = options_annotation_slider.variants.filter((v) => v.features.all === false);
+        const none_variant = options_annotation_slider.variants.find((v) => v.features.all === true);
+        const style = options_annotation_slider.span_element;
+        const active = options_annotation_slider.active_class;
         const remove = (html_class, css_class, color, hide) => {
             document.querySelectorAll(`.${html_class}`).forEach((el) => {                
                 if (typeof css_class === "object") {
@@ -205,10 +205,10 @@ class AnnotationSlider extends HTMLElement {
 
     render() {
         const opt = this.getAttribute("opt");
-        const variant = options.variants.find((v) => v.opt === opt);
+        const variant = options_annotation_slider.variants.find((v) => v.opt === opt);
         const title = variant.title;
         const opt_slider = variant.opt_slider;
-        const rendered_element = options.rendered_element;
+        const rendered_element = options_annotation_slider.rendered_element;
         this.innerHTML = `
             <label>${title}</label>
             <label class="${rendered_element.label_class}">
