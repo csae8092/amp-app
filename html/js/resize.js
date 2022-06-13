@@ -38,8 +38,8 @@ function resize(position) {
                 left_container.css('max-width', '50%');
                 text.css('width', '50%');
                 right_container.css('max-width', '50%');
-                viewer.css('width', '914px');
-                viewer.css('height', '914px');
+                viewer.style.width = `${right_container.offsetWidth}px`;
+                viewer.style.height = `${right_container.offsetHeight}px`;
             }
             
 

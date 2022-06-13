@@ -26,7 +26,7 @@ const options_fullsize = {
 class FullSize extends HTMLElement {
 
     "use strict";
-    
+
     static get observedAttributes() {
         return ["opt"];
     }
@@ -81,13 +81,13 @@ class FullSize extends HTMLElement {
         `;
     }
 
-    attributeChangedCallback(attr, oldValue, newValue) {
+    attributeChangedCallback() {
         this.render();
     }
 
     disconnectedCallback() {
         this.childNodes[1].removeEventListener("click", this.fullScrean);
-    };
+    }
 
  }
  window.customElements.define('full-size', FullSize);

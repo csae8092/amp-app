@@ -11,7 +11,7 @@ const options_annotation_slider = {
             hide: true,
             features: {
                 all: false,
-                class: 'single-feature',
+                class: 'single-feature'
             },
         },
         {
@@ -81,7 +81,7 @@ const options_annotation_slider = {
 class AnnotationSlider extends HTMLElement {
 
     "use strict";
-    
+
     static get observedAttributes() {
         return ["opt"];
     }
@@ -101,7 +101,7 @@ class AnnotationSlider extends HTMLElement {
         const style = options_annotation_slider.span_element;
         const active = options_annotation_slider.active_class;
         const remove = (html_class, css_class, color, hide) => {
-            document.querySelectorAll(`.${html_class}`).forEach((el) => {                
+            document.querySelectorAll(`.${html_class}`).forEach((el) => {
                 if (typeof css_class === "object") {
                     css_class.forEach((css) => {
                         if (el.classList.contains(css)) {
@@ -117,7 +117,7 @@ class AnnotationSlider extends HTMLElement {
                 el.classList.add(style.css_class);
                 if (hide) {
                     el.style.display = "none";
-                }                
+                }
             });
         };
         const add = (html_class, css_class, color, hide) => {
@@ -132,18 +132,18 @@ class AnnotationSlider extends HTMLElement {
                     });
                 } else {
                     el.classList.add(css_class);
-                }                 
+                }
                 el.classList.add(color);
                 el.classList.add(style.css_class);
                 if (hide) {
                     el.style.display = "inline";
-                }   
+                }
             });
         };
 
         if (all) {
             if ( this.classList.contains(active) ) {
-                this.classList.remove(active);    
+                this.classList.remove(active);
                 variants.forEach((el) => {
                     const color = el.color;
                     const html_class = el.html_class;
@@ -154,11 +154,11 @@ class AnnotationSlider extends HTMLElement {
                     if (document.getElementById(el.opt).checked === true) {
                         document.getElementById(el.opt).checked = false;
                         document.getElementById(el.opt).classList.remove(active);
-                    } 
-                });                
+                    }
+                });
             } else {
                 this.classList.add(active);
-                variants.forEach((el) => {                    
+                variants.forEach((el) => {
                     const color = el.color;
                     const html_class = el.html_class;
                     const css_class = el.css_class;
@@ -166,10 +166,10 @@ class AnnotationSlider extends HTMLElement {
                     add(html_class, css_class, color, hide);
                     document.getElementById(el.opt_slider).classList.add(color);
                     if (document.getElementById(el.opt).checked === false) {
-                        document.getElementById(el.opt).checked = true;       
-                        document.getElementById(el.opt).classList.add(active);                 
-                    }     
-                });                
+                        document.getElementById(el.opt).checked = true;
+                        document.getElementById(el.opt).classList.add(active);
+                    }
+                });
             }
         } else {
             // const opt = variant.opt;
@@ -178,7 +178,7 @@ class AnnotationSlider extends HTMLElement {
             const css_class = variant.css_class;
             const hide = variant.hide;
             if ( this.classList.contains(active) ) {
-                this.classList.remove(active);            
+                this.classList.remove(active);
                 remove(html_class, css_class, color, hide);
                 document.getElementById(variant.opt_slider).classList.remove(color);
                 this.classList.remove(color);
@@ -216,18 +216,18 @@ class AnnotationSlider extends HTMLElement {
                     type="checkbox"
                     id="${opt}"
                     class="${variant.features.class}"/>
-                <span id="${opt_slider}" class="${rendered_element.slider_class}"></span>                                                                        
-            </label> 
+                <span id="${opt_slider}" class="${rendered_element.slider_class}"></span>
+            </label>
         `;
     }
 
-    attributeChangedCallback(attr, oldValue, newValue) {
+    attributeChangedCallback() {
         this.render();
     }
 
     disconnectedCallback() {
         this.childNodes[3].childNodes[1].removeEventListener("click", this.textFeatures);
-    };
+    }
 
  }
  window.customElements.define('annotation-slider', AnnotationSlider);
