@@ -53,13 +53,13 @@ class ImageSwitch extends HTMLElement {
                 el.classList.add("fade");
                 el.classList.remove("col-md-6");
                 el.style.maxWidth = "100%";
-                el.classList.remove("active");
+                el.classList.remove(active);
             });
             document.querySelectorAll(`.${show}`).forEach((el) => {
                 el.classList.remove("col-md-6");
                 el.classList.add("col-md-12");
                 el.style.maxWidth = "100%";
-                el.classList.remove("active");
+                el.classList.remove(active);
             });
         } else {
             this.classList.add(active);
@@ -67,13 +67,13 @@ class ImageSwitch extends HTMLElement {
                 el.classList.remove("fade");
                 el.classList.add("col-md-6");
                 el.style.maxWidth = "50%";
-                el.classList.add("active");
+                el.classList.add(active);
             });
             document.querySelectorAll(`.${show}`).forEach((el) => {
                 el.classList.add("col-md-6");
                 el.classList.remove("col-md-12");
                 el.style.maxWidth = "50%";
-                el.classList.add("active");
+                el.classList.add(active);
             });
             // works only with one image viewer
             const viewer = document.querySelector(`.${parent}.${active} .${hide}`);
