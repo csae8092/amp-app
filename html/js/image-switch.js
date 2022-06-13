@@ -73,13 +73,11 @@ class ImageSwitch extends HTMLElement {
                 el.style.maxWidth = "50%";
                 el.classList.add("active");
             });
-            const viewer = document.querySelector(`.${hide}`).querySelectorAll("*")[1];
-            const viewer_width = document.querySelector(`.${hide}`);
-            console.log(viewer_width.offsetWidth);
-            console.log(viewer_width.offsetHeight);
-            console.log(viewer);
-            viewer.style.width = `${viewer_width.offsetWidth}px`;
-            viewer.style.height = `${viewer_width.offsetHeight}px`;
+            // works only with one image viewer
+            const viewer = document.querySelector(`.pagination-tab.active .${hide}`);
+            const facs = viewer.querySelectorAll("*")[1];            
+            facs.style.width = `${viewer.offsetWidth}px`;
+            facs.style.height = `${viewer.offsetHeight}px`;
         }
         // if ( element.hasClass("active") ) {
         //     element.removeClass("active");
