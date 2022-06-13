@@ -453,6 +453,12 @@ h4 {
 
 .nav-link {
     color: #615a60 !important;
+    background-color: transparent !important;
+}
+
+.nav-link.active {
+    color: #615a60 !important;
+    background-color: #f1f1f1 !important;
 }
 
 .nav-link:hover, #ssDoSearch:hover {

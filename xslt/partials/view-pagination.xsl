@@ -33,7 +33,7 @@
                             <li class="nav-item">
                                 <a                                   
                                     title="{position()}"
-                                    class="nav-link active"
+                                    class="nav-link active sync"
                                     data-toggle="tab"
                                     data-tab="paginate"
                                     href="#paginate-{position()}"
@@ -47,7 +47,7 @@
                                 <a
                                     onclick="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]"
                                     title="{position()}"
-                                    class="nav-link"
+                                    class="nav-link sync"
                                     data-toggle="tab"
                                     data-tab="paginate"
                                     href="#paginate-{position()}"
@@ -83,7 +83,7 @@
                                                         onclick="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]"
                                                         title="{position()}"
                                                         href="#paginate-{position()}"
-                                                        class="nav-link"
+                                                        class="nav-link sync"
                                                         data-tab="paginate"
                                                         data-toggle="tab"
                                                         style="border-radius:30px;">
