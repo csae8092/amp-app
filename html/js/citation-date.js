@@ -1,20 +1,15 @@
-$(function() {
 
-    `
-    replacing citation date of app build with current date
-    in de and en format.
+const citDate = document.getElementById("citation-date");
 
-    `
-    $('.citationDate').each(function() {
-        let date = new Date();
-        let options = { 
-            weekday: 'long', 
-            year: 'numeric',
-            month: 'long', 
-            day: 'numeric'
-        };
-        $(this).html(
-            date.toLocaleDateString('en-EN', options)
-        );
-    });
-});
+function changeToCurrentDate() {
+    let date = new Date();
+    let options = { 
+        // weekday: 'long', 
+        year: 'numeric',
+        month: 'long', 
+        day: 'numeric'
+    };
+    citDate.innerHTML = date.toLocaleDateString('en-EN', options);
+}
+
+changeToCurrentDate();
