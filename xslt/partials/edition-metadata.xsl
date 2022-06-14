@@ -15,7 +15,7 @@
     <xsl:template name="edition-md">
         <xsl:param name="doc_title"/>
         <xsl:variable name="full_path" select="document-uri(/)"/>
-        <div class="row hide-reading" style="word-break: break-word;word-wrap: break-word;"> 
+        <div class="row hide-reading"> 
             <div class="col-md-12">
                 <h5 class="card-text" style="text-align:left;">
                     <xsl:value-of select="$doc_title"/>                        

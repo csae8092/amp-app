@@ -72,9 +72,9 @@
                                 <h1><xsl:value-of select="substring-before($doc_title, ' Biography')"/></h1>
                             </div>   
                             <div class="card-body text-center">
-                                <ul style="margin-top:1em;padding-left:0;">
+                                <ul style="margin-top:1em;padding-left:0;word-break:break-all;">
                                     <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                    
-                                        <li style="display:inline;list-style:none;margin-left:1em;white-space:nowrap;">
+                                        <li style="display:inline;list-style:none;margin-left:1em;">
                                             <a href="#{current-grouping-key()}" title="jump to date">
                                                 <xsl:value-of select="current-grouping-key()"/>
                                             </a>
