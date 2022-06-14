@@ -1199,12 +1199,28 @@ td > label {
 /*                                                  */
 /* Small devices (landscape phones, 576px and up) */ 
 @media (max-width: 576px) {
-    #audenIndexCarousel {
-        max-width: 100%;
-        padding: 0;
+    .navBarLetters .table tbody tr {
+        display: grid;
     }
-    #wrapper-hero-amp {
-        
+    .navBarLetters .table tbody tr td {
+        width: 100% !important;
+        text-align: center !important;
+        border: none !important;
+        margin: .5em auto;
+        justify-content: space-between;
+        display: flex;
+        padding: 0 .5em;
+    }
+    .about-text-hidden .table {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    #footer-full-content .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-widget {
+        max-width: 100% !important;
     }
     #ac-panel {
         display:block;
@@ -1256,13 +1272,28 @@ td > label {
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) { 
-    #audenIndexCarousel {
-        max-width: 100%;
-        margin: 0 auto;
-    }    
-    #wrapper-hero-inner {
-        margin-bottom: 1em;
-        padding: 0;
+    .navBarLetters .table tbody tr {
+        display: grid;
+    }
+    .navBarLetters .table tbody tr td {
+        width: 100% !important;
+        text-align: center !important;
+        border: none !important;
+        margin: .5em auto;
+        justify-content: space-between;
+        display: flex;
+        padding: 0 .5em;
+    }
+    .about-text-hidden .table {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    #footer-full-content .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-widget {
+        max-width: 100% !important;
     }
     #ac-panel {
         display:block;
@@ -1315,41 +1346,18 @@ td > label {
 }
 
 @media (max-width: 1024px){   
-    #audenIndexCarousel {
-        max-width: 100%;
-        padding: 0;
-    }    
-    #wrapper-hero-inner {
-        margin-bottom: 1em;
-        padding: 0 2em;
-    }
-    .navbar-collapse {
-        margin: 0;
-    }
+
 }
 
 /* Large devices (desktops, 992px and up) */
 /*@media (min-width: 992px) {  }*/
 
 /* Extra large devices (large desktops, 1200px and up) */
-@media (max-width: 1200px) {    
-    #audenIndexCarousel {
+@media (max-width: 1200px) {     
 
-    }    
-    #wrapper-hero-inner {
-        margin-bottom: 1em;
-        padding: 0 2em;
-    }
 }
 
 /* Extra large devices (large desktops, 1680px and up) */
 @media (max-width: 1680px) {      
-    #audenIndexCarousel {
-        max-width: 100%;
 
-    }
-    #wrapper-hero-inner {
-        margin-bottom: 1em;
-        padding: 0 2em;
-    }
 }
