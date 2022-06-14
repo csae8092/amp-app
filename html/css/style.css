@@ -1199,6 +1199,11 @@ td > label {
 /*                                                  */
 /* Small devices (landscape phones, 576px and up) */ 
 @media (max-width: 576px) {
+    .container-fluid .row {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block;
+    }
     .navBarLetters .table tbody tr {
         display: grid;
     }
