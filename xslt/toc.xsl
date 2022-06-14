@@ -19,6 +19,7 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
+                 <script type="text/javascript" src="js/imageLoaded.js"></script>
             </head>
             
             <body class="page">
@@ -67,8 +68,7 @@
                         $(document).ready(function () {
                             createDataTable('tocTable')
                         });
-                    </script>
-                    <script type="text/javascript" src="js/imageLoaded.js"></script>
+                    </script>                   
                 </div>
             </body>
         </html>
