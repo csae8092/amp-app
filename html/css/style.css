@@ -1216,6 +1216,9 @@ td > label {
         display: flex;
         padding: 0 .5em;
     }
+    .navBarLetters .table tbody tr td:nth-child(-n+2) {
+        display: none !important;
+    }
     .about-text-hidden .table {
         width: 100% !important;
         max-width: 100% !important;
@@ -1288,6 +1291,9 @@ td > label {
         justify-content: space-between;
         display: flex;
         padding: 0 .5em;
+    }
+    .navBarLetters .table tbody tr td:nth-child(-n+2) {
+        display: none !important;
     }
     .about-text-hidden .table {
         width: 100% !important;
