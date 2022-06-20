@@ -53,7 +53,16 @@
         <h3><xsl:apply-templates/></h3>
     </xsl:template>
     <xsl:template match="tei:list">
-        <ol class="{@rend}"><xsl:apply-templates/></ol>
+        <xsl:choose>
+            <xsl:when test="@rend = 'numbered'">
+                <ol class="{@rend}"><xsl:apply-templates/></ol>
+            </xsl:when>
+            <xsl:when test="@rend = 'bulleted'">
+                <ul style="list-style-type: circle;" class="{@rend}">
+                    <xsl:apply-templates/>
+                </ul>
+            </xsl:when>
+        </xsl:choose>        
     </xsl:template>
     <xsl:template match="tei:item">
         <li data-no="{@n}"><xsl:apply-templates/></li>
