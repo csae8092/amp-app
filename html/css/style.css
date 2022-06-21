@@ -1075,7 +1075,7 @@ td > label {
     text-decoration: underline;
 }
 
-.italic {
+.italic, .italics {
     font-style: italic;
 }
 
