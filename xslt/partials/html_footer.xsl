@@ -105,11 +105,17 @@
                                         <a id="twitter-logo" title="Auden Musulin on Twitter" href="https://twitter.com/amp_oeaw" class="nav-link" target="_blank">
                                             <img class="card-img-right flex-auto d-md-block" style="max-width: 32px;height:auto;" title="2021 Twitter Logo Blue" alt="2021 Twitter Logo Blue" src="images/2021-twitter-logo-blue.png"></img>                                
                                         </a>
-                                    </div>
-                                </div>                                
+                                    </div>                                    
+                                </div>   
+                                <div class="row">                         
+                                    <div class="custom-html-widget col-md-12">                                    
+                                        <a href="https://doi.org/10.5281/zenodo.6674163"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6674163.svg" alt="DOI"/></a>
+                                    </div>                                  
+                                </div>                                  
                             </div>
                         </div>
                     </div>
+                    
                     <!-- .footer-widget -->
                 </div>
             </div>
