@@ -1,4 +1,4 @@
-[![Build and publish](https://github.com/Auden-Musulin-Papers/amp-app/actions/workflows/build.yml/badge.svg)](https://github.com/Auden-Musulin-Papers/amp-app/actions/workflows/build.yml)
+[![DOI](https://zenodo.org/badge/450094906.svg)](https://zenodo.org/badge/latestdoi/450094906) [![Build and publish](https://github.com/Auden-Musulin-Papers/amp-app/actions/workflows/build.yml/badge.svg)](https://github.com/Auden-Musulin-Papers/amp-app/actions/workflows/build.yml)
 
 # amp-app
 
