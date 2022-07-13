@@ -108,10 +108,17 @@
                                     </div>                                    
                                 </div>   
                                 <div class="row">                         
-                                    <div class="custom-html-widget col-md-12">                                    
+                                    <div class="custom-html-widget col-md-12">   
+                                        <label>App: </label>
                                         <a href="https://doi.org/10.5281/zenodo.6674163"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6674163.svg" alt="DOI"/></a>
                                     </div>                                  
-                                </div>                                  
+                                </div>
+                                <div class="row">                         
+                                    <div class="custom-html-widget col-md-12">   
+                                        <label>Data: </label>
+                                        <a href="https://zenodo.org/badge/latestdoi/401611851"><img src="https://zenodo.org/badge/401611851.svg" alt="DOI"/></a>
+                                    </div>                                  
+                                </div>
                             </div>
                         </div>
                     </div>
