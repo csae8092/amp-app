@@ -98,48 +98,7 @@ class AnnotationSlider extends HTMLElement {
         const all = variant.features.all;
         const variants = options_annotation_slider.variants.filter((v) => v.features.all === false);
         const none_variant = options_annotation_slider.variants.find((v) => v.features.all === true);
-        const style = options_annotation_slider.span_element;
         const active = options_annotation_slider.active_class;
-        const remove = (html_class, css_class, color, hide) => {
-            document.querySelectorAll(`.${html_class}`).forEach((el) => {
-                if (typeof css_class === "object") {
-                    css_class.forEach((css) => {
-                        if (el.classList.contains(css)) {
-                            el.classList.remove(css);
-                        } else {
-                            el.classList.add(css);
-                        }
-                    });
-                } else {
-                    el.classList.remove(css_class);
-                }
-                el.classList.remove(color);
-                el.classList.add(style.css_class);
-                if (hide) {
-                    el.style.display = "none";
-                }
-            });
-        };
-        const add = (html_class, css_class, color, hide) => {
-            document.querySelectorAll(`.${html_class}`).forEach((el) => {
-                if (typeof css_class === "object") {
-                    css_class.forEach((css) => {
-                        if (el.classList.contains(css)) {
-                            el.classList.remove(css);
-                        } else {
-                            el.classList.add(css);
-                        }
-                    });
-                } else {
-                    el.classList.add(css_class);
-                }
-                el.classList.add(color);
-                el.classList.add(style.css_class);
-                if (hide) {
-                    el.style.display = "inline";
-                }
-            });
-        };
 
         if (all) {
             if ( this.classList.contains(active) ) {
@@ -149,7 +108,7 @@ class AnnotationSlider extends HTMLElement {
                     const html_class = el.html_class;
                     const css_class = el.css_class;
                     const hide = el.hide;
-                    remove(html_class, css_class, color, hide);
+                    this.removeMarkup(html_class, css_class, color, hide);
                     document.getElementById(el.opt_slider).classList.remove(color);
                     if (document.getElementById(el.opt).checked === true) {
                         document.getElementById(el.opt).checked = false;
@@ -163,7 +122,7 @@ class AnnotationSlider extends HTMLElement {
                     const html_class = el.html_class;
                     const css_class = el.css_class;
                     const hide = el.hide;
-                    add(html_class, css_class, color, hide);
+                    this.addMarkup(html_class, css_class, color, hide);
                     document.getElementById(el.opt_slider).classList.add(color);
                     if (document.getElementById(el.opt).checked === false) {
                         document.getElementById(el.opt).checked = true;
@@ -179,12 +138,12 @@ class AnnotationSlider extends HTMLElement {
             const hide = variant.hide;
             if ( this.classList.contains(active) ) {
                 this.classList.remove(active);
-                remove(html_class, css_class, color, hide);
+                this.removeMarkup(html_class, css_class, color, hide);
                 document.getElementById(variant.opt_slider).classList.remove(color);
                 this.classList.remove(color);
             } else {
                 this.classList.add(active);
-                add(html_class, css_class, color, hide);
+                this.addMarkup(html_class, css_class, color, hide);
                 document.getElementById(variant.opt_slider).classList.add(color);
                 this.classList.add(color);
             }
@@ -201,6 +160,50 @@ class AnnotationSlider extends HTMLElement {
                 document.getElementById(none_variant.opt).classList.remove(active);
             }
         }
+    }
+
+    removeMarkup(html_class, css_class, color, hide) {
+        const style = options_annotation_slider.span_element;
+        document.querySelectorAll(`.${html_class}`).forEach((el) => {
+            if (typeof css_class === "object") {
+                css_class.forEach((css) => {
+                    if (el.classList.contains(css)) {
+                        el.classList.remove(css);
+                    } else {
+                        el.classList.add(css);
+                    }
+                });
+            } else {
+                el.classList.remove(css_class);
+            }
+            el.classList.remove(color);
+            el.classList.add(style.css_class);
+            if (hide) {
+                el.style.display = "none";
+            }
+        });
+    }
+
+    addMarkup(html_class, css_class, color, hide) {
+        const style = options_annotation_slider.span_element;
+        document.querySelectorAll(`.${html_class}`).forEach((el) => {
+            if (typeof css_class === "object") {
+                css_class.forEach((css) => {
+                    if (el.classList.contains(css)) {
+                        el.classList.remove(css);
+                    } else {
+                        el.classList.add(css);
+                    }
+                });
+            } else {
+                el.classList.add(css_class);
+            }
+            el.classList.add(color);
+            el.classList.add(style.css_class);
+            if (hide) {
+                el.style.display = "inline";
+            }
+        });
     }
 
     render() {
