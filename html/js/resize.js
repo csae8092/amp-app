@@ -43,7 +43,7 @@ function resize(position) {
             }
             
 
-        }).on('mouseup', function (e) {
+        }).on('mouseup', function () {
             // stop resizing
             isResizing = false;
         });
