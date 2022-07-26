@@ -46,6 +46,7 @@
                             <li class="nav-item">
                                 <a
                                     onclick="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]"
+                                    onfocus="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]"
                                     title="{position()}"
                                     class="nav-link"
                                     data-toggle="tab"
@@ -81,6 +82,7 @@
                                                     style="display:inline-block;">
                                                     <a
                                                         onclick="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]"
+                                                        onfocus="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]"
                                                         title="{position()}"
                                                         href="#paginate-{position()}"
                                                         class="nav-link"
