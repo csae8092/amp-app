@@ -37,7 +37,7 @@ class ImageSwitch extends HTMLElement {
         this.render();
         this.childNodes[1].addEventListener("click", this.viewerSwitch);
         // console.log(this.childNodes[1]);
-        window.onhashchange = this.viewerUrlSwitch();
+        window.onload = this.viewerUrlSwitch();
     }
 
     viewerUrlSwitch() {
@@ -48,10 +48,10 @@ class ImageSwitch extends HTMLElement {
         const active = options_image_switch.active_class;
         const hide = variant.hide.class_to_hide;
         const show = variant.hide.class_to_show;
+        const parent = variant.hide.class_parent;
         if (urlParam.get("image") == null) {
             urlParam.set("image", "on");
-            var base = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + urlParam.toString();    
-            window.history.pushState({ path: base }, '', base);
+            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
         }
         if (urlParam.get("image") == "on") {
             document.querySelectorAll(`.${hide}`).forEach((el) => {
@@ -91,16 +91,50 @@ class ImageSwitch extends HTMLElement {
     viewerSwitch() {
         const url = new URL(window.location.href);
         const urlParam = new URLSearchParams(url.search);
+        const id = this.getAttribute("id");
+        const variant = options_image_switch.variants.find((v) => v.opt === id);
         const active = options_image_switch.active_class;
+        const hide = variant.hide.class_to_hide;
+        const show = variant.hide.class_to_show;
+        const parent = variant.hide.class_parent;
         if ( urlParam.get("image") == "on" ) {
             urlParam.set("image", "off");
-            var refresh = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + urlParam.toString();    
-            window.location.href = refresh;
-            this.classList.remove(active);
+            document.querySelectorAll(`.${hide}`).forEach((el) => {
+                el.classList.add("fade");
+                el.classList.remove("col-md-6");
+                el.style.maxWidth = "100%";
+                el.classList.remove(active);
+            });
+            document.querySelectorAll(`.${show}`).forEach((el) => {
+                el.classList.remove("col-md-6");
+                el.classList.add("col-md-12");
+                el.style.maxWidth = "100%";
+                el.classList.remove(active);
+            });  
+            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
+            // window.location.search = urlParam;
+            this.classList.remove(active); 
         } else {                      
             urlParam.set("image", "on");
-            var refresh2 = window.location.protocol + "//" + window.location.host + window.location.pathname + "?" + urlParam.toString();    
-            window.location.href = refresh2;
+            document.querySelectorAll(`.${hide}`).forEach((el) => {
+                el.classList.remove("fade");
+                el.classList.add("col-md-6");
+                el.style.maxWidth = "50%";
+                el.classList.add(active);
+            });
+            document.querySelectorAll(`.${show}`).forEach((el) => {
+                el.classList.add("col-md-6");
+                el.classList.remove("col-md-12");
+                el.style.maxWidth = "50%";
+                el.classList.add(active);
+            });
+            // works only with one image viewer
+            const viewer = document.querySelector(`.${parent}.${active} .${hide}`);
+            const facs = viewer.querySelectorAll("*")[1];
+            facs.style.width = `${viewer.offsetWidth}px`;
+            facs.style.height = `${viewer.offsetHeight}px`;
+            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
+            // window.location.search = urlParam;
             this.classList.add(active); 
         }
     }

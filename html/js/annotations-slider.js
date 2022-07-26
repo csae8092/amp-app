@@ -90,9 +90,90 @@ class AnnotationSlider extends HTMLElement {
         this.render();
         this.childNodes[3].childNodes[1].addEventListener("click", this.textFeatures);
         // console.log(this.childNodes[3].childNodes[1]);
+        window.onload = this.textFeaturesUrl();
+    }
+
+    textFeaturesUrl() {
+        const url = new URL(window.location.href);
+        const urlParam = new URLSearchParams(url.search);
+        const variants = options_annotation_slider.variants.filter((v) => v.features.all === false);
+        const style = options_annotation_slider.span_element;
+        const active = options_annotation_slider.active_class;
+        const removeMarkup2 = (html_class, css_class, color, hide) => {
+            document.querySelectorAll(`.${html_class}`).forEach((el) => {
+                if (typeof css_class === "object") {
+                    css_class.forEach((css) => {
+                        if (el.classList.contains(css)) {
+                            el.classList.remove(css);
+                        } else {
+                            el.classList.add(css);
+                        }
+                    });
+                } else {
+                    el.classList.remove(css_class);
+                }
+                el.classList.remove(color);
+                el.classList.add(style.css_class);
+                if (hide) {
+                    el.style.display = "none";
+                }
+            });
+        };
+        const addMarkup2 = (html_class, css_class, color, hide) => {
+            document.querySelectorAll(`.${html_class}`).forEach((el) => {
+                if (typeof css_class === "object") {
+                    css_class.forEach((css) => {
+                        if (el.classList.contains(css)) {
+                            el.classList.remove(css);
+                        } else {
+                            el.classList.add(css);
+                        }
+                    });
+                } else {
+                    el.classList.add(css_class);
+                }
+                el.classList.add(color);
+                el.classList.add(style.css_class);
+                if (hide) {
+                    el.style.display = "inline";
+                }
+            });
+        };
+        variants.forEach((el) => {
+            if (urlParam.get(el.opt) == null) {
+                urlParam.set(el.opt, "off");
+            }
+            if (urlParam.get(el.opt) == "off") {
+                const color = el.color;
+                const html_class = el.html_class;
+                const css_class = el.css_class;
+                const hide = el.hide;
+                removeMarkup2(html_class, css_class, color, hide);
+                document.getElementById(el.opt_slider).classList.remove(color);
+                if (document.getElementById(el.opt).checked === true) {
+                    document.getElementById(el.opt).checked = false;
+                    document.getElementById(el.opt).classList.remove(active);
+                }
+            }
+            if (urlParam.get(el.opt) == "on") {
+                const color = el.color;
+                const html_class = el.html_class;
+                const css_class = el.css_class;
+                const hide = el.hide;
+                addMarkup2(html_class, css_class, color, hide);
+                document.getElementById(el.opt_slider).classList.add(color);
+                if (document.getElementById(el.opt).checked === false) {
+                    document.getElementById(el.opt).checked = true;
+                    document.getElementById(el.opt).classList.add(active);
+                }
+            }
+        });
+        window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
     }
 
     textFeatures() {
+        const url = new URL(window.location.href);
+        const urlParam = new URLSearchParams(url.search);
         const id = this.getAttribute("id");
         const variant = options_annotation_slider.variants.find((v) => v.opt === id);
         const all = variant.features.all;
@@ -155,7 +236,9 @@ class AnnotationSlider extends HTMLElement {
                         document.getElementById(el.opt).checked = false;
                         document.getElementById(el.opt).classList.remove(active);
                     }
+                    urlParam.set(el.opt, "off");
                 });
+                window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
             } else {
                 this.classList.add(active);
                 variants.forEach((el) => {
@@ -169,7 +252,9 @@ class AnnotationSlider extends HTMLElement {
                         document.getElementById(el.opt).checked = true;
                         document.getElementById(el.opt).classList.add(active);
                     }
+                    urlParam.set(el.opt, "on");
                 });
+                window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
             }
         } else {
             // const opt = variant.opt;
@@ -182,11 +267,15 @@ class AnnotationSlider extends HTMLElement {
                 removeMarkup(html_class, css_class, color, hide);
                 document.getElementById(variant.opt_slider).classList.remove(color);
                 this.classList.remove(color);
+                urlParam.set(variant.opt, "off");
+                window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
             } else {
                 this.classList.add(active);
                 addMarkup(html_class, css_class, color, hide);
                 document.getElementById(variant.opt_slider).classList.add(color);
                 this.classList.add(color);
+                urlParam.set(variant.opt, "on");
+                window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
             }
             /*
                 If all or not all text features are selected the original text features
