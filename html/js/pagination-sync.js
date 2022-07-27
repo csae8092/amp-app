@@ -1,4 +1,4 @@
-var pagination = document.querySelectorAll('.pagination .nav-tabs li a');
+const pagination = document.querySelectorAll('.pagination .nav-tabs li a');
 pagination.forEach(function(el) {
     el.addEventListener("click", pageSync);
 });
@@ -8,13 +8,16 @@ window.onload = pageUrl();
 function pageSync() {    
     const url = new URL(window.location.href);
     const urlParam = new URLSearchParams(url.search);
+    const citation_url = document.getElementById("citation-url");
     
     // get selected href
     var href = this.getAttribute('href');
     var dataTab = this.getAttribute('data-tab');
 
     urlParam.set("page", href.replace('#paginate-', ''));
-    window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
+    window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
+    citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
+    citation_url.setAttribute("href", window.location.href);
 
     // set all nav tabs to inactive
     var link = document.querySelectorAll(`.pagination .nav-tabs li a[data-tab="${dataTab}"]`);
@@ -46,9 +49,9 @@ function pageUrl() {
     const _current = urlParam.get('page');
     const item = document.querySelector('.pagination .nav-tabs .nav-item .nav-link.active');
     const href = item.getAttribute('href').replace('#', '');
+    const citation_url = document.getElementById("citation-url");
     if (_current == null) {
         urlParam.set('page', "1");
-        window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
     } else if (_current == href.replace('paginate-', '')) {
         // no changes necessary your in the right tab and active link
     } else {
@@ -117,6 +120,10 @@ function pageUrl() {
             });
         }
     }
+    window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
+    citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
+    citation_url.setAttribute("href", window.location.href);
+
     function hideLoading(id) { 
         var spinnerID2 = "spinner_" + id;
         if ( document.getElementById(spinnerID2) ) {
