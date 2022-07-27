@@ -1,4 +1,4 @@
-const annotation_url = `${location.protocol}//${location.host}/html/js/json/conf_annotation_slider.json`;
+const annotation_url = `${location.protocol}//${location.host}/js/json/conf_annotation_slider.json`;
 console.log(annotation_url);
 fetch(annotation_url)
 .then((response) => response.json())

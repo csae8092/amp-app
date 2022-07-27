@@ -1,4 +1,4 @@
-const image_url = `${location.protocol}//${location.host}/html/js/json/conf_image_switch.json`;
+const image_url = `${location.protocol}//${location.host}/js/json/conf_image_switch.json`;
 console.log(image_url);
 fetch(image_url)
 .then((response) => response.json())

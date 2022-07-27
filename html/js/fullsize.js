@@ -1,4 +1,4 @@
-const fullsize_url = `${location.protocol}//${location.host}/html/js/json/conf_fullsize.json`;
+const fullsize_url = `${location.protocol}//${location.host}/js/json/conf_fullsize.json`;
 console.log(fullsize_url);
 fetch(fullsize_url)
 .then((response) => response.json())
