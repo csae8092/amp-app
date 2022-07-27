@@ -43,122 +43,80 @@ function pageSync() {
 function pageUrl() {
     const url = new URL(window.location.href);
     const urlParam = new URLSearchParams(url.search);
-    // urlParam.set('page', 'paginate-1');
-    // window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
+    const _current = urlParam.get('page');
     const item = document.querySelector('.pagination .nav-tabs .nav-item .nav-link.active');
     const href = item.getAttribute('href').replace('#', '');
-    if (urlParam.get('page') == null) {
+    if (_current == null) {
         urlParam.set('page', "1");
         window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
-    } else if (urlParam.get('page') == href.replace('paginate-', '')) {
-        const tab = document.getElementById(href);
-        tab.classList.add('active');
-        tab.classList.add('show');
-        tab.classList.remove('fade');
-        item.classList.add('active');
-        item.classList.add('show');
+    } else if (_current == href.replace('paginate-', '')) {
+        // no changes necessary your in the right tab and active link
     } else {
+        // deactivate all tabs
         var tabs = document.querySelectorAll(`.pagination-tab.tab-pane[data-tab="paginate"]`);
         tabs.forEach(function(el) {
             el.classList.remove('active');
             el.classList.add('fade');
         });
-        const tab = document.getElementById(`paginate-${urlParam.get('page')}`);
+        // activate tab base on urlparams
+        const tab = document.getElementById(`paginate-${_current}`);
         tab.classList.remove('fade');
         tab.classList.add('active');
         tab.classList.add('show');
+        // deactivate pagination links
         const link = document.querySelectorAll('.pagination .nav-tabs .nav-item .nav-link');
         link.forEach(function(el) {
             el.classList.remove('active');
             el.classList.remove('show');
         });
-        // get all nav tabs matching the href and set to active
-        var linkActive = document.querySelectorAll(`.pagination .nav-tabs li a[href="#paginate-${urlParam.get('page')}"]`);
+        // get all nav tabs matching href tabs based on urlparams and set to active
+        var linkActive = document.querySelectorAll(`.pagination .nav-tabs li a[href="#paginate-${_current}"]`);
         linkActive.forEach(function(el) {
             el.classList.add('active');
+            el.classList.add('show');
         });
-        var current = urlParam.get('page');
-        var container_id = `envelope_container_${current}`
-        var container_id2 = `envelope_container2_${current}`
-        var osd_container = document.getElementById(container_id);
-        var osd_container_2 = document.getElementById(container_id2);
-        if (osd_container) {
-            if ( osd_container_2 ) {
-                osd_container.style.height = "1000px";
-                // OpenSeaDragon Image Viewer
-                var image = document.getElementById(`envelope_img_${current}`);
-                var image_src = image.getAttribute('src');
-                var image_url = {type: 'image', url: image_src};
-                var viewer = OpenSeadragon({
-                    id: container_id,
-                    prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.1/images/',
-                    // sequenceMode: true,
-                    // showReferenceStrip: true,
-                    // showNavigator: true,
-                    // imageLoaderLimit: 10,
-                    tileSources: image_url
-                });
-                // hides static images
-                osd_container_2.remove();
-        
-                // hide loading spinner if image fully loaded status changes
-                // see issue: https://github.com/openseadragon/openseadragon/issues/1262
-        
-                viewer.addHandler('open', function() {
-                    var tiledImage = viewer.world.getItemAt(0);
-                    if (tiledImage.getFullyLoaded()) {
-                        hideLoading(container_id);
-                    } else {
-                        tiledImage.addOnceHandler('fully-loaded-change', hideLoading(container_id));
-                    }
-                });
-            }
+        // create OSD container
+        var _container_id = `envelope_container_${_current}`
+        var _container = document.getElementById(_container_id);
+        if (_container) {
+            var _image_type = "envelope";
         } else {
-            var container_id_sheet = `sheet_container_${current}`
-            var container_id_sheet2 = `sheet_container2_${current}`
-            var osd_container_sheet = document.getElementById(container_id_sheet);
-            var osd_container2_sheet = document.getElementById(container_id_sheet2);
-            if ( osd_container2_sheet ) {
-                osd_container_sheet.style.height = "1000px";
-                // OpenSeaDragon Image Viewer
-                var image2 = document.getElementById(`sheet_img_${current}`);
-                var image_src2 = image2.getAttribute('src');
-                var image_url2 = {type: 'image', url: image_src2};
-                var viewer2 = OpenSeadragon({
-                    id: container_id_sheet,
-                    prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.1/images/',
-                    // sequenceMode: true,
-                    // showReferenceStrip: true,
-                    // showNavigator: true,
-                    // imageLoaderLimit: 10,
-                    tileSources: image_url2
-                });
-                // hides static images
-                osd_container2_sheet.remove();
-        
-                // hide loading spinner if image fully loaded status changes
-                // see issue: https://github.com/openseadragon/openseadragon/issues/1262
-        
-                viewer2.addHandler('open', function() {
-                    var tiledImage = viewer2.world.getItemAt(0);
-                    if (tiledImage.getFullyLoaded()) {
-                        hideLoading(container_id_sheet);
-                    } else {
-                        tiledImage.addOnceHandler('fully-loaded-change', hideLoading(container_id_sheet));
-                    }
-                });
-            }
+            var _image_type = "sheet";
         }
-
-        // var spinner = document.getElementById(`spinner_envelope_container_${current}`);
-        // if (spinner) {
-        //     spinner.remove();
-        // } else {
-        //     var spinner2 = document.getElementById(`spinner_sheet_container_${current}`);
-        //     spinner2.remove();
-        // }
+        var _osd_container_id = `${_image_type}_container_${_current}`;
+        var _osd_container_id2 = `${_image_type}_container2_${_current}`;
+        var osd_container = document.getElementById(_osd_container_id);
+        var osd_container_2 = document.getElementById(_osd_container_id2);
+        if ( osd_container_2 ) {
+            osd_container.style.height = "1000px";
+            var image = document.getElementById(`${_image_type}_img_${_current}`);
+            var image_src = image.getAttribute('src');
+            var image_url = {type: 'image', url: image_src};
+            var viewer = OpenSeadragon({
+                id: _osd_container_id,
+                prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/images/',
+                tileSources: image_url
+            });
+            // hides static images
+            osd_container_2.remove();
+    
+            // hide loading spinner if image fully loaded status changes
+            // see issue: https://github.com/openseadragon/openseadragon/issues/1262
+            viewer.addHandler('open', function() {
+                var tiledImage = viewer.world.getItemAt(0);
+                if (tiledImage.getFullyLoaded()) {
+                    hideLoading(_osd_container_id);
+                } else {
+                    tiledImage.addOnceHandler('fully-loaded-change', function() {
+                        var spinnerID2 = "spinner_" + _osd_container_id;
+                        if ( document.getElementById(spinnerID2) ) {
+                            document.getElementById(spinnerID2).remove();
+                        }
+                    });
+                }
+            });
+        }
     }
-
     function hideLoading(id) { 
         var spinnerID2 = "spinner_" + id;
         if ( document.getElementById(spinnerID2) ) {

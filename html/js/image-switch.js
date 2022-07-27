@@ -4,6 +4,7 @@ const options_image_switch = {
         {
             opt: 'edition-switch',
             title: 'facsimile on/off',
+            urlparam: 'image',
             hide: {
                 hidden: true,
                 class_to_hide: 'osd-viewer',
@@ -37,55 +38,6 @@ class ImageSwitch extends HTMLElement {
         this.render();
         this.childNodes[1].addEventListener("click", this.viewerSwitch);
         // console.log(this.childNodes[1]);
-        window.onload = this.viewerUrlSwitch();
-    }
-
-    viewerUrlSwitch() {
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        // const opt = options_image_switch
-        const variant = options_image_switch.variants.find((v) => v.opt === "edition-switch");
-        const active = options_image_switch.active_class;
-        const hide = variant.hide.class_to_hide;
-        const show = variant.hide.class_to_show;
-        const parent = variant.hide.class_parent;
-        if (urlParam.get("image") == null) {
-            urlParam.set("image", "on");
-            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
-        }
-        if (urlParam.get("image") == "on") {
-            document.querySelectorAll(`.${hide}`).forEach((el) => {
-                el.classList.remove("fade");
-                el.classList.add("col-md-6");
-                el.style.maxWidth = "50%";
-                el.classList.add(active);
-            });
-            document.querySelectorAll(`.${show}`).forEach((el) => {
-                el.classList.add("col-md-6");
-                el.classList.remove("col-md-12");
-                el.style.maxWidth = "50%";
-                el.classList.add(active);
-            });
-        }
-        if (urlParam.get("image") == "off") {
-            document.querySelectorAll(`.${hide}`).forEach((el) => {
-                el.classList.add("fade");
-                el.classList.remove("col-md-6");
-                el.style.maxWidth = "100%";
-                el.classList.remove(active);
-            });
-            document.querySelectorAll(`.${show}`).forEach((el) => {
-                el.classList.remove("col-md-6");
-                el.classList.add("col-md-12");
-                el.style.maxWidth = "100%";
-                el.classList.remove(active);
-            });
-            // works only with one image viewer
-            const viewer = document.querySelector(`.${parent}.${active} .${hide}`);
-            const facs = viewer.querySelectorAll("*")[1];
-            facs.style.width = `${viewer.offsetWidth}px`;
-            facs.style.height = `${viewer.offsetHeight}px`;
-        }
     }
 
     viewerSwitch() {
@@ -97,8 +49,10 @@ class ImageSwitch extends HTMLElement {
         const hide = variant.hide.class_to_hide;
         const show = variant.hide.class_to_show;
         const parent = variant.hide.class_parent;
-        if ( urlParam.get("image") == "on" ) {
-            urlParam.set("image", "off");
+        let citation_url = document.getElementById("citation-url");
+        let urlparam = variant.urlparam;
+        if ( urlParam.get(urlparam) == "on" ) {
+            urlParam.set(urlparam, "off");
             document.querySelectorAll(`.${hide}`).forEach((el) => {
                 el.classList.add("fade");
                 el.classList.remove("col-md-6");
@@ -111,11 +65,9 @@ class ImageSwitch extends HTMLElement {
                 el.style.maxWidth = "100%";
                 el.classList.remove(active);
             });  
-            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
-            // window.location.search = urlParam;
             this.classList.remove(active); 
         } else {                      
-            urlParam.set("image", "on");
+            urlParam.set(urlparam, "on");
             document.querySelectorAll(`.${hide}`).forEach((el) => {
                 el.classList.remove("fade");
                 el.classList.add("col-md-6");
@@ -133,10 +85,11 @@ class ImageSwitch extends HTMLElement {
             const facs = viewer.querySelectorAll("*")[1];
             facs.style.width = `${viewer.offsetWidth}px`;
             facs.style.height = `${viewer.offsetHeight}px`;
-            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
-            // window.location.search = urlParam;
             this.classList.add(active); 
         }
+        window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
+        citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
+        citation_url.setAttribute("href", window.location.href);
     }
 
     render() {
@@ -163,3 +116,56 @@ class ImageSwitch extends HTMLElement {
 
  }
  window.customElements.define('image-switch', ImageSwitch);
+ window.onload = viewerUrlSwitch();
+
+ function viewerUrlSwitch() {
+    const url = new URL(window.location.href);
+    const urlParam = new URLSearchParams(url.search);
+    // const opt = options_image_switch
+    const variant = options_image_switch.variants.find((v) => v.opt === "edition-switch");
+    const active = options_image_switch.active_class;
+    const hide = variant.hide.class_to_hide;
+    const show = variant.hide.class_to_show;
+    const parent = variant.hide.class_parent;
+    let urlparam = variant.urlparam;
+    let citation_url = document.getElementById("citation-url");
+    if (urlParam.get(urlparam) == null) {
+        urlParam.set(urlparam, "on");
+    }
+    if (urlParam.get(urlparam) == "on") {
+        document.querySelectorAll(`.${hide}`).forEach((el) => {
+            el.classList.remove("fade");
+            el.classList.add("col-md-6");
+            el.style.maxWidth = "50%";
+            el.classList.add(active);
+        });
+        document.querySelectorAll(`.${show}`).forEach((el) => {
+            el.classList.add("col-md-6");
+            el.classList.remove("col-md-12");
+            el.style.maxWidth = "50%";
+            el.classList.add(active);
+        });
+    }
+    if (urlParam.get(urlparam) == "off") {
+        document.querySelectorAll(`.${hide}`).forEach((el) => {
+            el.classList.add("fade");
+            el.classList.remove("col-md-6");
+            el.style.maxWidth = "100%";
+            el.classList.remove(active);
+        });
+        document.querySelectorAll(`.${show}`).forEach((el) => {
+            el.classList.remove("col-md-6");
+            el.classList.add("col-md-12");
+            el.style.maxWidth = "100%";
+            el.classList.remove(active);
+        });
+        // works only with one image viewer
+        const viewer = document.querySelector(`.${parent}.${active} .${hide}`);
+        const facs = viewer.querySelectorAll("*")[1];
+        facs.style.width = `${viewer.offsetWidth}px`;
+        facs.style.height = `${viewer.offsetHeight}px`;
+    }
+    window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
+    citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
+    citation_url.setAttribute("href", window.location.href);
+}
