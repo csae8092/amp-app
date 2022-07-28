@@ -1,4 +1,5 @@
 function load_image(facs_id, osd_container_id, osd_container_id2) {
+
     if ( $("#" + osd_container_id).children("div[class='openseadragon-container']").length == 0 ) {
         // console.log(osd_container_id);
         $('#' + osd_container_id).css({
