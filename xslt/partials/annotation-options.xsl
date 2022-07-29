@@ -25,43 +25,10 @@
                                     <image-switch opt="edition-switch"></image-switch>
                                 </td>
                                 <td style="text-align:left;width:10%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;"> 
-                                    <select class="custom-select" 
-                                        id="select-fontsize"
-                                        onchange="fontsizeSelect(this)">
-                                        <option selected="selected" value="default">
-                                            Default font size                                                                                                                     
-                                        </option> 
-                                        <option value="font-size-26">
-                                            26px                                                                                                                    
-                                        </option>
-                                        <option value="font-size-22">
-                                            22px                                                                                                                    
-                                        </option>
-                                        <option value="font-size-18">
-                                            18px                                                                                                                     
-                                        </option>
-                                        <option value="font-size-14">
-                                            14px                                                                                                                     
-                                        </option>  
-                                    </select>
+                                    <font-size opt="select-fontsize"></font-size> 
                                 </td>
                                 <td style="text-align:left;width:15%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;">
-                                    <select class="custom-select" 
-                                        id="select-font"
-                                        onchange="fontSelect(this)">
-                                        <option value="default" selected="selected">
-                                            Default font                                                                                                                     
-                                        </option>
-                                        <option value="times-new-roman">
-                                            Times New Roman                                                                                                                     
-                                        </option>
-                                        <option value="courier-new">
-                                            Courier New                                                                                                                      
-                                        </option>
-                                        <option value="arial-serif">
-                                            Arial                                                                                                                     
-                                        </option>  
-                                    </select>
+                                    <font-family opt="select-font"></font-family> 
                                 </td>                                                                
                                 <td style="text-align:right;width:15%;border: 1px dashed #dedede;">   
                                     <annotation-slider opt="text-features"></annotation-slider> 

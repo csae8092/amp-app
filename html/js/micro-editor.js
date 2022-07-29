@@ -1,4 +1,4 @@
-class fetchOptionData {
+class FetchOptionData {
 
     async getData(url) {
         console.log(url);
@@ -27,7 +27,7 @@ class AnnotationSlider extends HTMLElement {
     }
 
     textFeatures() {
-        const textFeatures = new fetchOptionData();
+        const textFeatures = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_annotation_slider.json`;
         textFeatures.getData(url).then(options => {
             let url = new URL(window.location.href);
@@ -155,7 +155,7 @@ class AnnotationSlider extends HTMLElement {
     }
 
     render() {
-        const textFeatures = new fetchOptionData();
+        const textFeatures = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_annotation_slider.json`;
         textFeatures.getData(url).then(options => {
             const opt = this.getAttribute("opt");
@@ -203,7 +203,7 @@ class FullSize extends HTMLElement {
     }
 
     fullScreen() {
-        var font = new fetchOptionData();
+        var font = new FetchOptionData();
         var url = `${location.protocol}//${location.host}/js/json/conf_fullsize.json`;
         font.getData(url).then(options => {
             const url = new URL(window.location.href);
@@ -247,7 +247,7 @@ class FullSize extends HTMLElement {
     }
 
     render() {
-        var font = new fetchOptionData();
+        var font = new FetchOptionData();
         var url = `${location.protocol}//${location.host}/js/json/conf_fullsize.json`;
         font.getData(url).then(options => {
             const opt = this.getAttribute("opt");
@@ -291,7 +291,7 @@ class FontSize extends HTMLElement {
     }
 
     fontSize() {
-        var getSize = new fetchOptionData();
+        var getSize = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_fontsize.json`;
         getSize.getData(url).then(options => {
             const url = new URL(window.location.href);
@@ -327,7 +327,7 @@ class FontSize extends HTMLElement {
     }
 
     render() {
-        var getSize = new fetchOptionData();
+        var getSize = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_fontsize.json`;
         getSize.getData(url).then(options => {
             const opt = this.getAttribute("opt");
@@ -378,7 +378,7 @@ class FontFamily extends HTMLElement {
     }
 
     fontFamily() {
-        var getFamily = new fetchOptionData();
+        var getFamily = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_font_family.json`;
         getFamily.getData(url).then(options => {
             const url = new URL(window.location.href);
@@ -413,7 +413,7 @@ class FontFamily extends HTMLElement {
     }
 
     render() {
-        var getFamily = new fetchOptionData();
+        var getFamily = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_font_family.json`;
         getFamily.getData(url).then(options => {
             const opt = this.getAttribute("opt");
@@ -464,7 +464,7 @@ class ImageSwitch extends HTMLElement {
     }
 
     viewerSwitch() {
-        const viewer = new fetchOptionData();
+        const viewer = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_image_switch.json`;
         viewer.getData(url).then(options => {
             const url = new URL(window.location.href);
@@ -520,7 +520,7 @@ class ImageSwitch extends HTMLElement {
     }
 
     render() {
-        const viewer = new fetchOptionData();
+        const viewer = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_image_switch.json`;
         viewer.getData(url).then(options => {
             const opt = this.getAttribute("opt");
@@ -551,7 +551,7 @@ class ImageSwitch extends HTMLElement {
 class UrlSearchParamUpdate {
 
     fullSreen() {
-        const font = new fetchOptionData();
+        const font = new FetchOptionData();
         var url = `${location.protocol}//${location.host}/js/json/conf_fullsize.json`;
         font.getData(url).then(options => {
             const url = new URL(window.location.href);
@@ -592,7 +592,7 @@ class UrlSearchParamUpdate {
     }
 
     fontSize() {
-        const font = new fetchOptionData();
+        const font = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_fontsize.json`;
         font.getData(url).then(options => {
             const url = new URL(window.location.href);
@@ -640,7 +640,7 @@ class UrlSearchParamUpdate {
     }
 
     fontFamily() {
-        const font = new fetchOptionData();
+        const font = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_font_family.json`;
         font.getData(url).then(options => {
             const url = new URL(window.location.href);
@@ -687,7 +687,7 @@ class UrlSearchParamUpdate {
     }
 
     viewerSwitch() {
-        const viewer = new fetchOptionData();
+        const viewer = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_image_switch.json`;
         viewer.getData(url).then(options => {
             const url = new URL(window.location.href);
@@ -743,7 +743,7 @@ class UrlSearchParamUpdate {
     }
 
     textFeatures() {
-        const textFeatures = new fetchOptionData();
+        const textFeatures = new FetchOptionData();
         let url = `${location.protocol}//${location.host}/js/json/conf_annotation_slider.json`;
         textFeatures.getData(url).then(options => {
             let url = new URL(window.location.href);

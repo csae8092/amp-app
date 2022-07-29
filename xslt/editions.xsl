@@ -233,12 +233,9 @@
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>
-                <script type="text/javascript" src="js/pagination-sync.js"></script>
-                <script type="text/javascript" src="js/edition-view-functions.js"></script>
                 <script type="text/javascript" src="js/osd_single.js"></script>
-                <script type="text/javascript" src="js/image-switch.js"></script>
-                <script type="text/javascript" src="js/fullsize.js"></script>
-                <script type="text/javascript" src="js/annotations-slider.js"></script>
+                <script type="text/javascript" src="js/pagination-sync.js"></script>
+                <script type="text/javascript" src="js/micro-editor.js"></script>
             </body>
         </html>
     </xsl:template>
