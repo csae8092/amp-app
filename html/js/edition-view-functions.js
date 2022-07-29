@@ -17,16 +17,16 @@ function fontSelect(el) {
 /*
     Dropdown select to change font size.
 */
-// function fontsizeSelect(el) {
-//     var element = $(el);
-//     var val = element.val();
-//     $("p.yes-index").each(function() {
-//         $(this).removeClass("font-size-26")
-//         .removeClass("font-size-22")
-//         .removeClass("font-size-18")
-//         .removeClass("font-size-14");
-//         if(val !== "default") {
-//             $(this).addClass(val);
-//         }
-//     });
-// }
+function fontsizeSelect(el) {
+    var element = $(el);
+    var val = element.val();
+    $("p.yes-index").each(function() {
+        $(this).removeClass("font-size-26")
+        .removeClass("font-size-22")
+        .removeClass("font-size-18")
+        .removeClass("font-size-14");
+        if(val !== "default") {
+            $(this).addClass(val);
+        }
+    });
+}

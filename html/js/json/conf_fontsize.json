@@ -1,5 +1,5 @@
 {
-    "name": "Create full size mode",
+    "name": "Change font size",
     "variants":  [
         {
             "opt": "select-fontsize",

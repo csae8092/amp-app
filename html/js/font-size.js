@@ -1,23 +1,31 @@
-const font_url = `${location.protocol}//${location.host}/js/json/conf_fontsize.json`;
-console.log(font_url);
-fetch(font_url)
-.then((response) => response.json())
-.then((options_fontsize) => {
+class FontSize extends HTMLElement {
 
-    class FontSize extends HTMLElement {
+    "use strict";
 
-        "use strict";
+    static get observedAttributes() {
+        return ["opt"];
+    }
 
-        static get observedAttributes() {
-            return ["opt"];
-        }
-
-        connectedCallback() {
-            this.render();
+    connectedCallback() {
+        this.render();
+        setTimeout(() => {
+            // console.log(this.childNodes[0]);
             this.childNodes[0].addEventListener("change", this.fontSize);
-        }
+        }, 500);
+    }
 
-        fontSize() {
+    getData() {
+        const url = `${location.protocol}//${location.host}/js/json/conf_fontsize.json`;
+        console.log(url);
+        const data = fetch(url)
+        .then(response => response.json())
+        .then(promise => promise);
+        return data;
+    }
+
+    fontSize() {
+        this.getData().then(options_fontsize => {
+            console.log(options_fontsize);
             const url = new URL(window.location.href);
             const urlParam = new URLSearchParams(url.search);
             const id = this.getAttribute("id");
@@ -46,9 +54,12 @@ fetch(font_url)
             window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
             citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
             citation_url.setAttribute("href", window.location.href);
-        }
+        });
+        
+    }
 
-        render() {
+    render() {
+        this.getData().then(options_fontsize => {
             const opt = this.getAttribute("opt");
             const variant = options_fontsize.variants.find((v) => v.opt === opt);
             const size = variant.sizes;
@@ -66,21 +77,24 @@ fetch(font_url)
             }
             s_html += "</select>";
             this.innerHTML = s_html;
-        }
-
-        attributeChangedCallback() {
-            this.render();
-        }
-
-        disconnectedCallback() {
-            this.childNodes[0].removeEventListener("change", this.fontSize);
-        }
-
+        });
     }
-    window.customElements.define('font-size', FontSize);
-    window.onload = fontsizeUrl();
 
-    function fontsizeUrl() {
+    attributeChangedCallback() {
+        this.render();
+    }
+
+    disconnectedCallback() {
+        this.childNodes[0].removeEventListener("change", this.fontSize);
+    }
+
+}
+window.customElements.define('font-size', FontSize);
+window.onload = fontsizeUrl();
+
+function fontsizeUrl() {
+    const font = new FontSize();
+    font.getData().then(options_fontsize => {
         const url = new URL(window.location.href);
         const urlParam = new URLSearchParams(url.search);
         const variants = options_fontsize.variants;
@@ -97,6 +111,7 @@ fetch(font_url)
             }
             if (!Object.values(size).includes(urlParam.get(urlparam))) {
                 console.log(`${urlParam.get(urlparam)} is not a selectable option.`);
+                urlParam.set(urlparam, "default");
             } else {
                 let paragraph = document.querySelectorAll(`${p_change}.${p_class}`);
                 if (urlParam.get(urlparam) !== "default") {
@@ -121,5 +136,5 @@ fetch(font_url)
         window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
         citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
         citation_url.setAttribute("href", window.location.href);
-    }
-});
+    });
+}
