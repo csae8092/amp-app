@@ -44,7 +44,7 @@ class AnnotationSlider extends HTMLElement {
         let urlParam = new URLSearchParams(url.search);
         let id = this.getAttribute("id");
         let variant = options.variants.find((v) => v.opt === id);
-        let citation_url = variant.chg_citation;
+        let citation_url = document.getElementById(variant.chg_citation);
         let all = variant.features.all;
         let variants = options.variants.filter((v) => v.features.all === false);
         let none_variant = options.variants.find((v) => v.features.all === true);
@@ -219,7 +219,7 @@ class FullSize extends HTMLElement {
         let id = this.getAttribute("id");
         let variant = options.variants.find((v) => v.opt === id);
         let hide = variant.hide.class_to_hide;
-        let citation_url = variant.chg_citation;
+        let citation_url = document.getElementById(variant.chg_citation);
         let urlparam = variant.urlparam;
         let svg_show = `
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
@@ -305,7 +305,7 @@ class FontSize extends HTMLElement {
         let p_change = variant.paragraph;
         let p_class = variant.p_class;
         let size = variant.sizes;
-        let citation_url = variant.chg_citation;
+        let citation_url = document.getElementById(variant.chg_citation);
         let urlparam = variant.urlparam;
         var value = this.value;
         var css_class = variant.css_class;
@@ -388,7 +388,7 @@ class FontFamily extends HTMLElement {
         let p_change = variant.paragraph;
         let p_class = variant.p_class;
         let family = variant.fonts;
-        let citation_url = variant.chg_citation;
+        let citation_url = document.getElementById(variant.chg_citation);
         let urlparam = variant.urlparam;
         var value = this.value;
         if ( urlParam.get(urlparam) !== value ) {
@@ -470,7 +470,7 @@ class ImageSwitch extends HTMLElement {
         let hide = variant.hide.class_to_hide;
         let show = variant.hide.class_to_show;
         let parent = variant.hide.class_parent;
-        let citation_url = variant.chg_citation;
+        let citation_url = document.getElementById(variant.chg_citation);
         let urlparam = variant.urlparam;
         if ( urlParam.get(urlparam) == "on" ) {
             urlParam.set(urlparam, "off");
@@ -556,7 +556,7 @@ class UrlSearchParamUpdate {
         let variant = options.variants.find((v) => v.opt === opt);
         let hide = variant.hide.class_to_hide;
         let urlparam = variant.urlparam;
-        let citation_url = variant.chg_citation;
+        let citation_url = document.getElementById(variant.chg_citation);
         let svg_show = `
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
                 <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
@@ -604,7 +604,7 @@ class UrlSearchParamUpdate {
         for (let v in variants) {
             let select = document.getElementById(variants[v].opt);
             let urlparam = variants[v].urlparam;
-            var citation_url = variants[v].chg_citation;
+            var citation_url = document.getElementById(variants[v].chg_citation);
             let p_change = variants[v].paragraph;
             let p_class = variants[v].p_class;
             let size = variants[v].sizes;
@@ -653,7 +653,7 @@ class UrlSearchParamUpdate {
         let variants = options.variants;
         for (let v in variants) {
             let select = document.getElementById(variants[v].opt);
-            var citation_url = variants[v].chg_citation;
+            var citation_url = document.getElementById(variants[v].chg_citation);
             let urlparam = variants[v].urlparam;
             let p_change = variants[v].paragraph;
             let p_class = variants[v].p_class;
@@ -707,7 +707,7 @@ class UrlSearchParamUpdate {
         let show = variant.hide.class_to_show;
         let parent = variant.hide.class_parent;
         let urlparam = variant.urlparam;
-        let citation_url = variant.chg_citation;
+        let citation_url = document.getElementById(variant.chg_citation);
         if (urlParam.get(urlparam) == null) {
             urlParam.set(urlparam, "on");
         }
@@ -763,7 +763,6 @@ class UrlSearchParamUpdate {
         let url = new URL(window.location.href);
         let urlParam = new URLSearchParams(url.search);
         let variants = options.variants.filter((v) => v.features.all === false);
-        var citation_url = variants.chg_citation;
         let style = options.span_element;
         let active = options.active_class;
         let removeMarkup2 = (html_class, css_class, color, hide) => {
@@ -806,67 +805,67 @@ class UrlSearchParamUpdate {
                 }
             });
         };
-        variants.forEach((el) => {
-            if (!["on", "off"].includes(urlParam.get(el.opt))) {
-                console.log(`${el.opt}=${urlParam.get(el.opt)} is not a selectable option.`);
-                urlParam.set(el.opt, "off");
+        for (let v in variants) {
+            if (!["on", "off"].includes(urlParam.get(variants[v].opt))) {
+                console.log(`${variants[v].opt}=${urlParam.get(variants[v].opt)} is not a selectable option.`);
+                urlParam.set(variants[v].opt, "off");
             }
-            if (urlParam.get(el.opt) == null) {
-                urlParam.set(el.opt, "off");
+            if (urlParam.get(variants[v].opt) == null) {
+                urlParam.set(variants[v].opt, "off");
             }
-            else if (urlParam.get(el.opt) == "off") {
-                const color = el.color;
-                const html_class = el.html_class;
-                const css_class = el.css_class;
-                const hide = el.hide;
+            else if (urlParam.get(variants[v].opt) == "off") {
+                const color = variants[v].color;
+                const html_class = variants[v].html_class;
+                const css_class = variants[v].css_class;
+                const hide = variants[v].hide;
                 removeMarkup2(html_class, css_class, color, hide);
-                const slider = document.getElementById(el.opt_slider);
+                const slider = document.getElementById(variants[v].opt_slider);
                 slider.classList.remove(color);
-                if (document.getElementById(el.opt).checked === true) {
-                    document.getElementById(el.opt).checked = false;
-                    document.getElementById(el.opt).classList.remove(active);
+                if (document.getElementById(variants[v].opt).checked === true) {
+                    document.getElementById(variants[v].opt).checked = false;
+                    document.getElementById(variants[v].opt).classList.remove(active);
                 }
             }
-            else if (urlParam.get(el.opt) == "on") {
-                let color = el.color;
-                let html_class = el.html_class;
-                let css_class = el.css_class;
-                let hide = el.hide;
+            else if (urlParam.get(variants[v].opt) == "on") {
+                let color = variants[v].color;
+                let html_class = variants[v].html_class;
+                let css_class = variants[v].css_class;
+                let hide = variants[v].hide;
                 addMarkup2(html_class, css_class, color, hide);
-                let slider = document.getElementById(el.opt_slider);
+                let slider = document.getElementById(variants[v].opt_slider);
                 slider.classList.add(color);
-                if (document.getElementById(el.opt).checked === false) {
-                    document.getElementById(el.opt).checked = true;
-                    document.getElementById(el.opt).classList.add(active);
+                if (document.getElementById(variants[v].opt).checked === false) {
+                    document.getElementById(variants[v].opt).checked = true;
+                    document.getElementById(variants[v].opt).classList.add(active);
                 }
             }
-        });
+            var citation_url = document.getElementById(variants[v].chg_citation);
+        }
         window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
         citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
         citation_url.setAttribute("href", window.location.href);
     }
-
 }
 
 let file = document.getElementsByTagName("full-size")[0].getAttribute("data-target");
 let path = document.getElementsByTagName("full-size")[0].getAttribute("data-path");
 if (!localStorage.getItem(file)) {
-    window.onload = new FetchOptionData().getDatafile(`${location.protocol}//${location.host}/${path}/${file}.json`);
+    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path}/${file}.json`);
 }
 let file2 = document.getElementsByTagName("font-size")[0].getAttribute("data-target");
 let path2 = document.getElementsByTagName("font-size")[0].getAttribute("data-path");
 if (!localStorage.getItem(file2)) {
-    window.onload = new FetchOptionData().getDatafile(`${location.protocol}//${location.host}/${path2}/${file2}.json`);
+    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path2}/${file2}.json`);
 }
 let file3 = document.getElementsByTagName("font-family")[0].getAttribute("data-target");
 let path3 = document.getElementsByTagName("font-family")[0].getAttribute("data-path");
 if (!localStorage.getItem(file3)) {
-    window.onload = new FetchOptionData().getDatafile(`${location.protocol}//${location.host}/${path3}/${file3}.json`);
+    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path3}/${file3}.json`);
 }
 let file4 = document.getElementsByTagName("image-switch")[0].getAttribute("data-target");
 let path4 = document.getElementsByTagName("image-switch")[0].getAttribute("data-path");
 if (!localStorage.getItem(file4)) {
-    window.onload = new FetchOptionData().getDatafile(`${location.protocol}//${location.host}/${path4}/${file4}.json`);
+    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path4}/${file4}.json`);
 }
 let file5 = document.getElementsByTagName("annotation-slider")[0].getAttribute("data-target");
 let path5 = document.getElementsByTagName("annotation-slider")[0].getAttribute("data-path");
