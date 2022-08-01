@@ -19,31 +19,31 @@
                         <tbody>           
                             <tr>         
                                 <td style="width:5%;border: 1px dashed #dedede;">
-                                    <full-size opt="edition-fullsize"></full-size> 
+                                    <full-size opt="edition-fullsize" data-target="conf_fullsize" data-path="js/json"></full-size> 
                                 </td>
                                 <td style="text-align:center;width:5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;"> 
-                                    <image-switch opt="edition-switch"></image-switch>
+                                    <image-switch opt="edition-switch" data-target="conf_image_switch" data-path="js/json"></image-switch>
                                 </td>
                                 <td style="text-align:left;width:10%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;"> 
-                                    <font-size opt="select-fontsize"></font-size> 
+                                    <font-size opt="select-fontsize" data-target="conf_fontsize" data-path="js/json"></font-size> 
                                 </td>
                                 <td style="text-align:left;width:15%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;">
-                                    <font-family opt="select-font"></font-family> 
+                                    <font-family opt="select-font" data-target="conf_font_family" data-path="js/json"></font-family> 
                                 </td>                                                                
                                 <td style="text-align:right;width:15%;border: 1px dashed #dedede;">   
-                                    <annotation-slider opt="text-features"></annotation-slider> 
+                                    <annotation-slider opt="text-features" data-target="conf_annotation_slider" data-path="js/json"></annotation-slider> 
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
-                                    <annotation-slider opt="deleted"></annotation-slider>  
+                                    <annotation-slider opt="deleted" data-target="conf_annotation_slider" data-path="js/json"></annotation-slider>  
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">   
-                                    <annotation-slider opt="unclear"></annotation-slider>  
+                                    <annotation-slider opt="unclear" data-target="conf_annotation_slider" data-path="js/json"></annotation-slider>  
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
-                                    <annotation-slider opt="underlined"></annotation-slider>      
+                                    <annotation-slider opt="underlined" data-target="conf_annotation_slider" data-path="js/json"></annotation-slider>      
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;border-right: 1px dashed #dedede;">  
-                                    <annotation-slider opt="whitespace"></annotation-slider>   
+                                    <annotation-slider opt="whitespace" data-target="conf_annotation_slider" data-path="js/json"></annotation-slider>   
                                 </td>
                             </tr>      
                         </tbody>
