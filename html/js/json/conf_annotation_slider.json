@@ -9,6 +9,7 @@
             "html_class": "del",
             "css_class": "strikethrough",
             "hide": true,
+            "chg_citation": "citation-url",
             "features": {
                 "all": false,
                 "class": "single-feature"
@@ -22,6 +23,7 @@
             "html_class": "hi-underline",
             "css_class": ["underline", "italic"],
             "hide": false,
+            "chg_citation": "citation-url",
             "features": {
                 "all": false,
                 "class": "single-feature"
@@ -35,6 +37,7 @@
             "html_class": "space",
             "css_class": "whitespace",
             "hide": false,
+            "chg_citation": "citation-url",
             "features": {
                 "all": false,
                 "class": "single-feature"
@@ -48,6 +51,7 @@
             "html_class": "abbr",
             "css_class": "unclear",
             "hide": false,
+            "chg_citation": "citation-url",
             "features": {
                 "all": false,
                 "class": "single-feature"
@@ -61,6 +65,7 @@
             "html_class": "undefined",
             "css_class": "undefined",
             "hide": false,
+            "chg_citation": "citation-url",
             "features": {
                 "all": true,
                 "class": "all-features"

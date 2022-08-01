@@ -5,6 +5,7 @@
             "opt": "edition-fullsize",
             "title": "full screen on/off",
             "urlparam": "fullscreen",
+            "chg_citation": "citation-url",
             "hide": {
                 "hidden": true,
                 "class_to_hide": "hide-reading"

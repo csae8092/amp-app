@@ -5,6 +5,7 @@
             "opt": "edition-switch",
             "title": "facsimile on/off",
             "urlparam": "image",
+            "chg_citation": "citation-url",
             "hide": {
                 "hidden": true,
                 "class_to_hide": "osd-viewer",

@@ -5,6 +5,7 @@
             "opt": "select-fontsize",
             "title": "change font size",
             "urlparam": "fontsize",
+            "chg_citation": "citation-url",
             "sizes": {
                 "default": "default",
                 "font_size_14": "14",

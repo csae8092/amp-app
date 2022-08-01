@@ -5,6 +5,7 @@
             "opt": "select-font",
             "title": "change font family",
             "urlparam": "font",
+            "chg_citation": "citation-url",
             "fonts": {
                 "default": "default",
                 "times_new_roman": "Times-New-Roman",

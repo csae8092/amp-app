@@ -11,12 +11,12 @@ class FetchOptionData {
         .catch(error => console.log(error.message));
     }
 
-    async getData(url) {
-        console.log(url);
-        return await fetch(url)
-        .then(response => response.json())
-        .catch(error => console.log(error.message));
-    }
+    // async getData(url) {
+    //     console.log(url);
+    //     return await fetch(url)
+    //     .then(response => response.json())
+    //     .catch(error => console.log(error.message));
+    // }
 
 }
 
@@ -38,13 +38,13 @@ class AnnotationSlider extends HTMLElement {
     }
 
     textFeatures() {
-        let data = "conf_annotation_slider";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
         let url = new URL(window.location.href);
         let urlParam = new URLSearchParams(url.search);
-        let citation_url = document.getElementById('citation-url');
         let id = this.getAttribute("id");
         let variant = options.variants.find((v) => v.opt === id);
+        let citation_url = variant.chg_citation;
         let all = variant.features.all;
         let variants = options.variants.filter((v) => v.features.all === false);
         let none_variant = options.variants.find((v) => v.features.all === true);
@@ -164,7 +164,7 @@ class AnnotationSlider extends HTMLElement {
     }
 
     render() {
-        let data = "conf_annotation_slider";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
         const opt = this.getAttribute("opt");
         const variant = options.variants.find((v) => v.opt === opt);
@@ -177,6 +177,7 @@ class AnnotationSlider extends HTMLElement {
                 <input title="${title}"
                     type="checkbox"
                     id="${opt}"
+                    data-target="${data}"
                     class="${variant.features.class}"/>
                 <span id="${opt_slider}" class="${rendered_element.slider_class}"></span>
             </label>
@@ -210,22 +211,22 @@ class FullSize extends HTMLElement {
     }
 
     fullScreen() {
-        let data = "conf_fullsize";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        const active = options.active_class;
-        const id = this.getAttribute("id");
-        const variant = options.variants.find((v) => v.opt === id);
-        const hide = variant.hide.class_to_hide;
+        let url = new URL(window.location.href);
+        let urlParam = new URLSearchParams(url.search);
+        let active = options.active_class;
+        let id = this.getAttribute("id");
+        let variant = options.variants.find((v) => v.opt === id);
+        let hide = variant.hide.class_to_hide;
+        let citation_url = variant.chg_citation;
         let urlparam = variant.urlparam;
-        let citation_url = document.getElementById('citation-url');
-        const svg_show = `
+        let svg_show = `
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
                 <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
             </svg>
         `;
-        const svg_hide = `
+        let svg_hide = `
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
                 <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
             </svg>
@@ -252,15 +253,16 @@ class FullSize extends HTMLElement {
     }
 
     render() {
-        let data = "conf_fullsize";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
-        const opt = this.getAttribute("opt");
-        const variant = options.variants.find((v) => v.opt === opt);
-        const rendered_element = options.rendered_element;
+        let opt = this.getAttribute("opt");
+        let variant = options.variants.find((v) => v.opt === opt);
+        let rendered_element = options.rendered_element;
         this.innerHTML = `
             <a title="${variant.title}"
                 class="${rendered_element.a_class} active"
-                id="${variant.opt}">
+                id="${variant.opt}"
+                data-target="${data}">
                 ${rendered_element.svg}
             </a>
         `;
@@ -294,16 +296,16 @@ class FontSize extends HTMLElement {
     }
 
     fontSize() {
-        let data = "conf_fontsize";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        const id = this.getAttribute("id");
-        const variant = options.variants.find((v) => v.opt === id);
-        const p_change = variant.paragraph;
-        const p_class = variant.p_class;
-        const size = variant.sizes;
-        let citation_url = document.getElementById("citation-url");
+        let url = new URL(window.location.href);
+        let urlParam = new URLSearchParams(url.search);
+        let id = this.getAttribute("id");
+        let variant = options.variants.find((v) => v.opt === id);
+        let p_change = variant.paragraph;
+        let p_class = variant.p_class;
+        let size = variant.sizes;
+        let citation_url = variant.chg_citation;
         let urlparam = variant.urlparam;
         var value = this.value;
         var css_class = variant.css_class;
@@ -328,14 +330,14 @@ class FontSize extends HTMLElement {
     }
 
     render() {
-        let data = "conf_fontsize";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
-        const opt = this.getAttribute("opt");
-        const variant = options.variants.find((v) => v.opt === opt);
-        const size = variant.sizes;
-        const html_class = options.html_class;
+        let opt = this.getAttribute("opt");
+        let variant = options.variants.find((v) => v.opt === opt);
+        let size = variant.sizes;
+        let html_class = options.html_class;
         var css_class = variant.css_class;
-        let s_html = `<select id="${variant.opt}" class="${html_class}">`;
+        let s_html = `<select id="${variant.opt}" data-target="${data}" class="${html_class}">`;
         for (let s in size) {
             if (size[s] == "default") {
                 var option = `<option value="default" selected='selected'>${size[s].split('-').slice(-1)} px`;
@@ -377,16 +379,16 @@ class FontFamily extends HTMLElement {
     }
 
     fontFamily() {
-        let data = "conf_font_family";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        const id = this.getAttribute("id");
-        const variant = options.variants.find((v) => v.opt === id);
-        const p_change = variant.paragraph;
-        const p_class = variant.p_class;
-        const family = variant.fonts;
-        let citation_url = document.getElementById("citation-url");
+        let url = new URL(window.location.href);
+        let urlParam = new URLSearchParams(url.search);
+        let id = this.getAttribute("id");
+        let variant = options.variants.find((v) => v.opt === id);
+        let p_change = variant.paragraph;
+        let p_class = variant.p_class;
+        let family = variant.fonts;
+        let citation_url = variant.chg_citation;
         let urlparam = variant.urlparam;
         var value = this.value;
         if ( urlParam.get(urlparam) !== value ) {
@@ -409,14 +411,14 @@ class FontFamily extends HTMLElement {
     }
 
     render() {
-        let data = "conf_font_family";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
-        const opt = this.getAttribute("opt");
-        const variant = options.variants.find((v) => v.opt === opt);
-        const family = variant.fonts;
-        const html_class = options.html_class;
+        let opt = this.getAttribute("opt");
+        let variant = options.variants.find((v) => v.opt === opt);
+        let family = variant.fonts;
+        let html_class = options.html_class;
         var css_class = variant.css_class;
-        let s_html = `<select id="${variant.opt}" class="${html_class}">`;
+        let s_html = `<select id="${variant.opt}" data-target="${data}" class="${html_class}">`;
         for (let s in family) {
             if (family[s] == "default") {
                 var option = `<option value="default" selected='selected'>${family[s].replace('-', ' ')}`;
@@ -458,17 +460,17 @@ class ImageSwitch extends HTMLElement {
     }
 
     viewerSwitch() {
-        let data = "conf_image_switch";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        const id = this.getAttribute("id");
-        const variant = options.variants.find((v) => v.opt === id);
-        const active = options.active_class;
-        const hide = variant.hide.class_to_hide;
-        const show = variant.hide.class_to_show;
-        const parent = variant.hide.class_parent;
-        let citation_url = document.getElementById("citation-url");
+        let url = new URL(window.location.href);
+        let urlParam = new URLSearchParams(url.search);
+        let id = this.getAttribute("id");
+        let variant = options.variants.find((v) => v.opt === id);
+        let active = options.active_class;
+        let hide = variant.hide.class_to_hide;
+        let show = variant.hide.class_to_show;
+        let parent = variant.hide.class_parent;
+        let citation_url = variant.chg_citation;
         let urlparam = variant.urlparam;
         if ( urlParam.get(urlparam) == "on" ) {
             urlParam.set(urlparam, "off");
@@ -512,16 +514,17 @@ class ImageSwitch extends HTMLElement {
     }
 
     render() {
-        let data = "conf_image_switch";
+        let data = this.getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
-        const opt = this.getAttribute("opt");
-        const variant = options.variants.find((v) => v.opt === opt);
-        const rendered_element = options.rendered_element;
-        const active = options.active_class;
+        let opt = this.getAttribute("opt");
+        let variant = options.variants.find((v) => v.opt === opt);
+        let rendered_element = options.rendered_element;
+        let active = options.active_class;
         this.innerHTML = `
             <a title="${variant.title}"
                 class="${rendered_element.a_class} ${active}"
-                id="${variant.opt}">
+                id="${variant.opt}"
+                data-target="${data}">
                 ${rendered_element.svg}
             </a>
         `;
@@ -541,23 +544,25 @@ class ImageSwitch extends HTMLElement {
 class UrlSearchParamUpdate {
 
     fullSreen() {
-        let data = "conf_fullsize";
+        let el = document.getElementsByTagName('full-size');
+        let data = el[0].getAttribute("data-target");
+        let opt = el[0].getAttribute("opt");
         let options = JSON.parse(localStorage.getItem(data));
         if (!options) {
             alert("Please turn on cookies to display content!")
         }
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        const variant = options.variants.find((v) => v.opt === "edition-fullsize");
-        const hide = variant.hide.class_to_hide;
+        let url = new URL(window.location.href);
+        let urlParam = new URLSearchParams(url.search);
+        let variant = options.variants.find((v) => v.opt === opt);
+        let hide = variant.hide.class_to_hide;
         let urlparam = variant.urlparam;
-        let citation_url = document.getElementById('citation-url');
-        const svg_show = `
+        let citation_url = variant.chg_citation;
+        let svg_show = `
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16">
                 <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/>
             </svg>
         `;
-        const svg_hide = `
+        let svg_hide = `
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16">
                 <path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/>
             </svg>
@@ -587,18 +592,19 @@ class UrlSearchParamUpdate {
     }
 
     fontSize() {
-        let data = "conf_fontsize";
+        let el = document.getElementsByTagName('font-size');
+        let data = el[0].getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
         if (!options) {
             alert("Please turn on cookies to display content!")
         }
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        const variants = options.variants;
-        let citation_url = document.getElementById("citation-url");
+        let url = new URL(window.location.href);
+        let urlParam = new URLSearchParams(url.search);
+        let variants = options.variants;
         for (let v in variants) {
             let select = document.getElementById(variants[v].opt);
             let urlparam = variants[v].urlparam;
+            var citation_url = variants[v].chg_citation;
             let p_change = variants[v].paragraph;
             let p_class = variants[v].p_class;
             let size = variants[v].sizes;
@@ -636,17 +642,18 @@ class UrlSearchParamUpdate {
     }
 
     fontFamily() {
-        let data = "conf_font_family";
+        let el = document.getElementsByTagName('font-family');
+        let data = el[0].getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
         if (!options) {
             alert("Please turn on cookies to display content!")
         }
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        const variants = options.variants;
-        let citation_url = document.getElementById("citation-url");
+        let url = new URL(window.location.href);
+        let urlParam = new URLSearchParams(url.search);
+        let variants = options.variants;
         for (let v in variants) {
             let select = document.getElementById(variants[v].opt);
+            var citation_url = variants[v].chg_citation;
             let urlparam = variants[v].urlparam;
             let p_change = variants[v].paragraph;
             let p_class = variants[v].p_class;
@@ -684,21 +691,23 @@ class UrlSearchParamUpdate {
     }
 
     viewerSwitch() {
-        let data = "conf_image_switch";
+        let el = document.getElementsByTagName('image-switch');
+        let data = el[0].getAttribute("data-target");
+        let opt = el[0].getAttribute("opt");
         let options = JSON.parse(localStorage.getItem(data));
         if (!options) {
             alert("Please turn on cookies to display content!")
         }
-        const url = new URL(window.location.href);
-        const urlParam = new URLSearchParams(url.search);
-        // const opt = options
-        const variant = options.variants.find((v) => v.opt === "edition-switch");
-        const active = options.active_class;
-        const hide = variant.hide.class_to_hide;
-        const show = variant.hide.class_to_show;
-        const parent = variant.hide.class_parent;
+        let url = new URL(window.location.href);
+        let urlParam = new URLSearchParams(url.search);
+        // let opt = options
+        let variant = options.variants.find((v) => v.opt === opt);
+        let active = options.active_class;
+        let hide = variant.hide.class_to_hide;
+        let show = variant.hide.class_to_show;
+        let parent = variant.hide.class_parent;
         let urlparam = variant.urlparam;
-        let citation_url = document.getElementById("citation-url");
+        let citation_url = variant.chg_citation;
         if (urlParam.get(urlparam) == null) {
             urlParam.set(urlparam, "on");
         }
@@ -745,15 +754,16 @@ class UrlSearchParamUpdate {
     }
 
     textFeatures() {
-        let data = "conf_annotation_slider";
+        let el = document.getElementsByTagName('annotation-slider');
+        let data = el[0].getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
         if (!options) {
             alert("Please turn on cookies to display content!")
         }
         let url = new URL(window.location.href);
         let urlParam = new URLSearchParams(url.search);
-        let citation_url = document.getElementById('citation-url');
         let variants = options.variants.filter((v) => v.features.all === false);
+        var citation_url = variants.chg_citation;
         let style = options.span_element;
         let active = options.active_class;
         let removeMarkup2 = (html_class, css_class, color, hide) => {
@@ -838,11 +848,31 @@ class UrlSearchParamUpdate {
 
 }
 
-window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/js/json/conf_fullsize.json`);
-window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/js/json/conf_fontsize.json`);
-window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/js/json/conf_font_family.json`);
-window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/js/json/conf_image_switch.json`);
-window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/js/json/conf_annotation_slider.json`);
+let file = document.getElementsByTagName("full-size")[0].getAttribute("data-target");
+let path = document.getElementsByTagName("full-size")[0].getAttribute("data-path");
+if (!localStorage.getItem(file)) {
+    window.onload = new FetchOptionData().getDatafile(`${location.protocol}//${location.host}/${path}/${file}.json`);
+}
+let file2 = document.getElementsByTagName("font-size")[0].getAttribute("data-target");
+let path2 = document.getElementsByTagName("font-size")[0].getAttribute("data-path");
+if (!localStorage.getItem(file2)) {
+    window.onload = new FetchOptionData().getDatafile(`${location.protocol}//${location.host}/${path2}/${file2}.json`);
+}
+let file3 = document.getElementsByTagName("font-family")[0].getAttribute("data-target");
+let path3 = document.getElementsByTagName("font-family")[0].getAttribute("data-path");
+if (!localStorage.getItem(file3)) {
+    window.onload = new FetchOptionData().getDatafile(`${location.protocol}//${location.host}/${path3}/${file3}.json`);
+}
+let file4 = document.getElementsByTagName("image-switch")[0].getAttribute("data-target");
+let path4 = document.getElementsByTagName("image-switch")[0].getAttribute("data-path");
+if (!localStorage.getItem(file4)) {
+    window.onload = new FetchOptionData().getDatafile(`${location.protocol}//${location.host}/${path4}/${file4}.json`);
+}
+let file5 = document.getElementsByTagName("annotation-slider")[0].getAttribute("data-target");
+let path5 = document.getElementsByTagName("annotation-slider")[0].getAttribute("data-path");
+if (!localStorage.getItem(file5)) {
+    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path5}/${file5}.json`);
+}
 
 setTimeout(() => {
     window.customElements.define('full-size', FullSize);
@@ -856,4 +886,3 @@ setTimeout(() => {
     window.customElements.define('annotation-slider', AnnotationSlider);
     window.onload = new UrlSearchParamUpdate().textFeatures();
 }, 500);
-
