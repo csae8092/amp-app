@@ -3,14 +3,14 @@
     "variants":  [
         {
             "opt": "select-font",
-            "title": "change font family",
+            "title": "Font family",
             "urlparam": "font",
             "chg_citation": "citation-url",
             "fonts": {
                 "default": "default",
-                "times_new_roman": "Times-New-Roman",
-                "courier_new": "Courier-New",
-                "arial_serif": "Arial-serif"
+                "font1": "Times-New-Roman",
+                "font2": "Courier-New",
+                "font3": "Arial-serif"
             },
             "paragraph": "p",
             "p_class": "yes-index",

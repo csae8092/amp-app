@@ -3,7 +3,7 @@
     "variants":  [
         {
             "opt": "edition-fullsize",
-            "title": "full screen on/off",
+            "title": "Full screen on/off",
             "urlparam": "fullscreen",
             "chg_citation": "citation-url",
             "hide": {

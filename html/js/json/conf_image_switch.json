@@ -3,7 +3,7 @@
     "variants":  [
         {
             "opt": "edition-switch",
-            "title": "facsimile on/off",
+            "title": "Facsimile on/off",
             "urlparam": "image",
             "chg_citation": "citation-url",
             "hide": {

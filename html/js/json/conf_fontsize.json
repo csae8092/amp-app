@@ -3,7 +3,7 @@
     "variants":  [
         {
             "opt": "select-fontsize",
-            "title": "change font size",
+            "title": "Font size",
             "urlparam": "fontsize",
             "chg_citation": "citation-url",
             "sizes": {

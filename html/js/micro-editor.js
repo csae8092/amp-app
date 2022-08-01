@@ -205,8 +205,8 @@ class FullSize extends HTMLElement {
     connectedCallback() {
         this.render();
         setTimeout(() => {
-            // console.log(this.childNodes[1]);
-            this.childNodes[1].addEventListener("click", this.fullScreen);
+            // console.log(this.childNodes[3]);
+            this.childNodes[3].addEventListener("click", this.fullScreen);
         }, 500);
     }
 
@@ -259,6 +259,7 @@ class FullSize extends HTMLElement {
         let variant = options.variants.find((v) => v.opt === opt);
         let rendered_element = options.rendered_element;
         this.innerHTML = `
+            <small><label style="padding:.2em;">${variant.title}:</label></small>
             <a title="${variant.title}"
                 class="${rendered_element.a_class} active"
                 id="${variant.opt}"
@@ -273,7 +274,7 @@ class FullSize extends HTMLElement {
     }
 
     disconnectedCallback() {
-        this.childNodes[1].removeEventListener("click", this.fullScrean);
+        this.childNodes[3].removeEventListener("click", this.fullScrean);
     }
 
 }
@@ -290,8 +291,8 @@ class FontSize extends HTMLElement {
     connectedCallback() {
         this.render();
         setTimeout(() => {
-            // console.log(this.childNodes[0]);
-            this.childNodes[0].addEventListener("change", this.fontSize);
+            // console.log(this.childNodes[3]);
+            this.childNodes[3].addEventListener("change", this.fontSize);
         }, 500);
     }
 
@@ -337,7 +338,10 @@ class FontSize extends HTMLElement {
         let size = variant.sizes;
         let html_class = options.html_class;
         var css_class = variant.css_class;
-        let s_html = `<select id="${variant.opt}" data-target="${data}" class="${html_class}">`;
+        let s_html = `
+            <small><label style="padding:.2em;">${variant.title}:</label></small>
+            <select id="${variant.opt}" data-target="${data}" class="${html_class}">
+        `;
         for (let s in size) {
             if (size[s] == "default") {
                 var option = `<option value="default" selected='selected'>${size[s].split('-').slice(-1)} px`;
@@ -356,7 +360,7 @@ class FontSize extends HTMLElement {
     }
 
     disconnectedCallback() {
-        this.childNodes[0].removeEventListener("change", this.fontSize);
+        this.childNodes[3].removeEventListener("change", this.fontSize);
     }
 
 }
@@ -373,8 +377,8 @@ class FontFamily extends HTMLElement {
     connectedCallback() {
         this.render();
         setTimeout(() => {
-            // console.log(this.childNodes[0]);
-            this.childNodes[0].addEventListener("change", this.fontFamily);
+            // console.log(this.childNodes[3]);
+            this.childNodes[3].addEventListener("change", this.fontFamily);
         }, 500);
     }
 
@@ -418,7 +422,10 @@ class FontFamily extends HTMLElement {
         let family = variant.fonts;
         let html_class = options.html_class;
         var css_class = variant.css_class;
-        let s_html = `<select id="${variant.opt}" data-target="${data}" class="${html_class}">`;
+        let s_html = `
+            <small><label style="padding:.2em;">${variant.title}:</label></small>
+            <select id="${variant.opt}" data-target="${data}" class="${html_class}">
+        `;
         for (let s in family) {
             if (family[s] == "default") {
                 var option = `<option value="default" selected='selected'>${family[s].replace('-', ' ')}`;
@@ -437,7 +444,7 @@ class FontFamily extends HTMLElement {
     }
 
     disconnectedCallback() {
-        this.childNodes[0].removeEventListener("change", this.fontFamily);
+        this.childNodes[2].removeEventListener("change", this.fontFamily);
     }
 
 }
@@ -454,8 +461,8 @@ class ImageSwitch extends HTMLElement {
     connectedCallback() {
         this.render();
         setTimeout(() => {
-            // console.log(this.childNodes[1]);
-            this.childNodes[1].addEventListener("click", this.viewerSwitch);
+            // console.log(this.childNodes[3]);
+            this.childNodes[3].addEventListener("click", this.viewerSwitch);
         }, 500);
     }
 
@@ -502,8 +509,9 @@ class ImageSwitch extends HTMLElement {
                 el.classList.add(active);
             });
             // works only with one image viewer
-            const viewer = document.querySelector(`.${parent}.${active} .${hide}`);
-            const facs = viewer.querySelectorAll("*")[1];
+            let viewer = document.querySelector(`.${parent}.${active} .${hide}`);
+            let facs = viewer.querySelectorAll("*")[0];
+            // console.log(facs);
             facs.style.width = `${viewer.offsetWidth}px`;
             facs.style.height = `${viewer.offsetHeight}px`;
             this.classList.add(active); 
@@ -521,6 +529,7 @@ class ImageSwitch extends HTMLElement {
         let rendered_element = options.rendered_element;
         let active = options.active_class;
         this.innerHTML = `
+            <small><label style="padding:.2em;">${variant.title}:</label></small>
             <a title="${variant.title}"
                 class="${rendered_element.a_class} ${active}"
                 id="${variant.opt}"
@@ -535,7 +544,7 @@ class ImageSwitch extends HTMLElement {
     }
 
     disconnectedCallback() {
-        this.childNodes[1].removeEventListener("click", this.viewerSwitch);
+        this.childNodes[3].removeEventListener("click", this.viewerSwitch);
     }
 
 }
@@ -744,7 +753,7 @@ class UrlSearchParamUpdate {
             });
             // works only with one image viewer
             const viewer = document.querySelector(`.${parent}.${active} .${hide}`);
-            const facs = viewer.querySelectorAll("*")[1];
+            const facs = viewer.querySelectorAll("*")[0];
             facs.style.width = `${viewer.offsetWidth}px`;
             facs.style.height = `${viewer.offsetHeight}px`;
         }
