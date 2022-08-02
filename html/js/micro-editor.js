@@ -43,8 +43,10 @@ class AnnotationSlider extends HTMLElement {
         let url = new URL(window.location.href);
         let urlParam = new URLSearchParams(url.search);
         let id = this.getAttribute("id");
-        let variant = options.variants.find((v) => v.opt === id);
-        let citation_url = document.getElementById(variant.chg_citation);
+        let variant = options.variants.find((v) => v.opt === id); 
+        if (variant.chg_citation) {
+            var citation_url = document.getElementById(variant.chg_citation);
+        }
         let all = variant.features.all;
         let variants = options.variants.filter((v) => v.features.all === false);
         let none_variant = options.variants.find((v) => v.features.all === true);
@@ -91,7 +93,7 @@ class AnnotationSlider extends HTMLElement {
             });
         };
 
-        if (all) {
+        if (all === true) {
             if ( this.classList.contains(active) ) {
                 this.classList.remove(active);
                 variants.forEach((el) => {
@@ -123,9 +125,8 @@ class AnnotationSlider extends HTMLElement {
                     urlParam.set(el.opt, "on");
                 });
             }
-            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
-            citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
-            citation_url.setAttribute("href", window.location.href);
+        } else if (typeof all !== "boolean") {
+            console.log(`Type of variant config. "features.all" must be Boolean (true or false)`);
         } else {
             // const opt = variant.opt;
             let color = variant.color;
@@ -157,7 +158,22 @@ class AnnotationSlider extends HTMLElement {
                 document.getElementById(none_variant.opt).checked = false;
                 document.getElementById(none_variant.opt).classList.remove(active);
             }
-            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
+            
+        }
+        var stateName = variant.opt;
+        if (!stateName === "text-features") {
+            var stateParam = urlParam.get(variant.opt);
+            var state = {};
+            state[stateName] = stateParam;
+        } else {
+            var state = {};
+            for (const [ key, value ] of urlParam) {
+                state[key] = value;
+            } 
+        }        
+        // window.history.replaceState(state, '', `?${urlParam}`);
+        window.history.pushState(state, '', `?${urlParam}`);
+        if (citation_url) {
             citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
             citation_url.setAttribute("href", window.location.href);
         }
@@ -233,7 +249,6 @@ class FullSize extends HTMLElement {
         `;
         if ( urlParam.get(urlparam) == "off" ) {
             urlParam.set(urlparam, "on");
-            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
             document.querySelectorAll(`.${hide}`).forEach((el) => {
                 el.classList.add("fade");
                 options.rendered_element.svg = svg_hide;
@@ -241,13 +256,17 @@ class FullSize extends HTMLElement {
             this.classList.remove(active);
         } else {                      
             urlParam.set(urlparam, "off");
-            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
             document.querySelectorAll(`.${hide}`).forEach((el) => {
                 el.classList.remove("fade");
                 options.rendered_element.svg = svg_show;
             });
             this.classList.add(active); 
         }
+        var stateName = variant.opt;
+        var stateParam = urlParam.get(variant.opt);
+        var state = {};
+        state[stateName] = stateParam;
+        window.history.pushState(state, '', `${location.pathname}?${urlParam}`);
         citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
         citation_url.setAttribute("href", window.location.href);
     }
@@ -324,10 +343,13 @@ class FontSize extends HTMLElement {
                 }
             });
         }
-        window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
+        var stateName = variant.opt;
+        var stateParam = urlParam.get(variant.opt);
+        var state = {};
+        state[stateName] = stateParam;
+        window.history.pushState(state, '', `${location.pathname}?${urlParam}`);
         citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
         citation_url.setAttribute("href", window.location.href);
-        
     }
 
     render() {
@@ -409,7 +431,11 @@ class FontFamily extends HTMLElement {
                 }
             });
         }
-        window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
+        var stateName = variant.opt;
+        var stateParam = urlParam.get(variant.opt);
+        var state = {};
+        state[stateName] = stateParam;
+        window.history.pushState(state, '', `${location.pathname}?${urlParam}`);
         citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
         citation_url.setAttribute("href", window.location.href);
     }
@@ -516,7 +542,11 @@ class ImageSwitch extends HTMLElement {
             facs.style.height = `${viewer.offsetHeight}px`;
             this.classList.add(active); 
         }
-        window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
+        var stateName = variant.opt;
+        var stateParam = urlParam.get(variant.opt);
+        var state = {};
+        state[stateName] = stateParam;
+        window.history.pushState(state, '', `${location.pathname}?${urlParam}`);
         citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
         citation_url.setAttribute("href", window.location.href);
     }
@@ -578,7 +608,6 @@ class UrlSearchParamUpdate {
         `;
         if (urlParam.get(urlparam) == null) {
             urlParam.set(urlparam, "off");
-            window.history.replaceState({}, '', `${location.pathname}?${urlParam}`); 
         }
         if (!["on", "off"].includes(urlParam.get(urlparam))) {
             console.log(`fullscreen=${urlParam.get(urlparam)} is not a selectable option.`);
@@ -596,6 +625,7 @@ class UrlSearchParamUpdate {
                 options.rendered_element.svg = svg_hide;
             });
         }
+        window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
         citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
         citation_url.setAttribute("href", window.location.href);
     }
@@ -767,11 +797,18 @@ class UrlSearchParamUpdate {
         let data = el[0].getAttribute("data-target");
         let options = JSON.parse(localStorage.getItem(data));
         if (!options) {
-            alert("Please turn on cookies to display content!")
+            alert(`Please turn on cookies to display content.\n
+                Or check if configuration files path match data-target and data-path property.`)
         }
         let url = new URL(window.location.href);
         let urlParam = new URLSearchParams(url.search);
         let variants = options.variants.filter((v) => v.features.all === false);
+        let wrg_ft = options.variants.filter((v) => typeof v.features.all !== "boolean");
+        if (wrg_ft) {
+            for (let w of wrg_ft) {
+                console.log(`Type of variant ${w.opt} config. "features.all" must be boolean (true or false)`);
+            }
+        }
         let style = options.span_element;
         let active = options.active_class;
         let removeMarkup2 = (html_class, css_class, color, hide) => {
@@ -789,6 +826,9 @@ class UrlSearchParamUpdate {
                 }
                 el.classList.remove(color);
                 el.classList.add(style.css_class);
+                if (typeof hide !== "boolean") {
+                    console.log(`Type of variant config. "hide" must be boolean (true or false).`);
+                }
                 if (hide) {
                     el.style.display = "none";
                 }
@@ -809,17 +849,20 @@ class UrlSearchParamUpdate {
                 }
                 el.classList.add(color);
                 el.classList.add(style.css_class);
+                if (typeof hide !== "boolean") {
+                    console.log(`Type of config. "variant.hide" must be boolean (true or false).`);
+                }
                 if (hide) {
                     el.style.display = "inline";
                 }
             });
         };
         for (let v in variants) {
-            if (!["on", "off"].includes(urlParam.get(variants[v].opt))) {
-                console.log(`${variants[v].opt}=${urlParam.get(variants[v].opt)} is not a selectable option.`);
+            if (urlParam.get(variants[v].opt) == null) {
                 urlParam.set(variants[v].opt, "off");
             }
-            if (urlParam.get(variants[v].opt) == null) {
+            else if (!["on", "off"].includes(urlParam.get(variants[v].opt))) {
+                console.log(`${variants[v].opt}=${urlParam.get(variants[v].opt)} is not a selectable option.`);
                 urlParam.set(variants[v].opt, "off");
             }
             else if (urlParam.get(variants[v].opt) == "off") {
@@ -848,12 +891,17 @@ class UrlSearchParamUpdate {
                     document.getElementById(variants[v].opt).classList.add(active);
                 }
             }
-            var citation_url = document.getElementById(variants[v].chg_citation);
+            if (variants[v].chg_citation) {
+                var citation_url = document.getElementById(variants[v].chg_citation);
+            }
         }
         window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
-        citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
-        citation_url.setAttribute("href", window.location.href);
+        if (citation_url) {
+            citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
+            citation_url.setAttribute("href", window.location.href);
+        }
     }
+
 }
 
 let file = document.getElementsByTagName("full-size")[0].getAttribute("data-target");
@@ -894,3 +942,14 @@ setTimeout(() => {
     window.customElements.define('annotation-slider', AnnotationSlider);
     window.onload = new UrlSearchParamUpdate().textFeatures();
 }, 500);
+
+const update = new UrlSearchParamUpdate();
+window.onpopstate = () => {
+    update.textFeatures();
+    update.fontFamily();
+    update.fontSize();
+    update.viewerSwitch();
+    update.fullSreen();
+    // console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
+}
+

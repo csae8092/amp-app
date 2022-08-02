@@ -37,7 +37,7 @@
             "html_class": "space",
             "css_class": "whitespace",
             "hide": false,
-            "chg_citation": "citation-url",
+            "chg_citation": 1,
             "features": {
                 "all": false,
                 "class": "single-feature"
@@ -65,7 +65,7 @@
             "html_class": "undefined",
             "css_class": "undefined",
             "hide": false,
-            "chg_citation": "citation-url",
+            "chg_citation": null,
             "features": {
                 "all": true,
                 "class": "all-features"
@@ -75,7 +75,7 @@
     "span_element": {
         "css_class": "badge-item"
     },
-    "active_class": "active",
+    "active_class": "activated",
     "rendered_element": {
         "label_class": "switch",
         "slider_class": "i-slider round"

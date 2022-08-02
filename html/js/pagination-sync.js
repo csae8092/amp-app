@@ -4,6 +4,9 @@ pagination.forEach(function(el) {
 });
 
 window.onload = pageUrl();
+window.onpopstate = (event) => {
+    console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
+}
 
 function pageSync() {    
     const url = new URL(window.location.href);
@@ -15,7 +18,8 @@ function pageSync() {
     var dataTab = this.getAttribute('data-tab');
 
     urlParam.set("page", href.replace('#paginate-', ''));
-    window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
+    var state = {"page": href.replace('#paginate-', '')};
+    window.history.pushState(state, '', `?${urlParam}`);
     citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
     citation_url.setAttribute("href", window.location.href);
 
@@ -47,13 +51,11 @@ function pageUrl() {
     const url = new URL(window.location.href);
     const urlParam = new URLSearchParams(url.search);
     const _current = urlParam.get('page');
-    const item = document.querySelector('.pagination .nav-tabs .nav-item .nav-link.active');
-    const href = item.getAttribute('href').replace('#', '');
+    // const item = document.querySelector('.pagination .nav-tabs .nav-item .nav-link.active');
+    // const href = item.getAttribute('href').replace('#', '');
     const citation_url = document.getElementById("citation-url");
     if (_current == null) {
         urlParam.set('page', "1");
-    } else if (_current == href.replace('paginate-', '')) {
-        // no changes necessary your in the right tab and active link
     } else {
         // deactivate all tabs
         var tabs = document.querySelectorAll(`.pagination-tab.tab-pane[data-tab="paginate"]`);
@@ -120,7 +122,7 @@ function pageUrl() {
             });
         }
     }
-    window.history.replaceState({}, '', `${location.pathname}?${urlParam}`);
+    window.history.replaceState({}, '', `?${urlParam}`);
     citation_url.innerHTML = `${location.hostname}${location.pathname}?${urlParam}`;
     citation_url.setAttribute("href", window.location.href);
 
