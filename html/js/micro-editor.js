@@ -904,52 +904,53 @@ class UrlSearchParamUpdate {
 
 }
 
+const fetch_options = new FetchOptionData();
 let file = document.getElementsByTagName("full-size")[0].getAttribute("data-target");
 let path = document.getElementsByTagName("full-size")[0].getAttribute("data-path");
 if (!localStorage.getItem(file)) {
-    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path}/${file}.json`);
+    window.onload = fetch_options.getDataCookie(`${location.protocol}//${location.host}/${path}/${file}.json`);
 }
 let file2 = document.getElementsByTagName("font-size")[0].getAttribute("data-target");
 let path2 = document.getElementsByTagName("font-size")[0].getAttribute("data-path");
 if (!localStorage.getItem(file2)) {
-    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path2}/${file2}.json`);
+    window.onload = fetch_options.getDataCookie(`${location.protocol}//${location.host}/${path2}/${file2}.json`);
 }
 let file3 = document.getElementsByTagName("font-family")[0].getAttribute("data-target");
 let path3 = document.getElementsByTagName("font-family")[0].getAttribute("data-path");
 if (!localStorage.getItem(file3)) {
-    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path3}/${file3}.json`);
+    window.onload = fetch_options.getDataCookie(`${location.protocol}//${location.host}/${path3}/${file3}.json`);
 }
 let file4 = document.getElementsByTagName("image-switch")[0].getAttribute("data-target");
 let path4 = document.getElementsByTagName("image-switch")[0].getAttribute("data-path");
 if (!localStorage.getItem(file4)) {
-    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path4}/${file4}.json`);
+    window.onload = fetch_options.getDataCookie(`${location.protocol}//${location.host}/${path4}/${file4}.json`);
 }
 let file5 = document.getElementsByTagName("annotation-slider")[0].getAttribute("data-target");
 let path5 = document.getElementsByTagName("annotation-slider")[0].getAttribute("data-path");
 if (!localStorage.getItem(file5)) {
-    window.onload = new FetchOptionData().getDataCookie(`${location.protocol}//${location.host}/${path5}/${file5}.json`);
+    window.onload = fetch_options.getDataCookie(`${location.protocol}//${location.host}/${path5}/${file5}.json`);
 }
 
+const update = new UrlSearchParamUpdate();
 setTimeout(() => {
     window.customElements.define('full-size', FullSize);
-    window.onload = new UrlSearchParamUpdate().fullSreen();
+    window.onload = update.fullSreen();
     window.customElements.define('image-switch', ImageSwitch);
-    window.onload = new UrlSearchParamUpdate().viewerSwitch();
+    window.onload = update.viewerSwitch();
     window.customElements.define('font-size', FontSize);
-    window.onload = new UrlSearchParamUpdate().fontSize();
+    window.onload = update.fontSize();
     window.customElements.define('font-family', FontFamily);
-    window.onload = new UrlSearchParamUpdate().fontFamily();
+    window.onload = update.fontFamily();
     window.customElements.define('annotation-slider', AnnotationSlider);
-    window.onload = new UrlSearchParamUpdate().textFeatures();
+    window.onload = update.textFeatures();
 }, 500);
 
-const update = new UrlSearchParamUpdate();
 window.onpopstate = () => {
     update.textFeatures();
     update.fontFamily();
     update.fontSize();
     update.viewerSwitch();
     update.fullSreen();
+    pageUrl();
     // console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
 }
-

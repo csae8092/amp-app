@@ -4,9 +4,6 @@ pagination.forEach(function(el) {
 });
 
 window.onload = pageUrl();
-window.onpopstate = (event) => {
-    console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
-}
 
 function pageSync() {    
     const url = new URL(window.location.href);
