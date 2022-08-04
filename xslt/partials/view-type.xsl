@@ -34,7 +34,7 @@
                 <xsl:choose>
                     <xsl:when test="position() = 1">                                                         
                         <div class="pagination-tab tab-pane active" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
-                            <div class="expand-wrapper text-center hide-reading">            
+                            <div class="expand-wrapper text-center resize-hide">            
                                 <input title="change size" id="img-expand-{position()}" type="range" min="1" max="1870" value="936" class="slider"/>
                             </div>
                             <div id="container-resize-{position()}" class="transcript row">  

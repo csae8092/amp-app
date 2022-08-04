@@ -29,7 +29,7 @@
                                 </td>
                                 <td style="text-align:left;width:15%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;">
                                     <font-family opt="select-font" data-target="conf_font_family" data-path="js/json"></font-family> 
-                                </td>                                                                
+                                </td>
                                 <td style="text-align:right;width:15%;border: 1px dashed #dedede;">   
                                     <annotation-slider opt="text-features" data-target="conf_annotation_slider" data-path="js/json"></annotation-slider> 
                                 </td>

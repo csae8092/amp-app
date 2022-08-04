@@ -146,3 +146,6 @@ desktop.ini
 
 # MacOS
 .DS_Store
+
+/html/js/bundle
+/html/js/run.js

@@ -65,7 +65,7 @@
             "html_class": "undefined",
             "css_class": "undefined",
             "hide": false,
-            "chg_citation": null,
+            "chg_citation": "citation-url",
             "features": {
                 "all": true,
                 "class": "all-features"
