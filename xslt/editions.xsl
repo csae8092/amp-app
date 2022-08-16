@@ -233,7 +233,7 @@
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>
-                <script type="text/javascript" src="js/osd_single.js"></script>
+                <!--<script type="text/javascript" src="js/osd_single.js"></script>-->
                 <script type="text/javascript" src="js/bundle/de-editor.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>
                 <!-- <script type="text/javascript" src="js/micro-editor.js"></script> -->

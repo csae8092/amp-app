@@ -69,22 +69,25 @@
                                             <!-- image container accessed by OSD script -->                                           
                                             <div id="{$osd_container_id2}">
                                                 <xsl:if test="@facs">    
-                                                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif '"/> 
+                                                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif'"/> 
                                                     <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
                                                     <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
-                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>                                                    
-                                                    <img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]">
+                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
+                                                    <image-loader 
+                                                        opt="{$facs_id}"
+                                                        data-source="{concat($iiif-domain, $facs_item, $iiif-ext)}" 
+                                                        data-target="{$osd_container_id}__{$osd_container_id2}">
+                                                    </image-loader>
+                                                    <!--<img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]">
                                                         <xsl:attribute name="src">
                                                             <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                         </xsl:attribute>
-                                                    </img>                                                                
+                                                    </img>  -->                                                              
                                                 </xsl:if>                                
                                             </div>                                
                                         </div>  
                                     </div>
-                                    
-                                </div>    
-                                
+                                </div>
                             </div>
                         </div>                                                         
                     </xsl:when>
@@ -123,15 +126,20 @@
                                             <!-- image container accessed by OSD script -->                                            
                                             <div id="{$osd_container_id2}">
                                                 <xsl:if test="@facs">                                                      
-                                                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif '"/> 
+                                                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif'"/> 
                                                     <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
                                                     <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
                                                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                                                    <img id="{$facs_id}">
+                                                    <image-loader 
+                                                        opt="{$facs_id}"
+                                                        data-source="{concat($iiif-domain, $facs_item, $iiif-ext)}" 
+                                                        data-target="{$osd_container_id}__{$osd_container_id2}">
+                                                    </image-loader>
+                                                    <!--<img id="{$facs_id}">
                                                         <xsl:attribute name="src">
                                                             <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                         </xsl:attribute>
-                                                    </img> 
+                                                    </img> -->
                                                 </xsl:if>                                
                                             </div>                                            
                                         </div>  
