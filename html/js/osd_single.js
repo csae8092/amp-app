@@ -25,12 +25,12 @@ function load_image(facs_id, osd_container_id, osd_container_id2) {
         // see issue: https://github.com/openseadragon/openseadragon/issues/1262
 
         viewer.addHandler('open', function() {
-        var tiledImage = viewer.world.getItemAt(0);
-        if (tiledImage.getFullyLoaded()) {
-            hideLoading();
-        } else {
-            tiledImage.addOnceHandler('fully-loaded-change', hideLoading);
-        }
+            var tiledImage = viewer.world.getItemAt(0);
+            if (tiledImage.getFullyLoaded()) {
+                hideLoading();
+            } else {
+                tiledImage.addOnceHandler('fully-loaded-change', hideLoading);
+            }
         });
     }
 

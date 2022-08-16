@@ -171,6 +171,6 @@ var img_switch = {
     }
 };
 
-var editor = new LoadEditor(annot, fullscreen, fontsize, family, img_switch);
+var editor = new LoadEditor(annot, fullscreen, fontsize, family, img_switch, true);
 editor.cookie();
 editor.build();
