@@ -47,8 +47,9 @@
                 </meta>
                 <meta name="docImage" class="staticSearch_docImage">
                     <xsl:attribute name="content">
-                        <xsl:variable name="iiif-ext" select="'.jp2/full/,200/0/default.jpg'"/> 
-                        <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
+                        <!--<xsl:variable name="iiif-ext" select="'.jp2/full/,200/0/default.jpg'"/> -->
+                        <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=/full/,200/0/default.jpg'"/> 
+                        <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
                         <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
                         <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>                        
                         <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
@@ -79,7 +80,7 @@
                         max-width: 100%;
                     }
                 </style>
-                               
+                <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -232,7 +233,6 @@
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>
                 <!--<script type="text/javascript" src="js/osd_single.js"></script>-->
                 <script type="text/javascript" src="js/bundle/de-editor.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>

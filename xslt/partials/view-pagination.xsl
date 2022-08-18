@@ -36,6 +36,7 @@
                                     class="nav-link active"
                                     data-toggle="tab"
                                     data-tab="paginate"
+                                    id="{$facs_id}"
                                     href="#paginate-{position()}"
                                     style="border-radius:30px;">
                                     <xsl:value-of select="position()"/> 
@@ -48,6 +49,7 @@
                                     title="{position()}"
                                     class="nav-link"
                                     data-toggle="tab"
+                                    id="{$facs_id}"
                                     data-tab="paginate"
                                     href="#paginate-{position()}"
                                     style="border-radius:30px;">
@@ -82,6 +84,7 @@
                                                         href="#paginate-{position()}"
                                                         class="nav-link"
                                                         data-tab="paginate"
+                                                        id="{$facs_id}"
                                                         data-toggle="tab"
                                                         style="border-radius:30px;">
                                                         <xsl:value-of select="position()"/>
