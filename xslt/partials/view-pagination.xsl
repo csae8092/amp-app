@@ -26,7 +26,7 @@
                     <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
                     <xsl:variable name="iiif-ext" select="'.jpg?format=iiif'"/> 
                     <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
-                    <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
+                    <xsl:variable name="facs_id" select="concat(@type, '_link_', position())"/>
                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>   
                     <xsl:choose>
                         <xsl:when test="position() = 1">
