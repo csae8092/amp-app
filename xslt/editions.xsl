@@ -233,11 +233,8 @@
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
-                <!--<script type="text/javascript" src="js/osd_single.js"></script>-->
                 <script type="text/javascript" src="js/bundle/de-editor.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>
-                <!-- <script type="text/javascript" src="js/micro-editor.js"></script> -->
-                <!--<script type="text/javascript" src="js/pagination-sync.js"></script>-->
             </body>
         </html>
     </xsl:template>
