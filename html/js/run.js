@@ -161,7 +161,8 @@ var img_switch = {
                 class_to_show: "text-re",
                 class_parent: "pagination-tab",
                 resize: "resize-hide"
-            }
+            },
+            image_size: "1000px"
         }
     ],
     active_class: "active",
@@ -171,6 +172,43 @@ var img_switch = {
     }
 };
 
-var editor = new LoadEditor(annot, fullscreen, fontsize, family, img_switch, true);
+var img_loader = {
+    name: "load images in OSD viewer",
+    opt: "image-loader",
+    title: "Faksimiles",
+    urlparam: "page",
+    chg_citation: "citation-url",
+    pag_link: ".pagination .nav-tabs .nav-item .nav-link",
+    pag_tab: ".pagination-tab.tab-pane",
+    img_size: "1000px",
+    url: "https://id.acdh.oeaw.ac.at/auden-musulin-papers/",
+    url_param: ".jpg?format=iiif",
+    osd_target: "container",
+    img_source: "container2",
+    img_types: ["envelope", "sheet"],
+    active_class: "active",
+    inactive_class: "fade",
+    bootstrap_class: "show",
+}
+
+var ed_pagination = {
+    name: "Page Pagination",
+    opt: "edition-pagination",
+    title: "Page Pagination",
+    urlparam: "page",
+    chg_citation: "citation-url",
+    pag_link: ".pagination .nav-tabs .nav-item .nav-link",
+    pag_tab: ".pagination-tab.tab-pane",
+    img_size: "1000px",
+    active_class: "active",
+    inactive_class: "fade",
+    bootstrap_class: "show",
+    url: "https://id.acdh.oeaw.ac.at/auden-musulin-papers/",
+    url_param: ".jpg?format=iiif",
+    osd_target: "container",
+    img_source: "container2"
+}
+
+var editor = new LoadEditor(annot, fullscreen, fontsize, family, img_switch, img_loader, ed_pagination);
 editor.cookie();
 editor.build();

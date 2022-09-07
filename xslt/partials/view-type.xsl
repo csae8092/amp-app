@@ -30,7 +30,7 @@
                 ($printed) else 
                 ()
             }">
-            <xsl:for-each-group select="*" group-starting-with="tei:pb">                                                 
+            <xsl:for-each-group select="*" group-starting-with="tei:pb">
                 <xsl:choose>
                     <xsl:when test="position() = 1">                                                         
                         <div class="pagination-tab tab-pane active" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
@@ -68,15 +68,13 @@
                                         <div id="{$osd_container_id}" style="padding:.5em;">
                                             <!-- image container accessed by OSD script -->                                           
                                             <div id="{$osd_container_id2}">
-                                                <xsl:if test="@facs">    
-                                                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif'"/> 
-                                                    <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
-                                                    <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
+                                                <xsl:if test="@facs">
                                                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
                                                     <image-loader 
-                                                        opt="{$facs_id}"
-                                                        data-source="{concat($iiif-domain, $facs_item, $iiif-ext)}" 
-                                                        data-target="{$osd_container_id}__{$osd_container_id2}">
+                                                        opt="image-loader"
+                                                        data-type="{@type}"
+                                                        data-source="{$facs_item}" 
+                                                        pos="{position()}">
                                                     </image-loader>
                                                     <!--<img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]">
                                                         <xsl:attribute name="src">
@@ -125,15 +123,13 @@
                                         <div id="{$osd_container_id}" style="padding:.5em;">
                                             <!-- image container accessed by OSD script -->                                            
                                             <div id="{$osd_container_id2}">
-                                                <xsl:if test="@facs">                                                      
-                                                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif'"/> 
-                                                    <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
-                                                    <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
+                                                <xsl:if test="@facs">
                                                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
                                                     <image-loader 
-                                                        opt="{$facs_id}"
-                                                        data-source="{concat($iiif-domain, $facs_item, $iiif-ext)}" 
-                                                        data-target="{$osd_container_id}__{$osd_container_id2}">
+                                                        opt="image-loader"
+                                                        data-type="{@type}"
+                                                        data-source="{$facs_item}" 
+                                                        pos="{position()}">
                                                     </image-loader>
                                                     <!--<img id="{$facs_id}">
                                                         <xsl:attribute name="src">

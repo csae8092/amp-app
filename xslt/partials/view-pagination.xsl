@@ -22,39 +22,26 @@
             <ul class="nav nav-tabs">
                 <xsl:for-each select="$vseq">
                     <!--  var to create container ids to insert facsimiles to one individual container each   -->
-                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
-                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
-                    <xsl:variable name="iiif-ext" select="'.jpg?format=iiif'"/> 
-                    <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
-                    <xsl:variable name="facs_id" select="concat(@type, '_link_', position())"/>
-                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>   
+                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
                     <xsl:choose>
                         <xsl:when test="position() = 1">
                             <li class="nav-item">
-                                <a                                   
-                                    title="{position()}"
-                                    class="nav-link active"
-                                    data-toggle="tab"
-                                    data-tab="paginate"
-                                    id="{$facs_id}"
-                                    href="#paginate-{position()}"
-                                    style="border-radius:30px;">
-                                    <xsl:value-of select="position()"/> 
-                                </a>                                                    
+                                <edition-pagination 
+                                    opt="edition-pagination"
+                                    pos="{position()}" 
+                                    facs="{$facs_item}" 
+                                    data-type="{@type}">
+                                </edition-pagination>
                             </li>
                         </xsl:when>
                         <xsl:when test="position() = [1,2,3,4,5,6,7,8,9]">
                             <li class="nav-item">
-                                <a
-                                    title="{position()}"
-                                    class="nav-link"
-                                    data-toggle="tab"
-                                    id="{$facs_id}"
-                                    data-tab="paginate"
-                                    href="#paginate-{position()}"
-                                    style="border-radius:30px;">
-                                    <xsl:value-of select="position()"/> 
-                                </a>                                                    
+                                <edition-pagination 
+                                    opt="edition-pagination"
+                                    pos="{position()}" 
+                                    facs="{$facs_item}" 
+                                    data-type="{@type}">
+                                </edition-pagination>                                                 
                             </li>
                         </xsl:when>
                         <xsl:when test="position() = 10">
@@ -70,25 +57,18 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <xsl:for-each select="$vseq">
-                                        <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
-                                        <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
-                                        <xsl:variable name="facs_id" select="concat(@type, '_img_', position())"/>
                                         <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/> 
                                         <xsl:choose>
                                             <xsl:when test="position() > 9">
                                                 <li
                                                     class="nav-item dropdown-submenu"
                                                     style="display:inline-block;">
-                                                    <a
-                                                        title="{position()}"
-                                                        href="#paginate-{position()}"
-                                                        class="nav-link"
-                                                        data-tab="paginate"
-                                                        id="{$facs_id}"
-                                                        data-toggle="tab"
-                                                        style="border-radius:30px;">
-                                                        <xsl:value-of select="position()"/>
-                                                    </a>
+                                                    <edition-pagination 
+                                                        opt="edition-pagination"
+                                                        pos="{position()}" 
+                                                        facs="{$facs_item}" 
+                                                        data-type="{@type}">
+                                                    </edition-pagination>
                                                 </li>
                                             </xsl:when>
                                         </xsl:choose>
