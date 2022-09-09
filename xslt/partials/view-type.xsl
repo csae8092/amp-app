@@ -34,9 +34,10 @@
                 <xsl:choose>
                     <xsl:when test="position() = 1">                                                         
                         <div class="pagination-tab tab-pane active" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
-                            <div class="expand-wrapper text-center resize-hide">            
-                                <input title="change size" id="img-expand-{position()}" type="range" min="1" max="1870" value="936" class="slider"/>
-                            </div>
+                            
+                            <window-resize opt="resizing" pos="{position()}"></window-resize>
+            
+                            
                             <div id="container-resize-{position()}" class="transcript row">  
                                 
                                 <div id="text-resize-{position()}" class="text-re col-md-6"> 
@@ -91,9 +92,9 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-{position()}" tabindex="-1">
-                            <div class="expand-wrapper text-center hide-reading">            
-                                <input title="change size" id="img-expand-{position()}" type="range" min="1" max="1870" value="936" class="slider"/>
-                            </div>
+                            
+                            <window-resize opt="resizing" pos="{position()}"></window-resize>
+                            
                             <div id="container-resize-{position()}" class="transcript row">
                                 <div id="text-resize-{position()}" class="text-re col-md-6">                                                                
                                     <div class="card-body">                                                                                                                                                                                       

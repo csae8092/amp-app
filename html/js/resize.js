@@ -30,7 +30,7 @@ function resize(position) {
                 viewer.css('height', `${offsetLeft}px`);
             } else if (handle.val() > 936) {
                 left_container.css('max-width', `${handle.val()}px`);
-                text.css('width', `${handle.val()}px`);
+                text.css('width', `${handle.value}px`);
                 right_container.css('max-width', `${offsetRight}px`);
                 viewer.css('width', `${offsetRight}px`);
                 viewer.css('height', `${offsetRight}px`);
