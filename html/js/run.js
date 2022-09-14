@@ -206,7 +206,7 @@ var editor = new LoadEditor({
         title: "Page Pagination",
         urlparam: "page",
         chg_citation: "citation-url",
-        pag_link: ".pagination .nav-tabs .nav-item .nav-link",
+        pag_link: ".pagination-link",
         pag_tab: ".pagination-tab.tab-pane",
         img_size: "1000px",
         active_class: "active",

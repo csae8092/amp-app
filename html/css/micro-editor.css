@@ -13,7 +13,7 @@
 
 /* Hide default HTML checkbox */
 .switch input {
-    opacity: 0;
+    /* opacity: 0; */
     width: 0;
     height: 0;
 }
@@ -131,12 +131,42 @@ input:checked + .i-slider:before {
     background-color: #c9ffcf;
 }
 
+.slider-number::after {
+    content: "(" attr(data) ")";
+    color: #444;
+    display: block;
+    width: 50px;
+    position: absolute;
+    top: 1.5em;
+    right: 2em;
+}
+
 #clear-link {
     padding: .5em 1em;
 }
 
 .badge-item {
     border-radius: .25rem;
+}
+
+.nav-link {
+    background-color: transparent !important;
+}
+
+.nav-link.active {
+    background-color: #f1f1f1 !important;
+}
+
+.nav-link.btn.active {
+    background-color: #b59890 !important;
+}
+
+.nav-link.btn {
+    background-color: transparent !important;
+}
+
+.nav-link.btn-backlink {
+    background-color: transparent !important;
 }
 
 /* font styles and sizes */
