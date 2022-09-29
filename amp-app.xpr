@@ -14,11 +14,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/meta/description.xml</String>
+                                    <String>data/editions/memoirs/amp-transcript__0028.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>description</String>
+                                        <String>editions</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -99,6 +99,26 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>biographies</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/meta/description.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>description</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
