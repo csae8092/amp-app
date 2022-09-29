@@ -20,6 +20,7 @@
     <move todir="${data_editions_m}">
         <fileset dir="${data_editions}">
             <include name="*0028.xml"/>
+            <include name="*0062.xml"/>
         </fileset>
     </move>
 
