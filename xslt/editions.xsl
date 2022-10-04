@@ -233,8 +233,8 @@
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
-                <!-- <script src="https://unpkg.com/de-micro-editor@0.1.1/dist/de-editor.min.js"></script> -->
-                <script src="js/dist/de-editor.min.js"></script>
+                <script src="https://unpkg.com/de-micro-editor@0.1.1/dist/de-editor.min.js"></script>
+                <!-- <script src="js/dist/de-editor.min.js"></script> -->
                 <script type="text/javascript" src="js/run.js"></script>
             </body>
         </html>
