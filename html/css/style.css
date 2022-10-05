@@ -23,6 +23,48 @@ body {
     margin-right: 0;
 }
 
+.identS {
+    margin-left: -5.5em;
+    margin-bottom: -2.5em;
+}
+
+.identS:hover {
+    cursor: pointer;
+}
+
+.identS[alt] {
+    position: relative;
+    /*text-decoration: underline dotted;*/  
+}
+
+.identS[alt]:hover::after,
+.identS[alt]:focus::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: 50px;
+    width: auto;
+    white-space: nowrap;
+    border-radius: .25rem;
+    font-size: 16px;
+    padding: 3px 5px;
+    background-color: #f1f1f1;
+}
+
+.linenumbers {
+    font-size: 12px;
+    position: absolute;
+    margin-left: -4.5em;
+    margin-top: -1.8em;
+}
+
+.linenumbersVisible {
+    color: #444;
+}
+
+.linenumbersTransparent {
+    color: transparent;
+}
+
 .numbered > li {
   display: block;
   list-style: none !important;

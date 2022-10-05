@@ -79,6 +79,9 @@
                     .container-fluid {
                         max-width: 100%;
                     }
+                    .sticky-navbar {
+                        position: relative !important;
+                    }
                 </style>
                 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
                 <script src="https://unpkg.com/de-micro-editor@0.1.3/dist/de-editor.min.js"></script>
@@ -240,9 +243,9 @@
         </html>
     </xsl:template>
                     
-    <xsl:template match="tei:lb">
+    <!--<xsl:template match="tei:lb">
         <br/>        
-    </xsl:template>
+    </xsl:template>-->
     <xsl:template match="tei:lg">
         <span style="display:block;margin: 1em 0;">
             <xsl:apply-templates/>
@@ -296,4 +299,50 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:template match="tei:lb">
+        <br/>
+        <xsl:if test="ancestor::tei:p">
+            <a>
+                <xsl:variable name="para" as="xs:int">
+                    <xsl:number level="any" from="tei:body" count="tei:p"/>
+                </xsl:variable>
+                <xsl:variable name="lines" as="xs:int">
+                    <xsl:number level="any" from="tei:body"/>
+                </xsl:variable>
+                <xsl:attribute name="href">
+                    <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:attribute name="name">
+                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:choose>
+                    <xsl:when test="($lines mod 5) = 0">
+                        <xsl:attribute name="class">
+                            <xsl:text>linenumbersVisible linenumbers</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="data-lbnr">
+                            <xsl:value-of select="$lines"/>
+                        </xsl:attribute>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:attribute name="class">
+                            <xsl:text>linenumbersTransparent linenumbers</xsl:text>
+                        </xsl:attribute>
+                    </xsl:otherwise>
+                </xsl:choose>            
+                <xsl:if test="$lines lt 10">
+                    <xsl:text>000</xsl:text>
+                </xsl:if>
+                <xsl:if test="$lines lt 100 and $lines >= 10">
+                    <xsl:text>00</xsl:text>
+                </xsl:if>
+                <xsl:if test="$lines lt 1000 and $lines >= 100">
+                    <xsl:text>0</xsl:text>
+                </xsl:if>
+                <xsl:value-of select="$lines"/>
+            </a>  
+        </xsl:if>
+    </xsl:template>
+    
 </xsl:stylesheet>
