@@ -216,5 +216,6 @@ var editor = new LoadEditor({
         url_param: ".jpg?format=iiif",
         osd_target: "container",
         img_source: "container2"
-    }
+    },
+    wr: true
 });
