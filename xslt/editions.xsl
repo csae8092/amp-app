@@ -16,6 +16,7 @@
     <xsl:import href="partials/view-pagination.xsl"/>
     <xsl:import href="partials/view-type.xsl"/>
     <xsl:import href="partials/annotation-options.xsl"/>
+    <xsl:import href="partials/edition-md.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
@@ -84,8 +85,16 @@
                     }
                 </style>
                 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
-                <script src="https://unpkg.com/de-micro-editor@0.1.3/dist/de-editor.min.js"></script>
+                <script src="https://unpkg.com/de-micro-editor@0.1.4/dist/de-editor.min.js"></script>
                 <!-- <script src="js/dist/de-editor.min.js"></script> -->
+                <script type="text/javascript">
+                    function removeColor(event) {
+                        console.log(event);
+                        event.preventDefault();
+                        window.location.hash = event.srcElement.id;
+                        event.srcElement.style.backgroundColor = "transparent";
+                    }
+                </script>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -97,130 +106,9 @@
                                 
                                 <xsl:call-template name="header-nav"/>
                                 
-                                <div class="row hide-reading"> 
-                                    <div class="col-md-12">
-                                        <h5 class="card-text" style="text-align:left;">
-                                            <xsl:value-of select="$doc_title"/>                        
-                                        </h5>                                                                               
-                                        <div class="about-text-hidden fade">
-                                            <table class="table" style="width:50%;max-width:50%;">
-                                                <tbody>
-                                                    <tr>
-                                                        <th>PID</th>
-                                                        <td>
-                                                            <a target="_blank"
-                                                                title="archived source file"
-                                                                href="{//tei:publicationStmt/tei:idno[@type='handle']}">
-                                                                <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='handle']"/>
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Author</th>
-                                                        <td><xsl:value-of select="//tei:titleStmt/tei:author"/></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Editor(s)</th>
-                                                        <td>
-                                                            <ul style="list-style:none; padding-left:0;margin-bottom:0;">
-                                                                <xsl:for-each select="//tei:titleStmt/tei:editor/tei:name">
-                                                                    <li>
-                                                                        <xsl:value-of select="."/>
-                                                                    </li>
-                                                                </xsl:for-each>                                                               
-                                                            </ul>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Publisher</th>
-                                                        <td>
-                                                            <xsl:value-of select="concat(
-                                                                //tei:publicationStmt/tei:publisher,
-                                                                ', ',
-                                                                //tei:publicationStmt/tei:pubPlace,
-                                                                ' ' ,
-                                                                //tei:publicationStmt/tei:date)"/>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Download</th>
-                                                        <td>
-                                                            <ul style="list-style:none;padding-left:0;margin-bottom:0;">
-                                                                <li style="display:inline;margin-right:1em;">
-                                                                    <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}" title="TEI">
-                                                                        <img alt="TEI Logo" src="images/TEI_Logo_36px.png"/>
-                                                                    </a>
-                                                                </li>
-                                                                <li style="display:inline;margin-right:1em;">
-                                                                    <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=metadata')}" title="RDF metadata">
-                                                                        <img border="0" src="http://www.w3.org/RDF/icons/rdf_w3c_icon.48"
-                                                                            alt="RDF metadata"/>
-                                                                    </a>
-                                                                </li>
-                                                            </ul>                                                            
-                                                        </td>                                                        
-                                                    </tr>
-                                                    <tr>
-                                                        <th>IIIF Endpoint(s)</th>
-                                                        <td>
-                                                            <ul style="list-style:none;margin-bottom:0;padding-left:0;">
-                                                                <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=info.json'"/> 
-                                                                <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>                                                            
-                                                                <xsl:for-each select="//tei:pb">
-                                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                                                                    <li>
-                                                                        <a href="{concat($iiif-domain, $facs_item, $iiif-ext)}">
-                                                                            <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
-                                                                        </a>
-                                                                    </li>                                                                    
-                                                                </xsl:for-each>   
-                                                            </ul>                                                                                                                     
-                                                        </td>
-                                                    </tr>
-                                                    <tr>                                                                                                       
-                                                        <th>Cite this Source (MLA 9th Edition)</th>
-                                                        <td>
-                                                            <xsl:value-of select="concat(
-                                                                'Andorfer Peter, ', 
-                                                                replace(//tei:editor/tei:name[1], ',', ''),
-                                                                ', ', 
-                                                                replace(//tei:editor/tei:name[2], ',', ''),
-                                                                ', Mendelson Edward, Neundlinger Helmut and Stoxreiter Daniel')"/>     
-                                                            <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
-                                                            <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
-                                                                amp.acdh.oeaw.ac.at
-                                                            </a><xsl:text>.</xsl:text>                                                         
-                                                        </td>                                                                                                               
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div style="margin-bottom:1em;">
-                                            <a style="font-style:italic;" href="#" id="show-text">show metadata</a>
-                                        </div>
-                                        <script type="text/javascript">
-                                            $('#show-text').click(function () {
-                                                if ($('.about-text-hidden').hasClass('fade') == true) {
-                                                    $('.about-text-hidden').removeClass('fade')
-                                                    .addClass('active');
-                                                    $(this).html('hide metadata');
-                                                } else {
-                                                    $('.about-text-hidden').removeClass('active')
-                                                    .addClass('fade');
-                                                    $(this).html('show metadata');
-                                                 }  
-                                            });
-                                        </script>
-                                        <script type="text/javascript" src="js/citation-date.js"></script>
-                                    </div>
-                                    <!--<div class="col-md-2 text-right tei-logo">                           
-                                        <h1>
-                                            <a href="{//tei:TEI/@xml:id}?format=raw" title="TEI Source">
-                                                <img alt="TEI Logo" src="images/TEI_Logo_36px.png" id="tei-logo"/>
-                                            </a>
-                                        </h1>                         
-                                    </div>-->
-                                </div>
+                                <xsl:call-template name="edition-md">
+                                    <xsl:with-param name="doc_title" select="$doc_title"/>
+                                </xsl:call-template>
                                 
                                 <!--   adding annotation view and options   -->
                                 <xsl:call-template name="annotation-options"/>
@@ -303,7 +191,7 @@
     <xsl:template match="tei:lb">
         <br/>
         <xsl:if test="ancestor::tei:p">
-            <a>
+            <a onclick="removeColor(event);">
                 <xsl:variable name="para" as="xs:int">
                     <xsl:number level="any" from="tei:body" count="tei:p"/>
                 </xsl:variable>
@@ -314,6 +202,9 @@
                     <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
                 </xsl:attribute>
                 <xsl:attribute name="name">
+                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:attribute name="id">
                     <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
                 </xsl:attribute>
                 <xsl:choose>
