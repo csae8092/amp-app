@@ -44,8 +44,7 @@
                         <div class="pagination-tab tab-pane active" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
                             
                             <window-resize opt="resizing" pos="{position()}"></window-resize>
-            
-                            
+
                             <div id="container-resize-{position()}" class="transcript row">  
                                 
                                 <div id="text-resize-{position()}" class="text-re col-md-6"> 

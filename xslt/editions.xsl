@@ -86,7 +86,7 @@
                 </style>
                 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
                 <script src="https://unpkg.com/de-micro-editor@0.1.4/dist/de-editor.min.js"></script>
-                <!-- <script src="js/dist/de-editor.min.js"></script> -->
+                <!--<script src="js/dist/de-editor.min.js"></script>-->
                 <script type="text/javascript">
                     function removeColor(event) {
                         console.log(event);
