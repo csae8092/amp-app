@@ -217,5 +217,6 @@ var editor = new LoadEditor({
         osd_target: "container",
         img_source: "container2"
     },
-    wr: true
+    wr: true,
+    up: true
 });
