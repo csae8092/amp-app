@@ -87,14 +87,6 @@
                 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
                 <script src="https://unpkg.com/de-micro-editor@0.1.4/dist/de-editor.min.js"></script>
                 <!--<script src="js/dist/de-editor.min.js"></script>-->
-                <script type="text/javascript">
-                    function removeColor(event) {
-                        console.log(event);
-                        event.preventDefault();
-                        window.location.hash = event.srcElement.id;
-                        event.srcElement.style.backgroundColor = "transparent";
-                    }
-                </script>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -127,6 +119,16 @@
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
                 <script type="text/javascript" src="js/run.js"></script>
+                <script type="text/javascript">
+                    var linenumbers = document.querySelectorAll('.linenumbers');
+                    if (window.location.hash !== "") {
+                        setTimeout(function() {
+                            linenumbers.forEach(function(el) {
+                                el.style.backgroundColor = "transparent";
+                            });
+                        }, 10000);
+                    }
+                </script>
             </body>
         </html>
     </xsl:template>
@@ -191,7 +193,7 @@
     <xsl:template match="tei:lb">
         <br/>
         <xsl:if test="ancestor::tei:p">
-            <a onclick="removeColor(event);">
+            <a>
                 <xsl:variable name="para" as="xs:int">
                     <xsl:number level="any" from="tei:body" count="tei:p"/>
                 </xsl:variable>
@@ -221,17 +223,8 @@
                             <xsl:text>linenumbersTransparent linenumbers</xsl:text>
                         </xsl:attribute>
                     </xsl:otherwise>
-                </xsl:choose>            
-                <xsl:if test="$lines lt 10">
-                    <xsl:text>000</xsl:text>
-                </xsl:if>
-                <xsl:if test="$lines lt 100 and $lines >= 10">
-                    <xsl:text>00</xsl:text>
-                </xsl:if>
-                <xsl:if test="$lines lt 1000 and $lines >= 100">
-                    <xsl:text>0</xsl:text>
-                </xsl:if>
-                <xsl:value-of select="$lines"/>
+                </xsl:choose>
+                <xsl:value-of select="format-number($lines, '0000')"/>
             </a>  
         </xsl:if>
     </xsl:template>
