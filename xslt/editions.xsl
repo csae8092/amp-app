@@ -85,7 +85,7 @@
                     }
                 </style>
                 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
-                <script src="https://unpkg.com/de-micro-editor@0.1.4/dist/de-editor.min.js"></script>
+                <script src="https://unpkg.com/de-micro-editor@0.1.5/dist/de-editor.min.js"></script>
                 <!--<script src="js/dist/de-editor.min.js"></script>-->
             </head>
             <body class="page">
@@ -119,16 +119,6 @@
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
                 <script type="text/javascript" src="js/run.js"></script>
-                <script type="text/javascript">
-                    var linenumbers = document.querySelectorAll('.linenumbers');
-                    if (window.location.hash !== "") {
-                        setTimeout(function() {
-                            linenumbers.forEach(function(el) {
-                                el.style.backgroundColor = "transparent";
-                            });
-                        }, 10000);
-                    }
-                </script>
             </body>
         </html>
     </xsl:template>
