@@ -46,6 +46,8 @@
             <include name="*0033.xml"/>
             <include name="*0034.xml"/>
             <include name="*0036.xml"/>
+            <include name="*0037.xml"/>
+            <include name="*0053.xml"/>
         </fileset>
     </move>
 
@@ -60,9 +62,7 @@
             <include name="*0052.xml"/>
             <include name="*0056.xml"/>
             <include name="*0029.xml"/>
-            <include name="*0053.xml"/>
             <include name="*0049.xml"/>
-            <include name="*0037.xml"/>
             <include name="*0026.xml"/>
             <include name="*0061.xml"/>
             <include name="*0060.xml"/>
