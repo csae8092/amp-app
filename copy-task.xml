@@ -40,6 +40,9 @@
     <mkdir dir="${data_editions_am}"/>
     <move todir="${data_editions_am}">
         <fileset dir="${data_editions}">
+            <include name="*0026.xml"/>
+            <include name="*0027.xml"/>
+            <include name="*0029.xml"/>
             <include name="*0030.xml"/>
             <include name="*0031.xml"/>
             <include name="*0032.xml"/>
@@ -47,25 +50,15 @@
             <include name="*0034.xml"/>
             <include name="*0036.xml"/>
             <include name="*0037.xml"/>
+            <include name="*0046.xml"/>
+            <include name="*0047.xml"/>
+            <include name="*0049.xml"/>
+            <include name="*0051.xml"/>
+            <include name="*0052.xml"/>
             <include name="*0053.xml"/>
             <include name="*0056.xml"/>
             <include name="*0060.xml"/>
             <include name="*0061.xml"/>
-        </fileset>
-    </move>
-
-    <delete dir="${data_editions_aml}"/>
-    <mkdir dir="${data_editions_aml}"/>
-    <move todir="${data_editions_aml}">
-        <fileset dir="${data_editions}">
-            <include name="*0046.xml"/>
-            <include name="*0047.xml"/>
-            <include name="*0027.xml"/>
-            <include name="*0051.xml"/>
-            <include name="*0052.xml"/>
-            <include name="*0029.xml"/>
-            <include name="*0049.xml"/>
-            <include name="*0026.xml"/>
         </fileset>
     </move>
 
