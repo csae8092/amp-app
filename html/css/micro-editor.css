@@ -131,6 +131,22 @@ input:checked + .i-slider:before {
     background-color: #c9ffcf;
 }
 
+.pink {
+    background-color: #FFA7F7;
+}
+
+.gold {
+    background-color: #FFDC6E;
+}
+
+.pers {
+    font-weight: bold;
+}
+
+.plc {
+    font-weight: bold;
+}
+
 .slider-number::after {
     content: "(" attr(data) ")";
     color: #444;
