@@ -76,6 +76,7 @@ var editor = new LoadEditor({
             {
                 opt: "persons",
                 color: "pink",
+                title: "Persons",
                 html_class: "persons",
                 css_class: "pers",
                 chg_citation: "citation-url",
@@ -87,6 +88,7 @@ var editor = new LoadEditor({
             {
                 opt: "places",
                 color: "gold",
+                title: "Places",
                 html_class: "places",
                 css_class: "plc",
                 chg_citation: "citation-url",
