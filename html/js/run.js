@@ -72,6 +72,28 @@ var editor = new LoadEditor({
                     all: true,
                     class: "all-features"
                 }
+            },
+            {
+                opt: "persons",
+                color: "pink",
+                html_class: "persons",
+                css_class: "pers",
+                chg_citation: "citation-url",
+                features: {
+                    all: false,
+                    class: "single-feature"
+                }
+            },
+            {
+                opt: "places",
+                color: "gold",
+                html_class: "places",
+                css_class: "plc",
+                chg_citation: "citation-url",
+                features: {
+                    all: false,
+                    class: "single-feature"
+                }
             }
         ],
         span_element: {

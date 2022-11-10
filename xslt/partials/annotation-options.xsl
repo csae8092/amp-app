@@ -45,7 +45,15 @@
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;border-right: 1px dashed #dedede;">  
                                     <annotation-slider opt="whitespace"></annotation-slider>   
                                 </td>
-                            </tr>      
+                            </tr>
+                            <tr>
+                                <td>
+                                    <annotation-slider opt="persons"></annotation-slider>
+                                </td>
+                                <td>
+                                    <annotation-slider opt="places"></annotation-slider>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>   
                 </div>

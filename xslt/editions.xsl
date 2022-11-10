@@ -167,6 +167,20 @@
             </xsl:when>
         </xsl:choose> 
     </xsl:template>
+    <xsl:template match="tei:rs">
+        <xsl:choose>
+            <xsl:when test="@type='person'">
+                <span class="persons">
+                    <xsl:apply-templates/>
+                </span>    
+            </xsl:when>
+            <xsl:when test="@type='place'">
+                <span class="places">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
     <xsl:template match="tei:hi">
         <xsl:choose>
             <xsl:when test="@rend='underline'">
