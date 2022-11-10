@@ -17,6 +17,7 @@
     <xsl:import href="partials/view-type.xsl"/>
     <xsl:import href="partials/annotation-options.xsl"/>
     <xsl:import href="partials/edition-md.xsl"/>
+
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
@@ -98,6 +99,7 @@
                                 
                                 <xsl:call-template name="header-nav"/>
                                 
+                                <!--   adding arche metadata for each edition   -->
                                 <xsl:call-template name="edition-md">
                                     <xsl:with-param name="doc_title" select="$doc_title"/>
                                 </xsl:call-template>
@@ -185,6 +187,11 @@
         <xsl:choose>
             <xsl:when test="@rend='underline'">
                 <span class="hi-underline italic">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='italic'">
+                <span class="italic">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>

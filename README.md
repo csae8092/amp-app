@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5561757.svg)](https://doi.org/10.5281/zenodo.5561757) [![Build and publish](https://github.com/Auden-Musulin-Papers/amp-app/actions/workflows/build.yml/badge.svg)](https://github.com/Auden-Musulin-Papers/amp-app/actions/workflows/build.yml)
+[![DOI](https://zenodo.org/badge/450094906.svg)](https://zenodo.org/badge/latestdoi/450094906) [![Build and publish](https://github.com/Auden-Musulin-Papers/amp-app/actions/workflows/build.yml/badge.svg)](https://github.com/Auden-Musulin-Papers/amp-app/actions/workflows/build.yml)
 
 # amp-app
 

@@ -207,9 +207,8 @@
                                         <p>                                            
                                             This website is in development. Help us to improve and                                         
                                             <a style="text-decoration:underline;" 
-                                                href="mailto:acdh-ch-helpdesk@oeaw.ac.at?subject=Auden-Musulin%20Papers%20Feedback!">
-                                                send us your feedback
-                                            </a>.
+                                                href="mailto:amp@oeaw.ac.at?subject=Auden-Musulin%20Papers%20Feedback!">
+                                                send us your feedback</a>.
                                         </p>                                        
                                     </div>
                                 </div>

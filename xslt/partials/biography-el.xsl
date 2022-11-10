@@ -77,6 +77,15 @@
                                     
                                 </table>-->
                                 
+                                <xsl:if test="./tei:desc/tei:idno[@type='geonames']">
+                                    <br/>
+                                    <br/>
+                                    <span style="font-weight: bold;">Geonames ID: </span>
+                                    <a target="_blank" href="{./tei:desc/tei:idno[@type='geonames']}">
+                                        <xsl:value-of select="tokenize(./tei:desc/tei:idno[@type='geonames'], '/')[last()]"/>
+                                    </a>
+                                </xsl:if>
+                                
                                 <xsl:if test="./tei:desc/tei:location/tei:geo/text()">
                                     <xsl:variable name="lat" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[1]"/>
                                     <xsl:variable name="long" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[2]"/>
