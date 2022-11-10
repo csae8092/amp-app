@@ -50,6 +50,7 @@
                                 <div id="text-resize-{position()}" class="text-re col-md-6"> 
                                     <div class="card-body">
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                            <!--
                                             <xsl:variable name="para" as="xs:int">
                                                 <xsl:number level="any" from="tei:body" count="tei:p"/>
                                             </xsl:variable>
@@ -61,6 +62,7 @@
                                                     </svg>
                                                 </span>
                                             </xsl:if>
+                                            -->
                                             <p class="yes-index" style="{
                                                 if (@hand = '#handwritten') then
                                                 ($hand) else if (@hand = '#typed') then
@@ -117,6 +119,7 @@
                                 <div id="text-resize-{position()}" class="text-re col-md-6">                                                                
                                     <div class="card-body">
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                            <!--
                                             <xsl:variable name="para" as="xs:int">
                                                 <xsl:number level="any" from="tei:body" count="tei:p"/>
                                             </xsl:variable>
@@ -128,6 +131,7 @@
                                                     </svg>
                                                 </span>
                                             </xsl:if>
+                                            -->
                                             <p class="yes-index" style="{
                                                 if (@hand = '#handwritten') then
                                                 ($hand) else if (@hand = '#typed') then
