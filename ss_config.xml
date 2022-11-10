@@ -10,6 +10,7 @@
         <createContexts>true</createContexts>
         <resultsPerPage>5</resultsPerPage>
         <minWordLength>3</minWordLength>
+        <scoringAlgorithm>tf-idf</scoringAlgorithm>
         <!--NOTE: If phrasalSearch is set to TRUE, then
         maxContexts prop will be ignored-->
         <maxKwicsToHarvest>5</maxKwicsToHarvest>

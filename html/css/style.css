@@ -23,6 +23,51 @@ body {
     margin-right: 0;
 }
 
+.identS {
+    margin-left: -5.5em;
+    margin-bottom: -2.5em;
+}
+
+.identS:hover {
+    cursor: pointer;
+}
+
+.identS[alt] {
+    position: relative;
+    /*text-decoration: underline dotted;*/  
+}
+
+.identS[alt]:hover::after,
+.identS[alt]:focus::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: 50px;
+    width: auto;
+    white-space: nowrap;
+    border-radius: .25rem;
+    font-size: 16px;
+    padding: 3px 5px;
+    background-color: #f1f1f1;
+}
+
+.linenumbers {
+    font-size: 12px;
+    position: absolute;
+    margin: .4em 0 0 -4.5em;
+}
+
+.linenumbersVisible {
+    color: #444;
+}
+
+.linenumbersTransparent {
+    color: transparent;
+}
+
+.verseline {
+    margin: .4em 0 0 -7.5em !important;
+}
+
 .numbered > li {
   display: block;
   list-style: none !important;
@@ -34,34 +79,6 @@ body {
   content: attr(data-no) ". ";
   text-indent: -3em;
 }
-
-.times-new-roman {
-    font-family: 'Times New Roman', serif !important;  
-}
-.courier-new {
-    font-family: 'Courier New', monospace !important;  
-}
-
-.arial-serif {
-    font-family: 'Arial', serif !important;
-}
-
-.font-size-26 {
-     font-size: 26px !important;
-}
-
-.font-size-22 {
-     font-size: 22px !important;
-}
-
-.font-size-18 {
-     font-size: 18px !important;
-}
-
-.font-size-14 {
-     font-size: 14px !important;
-}
-
 
 #show-text {
     cursor: pointer;  
@@ -134,6 +151,10 @@ div.dataTables_filter {
     border-bottom: 5px solid #615a60 !important;
     /*border-bottom: none !important;*/
     background-color: #fff;
+}
+
+.navbar .navbar-nav {
+    margin-right: 0 !important;
 }
 
 .navbar-collapse {
@@ -901,74 +922,6 @@ div.text-re div.card-body {
     z-index: 99;
 }
 
-/* ############################
- * ############################
- * EDITIONS view properties 
- * ###########################*/
-
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 45px;
-  height: 20px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.i-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.i-slider:before {
-  position: absolute;
-  content: "";
-  height: 15px;
-  width: 15px;
-  left: 4px;
-  bottom: 3px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .i-slider {
-  
-}
-
-input:focus + .i-slider {
-  box-shadow: 0 0 1px #f1f1f1;
-}
-
-input:checked + .i-slider:before {
-  -webkit-transform: translateX(20px);
-  -ms-transform: translateX(20px);
-  transform: translateX(20px);
-}
-
-/* Rounded sliders */
-.i-slider.round {
-  border-radius: 20px;
-}
-
-.i-slider.round:before {
-  border-radius: 50%;
-}
-
 .options-menu2 {
     width: 100%;
     display:flex;
@@ -999,36 +952,10 @@ label {
     display: none;
 }
 
-.unclear[alt]::after {
-    opacity: 0;
-    content: "";
-}
-
-.unclear[alt] {
-    position: relative;
-    /*text-decoration: underline dotted;*/  
-}
-
 td > label {
     margin-right: .5em;
 }
 
-.unclear[alt]:hover::after,
-.unclear[alt]:focus::after {
-    content: attr(alt);
-    position: absolute;
-    left: -50px;
-    top: 25px;
-    width: auto;
-    white-space: nowrap;
-    background-color: #f1f1f1;
-    border-radius: .25rem;
-    font-size: 16px;
-    padding: 3px 5px;
-    z-index: 99;
-    transition: opacity  0s linear 1s;
-    opacity: 1;
-}
 .gap[alt]::after {
     opacity: 0;
     content: "";
@@ -1058,17 +985,44 @@ td > label {
     opacity: 1;
 }
 
-.strikethrough {
-    text-decoration: line-through;
-}
-
 .reading-view-font {
     font-family: "Times New Roman", serif !important;
     font-size: 22px !important;
 }
 
-.navbar .navbar-nav {
-    margin-right: 0 !important;
+.unclear[alt]::after {
+    opacity: 0;
+    content: "";
+}
+
+.unclear[alt] {
+    position: relative;
+    /*text-decoration: underline dotted;*/  
+}
+
+.unclear[alt]:hover::after,
+.unclear[alt]:focus::after {
+    content: attr(alt);
+    position: absolute;
+    left: -50px;
+    top: 25px;
+    width: auto;
+    white-space: nowrap;
+    background-color: #f1f1f1;
+    border-radius: .25rem;
+    font-size: 16px;
+    padding: 3px 5px;
+    z-index: 99;
+    transition: opacity  0s linear 1s;
+    opacity: 1;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.whitespace {
+    
 }
 
 .underline {
@@ -1091,7 +1045,7 @@ td > label {
     background-color: #ffffff;
 }
 
-.yellow {
+.grey {
     background-color: #f1f1f1;
 }
 

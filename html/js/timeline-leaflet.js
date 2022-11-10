@@ -1,5 +1,5 @@
- // created with https://ilkeryilmaz.github.io/timelinejs/
- $('.fa-play-circle').click(function () {
+// created with https://ilkeryilmaz.github.io/timelinejs/
+$('.fa-play-circle').click(function () {
     if ($('.timeline-list').length == 0) {
         $('.js-timeline').Timeline({
             autoplay: true,

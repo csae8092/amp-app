@@ -30,7 +30,7 @@ function resize(position) {
                 viewer.css('height', `${offsetLeft}px`);
             } else if (handle.val() > 936) {
                 left_container.css('max-width', `${handle.val()}px`);
-                text.css('width', `${handle.val()}px`);
+                text.css('width', `${handle.value}px`);
                 right_container.css('max-width', `${offsetRight}px`);
                 viewer.css('width', `${offsetRight}px`);
                 viewer.css('height', `${offsetRight}px`);
@@ -38,12 +38,12 @@ function resize(position) {
                 left_container.css('max-width', '50%');
                 text.css('width', '50%');
                 right_container.css('max-width', '50%');
-                viewer.css('width', '914px');
-                viewer.css('height', '914px');
+                viewer.style.width = `${right_container.offsetWidth}px`;
+                viewer.style.height = `${right_container.offsetHeight}px`;
             }
             
 
-        }).on('mouseup', function (e) {
+        }).on('mouseup', function () {
             // stop resizing
             isResizing = false;
         });

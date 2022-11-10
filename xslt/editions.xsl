@@ -16,7 +16,8 @@
     <xsl:import href="partials/view-pagination.xsl"/>
     <xsl:import href="partials/view-type.xsl"/>
     <xsl:import href="partials/annotation-options.xsl"/>
-    <xsl:import href="partials/edition-metadata.xsl"/>
+    <xsl:import href="partials/edition-md.xsl"/>
+
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
@@ -48,8 +49,9 @@
                 </meta>
                 <meta name="docImage" class="staticSearch_docImage">
                     <xsl:attribute name="content">
-                        <xsl:variable name="iiif-ext" select="'.jp2/full/,200/0/default.jpg'"/> 
-                        <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
+                        <!--<xsl:variable name="iiif-ext" select="'.jp2/full/,200/0/default.jpg'"/> -->
+                        <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=/full/,200/0/default.jpg'"/> 
+                        <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
                         <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
                         <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>                        
                         <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
@@ -79,8 +81,13 @@
                     .container-fluid {
                         max-width: 100%;
                     }
+                    .sticky-navbar {
+                        position: relative !important;
+                    }
                 </style>
-                               
+                <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
+                <script src="https://unpkg.com/de-micro-editor@0.2.2/dist/de-editor.min.js"></script>
+                <!--<script src="js/dist/de-editor.min.js"></script>-->
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -112,18 +119,15 @@
                         </div><!-- .card -->
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
-                </div><!-- .site -->  
-                <script type="text/javascript" src="js/pagination-sync.js"></script>
-                <script type="text/javascript" src="js/edition-view-functions.js"></script> 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
-                <script type="text/javascript" src="js/osd_single.js"></script>
+                </div><!-- .site -->
+                <script type="text/javascript" src="js/run.js"></script>
             </body>
         </html>
     </xsl:template>
                     
-    <xsl:template match="tei:lb">
+    <!--<xsl:template match="tei:lb">
         <br/>        
-    </xsl:template>
+    </xsl:template>-->
     <xsl:template match="tei:lg">
         <span style="display:block;margin: 1em 0;">
             <xsl:apply-templates/>
@@ -143,7 +147,7 @@
         </span>
     </xsl:template>
     <xsl:template match="tei:del">
-        <span class="del fade"><xsl:apply-templates/></span>      
+        <span class="del" style="display:none;"><xsl:apply-templates/></span>      
     </xsl:template> 
     <xsl:template match="tei:gap">
         <xsl:choose>
@@ -165,6 +169,20 @@
             </xsl:when>
         </xsl:choose> 
     </xsl:template>
+    <!-- <xsl:template match="tei:rs">
+        <xsl:choose>
+            <xsl:when test="@type='person'">
+                <span class="persons">
+                    <xsl:apply-templates/>
+                </span>    
+            </xsl:when>
+            <xsl:when test="@type='place'">
+                <span class="places">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template> -->
     <xsl:template match="tei:hi">
         <xsl:choose>
             <xsl:when test="@rend='underline'">
@@ -182,4 +200,84 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:template match="tei:lb">
+        <br/>
+        <xsl:if test="ancestor::tei:p">
+            <a>
+                <xsl:variable name="para" as="xs:int">
+                    <xsl:number level="any" from="tei:body" count="tei:p"/>
+                </xsl:variable>
+                <xsl:variable name="lines" as="xs:int">
+                    <xsl:number level="any" from="tei:body"/>
+                </xsl:variable>
+                <xsl:attribute name="href">
+                    <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:attribute name="name">
+                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:attribute name="id">
+                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:choose>
+                    <xsl:when test="($lines mod 5) = 0">
+                        <xsl:attribute name="class">
+                            <xsl:text>linenumbersVisible linenumbers</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="data-lbnr">
+                            <xsl:value-of select="$lines"/>
+                        </xsl:attribute>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:attribute name="class">
+                            <xsl:text>linenumbersTransparent linenumbers</xsl:text>
+                        </xsl:attribute>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:value-of select="format-number($lines, '0000')"/>
+            </a>  
+        </xsl:if>
+    </xsl:template>
+    
+    <xsl:template match="tei:l">
+        <br/>
+        <xsl:if test="parent::tei:lg">
+            <a>
+                <xsl:variable name="para" as="xs:int">
+                    <xsl:number level="any" from="tei:body" count="tei:lg"/>
+                </xsl:variable>
+                <xsl:variable name="lines" as="xs:int">
+                    <xsl:number level="any" from="tei:body"/>
+                </xsl:variable>
+                <xsl:attribute name="href">
+                    <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:attribute name="name">
+                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:attribute name="id">
+                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
+                </xsl:attribute>
+                <xsl:choose>
+                    <xsl:when test="($lines mod 5) = 0">
+                        <xsl:attribute name="class">
+                            <xsl:text>linenumbersVisible linenumbers verseline</xsl:text>
+                        </xsl:attribute>
+                        <xsl:attribute name="data-lbnr">
+                            <xsl:value-of select="$lines"/>
+                        </xsl:attribute>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:attribute name="class">
+                            <xsl:text>linenumbersTransparent linenumbers verseline</xsl:text>
+                        </xsl:attribute>
+                    </xsl:otherwise>
+                </xsl:choose>
+                <xsl:value-of select="concat('(vl) ', format-number($lines, '0000'))"/>
+            </a>
+            <xsl:apply-templates/>
+        </xsl:if>
+    </xsl:template>
+    
 </xsl:stylesheet>

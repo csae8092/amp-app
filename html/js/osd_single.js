@@ -1,4 +1,5 @@
 function load_image(facs_id, osd_container_id, osd_container_id2) {
+
     if ( $("#" + osd_container_id).children("div[class='openseadragon-container']").length == 0 ) {
         // console.log(osd_container_id);
         $('#' + osd_container_id).css({
@@ -10,7 +11,7 @@ function load_image(facs_id, osd_container_id, osd_container_id2) {
         var imageURL = {type: 'image', url: image};
         var viewer = OpenSeadragon({
             id: osd_container_id,
-            prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.1/images/',
+            prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/images/',
             // sequenceMode: true,
             // showReferenceStrip: true,
             // showNavigator: true,
@@ -24,12 +25,12 @@ function load_image(facs_id, osd_container_id, osd_container_id2) {
         // see issue: https://github.com/openseadragon/openseadragon/issues/1262
 
         viewer.addHandler('open', function() {
-        var tiledImage = viewer.world.getItemAt(0);
-        if (tiledImage.getFullyLoaded()) {
-            hideLoading();
-        } else {
-            tiledImage.addOnceHandler('fully-loaded-change', hideLoading);
-        }
+            var tiledImage = viewer.world.getItemAt(0);
+            if (tiledImage.getFullyLoaded()) {
+                hideLoading();
+            } else {
+                tiledImage.addOnceHandler('fully-loaded-change', hideLoading);
+            }
         });
     }
 
@@ -41,6 +42,4 @@ function load_image(facs_id, osd_container_id, osd_container_id2) {
             $("#" + spinnerID ).remove();
         }
     }
-};
-
-
+}
