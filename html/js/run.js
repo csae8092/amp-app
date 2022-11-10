@@ -72,31 +72,31 @@ var editor = new LoadEditor({
                     all: true,
                     class: "all-features"
                 }
-            },
-            {
-                opt: "persons",
-                color: "pink",
-                title: "Persons",
-                html_class: "persons",
-                css_class: "pers",
-                chg_citation: "citation-url",
-                features: {
-                    all: false,
-                    class: "single-feature"
-                }
-            },
-            {
-                opt: "places",
-                color: "gold",
-                title: "Places",
-                html_class: "places",
-                css_class: "plc",
-                chg_citation: "citation-url",
-                features: {
-                    all: false,
-                    class: "single-feature"
-                }
             }
+            // {
+            //     opt: "persons",
+            //     color: "pink",
+            //     title: "Persons",
+            //     html_class: "persons",
+            //     css_class: "pers",
+            //     chg_citation: "citation-url",
+            //     features: {
+            //         all: false,
+            //         class: "single-feature"
+            //     }
+            // },
+            // {
+            //     opt: "places",
+            //     color: "gold",
+            //     title: "Places",
+            //     html_class: "places",
+            //     css_class: "plc",
+            //     chg_citation: "citation-url",
+            //     features: {
+            //         all: false,
+            //         class: "single-feature"
+            //     }
+            // }
         ],
         span_element: {
             css_class: "badge-item"

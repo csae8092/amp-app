@@ -167,7 +167,7 @@
             </xsl:when>
         </xsl:choose> 
     </xsl:template>
-    <xsl:template match="tei:rs">
+    <!-- <xsl:template match="tei:rs">
         <xsl:choose>
             <xsl:when test="@type='person'">
                 <span class="persons">
@@ -180,7 +180,7 @@
                 </span>
             </xsl:when>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template> -->
     <xsl:template match="tei:hi">
         <xsl:choose>
             <xsl:when test="@rend='underline'">

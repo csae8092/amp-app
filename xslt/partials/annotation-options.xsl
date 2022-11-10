@@ -46,14 +46,14 @@
                                     <annotation-slider opt="whitespace"></annotation-slider>   
                                 </td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <annotation-slider opt="persons"></annotation-slider>
                                 </td>
                                 <td>
                                     <annotation-slider opt="places"></annotation-slider>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>   
                 </div>
