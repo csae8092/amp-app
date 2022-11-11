@@ -169,7 +169,7 @@
             </xsl:when>
         </xsl:choose> 
     </xsl:template>
-    <!-- <xsl:template match="tei:rs">
+     <xsl:template match="tei:rs">
         <xsl:choose>
             <xsl:when test="@type='person'">
                 <span class="persons">
@@ -181,8 +181,18 @@
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
+            <xsl:when test="@type='org'">
+                <span class="orgs">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@type='work'">
+                <span class="works">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
         </xsl:choose>
-    </xsl:template> -->
+    </xsl:template> 
     <xsl:template match="tei:hi">
         <xsl:choose>
             <xsl:when test="@rend='underline'">

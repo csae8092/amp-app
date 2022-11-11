@@ -139,6 +139,22 @@ input:checked + .i-slider:before {
     background-color: #FFDC6E;
 }
 
+.turquoise {
+    background-color: #A4F1FD;
+}
+
+.lila {
+    background-color: #DAA4FD;
+}
+
+.works {
+    font-weight: bold;
+}
+
+.orgs {
+    font-weight: bold;
+}
+
 .pers {
     font-weight: bold;
 }

@@ -24,13 +24,13 @@
                                 <td style="text-align:center;width:5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;"> 
                                     <image-switch opt="edition-switch"></image-switch>
                                 </td>
-                                <td style="text-align:left;width:10%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;"> 
+                                <td style="text-align:left;width:10%;border: 1px dashed #dedede;border-right: 1px dashed #dedede;"> 
                                     <font-size opt="select-fontsize"></font-size> 
                                 </td>
-                                <td style="text-align:left;width:15%;border: 1px dashed #dedede;border-right: 2px dashed #dedede;">
+                                <td style="text-align:left;width:15%;border: 1px dashed #dedede;border-right: 1px dashed #dedede;">
                                     <font-family opt="select-font"></font-family> 
                                 </td>
-                                <td style="text-align:right;width:15%;border: 1px dashed #dedede;">   
+                                <td style="margin-bottom:-2em;text-align:center;width:15%;border-top: 1px dashed #dedede;border-right: 1px dashed #dedede;">   
                                     <annotation-slider opt="text-features"></annotation-slider> 
                                 </td>
                                 <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">     
@@ -46,14 +46,25 @@
                                     <annotation-slider opt="whitespace"></annotation-slider>   
                                 </td>
                             </tr>
-                            <!-- <tr>
-                                <td>
+                            <tr>
+                                <td style="border: 1px dashed #dedede;height:80px;"></td>
+                                <td style="border: 1px dashed #dedede;"></td>
+                                <td style="border: 1px dashed #dedede;"></td>
+                                <td style="border: 1px dashed #dedede;"></td>
+                                <td style="border-bottom: 1px dashed #dedede;border-right: 1px dashed #dedede;"></td>
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">
                                     <annotation-slider opt="persons"></annotation-slider>
                                 </td>
-                                <td>
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">
                                     <annotation-slider opt="places"></annotation-slider>
                                 </td>
-                            </tr> -->
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;">
+                                    <annotation-slider opt="orgs"></annotation-slider>
+                                </td>
+                                <td style="text-align:center;width:12.5%;border-top: 1px dashed #dedede;border-bottom: 1px dashed #dedede;border-right: 1px dashed #dedede;">
+                                    <annotation-slider opt="works"></annotation-slider>
+                                </td>
+                            </tr> 
                         </tbody>
                     </table>   
                 </div>

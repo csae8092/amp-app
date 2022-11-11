@@ -126,7 +126,6 @@
                         }  
                     });
                 </script>
-                <script type="text/javascript" src="js/citation-date.js"></script>
             </div>
         </div>
         
