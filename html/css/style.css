@@ -1146,6 +1146,24 @@ td > label {
     margin: 0 auto;    
 }
 
+/* entities */
+.entity {
+    cursor: pointer;
+}
+
+.entity-table {
+    margin: 4em auto;
+}
+
+.entity-table tbody tr td, .entity-table tbody tr th {
+    border: none;
+}
+
+.entity-table tbody tr the {
+    border-right: 1px solid lightgrey;
+}
+
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }

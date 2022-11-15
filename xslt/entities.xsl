@@ -38,7 +38,6 @@
                                     <xsl:call-template name="nav_bar"/>
                                     
                                     <div class="container-fluid">  
-
                                             
                                         <table class="table entity-table">
                                             <tbody>
@@ -118,7 +117,7 @@
                                                         <ul>
                                                             <xsl:for-each select="./tei:listEvent/tei:event">
                                                                 <li>
-                                                                    <a href="{replace(./tei:linkGrp/tei:link/@target, 'https://auden-musulin-papers.github.io', 'https://amp.acdh.oeaw.ac.at')}">
+                                                                    <a href="{replace(replace(./tei:linkGrp/tei:link/@target, 'https://auden-musulin-papers.github.io', 'https://amp.acdh.oeaw.ac.at'), '.xml', '.html')}">
                                                                         <xsl:value-of select="./tei:p/tei:title"/>
                                                                     </a>
                                                                 </li>
