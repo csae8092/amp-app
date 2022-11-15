@@ -11,6 +11,7 @@
     <property name="editorial-decl" value="./data/meta/editorial-declaration.xml"/>
     <property name="target" value="./html"/>
     <!-- <property name="target_xml" value="./html/xml-view"/> -->
+    <property name="xsl_indices" value="./xslt/indices.xsl"/>
     <property name="xsl_entities" value="./xslt/entities.xsl"/>
     <property name="xsl_editions" value="./xslt/editions.xsl"/>
     <!-- <property name="xsl_editions_xml" value="./xslt/editions-xml.xsl"/> -->
@@ -65,6 +66,10 @@
     <delete>
         <fileset dir="${target}" includes="listorg.html"/>
     </delete>
+    <xslt style="${xsl_indices}"  basedir="${indices}" destdir="${target}" includes="*.xml">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
     <xslt style="${xsl_editions}"  basedir="${editions}/memoirs" destdir="${target}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
