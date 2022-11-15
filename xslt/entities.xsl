@@ -232,7 +232,7 @@
                                                         <ul>
                                                             <xsl:for-each select="./tei:listEvent/tei:event">
                                                                 <li>
-                                                                    <a href="{replace(./tei:linkGrp/tei:link/@target, 'https://auden-musulin-papers.github.io', 'https://amp.acdh.oeaw.ac.at')}">
+                                                                    <a href="{replace(./tei:linkGrp/tei:link/@target, 'https://auden-musulin-papers.github.io/amp-app', 'https://amp.acdh.oeaw.ac.at')}">
                                                                         <xsl:value-of select="./tei:p/tei:title"/>
                                                                     </a>
                                                                 </li>
