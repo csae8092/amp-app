@@ -151,14 +151,6 @@
                                         <xsl:value-of select="$doc_title"/>
                                     </xsl:attribute>
                                 </meta>
-                                <style>
-                                    .card-body {
-                                    padding: 4em 1em;
-                                    }
-                                    .container-fluid {
-                                    max-width: 100%;
-                                    }
-                                </style>
                             </head>
                             <body class="page">
                                 <div class="hfeed site" id="page">

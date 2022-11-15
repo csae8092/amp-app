@@ -44,10 +44,10 @@
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">
-                                <a style="color:lightgrey!important;" title="Indexes" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes  <small>(in progress)</small><span class="caret"></span></a>
+                                <a title="Indexes" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Persons" class="nav-link">Persons <small>(in progress)</small></a>
+                                        <a href="listperson.html" title="Persons" class="nav-link">Persons</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a style="color:lightgrey!important;"  title="Institutions" class="nav-link">Institutions <small>(in progress)</small></a>
@@ -56,7 +56,7 @@
                                         <a style="color:lightgrey!important;"  title="Works" class="nav-link">Works <small>(in progress)</small></a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Places" class="nav-link">Places <small>(in progress)</small></a>
+                                        <a href="listplace.html" title="Places" class="nav-link">Places</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a style="color:lightgrey!important;"  title="Events" class="nav-link">Events <small>(in progress)</small></a>

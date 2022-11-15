@@ -33,15 +33,20 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">  
-                        <div class="card">
-                            
-                            <xsl:apply-templates select="//tei:body"/>
-                            
-                        </div><!-- .card -->
+                        
+                        <xsl:apply-templates select="//tei:body"/>
+
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
-                <script type="text/javascript" src="js/run.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        createDataTable('listplace');
+                    });
+                    $(document).ready(function () {
+                        createDataTable('listperson');
+                    });
+                </script>
             </body>
         </html>
     </xsl:template>
@@ -55,10 +60,7 @@
              <thead>
                  <tr>
                      <th>
-                         Birth
-                     </th>
-                     <th>
-                         Death
+                         Name
                      </th>
                      <th>
                          GND
@@ -72,12 +74,8 @@
                  <xsl:for-each select="./tei:person">
                     <tr>
                         <td>
-                            <xsl:value-of select="./tei:birth/tei:date/@when-iso"/>
+                            <xsl:value-of select="concat(./tei:persName/tei:surname, ', ', ./tei:persName/tei:forename)"/>
                         </td>
-                        <td>
-                            <xsl:value-of select="./tei:death/tei:date/@when-iso"/>
-                        </td>
-                        
                         <td>
                             <a href="{./tei:idno[@type='GND']}" target="_blank">
                                 <xsl:value-of select="./tei:idno[@type='GND']"/>
@@ -99,7 +97,7 @@
                 <thead>
                     <tr>
                         <th>
-                            Country
+                            Name
                         </th>
                         <th>
                             Geonames ID
@@ -113,7 +111,7 @@
                     <xsl:for-each select="./tei:place">
                         <tr>
                             <td>
-                                <xsl:value-of select="./tei:country"/>
+                                <xsl:value-of select="./tei:placeName"/>
                             </td>
                             <td>
                                 <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
