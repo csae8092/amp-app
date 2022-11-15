@@ -53,6 +53,18 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+    <delete>
+        <fileset dir="${target}" includes="listbibl.html"/>
+    </delete>
+    <delete>
+        <fileset dir="${target}" includes="listplace.html"/>
+    </delete>
+    <delete>
+        <fileset dir="${target}" includes="listperson.html"/>
+    </delete>
+    <delete>
+        <fileset dir="${target}" includes="listorg.html"/>
+    </delete>
     <xslt style="${xsl_editions}"  basedir="${editions}/memoirs" destdir="${target}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
