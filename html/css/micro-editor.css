@@ -159,6 +159,10 @@ input:checked + .i-slider:before {
     font-weight: bold;
 }
 
+.entity {
+    cursor: pointer;
+}
+
 .plc {
     font-weight: bold;
 }

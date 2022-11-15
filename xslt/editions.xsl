@@ -114,9 +114,16 @@
                                  
                                  <xsl:call-template name="view-type-img"/>
     
-                             </xsl:for-each>     
+                             </xsl:for-each>
                             
                         </div><!-- .card -->
+                        <xsl:for-each select="//tei:back">
+                            <div class="tei-back">
+                                
+                                <xsl:apply-templates/>
+                                
+                            </div>
+                        </xsl:for-each>
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
@@ -172,27 +179,137 @@
      <xsl:template match="tei:rs">
         <xsl:choose>
             <xsl:when test="@type='person'">
-                <span class="persons">
+                <span class="persons entity" data-bs-toggle="modal" data-bs-target="{@ref}">
                     <xsl:apply-templates/>
-                </span>    
+                </span>
             </xsl:when>
             <xsl:when test="@type='place'">
-                <span class="places">
+                <span class="places entity" data-bs-toggle="modal" data-bs-target="{@ref}">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
             <xsl:when test="@type='org'">
-                <span class="orgs">
+                <span class="orgs entity" data-bs-toggle="modal" data-bs-target="{@ref}">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
             <xsl:when test="@type='work'">
-                <span class="works">
+                <span class="works entity" data-bs-toggle="modal" data-bs-target="{@ref}">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
         </xsl:choose>
-    </xsl:template> 
+    </xsl:template>
+    <xsl:template match="tei:listPerson">
+        <xsl:for-each select="./tei:person">
+            <div class="modal fade" id="{@xml:id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{.}" aria-hidden="true">
+                 <div class="modal-dialog modal-dialog-centered">
+                     <div class="modal-content">
+                         <div class="modal-header">
+                             <h1 class="modal-title fs-5" id="staticBackdropLabel"><xsl:value-of select="concat(./tei:persName/tei:surname, ', ', ./tei:persName/tei:forename)"/></h1>
+                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                         </div>
+                         <div class="modal-body">
+                             <table>
+                                 <tbody>
+                                     <tr>
+                                         <th>
+                                             Birth
+                                         </th>
+                                         <td>
+                                             <xsl:value-of select="./tei:birth/tei:date/@when-iso"/>
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <th>
+                                             Death
+                                         </th>
+                                         <td>
+                                             <xsl:value-of select="./tei:death/tei:date/@when-iso"/>
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <th>
+                                             GND
+                                         </th>
+                                         <td>
+                                             <a href="{./tei:idno[@type='GND']}" target="_blank">
+                                                 <xsl:value-of select="./tei:idno[@type='GND']"/>
+                                             </a>
+                                         </td>
+                                     </tr>
+                                     <tr>
+                                         <th>
+                                             Read more
+                                         </th>
+                                         <td>
+                                             <a href="{concat(@xml:id, '.html')}">
+                                                 Detail Page
+                                             </a>
+                                         </td>
+                                     </tr>
+                                 </tbody>
+                             </table>
+                         </div>
+                         <div class="modal-footer">
+                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </xsl:for-each>
+    </xsl:template>
+    <xsl:template match="tei:listPlace">
+        <xsl:for-each select="./tei:place">
+            <div class="modal fade" id="{@xml:id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{.}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel"><xsl:value-of select="./tei:placeName"/></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            Country
+                                        </th>
+                                        <td>
+                                            <xsl:value-of select="./tei:country"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Geonames ID
+                                        </th>
+                                        <td>
+                                            <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
+                                                <xsl:value-of select="./tei:idno[@type='GEONAMES']"/>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Read more
+                                        </th>
+                                        <td>
+                                            <a href="{concat(@xml:id, '.html')}">
+                                                Detail Page
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xsl:for-each>
+    </xsl:template>
     <xsl:template match="tei:hi">
         <xsl:choose>
             <xsl:when test="@rend='underline'">
