@@ -67,10 +67,26 @@
                                                 </tr>
                                                 <tr>
                                                     <th>
+                                                        Place of Birth
+                                                    </th>
+                                                    <td>
+                                                        <xsl:value-of select="./tei:birth/tei:settlement/tei:placeName"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
                                                         Death
                                                     </th>
                                                     <td>
                                                         <xsl:value-of select="./tei:death/tei:date/@when-iso"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Place of Death
+                                                    </th>
+                                                    <td>
+                                                        <xsl:value-of select="./tei:death/tei:settlement/tei:placeName"/>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -101,7 +117,7 @@
                                                         <ul>
                                                             <xsl:for-each select="./tei:listBibl/tei:bibl">
                                                                 <li>
-                                                                    <a href="{concat('lit_work_id_', @n, '.html')}">
+                                                                    <a href="{concat(@n, '.html')}">
                                                                         <xsl:value-of select="."/>
                                                                     </a>
                                                                 </li>
@@ -111,13 +127,13 @@
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        Erwähnt in
+                                                        Mentioned in
                                                     </th>
                                                     <td>
                                                         <ul>
                                                             <xsl:for-each select="./tei:listEvent/tei:event">
                                                                 <li>
-                                                                    <a href="{replace(replace(./tei:linkGrp/tei:link/@target, 'https://auden-musulin-papers.github.io', 'https://amp.acdh.oeaw.ac.at'), '.xml', '.html')}">
+                                                                    <a href="{replace(./tei:linkGrp/tei:link/@target, '/amp-app/', '/amp-app-dev/')}">
                                                                         <xsl:value-of select="./tei:p/tei:title"/>
                                                                     </a>
                                                                 </li>
@@ -166,16 +182,33 @@
                                                         Placename
                                                     </th>
                                                     <td>
-                                                        <xsl:value-of select="./tei:placeName"/>
+                                                        <xsl:value-of select="./tei:settlement/tei:placeName"/>
                                                     </td>
                                                 </tr>
-                                                
+                                                <tr>
+                                                    <th>
+                                                        Located in
+                                                    </th>
+                                                    <td>
+                                                        <a href="{concat(./tei:location[@type='located_in_place']/tei:placeName/@key, '.html')}">
+                                                            <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
+                                                        </a>
+                                                    </td>
+                                                </tr>
                                                 <tr>
                                                     <th>
                                                         Country
                                                     </th>
                                                     <td>
                                                         <xsl:value-of select="./tei:country"/>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Placetype
+                                                    </th>
+                                                    <td>
+                                                        <xsl:value-of select="./tei:settlement/@type"/>, <xsl:value-of select="./tei:desc[@type='enitity_type']"/>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -226,13 +259,13 @@
                                                 </tr>
                                                 <tr>
                                                     <th>
-                                                        Erwähnt in
+                                                        Mentioned in
                                                     </th>
                                                     <td>
                                                         <ul>
                                                             <xsl:for-each select="./tei:listEvent/tei:event">
                                                                 <li>
-                                                                    <a href="{replace(./tei:linkGrp/tei:link/@target, 'https://auden-musulin-papers.github.io/amp-app', 'https://amp.acdh.oeaw.ac.at')}">
+                                                                    <a href="{replace(./tei:linkGrp/tei:link/@target, '/amp-app/', '/amp-app-dev/')}">
                                                                         <xsl:value-of select="./tei:p/tei:title"/>
                                                                     </a>
                                                                 </li>

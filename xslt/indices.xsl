@@ -145,7 +145,7 @@
                         <xsl:variable name="coords" select="tokenize(./tei:location/tei:geo, ', ')"/>
                         <tr>
                             <td>
-                                <xsl:value-of select="./tei:placeName"/>
+                                <xsl:value-of select="./tei:settlement/tei:placeName"/>
                             </td>
                             <td>
                                 <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
