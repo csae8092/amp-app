@@ -133,7 +133,7 @@
                                                         <ul>
                                                             <xsl:for-each select="./tei:listEvent/tei:event">
                                                                 <li>
-                                                                    <a href="{replace(./tei:linkGrp/tei:link/@target, '/amp-app/', '/amp-app-dev/')}">
+                                                                    <a href="{replace(replace(./tei:linkGrp/tei:link/@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}">
                                                                         <xsl:value-of select="./tei:p/tei:title"/>
                                                                     </a>
                                                                 </li>
@@ -182,7 +182,14 @@
                                                         Placename
                                                     </th>
                                                     <td>
-                                                        <xsl:value-of select="./tei:settlement/tei:placeName"/>
+                                                        <xsl:choose>
+                                                            <xsl:when test="./tei:settlement/tei:placeName">
+                                                                <xsl:value-of select="./tei:settlement/tei:placeName"/>
+                                                            </xsl:when>
+                                                            <xsl:otherwise>
+                                                                <xsl:value-of select="./tei:placeName"/>
+                                                            </xsl:otherwise>
+                                                        </xsl:choose>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -208,7 +215,7 @@
                                                         Placetype
                                                     </th>
                                                     <td>
-                                                        <xsl:value-of select="./tei:settlement/@type"/>, <xsl:value-of select="./tei:desc[@type='enitity_type']"/>
+                                                        <xsl:value-of select="./tei:settlement/@type"/>, <xsl:value-of select="./tei:desc[@type='entity_type']"/>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -265,7 +272,7 @@
                                                         <ul>
                                                             <xsl:for-each select="./tei:listEvent/tei:event">
                                                                 <li>
-                                                                    <a href="{replace(./tei:linkGrp/tei:link/@target, '/amp-app/', '/amp-app-dev/')}">
+                                                                    <a href="{replace(replace(./tei:linkGrp/tei:link/@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}">
                                                                         <xsl:value-of select="./tei:p/tei:title"/>
                                                                     </a>
                                                                 </li>
