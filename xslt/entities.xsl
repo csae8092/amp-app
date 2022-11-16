@@ -244,7 +244,6 @@
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                </xsl:if>
                                                 <xsl:if test="./tei:idno[@type='GEONAMES']">
                                                 <tr>
                                                     <th>
