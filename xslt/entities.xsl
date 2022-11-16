@@ -41,6 +41,7 @@
                                             
                                         <table class="table entity-table">
                                             <tbody>
+                                                <xsl:if test="./tei:persName/tei:surname">
                                                 <tr>
                                                     <th>
                                                         Surname
@@ -49,6 +50,8 @@
                                                         <xsl:value-of select="./tei:persName/tei:surname"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:persName/tei:forename">
                                                 <tr>
                                                     <th>
                                                         Forename
@@ -57,6 +60,8 @@
                                                         <xsl:value-of select="./tei:persName/tei:forename"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:birth/tei:date">
                                                 <tr>
                                                     <th>
                                                         Birth
@@ -65,6 +70,8 @@
                                                         <xsl:value-of select="./tei:birth/tei:date/@when-iso"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:birth/tei:settlement">
                                                 <tr>
                                                     <th>
                                                         Place of Birth
@@ -73,6 +80,8 @@
                                                         <xsl:value-of select="./tei:birth/tei:settlement/tei:placeName"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:death/tei:date">
                                                 <tr>
                                                     <th>
                                                         Death
@@ -81,6 +90,8 @@
                                                         <xsl:value-of select="./tei:death/tei:date/@when-iso"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:death/tei:settlement">
                                                 <tr>
                                                     <th>
                                                         Place of Death
@@ -89,6 +100,8 @@
                                                         <xsl:value-of select="./tei:death/tei:settlement/tei:placeName"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='GND']">
                                                 <tr>
                                                     <th>
                                                         GND
@@ -99,6 +112,8 @@
                                                         </a>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
                                                 <tr>
                                                     <th>
                                                         Wikidata
@@ -109,6 +124,8 @@
                                                         </a>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:listBibl">
                                                 <tr>
                                                     <th>
                                                         Literature
@@ -125,6 +142,8 @@
                                                         </ul>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:listEvent">
                                                 <tr>
                                                     <th>
                                                         Mentioned in
@@ -141,6 +160,7 @@
                                                         </ul>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
                                             </tbody>
                                         </table>
                                            
@@ -192,16 +212,19 @@
                                                         </xsl:choose>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <th>
-                                                        Located in
-                                                    </th>
-                                                    <td>
-                                                        <a href="{concat(./tei:location[@type='located_in_place']/tei:placeName/@key, '.html')}">
-                                                            <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
-                                                        </a>
-                                                    </td>
-                                                </tr>
+                                                <xsl:if test="./tei:location[@type='located_in_place']">
+                                                    <tr>
+                                                        <th>
+                                                            Located in
+                                                        </th>
+                                                        <td>
+                                                            <a href="{concat(./tei:location[@type='located_in_place']/tei:placeName/@key, '.html')}">
+                                                                <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if> 
+                                                <xsl:if test="./tei:country">
                                                 <tr>
                                                     <th>
                                                         Country
@@ -210,6 +233,8 @@
                                                         <xsl:value-of select="./tei:country"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:settlement">
                                                 <tr>
                                                     <th>
                                                         Placetype
@@ -218,6 +243,9 @@
                                                         <xsl:value-of select="./tei:settlement/@type"/>, <xsl:value-of select="./tei:desc[@type='entity_type']"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='GEONAMES']">
                                                 <tr>
                                                     <th>
                                                         Geonames ID
@@ -228,6 +256,8 @@
                                                         </a>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
                                                 <tr>
                                                     <th>
                                                         Wikidata ID
@@ -238,6 +268,8 @@
                                                         </a>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='GND']">
                                                 <tr>
                                                     <th>
                                                         GND ID
@@ -248,6 +280,8 @@
                                                         </a>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:location">
                                                 <tr>
                                                     <th>
                                                         Latitude
@@ -256,6 +290,8 @@
                                                         <xsl:value-of select="tokenize(./tei:location/tei:geo, ', ')[1]"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:location">
                                                 <tr>
                                                     <th>
                                                         Longitude
@@ -264,6 +300,8 @@
                                                         <xsl:value-of select="tokenize(./tei:location/tei:geo, ', ')[2]"/>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:listEvent">
                                                 <tr>
                                                     <th>
                                                         Mentioned in
@@ -280,6 +318,7 @@
                                                         </ul>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
                                             </tbody>
                                         </table>
                                         

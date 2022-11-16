@@ -100,7 +100,9 @@
                                 <xsl:if test="./tei:persName/tei:surname">
                                     <xsl:value-of select="./tei:persName/tei:surname"/>
                                 </xsl:if>
+                                <xsl:if test="./tei:persName/tei:surname and ./tei:persName/tei:forename">
                                 <xsl:text> </xsl:text>
+                                </xsl:if>
                                 <xsl:if test="./tei:persName/tei:forename">
                                     <xsl:value-of select="./tei:persName/tei:forename"/>
                                 </xsl:if>
@@ -161,7 +163,7 @@
                             </td>
                             <xsl:choose>
                                 <xsl:when test="./tei:location/tei:geo and ./tei:location/tei:geo != 'None, None'">
-                                    <td class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:placeName}">
+                                    <td class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
                                         <xsl:value-of select="./tei:location/tei:geo"/>
                                     </td>
                                 </xsl:when>
