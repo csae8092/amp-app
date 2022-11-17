@@ -100,8 +100,8 @@
     </xsl:template>
 
     <xsl:template match="tei:listPerson">
-        <div>
-            <table class="table index-table" id="listperson">
+        <div class="index-table">
+            <table class="table" id="listperson">
                  <thead>
                      <tr>
                          <th>
@@ -146,8 +146,8 @@
         </div>
     </xsl:template>
     <xsl:template match="tei:listPlace">
-        <div>
-            <table class="table index-table" id="listplace">
+        <div class="index-table">
+            <table class="table" id="listplace">
                 <thead>
                     <tr>
                         <th>
@@ -205,8 +205,8 @@
         </div>
     </xsl:template>
     <xsl:template match="tei:listOrg">
-        <div>
-            <table class="table index-table" id="listorg">
+        <div class="index-table">
+            <table class="table" id="listorg">
                 <thead>
                     <tr>
                         <th>
@@ -255,8 +255,8 @@
         </div>
     </xsl:template>
     <xsl:template match="tei:listBibl">
-        <div>
-            <table class="table index-table" id="listbibl">
+        <div class="index-table">
+            <table class="table" id="listbibl">
                 <thead>
                     <tr>
                         <th>
