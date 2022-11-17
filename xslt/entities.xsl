@@ -77,10 +77,15 @@
                                                         Place of Birth
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:birth/tei:settlement/@key}.html">
-                                                            <xsl:value-of select="./tei:birth/tei:settlement/tei:placeName"/>
-                                                        </a>
-                                                        
+                                                        <ul>
+                                                            <xsl:for-each select="./tei:birth/tei:settlement">
+                                                                <li>
+                                                                    <a href="{@key}.html">
+                                                                        <xsl:value-of select="./tei:placeName"/>
+                                                                    </a>    
+                                                                </li>
+                                                            </xsl:for-each>    
+                                                        </ul>
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
@@ -100,9 +105,15 @@
                                                         Place of Death
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:death/tei:settlement/@key}.html">
-                                                            <xsl:value-of select="./tei:death/tei:settlement/tei:placeName"/>
-                                                        </a>
+                                                        <ul>
+                                                            <xsl:for-each select="./tei:death/tei:settlement">
+                                                                <li>
+                                                                    <a href="{@key}.html">
+                                                                        <xsl:value-of select="./tei:placeName"/>
+                                                                    </a>            
+                                                                </li>   
+                                                            </xsl:for-each>
+                                                        </ul>
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
@@ -223,9 +234,17 @@
                                                             Located in
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:location[@type='located_in_place']/tei:placeName/@key}.html">
-                                                                <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
-                                                            </a>
+                                                            <ul>
+                                                                <xsl:for-each select="./tei:location[@type='located_in_place']">
+                                                                    
+                                                                    <li>
+                                                                        <a href="{./tei:placeName/@key}.html">
+                                                                            <xsl:value-of select="./tei:placeName"/>
+                                                                        </a>            
+                                                                    </li>
+                                                                    
+                                                                </xsl:for-each>
+                                                            </ul>
                                                         </td>
                                                     </tr>
                                                 </xsl:if> 
@@ -371,14 +390,20 @@
                                                 <xsl:if test="./tei:author">
                                                     <tr>
                                                         <th>
-                                                            Author
+                                                            Author(s)
                                                         </th>
                                                         <td>
-                                                            <a href="{substring-after(./tei:author/@ref, '#')}.html">
-                                                                <xsl:value-of select="./tei:author/tei:persName"/>
-                                                            </a>
+                                                            <ul>
+                                                                <xsl:for-each select="./tei:author">
+                                                                    <li>
+                                                                        <a href="{substring-after(@ref, '#')}.html">
+                                                                            <xsl:value-of select="./tei:persName"/>
+                                                                        </a>        
+                                                                    </li>
+                                                                </xsl:for-each>
+                                                            </ul>
                                                         </td>
-                                                    </tr>
+                                                    </tr>    
                                                 </xsl:if>
                                                 <xsl:if test="./tei:date">
                                                     <tr>
@@ -519,17 +544,23 @@
                                                 </xsl:if>
                                                 <xsl:if test="./tei:location[@type='located_in_place']">
                                                     <xsl:variable name="places" select="document('../data/indices/listplace.xml')//tei:TEI//tei:place"/>
-                                                    <xsl:variable name="key" select="./tei:location[@type='located_in_place']/tei:placeName/@key"/>
-                                                    <xsl:variable name="corr_place" select="$places//id($key)"/>
-                                                    <xsl:variable name="coords" select="tokenize($corr_place/tei:location[@type='coords']/tei:geo, ', ')"/>
                                                     <tr>
                                                         <th>
                                                             Located in
                                                         </th>
-                                                        <td class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:orgName}">
-                                                            <a href="{$key}.html">
-                                                                <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
-                                                            </a>
+                                                        <td>
+                                                            <ul>
+                                                                <xsl:for-each select="./tei:location[@type='located_in_place']">
+                                                                    <xsl:variable name="key" select="./tei:placeName/@key"/>
+                                                                    <xsl:variable name="corr_place" select="$places//id($key)"/>
+                                                                    <xsl:variable name="coords" select="tokenize($corr_place/tei:location[@type='coords']/tei:geo, ', ')"/>
+                                                                    <li class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:orgName}">
+                                                                        <a href="{$key}.html">
+                                                                            <xsl:value-of select="./tei:placeName"/>
+                                                                        </a>
+                                                                    </li>
+                                                                </xsl:for-each>
+                                                            </ul>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
