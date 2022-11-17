@@ -45,7 +45,7 @@
                     
                     <div class="container-fluid">
                         
-                        <xsl:if test="contains($doc_title, 'Places')">
+                        <xsl:if test="contains($doc_title, 'Places') or contains($doc_title, 'Institut')">
                             <div id="tableReload-wrapper">
                                 <svg id="tableReload" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
@@ -61,14 +61,36 @@
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
                 <script src="js/leaflet.js"></script>
-                <script type="text/javascript">
-                    $(document).ready(function () {
-                        createDataTable('listperson');
-                    });
-                    $(document).ready(function () {
-                        leafletDatatable('listplace');
-                    });
-                </script>
+                <xsl:choose>
+                    <xsl:when test="contains($doc_title, 'Persons')">
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                createDataTable('listperson');
+                            });
+                        </script>
+                    </xsl:when>
+                    <xsl:when test="contains($doc_title, 'Places')">
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                leafletDatatable('listplace');
+                            });
+                        </script>
+                    </xsl:when>
+                    <xsl:when test="contains($doc_title, 'Literature')">
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                createDataTable('listbibl');
+                            });
+                        </script>
+                    </xsl:when>
+                    <xsl:when test="contains($doc_title, 'Institut')">
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                leafletDatatable('listorg');
+                            });
+                        </script>
+                    </xsl:when>
+                </xsl:choose>
             </body>
         </html>
     </xsl:template>
@@ -171,6 +193,100 @@
                                     <td></td>
                                 </xsl:otherwise>
                             </xsl:choose>
+                            <td>
+                                <a href="{concat(@xml:id, '.html')}">
+                                    Detail Page
+                                </a>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
+                </tbody>
+            </table>
+        </div>
+    </xsl:template>
+    <xsl:template match="tei:listOrg">
+        <div>
+            <table class="table index-table" id="listorg">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Wikidata ID
+                        </th>
+                        <th>
+                            Located in
+                        </th>
+                        <th>
+                            Read more
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <xsl:for-each select="./tei:org">
+                        <xsl:variable name="places" select="document('../data/indices/listplace.xml')//tei:TEI//tei:place"/>
+                        <xsl:variable name="key" select="./tei:location[@type='located_in_place']/tei:placeName/@key"/>
+                        <xsl:variable name="corr_place" select="$places//id($key)"/>
+                        <xsl:variable name="coords" select="tokenize($corr_place/tei:location[@type='coords']/tei:geo, ', ')"/>
+                        <tr>
+                            <td>
+                                <xsl:value-of select="./tei:orgName"/>
+                            </td>
+                            <td>
+                                <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
+                                    <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                </a>
+                            </td>
+                            <td class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:location[@type='located_in_place']/tei:placeName}">
+                                <a href="{$key}.html">
+                                    <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{concat(@xml:id, '.html')}">
+                                    Detail Page
+                                </a>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
+                </tbody>
+            </table>
+        </div>
+    </xsl:template>
+    <xsl:template match="tei:listBibl">
+        <div>
+            <table class="table index-table" id="listbibl">
+                <thead>
+                    <tr>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Author
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Read more
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <xsl:for-each select="./tei:bibl">
+                        <tr>
+                            <td>
+                                <xsl:value-of select="./tei:title"/>
+                            </td>
+                            <td>
+                                <a href="{substring-after(./tei:author/@ref, '#')}.html">
+                                    <xsl:value-of select="./tei:author/tei:persName"/>
+                                </a>
+                            </td>
+                            <td>
+                                <xsl:value-of select="./tei:date"/>
+                            </td>
                             <td>
                                 <a href="{concat(@xml:id, '.html')}">
                                     Detail Page

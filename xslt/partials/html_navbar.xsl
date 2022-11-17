@@ -50,10 +50,10 @@
                                         <a href="listperson.html" title="Persons" class="nav-link">Persons</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Institutions" class="nav-link">Institutions <small>(in progress)</small></a>
+                                        <a href="listorg.html"  title="Institutions" class="nav-link">Institutions</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Works" class="nav-link">Works <small>(in progress)</small></a>
+                                        <a href="listbibl.html"  title="Works" class="nav-link">Works</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a href="listplace.html" title="Places" class="nav-link">Places</a>

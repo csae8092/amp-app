@@ -77,7 +77,10 @@
                                                         Place of Birth
                                                     </th>
                                                     <td>
-                                                        <xsl:value-of select="./tei:birth/tei:settlement/tei:placeName"/>
+                                                        <a href="{./tei:birth/tei:settlement/@key}.html">
+                                                            <xsl:value-of select="./tei:birth/tei:settlement/tei:placeName"/>
+                                                        </a>
+                                                        
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
@@ -97,7 +100,9 @@
                                                         Place of Death
                                                     </th>
                                                     <td>
-                                                        <xsl:value-of select="./tei:death/tei:settlement/tei:placeName"/>
+                                                        <a href="{./tei:death/tei:settlement/@key}.html">
+                                                            <xsl:value-of select="./tei:death/tei:settlement/tei:placeName"/>
+                                                        </a>
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
@@ -218,7 +223,7 @@
                                                             Located in
                                                         </th>
                                                         <td>
-                                                            <a href="{concat(./tei:location[@type='located_in_place']/tei:placeName/@key, '.html')}">
+                                                            <a href="{./tei:location[@type='located_in_place']/tei:placeName/@key}.html">
                                                                 <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
                                                             </a>
                                                         </td>
@@ -317,6 +322,268 @@
                                                         </ul>
                                                     </td>
                                                 </tr>
+                                                </xsl:if>
+                                            </tbody>
+                                        </table>
+                                        
+                                    </div><!-- .container-fluid -->
+                                    <xsl:call-template name="html_footer"/>
+                                </div><!-- .site -->
+                            </body>
+                        </html>
+                    </xsl:result-document>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($doc_title, 'Literature')">
+                <xsl:for-each select="//tei:bibl">
+                    <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
+                    <xsl:result-document href="{$doc_url}">
+                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
+                        <html>
+                            <head>
+                                <xsl:call-template name="html_head">
+                                    <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
+                                </xsl:call-template>                
+                                <meta name="docTitle" class="staticSearch_docTitle">
+                                    <xsl:attribute name="content">
+                                        <xsl:value-of select="$doc_title"/>
+                                    </xsl:attribute>
+                                </meta>
+                            </head>
+                            <body class="page">
+                                <div class="hfeed site" id="page">
+                                    <xsl:call-template name="nav_bar"/>
+                                    
+                                    <div class="container-fluid">  
+                                        
+                                        <table class="table entity-table">
+                                            <tbody>
+                                                <xsl:if test="./tei:title">
+                                                    <tr>
+                                                        <th>
+                                                            Title
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="./tei:title"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:author">
+                                                    <tr>
+                                                        <th>
+                                                            Author
+                                                        </th>
+                                                        <td>
+                                                            <a href="{substring-after(./tei:author/@ref, '#')}.html">
+                                                                <xsl:value-of select="./tei:author/tei:persName"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:date">
+                                                    <tr>
+                                                        <th>
+                                                            Date
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="./tei:date"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:biblScope[@type='volume']">
+                                                    <tr>
+                                                        <th>
+                                                            Volume
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="./tei:biblScope[@type='volume']"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:biblScope[@type='chapter']">
+                                                    <tr>
+                                                        <th>
+                                                            Chapter
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="./tei:biblScope[@type='chapter']"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='GND']">
+                                                    <tr>
+                                                        <th>
+                                                            GND
+                                                        </th>
+                                                        <td>
+                                                            <a href="{./tei:idno[@type='GND']}" target="_blank">
+                                                                <xsl:value-of select="./tei:idno[@type='GND']"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                    <tr>
+                                                        <th>
+                                                            Wikidata
+                                                        </th>
+                                                        <td>
+                                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
+                                                                <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:lang">
+                                                    <tr>
+                                                        <th>
+                                                            Language
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="./tei:lang"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:listEvent">
+                                                    <tr>
+                                                        <th>
+                                                            Mentioned in
+                                                        </th>
+                                                        <td>
+                                                            <ul>
+                                                                <xsl:for-each select="./tei:listEvent/tei:event">
+                                                                    <li>
+                                                                        <a href="{replace(replace(./tei:linkGrp/tei:link/@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}">
+                                                                            <xsl:value-of select="./tei:p/tei:title"/>
+                                                                        </a>
+                                                                    </li>
+                                                                </xsl:for-each>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                            </tbody>
+                                        </table>
+                                        
+                                    </div><!-- .container-fluid -->
+                                    <xsl:call-template name="html_footer"/>
+                                </div><!-- .site -->
+                            </body>
+                        </html>
+                    </xsl:result-document>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:when test="contains($doc_title, 'Institut')">
+                <xsl:for-each select="//tei:org">
+                    <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
+                    <xsl:result-document href="{$doc_url}">
+                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
+                        <html>
+                            <head>
+                                <xsl:call-template name="html_head">
+                                    <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
+                                </xsl:call-template>                
+                                <meta name="docTitle" class="staticSearch_docTitle">
+                                    <xsl:attribute name="content">
+                                        <xsl:value-of select="$doc_title"/>
+                                    </xsl:attribute>
+                                </meta>
+                            </head>
+                            <body class="page">
+                                <div class="hfeed site" id="page">
+                                    <xsl:call-template name="nav_bar"/>
+                                    
+                                    <div class="container-fluid">  
+                                        
+                                        <table class="table entity-table">
+                                            <tbody>
+                                                <xsl:if test="./tei:orgName">
+                                                    <tr>
+                                                        <th>
+                                                            Name
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="./tei:orgName"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:desc">
+                                                    <tr>
+                                                        <th>
+                                                            Description
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="./tei:desc"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:location[@type='located_in_place']">
+                                                    <xsl:variable name="places" select="document('../data/indices/listplace.xml')//tei:TEI//tei:place"/>
+                                                    <xsl:variable name="key" select="./tei:location[@type='located_in_place']/tei:placeName/@key"/>
+                                                    <xsl:variable name="corr_place" select="$places//id($key)"/>
+                                                    <xsl:variable name="coords" select="tokenize($corr_place/tei:location[@type='coords']/tei:geo, ', ')"/>
+                                                    <tr>
+                                                        <th>
+                                                            Located in
+                                                        </th>
+                                                        <td class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:location[@type='located_in_place']/tei:placeName}">
+                                                            <a href="{$key}.html">
+                                                                <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='GND']">
+                                                    <tr>
+                                                        <th>
+                                                            GND
+                                                        </th>
+                                                        <td>
+                                                            <a href="{./tei:idno[@type='GND']}" target="_blank">
+                                                                <xsl:value-of select="./tei:idno[@type='GND']"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                    <tr>
+                                                        <th>
+                                                            Wikidata
+                                                        </th>
+                                                        <td>
+                                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
+                                                                <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:note">
+                                                    <tr>
+                                                        <th>
+                                                            Comments
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="./tei:note"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:listEvent">
+                                                    <tr>
+                                                        <th>
+                                                            Mentioned in
+                                                        </th>
+                                                        <td>
+                                                            <ul>
+                                                                <xsl:for-each select="./tei:listEvent/tei:event">
+                                                                    <li>
+                                                                        <a href="{replace(replace(./tei:linkGrp/tei:link/@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}">
+                                                                            <xsl:value-of select="./tei:p/tei:title"/>
+                                                                        </a>
+                                                                    </li>
+                                                                </xsl:for-each>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
                                                 </xsl:if>
                                             </tbody>
                                         </table>
