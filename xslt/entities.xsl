@@ -526,7 +526,7 @@
                                                         <th>
                                                             Located in
                                                         </th>
-                                                        <td class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:location[@type='located_in_place']/tei:placeName}">
+                                                        <td class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:orgName}">
                                                             <a href="{$key}.html">
                                                                 <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
                                                             </a>
