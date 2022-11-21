@@ -11,18 +11,26 @@ function leafletDatatable(table) {
         maxZoom: 18,
         zIndex: 1
     }).addTo(mymap);
+
+    
     
     // create labels for each coordinate existing lat long coordinate
     var markers = L.markerClusterGroup();
-    var markersStart = L.markerClusterGroup();
-    getCoordinates();
-    mymap.addLayer(markers);
-    try {
-        mymap.fitBounds(markers.getBounds());
-    } catch (err) {
-        console.log(err);
-    }
-                 
+    // var markersStart = L.markerClusterGroup();
+
+    var objects = new L.GeoJSON.AJAX(['geo/listplace.geojson'], {onEachFeature:popUp});
+    objects.on('data:loaded', function () {
+        markers.addLayer(objects);
+        mymap.addLayer(markers);
+        try {
+            mymap.fitBounds(markers.getBounds());
+        } catch (err) {
+            console.log(err);
+        }
+    });
+
+    // getCoordinates();
+               
     // variable id #tableOne must match table id in html
     var tableOne = $('#' + table)
     .DataTable({
@@ -38,52 +46,57 @@ function leafletDatatable(table) {
         keepConditions: true
     });
     
-    tableOne.on('search.dt', function() {
-        markers.clearLayers();
-        getCoordinates();
-        mymap.addLayer(markers);
-        try {
-            mymap.fitBounds(markers.getBounds());
-        } catch (err) {
-            console.log(err);
-        }
+    // tableOne.on('search.dt', function() {
+    //     markers.clearLayers();
+    //     getCoordinates();
+    //     mymap.addLayer(markers);
+    //     try {
+    //         mymap.fitBounds(markers.getBounds());
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
 
-    });
+    // });
     
-    tableOne.on('page.dt', function() {
-        markers.clearLayers();
-        getCoordinates();
-        mymap.addLayer(markers);
-        try {
-            mymap.fitBounds(markers.getBounds());
-        } catch (err) {
-            console.log(err);
-        }
-    });
+    // tableOne.on('page.dt', function() {
+    //     markers.clearLayers();
+    //     getCoordinates();
+    //     mymap.addLayer(markers);
+    //     try {
+    //         mymap.fitBounds(markers.getBounds());
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // });
 
-    $("#tableReload").on('click', function() {
-        markers.clearLayers();
-        markers = markersStart;
-        mymap.addLayer(markers);
-        try {
-            mymap.fitBounds(markers.getBounds());
-        } catch (err) {
-            console.log(err);
-        }
-    });
+    // $("#tableReload").on('click', function() {
+    //     markers.clearLayers();
+    //     markers = markersStart;
+    //     mymap.addLayer(markers);
+    //     try {
+    //         mymap.fitBounds(markers.getBounds());
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // });
 
-    function getCoordinates() {     
-        var second = false;   
-        document.body.querySelectorAll('.map-coordinates').forEach(function(node) {
-            var lat = node.getAttribute('lat');
-            var long = node.getAttribute('long');
-            var place = node.getAttribute('subtitle');
-            markers.addLayer(L.marker([lat,long]).bindPopup(place));
-            if (second == false) {
-                markersStart.addLayer(L.marker([lat,long]).bindPopup(place));
-                // console.log("added second layer");
-            }
-        });       
-        second = true;
+    // function getCoordinates() {      
+    //     document.body.querySelectorAll('.map-coordinates').forEach(function(node) {
+    //         var lat = node.getAttribute('lat');
+    //         var long = node.getAttribute('long');
+    //         var place = node.getAttribute('subtitle');
+    //         markers.addLayer(L.marker([lat,long]).bindPopup(place));
+    //         markersStart.addLayer(L.marker([lat,long]).bindPopup(place));
+    //         console.log("added second layer");
+    //     });       
+    // }
+
+    function popUp(f, l) {
+        var out = [];
+        if (f.properties) {
+            out.push("Placename: " + f.properties['title'] + ', ' + f.properties['country_code']);
+            out.push(`<a href='${f.properties['id']}.html'>Read more</a>`);    
+            l.bindPopup(out.join("<br />"));
+        }
     }
 }
