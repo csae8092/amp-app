@@ -6,5 +6,6 @@ wget https://github.com/Auden-Musulin-Papers/amp-entities/archive/refs/heads/mai
 unzip main
 mkdir ./data/indices
 mv amp-entities-main/out/*.xml ./data/indices
+mv amp-entities-main/out/*.geojson ./data/indices
 rm -rf amp-entities-main
 rm main.zip

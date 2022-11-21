@@ -123,7 +123,7 @@
                                     <xsl:value-of select="./tei:persName/tei:surname"/>
                                 </xsl:if>
                                 <xsl:if test="./tei:persName/tei:surname and ./tei:persName/tei:forename">
-                                <xsl:text> </xsl:text>
+                                <xsl:text>, </xsl:text>
                                 </xsl:if>
                                 <xsl:if test="./tei:persName/tei:forename">
                                     <xsl:value-of select="./tei:persName/tei:forename"/>
