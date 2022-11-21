@@ -18,23 +18,15 @@ function leafletDatatable(table) {
     var markers = L.markerClusterGroup();
 
     var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
-    objects.on('data:loaded', function () {
-        markers.addLayer(objects);
-        mymap.addLayer(markers);
-        try {
-            mymap.fitBounds(markers.getBounds());
-        } catch (err) {
-            console.log(err);
-        }
-    });
-
-    var baseLayers = {
-        'Map': tiles
-    };
-    var overlays = {
-        "All Places": objects
-    };
-    var layerControl = L.control.layers(baseLayers, overlays).addTo(mymap);
+    // objects.on('data:loaded', function () {
+    //     markers.addLayer(objects);
+    //     mymap.addLayer(markers);
+    //     try {
+    //         mymap.fitBounds(markers.getBounds());
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // });
                
     // variable id #tableOne must match table id in html
     var tableOne = $('#' + table)
@@ -87,6 +79,14 @@ function leafletDatatable(table) {
             console.log(err);
         }
     });
+
+    var baseLayers = {
+        'Map': tiles
+    };
+    var overlays = {
+        "All Places": objects
+    };
+    var layerControl = L.control.layers(baseLayers, overlays).addTo(mymap);
 
     $("#tableReload-wrapper").on('click', function() {
         var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});

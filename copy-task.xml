@@ -7,8 +7,8 @@
     <property name="data_editions_p" value="${basedir}/data/editions/photos"/>
     <property name="data_editions_am" value="${basedir}/data/editions/additional-materials"/>
     <property name="xsl_editions" value="${basedir}/xslt/preprocess.xsl"/>
-    <project name="indices" value="${basedir}/data/indices"/>
-    <project name="geojson" value="${basedir}/html/geo"/>
+    <property name="indices" value="${basedir}/data/indices"/>
+    <property name="geojson" value="${basedir}/html/geo"/>
 
     <!-- <delete dir="${data_editions_sr}"/>
     <mkdir dir="${data_editions_sr}"/>
