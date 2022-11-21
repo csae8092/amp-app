@@ -40,7 +40,7 @@ function leafletDatatable(table) {
     var tableOne = $('#' + table)
     .DataTable({
          "language": {
-            "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/German.json"
+            "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json"
              },
          dom: 'fpBirtp',
         buttons:['copy', 'excel', 'pdf'],
@@ -108,7 +108,7 @@ function leafletDatatable(table) {
             var long = node.getAttribute('long');
             var id = node.getAttribute('id');
             var country = node.getAttribute('data-country');
-            var place = `Placename: ${node.getAttribute('subtitle')} ,${country}<br/><a href="${id}.html">Read more</a>`;
+            var place = `Placename: ${node.getAttribute('subtitle')}, ${country}<br/><a href="${id}.html">Read more</a>`;
             markers.addLayer(L.marker([lat,long]).bindPopup(place));
         });       
     }
