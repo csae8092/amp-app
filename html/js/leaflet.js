@@ -6,7 +6,7 @@ function leafletDatatable(table) {
     var longStart = document.body.querySelectorAll('.map-coordinates')[0].getAttribute('long');
     var mymap = L.map('leaflet-map-one').setView([latStart,longStart], 2);
     
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: 'Map data &amp;copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>',
         maxZoom: 18,
         zIndex: 1
@@ -16,9 +16,8 @@ function leafletDatatable(table) {
     
     // create labels for each coordinate existing lat long coordinate
     var markers = L.markerClusterGroup();
-    // var markersStart = L.markerClusterGroup();
 
-    var objects = new L.GeoJSON.AJAX(['geo/listplace.geojson'], {onEachFeature:popUp});
+    var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
     objects.on('data:loaded', function () {
         markers.addLayer(objects);
         mymap.addLayer(markers);
@@ -29,7 +28,13 @@ function leafletDatatable(table) {
         }
     });
 
-    // getCoordinates();
+    var baseLayers = {
+        'Map': tiles
+    };
+    var overlays = {
+        "All Places": objects
+    };
+    var layerControl = L.control.layers(baseLayers, overlays).addTo(mymap);
                
     // variable id #tableOne must match table id in html
     var tableOne = $('#' + table)
@@ -46,50 +51,51 @@ function leafletDatatable(table) {
         keepConditions: true
     });
     
-    // tableOne.on('search.dt', function() {
-    //     markers.clearLayers();
-    //     getCoordinates();
-    //     mymap.addLayer(markers);
-    //     try {
-    //         mymap.fitBounds(markers.getBounds());
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-
-    // });
+    tableOne.on('search.dt', function(el) {
+        console.log(el);
+        markers.clearLayers();
+        getCoordinates();
+        mymap.addLayer(markers);
+        try {
+            mymap.fitBounds(markers.getBounds());
+        } catch (err) {
+            console.log(err);
+        }
+    });
     
-    // tableOne.on('page.dt', function() {
-    //     markers.clearLayers();
-    //     getCoordinates();
-    //     mymap.addLayer(markers);
-    //     try {
-    //         mymap.fitBounds(markers.getBounds());
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // });
+    tableOne.on('page.dt', function() {
+        markers.clearLayers();
+        getCoordinates();
+        mymap.addLayer(markers);
+        try {
+            mymap.fitBounds(markers.getBounds());
+        } catch (err) {
+            console.log(err);
+        }
+    });
 
-    // $("#tableReload").on('click', function() {
-    //     markers.clearLayers();
-    //     markers = markersStart;
-    //     mymap.addLayer(markers);
-    //     try {
-    //         mymap.fitBounds(markers.getBounds());
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // });
+    $("#tableReload-wrapper").on('click', function() {
+        var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
+        markers.clearLayers();
+        objects.on('data:loaded', function () {
+            markers.addLayer(objects);
+            mymap.addLayer(markers);
+            try {
+                mymap.fitBounds(markers.getBounds());
+            } catch (err) {
+                console.log(err);
+            }
+        });
+    });
 
-    // function getCoordinates() {      
-    //     document.body.querySelectorAll('.map-coordinates').forEach(function(node) {
-    //         var lat = node.getAttribute('lat');
-    //         var long = node.getAttribute('long');
-    //         var place = node.getAttribute('subtitle');
-    //         markers.addLayer(L.marker([lat,long]).bindPopup(place));
-    //         markersStart.addLayer(L.marker([lat,long]).bindPopup(place));
-    //         console.log("added second layer");
-    //     });       
-    // }
+    function getCoordinates() {      
+        document.body.querySelectorAll('.map-coordinates').forEach(function(node) {
+            var lat = node.getAttribute('lat');
+            var long = node.getAttribute('long');
+            var place = node.getAttribute('subtitle');
+            markers.addLayer(L.marker([lat,long]).bindPopup(place));
+        });       
+    }
 
     function popUp(f, l) {
         var out = [];
