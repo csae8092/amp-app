@@ -51,15 +51,29 @@ function leafletDatatable(table) {
         keepConditions: true
     });
     
-    tableOne.on('search.dt', function(el) {
-        console.log(el);
-        markers.clearLayers();
-        getCoordinates();
-        mymap.addLayer(markers);
-        try {
-            mymap.fitBounds(markers.getBounds());
-        } catch (err) {
-            console.log(err);
+    tableOne.on('search.dt', function(e) {
+        var value = $('.dataTables_filter input').val();
+        if (e && value.length != 0) {
+            markers.clearLayers();
+            getCoordinates();
+            mymap.addLayer(markers);
+            try {
+                mymap.fitBounds(markers.getBounds());
+            } catch (err) {
+                console.log(err);
+            }
+        } else if (e && value.length == 0) {
+            markers.clearLayers();
+            var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
+            objects.on('data:loaded', function () {
+                markers.addLayer(objects);
+                mymap.addLayer(markers);
+                try {
+                    mymap.fitBounds(markers.getBounds());
+                } catch (err) {
+                    console.log(err);
+                }
+            });
         }
     });
     
@@ -92,7 +106,9 @@ function leafletDatatable(table) {
         document.body.querySelectorAll('.map-coordinates').forEach(function(node) {
             var lat = node.getAttribute('lat');
             var long = node.getAttribute('long');
-            var place = node.getAttribute('subtitle');
+            var id = node.getAttribute('id');
+            var country = node.getAttribute('data-country');
+            var place = `Placename: ${node.getAttribute('subtitle')} ,${country}<br/><a href="${id}.html">Read more</a>`;
             markers.addLayer(L.marker([lat,long]).bindPopup(place));
         });       
     }
