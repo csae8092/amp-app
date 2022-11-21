@@ -29,8 +29,9 @@ jobs:
         ant -f copy-task.xml
     - name: Add attributes
       run: |
-        pip install acdh-tei-pyutils
+        pip install -r requirements.txt
         ./attributes.sh
+        ./denormalize.sh
     - name: Build
       run: |
         ant

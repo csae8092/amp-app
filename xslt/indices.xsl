@@ -169,6 +169,7 @@
                 </thead>
                 <tbody>
                     <xsl:for-each select="./tei:place">
+                        <xsl:variable name="count" select="count(./tei:listEven/tei:event)"/>
                         <xsl:variable name="coords" select="tokenize(./tei:location[@type='coords']/tei:geo, ', ')"/>
                         <tr>
                             <td>
@@ -188,7 +189,7 @@
                             </td>
                             <xsl:choose>
                                 <xsl:when test="./tei:location/tei:geo and ./tei:location/tei:geo != 'None, None'">
-                                    <td class="map-coordinates" id="{@xml:id}" data-country="{substring-before(./tei:country, ', ')}" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
+                                    <td class="map-coordinates" id="{@xml:id}" data-count="{$count}" data-country="{substring-before(./tei:country, ', ')}" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
                                         <xsl:value-of select="./tei:location/tei:geo"/>
                                     </td>
                                 </xsl:when>
