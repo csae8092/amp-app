@@ -12,7 +12,7 @@ function leafletDatatable(table) {
         zIndex: 1
     }).addTo(mymap);
 
-    
+    mymap.addControl(new L.Control.Fullscreen());
     
     // create labels for each coordinate existing lat long coordinate
     var markers = L.markerClusterGroup();
