@@ -53,7 +53,7 @@ function leafletDatatable(table) {
     
     tableOne.on('search.dt', function(e) {
         var value = $('.dataTables_filter input').val();
-        if (e && value.length != 0) {
+        if (value.length != 0) {
             markers.clearLayers();
             getCoordinates();
             mymap.addLayer(markers);
@@ -62,7 +62,7 @@ function leafletDatatable(table) {
             } catch (err) {
                 console.log(err);
             }
-        } else if (e && value.length == 0) {
+        } else {
             markers.clearLayers();
             var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
             objects.on('data:loaded', function () {
