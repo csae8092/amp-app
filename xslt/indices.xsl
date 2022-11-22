@@ -134,7 +134,7 @@
                             </td>
                             <td>
                                 <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                    <xsl:value-of select="./tei:idno[@type='GND']"/>
+                                    <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
                                 </a>
                             </td>
                             <td>
@@ -184,7 +184,7 @@
                             </td>
                             <td>
                                 <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
-                                    <xsl:value-of select="./tei:idno[@type='GEONAMES']"/>
+                                    <xsl:value-of select="tokenize(./tei:idno[@type='GEONAMES'], '/')[4]"/>
                                 </a>
                             </td>
                             <xsl:choose>
@@ -237,7 +237,7 @@
                             </td>
                             <td>
                                 <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                    <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                    <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
                                 </a>
                             </td>
                             <td>
