@@ -124,7 +124,7 @@
                                                     </th>
                                                     <td>
                                                         <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                            <xsl:value-of select="./tei:idno[@type='GND']"/>
+                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -136,7 +136,7 @@
                                                     </th>
                                                     <td>
                                                         <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                            <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                                            <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -275,7 +275,7 @@
                                                     </th>
                                                     <td>
                                                         <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
-                                                            <xsl:value-of select="./tei:idno[@type='GEONAMES']"/>
+                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GEONAMES'], '/')[4]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -287,7 +287,7 @@
                                                     </th>
                                                     <td>
                                                         <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                            <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                                            <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -299,7 +299,7 @@
                                                     </th>
                                                     <td>
                                                         <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                            <xsl:value-of select="./tei:idno[@type='GND']"/>
+                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -442,7 +442,7 @@
                                                         </th>
                                                         <td>
                                                             <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                                <xsl:value-of select="./tei:idno[@type='GND']"/>
+                                                                <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -454,7 +454,7 @@
                                                         </th>
                                                         <td>
                                                             <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                                <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -571,7 +571,7 @@
                                                         </th>
                                                         <td>
                                                             <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                                <xsl:value-of select="./tei:idno[@type='GND']"/>
+                                                                <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -583,7 +583,7 @@
                                                         </th>
                                                         <td>
                                                             <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                                <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>

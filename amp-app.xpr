@@ -14,31 +14,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/indices/listorg.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>indices</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
                                     <String>data/indices/listplace.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>indices</String>
+                                        <String>entities</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -58,7 +38,27 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>indices</String>
+                                        <String>entities</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/indices/listorg.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>entities</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
