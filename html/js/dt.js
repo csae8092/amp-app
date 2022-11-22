@@ -12,7 +12,7 @@ function hideSearchInputs(containerElement, columns) {
     }
 }
 
-function createDataTable(containerElement, order, pageLength) {
+function createDataTable(containerElement, title) {
     
     $(`#${containerElement} thead tr`)
         .clone(true)
@@ -26,7 +26,7 @@ function createDataTable(containerElement, order, pageLength) {
         responsive: true,
         pageLength: 50,
         oLanguage: {
-            "sSearch": "Search titles and dates:"            
+            "sSearch": title
         },
         buttons: [{
             extend: 'copyHtml5',
@@ -55,8 +55,8 @@ function createDataTable(containerElement, order, pageLength) {
                 $(node).removeClass('btn-secondary')
             }
         }],
-        order: order,
-        orderCellsTop: true,
+        // order: order,
+        // orderCellsTop: true,
         fixedHeader: true,
         initComplete: function () {
             var api = this.api();

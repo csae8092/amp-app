@@ -68,7 +68,7 @@
                     <xsl:when test="contains($doc_title, 'Persons')">
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                createDataTable('listperson');
+                                createDataTable('listperson', 'Search:');
                             });
                         </script>
                     </xsl:when>
@@ -82,7 +82,7 @@
                     <xsl:when test="contains($doc_title, 'Literature')">
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                createDataTable('listbibl');
+                                createDataTable('listbibl', 'Search:');
                             });
                         </script>
                     </xsl:when>
@@ -113,33 +113,27 @@
                          <th>
                              GND
                          </th>
-                         <th>
-                             Read more
-                         </th>
                      </tr>
                  </thead>
                  <tbody>
                      <xsl:for-each select="./tei:person">
                         <tr>
                             <td>
-                                <xsl:if test="./tei:persName/tei:surname">
-                                    <xsl:value-of select="./tei:persName/tei:surname"/>
-                                </xsl:if>
-                                <xsl:if test="./tei:persName/tei:surname and ./tei:persName/tei:forename">
-                                <xsl:text>, </xsl:text>
-                                </xsl:if>
-                                <xsl:if test="./tei:persName/tei:forename">
-                                    <xsl:value-of select="./tei:persName/tei:forename"/>
-                                </xsl:if>
+                                <a href="{concat(@xml:id, '.html')}">
+                                    <xsl:if test="./tei:persName/tei:surname">
+                                        <xsl:value-of select="./tei:persName/tei:surname"/>
+                                    </xsl:if>
+                                    <xsl:if test="./tei:persName/tei:surname and ./tei:persName/tei:forename">
+                                    <xsl:text>, </xsl:text>
+                                    </xsl:if>
+                                    <xsl:if test="./tei:persName/tei:forename">
+                                        <xsl:value-of select="./tei:persName/tei:forename"/>
+                                    </xsl:if>
+                                </a>
                             </td>
                             <td>
                                 <a href="{./tei:idno[@type='GND']}" target="_blank">
                                     <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="{concat(@xml:id, '.html')}">
-                                    Detail Page
                                 </a>
                             </td>
                         </tr>
@@ -162,9 +156,6 @@
                         <th>
                             Coordinates
                         </th>
-                        <th>
-                            Read more
-                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -173,14 +164,16 @@
                         <xsl:variable name="coords" select="tokenize(./tei:location[@type='coords']/tei:geo, ', ')"/>
                         <tr>
                             <td>
-                                <xsl:choose>
-                                    <xsl:when test="./tei:settlement/tei:placeName">
-                                        <xsl:value-of select="./tei:settlement/tei:placeName"/>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:value-of select="./tei:placeName"/>
-                                    </xsl:otherwise>
-                                </xsl:choose>
+                                <a href="{concat(@xml:id, '.html')}">
+                                    <xsl:choose>
+                                        <xsl:when test="./tei:settlement/tei:placeName">
+                                            <xsl:value-of select="./tei:settlement/tei:placeName"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="./tei:placeName"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </a>
                             </td>
                             <td>
                                 <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
@@ -188,7 +181,7 @@
                                 </a>
                             </td>
                             <xsl:choose>
-                                <xsl:when test="./tei:location/tei:geo and ./tei:location/tei:geo != 'None, None'">
+                                <xsl:when test="./tei:location/tei:geo">
                                     <td class="map-coordinates" id="{@xml:id}" data-count="{$count}" data-country="{substring-before(./tei:country, ', ')}" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
                                         <xsl:value-of select="./tei:location/tei:geo"/>
                                     </td>
@@ -197,11 +190,6 @@
                                     <td></td>
                                 </xsl:otherwise>
                             </xsl:choose>
-                            <td>
-                                <a href="{concat(@xml:id, '.html')}">
-                                    Detail Page
-                                </a>
-                            </td>
                         </tr>
                     </xsl:for-each>
                 </tbody>
@@ -222,9 +210,6 @@
                         <th>
                             Located in
                         </th>
-                        <th>
-                            Read more
-                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -233,7 +218,9 @@
                         
                         <tr>
                             <td>
-                                <xsl:value-of select="./tei:orgName"/>
+                                <a href="{concat(@xml:id, '.html')}">
+                                    <xsl:value-of select="./tei:orgName"/>
+                                </a>
                             </td>
                             <td>
                                 <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
@@ -253,11 +240,6 @@
                                         </li>
                                     </xsl:for-each>
                                 </ul>
-                            </td>
-                            <td>
-                                <a href="{concat(@xml:id, '.html')}">
-                                    Detail Page
-                                </a>
                             </td>
                         </tr>
                     </xsl:for-each>
@@ -279,16 +261,15 @@
                         <th>
                             Date
                         </th>
-                        <th>
-                            Read more
-                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <xsl:for-each select="./tei:bibl">
                         <tr>
                             <td>
-                                <xsl:value-of select="./tei:title"/>
+                                <a href="{concat(@xml:id, '.html')}">
+                                    <xsl:value-of select="./tei:title"/>
+                                </a>
                             </td>
                             <td>
                                 <ul>
@@ -303,11 +284,6 @@
                             </td>
                             <td>
                                 <xsl:value-of select="./tei:date"/>
-                            </td>
-                            <td>
-                                <a href="{concat(@xml:id, '.html')}">
-                                    Detail Page
-                                </a>
                             </td>
                         </tr>
                     </xsl:for-each>

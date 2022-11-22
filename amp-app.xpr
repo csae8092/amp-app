@@ -18,7 +18,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>entities</String>
+                                        <String>indices</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
