@@ -43,7 +43,7 @@ function leafletDatatable(table) {
         keepConditions: true
     });
     
-    tableOne.on('search.dt', function(e) {
+    tableOne.on('search.dt', function() {
         var value = $('.dataTables_filter input').val();
         if (value.length != 0) {
             markers.clearLayers();

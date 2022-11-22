@@ -375,7 +375,7 @@
                     <xsl:number level="any" from="tei:body" count="tei:lg"/>
                 </xsl:variable>
                 <xsl:variable name="lines" as="xs:int">
-                    <xsl:number level="any" from="tei:body"/>
+                    <xsl:number level="multiple" from="tei:body"/>
                 </xsl:variable>
                 <xsl:attribute name="href">
                     <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
