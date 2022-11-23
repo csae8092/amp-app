@@ -9,6 +9,7 @@
 /data
 /venv-amp
 .vscode
+fetch_ampdata_entities.sh
 
 
 # Byte-compiled / optimized / DLL files
@@ -146,3 +147,4 @@ desktop.ini
 
 # MacOS
 .DS_Store
+

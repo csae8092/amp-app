@@ -13,9 +13,35 @@ function leafletDatatable(table, panesShow, panesHide) {
     }).addTo(mymap);
 
     mymap.addControl(new L.Control.Fullscreen());
+
+    var cfg = {
+        // radius should be small ONLY if scaleRadius is true (or small radius is intended)
+        // if scaleRadius is false it will be the constant radius used in pixels
+        "radius": 1,
+        "maxOpacity": .5,
+        // scales the radius based on map zoom
+        "scaleRadius": true,
+        // if set to false the heatmap uses the global maximum for colorization
+        // if activated: uses the data maximum within the current map boundaries
+        //   (there will always be a red spot with useLocalExtremas true)
+        "useLocalExtrema": true,
+        // which field name in your data represents the latitude - default "lat"
+        latField: 'lat',
+        // which field name in your data represents the longitude - default "lng"
+        lngField: 'lng',
+        // which field name in your data represents the data value - default "value"
+        valueField: 'count'
+    };
     
     /* create labels for each coordinate existing lat long coordinate */
     var markers = L.markerClusterGroup();
+    var markers_heat = new HeatmapOverlay(cfg);
+
+    var heatmap_data = getPlaceCountCoords();
+    markers_heat.setData({
+        max: 50,
+        data: heatmap_data
+    });
 
     var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
     // objects.on('data:loaded', function () {
@@ -99,7 +125,8 @@ function leafletDatatable(table, panesShow, panesHide) {
     };
     var overlays = {
         "Places Cluster": markers,
-        "Places": objects
+        "Places": objects,
+        "Heatmap": markers_heat
     };
     var layerControl = L.control.layers(baseLayers, overlays).addTo(mymap);
 
@@ -126,6 +153,26 @@ function leafletDatatable(table, panesShow, panesHide) {
             var place = `Placename: ${node.getAttribute('subtitle')}, ${country}<br/><a href="${id}.html">Read more</a>`;
             markers.addLayer(L.marker([lat,long]).bindPopup(place));
         });       
+    }
+
+    function getPlaceCountCoords() {     
+        var plc_qty = []; 
+        document.body.querySelectorAll('.map-coordinates').forEach(function(node) {
+            var lat = node.getAttribute('lat');
+            var long = node.getAttribute('long');
+            var qty = node.getAttribute('data-count');
+            var plc = {
+                "lat": parseFloat(lat),
+                "lng": parseFloat(long),
+                "count": parseInt(qty)
+            };
+
+            if (qty.length > 0) {
+                plc_qty.push(plc);
+            }
+            
+        });
+        return plc_qty;
     }
 
     function popUp(f, l) {

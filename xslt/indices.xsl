@@ -43,6 +43,8 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
                 <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
                 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+                <script src="https://unpkg.com/heatmap.js@2.0.5/build/heatmap.min.js"></script>
+                <script src="https://unpkg.com/heatmap.js@2.0.5/plugins/leaflet-heatmap/leaflet-heatmap.js"></script>
                 <!--<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script>-->
                 
                 <meta name="docTitle" class="staticSearch_docTitle">
@@ -88,6 +90,7 @@
                         </script>
                     </xsl:when>
                     <xsl:when test="contains($doc_title, 'Places')">
+                        
                         <script src="js/leaflet.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
@@ -253,7 +256,7 @@
                 </thead>
                 <tbody>
                     <xsl:for-each select="./tei:place">
-                        <xsl:variable name="count" select="count(./tei:listEven/tei:event)"/>
+                        <xsl:variable name="count" select="count(./tei:listEvent/tei:event)"/>
                         <xsl:variable name="coords" select="tokenize(./tei:location[@type='coords']/tei:geo, ', ')"/>
                         <tr>
                             <td>
