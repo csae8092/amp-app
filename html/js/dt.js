@@ -28,35 +28,54 @@ function createDataTable(containerElement, title) {
         oLanguage: {
             "sSearch": title
         },
-        buttons: [{
-            extend: 'copyHtml5',
-            text: '<i class="far fa-copy"/>',
-            titleAttr: 'Copy',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary')
+        buttons: [
+            {
+                extend: 'copyHtml5',
+                text: '<i class="far fa-copy"/>',
+                titleAttr: 'Copy',
+                className: 'btn-link',
+                init: function (api, node, config) {
+                    $(node).removeClass('btn-secondary')
+                }
+            },
+            {
+                extend: 'excelHtml5',
+                text: '<i class="far fa-file-excel"/>',
+                titleAttr: 'Excel',
+                className: 'btn-link',
+                init: function (api, node, config) {
+                    $(node).removeClass('btn-secondary')
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                text: '<i class="far fa-file-pdf"/>',
+                titleAttr: 'PDF',
+                className: 'btn-link',
+                init: function (api, node, config) {
+                    $(node).removeClass('btn-secondary')
+                }
             }
+        ],
+        searchPanes: {
+            initCollapsed: false
         },
-        {
-            extend: 'excelHtml5',
-            text: '<i class="far fa-file-excel"/>',
-            titleAttr: 'Excel',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary')
+        columnDefs: [
+            {
+                searchPanes: {
+                    show: true
+                },
+                targets: [3, 4, 5, 6]
+            },
+            {
+                searchPanes: {
+                    show: false
+                },
+                targets: [0, 1, 2, 7, 8]
             }
-        },
-        {
-            extend: 'pdfHtml5',
-            text: '<i class="far fa-file-pdf"/>',
-            titleAttr: 'PDF',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary')
-            }
-        }],
-        // order: order,
-        // orderCellsTop: true,
+        ],
+        //order: order,
+        orderCellsTop: true,
         fixedHeader: true,
         initComplete: function () {
             var api = this.api();

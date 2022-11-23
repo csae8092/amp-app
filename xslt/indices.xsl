@@ -28,7 +28,14 @@
                     crossorigin=""/>
                 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/>
                 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"/>
-                <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+                <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet'/>
+                
+                <!-- ############### datatable ############### -->
+                <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/fc-4.2.1/fh-3.3.1/r-2.4.0/sp-2.1.0/sl-1.5.0/datatables.min.css"/>
+                
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+                <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jszip-2.5.0/dt-1.13.1/b-2.3.3/b-colvis-2.3.3/b-html5-2.3.3/fc-4.2.1/fh-3.3.1/r-2.4.0/sp-2.1.0/sl-1.5.0/datatables.min.js"></script>
                 <!-- ############### leaflet script ################ -->
                 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
                     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
@@ -36,11 +43,18 @@
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
                 <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
                 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+                <!--<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script>-->
+                
                 <meta name="docTitle" class="staticSearch_docTitle">
                     <xsl:attribute name="content">
                         <xsl:value-of select="$doc_title"/>
                     </xsl:attribute>
                 </meta>
+                <style>
+                    .container-fluid {
+                        max-width: 100%;
+                    }
+                </style>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -63,33 +77,37 @@
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
-                <script src="js/leaflet.js"></script>
+                
                 <xsl:choose>
                     <xsl:when test="contains($doc_title, 'Persons')">
+                        <script type="text/javascript" src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                createDataTable('listperson', 'Search:');
+                            createDataTable('listperson', 'Search:', [5, 6, 9, 10], [0, 1, 2, 3, 4, 7, 8], [9, 10]);
                             });
                         </script>
                     </xsl:when>
                     <xsl:when test="contains($doc_title, 'Places')">
+                        <script src="js/leaflet.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                leafletDatatable('listplace');
+                                leafletDatatable('listplace', [5, 6, 7], [0, 1, 2, 3, 4]);
                             });
                         </script>
                     </xsl:when>
                     <xsl:when test="contains($doc_title, 'Literature')">
+                        <script type="text/javascript" src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                createDataTable('listbibl', 'Search:');
+                                createDataTable('listbibl', 'Search:', [1, 2, 4], [0, 3], false);
                             });
                         </script>
                     </xsl:when>
                     <xsl:when test="contains($doc_title, 'Institut')">
+                        <script src="js/leaflet.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                leafletDatatable('listorg');
+                                leafletDatatable('listorg', [2, 3], [0, 1, 4]);
                             });
                         </script>
                     </xsl:when>
@@ -112,6 +130,33 @@
                          </th>
                          <th>
                              GND
+                         </th>
+                         <th>
+                             Wikidata
+                         </th>
+                         <th>
+                             Birth
+                         </th>
+                         <th>
+                             Death
+                         </th>
+                         <th>
+                             Place of birth
+                         </th>
+                         <th>
+                             Place of death
+                         </th>
+                         <th>
+                             Works related count
+                         </th>
+                         <th>
+                             Mentioned in papers count
+                         </th>
+                         <th>
+                             Birth year
+                         </th>
+                         <th>
+                             Death year
                          </th>
                      </tr>
                  </thead>
@@ -136,6 +181,39 @@
                                     <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
                                 </a>
                             </td>
+                            <td>
+                                <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
+                                    <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                </a>
+                            </td>
+                            <td>
+                                <xsl:value-of select="./tei:birth/tei:date/@when-iso"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="./tei:death/tei:date/@when-iso"/>
+                            </td>
+                            <td>
+                                <a href="{./tei:birth/tei:settlement/@key}.html" target="_blank">
+                                    <xsl:value-of select="./tei:birth/tei:settlement/tei:placeName"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{./tei:death/tei:settlement/@key}.html" target="_blank">
+                                    <xsl:value-of select="./tei:death/tei:settlement/tei:placeName"/>
+                                </a>
+                            </td>
+                            <td>
+                                <xsl:value-of select="count(./tei:listBibl/tei:bibl)"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="tokenize(./tei:birth/tei:date/@when-iso, '-')[1]"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="tokenize(./tei:death/tei:date/@when-iso, '-')[1]"/>
+                            </td>
                         </tr>
                      </xsl:for-each>
                  </tbody>
@@ -154,7 +232,22 @@
                             Geonames ID
                         </th>
                         <th>
+                            Wikidata ID
+                        </th>
+                        <th>
+                            GND ID
+                        </th>
+                        <th>
                             Coordinates
+                        </th>
+                        <th>
+                            Type of place
+                        </th>
+                        <th>
+                            Country
+                        </th>
+                        <th>
+                            Located in
                         </th>
                     </tr>
                 </thead>
@@ -180,9 +273,25 @@
                                     <xsl:value-of select="tokenize(./tei:idno[@type='GEONAMES'], '/')[4]"/>
                                 </a>
                             </td>
+                            <td>
+                                <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
+                                    <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{./tei:idno[@type='GND']}" target="_blank">
+                                    <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                </a>
+                            </td>
                             <xsl:choose>
                                 <xsl:when test="./tei:location/tei:geo">
-                                    <td class="map-coordinates" id="{@xml:id}" data-count="{$count}" data-country="{substring-before(./tei:country, ', ')}" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
+                                    <td class="map-coordinates" 
+                                        id="{@xml:id}" 
+                                        data-count="{$count}" 
+                                        data-country="{substring-before(./tei:country, ', ')}" 
+                                        lat="{$coords[1]}" 
+                                        long="{$coords[2]}" 
+                                        subtitle="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
                                         <xsl:value-of select="./tei:location/tei:geo"/>
                                     </td>
                                 </xsl:when>
@@ -190,6 +299,19 @@
                                     <td></td>
                                 </xsl:otherwise>
                             </xsl:choose>
+                            <td>
+                                <xsl:if test="./tei:settlement/@type">
+                                    <xsl:value-of select="concat(./tei:settlement/@type, ', ', ./tei:desc[@type='entity_type'])"/>
+                                </xsl:if>
+                            </td>
+                            <td>
+                                <xsl:value-of select="./tei:country"/>
+                            </td>
+                            <td>
+                                <a href="{./tei:location[@type='located_in_place']/tei:placeName/@key}.html">
+                                    <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
+                                </a>
+                            </td>
                         </tr>
                     </xsl:for-each>
                 </tbody>
@@ -209,6 +331,12 @@
                         </th>
                         <th>
                             Located in
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Comment
                         </th>
                     </tr>
                 </thead>
@@ -233,13 +361,22 @@
                                         <xsl:variable name="key" select="./tei:placeName/@key"/>
                                         <xsl:variable name="corr_place" select="$places//id($key)"/>
                                         <xsl:variable name="coords" select="tokenize($corr_place/tei:location[@type='coords']/tei:geo, ', ')"/>
-                                        <li class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{parent::tei:org/tei:orgName}">
+                                        <li class="map-coordinates" 
+                                            lat="{$coords[1]}" 
+                                            long="{$coords[2]}" 
+                                            subtitle="{parent::tei:org/tei:orgName}">
                                             <a href="{$key}.html">
                                                 <xsl:value-of select="./tei:placeName"/>
                                             </a>
                                         </li>
                                     </xsl:for-each>
                                 </ul>
+                            </td>
+                            <td>
+                                <xsl:value-of select="./tei:desc"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="./tei:note"/>
                             </td>
                         </tr>
                     </xsl:for-each>
@@ -260,6 +397,12 @@
                         </th>
                         <th>
                             Date
+                        </th>
+                        <th>
+                            Wikidata ID
+                        </th>
+                        <th>
+                            Language
                         </th>
                     </tr>
                 </thead>
@@ -283,7 +426,13 @@
                                 </ul>
                             </td>
                             <td>
-                                <xsl:value-of select="./tei:date"/>
+                                <xsl:value-of select="./tei:date/@when"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="./tei:lang"/>
                             </td>
                         </tr>
                     </xsl:for-each>

@@ -1,4 +1,4 @@
-function leafletDatatable(table) {                
+function leafletDatatable(table, panesShow, panesHide) {                
     // display map container
     $('#leaflet-map-one').css({'display': 'flex'});
     // leaflet map:
@@ -31,16 +31,30 @@ function leafletDatatable(table) {
     // variable id #tableOne must match table id in html
     var tableOne = $('#' + table)
     .DataTable({
-         "language": {
-            "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json"
-             },
-         dom: 'fpBirtp',
+        "language": {
+        "url": "https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json"
+            },
+        dom: 'PfpBrtip',
         buttons:['copy', 'excel', 'pdf'],
-         "lengthMenu":[25, 50, 75, 100, "All"],
+        "lengthMenu":[25, 50, 75, 100, "All"],
         responsive: true,
         orderCellsTop: true,
         "pageLength": 50,
-        keepConditions: true
+        keepConditions: true,
+        columnDefs: [
+            {
+                searchPanes: {
+                    show: true
+                },
+                targets: panesShow
+            },
+            {
+                searchPanes: {
+                    show: false
+                },
+                targets: panesHide
+            }
+        ],
     });
     
     tableOne.on('search.dt', function() {
