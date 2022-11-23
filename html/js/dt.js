@@ -57,23 +57,6 @@ function createDataTable(containerElement, title) {
                 }
             }
         ],
-        searchPanes: {
-            initCollapsed: false
-        },
-        columnDefs: [
-            {
-                searchPanes: {
-                    show: true
-                },
-                targets: [3, 4, 5, 6]
-            },
-            {
-                searchPanes: {
-                    show: false
-                },
-                targets: [0, 1, 2, 7, 8]
-            }
-        ],
         //order: order,
         orderCellsTop: true,
         fixedHeader: true,
