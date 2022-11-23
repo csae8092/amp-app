@@ -85,7 +85,7 @@
                         <script type="text/javascript" src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                            createDataTable('listperson', 'Search:', [5, 6, 9, 10], [0, 1, 2, 3, 4, 7, 8], [9, 10]);
+                                createDataTable('listperson', 'Search:', [5, 6, 7, 8, 9, 10], [0, 1, 2, 3, 4], [9, 10]);
                             });
                         </script>
                     </xsl:when>
@@ -94,7 +94,7 @@
                         <script src="js/leaflet.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                leafletDatatable('listplace', [5, 6, 7], [0, 1, 2, 3, 4]);
+                                leafletDatatable('listplace', [5, 6, 7, 8], [0, 1, 2, 3, 4]);
                             });
                         </script>
                     </xsl:when>
@@ -102,7 +102,7 @@
                         <script type="text/javascript" src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                createDataTable('listbibl', 'Search:', [1, 2, 4], [0, 3], false);
+                                createDataTable('listbibl', 'Search:', [1, 2, 5], [0, 3, 4], false);
                             });
                         </script>
                     </xsl:when>
@@ -110,7 +110,7 @@
                         <script src="js/leaflet.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                leafletDatatable('listorg', [2, 3], [0, 1, 4]);
+                                leafletDatatable('listorg', [2, 3, 5], [0, 1, 4]);
                             });
                         </script>
                     </xsl:when>
@@ -252,6 +252,9 @@
                         <th>
                             Located in
                         </th>
+                        <th>
+                            Mentioned in papers count
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -315,6 +318,9 @@
                                     <xsl:value-of select="./tei:location[@type='located_in_place']/tei:placeName"/>
                                 </a>
                             </td>
+                            <td>
+                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
+                            </td>
                         </tr>
                     </xsl:for-each>
                 </tbody>
@@ -341,12 +347,15 @@
                         <th>
                             Comment
                         </th>
+                        <th>
+                            Mentioned in papers count
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
                     <xsl:for-each select="./tei:org">
                         <xsl:variable name="places" select="document('../data/indices/listplace.xml')//tei:TEI//tei:place"/>
-                        
+                        <xsl:variable name="count" select="count(./tei:listEvent/tei:event)"/>
                         <tr>
                             <td>
                                 <a href="{concat(@xml:id, '.html')}">
@@ -366,7 +375,8 @@
                                         <xsl:variable name="coords" select="tokenize($corr_place/tei:location[@type='coords']/tei:geo, ', ')"/>
                                         <li class="map-coordinates" 
                                             lat="{$coords[1]}" 
-                                            long="{$coords[2]}" 
+                                            long="{$coords[2]}"
+                                            data-count="{$count}" 
                                             subtitle="{parent::tei:org/tei:orgName}">
                                             <a href="{$key}.html">
                                                 <xsl:value-of select="./tei:placeName"/>
@@ -380,6 +390,9 @@
                             </td>
                             <td>
                                 <xsl:value-of select="./tei:note"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
                             </td>
                         </tr>
                     </xsl:for-each>
@@ -406,6 +419,9 @@
                         </th>
                         <th>
                             Language
+                        </th>
+                        <th>
+                            Mentioned in papers count
                         </th>
                     </tr>
                 </thead>
@@ -436,6 +452,9 @@
                             </td>
                             <td>
                                 <xsl:value-of select="./tei:lang"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
                             </td>
                         </tr>
                     </xsl:for-each>
