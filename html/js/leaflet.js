@@ -39,11 +39,11 @@ function leafletDatatable(table, panesShow, panesHide) {
 
     var heatmap_data = getPlaceCountCoords();
     markers_heat.setData({
-        max: 50,
+        max: 8,
         data: heatmap_data
     });
 
-    var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
+    var objects = new L.GeoJSON.AJAX([`geo/${table}.geojson`], {onEachFeature:popUp});
     // objects.on('data:loaded', function () {
     //     markers.addLayer(objects);
     //     mymap.addLayer(markers);
@@ -96,7 +96,7 @@ function leafletDatatable(table, panesShow, panesHide) {
             }
         } else {
             markers.clearLayers();
-            var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
+            var objects = new L.GeoJSON.AJAX([`geo/${table}.geojson`], {onEachFeature:popUp});
             objects.on('data:loaded', function () {
                 markers.addLayer(objects);
                 mymap.addLayer(markers);
@@ -131,7 +131,7 @@ function leafletDatatable(table, panesShow, panesHide) {
     var layerControl = L.control.layers(baseLayers, overlays).addTo(mymap);
 
     $("#tableReload-wrapper").on('click', function() {
-        var objects = new L.GeoJSON.AJAX(["geo/listplace.geojson"], {onEachFeature:popUp});
+        var objects = new L.GeoJSON.AJAX([`geo/${table}.geojson`], {onEachFeature:popUp});
         markers.clearLayers();
         objects.on('data:loaded', function () {
             markers.addLayer(objects);
@@ -176,11 +176,27 @@ function leafletDatatable(table, panesShow, panesHide) {
     }
 
     function popUp(f, l) {
+        
         var out = [];
-        if (f.properties) {
-            out.push("Placename: " + f.properties['title'] + ', ' + f.properties['country_code']);
-            out.push(`<a href='${f.properties['id']}.html'>Read more</a>`);    
-            l.bindPopup(out.join("<br />"));
+        if (f.properties['title_plc']) {
+            var plc = f.properties['title_plc'];
+            var org = f.properties['title'];
+            var id = f.properties['id_plc']
+        } else {
+            var plc = f.properties['title'];
+        } 
+
+        if (org) {
+            out.push(org); 
         }
+
+        if (id) {
+            out.push(`<a href='${id}.html'>${plc}</a>` + ', ' + f.properties['country_code']);
+        } else {
+            out.push(plc + ', ' + f.properties['country_code']);
+        }
+
+        out.push(`<a href='${f.properties['id']}.html'>Read more</a>`);
+        l.bindPopup(out.join("<br />"));
     }
 }
