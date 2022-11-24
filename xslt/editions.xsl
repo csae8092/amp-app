@@ -62,6 +62,38 @@
                         <xsl:value-of select="//tei:titleStmt/tei:title[@level='a']"/>
                     </xsl:attribute>
                 </meta>
+                <xsl:if test="//tei:listPlace/tei:place">
+                    <xsl:for-each select="//tei:listPlace/tei:place">
+                        <meta name="Places"
+                            class="staticSearch_feat"
+                            content="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
+                        </meta>
+                    </xsl:for-each>
+                </xsl:if>
+                <xsl:if test="//tei:listPerson/tei:person">
+                    <xsl:for-each select="//tei:listPerson/tei:person">
+                        <meta name="Persons"
+                            class="staticSearch_feat"
+                            content="{concat(./tei:persName/tei:surname, ', ', ./tei:persName/tei:forename)}">
+                        </meta>
+                    </xsl:for-each>
+                </xsl:if>
+                <xsl:if test="//tei:listOrg/tei:org">
+                    <xsl:for-each select="//tei:listOrg/tei:org">
+                        <meta name="Organizations"
+                            class="staticSearch_feat"
+                            content="{./tei:orgName}">
+                        </meta>
+                    </xsl:for-each>
+                </xsl:if>
+                <xsl:if test="//tei:listBibl[not(parent::tei:person)]/tei:bibl">
+                    <xsl:for-each select="//tei:listBibl[not(parent::tei:person)]/tei:bibl">
+                        <meta name="Literature"
+                            class="staticSearch_feat"
+                            content="{./tei:title}">
+                        </meta>
+                    </xsl:for-each>
+                </xsl:if>
                 <style>
                     .transcript {
                         padding: 1em 0;
