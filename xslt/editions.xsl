@@ -178,26 +178,86 @@
     </xsl:template>
      <xsl:template match="tei:rs">
         <xsl:choose>
-            <xsl:when test="@type='person'">
-                <span class="persons entity" data-bs-toggle="modal" data-bs-target="{@ref}">
-                    <xsl:apply-templates/>
-                </span>
+            <xsl:when test="count(tokenize(@ref, ' ')) > 1">
+                <xsl:choose>
+                    <xsl:when test="@type='person'">
+                        <span class="persons">
+                            <xsl:apply-templates/>
+                            <xsl:for-each select="tokenize(@ref, ' ')">
+                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
+                                    <xsl:value-of select="position()"/>
+                                </sup>
+                                <xsl:if test="position() != last()">
+                                    <sup>/</sup>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </span>
+                    </xsl:when>
+                    <xsl:when test="@type='place'">
+                        <span class="places">
+                            <xsl:apply-templates/>
+                            <xsl:for-each select="tokenize(@ref, ' ')">
+                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
+                                    <xsl:value-of select="position()"/>
+                                </sup>
+                                <xsl:if test="position() != last()">
+                                    <sup>/</sup>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </span>
+                    </xsl:when>
+                    <xsl:when test="@type='org'">
+                        <span class="orgs">
+                            <xsl:apply-templates/>
+                            <xsl:for-each select="tokenize(@ref, ' ')">
+                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
+                                    <xsl:value-of select="position()"/>
+                                </sup>
+                                <xsl:if test="position() != last()">
+                                    <sup>/</sup>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </span>
+                    </xsl:when>
+                    <xsl:when test="@type='lit_work'">
+                        <span class="works">
+                            <xsl:apply-templates/>
+                            <xsl:for-each select="tokenize(@ref, ' ')">
+                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
+                                    <xsl:value-of select="position()"/>
+                                </sup>
+                                <xsl:if test="position() != last()">
+                                    <sup>/</sup>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </span>
+                    </xsl:when>
+                </xsl:choose>
             </xsl:when>
-            <xsl:when test="@type='place'">
-                <span class="places entity" data-bs-toggle="modal" data-bs-target="{@ref}">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:when test="@type='org'">
-                <span class="orgs entity" data-bs-toggle="modal" data-bs-target="{@ref}">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:when test="@type='lit_work'">
-                <span class="works entity" data-bs-toggle="modal" data-bs-target="{@ref}">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
+            <xsl:otherwise>
+                <xsl:choose>
+                    <xsl:when test="@type='person'">
+                        <span class="persons entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                            <xsl:apply-templates/>
+                        </span>
+                    </xsl:when>
+                    <xsl:when test="@type='place'">
+                        <span class="places entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                            <xsl:apply-templates/>
+                        </span>
+                    </xsl:when>
+                    <xsl:when test="@type='org'">
+                        <span class="orgs entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                            <xsl:apply-templates/>
+                        </span>
+                    </xsl:when>
+                    <xsl:when test="@type='lit_work'">
+                        <span class="works entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                            <xsl:apply-templates/>
+                        </span>
+                    </xsl:when>
+                </xsl:choose>
+            </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:listPerson">
