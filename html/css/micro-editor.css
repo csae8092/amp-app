@@ -147,12 +147,12 @@ input:checked + .i-slider:before {
     background-color: #DAA4FD;
 }
 
-.works {
-
+.work {
+    font-weight: bold;
 }
 
-.orgs {
-
+.org {
+    font-weight: bold;
 }
 
 .pers {
