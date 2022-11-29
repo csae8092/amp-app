@@ -37,6 +37,9 @@
                                 <xsl:attribute name="src">
                                     <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                 </xsl:attribute>
+                                <xsl:attribute name="alt">
+                                    <xsl:value-of select="//tei:title[@level='a']//text()"/>
+                                </xsl:attribute>
                             </img>                            
                         </div>
                         <div class="card-header">                                                      
