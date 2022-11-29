@@ -142,7 +142,7 @@
                             </div>
                             
                             <!--   add edition text and facsimile   -->
-                             <xsl:for-each select="//tei:div[@xml:id='transcription']">                                             
+                             <xsl:for-each select="//tei:div[@xml:id]">                                             
                                  
                                  <xsl:call-template name="view-type-img"/>
     
