@@ -20,7 +20,7 @@
                 <xsl:value-of select="document-uri(/)"/>
             </xsl:variable>                                
             <!--<xsl:variable name="date" select="//tei:correspAction/tei:date/@when-iso"/>-->
-            <div class="col-md-4" style="padding: 0 !important;">
+            <div class="col-md-3" style="padding: 0 !important;">
                 <a>
                     <xsl:attribute name="href">                                                
                         <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
@@ -43,11 +43,27 @@
                             </img>                            
                         </div>
                         <div class="card-header">                                                      
-                            <p style="padding: .2em!important;margin:0!important;"><xsl:value-of select="//tei:title[@level='a']"/></p>
-                        </div>                                        
+                            <p style="padding: .2em!important;margin:0!important;">
+                                <xsl:value-of select="//tei:title[@level='a']"/>
+                            </p>
+                        </div>
+                        <div class="card-footer" style="display: inline-flex;">
+                            <div style="text-align: left; display: inline; width: 10%;">
+                                <a target="_blank" href="{//tei:publicationStmt/tei:idno}"><i class="fas fa-link"></i></a>
+                            </div>
+                            <div style="text-align: center; display: inline;width: 25%;">
+                                <small>#<xsl:value-of select="//tei:text/@type"/></small>
+                            </div>
+                            <div style="text-align: center; display: inline;width: 40%;">
+                                <small><xsl:value-of select="//tei:text/@hand"/></small>
+                            </div>
+                            <div style="text-align: right; display: inline;width: 25%;">
+                                <i class="fas fa-camera"></i> - <xsl:value-of select="count(//tei:graphic)"/>
+                            </div>
+                        </div>
                     </div>
                 </a>
-            </div>                                
+            </div>
         </xsl:for-each>
     </xsl:template>
 </xsl:stylesheet>
