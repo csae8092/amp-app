@@ -38,7 +38,7 @@ var editor = new LoadEditor({
                 color: "green",
                 html_class: "space",
                 css_class: "whitespace",
-                hide: false,
+                hide: true,
                 chg_citation: 1,
                 features: {
                     all: false,
