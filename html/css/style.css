@@ -1197,14 +1197,11 @@ td > label {
     cursor: pointer;
 }
 
-#aot-navbarNavDropdown li{
+#aot-navbarNavDropdown li {
     width: 100% !important;
     border: none !important;
     justify-content: space-between;
     padding: .5em .5em !important;
-}
-.navBarLetters .table tbody tr td:nth-child(-n+2) {
-    display: none !important;
 }
 
 @keyframes spin {
@@ -1221,6 +1218,9 @@ td > label {
         width: 100% !important;
         max-width: 100% !important;
         display: block;
+    }
+    .dropdown-menu li:nth-child(-n+2) {
+        display: none !important;
     }
     #title-nav .col-md-2, a, h3 {
         text-align: center !important;

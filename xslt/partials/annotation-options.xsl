@@ -77,8 +77,11 @@
                         </svg>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="nav-item dropdown-submenu dropleft">
+                        <li class="nav-item dropdown-submenu">
                             <full-size opt="edition-fullsize"></full-size>
+                        </li>
+                        <li class="nav-item dropdown-submenu">
+                            <image-switch opt="edition-switch"></image-switch>
                         </li>
                         <li class="nav-item dropdown-submenu">
                             <font-size opt="select-fontsize"></font-size>
