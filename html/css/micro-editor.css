@@ -228,3 +228,20 @@ input:checked + .i-slider:before {
 .font-size-14 {
      font-size: 14px !important;
 }
+
+#aot-navbarNavDropdown li {
+    width: 100% !important;
+    border: none !important;
+    padding: .5em .5em !important;
+}
+
+@media (max-width: 576px) {
+    .dropdown-menu li:nth-child(-n+2) {
+            display: none !important;
+     }
+}
+@media (max-width: 768px) { 
+    .dropdown-menu li:nth-child(-n+2) {
+            display: none !important;
+     }
+}
