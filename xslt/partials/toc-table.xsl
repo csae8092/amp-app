@@ -17,10 +17,13 @@
         <table class="table table-striped display" id="tocTable" style="width:100%">
             <thead>
                 <tr>
-                    <th scope="col">Title</th>
+                    <th scope="col" style="width: 18%;">Title</th>
                     <th scope="col">Date</th>
                     <th scope="col">Latest Revisions Data</th>
-                    <th scope="col">Latest Revisions Content</th>
+                    <th scope="col" style="width: 18%;">Latest Revisions Content</th>
+                    <th scope="col"># of Facsimiles</th>
+                    <th scope="col">Document Type</th>
+                    <th scope="col">Document Hand</th>
                 </tr>
             </thead>
             <tbody>
@@ -61,8 +64,17 @@
                             </td>
                             <td>
                                 <xsl:apply-templates/>                                                                                             
+                            </td>
+                            <td>
+                                <xsl:value-of select="count(//tei:graphic)"/>                                                                                             
                             </td>  
-                        </tr>                                                                                                                                             
+                            <td>
+                                <xsl:value-of select="//tei:text/@type"/>                                                                                           
+                            </td>  
+                            <td>
+                                <xsl:value-of select="//tei:text/@hand"/>                                                                                             
+                            </td>  
+                        </tr>
                     </xsl:for-each>
                 </xsl:for-each>
             </tbody>

@@ -167,10 +167,9 @@ input:checked + .i-slider:before {
     content: "(" attr(data) ")";
     color: #444;
     display: block;
-    width: 50px;
+    width: 40px;
     position: absolute;
-    top: 1.5em;
-    right: 2em;
+    left: 3.5em;
 }
 
 #clear-link {

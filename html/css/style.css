@@ -10,6 +10,23 @@ body {
     background: url("../images/letter-background.png") 0 0 repeat;
 }*/
 
+.card-header p {
+    font-size: 14px;
+}
+
+.tocTable_filter label {
+    padding-left: .5em;
+}
+
+#tocTable td, th {
+    font-size: 14px;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+    display: block !important;
+    margin: 0 !important;
+}
+
 .capitalize {
     text-transform: capitalize;
 }
@@ -240,7 +257,6 @@ div.dataTables_filter {
 
 #title-nav {
     border-bottom: 1px dashed #dedede;
-    margin-bottom: 1em;
 }
 
 button.close {
@@ -1181,6 +1197,16 @@ td > label {
     cursor: pointer;
 }
 
+#aot-navbarNavDropdown li{
+    width: 100% !important;
+    border: none !important;
+    justify-content: space-between;
+    padding: .5em .5em !important;
+}
+.navBarLetters .table tbody tr td:nth-child(-n+2) {
+    display: none !important;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -1196,20 +1222,21 @@ td > label {
         max-width: 100% !important;
         display: block;
     }
-    .navBarLetters .table tbody tr {
-        display: grid;
-    }
-    .navBarLetters .table tbody tr td {
-        width: 100% !important;
+    #title-nav .col-md-2, a, h3 {
         text-align: center !important;
-        border: none !important;
-        margin: .5em auto;
-        justify-content: space-between;
-        display: flex;
-        padding: 0 .5em;
+        margin: 0 !important;
+        padding: 0;
     }
-    .navBarLetters .table tbody tr td:nth-child(-n+2) {
-        display: none !important;
+    #title-nav .col-md-8, a, h3 {
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0;
+    }
+    #title-nav {
+        padding-bottom: .5em;
+    }
+    #aot-menu {
+        display: grid;
     }
     .about-text-hidden .table {
         width: 100% !important;
@@ -1268,6 +1295,20 @@ td > label {
     .scroll-link {
         display: none;   
     }
+    .osd-viewer {
+        display: none;
+    }
+    .text-re {
+        max-width: 100% !important;
+    }
+    /*
+    #aot-navbarNavDropdown {
+        display: block;
+    }
+    #aot-options{
+        display: none;
+    }
+    */
 }
 
 /* Medium devices (tablets, 768px and up) */

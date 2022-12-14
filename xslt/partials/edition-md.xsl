@@ -12,31 +12,32 @@
     
     <xsl:template name="edition-md">
         <xsl:param name="doc_title"/>
-        <div class="row hide-reading"> 
+        <div class="row"> 
             <div class="col-md-12">
-                <h5 class="card-text" style="text-align:left;">
+                <h5 class="card-text">
                     <xsl:value-of select="$doc_title"/>                        
-                </h5>                                                                               
+                </h5>
+                
                 <div class="about-text-hidden fade">
-                    <table class="table" style="width:50%;max-width:50%;">
-                        <tbody>
-                            <tr>
-                                <th>PID</th>
-                                <td>
+                    
+                        <dl>
+                          
+                                <dt>PID</dt>
+                                <dd>
                                     <a target="_blank"
                                         title="archived source file"
                                         href="{//tei:publicationStmt/tei:idno[@type='handle']}">
                                         <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='handle']"/>
                                     </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Author</th>
-                                <td><xsl:value-of select="//tei:titleStmt/tei:author"/></td>
-                            </tr>
-                            <tr>
-                                <th>Editor(s)</th>
-                                <td>
+                                </dd>
+                            
+                       
+                                <dt>Author</dt>
+                                <dd><xsl:value-of select="//tei:titleStmt/tei:author"/></dd>
+                            
+                       
+                                <dt>Editor(s)</dt>
+                                <dd>
                                     <ul style="list-style:none; padding-left:0;margin-bottom:0;">
                                         <xsl:for-each select="//tei:titleStmt/tei:editor/tei:name">
                                             <li>
@@ -44,22 +45,22 @@
                                             </li>
                                         </xsl:for-each>                                                               
                                     </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Publisher</th>
-                                <td>
+                                </dd>
+                            
+                         
+                                <dt>Publisher</dt>
+                                <dd>
                                     <xsl:value-of select="concat(
                                         //tei:publicationStmt/tei:publisher,
                                         ', ',
                                         //tei:publicationStmt/tei:pubPlace,
                                         ' ' ,
                                         //tei:publicationStmt/tei:date)"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Download</th>
-                                <td>
+                                </dd>
+                            
+                         
+                                <dt>Download</dt>
+                                <dd>
                                     <ul style="list-style:none;padding-left:0;margin-bottom:0;">
                                         <li style="display:inline;margin-right:1em;">
                                             <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}" title="TEI">
@@ -73,11 +74,11 @@
                                             </a>
                                         </li>
                                     </ul>                                                            
-                                </td>                                                        
-                            </tr>
-                            <tr>
-                                <th>IIIF Endpoint(s)</th>
-                                <td>
+                                </dd>                                                        
+                            
+                            
+                                <dt>IIIF Endpoint(s)</dt>
+                                <dd>
                                     <ul style="list-style:none;margin-bottom:0;padding-left:0;">
                                         <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=info.json'"/> 
                                         <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>                                                            
@@ -90,11 +91,11 @@
                                             </li>                                                                    
                                         </xsl:for-each>   
                                     </ul>                                                                                                                     
-                                </td>
-                            </tr>
-                            <tr>                                                                                                       
-                                <th>Cite this Source (MLA 9th Edition)</th>
-                                <td>
+                                </dd>
+                            
+                                                                                                                                 
+                                <dt>Cite this Source (MLA 9th Edition)</dt>
+                                <dd style="text-align:left !important;">
                                     <xsl:value-of select="concat(
                                         'Andorfer Peter, ', 
                                         replace(//tei:editor/tei:name[1], ',', ''),
@@ -105,27 +106,12 @@
                                     <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
                                         amp.acdh.oeaw.ac.at
                                     </a><xsl:text>.</xsl:text>                                                         
-                                </td>                                                                                                               
-                            </tr>
-                        </tbody>
-                    </table>
+                                </dd>                                                                                                               
+                            
+                        </dl>
+                    
                 </div>
-                <div style="margin-bottom:1em;">
-                    <a style="font-style:italic;cursor:pointer;" id="show-text">show metadata</a>
-                </div>
-                <script type="text/javascript">
-                    $('#show-text').click(function () {
-                        if ($('.about-text-hidden').hasClass('fade') == true) {
-                            $('.about-text-hidden').removeClass('fade')
-                            .addClass('active');
-                            $(this).html('hide metadata');
-                        } else {
-                            $('.about-text-hidden').removeClass('active')
-                            .addClass('fade');
-                            $(this).html('show metadata');
-                        }  
-                    });
-                </script>
+                
             </div>
         </div>
         

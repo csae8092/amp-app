@@ -27,7 +27,7 @@
                     </xsl:attribute>
                     <div class="card index-card" style="margin:.2em !important;">                                 
                         <div class="card-body">
-                            <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=full/,150/0/default.jpg'"/> 
+                            <xsl:variable name="iiif-ext" select="'.jpg?format=thumbnail&amp;height=400&amp;width=400'"/> 
                             <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/> 
                             <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>
                             <div class="text-center">

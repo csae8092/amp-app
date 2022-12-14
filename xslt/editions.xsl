@@ -15,8 +15,6 @@
     <xsl:import href="partials/tei-facsimile.xsl"/>
     <xsl:import href="partials/view-pagination.xsl"/>
     <xsl:import href="partials/view-type.xsl"/>
-    <xsl:import href="partials/annotation-options.xsl"/>
-    <xsl:import href="partials/edition-md.xsl"/>
 
     <xsl:template match="/">
         <xsl:variable name="doc_title">
@@ -131,16 +129,8 @@
                                 
                                 <xsl:call-template name="header-nav"/>
                                 
-                                <!--   adding arche metadata for each edition   -->
-                                <xsl:call-template name="edition-md">
-                                    <xsl:with-param name="doc_title" select="$doc_title"/>
-                                </xsl:call-template>
-                                
-                                <!--   adding annotation view and options   -->
-                                <xsl:call-template name="annotation-options"/>
-                                
                             </div>
-                            
+
                             <!--   add edition text and facsimile   -->
                              <xsl:for-each select="//tei:div[@xml:id]">                                             
                                  
@@ -160,6 +150,7 @@
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
                 <script type="text/javascript" src="js/run.js"></script>
+                <script type="text/javascript" src="js/hide-md.js"></script>
             </body>
         </html>
     </xsl:template>
