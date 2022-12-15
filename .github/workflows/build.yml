@@ -7,6 +7,12 @@ jobs:
   build_pages:
     name: Publish Edition as GitHub Pages Website
     runs-on: ubuntu-latest
+    env:
+      ANT_OPTS: -Xmx5g
+      TYPESENSE_HOST: typesense.acdh-dev.oeaw.ac.at
+      TYPESENSE_PORT: 443
+      TYPESENSE_PROTOCOL: https
+      TYPESENSE_API_KEY: ${{secrets.TYPESENSE_API_KEY}}
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v2
@@ -35,12 +41,9 @@ jobs:
     - name: Build
       run: |
         ant
-    - name: Build Index
+    - name: Build Typesense Index
       run: |
-        ./build_index.sh
-    # - name: Build static search filenames
-    #   run: |
-    #     html/autocomplete-addon/script.sh
+        python make_ts_index.py
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
