@@ -11,6 +11,7 @@
     <property name="editorial-decl" value="./data/meta/editorial-declaration.xml"/>
     <property name="target" value="./html"/>
     <!-- <property name="target_xml" value="./html/xml-view"/> -->
+    <property name="xsl_analytics" value="./xslt/analytics.xsl"/>
     <property name="xsl_indices" value="./xslt/indices.xsl"/>
     <property name="xsl_entities" value="./xslt/entities.xsl"/>
     <property name="xsl_editions" value="./xslt/editions.xsl"/>
@@ -139,6 +140,10 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
     <xslt in="${imprint}" out="${target}/imprint.html" style="${xsl_imprint}">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    <xslt in="${index}" out="${target}/analytics.html" style="${xsl_analytics}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>

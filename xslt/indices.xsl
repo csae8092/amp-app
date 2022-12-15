@@ -128,39 +128,17 @@
             <table class="table" id="listperson">
                  <thead>
                      <tr>
-                         <th>
-                             Name
-                         </th>
-                         <th>
-                             GND
-                         </th>
-                         <th>
-                             Wikidata
-                         </th>
-                         <th>
-                             Birth
-                         </th>
-                         <th>
-                             Death
-                         </th>
-                         <th>
-                             Place of birth
-                         </th>
-                         <th>
-                             Place of death
-                         </th>
-                         <th>
-                             Works related count
-                         </th>
-                         <th>
-                             Mentioned in papers count
-                         </th>
-                         <th>
-                             Birth year
-                         </th>
-                         <th>
-                             Death year
-                         </th>
+                         <th>Name</th>
+                         <th>GND</th>
+                         <th>Wikidata</th>
+                         <th>Birth</th>
+                         <th>Death</th>
+                         <th>Place of birth</th>
+                         <th>Place of death</th>
+                         <th>Works related #</th>
+                         <th>Mentioned in papers #</th>
+                         <th>Birth year</th>
+                         <th>Death year</th>
                      </tr>
                  </thead>
                  <tbody>
@@ -228,33 +206,15 @@
             <table class="table" id="listplace">
                 <thead>
                     <tr>
-                        <th>
-                            Name
-                        </th>
-                        <th>
-                            Geonames ID
-                        </th>
-                        <th>
-                            Wikidata ID
-                        </th>
-                        <th>
-                            GND ID
-                        </th>
-                        <th>
-                            Coordinates
-                        </th>
-                        <th>
-                            Type of place
-                        </th>
-                        <th>
-                            Country
-                        </th>
-                        <th>
-                            Located in
-                        </th>
-                        <th>
-                            Mentioned in papers count
-                        </th>
+                        <th>Name</th>
+                        <th>Geonames ID</th>
+                        <th>Wikidata ID</th>
+                        <th>GND ID</th>
+                        <th>Coordinates</th>
+                        <th>Type of place</th>
+                        <th>Country</th>
+                        <th>Located in</th>
+                        <th>Mentioned in papers #</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -332,24 +292,12 @@
             <table class="table" id="listorg">
                 <thead>
                     <tr>
-                        <th>
-                            Name
-                        </th>
-                        <th>
-                            Wikidata ID
-                        </th>
-                        <th>
-                            Located in
-                        </th>
-                        <th>
-                            Description
-                        </th>
-                        <th>
-                            Comment
-                        </th>
-                        <th>
-                            Mentioned in papers count
-                        </th>
+                        <th>Name</th>
+                        <th>Wikidata ID</th>
+                        <th>Located in</th>
+                        <th>Description</th>
+                        <th>Comment</th>
+                        <th>Mentioned in papers #</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -405,24 +353,12 @@
             <table class="table" id="listbibl">
                 <thead>
                     <tr>
-                        <th>
-                            Title
-                        </th>
-                        <th>
-                            Author
-                        </th>
-                        <th>
-                            Date
-                        </th>
-                        <th>
-                            Wikidata ID
-                        </th>
-                        <th>
-                            Language
-                        </th>
-                        <th>
-                            Mentioned in papers count
-                        </th>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Date</th>
+                        <th>Wikidata ID</th>
+                        <th>Language</th>
+                        <th>Mentioned in papers #</th>
                     </tr>
                 </thead>
                 <tbody>

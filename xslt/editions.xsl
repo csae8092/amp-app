@@ -116,8 +116,8 @@
                     }
                 </style>
                 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
-                <script src="https://unpkg.com/de-micro-editor@0.2.2/dist/de-editor.min.js"></script>
-                <!--<script src="js/dist/de-editor.min.js"></script>-->
+                <!--<script src="https://unpkg.com/de-micro-editor@0.2.2/dist/de-editor.min.js"></script>-->
+                <script src="js/dist/de-editor.min.js"></script>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
