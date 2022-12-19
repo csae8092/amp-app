@@ -16,7 +16,7 @@ Highcharts.getJSON(
 
         for (let x in features) {
 
-            if (features[x].attributes.Role) {
+            if (features[x].attributes.Role == "Sender") {
                 // convert unix date to m/d/y
                 let d = features[x].attributes.Date;
                 let nd = new Date(d);
@@ -83,12 +83,6 @@ Highcharts.getJSON(
         for (let [key, value] of Object.entries(krausD)) {
             kraus.push([Date.UTC(key), value]);
         }
-
-        console.log(auden);
-        console.log(stella);
-        console.log(mendelson);
-        console.log(sullivan);
-        console.log(kraus);
     
         Highcharts.chart('container', {
 
