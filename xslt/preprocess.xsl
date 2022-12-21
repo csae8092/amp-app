@@ -13,10 +13,15 @@
     </xsl:template>
     
     <xsl:template match="tei:p[ancestor::tei:body]">
-        <xsl:copy>
+        <p xmlns="http://www.tei-c.org/ns/1.0">
+            <xsl:for-each select="@*">
+                <xsl:attribute name="{name()}">
+                    <xsl:value-of select="."/>
+                </xsl:attribute>
+            </xsl:for-each>
             <lb xmlns="http://www.tei-c.org/ns/1.0"/>
             <xsl:apply-templates/>
-        </xsl:copy>
+        </p>
     </xsl:template>
     
     

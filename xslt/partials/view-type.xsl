@@ -64,9 +64,9 @@
                                             </xsl:if>
                                             -->
                                             <p class="yes-index" style="{
-                                                if (@hand = '#handwritten') then
-                                                ($hand) else if (@hand = '#typed') then
-                                                ($typed) else if (@hand = '#printed') then
+                                                if (./@hand = '#handwritten') then
+                                                ($hand) else if (./@hand = '#typed') then
+                                                ($typed) else if (./@hand = '#printed') then
                                                 ($printed) else
                                                 ()
                                                 }">
