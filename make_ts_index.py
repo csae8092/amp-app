@@ -131,10 +131,9 @@ for x in tqdm(files, total=len(files)):
                 record['full_text'] += f" {l}"
         if len(record['full_text']) > 0:
             records.append(record)
-        # record['full_text'] = " ".join(''.join(body.itertext()).split())
-        cfts_record['full_text'] = record['full_text']
-        if len(cfts_records['full_text']) > 0:
+            cfts_record['full_text'] = record['full_text']
             cfts_records.append(cfts_record)
+        # record['full_text'] = " ".join(''.join(body.itertext()).split())
 
 make_index = client.collections['amp'].documents.import_(records)
 print(make_index)
