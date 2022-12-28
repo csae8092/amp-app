@@ -14,11 +14,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/editions/photos/amp-transcript__0048.xml</String>
+                                    <String>data/editions/memoirs/amp-transcript__0062.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>analytics</String>
+                                        <String>editions-xml</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -39,6 +39,26 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>editions</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/editions/photos/amp-transcript__0048.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>analytics</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -675,7 +695,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/xslt/editions-xml.xsl</String>
+                                    <String>${pdu}/xslt/preprocess_typesense.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
@@ -696,7 +716,7 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${pd}/html/xml-view/${cfn}.html</String>
+                                    <String>${pd}/test/${cfn}.xml</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>

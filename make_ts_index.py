@@ -90,7 +90,7 @@ def get_entities(ent_type, ent_node, ent_name):
 records = []
 cfts_records = []
 for x in tqdm(files, total=len(files)):
-    doc = TeiReader(x)
+    doc = TeiReader(xml=x,xsl='./xslt/preprocess_typesense.xsl')
     facs = doc.any_xpath('.//tei:body/tei:div/tei:pb/@facs')
     pages = 0
     for p in facs:
