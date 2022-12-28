@@ -119,37 +119,38 @@ for x in tqdm(files, total=len(files)):
             cfts_record['year'] = int(date_str[:4])
         except ValueError:
             pass
-        # get unique persons per page
-        ent_type = "person"
-        ent_name = "persName"
-        record['persons'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
-        cfts_record['persons'] = record['persons']
-        # get unique places per page
-        ent_type = "place"
-        ent_name = "placeName"
-        record['places'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
-        cfts_record['places'] = record['places']
-        # get unique orgs per page
-        ent_type = "org"
-        ent_name = "orgName"
-        record['orgs'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
-        cfts_record['orgs'] = record['orgs']
-        # get unique bibls per page
-        ent_type = "lit_work"
-        ent_name = "title"
-        ent_node = "bibl"
-        record['works'] = get_entities(ent_type=ent_type, ent_node=ent_node, ent_name=ent_name)
-        cfts_record['works'] = record['works']
-        record['full_text'] = ""
+
         if len(body) > 0:
+            # get unique persons per page
+            ent_type = "person"
+            ent_name = "persName"
+            record['persons'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
+            cfts_record['persons'] = record['persons']
+            # get unique places per page
+            ent_type = "place"
+            ent_name = "placeName"
+            record['places'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
+            cfts_record['places'] = record['places']
+            # get unique orgs per page
+            ent_type = "org"
+            ent_name = "orgName"
+            record['orgs'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
+            cfts_record['orgs'] = record['orgs']
+            # get unique bibls per page
+            ent_type = "lit_work"
+            ent_name = "title"
+            ent_node = "bibl"
+            record['works'] = get_entities(ent_type=ent_type, ent_node=ent_node, ent_name=ent_name)
+            cfts_record['works'] = record['works']
+            record['full_text'] = ""
             for p in body:
                 l = " ".join(''.join(p.itertext()).split())
                 record['full_text'] += f" {l}"
-        if len(record['full_text']) > 0:
-            records.append(record)
-            cfts_record['full_text'] = record['full_text']
-            cfts_records.append(cfts_record)
-        # record['full_text'] = " ".join(''.join(body.itertext()).split())
+            if len(record['full_text']) > 0:
+                records.append(record)
+                cfts_record['full_text'] = record['full_text']
+                cfts_records.append(cfts_record)
+            # record['full_text'] = " ".join(''.join(body.itertext()).split())
 
 make_index = client.collections['amp'].documents.import_(records)
 print(make_index)
