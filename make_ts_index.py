@@ -70,7 +70,7 @@ current_schema = {
 
 client.collections.create(current_schema)
 
-def get_entities(ent_type, ent_name):
+def get_entities(ent_type, ent_node, ent_name):
     entities = []
     for p in body:
         e_path = f'.//tei:rs[@type="{ent_type}"]/@ref'
@@ -78,7 +78,7 @@ def get_entities(ent_type, ent_name):
         if len(ent) > 0:
             for r in ent:
                 i = r.replace('#', '')
-                p_path = f'.//tei:{ent_type}[@xml:id="{i}"]/tei:{ent_name}[1]//text()'
+                p_path = f'.//tei:{ent_node}[@xml:id="{i}"]/tei:{ent_name}[1]//text()'
                 entity = " ".join(" ".join(doc.any_xpath(p_path)).split())
                 entities.append(entity)
     entities = set(entities)
@@ -122,22 +122,23 @@ for x in tqdm(files, total=len(files)):
         # get unique persons per page
         ent_type = "person"
         ent_name = "persName"
-        record['persons'] = get_entities(ent_type=ent_type, ent_name=ent_name)
+        record['persons'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
         cfts_record['persons'] = record['persons']
         # get unique places per page
         ent_type = "place"
         ent_name = "placeName"
-        record['places'] = get_entities(ent_type=ent_type, ent_name=ent_name)
+        record['places'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
         cfts_record['places'] = record['places']
         # get unique orgs per page
         ent_type = "org"
         ent_name = "orgName"
-        record['orgs'] = get_entities(ent_type=ent_type, ent_name=ent_name)
+        record['orgs'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
         cfts_record['orgs'] = record['orgs']
         # get unique bibls per page
-        ent_type = "bibl"
+        ent_type = "lit_work"
         ent_name = "title"
-        record['works'] = get_entities(ent_type=ent_type, ent_name=ent_name)
+        ent_node = "bibl"
+        record['works'] = get_entities(ent_type=ent_type, ent_node=ent_node, ent_name=ent_name)
         cfts_record['works'] = record['works']
         record['full_text'] = ""
         if len(body) > 0:
