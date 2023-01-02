@@ -25,73 +25,7 @@
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
-                </xsl:call-template>                
-                <meta name="Date of publication" class="staticSearch_date">
-                    <xsl:choose>
-                        <xsl:when test="//tei:origin/tei:origDate/@notBefore">
-                            <xsl:attribute name="content">
-                                <xsl:value-of select="//tei:origin/tei:origDate/@notBefore"/>
-                            </xsl:attribute>
-                        </xsl:when>
-                        <xsl:when test="//tei:origin/tei:origDate/@when-iso">
-                            <xsl:attribute name="content">
-                                <xsl:value-of select="//tei:origin/tei:origDate/@when-iso"/>
-                            </xsl:attribute>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:attribute name="content">
-                                <xsl:value-of select="//tei:origin/tei:origDate"/>
-                            </xsl:attribute>
-                        </xsl:otherwise>
-                    </xsl:choose>                    
-                </meta>
-                <meta name="docImage" class="staticSearch_docImage">
-                    <xsl:attribute name="content">
-                        <!--<xsl:variable name="iiif-ext" select="'.jp2/full/,200/0/default.jpg'"/> -->
-                        <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=/full/,200/0/default.jpg'"/> 
-                        <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
-                        <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
-                        <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>                        
-                        <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
-                    </xsl:attribute>
-                </meta>
-                <meta name="docTitle" class="staticSearch_docTitle">
-                    <xsl:attribute name="content">
-                        <xsl:value-of select="//tei:titleStmt/tei:title[@level='a']"/>
-                    </xsl:attribute>
-                </meta>
-                <xsl:if test="//tei:listPlace/tei:place">
-                    <xsl:for-each select="//tei:listPlace/tei:place">
-                        <meta name="Places"
-                            class="staticSearch_feat"
-                            content="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
-                        </meta>
-                    </xsl:for-each>
-                </xsl:if>
-                <xsl:if test="//tei:listPerson/tei:person">
-                    <xsl:for-each select="//tei:listPerson/tei:person">
-                        <meta name="Persons"
-                            class="staticSearch_feat"
-                            content="{concat(./tei:persName/tei:surname, ', ', ./tei:persName/tei:forename)}">
-                        </meta>
-                    </xsl:for-each>
-                </xsl:if>
-                <xsl:if test="//tei:listOrg/tei:org">
-                    <xsl:for-each select="//tei:listOrg/tei:org">
-                        <meta name="Organizations"
-                            class="staticSearch_feat"
-                            content="{./tei:orgName}">
-                        </meta>
-                    </xsl:for-each>
-                </xsl:if>
-                <xsl:if test="//tei:listBibl[not(parent::tei:person)]/tei:bibl">
-                    <xsl:for-each select="//tei:listBibl[not(parent::tei:person)]/tei:bibl">
-                        <meta name="Literature"
-                            class="staticSearch_feat"
-                            content="{./tei:title}">
-                        </meta>
-                    </xsl:for-each>
-                </xsl:if>
+                </xsl:call-template>
                 <style>
                     .transcript {
                         padding: 1em 0;
@@ -114,10 +48,15 @@
                     .sticky-navbar {
                         position: relative !important;
                     }
+                    mark{
+                        background: orange;
+                        color: black;
+                    }
                 </style>
                 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
                 <script src="https://unpkg.com/de-micro-editor@0.2.2/dist/de-editor.min.js"></script>
                 <!--<script src="js/dist/de-editor.min.js"></script>-->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -130,7 +69,6 @@
                                 <xsl:call-template name="header-nav"/>
                                 
                             </div>
-
                             <!--   add edition text and facsimile   -->
                              <xsl:for-each select="//tei:div[@xml:id]">                                             
                                  
@@ -151,6 +89,7 @@
                 </div><!-- .site -->
                 <script type="text/javascript" src="js/run.js"></script>
                 <script type="text/javascript" src="js/hide-md.js"></script>
+                <script type="text/javascript" src="js/mark.js"></script>
             </body>
         </html>
     </xsl:template>
@@ -544,7 +483,7 @@
                 <xsl:choose>
                     <xsl:when test="($lines mod 5) = 0">
                         <xsl:attribute name="class">
-                            <xsl:text>linenumbersVisible linenumbers</xsl:text>
+                            <xsl:text>linenumbersVisible linenumbers yes-index</xsl:text>
                         </xsl:attribute>
                         <xsl:attribute name="data-lbnr">
                             <xsl:value-of select="$lines"/>
@@ -552,7 +491,7 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:attribute name="class">
-                            <xsl:text>linenumbersTransparent linenumbers</xsl:text>
+                            <xsl:text>linenumbersTransparent linenumbers yes-index</xsl:text>
                         </xsl:attribute>
                     </xsl:otherwise>
                 </xsl:choose>
@@ -583,7 +522,7 @@
                 <xsl:choose>
                     <xsl:when test="($lines mod 5) = 0">
                         <xsl:attribute name="class">
-                            <xsl:text>linenumbersVisible linenumbers verseline</xsl:text>
+                            <xsl:text>linenumbersVisible linenumbers verseline yes-index</xsl:text>
                         </xsl:attribute>
                         <xsl:attribute name="data-lbnr">
                             <xsl:value-of select="$lines"/>
@@ -591,7 +530,7 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:attribute name="class">
-                            <xsl:text>linenumbersTransparent linenumbers verseline</xsl:text>
+                            <xsl:text>linenumbersTransparent linenumbers verseline yes-index</xsl:text>
                         </xsl:attribute>
                     </xsl:otherwise>
                 </xsl:choose>
