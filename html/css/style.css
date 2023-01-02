@@ -858,9 +858,9 @@ div.text-re div.card-body {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
   width: 100%; /* Full-width */
-  height: 25px; /* Specified height */
+  height: 15px; /* Specified height */
   background: #b59890; /* Grey background */
-  outline: none; /* Remove outline */
+  /* outline: none; */ /* Remove outline */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
 }
@@ -874,20 +874,20 @@ div.text-re div.card-body {
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
-    width: 0; 
-    height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #615a60;
+    width: 0px; 
+    height: 0px; 
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-top: 22px solid #615a60;
     cursor: col-resize; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
     width: 0; 
     height: 0; 
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #615a60;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-top: 22px solid #615a60;
     cursor: col-resize; /* Cursor on hover */
 }
 
