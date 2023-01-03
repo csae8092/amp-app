@@ -68,9 +68,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .linenumbers {
-    font-size: 12px;
-    position: absolute;
-    margin: .4em 0 0 -4.5em;
+    margin: 0 1.5em 0 0;
 }
 
 .linenumbersVisible {
@@ -82,7 +80,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .verseline {
-    margin: .4em 0 0 -7.5em !important;
+    margin: 0 1.5em 0 0;
 }
 
 .numbered > li {
