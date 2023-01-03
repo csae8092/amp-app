@@ -187,10 +187,6 @@ div.dataTables_filter {
     border: 0;
 }
 
-.nav-link {
-    border-color: transparent !important;
-}
-
 
 .navbar .navbar-collapse .navbar-search {
     border-color: #b59890;
@@ -235,6 +231,10 @@ div.dataTables_filter {
 
 .index-link:hover {
     text-decoration: none !important;
+}
+
+.modal-body table th, td {
+    padding: .5em;
 }
 
 /* timeline auden biography */
@@ -492,7 +492,7 @@ h4 {
 
 .nav-link {
     color: #615a60 !important;
-    background-color: transparent !important;
+    /*background-color: transparent !important;*/
 }
 
 .nav-link.active {

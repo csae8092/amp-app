@@ -180,7 +180,7 @@ input:checked + .i-slider:before {
     border-radius: .25rem;
 }
 
-.nav-link {
+.pagination-link {
     background-color: transparent !important;
 }
 
@@ -192,8 +192,12 @@ input:checked + .i-slider:before {
     background-color: #b59890 !important;
 }
 
-.nav-link.btn {
+/*.nav-link.btn {
     background-color: transparent !important;
+}*/
+
+.nav-link {
+    border-color: transparent !important;
 }
 
 .nav-link.btn-backlink {

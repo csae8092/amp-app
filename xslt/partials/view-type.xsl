@@ -43,11 +43,11 @@
                     <xsl:when test="position() = 1">                                                         
                         <div class="pagination-tab tab-pane active" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
                             
-                            <window-resize opt="resizing" pos="{position()}"></window-resize>
+                            <window-resize opt="resizing" pos="{position()}" size="0.755"></window-resize>
 
                             <div id="container-resize-{position()}" class="transcript row">  
                                 
-                                <div id="text-resize-{position()}" class="text-re col-md-6"> 
+                                <div id="text-resize-{position()}" class="text-re col-md-9"> 
                                     <div class="card-body">
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
                                             <!--
@@ -77,7 +77,7 @@
                                 </div>   
                                 
                                 <div id="img-resize-{position()}"
-                                     class="col-md-6 card-header osd-viewer"
+                                     class="col-md-3 card-header osd-viewer"
                                      style="padding: 1em;background-color: #dedede;">                                    
                                     <!--<hr/> -->                                             
                                     <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
@@ -113,10 +113,10 @@
                     <xsl:when test="position() > 1">
                         <div class="pagination-tab tab-pane fade" data-tab="paginate" id="paginate-{position()}" tabindex="-1">
                             
-                            <window-resize opt="resizing" pos="{position()}"></window-resize>
+                            <window-resize opt="resizing" pos="{position()}" size="0.755"></window-resize>
                             
                             <div id="container-resize-{position()}" class="transcript row">
-                                <div id="text-resize-{position()}" class="text-re col-md-6">                                                                
+                                <div id="text-resize-{position()}" class="text-re col-md-9">                                                                
                                     <div class="card-body">
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
                                             <!--
@@ -145,7 +145,7 @@
                                     </div>
                                 </div>                                                     
                                 <div id="img-resize-{position()}" 
-                                    class="col-md-6 card-header osd-viewer"
+                                    class="col-md-3 card-header osd-viewer"
                                     style="padding: 1em;background-color: #dedede;">                                    
                                     <!--<hr/> -->                                             
                                     <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>

@@ -105,6 +105,9 @@
                         <li class="nav-item dropdown-submenu">
                             <annotation-slider opt="whitespace"></annotation-slider>
                         </li>
+                        <li class="nav-item dropdown-submenu" style="border-top: 2px dashed lightgrey !important;">
+                            <annotation-slider opt="entities-features"></annotation-slider>
+                        </li>
                         <li class="nav-item dropdown-submenu">
                             <annotation-slider opt="persons"></annotation-slider>
                         </li>

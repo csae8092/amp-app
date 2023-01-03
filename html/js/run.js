@@ -13,7 +13,7 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-1",
         },
       },
       {
@@ -27,7 +27,7 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-1",
         },
       },
       {
@@ -41,7 +41,7 @@ var editor = new LoadEditor({
         chg_citation: 1,
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-1",
         },
       },
       {
@@ -55,7 +55,7 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-1",
         },
       },
       {
@@ -69,7 +69,21 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: true,
-          class: "all-features",
+          class: "features-1",
+        },
+      },
+      {
+        opt: "entities-features",
+        opt_slider: "entities-features-slider",
+        title: "All Entities",
+        color: "grey",
+        html_class: "undefined",
+        css_class: "undefined",
+        hide: false,
+        chg_citation: "citation-url",
+        features: {
+          all: true,
+          class: "features-2",
         },
       },
       {
@@ -81,7 +95,7 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-2",
         },
       },
       {
@@ -93,7 +107,7 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-2",
         },
       },
       {
@@ -105,7 +119,7 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-2",
         },
       },
       {
@@ -117,7 +131,7 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-2",
         },
       },
     ],
@@ -202,12 +216,12 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         fade: "fade",
         column_small: {
-          class: "col-md-6",
-          percent: "50%",
+          class: "col-md-3",
+          percent: "25",
         },
         column_full: {
           class: "col-md-12",
-          percent: "100%",
+          percent: "100",
         },
         hide: {
           hidden: true,

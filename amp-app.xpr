@@ -18,7 +18,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>editions-xml</String>
+                                        <String>editions</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -54,11 +54,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/editions/photos/amp-transcript__0048.xml</String>
+                                    <String>html/css/style.css</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>analytics</String>
+                                        <String>search</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -79,6 +79,26 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>search</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/editions/photos/amp-transcript__0048.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>analytics</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -179,26 +199,6 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>description</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>html/css/style.css</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>search</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
