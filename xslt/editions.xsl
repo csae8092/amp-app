@@ -54,7 +54,7 @@
                     }
                 </style>
                 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
-                <script src="https://unpkg.com/de-micro-editor@0.2.4/dist/de-editor.min.js"></script>
+                <script src="https://unpkg.com/de-micro-editor@0.2.5/dist/de-editor.min.js"></script>
                 <!--<script src="js/dist/de-editor.min.js"></script>-->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
             </head>
