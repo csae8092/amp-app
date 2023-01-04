@@ -84,9 +84,6 @@ def get_entities(ent_type, ent_node, ent_name):
                     entity = " ".join(" ".join(doc.any_xpath(p_path)).split())
                     if len(entity) != 0:
                         entities.append(entity)
-                    else:
-                        with open("log-entities.txt", "a") as f:
-                            f.write(f"{r}\n")
     entities = set(entities)
     ent = []
     for x in entities:

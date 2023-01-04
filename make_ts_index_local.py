@@ -94,7 +94,7 @@ def get_entities(ent_type, ent_node, ent_name):
                         entities.append(entity)
                     else:
                         with open("log-entities.txt", "a") as f:
-                            f.write(f"{r}\n")
+                            f.write(f"{r} in {record['id']}\n")
     entities = set(entities)
     ent = []
     for x in entities:
