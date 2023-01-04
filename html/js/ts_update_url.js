@@ -1,15 +1,29 @@
 var tsInput = document.querySelector("input[type='search']");
 tsInput.addEventListener("input", updateHeaderUrl);
 
-// setTimeout(() => {
-//   var tsRefInput = document.querySelectorAll(".ais-RefinementList-checkbox");
-//   console.log(typeof tsRefInput);
-//   tsRefInput.forEach((el) => {
-//     console.log(el);
-//     console.log(typeof el);
-//     el.addEventListener("input", updateHeaderUrl);
+function listenToPagination() {
+  setTimeout(() => {
+    var tsPagination = document.querySelectorAll(".ais-Pagination-link");
+    [].forEach.call(tsPagination, function (opt) {
+      opt.removeEventListener("click", updateHeaderUrl);
+      opt.addEventListener("click", updateHeaderUrl);
+    });
+  }, 100);
+}
+setTimeout(() => {
+  listenToPagination();
+}, 100);
+
+// function listenToCheckbox() {
+//   var tsRefInput = document.querySelectorAll("input[type='checkbox']");
+//   [].forEach.call(tsRefInput, function (opt) {
+//     opt.removeEventListener("change", updateHeaderUrl);
+//     opt.addEventListener("change", updateHeaderUrl);
 //   });
-// }, 50);
+// }
+// setTimeout(() => {
+//   listenToCheckbox();
+// }, 100);
 
 function updateHeaderUrl() {
   setTimeout(() => {
@@ -30,7 +44,7 @@ function updateHeaderUrl() {
 
     urlToUpdate.forEach((el) => {
       var urlToUpdateHref = el.getAttribute("href");
-      if (urlToUpdateHref.includes("&mark")) {
+      if (urlToUpdateHref.includes("&mark=")) {
         var newUrl = urlToUpdateHref.replace(
           /&mark=\.+$/,
           `&mark=${tsInputVal}`
@@ -41,5 +55,8 @@ function updateHeaderUrl() {
         el.setAttribute("href", newUrl);
       }
     });
+
+    // listenToCheckbox();
+    listenToPagination();
   }, 500);
 }
