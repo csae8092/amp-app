@@ -7,22 +7,22 @@ from typesense.api_call import ObjectNotFound
 from acdh_tei_pyutils.tei import TeiReader
 from tqdm import tqdm
 
-client = Client({
-    'nodes': [{
-        'host': '0.0.0.0', # For Typesense Cloud use xxx.a1.typesense.net
-        'port': '8108',      # For Typesense Cloud use 443
-        'protocol': 'http'   # For Typesense Cloud use https
-    }],
-    'api_key': 'xyz',
-    'connection_timeout_seconds': 2
-})
+# client = Client({
+#     'nodes': [{
+#         'host': '0.0.0.0', # For Typesense Cloud use xxx.a1.typesense.net
+#         'port': '8108',      # For Typesense Cloud use 443
+#         'protocol': 'http'   # For Typesense Cloud use https
+#     }],
+#     'api_key': 'xyz',
+#     'connection_timeout_seconds': 2
+# })
 
 files = glob.glob('./data/editions/*/*.xml')
 
-try:
-    client.collections['amp'].delete()
-except ObjectNotFound:
-    pass
+# try:
+#     client.collections['amp'].delete()
+# except ObjectNotFound:
+#     pass
 
 current_schema = {
     'name': 'amp',
@@ -76,7 +76,7 @@ current_schema = {
     ]
 }
 
-client.collections.create(current_schema)
+# client.collections.create(current_schema)
 
 def get_entities(ent_type, ent_node, ent_name):
     entities = []
@@ -86,10 +86,15 @@ def get_entities(ent_type, ent_node, ent_name):
         if len(ent) > 0:
             for r in ent:
                 i = r.replace('#', '')
-                p_path = f'.//tei:{ent_node}[@xml:id="{i}"]/tei:{ent_name}[1]//text()'
-                entity = " ".join(" ".join(doc.any_xpath(p_path)).split())
-                if len(entity) != 0:
-                    entities.append(entity)
+                multiRef = i.split()
+                for r in multiRef:
+                    p_path = f'.//tei:{ent_node}[@xml:id="{r}"]//tei:{ent_name}[1]//text()'
+                    entity = " ".join(" ".join(doc.any_xpath(p_path)).split())
+                    if len(entity) != 0:
+                        entities.append(entity)
+                    else:
+                        with open("log-entities.txt", "a") as f:
+                            f.write(f"{r}\n")
     entities = set(entities)
     ent = []
     for x in entities:
@@ -144,6 +149,6 @@ for x in tqdm(files, total=len(files)):
             if len(record['full_text']) > 0:
                 records.append(record)
 
-make_index = client.collections['amp'].documents.import_(records)
-print(make_index)
+# make_index = client.collections['amp'].documents.import_(records)
+# print(make_index)
 print('done with indexing amp')

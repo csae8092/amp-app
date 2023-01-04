@@ -78,10 +78,15 @@ def get_entities(ent_type, ent_node, ent_name):
         if len(ent) > 0:
             for r in ent:
                 i = r.replace('#', '')
-                p_path = f'.//tei:{ent_node}[@xml:id="{i}"]/tei:{ent_name}[1]//text()'
-                entity = " ".join(" ".join(doc.any_xpath(p_path)).split())
-                if len(entity) != 0:
-                    entities.append(entity)
+                multiRef = i.split()
+                for r in multiRef:
+                    p_path = f'.//tei:{ent_node}[@xml:id="{r}"]//tei:{ent_name}[1]//text()'
+                    entity = " ".join(" ".join(doc.any_xpath(p_path)).split())
+                    if len(entity) != 0:
+                        entities.append(entity)
+                    else:
+                        with open("log-entities.txt", "a") as f:
+                            f.write(f"{r}\n")
     entities = set(entities)
     ent = []
     for x in entities:

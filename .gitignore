@@ -11,6 +11,7 @@
 .vscode
 fetch_ampdata_entities.sh
 fetch_data_en.sh
+log-entities.txt
 
 
 # Byte-compiled / optimized / DLL files
