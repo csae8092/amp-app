@@ -80,7 +80,8 @@ def get_entities(ent_type, ent_node, ent_name):
                 i = r.replace('#', '')
                 p_path = f'.//tei:{ent_node}[@xml:id="{i}"]/tei:{ent_name}[1]//text()'
                 entity = " ".join(" ".join(doc.any_xpath(p_path)).split())
-                entities.append(entity)
+                if len(entity) != 0:
+                    entities.append(entity)
     entities = set(entities)
     ent = []
     for x in entities:
