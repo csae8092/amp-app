@@ -77,13 +77,15 @@ def get_entities(ent_type, ent_node, ent_name):
         ent = p.xpath(e_path, namespaces={'tei': "http://www.tei-c.org/ns/1.0"})
         if len(ent) > 0:
             for r in ent:
-                i = r.replace('#', '')
-                multiRef = i.split()
-                for r in multiRef:
-                    p_path = f'.//tei:{ent_node}[@xml:id="{r}"]//tei:{ent_name}[1]//text()'
-                    entity = " ".join(" ".join(doc.any_xpath(p_path)).split())
-                    if len(entity) != 0:
-                        entities.append(entity)
+                multiRef = r.split()
+                for i in multiRef:
+                    i = i.replace('#', '')
+                    p_path = f'.//tei:{ent_node}[@xml:id="{i}"]//tei:{ent_name}[1]'
+                    en = doc.any_xpath(p_path)
+                    if en:
+                        entity = " ".join(" ".join(en[0].xpath(".//text()")).split())
+                        if len(entity) != 0:
+                            entities.append(entity)
     entities = set(entities)
     ent = []
     for x in entities:
