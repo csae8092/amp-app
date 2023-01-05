@@ -39,7 +39,7 @@ function updateHeaderUrl() {
     //   });
     // }
 
-    var urlToUpdate = document.querySelectorAll(".ais-Hits-item h4 a");
+    var urlToUpdate = document.querySelectorAll(".ais-Hits-item h5 a");
     var tsInputVal = tsInput.value;
 
     urlToUpdate.forEach((el) => {

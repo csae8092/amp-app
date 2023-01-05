@@ -33,7 +33,6 @@
                                         <div id="stats-container"></div>
                                         <h4>Full Text Search</h4>
                                         <div id="searchbox"></div>
-                                        <div id="current-refinements"></div>
                                         <div id="clear-refinements"></div>
                                         <h4>Persons</h4>
                                         <div id="refinement-list-persons"></div>
@@ -48,14 +47,13 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div id="sort-by"></div>
+                                        <div id="current-refinements"></div>
                                         <div id="pagination"></div>
                                         <div id="hits"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        
                     </div>
                     
                     <xsl:call-template name="html_footer"/>

@@ -22,7 +22,7 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   //  query_by is required.
   //  filterBy is managed and overridden by InstantSearch.js. To set it, you want to use one of the filter widgets like refinementList or use the `configure` widget.
   additionalSearchParameters: {
-    query_by: "full_text",
+    query_by: "full_text,title",
   },
 });
 
@@ -47,34 +47,34 @@ search.addWidgets([
   instantsearch.widgets.hits({
     container: "#hits",
     templates: {
-      empty: "Keine Ergebnisse",
+      empty: "No results for <q>{{ query }}</q>",
       item: `
-                    <h4><a href="{{ id }}">{{ title }}</a></h4>
-                    <p style="overflow:hidden;max-height:210px;">{{#helpers.snippet}}{ "attribute": "full_text" }{{/helpers.snippet}}</p>
-                    <h5><span class="badge badge-primary">{{ project }}</span></h5>
-                    <div>
-                        <div>
-                            {{#persons}}
-                            <span class="badge badge-secondary">{{ . }}</span>
-                            {{/persons}}
-                        </div>
-                        <div>
-                            {{#works}}
-                            <span class="badge badge-success">{{ . }}</span>
-                            {{/works}}
-                        </div>
-                        <div>
-                            {{#places}}
-                            <span class="badge badge-info">{{ . }}</span>
-                            {{/places}}
-                        </div>
-                        <div>
-                            {{#orgs}}
-                            <span class="badge badge-info">{{ . }}</span>
-                            {{/orgs}}
-                        </div>
-                    </div>
-                `,
+              <h5><a href="{{ id }}">{{#helpers.snippet}}{ "attribute": "title", "highlightedTagName": "mark" }{{/helpers.snippet}}</a></h5>
+              <p style="overflow:hidden;max-height:210px;">{{#helpers.snippet}}{ "attribute": "full_text", "highlightedTagName": "mark" }{{/helpers.snippet}}</p>
+              <h5><span class="badge badge-primary">{{ project }}</span></h5>
+              <div>
+                  <div>
+                      {{#persons}}
+                      <span class="badge badge-secondary">{{ . }}</span>
+                      {{/persons}}
+                  </div>
+                  <div>
+                      {{#works}}
+                      <span class="badge badge-success">{{ . }}</span>
+                      {{/works}}
+                  </div>
+                  <div>
+                      {{#places}}
+                      <span class="badge badge-info">{{ . }}</span>
+                      {{/places}}
+                  </div>
+                  <div>
+                      {{#orgs}}
+                      <span class="badge badge-info">{{ . }}</span>
+                      {{/orgs}}
+                  </div>
+              </div>
+          `,
     },
   }),
 
