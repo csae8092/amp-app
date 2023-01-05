@@ -117,7 +117,12 @@ for x in tqdm(files, total=len(files)):
         try:
             date_str = doc.any_xpath('//tei:origin/tei:origDate/@notBefore')[0]
         except IndexError:
-            date_str = "1000"
+            date_str = doc.any_xpath('//tei:origin/tei:origDate/text()')[0]
+            data_str = date_str.split("--")[0]
+            if len(date_str) > 3:
+                date_str = date_str
+            else:
+                date_str = "1959"
 
         try:
             record['year'] = int(date_str[:4])

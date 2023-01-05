@@ -19,10 +19,10 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   },
   // The following parameters are directly passed to Typesense's search API endpoint.
   //  So you can pass any parameters supported by the search endpoint below.
-  //  queryBy is required.
+  //  query_by is required.
   //  filterBy is managed and overridden by InstantSearch.js. To set it, you want to use one of the filter widgets like refinementList or use the `configure` widget.
   additionalSearchParameters: {
-    queryBy: "full_text",
+    query_by: "full_text",
   },
 });
 
@@ -42,10 +42,6 @@ search.addWidgets([
       submit: "btn",
       reset: "btn",
     },
-  }),
-
-  instantsearch.widgets.configure({
-    hitsPerPage: 8,
   }),
 
   instantsearch.widgets.hits({
@@ -215,12 +211,26 @@ search.addWidgets([
       label: "badge",
     },
   }),
-]);
 
-search.addWidgets([
+  instantsearch.widgets.sortBy({
+    container: "#sort-by",
+    items: [
+      { label: "Default", value: "amp" },
+      { label: "Year (asc)", value: "amp/sort/year:asc" },
+      { label: "Year (desc)", value: "amp/sort/year:desc" },
+    ],
+  }),
+
   instantsearch.widgets.configure({
+    hitsPerPage: 8,
     attributesToSnippet: ["full_text"],
   }),
 ]);
+
+// search.addWidgets([
+//   instantsearch.widgets.configure({
+//     attributesToSnippet: ["full_text:30", "title"],
+//   }),
+// ]);
 
 search.start();
