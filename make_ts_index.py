@@ -72,20 +72,20 @@ client.collections.create(current_schema)
 
 def get_entities(ent_type, ent_node, ent_name):
     entities = []
+    e_path = f'.//tei:rs[@type="{ent_type}"]/@ref'
     for p in body:
-        e_path = f'.//tei:rs[@type="{ent_type}"]/@ref'
         ent = p.xpath(e_path, namespaces={'tei': "http://www.tei-c.org/ns/1.0"})
-        if len(ent) > 0:
-            for r in ent:
-                multiRef = r.split()
-                for i in multiRef:
-                    i = i.replace('#', '')
-                    p_path = f'.//tei:{ent_node}[@xml:id="{i}"]//tei:{ent_name}[1]'
-                    en = doc.any_xpath(p_path)
-                    if en:
-                        entity = " ".join(" ".join(en[0].xpath(".//text()")).split())
-                        if len(entity) != 0:
-                            entities.append(entity)
+        ref = " ".join(ref.replace("#", "") for ref in (ref for ref in ent if len(ent) > 0)).split()
+        for r in ref:
+            p_path = f'.//tei:{ent_node}[@xml:id="{r}"]//tei:{ent_name}[1]'
+            en = doc.any_xpath(p_path)
+            if en:
+                entity = " ".join(" ".join(en[0].xpath(".//text()")).split())
+                if len(entity) != 0:
+                    entities.append(entity)
+                else:
+                    with open("log-entities.txt", "a") as f:
+                        f.write(f"{r} in {record['id']}\n")
     return [ent for ent in sorted(set(entities))]
 
 records = []

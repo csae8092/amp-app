@@ -80,23 +80,20 @@ current_schema = {
 
 def get_entities(ent_type, ent_node, ent_name):
     entities = []
+    e_path = f'.//tei:rs[@type="{ent_type}"]/@ref'
     for p in body:
-        e_path = f'.//tei:rs[@type="{ent_type}"]/@ref'
         ent = p.xpath(e_path, namespaces={'tei': "http://www.tei-c.org/ns/1.0"})
-        if len(ent) > 0:
-            for r in ent:
-                multiRef = r.split()
-                for i in multiRef:
-                    i = i.replace('#', '')
-                    p_path = f'.//tei:{ent_node}[@xml:id="{i}"]//tei:{ent_name}[1]'
-                    en = doc.any_xpath(p_path)
-                    if en:
-                        entity = " ".join(" ".join(en[0].xpath(".//text()")).split())
-                        if len(entity) != 0:
-                            entities.append(entity)
-                        else:
-                            with open("log-entities.txt", "a") as f:
-                                f.write(f"{i} in {record['id']}\n")
+        ref = " ".join(ref.replace("#", "") for ref in (ref for ref in ent if len(ent) > 0)).split()
+        for r in ref:
+            p_path = f'.//tei:{ent_node}[@xml:id="{r}"]//tei:{ent_name}[1]'
+            en = doc.any_xpath(p_path)
+            if en:
+                entity = " ".join(" ".join(en[0].xpath(".//text()")).split())
+                if len(entity) != 0:
+                    entities.append(entity)
+                else:
+                    with open("log-entities.txt", "a") as f:
+                        f.write(f"{r} in {record['id']}\n")
     return [ent for ent in sorted(set(entities))]
 
 records = []
@@ -147,7 +144,6 @@ for x in tqdm(files, total=len(files)):
             ent_node = "bibl"
             record['works'] = get_entities(ent_type=ent_type, ent_node=ent_node, ent_name=ent_name)
             record['full_text'] = "\n".join(" ".join("".join(p.itertext()).split()) for p in body)
-            print(record['full_text'])
             if len(record['full_text']) > 0:
                 records.append(record)
 
