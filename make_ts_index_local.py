@@ -97,11 +97,7 @@ def get_entities(ent_type, ent_node, ent_name):
                         else:
                             with open("log-entities.txt", "a") as f:
                                 f.write(f"{i} in {record['id']}\n")
-    entities = set(entities)
-    ent = []
-    for x in entities:
-        ent.append(x)
-    return ent
+    return [ent for ent in sorted(set(entities))]
 
 records = []
 for x in tqdm(files, total=len(files)):
@@ -128,7 +124,6 @@ for x in tqdm(files, total=len(files)):
                 date_str = "1959"
 
         try:
-            print(int(date_str[:4]))
             record['year'] = int(date_str[:4])
         except ValueError:
             pass
@@ -151,10 +146,8 @@ for x in tqdm(files, total=len(files)):
             ent_name = "title"
             ent_node = "bibl"
             record['works'] = get_entities(ent_type=ent_type, ent_node=ent_node, ent_name=ent_name)
-            record['full_text'] = ""
-            for p in body:
-                l = " ".join(''.join(p.itertext()).split())
-                record['full_text'] += f" {l}"
+            record['full_text'] = "\n".join(" ".join("".join(p.itertext()).split()) for p in body)
+            print(record['full_text'])
             if len(record['full_text']) > 0:
                 records.append(record)
 

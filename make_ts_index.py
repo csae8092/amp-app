@@ -86,11 +86,7 @@ def get_entities(ent_type, ent_node, ent_name):
                         entity = " ".join(" ".join(en[0].xpath(".//text()")).split())
                         if len(entity) != 0:
                             entities.append(entity)
-    entities = set(entities)
-    ent = []
-    for x in entities:
-        ent.append(x)
-    return ent
+    return [ent for ent in sorted(set(entities))]
 
 records = []
 cfts_records = []
@@ -152,15 +148,11 @@ for x in tqdm(files, total=len(files)):
             ent_node = "bibl"
             record['works'] = get_entities(ent_type=ent_type, ent_node=ent_node, ent_name=ent_name)
             cfts_record['works'] = record['works']
-            record['full_text'] = ""
-            for p in body:
-                l = " ".join(''.join(p.itertext()).split())
-                record['full_text'] += f" {l}"
+            record['full_text'] = "\n".join(" ".join("".join(p.itertext()).split()) for p in body)
             if len(record['full_text']) > 0:
                 records.append(record)
                 cfts_record['full_text'] = record['full_text']
                 cfts_records.append(cfts_record)
-            # record['full_text'] = " ".join(''.join(body.itertext()).split())
 
 make_index = client.collections['amp'].documents.import_(records)
 print(make_index)
