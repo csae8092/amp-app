@@ -75,7 +75,7 @@ def get_entities(ent_type, ent_node, ent_name):
     e_path = f'.//tei:rs[@type="{ent_type}"]/@ref'
     for p in body:
         ent = p.xpath(e_path, namespaces={'tei': "http://www.tei-c.org/ns/1.0"})
-        ref = " ".join(ref.replace("#", "") for ref in (ref for ref in ent if len(ent) > 0)).split()
+        ref = [ref.replace("#", "") for e in ent if len(ent) > 0  for ref in e.split()]
         for r in ref:
             p_path = f'.//tei:{ent_node}[@xml:id="{r}"]//tei:{ent_name}[1]'
             en = doc.any_xpath(p_path)
@@ -94,8 +94,8 @@ for x in tqdm(files, total=len(files)):
     doc = TeiReader(xml=x,xsl='./xslt/preprocess_typesense.xsl')
     facs = doc.any_xpath('.//tei:body/tei:div/tei:pb/@facs')
     pages = 0
-    for p in facs:
-        p_group = f".//tei:body/tei:div/tei:p[preceding-sibling::tei:pb[1]/@facs='{p}']|.//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{p}']"
+    for v in facs:
+        p_group = f".//tei:body/tei:div/tei:p[preceding-sibling::tei:pb[1]/@facs='{v}']|.//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{v}']"
         body = doc.any_xpath(p_group)
         pages += 1
         cfts_record = {
