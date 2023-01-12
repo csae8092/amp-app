@@ -77,29 +77,39 @@ Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
       e.options.data.forEach(function (link) {
         if (link[0].includes("Name: ")) {
           let random = Math.floor(Math.random() * colors.length);
-          let random2 = Math.floor(Math.random() * colors.length);
           nodes[link[0]] = {
             id: link[0],
             marker: {
               radius: 20,
             },
-            color: colors[random],
+            color: "#b59890",
           };
           nodes[link[1]] = {
             id: link[1],
             marker: {
               radius: 10,
             },
-            color: colors[random],
+            color: "#7f8c8d",
           };
-          console.log(colors[i]);
         } else if (nodes[link[0]] && nodes[link[0]].color) {
           nodes[link[1]] = {
             id: link[1],
-            color: nodes[link[0]].color,
+            color: "#615a60",
+          };
+        } else if (link[0].includes("type_")) {
+          let random = Math.floor(Math.random() * colors.length);
+          nodes[link[0]] = {
+            id: link[0],
+            color: "#7f8c8d",
+          };
+          nodes[link[1]] = {
+            id: link[1],
+            marker: {
+              radius: 10,
+            },
+            color: "#615a60",
           };
         }
-        i++;
       });
 
       e.options.nodes = Object.keys(nodes).map(function (id) {
