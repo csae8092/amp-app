@@ -25,10 +25,10 @@ function performMark() {
 
 function performMarkUrl() {
   // Determine selected options
-  var options = {};
-  [].forEach.call(optionInputs, function (opt) {
-    options[opt.value] = opt.checked;
-  });
+  // var options = {};
+  // [].forEach.call(optionInputs, function (opt) {
+  //   options[opt.value] = opt.checked;
+  // });
 
   // get current url parameters
   let url = new URL(window.location.href);

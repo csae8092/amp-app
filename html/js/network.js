@@ -15,10 +15,11 @@ Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
 
     let source = data[x].source[0].value;
     let target = data[x].target[0].value;
+    let type_node = `type_${type}_${node.replace("relationship_id_", "")}`;
     nodes.push(
-      [type, node],
       [`Name: ${source}`, node],
-      [`Name: ${target}`, node]
+      [`Name: ${target}`, node],
+      [type_node, node]
     );
   }
 
@@ -82,7 +83,7 @@ Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
             marker: {
               radius: 20,
             },
-            color: colors[random2],
+            color: colors[random],
           };
           nodes[link[1]] = {
             id: link[1],
