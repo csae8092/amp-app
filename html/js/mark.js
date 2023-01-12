@@ -41,7 +41,7 @@ function performMarkUrl() {
     var params = urlParam.get("mark");
     markInstance.unmark({
       done: function () {
-        markInstance.mark(params, options);
+        markInstance.mark(params);
       },
     });
   }
