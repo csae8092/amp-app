@@ -19,12 +19,14 @@
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
                 <link rel="stylesheet" type="text/css" href="css/analytics.css"></link>
+                <link rel="stylesheet" type="text/css" href="css/network.css"></link>
                 <script src="https://code.highcharts.com/highcharts.js"></script>
                 <script src="https://code.highcharts.com/modules/data.js"></script>
                 <script src="https://code.highcharts.com/modules/series-label.js"></script>
                 <script src="https://code.highcharts.com/modules/exporting.js"></script>
                 <script src="https://code.highcharts.com/modules/export-data.js"></script>
                 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+                <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
             </head>
             
             <body class="page">
@@ -39,12 +41,24 @@
                                 be hovered to display more information.
                             </p>
                         </figure>
+
+                        <figure class="highcharts-figure">
+                            <div id="container-network"></div>
+                            <p class="highcharts-description">
+                                This directed graph shows an example of a network graph, where
+                                the nodes represent persons and their relationships with each other. 
+                                A relationship is defined by an unique ID like "relationship_id_1" that connects
+                                two individuals. The IDs have different types like "is_lover_of" to describe
+                                the nature of the relationship. 
+                            </p>
+                        </figure>
                         
                     </div>
                     
                     <xsl:call-template name="html_footer"/>
                 </div>
                 <script src="js/sender-receiver-graph.js"></script>
+                <script src="js/network.js"></script>
             </body>
         </html>
     </xsl:template>
