@@ -155,6 +155,22 @@ var editor = new LoadEditor({
           class: "features-2",
         },
       },
+      {
+        opt: "events",
+        color: "lime",
+        title: "Events",
+        html_class: "event",
+        css_class: "eve",
+        hide: {
+          hidden: false,
+          class: "event",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-2",
+        },
+      },
     ],
     span_element: {
       css_class: "badge-item",

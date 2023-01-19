@@ -194,6 +194,19 @@
                             </xsl:for-each>
                         </span>
                     </xsl:when>
+                    <xsl:when test="@type='event'">
+                        <span class="event">
+                            <xsl:apply-templates/>
+                            <xsl:for-each select="tokenize(@ref, ' ')">
+                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
+                                    <xsl:value-of select="position()"/>
+                                </sup>
+                                <xsl:if test="position() != last()">
+                                    <sup class="entity">/</sup>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </span>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
@@ -218,9 +231,83 @@
                             <xsl:apply-templates/>
                         </span>
                     </xsl:when>
+                    <xsl:when test="@type='event'">
+                        <span class="event entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                            <xsl:apply-templates/>
+                        </span>
+                    </xsl:when>
                 </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:listEvent">
+        <xsl:for-each select="./tei:event">
+            <div class="modal fade" id="{@xml:id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:label}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel"><xsl:value-of select="./tei:label"/></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>
+                                            Participants
+                                        </th>
+                                        <td>
+                                            <ul>
+                                                <xsl:for-each select="./tei:ab[@type='participants']/tei:persName">
+                                                    <li>
+                                                        <a href="{@key}.html">
+                                                            <xsl:value-of select="."/>
+                                                        </a>
+                                                    </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Located in
+                                        </th>
+                                        <td>
+                                            <a href="{./tei:ab/tei:placeName[@type='located_in_place']/@key}.html">
+                                                <xsl:value-of select="./tei:ab/tei:placeName[@type='located_in_place']"/>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Wikidata
+                                        </th>
+                                        <td>
+                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
+                                                <xsl:value-of select="./tei:idno[@type='WIKIDATA']"/>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Read more
+                                        </th>
+                                        <td>
+                                            <a href="{@xml:id}.html">
+                                                Detail Page
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xsl:for-each>
     </xsl:template>
     <xsl:template match="tei:listPerson">
         <xsl:for-each select="./tei:person">

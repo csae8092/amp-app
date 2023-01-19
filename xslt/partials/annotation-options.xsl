@@ -120,6 +120,9 @@
                         <li class="nav-item dropdown-submenu">
                             <annotation-slider opt="works"></annotation-slider>
                         </li>
+                        <li class="nav-item dropdown-submenu">
+                            <annotation-slider opt="events"></annotation-slider>
+                        </li>
                     </ul>                                
                 </li>
             </ul>                       

@@ -59,7 +59,7 @@
                                         <a href="listplace.html" title="Places" class="nav-link">Places</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Events" class="nav-link">Events <small>(in progress)</small></a>
+                                        <a href="listevent.html" title="Events" class="nav-link">Events</a>
                                     </li>
                                 </ul>                                
                             </li>                            

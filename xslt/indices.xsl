@@ -64,7 +64,9 @@
                     
                     <div class="container-fluid">
                         
-                        <xsl:if test="contains($doc_title, 'Places') or contains($doc_title, 'Institut')">
+                        <xsl:if test="contains($doc_title, 'Places') or 
+                            contains($doc_title, 'Institut') or 
+                            contains($doc_title, 'Events')">
                             <div id="tableReload-wrapper">
                                 <svg id="tableReload" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
@@ -111,6 +113,14 @@
                         <script type="text/javascript">
                             $(document).ready(function () {
                                 leafletDatatable('listorg', [2, 3, 5], [0, 1, 4]);
+                            });
+                        </script>
+                    </xsl:when>
+                    <xsl:when test="contains($doc_title, 'Events')">
+                        <script src="js/leaflet.js"></script>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                leafletDatatable('listevent', [2, 3, 6], [0, 1, 4, 5]);
                             });
                         </script>
                     </xsl:when>
@@ -388,6 +398,80 @@
                             </td>
                             <td>
                                 <xsl:value-of select="./tei:lang"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
+                </tbody>
+            </table>
+        </div>
+    </xsl:template>
+    <xsl:template match="tei:listEvent">
+        <xsl:variable name="count" select="count(./tei:listEvent/tei:event)"/>
+        <div class="index-table">
+            <table class="table" id="listevent">
+                <thead>
+                    <tr>
+                        <th>Label</th>
+                        <th>Participants</th>
+                        <th>Located in</th>
+                        <th>Date</th>
+                        <th>Wikidata ID</th>
+                        <th>Description</th>
+                        <th>Mentioned in papers #</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <xsl:for-each select="./tei:event">
+                        <tr>
+                            <td>
+                                <a href="{concat(@xml:id, '.html')}">
+                                    <xsl:value-of select="./tei:label"/>
+                                </a>
+                            </td>
+                            <td>
+                                <ul>
+                                    <xsl:for-each select="./tei:ab[@type='participants']/tei:persName">
+                                        <li>
+                                            <a href="{@key}.html">
+                                                <xsl:value-of select="."/>
+                                            </a>
+                                        </li>
+                                    </xsl:for-each>    
+                                </ul>
+                            </td>
+                            <td>
+                                <xsl:choose>
+                                    <xsl:when test="./tei:ab[@type='location']/tei:location[@type='coords']">
+                                        <xsl:variable name="coords" select="tokenize(./tei:ab[@type='location']/tei:location[@type='coords']/tei:geo, ', ')"/>
+                                        <a href="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName/@key}.html"
+                                            class="map-coordinates" 
+                                            lat="{$coords[2]}"
+                                            long="{$coords[1]}"
+                                            data-count="{$count}"
+                                            subtitle="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName}">
+                                            <xsl:value-of select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName"/>
+                                        </a>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <a href="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName/@key}.html">
+                                            <xsl:value-of select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName"/>
+                                        </a>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </td>
+                            <td>
+                                <xsl:value-of select="@when"/>
+                            </td>
+                            <td>
+                                <a href="{./tei:idno[@type='WIKIDATA']}">
+                                    <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                </a>
+                            </td>
+                            <td>
+                                <xsl:value-of select="./tei:desc"/>
                             </td>
                             <td>
                                 <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
