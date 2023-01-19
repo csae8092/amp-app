@@ -9,7 +9,10 @@ var editor = new LoadEditor({
         color: "red",
         html_class: "del",
         css_class: "strikethrough",
-        hide: true,
+        hide: {
+          hidden: true,
+          class: "del",
+        },
         chg_citation: "citation-url",
         features: {
           all: false,
@@ -37,7 +40,10 @@ var editor = new LoadEditor({
         color: "green",
         html_class: "space",
         css_class: "whitespace",
-        hide: true,
+        hide: {
+          hidden: true,
+          class: "space",
+        },
         chg_citation: 1,
         features: {
           all: false,
@@ -79,7 +85,6 @@ var editor = new LoadEditor({
         color: "grey",
         html_class: "undefined",
         css_class: "undefined",
-        hide: false,
         chg_citation: "citation-url",
         features: {
           all: true,
@@ -92,6 +97,10 @@ var editor = new LoadEditor({
         title: "Persons",
         html_class: "persons",
         css_class: "pers",
+        hide: {
+          hidden: true,
+          class: "persons .entity",
+        },
         chg_citation: "citation-url",
         features: {
           all: false,
@@ -104,6 +113,10 @@ var editor = new LoadEditor({
         title: "Places",
         html_class: "places",
         css_class: "plc",
+        hide: {
+          hidden: true,
+          class: "places-sub",
+        },
         chg_citation: "citation-url",
         features: {
           all: false,
@@ -117,6 +130,10 @@ var editor = new LoadEditor({
         html_class: "works",
         css_class: "wrk",
         chg_citation: "citation-url",
+        hide: {
+          hidden: true,
+          class: "wrk-sub",
+        },
         features: {
           all: false,
           class: "features-2",
@@ -128,6 +145,10 @@ var editor = new LoadEditor({
         title: "Institutions",
         html_class: "orgs",
         css_class: "org",
+        hide: {
+          hidden: true,
+          class: "orgs-sub",
+        },
         chg_citation: "citation-url",
         features: {
           all: false,
