@@ -1040,7 +1040,7 @@ td > label {
   border-radius: 0.25rem;
 }
 
-.badge {
+.badge-en {
   border-radius: 0.25rem;
   background-color: #b59890;
   color: #fff;
@@ -1049,27 +1049,27 @@ td > label {
   box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.1);
 }
 
-.badge.plc:hover {
+.badge-en.plc:hover {
   background-color: #ffdc6e;
 }
-.badge.prs:hover {
+.badge-en.prs:hover {
   background-color: #ffa7f7;
 }
-.badge.wrk:hover {
+.badge-en.wrk:hover {
   background-color: #a4f1fd;
 }
-.badge.org:hover {
+.badge-en.org:hover {
   background-color: #daa4fd;
 }
-.badge.eve:hover {
+.badge-en.eve:hover {
   background-color: #dbff8d;
 }
 
-.badge > .number {
+.badge-en > .number {
   background-color: #615a60;
 }
 
-.badge > span {
+.badge-en > span {
   padding: 0.3em;
   border-radius: 0.25rem 0 0 0.25rem;
 }
