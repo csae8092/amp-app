@@ -1041,37 +1041,37 @@ td > label {
 }
 
 .badge {
-    border-radius: 0.25rem;
-    background-color: #b59890;
-    color: #fff;
-    padding: .3em 0;
-    margin: .2em;
-    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  background-color: #b59890;
+  color: #fff;
+  padding: 0.3em 0;
+  margin: 0.2em;
+  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.1);
 }
 
 .badge.plc:hover {
-    background-color: #ffdc6e;
+  background-color: #ffdc6e;
 }
 .badge.prs:hover {
-    background-color: #ffa7f7;
+  background-color: #ffa7f7;
 }
 .badge.wrk:hover {
-    background-color: #a4f1fd;
+  background-color: #a4f1fd;
 }
 .badge.org:hover {
-    background-color: #daa4fd;
+  background-color: #daa4fd;
 }
 .badge.eve:hover {
-    background-color: #dbff8d;
+  background-color: #dbff8d;
 }
 
 .badge > .number {
-    background-color: #615a60;
+  background-color: #615a60;
 }
 
 .badge > span {
-    padding: .3em;
-    border-radius: .25rem 0 0 .25rem;
+  padding: 0.3em;
+  border-radius: 0.25rem 0 0 0.25rem;
 }
 
 .badge-link {
