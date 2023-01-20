@@ -24,6 +24,7 @@
                     <th scope="col"># of Facsimiles</th>
                     <th scope="col">Document Type</th>
                     <th scope="col">Document Hand</th>
+                    <th scope="col">Entities</th>
                 </tr>
             </thead>
             <tbody>
@@ -73,7 +74,37 @@
                             </td>  
                             <td>
                                 <xsl:value-of select="//tei:text/@hand"/>                                                                                             
-                            </td>  
+                            </td>
+                            <td>
+                                <ul>
+                                    <xsl:if test="count(//tei:listPlace[parent::tei:back]/tei:place) > 0">
+                                        <li>
+                                            <xsl:value-of select="count(//tei:listPlace[parent::tei:back]/tei:place)"/><xsl:text> Place(s)</xsl:text>
+                                        </li>
+                                    </xsl:if>
+                                    <xsl:if test="count(//tei:listPerson[parent::tei:back]/tei:person) > 0">
+                                        <li>
+                                            <xsl:value-of select="count(//tei:listPerson[parent::tei:back]/tei:person)"/><xsl:text> Person(s)</xsl:text>
+                                        </li>
+                                    </xsl:if>
+                                    <xsl:if test="count(//tei:listOrg[parent::tei:back]/tei:org) > 0">
+                                        <li>
+                                            <xsl:value-of select="count(//tei:listOrg[parent::tei:back]/tei:org)"/><xsl:text> Organisation(s)</xsl:text>
+                                        </li>
+                                    </xsl:if>
+                                    <xsl:if test="count(//tei:listBibl[parent::tei:back]/tei:bibl) > 0">
+                                        <li>
+                                            <xsl:value-of select="count(//tei:listBibl[parent::tei:back]/tei:bibl)"/><xsl:text> Work(s)</xsl:text>
+                                        </li>
+                                    </xsl:if>
+                                    <xsl:if test="count(//tei:listEvent[parent::tei:back]/tei:event) > 0">
+                                        <li>
+                                            <xsl:value-of select="count(//tei:listEvent[parent::tei:back]/tei:event)"/><xsl:text> Event(s)</xsl:text>
+                                        </li>
+                                    </xsl:if>
+                                    
+                                </ul>
+                            </td> 
                         </tr>
                     </xsl:for-each>
                 </xsl:for-each>

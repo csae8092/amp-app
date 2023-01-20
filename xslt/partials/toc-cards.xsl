@@ -25,7 +25,8 @@
                     <xsl:attribute name="href">                                                
                         <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
                     </xsl:attribute>
-                    <div class="card index-card" style="margin:.2em !important;">                                 
+                    <div class="card index-card" style="margin:.2em !important;">
+                        
                         <div class="card-body">
                             <xsl:variable name="iiif-ext" select="'.jpg?format=thumbnail&amp;height=400&amp;width=400'"/> 
                             <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/> 
@@ -42,6 +43,7 @@
                                 </xsl:attribute>
                             </img>                            
                         </div>
+                        
                         <div class="card-header">                                                      
                             <p style="padding: .2em!important;margin:0!important;">
                                 <xsl:value-of select="//tei:title[@level='a']"/>
@@ -60,6 +62,66 @@
                             <div style="text-align: right; display: inline;width: 25%;">
                                 <i class="fas fa-camera"></i> - <xsl:value-of select="count(//tei:graphic)"/>
                             </div>
+                        </div>
+                        <div style="background-color:rgba(0,0,0,.03); padding: .5em 0;">
+                            
+                            <xsl:if test="count(.//tei:listPlace[parent::tei:back]/tei:place) > 0">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?places=on">
+                                    <div title="mentioned places" class="badge plc" style="display:inline;width:50px;">
+                                        <span class="number">
+                                            <xsl:value-of select="count(.//tei:listPlace[parent::tei:back]/tei:place)"/>
+                                        </span>
+                                        <span>
+                                            <i class="fas fa-map-marked-alt"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </xsl:if>
+                            
+                            <xsl:if test="count(.//tei:listPerson[parent::tei:back]/tei:person) > 0">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?persons=on">
+                                    <div title="mentioned persons" class="badge prs" style="display:inline;width:50px;">
+                                        <span class="number">
+                                            <xsl:value-of select="count(.//tei:listPerson[parent::tei:back]/tei:person)"/>
+                                        </span>
+                                        <span><i class="fas fa-user"></i></span>
+                                    </div>
+                                </a>
+                            </xsl:if>
+                            
+                            <xsl:if test="count(.//tei:listOrg[parent::tei:back]/tei:org) > 0">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?orgs=on">
+                                    <div title="mentioned organisations" class="badge org" style="display:inline;width:50px;">
+                                        <span class="number">
+                                            <xsl:value-of select="count(.//tei:listOrg[parent::tei:back]/tei:org)"/>
+                                        </span>
+                                        <span><i class="fas fa-building"></i></span>
+                                    </div>
+                                </a>
+                            </xsl:if>
+                            
+                            <xsl:if test="count(.//tei:listBibl[parent::tei:back]/tei:bibl) > 0">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?works=on">
+                                    <div title="mentioned works" class="badge wrk" style="display:inline;width:50px;">
+                                        <span class="number">
+                                            <xsl:value-of select="count(.//tei:listBibl[parent::tei:back]/tei:bibl)"/>
+                                        </span>
+                                        <span><i class="fas fa-book"></i></span>
+                                    </div>
+                                </a>
+                            </xsl:if>
+                            
+                            <xsl:if test="count(.//tei:listEvent[parent::tei:back]/tei:event) > 0">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?events=on">
+                                    <div title="mentioned events" class="badge eve" style="display:inline;width:50px;">
+                                        <span class="number">
+                                            <xsl:value-of select="count(.//tei:listEvent[parent::tei:back]/tei:event)"/>
+                                        </span>
+                                        <span><i class="fas fa-calendar-alt"></i></span>
+                                    </div>
+                                </a>
+                            </xsl:if>
+                            
                         </div>
                     </div>
                 </a>
