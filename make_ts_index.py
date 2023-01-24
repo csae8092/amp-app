@@ -102,7 +102,7 @@ for x in tqdm(files, total=len(files)):
             'project': 'amp',
         }
         record = {}
-        record['id'] = os.path.split(x)[-1].replace('.xml', f".html?page={str(pages)}")
+        record['id'] = os.path.split(x)[-1].replace('.xml', f".html?tab={str(pages)}")
         cfts_record['id'] = record['id']
         cfts_record['resolver'] = f"https://auden-musulin-papers.github.io/amp-app-dev/{record['id']}"
         record['rec_id'] = os.path.split(x)[-1]
