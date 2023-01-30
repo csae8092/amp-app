@@ -97,14 +97,6 @@
     <!--<xsl:template match="tei:lb">
         <br/>        
     </xsl:template>-->
-    <xsl:template match="tei:lg">
-        <span style="display:block;margin: 1em 0;">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
-    <xsl:template match="tei:l">
-        <xsl:apply-templates/><br />
-    </xsl:template>
     <xsl:template match="tei:unclear">
         <span class="abbr" alt="unclear">
             <xsl:apply-templates/>
@@ -587,44 +579,55 @@
         </xsl:if>
     </xsl:template>
     
-    <xsl:template match="tei:l">
-        <br/>
-        <xsl:if test="parent::tei:lg">
-            <a>
-                <xsl:variable name="para" as="xs:int">
-                    <xsl:number level="any" from="tei:body" count="tei:lg"/>
-                </xsl:variable>
-                <xsl:variable name="lines" as="xs:int">
-                    <xsl:number level="multiple" from="tei:body"/>
-                </xsl:variable>
-                <xsl:attribute name="href">
-                    <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
-                </xsl:attribute>
-                <xsl:attribute name="name">
-                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
-                </xsl:attribute>
-                <xsl:attribute name="id">
-                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
-                </xsl:attribute>
-                <xsl:choose>
-                    <xsl:when test="($lines mod 5) = 0">
-                        <xsl:attribute name="class">
-                            <xsl:text>linenumbersVisible linenumbers verseline yes-index</xsl:text>
-                        </xsl:attribute>
-                        <xsl:attribute name="data-lbnr">
-                            <xsl:value-of select="$lines"/>
-                        </xsl:attribute>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:attribute name="class">
-                            <xsl:text>linenumbersTransparent linenumbers verseline yes-index</xsl:text>
-                        </xsl:attribute>
-                    </xsl:otherwise>
-                </xsl:choose>
-                <xsl:value-of select="concat('(vl) ', format-number($lines, '0000'))"/>
-            </a>
+    <xsl:template match="tei:lg">
+        <span style="display:block;margin: 1em 0;">
             <xsl:apply-templates/>
-        </xsl:if>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="tei:l">
+        <xsl:choose>
+            <xsl:when test="parent::tei:lg">
+                <br/>
+                <a>
+                    <xsl:variable name="para" as="xs:int">
+                        <xsl:number level="any" from="tei:body" count="tei:lg"/>
+                    </xsl:variable>
+                    <xsl:variable name="lines" as="xs:int">
+                        <xsl:number level="multiple" from="tei:body"/>
+                    </xsl:variable>
+                    <xsl:attribute name="href">
+                        <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="name">
+                        <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
+                    </xsl:attribute>
+                    <xsl:choose>
+                        <xsl:when test="($lines mod 5) = 0">
+                            <xsl:attribute name="class">
+                                <xsl:text>linenumbersVisible linenumbers verseline yes-index</xsl:text>
+                            </xsl:attribute>
+                            <xsl:attribute name="data-lbnr">
+                                <xsl:value-of select="$lines"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="class">
+                                <xsl:text>linenumbersTransparent linenumbers verseline yes-index</xsl:text>
+                            </xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:value-of select="concat('(vl) ', format-number($lines, '0000'))"/>
+                </a>
+                <xsl:apply-templates/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
 </xsl:stylesheet>
