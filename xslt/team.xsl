@@ -25,8 +25,13 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
-                    <div class="container-fluid">  
-                        <xsl:apply-templates select="//tei:div[parent::tei:body]"/>
+                    <div class="container-fluid">
+                        <div style="margin: 2em auto; text-align:center;">
+                            <h1><xsl:value-of select="//tei:body/tei:div[1]"/></h1>
+                        </div>
+                        <div class="card">
+                            <xsl:apply-templates select="//tei:body"/>
+                        </div>
                     </div>
                     
                     <xsl:call-template name="html_footer"/>
@@ -34,27 +39,30 @@
             </body>
         </html>
     </xsl:template>
-                    
-    <xsl:template match="tei:div[parent::tei:body]">
-        <div class="card">
-            <xsl:apply-templates/>
-        </div>
+    
+    
+    <xsl:template match="tei:body/tei:div[1]"/>
+    <xsl:template match="tei:div">
+        <xsl:apply-templates/>
     </xsl:template>
-    <xsl:template match="tei:div[parent::tei:div]">
-        <div class="card-body">
-            <xsl:apply-templates/>
-        </div>
-    </xsl:template>
-    <xsl:template match="tei:head[parent::tei:div[parent::tei:body]]">
-        <div class="card-header">
-            <h1><xsl:apply-templates/></h1>
-        </div>        
-    </xsl:template>
-    <xsl:template match="tei:head[parent::tei:div[parent::tei:div]]">
-        <h3><xsl:apply-templates/></h3>                
+    <xsl:template match="tei:head">
+        <xsl:choose>
+            <xsl:when test="following-sibling::tei:p[1]">
+                <div class="card-header">
+                    <h3><xsl:apply-templates/></h3>
+                </div>
+            </xsl:when>
+            <xsl:otherwise>
+                <div class="card-header" style="padding: 2em; text-align: center;">
+                    <h2><xsl:apply-templates/></h2>
+                </div>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:p">
-        <p><xsl:apply-templates/></p>
+        <div class="card-body">
+            <p><xsl:apply-templates/></p>
+        </div>
     </xsl:template>
     <xsl:template match="tei:hi">
         <span style="font-weight:{@rend};">

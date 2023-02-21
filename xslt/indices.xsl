@@ -53,7 +53,7 @@
                     </xsl:attribute>
                 </meta>
                 <style>
-                    .container-fluid {
+                    .container {
                         max-width: 100%;
                     }
                 </style>
@@ -62,7 +62,7 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
-                    <div class="container-fluid">
+                    <div class="container">
                         
                         <xsl:if test="contains($doc_title, 'Places') or 
                             contains($doc_title, 'Institut') or 
