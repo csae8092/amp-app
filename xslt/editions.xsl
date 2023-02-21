@@ -234,7 +234,7 @@
     </xsl:template>
     <xsl:template match="tei:listEvent">
         <xsl:for-each select="./tei:event">
-            <div class="modal fade" id="{@xml:id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:label}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:label}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -303,7 +303,7 @@
     </xsl:template>
     <xsl:template match="tei:listPerson">
         <xsl:for-each select="./tei:person">
-            <div class="modal fade" id="{@xml:id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{concat(./tei:persName/tei:surname, ', ', ./tei:persName/tei:forename)}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{concat(./tei:persName/tei:surname, ', ', ./tei:persName/tei:forename)}" aria-hidden="true">
                  <div class="modal-dialog modal-dialog-centered">
                      <div class="modal-content">
                          <div class="modal-header">
@@ -362,7 +362,7 @@
     </xsl:template>
     <xsl:template match="tei:listPlace">
         <xsl:for-each select="./tei:place">
-            <div class="modal fade" id="{@xml:id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{if(./tei:settlement) then(./tei:settlement/tei:placeName) else (./tei:placeName)}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{if(./tei:settlement) then(./tei:settlement/tei:placeName) else (./tei:placeName)}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -413,7 +413,7 @@
     </xsl:template>
     <xsl:template match="tei:listOrg">
         <xsl:for-each select="./tei:org">
-            <div class="modal fade" id="{@xml:id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:orgName}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:orgName}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -456,7 +456,7 @@
     </xsl:template>
     <xsl:template match="tei:listBibl">
         <xsl:for-each select="./tei:bibl">
-            <div class="modal fade" id="{@xml:id}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:title}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:title}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
