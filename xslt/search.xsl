@@ -25,7 +25,7 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
-                    <div class="container">
+                    <div class="container-fluid">
                         <div class="search-panel">
                             <div class="search-panel__results">
                                 <div class="row">

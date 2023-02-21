@@ -557,7 +557,6 @@ a.btn-round:hover {
 
 .container-fluid {
   max-width: 1024px;
-  margin-bottom: 1em;
 }
 
 .container-fluid-content {
@@ -568,6 +567,15 @@ a.btn-round:hover {
 .container-fluid-amp {
   max-width: 100%;
   margin: 0 auto;
+}
+
+.navbar .navbar-brand {
+    height: 3em;
+ 
+}
+
+.container {
+    margin-bottom: 1em;
 }
 
 .container-fluid-amp > .row {
