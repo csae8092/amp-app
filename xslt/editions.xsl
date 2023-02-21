@@ -97,6 +97,12 @@
     <!--<xsl:template match="tei:lb">
         <br/>        
     </xsl:template>-->
+    
+    <xsl:template match="tei:note">
+        <!--<span class="footnote_anchor" id="{@xml:id}_inline"></span>-->
+        <sup><a href="#{@xml:id}_inline" id="{@xml:id}" title="Footnote {@n}"><xsl:value-of select="@n"/></a></sup>
+    </xsl:template>
+    
     <xsl:template match="tei:unclear">
         <span class="abbr" alt="unclear">
             <xsl:apply-templates/>
@@ -542,41 +548,44 @@
     
     <xsl:template match="tei:lb">
         <br/>
-        <xsl:if test="ancestor::tei:p">
-            <a>
-                <xsl:variable name="para" as="xs:int">
-                    <xsl:number level="any" from="tei:body" count="tei:p"/>
-                </xsl:variable>
-                <xsl:variable name="lines" as="xs:int">
-                    <xsl:number level="any" from="tei:body"/>
-                </xsl:variable>
-                <xsl:attribute name="href">
-                    <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
-                </xsl:attribute>
-                <xsl:attribute name="name">
-                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
-                </xsl:attribute>
-                <xsl:attribute name="id">
-                    <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
-                </xsl:attribute>
-                <xsl:choose>
-                    <xsl:when test="($lines mod 5) = 0">
-                        <xsl:attribute name="class">
-                            <xsl:text>linenumbersVisible linenumbers yes-index</xsl:text>
-                        </xsl:attribute>
-                        <xsl:attribute name="data-lbnr">
-                            <xsl:value-of select="$lines"/>
-                        </xsl:attribute>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:attribute name="class">
-                            <xsl:text>linenumbersTransparent linenumbers yes-index</xsl:text>
-                        </xsl:attribute>
-                    </xsl:otherwise>
-                </xsl:choose>
-                <xsl:value-of select="format-number($lines, '0000')"/>
-            </a>  
+        <xsl:if test="not(ancestor::tei:note[@type='footnote'])">
+            <xsl:if test="ancestor::tei:p">
+                <a>
+                    <xsl:variable name="para" as="xs:int">
+                        <xsl:number level="any" from="tei:body" count="tei:p"/>
+                    </xsl:variable>
+                    <xsl:variable name="lines" as="xs:int">
+                        <xsl:number level="any" from="tei:body"/>
+                    </xsl:variable>
+                    <xsl:attribute name="href">
+                        <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="name">
+                        <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="id">
+                        <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__p</xsl:text><xsl:value-of select="$para"/><xsl:text>__lb</xsl:text><xsl:value-of select="$lines"/>
+                    </xsl:attribute>
+                    <xsl:choose>
+                        <xsl:when test="($lines mod 5) = 0">
+                            <xsl:attribute name="class">
+                                <xsl:text>linenumbersVisible linenumbers yes-index</xsl:text>
+                            </xsl:attribute>
+                            <xsl:attribute name="data-lbnr">
+                                <xsl:value-of select="$lines"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="class">
+                                <xsl:text>linenumbersTransparent linenumbers yes-index</xsl:text>
+                            </xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    <xsl:value-of select="format-number($lines, '0000')"/>
+                </a>  
+            </xsl:if>
         </xsl:if>
+        
     </xsl:template>
     
     <xsl:template match="tei:lg">

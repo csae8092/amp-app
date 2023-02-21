@@ -72,8 +72,18 @@
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
-                                        </xsl:for-each>  
-                                    </div>                                                                      
+                                        </xsl:for-each>
+                                        
+                                        <ul id="footnotes">
+                                            <xsl:for-each select="current-group()/tei:note[@type='footnote']">
+                                                <li>
+                                                    <!--<span class="footnote_anchor" id="{@xml:id}"></span>-->
+                                                    <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
+                                                    <xsl:apply-templates/>
+                                                </li>
+                                            </xsl:for-each>
+                                        </ul>
+                                    </div>
                                 </div>   
                                 
                                 <div id="img-resize-{position()}"
@@ -142,6 +152,16 @@
                                                 <xsl:apply-templates/>
                                             </p>
                                         </xsl:for-each>
+                                        
+                                        <ul id="footnotes">
+                                            <xsl:for-each select="current-group()/tei:note[@type='footnote']">
+                                                <li>
+                                                    <!--<span class="footnote_anchor" id="{@xml:id}"></span>-->
+                                                    <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
+                                                    <xsl:apply-templates/>
+                                                </li>
+                                            </xsl:for-each>
+                                        </ul>
                                     </div>
                                 </div>                                                     
                                 <div id="img-resize-{position()}" 
@@ -177,6 +197,7 @@
                                         
                                 </div>
                             </div>
+                            
                         </div>                                                         
                     </xsl:when>
                 </xsl:choose>                
