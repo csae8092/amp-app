@@ -10,20 +10,12 @@ body {
     background: url("../images/letter-background.png") 0 0 repeat;
 }*/
 
-sup {
-   
-}
-
 #footnotes li {
     list-style: none;
 }
 
 #footnotes li a {
     padding-right: 1em;
-}
-
-sup {
-    margin-left: -8px;
 }
 
 #footnotes li sup {
@@ -557,6 +549,11 @@ a.btn-round:hover {
 
 .container-fluid {
   max-width: 1024px;
+  margin-bottom: 1em;
+}
+
+.container {
+    max-width: 1024px;
 }
 
 .container-fluid-content {
@@ -571,11 +568,6 @@ a.btn-round:hover {
 
 .navbar .navbar-brand {
     height: 3em;
- 
-}
-
-.container {
-    margin-bottom: 1em;
 }
 
 .container-fluid-amp > .row {
