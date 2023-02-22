@@ -28,6 +28,33 @@ body {
     margin-left: 4.5em;
 }
 
+
+.intro_column {
+    display: flex;
+    vertical-align: middle;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.intro_text {
+    padding: 0 15%;
+    margin: 0 auto;
+}
+
+.intro_img {
+    margin: 0 auto;
+    padding: 1em 0 2em 0;
+    vertical-align: middle;
+    align-items: center;
+    background-color: rgba(97, 90, 96, .6);
+    border-radius: 67%;
+}
+
+.intro_img .row {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 /*.footnote_anchor {
     margin-top: -4em;
     visibility: hidden;
@@ -58,11 +85,6 @@ div.dataTables_wrapper div.dataTables_filter input {
 
 .fade {
   display: none;
-}
-
-.row {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .identS {
