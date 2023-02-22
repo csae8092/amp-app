@@ -42,7 +42,7 @@
                     .card-body {
                         padding: 4em 1em;
                     }
-                    .container {
+                    .container-fluid {
                         max-width: 100%;
                     }
                     .sticky-navbar {
@@ -62,7 +62,7 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
-                    <div class="container">  
+                    <div class="container-fluid">  
                         <div class="card">
                             <div class="card-body" style="padding: .5em 0 0 0 !important;">
                                 
