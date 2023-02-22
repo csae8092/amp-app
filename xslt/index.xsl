@@ -53,76 +53,79 @@
                                 </div>
                             </div>
                             <div class="col-md-6 intro_img">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <a href="toc.html" class="index-link">                                   
-                                            <div class="card index-card">
-                                                <div class="card-body">
-                                                    <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png"
-                                                        class="d-block w-100"
-                                                        alt="Auden-Musulin Correspondence Image"/>
-                                                </div>
-                                                <div class="card-header">                                            
-                                                    <h4>W. H. Auden's correspondence with Stella Musulin</h4>
-                                                </div>
-                                            </div>                                     
-                                        </a>                                    
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="card">
-                                            <div class="card-header">                                        
-                                                <h5>Document search</h5>       
-                                                <p style="margin-bottom:.5em;font-size:22px;">Explore the Auden Musulin Papers through full-text search.</p>
-                                                <button class="btn btn-light" style="background-color:#fff;">
-                                                    <a href="search.html" style="color:#000;">
-                                                        Start searching
-                                                    </a>
+                                <div class="vl"></div>
+                                <div class="intro_img_sub">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <a href="toc.html" class="index-link">                                   
+                                                <div class="card index-card">
+                                                    <div class="card-body">
+                                                        <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png"
+                                                            class="d-block w-100"
+                                                            alt="Auden-Musulin Correspondence Image"/>
+                                                    </div>
+                                                    <div class="card-header">                                            
+                                                        <h4>W. H. Auden's correspondence with Stella Musulin</h4>
+                                                    </div>
+                                                </div>                                     
+                                            </a>                                    
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="card">
+                                                <div class="card-header">                                        
+                                                    <h5>Document search</h5>       
+                                                    <p style="margin-bottom:.5em;font-size:22px;">Explore the Auden Musulin Papers through full-text search.</p>
+                                                    <button class="btn btn-light" style="background-color:#fff;">
+                                                        <a href="search.html" style="color:#000;">
+                                                            Start searching
+                                                        </a>
+                                                        
+                                                    </button>
                                                     
+                                                    <!--<form class="form-inline my-2 my-lg-0 navbar-search-form"
+                                                method="get"
+                                                action="search.html"
+                                                role="search">
+                                                <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
+                                                <button type="submit" class="navbar-search-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                    </svg>
                                                 </button>
-                                                
-                                                <!--<form class="form-inline my-2 my-lg-0 navbar-search-form"
-                                            method="get"
-                                            action="search.html"
-                                            role="search">
-                                            <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
-                                            <button type="submit" class="navbar-search-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                                </svg>
-                                            </button>
-                                        </form>-->                                        
-                                            </div>                                                                       
+                                            </form>-->                                        
+                                                </div>                                                                       
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <a href="auden-biography.html" class="index-link">  
-                                            <div class="card index-card">
-                                                <div class="card-body">
-                                                    <img src="images/index/W-H-Auden_7.jpg"
-                                                        class="d-block w-100"
-                                                        alt="W.H. Auden Image"/>
-                                                </div>
-                                                <div class="card-header">  
-                                                    <h4>W. H. Auden</h4>                                         
-                                                </div>
-                                            </div>                                    
-                                        </a>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <a href="musulin-biography.html" class="index-link">                                                     
-                                            <div class="card index-card">
-                                                <div class="card-body">
-                                                    <img src="images/index/stella-musulin_0237.jpg" 
-                                                        class="d-block w-100" 
-                                                        alt="Stella Musulin Image"/>
-                                                </div>
-                                                <div class="card-header">   
-                                                    <h4>Stella Musulin</h4>                                     
-                                                </div>
-                                            </div>                                 
-                                        </a>
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <a href="auden-biography.html" class="index-link">  
+                                                <div class="card index-card">
+                                                    <div class="card-body">
+                                                        <img src="images/index/W-H-Auden_7.jpg"
+                                                            class="d-block w-100"
+                                                            alt="W.H. Auden Image"/>
+                                                    </div>
+                                                    <div class="card-header">  
+                                                        <h4>W. H. Auden</h4>                                         
+                                                    </div>
+                                                </div>                                    
+                                            </a>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a href="musulin-biography.html" class="index-link">                                                     
+                                                <div class="card index-card">
+                                                    <div class="card-body">
+                                                        <img src="images/index/stella-musulin_0237.jpg" 
+                                                            class="d-block w-100" 
+                                                            alt="Stella Musulin Image"/>
+                                                    </div>
+                                                    <div class="card-header">   
+                                                        <h4>Stella Musulin</h4>                                     
+                                                    </div>
+                                                </div>                                 
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

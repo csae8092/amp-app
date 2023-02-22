@@ -42,15 +42,23 @@ body {
 }
 
 .intro_img {
-    margin: 0 auto;
-    padding: 1em 0 2em 0;
+    margin: 1em auto;
+    padding: .5em;
     vertical-align: middle;
     align-items: center;
-    background-color: rgba(97, 90, 96, .6);
-    border-radius: 67%;
+    background-color: rgba(97, 90, 96, .8);
+    border-radius: .45rem;
 }
 
-.intro_img .row {
+.intro_img_sub {
+    padding: 1em 0;
+    margin: 0 auto;
+    background: url('../images/kb0Zm.jpg') 0 0 repeat;
+    border-radius: .35rem;
+    background-size: contain;
+}
+
+.intro_img .intro_img_sub .row {
     align-items: center;
     justify-content: space-evenly;
 }
