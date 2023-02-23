@@ -28,7 +28,7 @@
                     <div class="container-fluid" style="background-color:#fff;max-width:100%;margin-bottom:0;">
                         <div class="row">
                             <div class="col-md-12" style="padding:0;margin-bottom:1em;">
-                                <div class="card" style="background-color:#f6fa29;max-height:75px;margin-top:0;box-shadow:0;box-shadow:none;border-radius: 0;">
+                                <div class="card notification" style="background-color:#f6fa29;max-height:75px;margin-top:0;box-shadow:0;box-shadow:none;border-radius: 0;">
                                     <div class="card-body">
                                         <h5 style="display:inline;">Pre-Release (v0.2)</h5>                                        
                                         <p style="display:inline;">                                            
