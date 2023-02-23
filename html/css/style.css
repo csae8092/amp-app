@@ -58,7 +58,7 @@ body {
     background-size: contain;
 }*/
 
-.intro_img .intro_img_sub .row {
+.intro_img .row {
     align-items: center;
     justify-content: space-evenly;
 }
