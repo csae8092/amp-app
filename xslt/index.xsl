@@ -36,7 +36,7 @@
                                             <a style="text-decoration:underline;" 
                                                 href="mailto:amp@oeaw.ac.at?subject=Auden-Musulin%20Papers%20Feedback!">
                                                 send us your feedback</a>.
-                                        </p>                                        
+                                        </p>              
                                     </div>
                                 </div>
                             </div>
@@ -70,12 +70,12 @@
                                         </a>                                    
                                     </div>
                                     <div class="col-md-4">
-                                        <div class="card">
+                                        <div class="card index-card">
                                             <div class="card-header">                                        
-                                                <h5>Document search</h5>       
+                                                <h4 style="text-align:left;">Document search</h4>       
                                                 <p style="margin-bottom:.5em;font-size:22px;">Explore the Auden Musulin Papers through full-text search.</p>
-                                                <button class="btn btn-light" style="background-color:#fff;">
-                                                    <a href="search.html" style="color:#000;">
+                                                <button class="btn btn-light">
+                                                    <a href="search.html">
                                                         Start searching
                                                     </a>
                                                     
