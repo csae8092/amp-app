@@ -24,22 +24,21 @@
             <body class="page">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
-                    
+
+                    <div class="card notification">
+                        <div class="card-body">
+                            <h5 style="display:inline;">Pre-Release (v0.2)</h5>                                        
+                            <p style="display:inline;">                                            
+                                This website is in development. Help us to improve and                                         
+                                <a style="text-decoration:underline;" 
+                                    href="mailto:amp@oeaw.ac.at?subject=Auden-Musulin%20Papers%20Feedback!">
+                                    send us your feedback</a>.
+                            </p>              
+                        </div>
+                    </div>
                     <div class="container-fluid" style="background-color:#fff;max-width:100%;margin-bottom:0;">
                         <div class="row">
-                            <div class="col-md-12" style="padding:0;margin-bottom:1em;">
-                                <div class="card notification" style="background-color:#f6fa29;max-height:75px;margin-top:0;box-shadow:0;box-shadow:none;border-radius: 0;">
-                                    <div class="card-body">
-                                        <h5 style="display:inline;">Pre-Release (v0.2)</h5>                                        
-                                        <p style="display:inline;">                                            
-                                            This website is in development. Help us to improve and                                         
-                                            <a style="text-decoration:underline;" 
-                                                href="mailto:amp@oeaw.ac.at?subject=Auden-Musulin%20Papers%20Feedback!">
-                                                send us your feedback</a>.
-                                        </p>              
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <div class="col-md-6 intro_column">
                                 <div class="intro_text">
                                     <div class="main-title">

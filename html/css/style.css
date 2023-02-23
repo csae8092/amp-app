@@ -201,6 +201,11 @@ div.dataTables_wrapper div.dataTables_filter input {
   /*    background: url("../images/letter-background.png") 0 0 repeat;*/
 }
 
+.row {
+    margin-left: 0!important;
+    margin-right: 0!important;
+}
+
 /* Datatables, provided by https://github.com/babslgam */
 
 div.dataTables_wrapper div.dataTables_filter input {
@@ -1293,11 +1298,6 @@ td > label {
     .notification {
         max-height: 100px;
     }
-  .container-fluid .row {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: block;
-  }
   #title-nav .col-md-2,
   a,
   h3 {
@@ -1471,8 +1471,8 @@ td > label {
 
 @media (max-width: 1200px) {
     .intro_img .row .col-md-4 {
-        max-width: 50% !important;
-        flex: 0 0 50%!important;
+        max-width: 50%;
+        flex: 0 0 50%;
     }
 }
 
