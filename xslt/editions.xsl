@@ -53,10 +53,6 @@
                         color: black;
                     }
                 </style>
-                <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
-                <script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script>
-                <!-- <script src="js/dist/de-editor.min.js"></script> -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -87,6 +83,10 @@
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
+                <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
+                <script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script>
+                <!-- <script src="js/dist/de-editor.min.js"></script> -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>
                 <script type="text/javascript" src="js/hide-md.js"></script>
                 <script type="text/javascript" src="js/mark.js"></script>

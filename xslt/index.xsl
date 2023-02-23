@@ -25,15 +25,20 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
 
-                    <div class="card notification">
+                    <div class="card" id="notification">
                         <div class="card-body">
-                            <h5 style="display:inline;">Pre-Release (v0.2)</h5>                                        
-                            <p style="display:inline;">                                            
+                            <p class="hidden" style="padding: 0 1em;">                                            
+                                <a id="close" style="color:#b59890;text-align:right;cursor:pointer;"
+                                    title="close">X</a>
+                            </p>
+                            <h5 class="hidden">Pre-Release (v0.2)</h5>                                        
+                            <p class="hidden">                                            
                                 This website is in development. Help us to improve and                                         
                                 <a style="text-decoration:underline;" 
                                     href="mailto:amp@oeaw.ac.at?subject=Auden-Musulin%20Papers%20Feedback!">
                                     send us your feedback</a>.
-                            </p>              
+                            </p>
+                            
                         </div>
                     </div>
                     <div class="container-fluid" style="background-color:#fff;max-width:100%;margin-bottom:0;">
@@ -137,6 +142,11 @@
                         $('html, body').animate({
                             scrollTop: $($.attr(this, 'href')).offset().top
                         }, 500);
+                    });
+                </script>
+                <script type="text/javascript">
+                    document.getElementById("close").addEventListener("click", function(el) {
+                        document.getElementById("notification").style.display = "none";
                     });
                 </script>
             </body>
