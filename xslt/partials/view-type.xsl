@@ -72,6 +72,9 @@
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
+                                            <xsl:if test="./tei:handShift">
+                                                <script type="text/javascript" src="js/handshift.js"></script>
+                                            </xsl:if>
                                         </xsl:for-each>
                                         
                                         <ul id="footnotes">
@@ -151,6 +154,9 @@
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
+                                            <xsl:if test="./tei:handShift">
+                                                <script type="text/javascript" src="js/handshift.js"></script>
+                                            </xsl:if>
                                         </xsl:for-each>
                                         
                                         <ul id="footnotes">

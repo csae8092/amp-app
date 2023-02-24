@@ -552,6 +552,23 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="tei:handShift">
+        <xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 22px;'"/>
+        <xsl:variable name="typed" select="'font-family: Courier New, monospace; font-size: 18px;'"/>
+        <xsl:variable name="printed" select="'font-family: Arial, serif; font-size: 18px;'"/>
+        <xsl:choose>
+            <xsl:when test="@new = '#handwritten'">
+                <span class="handShift" style="{$hand}"/>
+            </xsl:when>
+            <xsl:when test="@new = '#typed'">
+                <span class="handShift" style="{$typed}"/>
+            </xsl:when>
+            <xsl:when test="@new = '#printed'">
+                <span class="handShift" style="{$printed}"/>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+    
     <xsl:template match="tei:lb">
         <br/>
         <xsl:if test="not(ancestor::tei:note[@type='footnote'])">
