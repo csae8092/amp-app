@@ -205,6 +205,9 @@
                             </xsl:for-each>
                         </span>
                     </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates/>
+                    </xsl:otherwise>
                 </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
@@ -234,6 +237,9 @@
                             <xsl:apply-templates/>
                         </span>
                     </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates/>
+                    </xsl:otherwise>
                 </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
