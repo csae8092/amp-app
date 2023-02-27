@@ -72,20 +72,32 @@
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
+                                            <!--<xsl:if test="./name() = 'lg' and ./tei:l/tei:note[@type='footnote']">
+                                                <ul id="footnotes">
+                                                    <xsl:for-each select="./tei:l/tei:note[@type='footnote']">
+                                                        <li>
+                                                            <!-\-<span class="footnote_anchor" id="{@xml:id}"></span>-\->
+                                                            <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
+                                                            <xsl:apply-templates/>
+                                                        </li>
+                                                    </xsl:for-each>
+                                                </ul>
+                                            </xsl:if>-->
                                             <xsl:if test="./tei:handShift">
                                                 <script type="text/javascript" src="js/handshift.js"></script>
                                             </xsl:if>
                                         </xsl:for-each>
-                                        
-                                        <ul id="footnotes">
-                                            <xsl:for-each select="current-group()/tei:note[@type='footnote']">
-                                                <li>
-                                                    <!--<span class="footnote_anchor" id="{@xml:id}"></span>-->
-                                                    <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
-                                                    <xsl:apply-templates/>
-                                                </li>
-                                            </xsl:for-each>
-                                        </ul>
+                                        <xsl:if test="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
+                                            <ul id="footnotes">
+                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
+                                                    <li>
+                                                        <!--<span class="footnote_anchor" id="{@xml:id}"></span>-->
+                                                        <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
+                                                        <xsl:apply-templates/>
+                                                    </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </xsl:if>
                                     </div>
                                 </div>   
                                 
@@ -154,20 +166,34 @@
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
+                                            <!--<xsl:if test="./tei:l/tei:note[@type='footnote']">
+                                                <ul id="footnotes">
+                                                    <xsl:for-each select="./tei:l/tei:note[@type='footnote']">
+                                                        <li>
+                                                            <!-\-<span class="footnote_anchor" id="{@xml:id}"></span>-\->
+                                                            <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
+                                                            <xsl:apply-templates/>
+                                                        </li>
+                                                    </xsl:for-each>
+                                                </ul>
+                                            </xsl:if>-->
                                             <xsl:if test="./tei:handShift">
                                                 <script type="text/javascript" src="js/handshift.js"></script>
                                             </xsl:if>
                                         </xsl:for-each>
                                         
-                                        <ul id="footnotes">
-                                            <xsl:for-each select="current-group()/tei:note[@type='footnote']">
-                                                <li>
-                                                    <!--<span class="footnote_anchor" id="{@xml:id}"></span>-->
-                                                    <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
-                                                    <xsl:apply-templates/>
-                                                </li>
-                                            </xsl:for-each>
-                                        </ul>
+                                        <xsl:if test="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
+                                            <ul id="footnotes">
+                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
+                                                    <li>
+                                                        <!--<span class="footnote_anchor" id="{@xml:id}"></span>-->
+                                                        <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
+                                                        <xsl:apply-templates/>
+                                                    </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </xsl:if>
+                                        
                                     </div>
                                 </div>                                                     
                                 <div id="img-resize-{position()}" 
