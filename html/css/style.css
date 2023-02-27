@@ -28,7 +28,9 @@ body {
     margin-left: 4.5em;
 }
 
-
+.slider {
+    z-index: 999;
+}
 
 .intro_column {
     display: flex;

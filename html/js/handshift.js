@@ -4,6 +4,7 @@ window.onload = handShift();
 
 function handShift() {
   [].forEach.call(hds_start, function (opt) {
+    console.log(opt);
     var parentP = opt.parentNode;
     var newNode = document.createElement("span");
     newNode.setAttribute("style", opt.getAttribute("style"));
@@ -16,9 +17,17 @@ function handShift() {
   });
 }
 
+/* credits to: https://stackoverflow.com/questions/4378784/
+how-to-find-all-siblings-of-the-currently-selected-dom-object */
 function getNextSiblings(elem) {
   var sibs = [];
   while ((elem = elem.nextSibling)) {
+    if (elem.tagName == "SPAN") {
+      if (elem.getAttribute("class") == "handShift") {
+        console.log(elem.getAttribute("class"));
+        break;
+      }
+    }
     sibs.push(elem);
   }
   return sibs;
