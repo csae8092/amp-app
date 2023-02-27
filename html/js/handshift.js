@@ -4,7 +4,6 @@ window.onload = handShift();
 
 function handShift() {
   [].forEach.call(hds_start, function (opt) {
-    console.log(opt);
     var parentP = opt.parentNode;
     var newNode = document.createElement("span");
     newNode.setAttribute("style", opt.getAttribute("style"));
@@ -13,7 +12,7 @@ function handShift() {
       newNode.appendChild(el);
     });
     parentP.insertBefore(newNode, opt);
-    opt.remove();
+    // opt.remove();
   });
 }
 
@@ -22,11 +21,8 @@ how-to-find-all-siblings-of-the-currently-selected-dom-object */
 function getNextSiblings(elem) {
   var sibs = [];
   while ((elem = elem.nextSibling)) {
-    if (elem.tagName == "SPAN") {
-      if (elem.getAttribute("class") == "handShift") {
-        console.log(elem.getAttribute("class"));
-        break;
-      }
+    if (elem.tagName == "SPAN" && elem.getAttribute("class") == "handShift") {
+      break;
     }
     sibs.push(elem);
   }
