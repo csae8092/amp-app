@@ -59,7 +59,7 @@
                                                 <xsl:apply-templates/>
                                             </p>
                                             
-                                            <xsl:if test="name() = 'lg' and position() = last() - 2">
+                                            <xsl:if test="name() = 'lg' and position() = 3">
                                                 <span style="text-align:center;">____</span>
                                                 <ul id="endnotes">
                                                     <xsl:for-each select="//tei:note[@type='endnote']">
