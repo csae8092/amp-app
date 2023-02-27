@@ -60,6 +60,7 @@
                                             </p>
                                             
                                             <xsl:if test="name() = 'lg' and position() = last() - 2">
+                                                <span style="text-align:center;">____</span>
                                                 <ul id="endnotes">
                                                     <xsl:for-each select="//tei:note[@type='endnote']">
                                                         <li>
@@ -69,6 +70,7 @@
                                                         </li>
                                                     </xsl:for-each>
                                                 </ul>
+                                                <span style="text-align:center;">___</span>
                                             </xsl:if>
                                         </xsl:for-each>
                                         

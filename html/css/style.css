@@ -10,20 +10,20 @@ body {
     background: url("../images/letter-background.png") 0 0 repeat;
 }*/
 
-#footnotes li {
+#footnotes li, #endnotes li {
     list-style: none;
 }
 
-#footnotes li a {
+#footnotes li a, #endnotes li a {
     padding-right: 1em;
 }
 
-#footnotes li sup {
+#footnotes li sup, #endnotes li sup {
     font-size: 18px;
     margin-left: 0;
 }
 
-#footnotes {
+#footnotes, #endnotes {
     padding-left: 0;
     margin-left: 4.5em;
 }
