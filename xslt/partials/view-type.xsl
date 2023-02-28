@@ -38,7 +38,10 @@
                 ()
             }">
             <xsl:for-each-group select="*" group-starting-with="tei:pb">                                  
-                <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" data-tab="paginate"  id="paginate-{position()}" tabindex="-1">
+                <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
+                     data-tab="paginate"  
+                     id="paginate-{position()}" 
+                     tabindex="-1">
                     
                     <window-resize opt="resizing" pos="{position()}" size="0.755"></window-resize>
 
@@ -49,6 +52,7 @@
                                 <xsl:choose>
                                     <xsl:when test="position() = last() - 1">
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                            
                                             <p class="yes-index" style="{
                                                 if (./@hand = '#handwritten') then
                                                 ($hand) else if (./@hand = '#typed') then
@@ -59,7 +63,7 @@
                                                 <xsl:apply-templates/>
                                             </p>
                                             
-                                            <xsl:if test="name() = 'lg' and position() = 3">
+                                            <xsl:if test="name() = 'lg' and not(following-sibling::tei:lg[1])">
                                                 <span style="text-align:center;">____</span>
                                                 <ul id="endnotes">
                                                     <xsl:for-each select="//tei:note[@type='endnote']">
@@ -72,11 +76,12 @@
                                                 </ul>
                                                 <span style="text-align:center;">___</span>
                                             </xsl:if>
+                                            
                                         </xsl:for-each>
-                                        
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                            
                                             <p class="yes-index" style="{
                                                 if (./@hand = '#handwritten') then
                                                 ($hand) else if (./@hand = '#typed') then
@@ -86,14 +91,17 @@
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
+                                            
                                             <xsl:if test="./tei:handShift">
                                                 <script type="text/javascript" src="js/handshift.js"></script>
                                             </xsl:if>
+                                            
                                         </xsl:for-each>
                                     </xsl:otherwise>
                                 </xsl:choose>
                                 
                                 <xsl:if test="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
+                                    
                                     <ul id="footnotes">
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
                                             <li>
@@ -103,6 +111,7 @@
                                             </li>
                                         </xsl:for-each>
                                     </ul>
+                                    
                                 </xsl:if>
                                 
                             </div>
@@ -114,6 +123,7 @@
                             <!--<hr/> -->                                             
                             <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
                             <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
+                            
                             <div id="viewer-{position()}">
                                 <div id="spinner_{$osd_container_id}" class="text-center">
                                     <div class="loader"></div>
@@ -121,6 +131,7 @@
                                 <div id="{$osd_container_id}" style="padding:.5em;">
                                     <!-- image container accessed by OSD script -->                                           
                                     <div id="{$osd_container_id2}">
+                                        
                                         <xsl:if test="@facs">
                                             <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
                                             <image-loader 
@@ -134,7 +145,8 @@
                                                     <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                 </xsl:attribute>
                                             </img>  -->                                                              
-                                        </xsl:if>                                
+                                        </xsl:if>     
+                                        
                                     </div>                                
                                 </div>  
                             </div>

@@ -99,8 +99,20 @@
     </xsl:template>-->
     
     <xsl:template match="tei:note">
-        <!--<span class="footnote_anchor" id="{@xml:id}_inline"></span>-->
-        <sup><a href="#{@xml:id}_inline" id="{@xml:id}" title="Footnote {@n}"><xsl:value-of select="@n"/></a></sup>
+        <xsl:choose>
+            <xsl:when test="@type='footnote'">
+                <!--<span class="footnote_anchor" id="{@xml:id}_inline"></span>-->
+                <sup><a href="#{@xml:id}_inline" id="{@xml:id}" title="footnote {@n}"><xsl:value-of select="@n"/></a></sup>
+            </xsl:when>
+            <xsl:when test="@type='endnote'">
+                <xsl:variable name="place" select="7"/>
+                <!--<xsl:variable name="place" select="tokenize(@place, '\s')[last()]"/>-->
+                <sup><a href="?tab={$place}#{@xml:id}_inline" id="{@xml:id}" title="endnote {@n}"><xsl:value-of select="@n"/></a></sup>
+            </xsl:when>
+            <xsl:otherwise>
+                <sup><a href="#{@xml:id}_inline" id="{@xml:id}" title="note {@n}"><xsl:value-of select="@n"/></a></sup>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="tei:unclear">
