@@ -134,23 +134,23 @@ input:checked + .i-slider:before {
   background-color: #c9ffcf;
 }
 
-.pink {
+.i-slider.pink {
   background-color: #ffa7f7;
 }
 
-.gold {
+.i-slider.gold {
   background-color: #ffdc6e;
 }
 
-.turquoise {
+.i-slider.turquoise {
   background-color: #a4f1fd;
 }
 
-.lila {
+.i-slider.lila {
   background-color: #daa4fd;
 }
 
-.lime {
+.i-slider.lime {
   background-color: #dbff8d;
 }
 
@@ -176,22 +176,37 @@ input:checked + .i-slider:before {
 
 .wrk::before {
   content: url("../images/icons/book.svg");
+  background-color: #a4f1fd;
+  border-radius: .5rem;
+  padding: .05em;
 }
 
 .org::before {
   content: url("../images/icons/building.svg");
+  background-color: #daa4fd;
+  border-radius: .5rem;
+  padding: .05em;
 }
 
 .eve::before {
   content: url("../images/icons/calendar-event.svg");
+  background-color: #dbff8d;
+  border-radius: .5rem;
+  padding: .05em;
 }
 
 .pers::before {
   content: url("../images/icons/person-fill.svg");
+  background-color: #ffa7f7;
+  border-radius: .5rem;
+  padding: .05em;
 }
 
 .plc::before {
   content: url("../images/icons/geo-alt-fill.svg");
+  background-color: #ffdc6e;
+  border-radius: .5rem;
+  padding: .05em;
 }
 
 .slider-number::after {
