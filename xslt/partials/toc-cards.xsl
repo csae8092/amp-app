@@ -66,8 +66,8 @@
                         <div style="background-color:rgba(0,0,0,.03); padding: .5em 0;">
                             
                             <xsl:if test="count(.//tei:listPlace[parent::tei:back]/tei:place) > 0">
-                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?places=on">
-                                    <div title="mentioned places" class="badge badge-en" style="display:inline;width:50px;">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?plc=on">
+                                    <div title="mentioned places" class="badge badge-en plcs" style="display:inline;width:50px;">
                                         <span class="number">
                                             <xsl:value-of select="count(.//tei:listPlace[parent::tei:back]/tei:place)"/>
                                         </span>
@@ -79,8 +79,8 @@
                             </xsl:if>
                             
                             <xsl:if test="count(.//tei:listPerson[parent::tei:back]/tei:person) > 0">
-                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?persons=on">
-                                    <div title="mentioned persons" class="badge badge-en" style="display:inline;width:50px;">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?prs=on">
+                                    <div title="mentioned persons" class="badge badge-en prsns" style="display:inline;width:50px;">
                                         <span class="number">
                                             <xsl:value-of select="count(.//tei:listPerson[parent::tei:back]/tei:person)"/>
                                         </span>
@@ -90,8 +90,8 @@
                             </xsl:if>
                             
                             <xsl:if test="count(.//tei:listOrg[parent::tei:back]/tei:org) > 0">
-                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?orgs=on">
-                                    <div title="mentioned organisations" class="badge badge-en" style="display:inline;width:50px;">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?org=on">
+                                    <div title="mentioned organisations" class="badge badge-en orgs" style="display:inline;width:50px;">
                                         <span class="number">
                                             <xsl:value-of select="count(.//tei:listOrg[parent::tei:back]/tei:org)"/>
                                         </span>
@@ -101,8 +101,8 @@
                             </xsl:if>
                             
                             <xsl:if test="count(.//tei:listBibl[parent::tei:back]/tei:bibl) > 0">
-                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?works=on">
-                                    <div title="mentioned works" class="badge badge-en" style="display:inline;width:50px;">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?wrk=on">
+                                    <div title="mentioned works" class="badge badge-en wrks" style="display:inline;width:50px;">
                                         <span class="number">
                                             <xsl:value-of select="count(.//tei:listBibl[parent::tei:back]/tei:bibl)"/>
                                         </span>
@@ -112,8 +112,8 @@
                             </xsl:if>
                             
                             <xsl:if test="count(.//tei:listEvent[parent::tei:back]/tei:event) > 0">
-                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?events=on">
-                                    <div title="mentioned events" class="badge badge-en" style="display:inline;width:50px;">
+                                <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?eve=on">
+                                    <div title="mentioned events" class="badge badge-en eves" style="display:inline;width:50px;">
                                         <span class="number">
                                             <xsl:value-of select="count(.//tei:listEvent[parent::tei:back]/tei:event)"/>
                                         </span>

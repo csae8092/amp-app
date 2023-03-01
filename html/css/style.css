@@ -1183,19 +1183,19 @@ td > label {
   box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.1);
 }
 
-.badge-en.plc:hover {
+.badge-en.plcs:hover {
   background-color: #ffdc6e;
 }
-.badge-en.prs:hover {
+.badge-en.prsns:hover {
   background-color: #ffa7f7;
 }
-.badge-en.wrk:hover {
+.badge-en.wrks:hover {
   background-color: #a4f1fd;
 }
-.badge-en.org:hover {
+.badge-en.orgs:hover {
   background-color: #daa4fd;
 }
-.badge-en.eve:hover {
+.badge-en.eves:hover {
   background-color: #dbff8d;
 }
 
