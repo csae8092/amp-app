@@ -85,10 +85,10 @@
                             <image-switch opt="es"></image-switch>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <font-size opt="sfs"></font-size>
+                            <font-size opt="fos"></font-size>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <font-family opt="sf"></font-family>
+                            <font-family opt="ff"></font-family>
                         </li>
                         <li class="nav-item dropdown-submenu">
                             <annotation-slider opt="tf"></annotation-slider>

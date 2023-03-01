@@ -198,7 +198,7 @@ var editor = new LoadEditor({
     name: "Change font family",
     variants: [
       {
-        opt: "select-font",
+        opt: "ff",
         title: "Font family",
         urlparam: "font",
         chg_citation: "citation-url",
@@ -220,7 +220,7 @@ var editor = new LoadEditor({
     name: "Create full size mode",
     variants: [
       {
-        opt: "edition-fullsize",
+        opt: "ef",
         title: "Full screen on/off",
         urlparam: "fs",
         chg_citation: "citation-url",
@@ -237,7 +237,7 @@ var editor = new LoadEditor({
     name: "Change font size",
     variants: [
       {
-        opt: "select-fontsize",
+        opt: "fs",
         title: "Font size",
         urlparam: "fos",
         chg_citation: "citation-url",
@@ -260,7 +260,7 @@ var editor = new LoadEditor({
     name: "enable/disable image viewer",
     variants: [
       {
-        opt: "edition-switch",
+        opt: "es",
         title: "Facsimile on/off",
         urlparam: "img",
         chg_citation: "citation-url",
