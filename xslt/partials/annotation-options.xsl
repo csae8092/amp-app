@@ -79,49 +79,49 @@
                     </a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="nav-item dropdown-submenu">
-                            <full-size opt="edition-fullsize"></full-size>
+                            <full-size opt="ef"></full-size>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <image-switch opt="edition-switch"></image-switch>
+                            <image-switch opt="es"></image-switch>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <font-size opt="select-fontsize"></font-size>
+                            <font-size opt="sfs"></font-size>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <font-family opt="select-font"></font-family>
+                            <font-family opt="sf"></font-family>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="text-features"></annotation-slider>
+                            <annotation-slider opt="tf"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="deleted"></annotation-slider>
+                            <annotation-slider opt="del"></annotation-slider>
                         </li> 
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="unclear"></annotation-slider>
+                            <annotation-slider opt="ucl"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="underlined"></annotation-slider>
+                            <annotation-slider opt="udl"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="whitespace"></annotation-slider>
+                            <annotation-slider opt="wsp"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu" style="border-top: 2px dashed lightgrey !important;">
-                            <annotation-slider opt="entities-features"></annotation-slider>
+                            <annotation-slider opt="ef"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="persons"></annotation-slider>
+                            <annotation-slider opt="prs"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="places"></annotation-slider>
+                            <annotation-slider opt="plc"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="orgs"></annotation-slider>
+                            <annotation-slider opt="org"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="works"></annotation-slider>
+                            <annotation-slider opt="wrk"></annotation-slider>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <annotation-slider opt="events"></annotation-slider>
+                            <annotation-slider opt="eve"></annotation-slider>
                         </li>
                     </ul>                                
                 </li>

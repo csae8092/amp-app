@@ -3,7 +3,7 @@ var editor = new LoadEditor({
     title: "Text Annotations",
     variants: [
       {
-        opt: "deleted",
+        opt: "del",
         opt_slider: "deleted-slider",
         title: "Deleted",
         color: "red",
@@ -20,7 +20,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "underlined",
+        opt: "udl",
         opt_slider: "underlined-slider",
         title: "Underlined",
         color: "blue",
@@ -37,7 +37,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "whitespace",
+        opt: "wsp",
         opt_slider: "whitespace-slider",
         title: "Original white spaces",
         color: "green",
@@ -54,7 +54,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "unclear",
+        opt: "ucl",
         opt_slider: "unclear-slider",
         title: "Unclear",
         color: "grey",
@@ -71,7 +71,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "text-features",
+        opt: "tf",
         opt_slider: "text-features-slider",
         title: "Original text features",
         color: "grey",
@@ -88,7 +88,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "entities-features",
+        opt: "ef",
         opt_slider: "entities-features-slider",
         title: "All Entities",
         color: "grey",
@@ -105,7 +105,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "persons",
+        opt: "prs",
         color: "pink",
         title: "Persons",
         html_class: "persons",
@@ -121,7 +121,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "places",
+        opt: "plc",
         color: "gold",
         title: "Places",
         html_class: "places",
@@ -137,7 +137,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "works",
+        opt: "wrk",
         color: "turquoise",
         title: "Literature",
         html_class: "works",
@@ -153,7 +153,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "orgs",
+        opt: "org",
         color: "lila",
         title: "Institutions",
         html_class: "orgs",
@@ -169,7 +169,7 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "events",
+        opt: "eve",
         color: "lime",
         title: "Events",
         html_class: "event",
@@ -222,7 +222,7 @@ var editor = new LoadEditor({
       {
         opt: "edition-fullsize",
         title: "Full screen on/off",
-        urlparam: "fullscreen",
+        urlparam: "fs",
         chg_citation: "citation-url",
         hide: "hide-reading",
         to_hide: "fade",
@@ -239,7 +239,7 @@ var editor = new LoadEditor({
       {
         opt: "select-fontsize",
         title: "Font size",
-        urlparam: "fontsize",
+        urlparam: "fos",
         chg_citation: "citation-url",
         sizes: {
           default: "default",
@@ -262,7 +262,7 @@ var editor = new LoadEditor({
       {
         opt: "edition-switch",
         title: "Facsimile on/off",
-        urlparam: "image",
+        urlparam: "img",
         chg_citation: "citation-url",
         fade: "fade",
         column_small: {
