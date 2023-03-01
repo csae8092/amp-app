@@ -85,7 +85,7 @@
                             <image-switch opt="es"></image-switch>
                         </li>
                         <li class="nav-item dropdown-submenu">
-                            <font-size opt="fos"></font-size>
+                            <font-size opt="fs"></font-size>
                         </li>
                         <li class="nav-item dropdown-submenu">
                             <font-family opt="ff"></font-family>
