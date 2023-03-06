@@ -177,36 +177,36 @@ input:checked + .i-slider:before {
 .wrk::before {
   content: url("../images/icons/book.svg");
   background-color: #a4f1fd;
-  border-radius: .5rem;
-  padding: .05em;
+  border-radius: 0.5rem;
+  padding: 0.05em;
 }
 
 .org::before {
   content: url("../images/icons/building.svg");
   background-color: #daa4fd;
-  border-radius: .5rem;
-  padding: .05em;
+  border-radius: 0.5rem;
+  padding: 0.05em;
 }
 
 .eve::before {
   content: url("../images/icons/calendar-event.svg");
   background-color: #dbff8d;
-  border-radius: .5rem;
-  padding: .05em;
+  border-radius: 0.5rem;
+  padding: 0.05em;
 }
 
 .pers::before {
   content: url("../images/icons/person-fill.svg");
   background-color: #ffa7f7;
-  border-radius: .5rem;
-  padding: .05em;
+  border-radius: 0.5rem;
+  padding: 0.05em;
 }
 
 .plc::before {
   content: url("../images/icons/geo-alt-fill.svg");
   background-color: #ffdc6e;
-  border-radius: .5rem;
-  padding: .05em;
+  border-radius: 0.5rem;
+  padding: 0.05em;
 }
 
 .slider-number::after {
@@ -285,13 +285,8 @@ input:checked + .i-slider:before {
   padding: 0.5em 0.5em !important;
 }
 
-@media (max-width: 576px) {
-  .dropdown-menu li:nth-child(-n + 2) {
-    display: none !important;
-  }
-}
 @media (max-width: 768px) {
-  .dropdown-menu li:nth-child(-n + 2) {
+  #aot-menu .dropdown .dropdown-menu li:nth-child(-n + 2) {
     display: none !important;
   }
 }
