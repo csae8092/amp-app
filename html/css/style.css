@@ -291,7 +291,7 @@ div.dataTables_filter {
 .navbar {
   border-bottom: 5px solid #615a60 !important;
   background-color: #fff;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .navbar .navbar-nav {
