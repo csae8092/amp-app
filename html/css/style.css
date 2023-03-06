@@ -653,12 +653,12 @@ a.btn-round:hover {
 }
 
 .container-fluid {
-  max-width: 1024px;
+  max-width: 1200px;
   margin-bottom: 1em;
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1200px;
 }
 
 .container-fluid-content {
