@@ -1379,27 +1379,6 @@ td > label {
   .footer-widget {
     max-width: 100% !important;
   }
-  #ac-panel {
-    display: block;
-    position: relative;
-    min-height: 50px;
-    max-height: 200px;
-    margin: 0 0 2em 5%;
-    max-width: 97%;
-    width: 97%;
-    font-size: 0.9rem;
-  }
-  span.ssQueryAndButton {
-    margin: 2em auto 0 auto !important;
-    max-width: 90%;
-    width: 90%;
-  }
-  #ac-panel-many .col-md-4 {
-    max-width: 100%;
-  }
-  #stems-many {
-    max-width: 100%;
-  }
   .navbar-collapse {
     margin: 0;
   }
@@ -1470,27 +1449,6 @@ td > label {
   .footer-widget {
     max-width: 100% !important;
   }
-  #ac-panel {
-    display: block;
-    position: relative;
-    min-height: 50px;
-    max-height: 200px;
-    margin: 0 0 2em 5%;
-    max-width: 93%;
-    width: 93%;
-    font-size: 0.9rem;
-  }
-  span.ssQueryAndButton {
-    margin: 2em auto 0 auto !important;
-    max-width: 90%;
-    width: 90%;
-  }
-  #ac-panel-many .col-md-4 {
-    max-width: 100%;
-  }
-  #stems-many {
-    max-width: 100%;
-  }
   #footer-full-content {
     max-width: 98%;
   }
@@ -1517,6 +1475,14 @@ td > label {
   }
   .scroll-link {
     display: none;
+  }
+  .linenumbers {
+    display: none;
+  }
+  #title-nav .col-md-3 .row .col-md-2,
+  .col-md-8,
+  .col-md-10 {
+    padding: 1em 0;
   }
 }
 
