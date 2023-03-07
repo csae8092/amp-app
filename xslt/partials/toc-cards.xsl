@@ -28,8 +28,8 @@
                     <div class="card index-card" style="margin:.2em !important;">
                         
                         <div class="card-body">
-                            <xsl:variable name="iiif-ext" select="'.jpg?format=thumbnail&amp;height=400&amp;width=400'"/> 
-                            <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/> 
+                            <xsl:variable name="iiif-ext" select="'.jp2/full/,400/0/default.jpg'"/> 
+                            <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/> 
                             <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>
                             <div class="text-center">
                                 <div class="loader-toc"></div>
@@ -41,7 +41,7 @@
                                 <xsl:attribute name="alt">
                                     <xsl:value-of select="//tei:title[@level='a']//text()"/>
                                 </xsl:attribute>
-                            </img>                            
+                            </img>
                         </div>
                         
                         <div class="card-header">                                                      

@@ -36,7 +36,7 @@
                                         <a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;" title="Photos" class="nav-link">Photos <small>(in progress)</small></a>
+                                        <a href="photos.html" title="Photos" class="nav-link">Photos</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a href="additional-materials.html" title="Additional materials" class="nav-link">Additional materials</a>
