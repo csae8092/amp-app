@@ -127,6 +127,14 @@ body {
   background-color: #fff;
 }
 
+.index-card .card-body {
+    padding: 0;
+}
+
+.index-card .card-body img {
+    border-radius: .5rem .5rem 0 0;
+}
+
 .intro_img .row {
   align-items: center;
   justify-content: space-evenly;
@@ -348,13 +356,11 @@ div.dataTables_filter {
   word-break: break-word;
 }
 
-.index-card > .card-body {
-}
-
 .index-card {
-  border-top: 5px solid #615a60;
   /*opacity: .6;*/
   transition: transform 0.2s;
+  border: 1px solid #f1f1f1;
+  border-bottom: 5px solid #615a60;
 }
 
 .index-card:hover {
