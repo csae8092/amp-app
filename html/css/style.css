@@ -207,6 +207,15 @@ div.dataTables_wrapper div.dataTables_filter input {
   margin: 0 1.5em 0 0;
 }
 
+ul li {
+   list-style: none !important;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 .numbered > li {
   display: block;
   list-style: none !important;
@@ -1490,6 +1499,9 @@ td > label {
   .intro_img .row .col-md-4 {
     max-width: 50%;
     flex: 0 0 50%;
+  }
+  .index_card .card-header h4, p {
+    font-size: 16px !important;
   }
 }
 

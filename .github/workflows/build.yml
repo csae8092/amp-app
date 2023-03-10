@@ -1,7 +1,6 @@
 name: Build and publish
 
-on: 
-  workflow_dispatch
+on: workflow_dispatch
 
 jobs:
   build_pages:
@@ -14,38 +13,38 @@ jobs:
       TYPESENSE_PROTOCOL: https
       TYPESENSE_API_KEY: ${{secrets.TYPESENSE_API_KEY}}
     steps:
-    - name: Perform Checkout
-      uses: actions/checkout@v2
-    - name: Fetch data
-      run: |
-        ./fetch_data.sh
-    - name: Fetch data entities
-      run: |
-        ./fetch_data_entities.sh
-    - name: Install Saxon, Ant and Fundament, staticSearch
-      run: |
-        apt-get update && apt-get install openjdk-11-jre-headless ant -y --no-install-recommend
-        ./script.sh
-    - name: Install Ant-Contrib
-      run: |
-        wget https://repo1.maven.org/maven2/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar
-        mv ant-contrib-1.0b3.jar /usr/share/ant/lib
-    - name: Reorganize data
-      run: |
-        ant -f copy-task.xml
-    - name: Add attributes
-      run: |
-        pip install -r requirements.txt
-        ./attributes.sh
-        ./denormalize.sh
-    - name: Build
-      run: |
-        ant
-    - name: Build Typesense Index
-      run: |
-        python make_ts_index.py
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./html
+      - name: Perform Checkout
+        uses: actions/checkout@v3
+      - name: Fetch data
+        run: |
+          ./fetch_data.sh
+      - name: Fetch data entities
+        run: |
+          ./fetch_data_entities.sh
+      - name: Install Saxon, Ant and Fundament, staticSearch
+        run: |
+          apt-get update && apt-get install openjdk-11-jre-headless ant -y --no-install-recommend
+          ./script.sh
+      - name: Install Ant-Contrib
+        run: |
+          wget https://repo1.maven.org/maven2/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar
+          mv ant-contrib-1.0b3.jar /usr/share/ant/lib
+      - name: Reorganize data
+        run: |
+          ant -f copy-task.xml
+      - name: Add attributes
+        run: |
+          pip install -r requirements.txt
+          ./attributes.sh
+          ./denormalize.sh
+      - name: Build
+        run: |
+          ant
+      - name: Build Typesense Index
+        run: |
+          python make_ts_index.py
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./html
