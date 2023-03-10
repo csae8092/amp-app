@@ -16,10 +16,17 @@ function nextPrevUrl() {
   var next = document.getElementById("next-doc");
   var urlparam = new URLSearchParams(document.location.search);
   var domain = document.location.origin;
+  var path = document.location.pathname;
+  var path = path.split("/");
+  if (path.length > 2) {
+    path = path[1];
+  } else {
+    path = "";
+  }
   var prev_href = prev.getAttribute("href");
   var next_href = next.getAttribute("href");
-  var new_prev = new URL(`${domain}/${prev_href}?${urlparam}`);
-  var new_next = new URL(`${domain}/${next_href}?${urlparam}`);
+  var new_prev = new URL(`${domain}/${path}/${prev_href}?${urlparam}`);
+  var new_next = new URL(`${domain}/${path}/${next_href}?${urlparam}`);
   prev.setAttribute("href", new_prev);
   next.setAttribute("href", new_next);
 }
