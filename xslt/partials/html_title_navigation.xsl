@@ -35,7 +35,7 @@
                     <div class="col-md-2" style="margin-top:.7em;">
 
                         <xsl:if test="string-length($prev) != 0">
-                            <a>
+                            <a id="prev-doc">
                                 <xsl:attribute name="href">
                                     <xsl:value-of select="$prev"/>
                                 </xsl:attribute>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="col-md-2" style="margin-top:.7em;text-align:right;">
                         <xsl:if test="string-length($next) != 0">
-                            <a>
+                            <a id="next-doc">
                                 <xsl:attribute name="href">
                                     <xsl:value-of select="$next"/>
                                 </xsl:attribute>

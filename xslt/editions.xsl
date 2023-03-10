@@ -90,6 +90,7 @@
                 <script type="text/javascript" src="js/run.js"></script>
                 <script type="text/javascript" src="js/hide-md.js"></script>
                 <script type="text/javascript" src="js/mark.js"></script>
+                <script type="text/javascript" src="js/prev-next-urlupdate.js"></script>
             </body>
         </html>
     </xsl:template>
