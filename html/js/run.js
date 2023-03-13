@@ -302,7 +302,7 @@ var editor = new LoadEditor({
     url_param: ".jp2/full/full/0/default.jpg",
     osd_target: "container",
     img_source: "container2",
-    img_types: ["envelope", "sheet", "letter", "card"],
+    img_types: ["envelope", "sheet", "letter", "card", "nan"],
     active_class: "active",
     inactive_class: "fade",
     bootstrap_class: "show",
