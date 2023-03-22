@@ -99,22 +99,22 @@
         <br/>        
     </xsl:template>-->
     
-    <xsl:template match="tei:note">
+    <!--<xsl:template match="tei:note">
         <xsl:choose>
             <xsl:when test="@type='footnote'">
-                <!--<span class="footnote_anchor" id="{@xml:id}_inline"></span>-->
+                <!-\-<span class="footnote_anchor" id="{@xml:id}_inline"></span>-\->
                 <sup><a href="#{@xml:id}_inline" id="{@xml:id}" title="footnote {@n}"><xsl:value-of select="@n"/></a></sup>
             </xsl:when>
             <xsl:when test="@type='endnote'">
                 <xsl:variable name="place" select="7"/>
-                <!--<xsl:variable name="place" select="tokenize(@place, '\s')[last()]"/>-->
+                <!-\-<xsl:variable name="place" select="tokenize(@place, '\s')[last()]"/>-\->
                 <sup><a href="?tab={$place}#{@xml:id}_inline" id="{@xml:id}" title="endnote {@n}"><xsl:value-of select="@n"/></a></sup>
             </xsl:when>
             <xsl:otherwise>
                 <sup><a href="#{@xml:id}_inline" id="{@xml:id}" title="note {@n}"><xsl:value-of select="@n"/></a></sup>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template match="tei:unclear">
         <span class="abbr" alt="unclear">
@@ -779,10 +779,10 @@
                 <br/>
                 <a>
                     <xsl:variable name="para" as="xs:int">
-                        <xsl:number level="any" from="tei:body" count="tei:lg"/>
+                        <xsl:number level="any" from="tei:div" count="tei:lg"/>
                     </xsl:variable>
                     <xsl:variable name="lines" as="xs:int">
-                        <xsl:number level="multiple" from="tei:body"/>
+                        <xsl:number level="any" from="tei:div" count="tei:l"/>
                     </xsl:variable>
                     <xsl:attribute name="href">
                         <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>

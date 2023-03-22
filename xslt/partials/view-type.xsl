@@ -63,19 +63,19 @@
                                                 <xsl:apply-templates/>
                                             </p>
                                             
-                                            <xsl:if test="name() = 'lg' and not(following-sibling::tei:lg[1])">
+                                            <!--<xsl:if test="name() = 'lg' and not(following-sibling::tei:lg[1])">
                                                 <span style="text-align:center;">____</span>
                                                 <ul id="endnotes">
                                                     <xsl:for-each select="//tei:note[@type='endnote']">
                                                         <li>
-                                                            <!--<span class="footnote_anchor" id="{@xml:id}"></span>-->
+                                                            <!-\-<span class="footnote_anchor" id="{@xml:id}"></span>-\->
                                                             <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
                                                             <xsl:apply-templates/>
                                                         </li>
                                                     </xsl:for-each>
                                                 </ul>
                                                 <span style="text-align:center;">___</span>
-                                            </xsl:if>
+                                            </xsl:if>-->
                                             
                                         </xsl:for-each>
                                     </xsl:when>
@@ -100,19 +100,19 @@
                                     </xsl:otherwise>
                                 </xsl:choose>
                                 
-                                <xsl:if test="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
+                                <!--<xsl:if test="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
                                     
                                     <ul id="footnotes">
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
                                             <li>
-                                                <!--<span class="footnote_anchor" id="{@xml:id}"></span>-->
+                                                <!-\-<span class="footnote_anchor" id="{@xml:id}"></span>-\->
                                                 <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
                                                 <xsl:apply-templates/>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
                                     
-                                </xsl:if>
+                                </xsl:if>-->
                                 
                             </div>
                         </div>   
