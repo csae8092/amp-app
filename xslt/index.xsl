@@ -76,7 +76,7 @@
                                     <div class="col-md-4">
                                         <div class="card index-card">
                                             <div class="card-header">                                        
-                                                <h4 style="padding:.5em;border-radius:.5rem;background-color:#b59890;color:#fff;">Document search</h4>       
+                                                <h4 style="padding:.5em;border-radius:.5rem;">Document search</h4>       
                                                 <p style="margin-bottom:.5em;font-size:22px;">Explore the Auden Musulin Papers through full-text search.</p>
                                                 <button class="btn btn-light">
                                                     <a href="search.html">
