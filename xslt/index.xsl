@@ -41,7 +41,7 @@
                             
                         </div>
                     </div>
-                    <div class="container-fluid" style="height: 93vh; background-color:#fff;max-width:100%;margin-bottom:0;">
+                    <div class="container-fluid" style="background-color:#fff;max-width:100%;margin-bottom:0;">
                         <div class="row">
                             
                             <div class="col-sm-12 col-md-6 intro_column">

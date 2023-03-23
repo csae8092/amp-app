@@ -42,6 +42,10 @@ body {
     height: 93vh;
 }
 
+.container-fluid {
+    min-height: 93vh;
+}
+
 
 .slider {
   z-index: 999;
@@ -1460,10 +1464,10 @@ td > label {
         max-width: 50% !important;
     }
     .container-fluid {
-        height: 100% !important;
+        min-height: auto;
     }
     .navbar .container {
-        height: 100%;
+        height: auto;
     }
     
     #wrapper-footer-full {
