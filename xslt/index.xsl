@@ -41,10 +41,10 @@
                             
                         </div>
                     </div>
-                    <div class="container-fluid" style="background-color:#fff;max-width:100%;margin-bottom:0;">
+                    <div class="container-fluid" style="height: 93vh; background-color:#fff;max-width:100%;margin-bottom:0;">
                         <div class="row">
                             
-                            <div class="col-md-6 intro_column">
+                            <div class="col-sm-12 col-md-6 intro_column">
                                 <div class="intro_text">
                                     <div class="main-title">
                                         <h1 style="color:#615a60;padding:.5em 0;">Auden Musulin Papers</h1>
@@ -56,10 +56,10 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-md-6 intro_img">
+                            <div class="col-sm-12 col-md-6 intro_img">
 
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-12">
                                         <a href="toc.html" class="index-link">                                   
                                             <div class="card index-card">
                                                 <div class="card-body">
@@ -73,7 +73,7 @@
                                             </div>                                     
                                         </a>                                    
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-sm-12">
                                         <div class="card index-card">
                                             <div class="card-header">                                        
                                                 <h4 style="padding:.5em;border-radius:.5rem;">Document search</h4>       
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 col-sm-12">
                                             <a href="auden-biography.html" class="index-link">  
                                                 <div class="card index-card">
                                                     <div class="card-body">
@@ -115,7 +115,7 @@
                                                 </div>                                    
                                             </a>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-4 col-sm-12">
                                             <a href="musulin-biography.html" class="index-link">                                                     
                                                 <div class="card index-card">
                                                     <div class="card-body">

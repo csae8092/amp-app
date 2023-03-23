@@ -20,14 +20,14 @@
                 <xsl:value-of select="document-uri(/)"/>
             </xsl:variable>                                
             <!--<xsl:variable name="date" select="//tei:correspAction/tei:date/@when-iso"/>-->
-            <div class="col-md-3" style="padding: 0 !important;">
+            <div class="col-3 col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2">
                 <a>
                     <xsl:attribute name="href">                                                
                         <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
                     </xsl:attribute>
-                    <div class="card index-card" style="margin:.2em !important;">
+                    <div class="card index-card">
                         
-                        <div class="card-body">
+                        <div class="card-body" style="border-radius: 0.5rem 0.5rem 0 0; height: 250px; overflow: hidden; background-color: #000; display: flex; align-items: center;">
                             <xsl:variable name="iiif-ext" select="'.jp2/full/,400/0/default.jpg'"/> 
                             <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/> 
                             <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>
@@ -44,8 +44,8 @@
                             </img>
                         </div>
                         
-                        <div class="card-header">                                                      
-                            <p style="padding: .2em!important;margin:0!important;">
+                        <div class="card-header" style="height:150px; display: flex; align-items: center;">                                                      
+                            <p class="p-1 m-0">
                                 <xsl:value-of select="//tei:title[@level='a']"/>
                             </p>
                         </div>

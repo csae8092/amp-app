@@ -45,7 +45,7 @@
                         </div>
                         <div class="tab-content">
                             <div class="tab-pane active" id="cards-tab" tabindex="-1">  
-                                <div class="row text-center">
+                                <div class="row gy-1 text-center">
                                     <xsl:call-template name="toc-cards">
                                         <xsl:with-param name="category" select="'correspondence'"/>
                                     </xsl:call-template>
