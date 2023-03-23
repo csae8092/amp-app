@@ -20,7 +20,7 @@
                 <xsl:value-of select="document-uri(/)"/>
             </xsl:variable>                                
             <!--<xsl:variable name="date" select="//tei:correspAction/tei:date/@when-iso"/>-->
-            <div class="col-3 col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2">
+            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2">
                 <a>
                     <xsl:attribute name="href">                                                
                         <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>

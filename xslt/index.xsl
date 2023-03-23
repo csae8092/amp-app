@@ -59,7 +59,7 @@
                             <div class="col-sm-12 col-md-6 intro_img">
 
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-12">
+                                    <div class="col-md-5 col-sm-12">
                                         <a href="toc.html" class="index-link">                                   
                                             <div class="card index-card">
                                                 <div class="card-body">
@@ -73,7 +73,7 @@
                                             </div>                                     
                                         </a>                                    
                                     </div>
-                                    <div class="col-md-4 col-sm-12">
+                                    <div class="col-md-4 col-sm-12 margin-top">
                                         <div class="card index-card">
                                             <div class="card-header">                                        
                                                 <h4 style="padding:.5em;border-radius:.5rem;">Document search</h4>       
@@ -101,7 +101,7 @@
                                     </div>
                                 </div>
                                     <div class="row">
-                                        <div class="col-md-4 col-sm-12">
+                                        <div class="col-md-5 col-sm-12">
                                             <a href="auden-biography.html" class="index-link">  
                                                 <div class="card index-card">
                                                     <div class="card-body">
@@ -115,7 +115,7 @@
                                                 </div>                                    
                                             </a>
                                         </div>
-                                        <div class="col-md-4 col-sm-12">
+                                        <div class="col-md-4 col-sm-12 margin-top">
                                             <a href="musulin-biography.html" class="index-link">                                                     
                                                 <div class="card index-card">
                                                     <div class="card-body">
