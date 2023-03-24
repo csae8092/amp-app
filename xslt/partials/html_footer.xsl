@@ -136,6 +136,7 @@
         <!-- #wrapper-footer-full -->
         <div class="footer-imprint-bar hide-reading" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;" >
             <span>© Copyright OEAW</span><a title="CC-BY 4.0" target="_blank" href="https://creativecommons.org/licenses/by/4.0"><img style="margin: 0 1em; max-width: 100px; height:auto;" alt="CC-BY 4.0 Logo" src="images/cc-by.svg"></img></a><a href="imprint.html">Impressum/Imprint</a>
-        </div>        
+        </div>
+        <script type="text/javascript" src="js/navScrollHide.js"></script>
     </xsl:template>
 </xsl:stylesheet>

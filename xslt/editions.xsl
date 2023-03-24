@@ -45,9 +45,6 @@
                     .container-fluid {
                         max-width: 100%;
                     }
-                    .sticky-navbar {
-                        position: relative !important;
-                    }
                     mark{
                         background: orange;
                         color: black;

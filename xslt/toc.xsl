@@ -73,7 +73,6 @@
                             createDataTable('tocTable', 'Search titles and dates:');
                         });
                     </script>
-                    <script type="text/javascript" src="js/cards.js"></script>
                 </div>
             </body>
         </html>

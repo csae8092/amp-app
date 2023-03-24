@@ -39,13 +39,20 @@ body {
 #wrapper-footer-full {
     display: flex;
     align-items: center;
-    height: 93vh;
+    min-height: 93vh;
 }
 
 .container-fluid {
     min-height: 93vh;
 }
 
+nav {
+    transition: .2s;
+}
+
+nav.hiddenNav {
+    transform: translate3d(0, -100%, 0);
+}
 
 .slider {
   z-index: 999;
