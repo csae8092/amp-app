@@ -39,7 +39,7 @@ body {
 #wrapper-footer-full {
     display: flex;
     align-items: center;
-    min-height: 93vh;
+    min-height: 97vh;
 }
 
 .container-fluid {
@@ -242,7 +242,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 ul li {
-  list-style: none !important;
+  list-style: none;
 }
 
 ul {
@@ -259,7 +259,17 @@ ul {
 .numbered > li::before {
   display: inline-block;
   content: attr(data-no) ". ";
-  text-indent: -3em;
+  text-indent: -2em;
+}
+
+.bulleted {
+    margin: .5em;
+    padding: .3em;
+}
+
+.bulleted li {
+    list-style: circle !important;
+    list-style-type: circle !important;
 }
 
 #show-text {
@@ -335,8 +345,8 @@ div.dataTables_filter {
   border-bottom: 5px solid #615a60 !important;
   background-color: #fff;
   overflow: visible;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .navbar .navbar-nav {

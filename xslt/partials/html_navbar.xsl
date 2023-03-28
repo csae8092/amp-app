@@ -41,7 +41,7 @@
                                     <li class="nav-item dropdown-submenu">
                                         <a href="additional-materials.html" title="Additional materials" class="nav-link">Additional materials</a>
                                     </li> 
-                                </ul>                                
+                                </ul>
                             </li>
                             <li class="nav-item dropdown">
                                 <a title="Indexes" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span></a>

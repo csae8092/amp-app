@@ -58,7 +58,7 @@
                 <ol class="{@rend}"><xsl:apply-templates/></ol>
             </xsl:when>
             <xsl:when test="@rend = 'bulleted'">
-                <ul style="list-style-type: circle;" class="{@rend}">
+                <ul class="{@rend}">
                     <xsl:apply-templates/>
                 </ul>
             </xsl:when>
