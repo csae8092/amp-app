@@ -76,24 +76,25 @@
                                     <div class="col-md-4 col-sm-12 py-3">
                                         <a href="search.html" class="index-link">  
                                             <div class="card index-card">
-                                                <div class="card-header" style="margin: 0 auto; text-align:center;">                                        
+                                                <div class="card-header" style="padding: 0;">                                        
                                                     <img src="images/documents-search-icon-resize.png"
                                                         class="d-block w-100"
                                                         alt="Search Database Logo"/>  
-                                                    <h4 style="margin:.5em;">Explore the Auden Musulin Papers through full-text search.</h4>
-                                                    
                                                     <!--<form class="form-inline my-2 my-lg-0 navbar-search-form"
-                                                method="get"
-                                                action="search.html"
-                                                role="search">
-                                                <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
-                                                <button type="submit" class="navbar-search-icon">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                                    </svg>
-                                                </button>
-                                            </form>-->                                        
-                                                </div>                                                                       
+                                                         method="get"
+                                                         action="search.html"
+                                                         role="search">
+                                                         <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
+                                                         <button type="submit" class="navbar-search-icon">
+                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                             </svg>
+                                                         </button>
+                                                     </form>-->                                        
+                                                </div>
+                                                <div class="card-header">  
+                                                    <h4>Explore the Auden Musulin Papers through full-text search.</h4>                                         
+                                                </div>
                                             </div>
                                         </a>
                                     </div>
