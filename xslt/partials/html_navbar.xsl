@@ -84,7 +84,7 @@
                                         <a title="Team" href="team.html" class="nav-link">Team</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="editorial-declaration.html" title="Editorial Declaration" class="nav-link">Editorial Declaration</a>
+                                        <a href="editorial-declaration.html" title="Editorial Declaration" class="nav-link">Documentation</a>
                                     </li>
                                     <!--<li class="nav-item dropdown-submenu">
                                         <a title="Instruction for using the edition" href="#" class="nav-link">Instruction for using the edition</a>
