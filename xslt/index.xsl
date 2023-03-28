@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="container-fluid" style="background-color:#fff;max-width:100%;margin-bottom:0;">
-                        <div class="row">
+                        <div class="row" style="margin: 2% 0;">
                             
                             <div class="col-sm-12 col-md-6 intro_column">
                                 <div class="intro_text">
@@ -59,11 +59,11 @@
                             <div class="col-sm-12 col-md-6 intro_img">
 
                                 <div class="row">
-                                    <div class="col-md-5 col-sm-12">
+                                    <div class="col-md-4 col-sm-12 py-3">
                                         <a href="toc.html" class="index-link">                                   
                                             <div class="card index-card">
                                                 <div class="card-body">
-                                                    <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png"
+                                                    <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web_1041.png"
                                                         class="d-block w-100"
                                                         alt="Auden-Musulin Correspondence Image"/>
                                                 </div>
@@ -73,35 +73,33 @@
                                             </div>                                     
                                         </a>                                    
                                     </div>
-                                    <div class="col-md-4 col-sm-12 margin-top">
-                                        <div class="card index-card">
-                                            <div class="card-header">                                        
-                                                <h4 style="padding:.5em;border-radius:.5rem;">Document search</h4>       
-                                                <p style="margin-bottom:.5em;font-size:22px;">Explore the Auden Musulin Papers through full-text search.</p>
-                                                <button class="btn btn-light">
-                                                    <a href="search.html">
-                                                        Start searching
-                                                    </a>
+                                    <div class="col-md-4 col-sm-12 py-3">
+                                        <a href="search.html" class="index-link">  
+                                            <div class="card index-card">
+                                                <div class="card-header" style="margin: 0 auto; text-align:center;">                                        
+                                                    <img src="images/documents-search-icon-resize.png"
+                                                        class="d-block w-100"
+                                                        alt="Search Database Logo"/>  
+                                                    <h4 style="margin:.5em;">Explore the Auden Musulin Papers through full-text search.</h4>
                                                     
+                                                    <!--<form class="form-inline my-2 my-lg-0 navbar-search-form"
+                                                method="get"
+                                                action="search.html"
+                                                role="search">
+                                                <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
+                                                <button type="submit" class="navbar-search-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                    </svg>
                                                 </button>
-                                                
-                                                <!--<form class="form-inline my-2 my-lg-0 navbar-search-form"
-                                            method="get"
-                                            action="search.html"
-                                            role="search">
-                                            <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
-                                            <button type="submit" class="navbar-search-icon">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                                </svg>
-                                            </button>
-                                        </form>-->                                        
-                                            </div>                                                                       
-                                        </div>
+                                            </form>-->                                        
+                                                </div>                                                                       
+                                            </div>
+                                        </a>
                                     </div>
                                 </div>
                                     <div class="row">
-                                        <div class="col-md-5 col-sm-12">
+                                        <div class="col-md-4 col-sm-12 py-3">
                                             <a href="auden-biography.html" class="index-link">  
                                                 <div class="card index-card">
                                                     <div class="card-body">
@@ -115,11 +113,11 @@
                                                 </div>                                    
                                             </a>
                                         </div>
-                                        <div class="col-md-4 col-sm-12 margin-top">
+                                        <div class="col-md-4 col-sm-12 py-3">
                                             <a href="musulin-biography.html" class="index-link">                                                     
                                                 <div class="card index-card">
-                                                    <div class="card-body">
-                                                        <img src="images/index/stella-musulin_0237.jpg" 
+                                                    <div class="card-body" style="margin: 0 auto; background-color: #000 !important;">
+                                                        <img src="images/index/stella-musulin_0237_small.png" 
                                                             class="d-block w-100" 
                                                             alt="Stella Musulin Image"/>
                                                     </div>

@@ -154,6 +154,7 @@ nav.hiddenNav {
 }
 
 .index-card .card-body {
+  border-radius: 0.5rem 0.5rem 0 0;
   padding: 0;
 }
 
