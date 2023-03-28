@@ -111,7 +111,7 @@ var editor = new LoadEditor({
         html_class: "persons",
         css_class: "pers",
         hide: {
-          hidden: false,
+          hidden: true,
           class: "persons .entity",
         },
         chg_citation: "citation-url",
