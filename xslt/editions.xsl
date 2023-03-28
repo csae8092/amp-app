@@ -223,27 +223,27 @@
             <xsl:otherwise>
                 <xsl:choose>
                     <xsl:when test="@type='person'">
-                        <span class="persons entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                        <span class="persons ent" data-bs-toggle="modal" data-bs-target="{@ref}">
                             <xsl:apply-templates/>
                         </span>
                     </xsl:when>
                     <xsl:when test="@type='place'">
-                        <span class="places entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                        <span class="places ent" data-bs-toggle="modal" data-bs-target="{@ref}">
                             <xsl:apply-templates/>
                         </span>
                     </xsl:when>
                     <xsl:when test="@type='org'">
-                        <span class="orgs entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                        <span class="orgs ent" data-bs-toggle="modal" data-bs-target="{@ref}">
                             <xsl:apply-templates/>
                         </span>
                     </xsl:when>
                     <xsl:when test="@type='lit_work'">
-                        <span class="works entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                        <span class="works ent" data-bs-toggle="modal" data-bs-target="{@ref}">
                             <xsl:apply-templates/>
                         </span>
                     </xsl:when>
                     <xsl:when test="@type='event'">
-                        <span class="event entity" data-bs-toggle="modal" data-bs-target="{@ref}">
+                        <span class="event ent" data-bs-toggle="modal" data-bs-target="{@ref}">
                             <xsl:apply-templates/>
                         </span>
                     </xsl:when>

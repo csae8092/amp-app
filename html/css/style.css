@@ -1351,7 +1351,7 @@ td > label {
 }
 
 /* entities */
-.entity {
+.entity, .ent {
   cursor: pointer;
 }
 
