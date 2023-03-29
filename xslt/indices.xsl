@@ -262,12 +262,13 @@
                             <xsl:choose>
                                 <xsl:when test="./tei:location/tei:geo">
                                     <td class="map-coordinates" 
-                                        id="{@xml:id}" 
+                                        data-id="{@xml:id}"
                                         data-count="{$count}" 
                                         data-country="{substring-before(./tei:country, ', ')}" 
                                         lat="{$coords[1]}" 
-                                        long="{$coords[2]}" 
-                                        subtitle="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
+                                        long="{$coords[2]}"
+                                        subtitle="N/A"
+                                        title="{if (./tei:settlement) then (./tei:settlement/tei:placeName) else (./tei:placeName)}">
                                         <xsl:value-of select="./tei:location/tei:geo"/>
                                     </td>
                                 </xsl:when>
@@ -334,7 +335,9 @@
                                         <li class="map-coordinates"
                                             lat="{$coords[1]}" 
                                             long="{$coords[2]}"
-                                            data-count="{$count}" 
+                                            data-count="{$count}"
+                                            data-id="{$key}"
+                                            title="{./tei:placeName}"
                                             subtitle="{parent::tei:org/tei:orgName}">
                                             <a href="{$key}.html">
                                                 <xsl:value-of select="./tei:placeName"/>
@@ -445,12 +448,15 @@
                             <td>
                                 <xsl:choose>
                                     <xsl:when test="./tei:ab[@type='location']/tei:location[@type='coords']">
+                                        <xsl:variable name="key" select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName/@key"/>
                                         <xsl:variable name="coords" select="tokenize(./tei:ab[@type='location']/tei:location[@type='coords']/tei:geo, ', ')"/>
-                                        <a href="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName/@key}.html"
+                                        <a href="{$key}.html"
                                             class="map-coordinates" 
-                                            lat="{$coords[2]}"
-                                            long="{$coords[1]}"
+                                            lat="{$coords[1]}"
+                                            long="{$coords[2]}"
                                             data-count="{$count}"
+                                            data-id="{$key}"
+                                            title="{./tei:label}"
                                             subtitle="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName}">
                                             <xsl:value-of select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName"/>
                                         </a>

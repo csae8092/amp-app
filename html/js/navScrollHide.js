@@ -6,7 +6,7 @@ On scroll up the navbar appears and is sticky.
 
 var box = document,
   nav = document.querySelector("nav"),
-  posEnd = 10;
+  posEnd = 200;
 
 box.addEventListener("scroll", function (event) {
   var posStart = document.documentElement.scrollTop;

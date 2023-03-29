@@ -42,7 +42,7 @@
                                         <div id="refinement-list-orgs"></div>
                                         <h4>Works</h4>
                                         <div id="refinement-list-works"></div>
-                                        <h4>Jahr</h4>
+                                        <h4>Date</h4>
                                         <div id="range-input"></div>
                                     </div>
                                     <div class="col-md-8">

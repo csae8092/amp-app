@@ -86,9 +86,9 @@
                                     <li class="nav-item dropdown-submenu">
                                         <a href="editorial-declaration.html" title="Editorial Declaration" class="nav-link">Documentation</a>
                                     </li>
-                                    <!--<li class="nav-item dropdown-submenu">
-                                        <a title="Instruction for using the edition" href="#" class="nav-link">Instruction for using the edition</a>
-                                    </li>-->
+                                    <li class="nav-item dropdown-submenu">
+                                        <a href="https://github.com/Auden-Musulin-Papers/amp-app/releases" target="_blank" title="Release Notes" class="nav-link">Release Notes</a>
+                                    </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a style="color:lightgrey!important;"  title="Technical Documentation" class="nav-link">Technical Documentation <small>(in progress)</small></a>
                                     </li>
