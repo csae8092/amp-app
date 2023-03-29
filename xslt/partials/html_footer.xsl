@@ -118,11 +118,11 @@
                                 <div class="row">                         
                                     <div class="custom-html-widget col-12 py-2">   
                                         <label>App: </label>
-                                        <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.6674163"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.6674163.svg" alt="DOI"/></a>
+                                        <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.7781440"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7781440.svg" alt="DOI"/></a>
                                     </div>
                                     <div class="custom-html-widget col-12 py-2">   
                                         <label>Data: </label>
-                                        <a style="margin-left: .5rem;" href="https://zenodo.org/badge/latestdoi/401611851"><img src="https://zenodo.org/badge/401611851.svg" alt="DOI"/></a>
+                                        <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.7781397"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.7781397.svg" alt="DOI"/></a>
                                     </div>
                                 </div>
                             </div>
