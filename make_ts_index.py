@@ -104,7 +104,7 @@ for x in tqdm(files, total=len(files)):
         record = {}
         record['id'] = os.path.split(x)[-1].replace('.xml', f".html?tab={str(pages)}")
         cfts_record['id'] = record['id']
-        cfts_record['resolver'] = f"https://auden-musulin-papers.github.io/amp-app-dev/{record['id']}"
+        cfts_record['resolver'] = f"https://amp.acdh.oeaw.ac.at/{record['id']}"
         record['rec_id'] = os.path.split(x)[-1]
         cfts_record['rec_id'] = record['rec_id']
         r_title = " ".join(" ".join(doc.any_xpath('.//tei:titleStmt/tei:title[@level="a"]/text()')).split())

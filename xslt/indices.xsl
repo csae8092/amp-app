@@ -156,14 +156,14 @@
                         <tr>
                             <td>
                                 <a href="{concat(@xml:id, '.html')}">
-                                    <xsl:if test="./tei:persName/tei:surname">
-                                        <xsl:value-of select="./tei:persName/tei:surname"/>
+                                    <xsl:if test="./tei:persName/tei:surname/text()">
+                                        <xsl:value-of select="./tei:persName/tei:surname/text()"/>
                                     </xsl:if>
-                                    <xsl:if test="./tei:persName/tei:surname and ./tei:persName/tei:forename">
+                                    <xsl:if test="./tei:persName/tei:surname/text() and ./tei:persName/tei:forename/text()">
                                     <xsl:text>, </xsl:text>
                                     </xsl:if>
-                                    <xsl:if test="./tei:persName/tei:forename">
-                                        <xsl:value-of select="./tei:persName/tei:forename"/>
+                                    <xsl:if test="./tei:persName/tei:forename/text()">
+                                        <xsl:value-of select="./tei:persName/tei:forename/text()"/>
                                     </xsl:if>
                                 </a>
                             </td>
