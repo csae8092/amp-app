@@ -101,7 +101,7 @@
                                         replace(//tei:editor/tei:name[1], ',', ''),
                                         ', ', 
                                         replace(//tei:editor/tei:name[2], ',', ''),
-                                        ', Mendelson Edward, Neundlinger Helmut and Stoxreiter Daniel')"/>     
+                                        ', Grigoriou Dimitra, Mendelson Edward, Neundlinger Helmut and Stoxreiter Daniel')"/>     
                                     <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
                                     <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
                                         amp.acdh.oeaw.ac.at
