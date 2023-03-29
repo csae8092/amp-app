@@ -17,7 +17,7 @@ from tqdm import tqdm
 #     'connection_timeout_seconds': 2
 # })
 
-files = glob.glob('./data/editions/*/*.xml')
+files = glob.glob('../../data/editions/*/*.xml')
 
 # try:
 #     client.collections['amp'].delete()
