@@ -3,99 +3,187 @@ var editor = new LoadEditor({
     title: "Text Annotations",
     variants: [
       {
-        opt: "deleted",
+        opt: "del",
         opt_slider: "deleted-slider",
         title: "Deleted",
         color: "red",
         html_class: "del",
         css_class: "strikethrough",
-        hide: true,
+        hide: {
+          hidden: true,
+          class: "del",
+        },
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-1",
         },
       },
       {
-        opt: "underlined",
+        opt: "udl",
         opt_slider: "underlined-slider",
         title: "Underlined",
         color: "blue",
         html_class: "hi-underline",
-        css_class: ["underline", "italic"],
-        hide: false,
+        css_class: "underline",
+        hide: {
+          hidden: false,
+          class: "hi-underline",
+        },
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-1",
         },
       },
       {
-        opt: "whitespace",
+        opt: "wsp",
         opt_slider: "whitespace-slider",
         title: "Original white spaces",
         color: "green",
         html_class: "space",
         css_class: "whitespace",
-        hide: false,
+        hide: {
+          hidden: true,
+          class: "space",
+        },
         chg_citation: 1,
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-1",
         },
       },
       {
-        opt: "unclear",
+        opt: "ucl",
         opt_slider: "unclear-slider",
         title: "Unclear",
         color: "grey",
         html_class: "abbr",
         css_class: "unclear",
-        hide: false,
+        hide: {
+          hidden: false,
+          class: "abbr",
+        },
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "single-feature",
+          class: "features-1",
         },
       },
       {
-        opt: "text-features",
+        opt: "tf",
         opt_slider: "text-features-slider",
         title: "Original text features",
         color: "grey",
         html_class: "undefined",
         css_class: "undefined",
-        hide: false,
+        hide: {
+          hidden: false,
+          class: "undefined",
+        },
         chg_citation: "citation-url",
         features: {
           all: true,
-          class: "all-features",
+          class: "features-1",
         },
       },
-      // {
-      //     opt: "persons",
-      //     color: "pink",
-      //     title: "Persons",
-      //     html_class: "persons",
-      //     css_class: "pers",
-      //     chg_citation: "citation-url",
-      //     features: {
-      //         all: false,
-      //         class: "single-feature"
-      //     }
-      // },
-      // {
-      //     opt: "places",
-      //     color: "gold",
-      //     title: "Places",
-      //     html_class: "places",
-      //     css_class: "plc",
-      //     chg_citation: "citation-url",
-      //     features: {
-      //         all: false,
-      //         class: "single-feature"
-      //     }
-      // }
+      {
+        opt: "ef",
+        opt_slider: "entities-features-slider",
+        title: "All Entities",
+        color: "grey",
+        html_class: "undefined",
+        css_class: "undefined",
+        chg_citation: "citation-url",
+        hide: {
+          hidden: false,
+          class: "undefined",
+        },
+        features: {
+          all: true,
+          class: "features-2",
+        },
+      },
+      {
+        opt: "prs",
+        color: "pink",
+        title: "Persons",
+        html_class: "persons",
+        css_class: "pers",
+        hide: {
+          hidden: true,
+          class: "persons .entity",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-2",
+        },
+      },
+      {
+        opt: "plc",
+        color: "gold",
+        title: "Places",
+        html_class: "places",
+        css_class: "plc",
+        hide: {
+          hidden: true,
+          class: "places .entity",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-2",
+        },
+      },
+      {
+        opt: "wrk",
+        color: "turquoise",
+        title: "Literature",
+        html_class: "works",
+        css_class: "wrk",
+        chg_citation: "citation-url",
+        hide: {
+          hidden: true,
+          class: "works .entity",
+        },
+        features: {
+          all: false,
+          class: "features-2",
+        },
+      },
+      {
+        opt: "org",
+        color: "lila",
+        title: "Institutions",
+        html_class: "orgs",
+        css_class: "org",
+        hide: {
+          hidden: true,
+          class: "orgs .entity",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-2",
+        },
+      },
+      {
+        opt: "eve",
+        color: "lime",
+        title: "Events",
+        html_class: "event",
+        css_class: "eve",
+        hide: {
+          hidden: true,
+          class: "event .entity",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-2",
+        },
+      },
     ],
     span_element: {
       css_class: "badge-item",
@@ -110,7 +198,7 @@ var editor = new LoadEditor({
     name: "Change font family",
     variants: [
       {
-        opt: "select-font",
+        opt: "ff",
         title: "Font family",
         urlparam: "font",
         chg_citation: "citation-url",
@@ -120,7 +208,7 @@ var editor = new LoadEditor({
           font2: "Courier-New",
           font3: "Arial-serif",
         },
-        paragraph: "p",
+        paragraph: "p, a",
         p_class: "yes-index",
         css_class: "",
       },
@@ -132,9 +220,9 @@ var editor = new LoadEditor({
     name: "Create full size mode",
     variants: [
       {
-        opt: "edition-fullsize",
+        opt: "ef",
         title: "Full screen on/off",
-        urlparam: "fullscreen",
+        urlparam: "fs",
         chg_citation: "citation-url",
         hide: "hide-reading",
         to_hide: "fade",
@@ -149,9 +237,9 @@ var editor = new LoadEditor({
     name: "Change font size",
     variants: [
       {
-        opt: "select-fontsize",
+        opt: "fs",
         title: "Font size",
-        urlparam: "fontsize",
+        urlparam: "fos",
         chg_citation: "citation-url",
         sizes: {
           default: "default",
@@ -160,7 +248,7 @@ var editor = new LoadEditor({
           font_size_22: "22",
           font_size_26: "26",
         },
-        paragraph: "p",
+        paragraph: "p, a",
         p_class: "yes-index",
         css_class: "font-size-",
       },
@@ -172,18 +260,18 @@ var editor = new LoadEditor({
     name: "enable/disable image viewer",
     variants: [
       {
-        opt: "edition-switch",
+        opt: "es",
         title: "Facsimile on/off",
-        urlparam: "image",
+        urlparam: "img",
         chg_citation: "citation-url",
         fade: "fade",
         column_small: {
-          class: "col-md-6",
-          percent: "50%",
+          class: "col-md-3",
+          percent: "25",
         },
         column_full: {
           class: "col-md-12",
-          percent: "100%",
+          percent: "100",
         },
         hide: {
           hidden: true,
@@ -205,7 +293,7 @@ var editor = new LoadEditor({
     name: "load images in OSD viewer",
     opt: "image-loader",
     title: "Faksimiles",
-    urlparam: "page",
+    urlparam: "tab",
     chg_citation: "citation-url",
     pag_link: ".pagination .nav-tabs .nav-item .nav-link",
     pag_tab: ".pagination-tab.tab-pane",
@@ -214,16 +302,16 @@ var editor = new LoadEditor({
     url_param: ".jp2/full/full/0/default.jpg",
     osd_target: "container",
     img_source: "container2",
-    img_types: ["envelope", "sheet"],
+    img_types: ["envelope", "sheet", "letter", "card", "nan", "photo"],
     active_class: "active",
     inactive_class: "fade",
     bootstrap_class: "show",
   },
   ep: {
-    name: "Page Pagination",
+    name: "Tab Pagination",
     opt: "edition-pagination",
-    title: "Page Pagination",
-    urlparam: "page",
+    title: "Tab Pagination",
+    urlparam: "tab",
     chg_citation: "citation-url",
     pag_link: ".pagination-link",
     pag_tab: ".pagination-tab.tab-pane",

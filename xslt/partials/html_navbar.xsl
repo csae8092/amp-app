@@ -36,30 +36,30 @@
                                         <a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;" title="Photos" class="nav-link">Photos <small>(in progress)</small></a>
+                                        <a href="photos.html" title="Photos" class="nav-link">Photos</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a href="additional-materials.html" title="Additional materials" class="nav-link">Additional materials</a>
                                     </li> 
-                                </ul>                                
+                                </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a style="color:lightgrey!important;" title="Indexes" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes  <small>(in progress)</small><span class="caret"></span></a>
+                                <a title="Indexes" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Persons" class="nav-link">Persons <small>(in progress)</small></a>
+                                        <a href="listperson.html" title="Persons" class="nav-link">Persons</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Institutions" class="nav-link">Institutions <small>(in progress)</small></a>
+                                        <a href="listorg.html"  title="Institutions" class="nav-link">Institutions</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Works" class="nav-link">Works <small>(in progress)</small></a>
+                                        <a href="listbibl.html"  title="Works" class="nav-link">Works</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Places" class="nav-link">Places <small>(in progress)</small></a>
+                                        <a href="listplace.html" title="Places" class="nav-link">Places</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;"  title="Events" class="nav-link">Events <small>(in progress)</small></a>
+                                        <a href="listevent.html" title="Events" class="nav-link">Events</a>
                                     </li>
                                 </ul>                                
                             </li>                            
@@ -84,11 +84,11 @@
                                         <a title="Team" href="team.html" class="nav-link">Team</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="editorial-declaration.html" title="Editorial Declaration" class="nav-link">Editorial Declaration</a>
+                                        <a href="editorial-declaration.html" title="Editorial Declaration" class="nav-link">Documentation</a>
                                     </li>
-                                    <!--<li class="nav-item dropdown-submenu">
-                                        <a title="Instruction for using the edition" href="#" class="nav-link">Instruction for using the edition</a>
-                                    </li>-->
+                                    <li class="nav-item dropdown-submenu">
+                                        <a href="https://github.com/Auden-Musulin-Papers/amp-app/releases" target="_blank" title="Release Notes" class="nav-link">Release Notes</a>
+                                    </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a style="color:lightgrey!important;"  title="Technical Documentation" class="nav-link">Technical Documentation <small>(in progress)</small></a>
                                     </li>

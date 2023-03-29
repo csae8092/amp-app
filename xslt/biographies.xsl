@@ -164,7 +164,7 @@
                     <xsl:call-template name="html_footer"/>
                 </div>                
             </body>
-            <script type="text/javascript" src="js/leaflet.js"/>
+            <script type="text/javascript" src="js/leaflet_bio.js"/>
         </html>
     </xsl:template>
     <xsl:template match="tei:hi">

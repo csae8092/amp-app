@@ -65,7 +65,7 @@
                     <xsl:call-template name="html_footer"/>
                     <script>
                         $(document).ready(function () {
-                            createDataTable('tocTable')
+                            createDataTable('tocTable');
                         });
                     </script>
                     <script type="text/javascript" src="js/imageLoaded.js"></script>

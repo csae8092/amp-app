@@ -12,7 +12,7 @@ function hideSearchInputs(containerElement, columns) {
     }
 }
 
-function createDataTable(containerElement, order, pageLength) {
+function createDataTable(containerElement, title) {
     
     $(`#${containerElement} thead tr`)
         .clone(true)
@@ -26,36 +26,38 @@ function createDataTable(containerElement, order, pageLength) {
         responsive: true,
         pageLength: 50,
         oLanguage: {
-            "sSearch": "Search titles and dates:"            
+            "sSearch": title
         },
-        buttons: [{
-            extend: 'copyHtml5',
-            text: '<i class="far fa-copy"/>',
-            titleAttr: 'Copy',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary')
+        buttons: [
+            {
+                extend: 'copyHtml5',
+                text: '<i class="far fa-copy"/>',
+                titleAttr: 'Copy',
+                className: 'btn-link',
+                init: function (api, node, config) {
+                    $(node).removeClass('btn-secondary')
+                }
+            },
+            {
+                extend: 'excelHtml5',
+                text: '<i class="far fa-file-excel"/>',
+                titleAttr: 'Excel',
+                className: 'btn-link',
+                init: function (api, node, config) {
+                    $(node).removeClass('btn-secondary')
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                text: '<i class="far fa-file-pdf"/>',
+                titleAttr: 'PDF',
+                className: 'btn-link',
+                init: function (api, node, config) {
+                    $(node).removeClass('btn-secondary')
+                }
             }
-        },
-        {
-            extend: 'excelHtml5',
-            text: '<i class="far fa-file-excel"/>',
-            titleAttr: 'Excel',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary')
-            }
-        },
-        {
-            extend: 'pdfHtml5',
-            text: '<i class="far fa-file-pdf"/>',
-            titleAttr: 'PDF',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary')
-            }
-        }],
-        order: order,
+        ],
+        //order: order,
         orderCellsTop: true,
         fixedHeader: true,
         initComplete: function () {
