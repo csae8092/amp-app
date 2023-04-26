@@ -34,8 +34,7 @@
                 if (ancestor::tei:text/@hand = '#handwritten') then 
                 ($hand) else if (ancestor::tei:text/@hand = '#typed') then 
                 ($typed) else if (ancestor::tei:text/@hand = '#printed') then 
-                ($printed) else 
-                ()
+                ($printed) else ()
             }">
             <xsl:for-each-group select="*" group-starting-with="tei:pb">                                  
                 <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
@@ -57,8 +56,8 @@
                                                 if (./@hand = '#handwritten') then
                                                 ($hand) else if (./@hand = '#typed') then
                                                 ($typed) else if (./@hand = '#printed') then
-                                                ($printed) else
-                                                ()
+                                                ($printed) else if (./@hand = '#stamp') then
+                                                ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
@@ -86,16 +85,12 @@
                                                 if (./@hand = '#handwritten') then
                                                 ($hand) else if (./@hand = '#typed') then
                                                 ($typed) else if (./@hand = '#printed') then
-                                                ($printed) else
-                                                ()
+                                                ($printed) else if (./@hand = '#stamp') then
+                                                ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
-                                            
-                                            <xsl:if test="./tei:handShift">
-                                                <script type="text/javascript" src="js/handshift.js"></script>
-                                            </xsl:if>
-                                            
+
                                         </xsl:for-each>
                                     </xsl:otherwise>
                                 </xsl:choose>

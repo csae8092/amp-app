@@ -725,7 +725,7 @@
     <xsl:template match="tei:lb">
         <br/>
         <xsl:if test="not(ancestor::tei:note[@type='footnote'])">
-            <xsl:if test="ancestor::tei:p">
+            <xsl:if test="ancestor::tei:p[not(@hand='#stamp')]">
                 <a>
                     <xsl:variable name="para" as="xs:int">
                         <xsl:number level="any" from="tei:body" count="tei:p"/>
