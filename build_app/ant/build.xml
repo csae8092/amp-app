@@ -74,10 +74,10 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    <xslt style="${xsl_editions}" basedir="${editions}/memoirs" destdir="${target}" includes="*.xml">
+    <!-- <xslt style="${xsl_editions}" basedir="${editions}/memoirs" destdir="${target}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    </xslt> -->
     <xslt style="${xsl_editions}" basedir="${editions}/photos" destdir="${target}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
@@ -90,10 +90,10 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt> -->
-    <xslt style="${xsl_editions}" basedir="${editions}/additional-materials" destdir="${target}" includes="*.xml">
+    <!-- <xslt style="${xsl_editions}" basedir="${editions}/additional-materials" destdir="${target}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    </xslt> -->
     <xslt in="${index}" out="${target}/index.html" style="${xsl_index}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
@@ -102,11 +102,11 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    <xslt in="${index}" out="${target}/memoirs.html" style="${xsl_memoirs}">
+    <!-- <xslt in="${index}" out="${target}/memoirs.html" style="${xsl_memoirs}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    <xslt in="${index}" out="${target}/additional-materials.html" style="${xsl_am}">
+    </xslt> -->
+    <xslt in="${index}" out="${target}/toc_m.html" style="${xsl_am}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
