@@ -28,6 +28,7 @@
     <property name="xsl_team" value="${basedir}/xslt/team.xsl"/>
     <property name="xsl_imprint" value="${basedir}/xslt/imprint.xsl"/>
     <property name="xsl_edit" value="${basedir}/xslt/editorial-declaration.xsl"/>
+    <property name="xsl_rti" value="${basedir}/xslt/rti-viewer.xsl"/>
     <delete>
         <fileset dir="${target}" includes="*.html"/>
     </delete>
@@ -119,6 +120,10 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt> -->
     <xslt in="${index}" out="${target}/search.html" style="${xsl_search}">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    <xslt in="${index}" out="${target}/rti-viewer.html" style="${xsl_rti}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>

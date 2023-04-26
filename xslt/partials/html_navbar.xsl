@@ -36,7 +36,7 @@
                                         <a href="photos.html" title="Photos" class="nav-link">Photos</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;" title="Surface reconstructions" class="nav-link">Surface reconstructions <small>(in progress)</small></a>
+                                        <a href="rti-viewer.html" title="Auden through Computer Vision" class="nav-link">Auden through Computer Vision</a>
                                     </li>
                                 </ul>
                             </li>
