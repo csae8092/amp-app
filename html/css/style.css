@@ -1134,6 +1134,10 @@ div.text-re div.card-body {
   z-index: 99;
 }
 
+.pagination-menu li[type~="cv_sheet"] {
+    background-color: rgba(33,114,118, .3);
+}
+
 .options-menu2 {
   width: 100%;
   display: flex;

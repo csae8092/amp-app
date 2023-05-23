@@ -48,8 +48,12 @@
                         
                         <div id="text-resize-{position()}" class="text-re col-md-9"> 
                             <div class="card-body">
+                                <xsl:if test="@type='cv_sheet'">
+                                    <img class="card-img-right flex-auto d-md-block" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px; height: auto; padding: .5em;" title="Computer Vision Lab"/>
+                                </xsl:if>
                                 <xsl:choose>
                                     <xsl:when test="position() = last() - 1">
+                                        
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
                                             
                                             <p class="yes-index" style="{

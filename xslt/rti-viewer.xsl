@@ -32,10 +32,27 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">
+                        
                         <div class="row">
                             <div class="col-md-12 text-center" style="margin:5% auto;">
                                 <h2>Auden Musulin Papers through Computer Vision</h2>
                                 <p>See all transcripts created with CVL technolgoy.</p>
+                            </div>
+                            <div class="col-md-12">
+                                <div id="navBarLetters">
+                                    <ul class="nav nav-tabs" id="dropdown-lang">
+                                        <li class="nav-item">                                    
+                                            <a title="Cards" href="#cards-tab" data-toggle="tab" class="nav-link btn btn-round active">
+                                                show cards
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">                                    
+                                            <a title="Table" href="#table-tab" data-toggle="tab" class="nav-link btn btn-round">
+                                                show table
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="col-md-12" style="margin:5% auto;">
                                 <div class="tab-content">

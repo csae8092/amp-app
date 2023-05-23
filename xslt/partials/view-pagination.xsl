@@ -25,13 +25,14 @@
                     <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
                     <xsl:choose>
                         <xsl:when test="position() = [1,2,3,4,5,6,7,8,9]">
-                            <li class="nav-item">
+                            <li class="nav-item" type="{@type}">
+                                
                                 <edition-pagination 
                                     opt="edition-pagination"
                                     pos="{position()}" 
                                     facs="{$facs_item}" 
                                     data-type="{@type}">
-                                </edition-pagination>                                                 
+                                </edition-pagination>
                             </li>
                         </xsl:when>
                         <xsl:when test="position() = 10">
@@ -51,13 +52,16 @@
                                         <xsl:choose>
                                             <xsl:when test="position() > 9">
                                                 <li class="nav-item dropdown-submenu"
+                                                    type="{@type}"
                                                     style="display:inline-block;">
+                                                    
                                                     <edition-pagination 
                                                         opt="edition-pagination"
                                                         pos="{position()}" 
                                                         facs="{$facs_item}" 
                                                         data-type="{@type}">
                                                     </edition-pagination>
+                                                    
                                                 </li>
                                             </xsl:when>
                                         </xsl:choose>
