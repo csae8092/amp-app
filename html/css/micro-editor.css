@@ -285,6 +285,10 @@ input:checked + .i-slider:before {
   padding: 0.5em 0.5em !important;
 }
 
+.switch input {
+    visibility: hidden;
+}
+
 @media (max-width: 768px) {
   #aot-menu .dropdown .dropdown-menu li:nth-child(-n + 2) {
     display: none !important;

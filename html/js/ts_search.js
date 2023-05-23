@@ -30,6 +30,7 @@ const searchClient = typesenseInstantsearchAdapter.searchClient;
 const search = instantsearch({
   searchClient,
   indexName: "amp",
+  routing: true,
 });
 
 search.addWidgets([
