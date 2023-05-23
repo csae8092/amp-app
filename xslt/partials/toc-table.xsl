@@ -36,6 +36,9 @@
                     <xsl:variable name="doc_date" 
                         as="xs:date" 
                         select="xs:date(if(//tei:origDate/@notBefore) then(//tei:origDate/@notBefore) else ('1996-12-31'))"/>
+                    <xsl:variable name="doc_date_cvl" 
+                        as="xs:date" 
+                        select="xs:date(if(//tei:origDate/@notAfter) then(//tei:origDate/@notAfter) else ('1996-12-31'))"/>
                     <xsl:if test="$doc_date lt $max_date and $doc_date gt $low_date and $category != 'correspondence-cvl'">
                         <xsl:variable name="full_path">
                             <xsl:value-of select="document-uri(/)"/>
@@ -115,7 +118,7 @@
                             </tr>
                         </xsl:for-each>
                     </xsl:if>
-                    <xsl:if test="$doc_date = $max_date or $doc_date = $low_date and $category = 'correspondence-cvl'">
+                    <xsl:if test="$doc_date_cvl = $max_date or $doc_date_cvl = $low_date and $category = 'correspondence-cvl'">
                         <xsl:variable name="full_path">
                             <xsl:value-of select="document-uri(/)"/>
                         </xsl:variable>

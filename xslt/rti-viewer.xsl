@@ -34,9 +34,9 @@
                     <div class="container-fluid">
                         
                         <div class="row">
-                            <div class="col-md-12 text-center" style="margin:5% auto;">
-                                <h2>Auden Musulin Papers through Computer Vision</h2>
-                                <p>See all transcripts created with CVL technolgoy.</p>
+                            <div class="col-md-12 text-center" style="margin:2% auto;">
+                                <h1>Auden Musulin Papers through Computer Vision</h1>
+                                <p>See all transcripts created with CVL technology.</p>
                             </div>
                             <div class="col-md-12">
                                 <div id="navBarLetters">
@@ -80,8 +80,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 text-center" style="margin:5% auto;">
-                                <h1>RTI Viewer</h1>
+                            <div class="col-md-12 text-center" style="margin:2% auto;">
+                                <h2>RTI Viewer</h2>
                                 <p>Activate the viewer lightbulb and add a lighting angle.</p>
                             </div>
                             <div class="col-md-12" style="margin:5% auto;">
