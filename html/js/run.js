@@ -313,6 +313,7 @@ var editor = new LoadEditor({
       "photo",
       "photograph",
       "invitation_card",
+      "cv_sheet",
     ],
     active_class: "active",
     inactive_class: "fade",

@@ -9,6 +9,8 @@
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="partials/html_footer.xsl"/>
+    <xsl:import href="partials/toc-table.xsl"/>
+    <xsl:import href="partials/toc-cards.xsl"/>
     <xsl:template match="/">
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,6 +24,7 @@
                 <script type="text/javascript" src="js/pep.min.js"></script>
                 <script type="text/javascript" src="spidergl/spidergl.min.js"></script>
                 <script type="text/javascript" src="spidergl/multires.min.js"></script>
+                <script type="text/javascript" src="js/imageLoaded.js"></script>
             </head>
             
             <body class="page">
@@ -29,6 +32,36 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 text-center" style="margin:5% auto;">
+                                <h2>Auden Musulin Papers through Computer Vision</h2>
+                                <p>See all transcripts created with CVL technolgoy.</p>
+                            </div>
+                            <div class="col-md-12" style="margin:5% auto;">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="cards-tab" tabindex="-1">  
+                                        <div class="row gy-1 text-center">
+                                            <xsl:call-template name="toc-cards">
+                                                <xsl:with-param name="category" select="'correspondence-cvl'"/>
+                                                <xsl:with-param name="max_date" select="xs:date('1969-06-10')"></xsl:with-param>
+                                                <xsl:with-param name="low_date" select="xs:date('1965-04-28')"></xsl:with-param>
+                                            </xsl:call-template>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="table-tab" tabindex="-1">                        
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <xsl:call-template name="toc-table">
+                                                    <xsl:with-param name="category" select="'correspondence-cvl'"/>
+                                                    <xsl:with-param name="max_date" select="xs:date('1969-06-10')"></xsl:with-param>
+                                                    <xsl:with-param name="low_date" select="xs:date('1965-04-28')"></xsl:with-param>
+                                                </xsl:call-template>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-12 text-center" style="margin:5% auto;">
                                 <h1>RTI Viewer</h1>
