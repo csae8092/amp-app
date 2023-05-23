@@ -66,7 +66,7 @@
                                     </svg>
                                 </a>  
                             </xsl:when>
-                            <xsl:when test="contains(string-join(('0055', '0048', '0054', '0050', '0064', '0065', '0066', '0067', '0068', '0069', '0070', '0071', '0072', '0073', '0074', '0075'), ' '), substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml'))"
+                            <xsl:when test="contains(string-join(('0055', '0048', '0054', '0050', '0064', '0065', '0066', '0067', '0068', '0069', '0070', '0071', '0072', '0073', '0074', '0075'), ' '), substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml'))">
                                 <a style="text-align:left;" title="back to all photos" href="photos.html" class="nav-link btn btn-round btn-backlink">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>

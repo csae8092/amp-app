@@ -19,10 +19,17 @@
         </fileset>
     </copy> -->
 
-    <xslt style="${xsl_editions}" basedir="${data_editions}" destdir="${data_editions}" includes="*.xml" extension=".xml">
+    <xslt style="${xsl_editions}" basedir="${data_editions}" destdir="${data_editions}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+
+    <move todir="${data_editions}" includeemptydirs="false">
+        <fileset dir="${data_editions}">
+            <include name="*.html"/>
+        </fileset>
+        <mapper type="glob" from="*.html" to="*.xml"/>
+    </move>
 
     <delete dir="${data_editions_p}"/>
     <mkdir dir="${data_editions_p}"/>
