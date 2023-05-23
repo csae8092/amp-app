@@ -19,8 +19,7 @@
         </fileset>
     </copy> -->
 
-    <xslt style="${xsl_editions}" basedir="${data_editions}" destdir="${data_editions}" includes="*.xml">
-        <outputproperty name="method" value="xml"/>
+    <xslt style="${xsl_editions}" basedir="${data_editions}" destdir="${data_editions}" includes="*.xml" extension=".xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
