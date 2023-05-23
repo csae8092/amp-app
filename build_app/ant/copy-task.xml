@@ -20,11 +20,10 @@
     </copy> -->
 
     <xslt style="${xsl_editions}" basedir="${data_editions}" destdir="${data_editions}" includes="*.xml">
+        <outputproperty name="method" value="xml"/>
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-
-    <renameext srcDir="${data_editions}" includes="*.html" fromExtension=".html" toExtension=".xml" replace="true"/>
 
     <delete dir="${data_editions_p}"/>
     <mkdir dir="${data_editions_p}"/>
@@ -34,6 +33,17 @@
             <include name="*0048.xml"/>
             <include name="*0054.xml"/>
             <include name="*0050.xml"/>
+            <include name="*0055.xml"/>
+            <include name="*0064.xml"/>
+            <include name="*0065.xml"/>
+            <include name="*0066.xml"/>
+            <include name="*0067.xml"/>
+            <include name="*0068.xml"/>
+            <include name="*0069.xml"/>
+            <include name="*0072.xml"/>
+            <include name="*0073.xml"/>
+            <include name="*0074.xml"/>
+            <include name="*0075.xml"/>
         </fileset>
     </move>
 
