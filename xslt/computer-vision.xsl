@@ -20,6 +20,9 @@
                 </xsl:call-template>
                 <link type="text/css" href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="Stylesheet"/>
                 <link type="text/css" href="css/webrtiviewer.css" rel="Stylesheet"/>
+                <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.css"/>
+                <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/1.1.1/css/searchPanes.dataTables.min.css"/>
+                <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script>
                 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
                 <script type="text/javascript" src="js/pep.min.js"></script>
                 <script type="text/javascript" src="spidergl/spidergl.min.js"></script>
@@ -95,6 +98,12 @@
                     </div>
                     
                     <xsl:call-template name="html_footer"/>
+                    <script type="text/javascript" src="js/dt.js"></script>
+                    <script>
+                        $(document).ready(function () {
+                            createDataTable('tocTable', 'Search titles and dates:');
+                        });
+                    </script>
                 </div>
             </body>
         </html>

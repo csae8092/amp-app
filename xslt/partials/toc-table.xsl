@@ -4,13 +4,15 @@
     
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>
-            <h1>Widget tei-facsimile.</h1>
+            <h1>Widget tei-table.</h1>
             <p>Contact person: daniel.stoxreiter@oeaw.ac.at</p>
             <p>Applied with call-templates in html:body.</p>
             <p>The template "toc-table" generates a table for table of contents of a collection.</p> 
             <p>Bootstrap is required.</p>
         </desc>    
     </doc>
+    
+    <xsl:include href="toc-table-content.xsl"/>
     
     <xsl:template name="toc-table">
         <xsl:param name="category"></xsl:param>
@@ -40,162 +42,10 @@
                         as="xs:date" 
                         select="xs:date(if(//tei:origDate/@notAfter) then(//tei:origDate/@notAfter) else ('1996-12-31'))"/>
                     <xsl:if test="$doc_date lt $max_date and $doc_date gt $low_date and $category != 'correspondence-cvl'">
-                        <xsl:variable name="full_path">
-                            <xsl:value-of select="document-uri(/)"/>
-                        </xsl:variable>
-                     <!--<tr>
-                             <td>                                        
-                                 <a>
-                                     <xsl:attribute name="href">                                                
-                                         <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
-                                     </xsl:attribute>
-                                     <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
-                                 </a>
-                             </td>
-                             <td>
-                                 <xsl:value-of select="data(.//tei:origDate/@when-iso)"/>
-                             </td>  
-                         </tr>-->
-                        <xsl:for-each select=".//tei:revisionDesc/tei:change[position()=last()]/self::tei:change">                                                
-                            <tr>
-                                <td>
-                                    <a>
-                                        <xsl:attribute name="href">                                                
-                                            <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
-                                        </xsl:attribute>
-                                        <xsl:value-of select="//tei:title[@level='a'][1]/text()"/>
-                                    </a>
-                                </td>
-                                <td><xsl:value-of select="data(//tei:origDate/@notAfter)"/></td>
-                                <td>
-                                    <ul>
-                                        <li><xsl:value-of select="concat(@when/name(), ': ' ,@when)"/></li>
-                                        <li><xsl:value-of select="concat(@who/name(), ': ', @who)"/></li>
-                                    </ul>                                                                                                                                            
-                                </td>
-                                <td>
-                                    <xsl:apply-templates/>                                                                                             
-                                </td>
-                                <td>
-                                    <xsl:value-of select="count(//tei:graphic)"/>                                                                                             
-                                </td>  
-                                <td>
-                                    <xsl:value-of select="//tei:text/@type"/>                                                                                           
-                                </td>  
-                                <td>
-                                    <xsl:value-of select="//tei:text/@hand"/>                                                                                             
-                                </td>
-                                <td>
-                                    <ul>
-                                        <xsl:if test="count(//tei:listPlace[parent::tei:back]/tei:place) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listPlace[parent::tei:back]/tei:place)"/><xsl:text> Place(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        <xsl:if test="count(//tei:listPerson[parent::tei:back]/tei:person) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listPerson[parent::tei:back]/tei:person)"/><xsl:text> Person(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        <xsl:if test="count(//tei:listOrg[parent::tei:back]/tei:org) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listOrg[parent::tei:back]/tei:org)"/><xsl:text> Organisation(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        <xsl:if test="count(//tei:listBibl[parent::tei:back]/tei:bibl) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listBibl[parent::tei:back]/tei:bibl)"/><xsl:text> Work(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        <xsl:if test="count(//tei:listEvent[parent::tei:back]/tei:event) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listEvent[parent::tei:back]/tei:event)"/><xsl:text> Event(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        
-                                    </ul>
-                                </td> 
-                            </tr>
-                        </xsl:for-each>
+                        <xsl:call-template name="toc-table-content"/>
                     </xsl:if>
                     <xsl:if test="$doc_date_cvl = $max_date or $doc_date_cvl = $low_date and $category = 'correspondence-cvl'">
-                        <xsl:variable name="full_path">
-                            <xsl:value-of select="document-uri(/)"/>
-                        </xsl:variable>
-                        <!--<tr>
-                             <td>                                        
-                                 <a>
-                                     <xsl:attribute name="href">                                                
-                                         <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
-                                     </xsl:attribute>
-                                     <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
-                                 </a>
-                             </td>
-                             <td>
-                                 <xsl:value-of select="data(.//tei:origDate/@when-iso)"/>
-                             </td>  
-                         </tr>-->
-                        <xsl:for-each select=".//tei:revisionDesc/tei:change[position()=last()]/self::tei:change">                                                
-                            <tr>
-                                <td>
-                                    <a>
-                                        <xsl:attribute name="href">                                                
-                                            <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html')"/>
-                                        </xsl:attribute>
-                                        <xsl:value-of select="//tei:title[@level='a'][1]/text()"/>
-                                    </a>
-                                </td>
-                                <td><xsl:value-of select="data(//tei:origDate/@notAfter)"/></td>
-                                <td>
-                                    <ul>
-                                        <li><xsl:value-of select="concat(@when/name(), ': ' ,@when)"/></li>
-                                        <li><xsl:value-of select="concat(@who/name(), ': ', @who)"/></li>
-                                    </ul>                                                                                                                                            
-                                </td>
-                                <td>
-                                    <xsl:apply-templates/>                                                                                             
-                                </td>
-                                <td>
-                                    <xsl:value-of select="count(//tei:graphic)"/>                                                                                             
-                                </td>  
-                                <td>
-                                    <xsl:value-of select="//tei:text/@type"/>                                                                                           
-                                </td>  
-                                <td>
-                                    <xsl:value-of select="//tei:text/@hand"/>                                                                                             
-                                </td>
-                                <td>
-                                    <ul>
-                                        <xsl:if test="count(//tei:listPlace[parent::tei:back]/tei:place) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listPlace[parent::tei:back]/tei:place)"/><xsl:text> Place(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        <xsl:if test="count(//tei:listPerson[parent::tei:back]/tei:person) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listPerson[parent::tei:back]/tei:person)"/><xsl:text> Person(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        <xsl:if test="count(//tei:listOrg[parent::tei:back]/tei:org) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listOrg[parent::tei:back]/tei:org)"/><xsl:text> Organisation(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        <xsl:if test="count(//tei:listBibl[parent::tei:back]/tei:bibl) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listBibl[parent::tei:back]/tei:bibl)"/><xsl:text> Work(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        <xsl:if test="count(//tei:listEvent[parent::tei:back]/tei:event) > 0">
-                                            <li>
-                                                <xsl:value-of select="count(//tei:listEvent[parent::tei:back]/tei:event)"/><xsl:text> Event(s)</xsl:text>
-                                            </li>
-                                        </xsl:if>
-                                        
-                                    </ul>
-                                </td> 
-                            </tr>
-                        </xsl:for-each>
+                        <xsl:call-template name="toc-table-content"/>
                     </xsl:if>
                 </xsl:for-each>
             </tbody>
