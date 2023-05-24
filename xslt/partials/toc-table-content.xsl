@@ -13,6 +13,7 @@
     </doc>
     
     <xsl:template name="toc-table-content">
+        <xsl:param name="img"/>
         <xsl:variable name="full_path">
             <xsl:value-of select="document-uri(/)"/>
         </xsl:variable>
@@ -29,12 +30,12 @@
                  <xsl:value-of select="data(.//tei:origDate/@when-iso)"/>
              </td>  
          </tr>-->
-        <xsl:for-each select=".//tei:revisionDesc/tei:change[position()=last()]/self::tei:change">                                                
+        <xsl:for-each select=".//tei:revisionDesc/tei:change[position()=last()]/self::tei:change">                                   
             <tr>
                 <td>
                     <a>
                         <xsl:attribute name="href">                                                
-                            <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html?img=off')"/>
+                            <xsl:value-of select="concat(replace(tokenize($full_path, '/')[last()], '.xml', '.html?img='), $img)"/>
                         </xsl:attribute>
                         <xsl:value-of select="//tei:title[@level='a'][1]/text()"/>
                     </a>

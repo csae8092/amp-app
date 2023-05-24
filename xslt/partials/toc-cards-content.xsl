@@ -16,6 +16,7 @@
     </doc>
 
     <xsl:template name="toc-cards-content">
+        <xsl:param name="img"/>
         <xsl:variable name="full_path">
             <xsl:value-of select="document-uri(/)"/>
         </xsl:variable>
@@ -23,7 +24,7 @@
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2">
             <a>
                 <xsl:attribute name="href">
-                    <xsl:value-of select="replace(tokenize($full_path, '/')[last()], '.xml', '.html?img=off')"/>
+                    <xsl:value-of select="concat(replace(tokenize($full_path, '/')[last()], '.xml', '.html?img='), $img)"/>
                 </xsl:attribute>
                 <div class="card index-card">
                     
@@ -66,7 +67,7 @@
                     <div style="background-color:rgba(0,0,0,.03); padding: .5em 0;">
                         
                         <xsl:if test="count(.//tei:listPlace[parent::tei:back]/tei:place) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?plc=on&amp;img=off">
+                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?plc=on&amp;img={$img}">
                                 <div title="mentioned places" class="badge badge-en plcs" style="display:inline;width:50px;">
                                     <span class="number">
                                         <xsl:value-of select="count(.//tei:listPlace[parent::tei:back]/tei:place)"/>
@@ -79,7 +80,7 @@
                         </xsl:if>
                         
                         <xsl:if test="count(.//tei:listPerson[parent::tei:back]/tei:person) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?prs=on&amp;img=off">
+                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?prs=on&amp;img={$img}">
                                 <div title="mentioned persons" class="badge badge-en prsns" style="display:inline;width:50px;">
                                     <span class="number">
                                         <xsl:value-of select="count(.//tei:listPerson[parent::tei:back]/tei:person)"/>
@@ -90,7 +91,7 @@
                         </xsl:if>
                         
                         <xsl:if test="count(.//tei:listOrg[parent::tei:back]/tei:org) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?org=on&amp;img=off">
+                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?org=on&amp;img={$img}">
                                 <div title="mentioned organisations" class="badge badge-en orgs" style="display:inline;width:50px;">
                                     <span class="number">
                                         <xsl:value-of select="count(.//tei:listOrg[parent::tei:back]/tei:org)"/>
@@ -101,7 +102,7 @@
                         </xsl:if>
                         
                         <xsl:if test="count(.//tei:listBibl[parent::tei:back]/tei:bibl) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?wrk=on&amp;img=off">
+                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?wrk=on&amp;img={$img}">
                                 <div title="mentioned works" class="badge badge-en wrks" style="display:inline;width:50px;">
                                     <span class="number">
                                         <xsl:value-of select="count(.//tei:listBibl[parent::tei:back]/tei:bibl)"/>
@@ -112,7 +113,7 @@
                         </xsl:if>
                         
                         <xsl:if test="count(.//tei:listEvent[parent::tei:back]/tei:event) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?eve=on&amp;img=off">
+                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?eve=on&amp;img={$img}">
                                 <div title="mentioned events" class="badge badge-en eves" style="display:inline;width:50px;">
                                     <span class="number">
                                         <xsl:value-of select="count(.//tei:listEvent[parent::tei:back]/tei:event)"/>

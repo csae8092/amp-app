@@ -62,6 +62,7 @@
                                     <div class="tab-pane active" id="cards-tab" tabindex="-1">  
                                         <div class="row gy-1 text-center">
                                             <xsl:call-template name="toc-cards">
+                                                <xsl:with-param name="img" select="'off'"/>
                                                 <xsl:with-param name="category" select="'correspondence-cvl'"/>
                                                 <xsl:with-param name="max_date" select="xs:date('1969-06-10')"></xsl:with-param>
                                                 <xsl:with-param name="low_date" select="xs:date('1965-04-28')"></xsl:with-param>
@@ -72,6 +73,7 @@
                                         <div class="card">
                                             <div class="card-body">
                                                 <xsl:call-template name="toc-table">
+                                                    <xsl:with-param name="img" select="'off'"/>
                                                     <xsl:with-param name="category" select="'correspondence-cvl'"/>
                                                     <xsl:with-param name="max_date" select="xs:date('1969-06-10')"></xsl:with-param>
                                                     <xsl:with-param name="low_date" select="xs:date('1965-04-28')"></xsl:with-param>

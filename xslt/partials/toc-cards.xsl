@@ -18,6 +18,7 @@
     <xsl:include href="toc-cards-content.xsl"/>
 
     <xsl:template name="toc-cards">
+        <xsl:param name="img"/>
         <xsl:param name="category"></xsl:param>
         <xsl:param name="max_date"></xsl:param>
         <xsl:param name="low_date"></xsl:param>
@@ -34,10 +35,14 @@
                 as="xs:date" 
                 select="xs:date(if(//tei:origDate/@notAfter) then(//tei:origDate/@notAfter) else ('1996-12-31'))"/>
             <xsl:if test="$doc_date lt $max_date and $doc_date gt $low_date and $category != 'correspondence-cvl'">
-                <xsl:call-template name="toc-cards-content"/>
+                <xsl:call-template name="toc-cards-content">
+                    <xsl:with-param name="img" select="$img"/>
+                </xsl:call-template>
             </xsl:if>
             <xsl:if test="$doc_date_cvl = $max_date or $doc_date_cvl = $low_date and $category = 'correspondence-cvl'">
-                <xsl:call-template name="toc-cards-content"/>
+                <xsl:call-template name="toc-cards-content">
+                    <xsl:with-param name="img" select="$img"/>
+                </xsl:call-template>
             </xsl:if>
         </xsl:for-each>
         
