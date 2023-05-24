@@ -1520,9 +1520,6 @@ td > label {
   #twitter-logo {
     padding: 12px 0 10px 0px;
   }
-  .expand-wrapper {
-    display: none;
-  }
   .pagination .nav {
     margin: 0 1em;
     margin-bottom: -2px;
@@ -1600,9 +1597,6 @@ td > label {
   #twitter-logo {
     padding: 12px 0 10px 0px;
   }
-  .expand-wrapper {
-    display: none;
-  }
   .timeline-panel-left:before {
     display: none;
   }
@@ -1630,6 +1624,9 @@ td > label {
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 1024px) {
+  .expand-wrapper {
+    display: none;
+  }
   .intro_img .row .col-md-3 {
     width: 100% !important;
     flex: 0 0 50% !important;
