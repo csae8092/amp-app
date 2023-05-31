@@ -130,7 +130,7 @@
                                             </a>
                                         </div>
                                         <div class="col-lg-3 col-md-12 col-sm-12">
-                                            <a href="rti-viewer.html" class="index-link">                                                     
+                                            <!-- <a href="cvl.html" class="index-link">  -->                                                    
                                                 <div class="card index-card">
                                                     <div class="card-header">
                                                         <img src="images/icons/lp-cvl.png" 
@@ -138,10 +138,9 @@
                                                             alt="Auden through Computer Vision"/>
                                                     </div>
                                                     <div class="card-header">   
-                                                        <h4>Auden through Computer Vision</h4>                                     
+                                                        <h4>Auden through Computer Vision <small>(In progress)</small></h4>
                                                     </div>
                                                 </div>                                 
-                                            </a>
                                         </div>
                                         <div class="col-lg-3 col-md-12 col-sm-12">
                                             

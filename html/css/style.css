@@ -1130,8 +1130,12 @@ div.text-re div.card-body {
   z-index: 99;
 }
 
-.pagination-menu li[type~="cv_sheet"] {
-    background-color: rgba(33,114,118, .3);
+.pagination-menu li[type~="cv_sheet"], .pagination-menu li[type~="cv_sheet"] a {
+    /*background-color: rgba(33,114,118, .3);*/
+    cursor: default;
+    pointer-events: none;
+    text-decoration: overline;
+    color: lightgrey;
 }
 
 .options-menu2 {

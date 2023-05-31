@@ -35,8 +35,9 @@
                                     <li class="nav-item dropdown-submenu">
                                         <a href="photos.html" title="Photos" class="nav-link">Photos</a>
                                     </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a href="rti-viewer.html" title="Auden through Computer Vision" class="nav-link">Auden through Computer Vision</a>
+                                    <li class="nav-item dropdown-submenu" style="color: lightgrey;">
+                                        Auden through Computer Vision 
+                                        <small>(In progress)</small> <!-- <a href="cvl.html" title="Auden through Computer Vision" class="nav-link"> -->
                                     </li>
                                 </ul>
                             </li>
