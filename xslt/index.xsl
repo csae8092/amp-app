@@ -59,11 +59,11 @@
                             <div class="col-sm-12 col-md-12 col-lg-6 intro_img">
 
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-12 col-sm-12 py-3">
+                                    <div class="col-lg-3 col-md-12 col-sm-12">
                                         <a href="toc.html" class="index-link">                                   
                                             <div class="card index-card">
-                                                <div class="card-body">
-                                                    <img src="images/dall-e/dall-e-wh-auden-corresp-400.png"
+                                                <div class="card-header" style="padding: 0;">
+                                                    <img src="images/icons/lp-corresp.png"
                                                         class="d-block w-100"
                                                         alt="Auden Musulin Papers 1959-1973"/>
                                                 </div>
@@ -73,11 +73,11 @@
                                             </div>                                     
                                         </a>                                    
                                     </div>
-                                    <div class="col-lg-3 col-md-12 col-sm-12 py-3 minus-mb-35">
+                                    <div class="col-lg-3 col-md-12 col-sm-12">
                                         <a href="search.html" class="index-link">  
                                             <div class="card index-card">
                                                 <div class="card-header" style="padding: 0;">                                        
-                                                    <img src="images/documents-search-icon-resize.png"
+                                                    <img src="images/icons/lp-search.png"
                                                         class="d-block w-100"
                                                         alt="Explore the Auden Musulin Papers through full-text search"/>  
                                                     <!--<form class="form-inline my-2 my-lg-0 navbar-search-form"
@@ -98,11 +98,11 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-3 col-md-12 col-sm-12 py-3">
+                                    <div class="col-lg-3 col-md-12 col-sm-12">
                                         <a href="toc_m.html" class="index-link">  
                                             <div class="card index-card">
-                                                <div class="card-body">
-                                                    <img src="images/dall-e/dall-e-stella-memoirs-400.png"
+                                                <div class="card-header" style="padding: 0;">
+                                                    <img src="images/icons/lp-memoirs.png"
                                                         class="d-block w-100"
                                                         alt="Musulin as Memoirist 1976-1995"/>
                                                 </div>
@@ -115,11 +115,11 @@
                                     
                                 </div>
                                     <div class="row">
-                                        <div class="col-lg-3 col-md-12 col-sm-12 py-3">
+                                        <div class="col-lg-3 col-md-12 col-sm-12">
                                             <a href="photos.html" class="index-link">                                                     
                                                 <div class="card index-card">
-                                                    <div class="card-body" style="margin: 0 auto; background-color: #000 !important;">
-                                                        <img src="images/dall-e/dall-e-photo-album-400.png" 
+                                                    <div class="card-header" style="padding: 0;">
+                                                        <img src="images/icons/lp-photos.png"
                                                             class="d-block w-100" 
                                                             alt="Photos"/>
                                                     </div>
@@ -129,14 +129,11 @@
                                                 </div>                                 
                                             </a>
                                         </div>
-                                        <div class="col-lg-3 col-md-12 col-sm-12 py-3">
-                                            
-                                        </div>
-                                        <div class="col-lg-3 col-md-12 col-sm-12 py-3">
+                                        <div class="col-lg-3 col-md-12 col-sm-12">
                                             <a href="rti-viewer.html" class="index-link">                                                     
                                                 <div class="card index-card">
-                                                    <div class="card-body" style="margin: 0 auto; background-color: #000 !important;">
-                                                        <img src="images/dall-e/cvl-img-400.png" 
+                                                    <div class="card-header">
+                                                        <img src="images/icons/lp-cvl.png" 
                                                             class="d-block w-100" 
                                                             alt="Auden through Computer Vision"/>
                                                     </div>
@@ -145,6 +142,9 @@
                                                     </div>
                                                 </div>                                 
                                             </a>
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-sm-12">
+                                            
                                         </div>
                                     </div>
                             </div>
