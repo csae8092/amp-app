@@ -32,9 +32,9 @@ body {
   margin-left: 4.5em;
 }
 
-.navbar .container {
+/*.navbar .container {
     height: 7vh;
-}
+}*/
 
 #wrapper-footer-full {
     display: flex;
@@ -44,6 +44,22 @@ body {
 
 .container-fluid {
     min-height: 93vh;
+}
+
+.padding-vh-12 {
+    padding: 12vh 0;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.w100 {
+    max-width: 100% !important;
+}
+
+.mb-0 {
+    margin-bottom: 0;
 }
 
 nav {

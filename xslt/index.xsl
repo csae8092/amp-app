@@ -41,8 +41,8 @@
                             
                         </div>
                     </div>
-                    <div class="container-fluid" style="background-color:#fff;max-width:100%;margin-bottom:0;">
-                        <div class="row" style="margin: 2% 0;">
+                    <div class="container-fluid padding-vh-12 bg-white w100 mb-0">
+                        <div class="row">
                             
                             <div class="col-sm-12 col-md-12 col-lg-6 intro_column">
                                 <div class="intro_text">
