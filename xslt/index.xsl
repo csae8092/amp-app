@@ -61,22 +61,22 @@
                                 <div class="row">
                                     <div class="col-lg-3 col-md-12 col-sm-12">
                                         <a href="toc.html" class="index-link">                                   
-                                            <div class="card index-card">
-                                                <div class="card-header" style="padding: 0;">
+                                            <div class="card index-card" data="Auden Musulin Papers 1959-1973">
+                                                <div class="card-header">
                                                     <img src="images/icons/lp-corresp.png"
                                                         class="d-block w-100"
                                                         alt="Auden Musulin Papers 1959-1973"/>
                                                 </div>
-                                                <div class="card-header">                                            
-                                                    <h4>Auden Musulin Papers 1959-1973</h4>
+                                                <div class="card-header fadedbox">                                            
+                                                    <h4 class="text title">Auden Musulin Papers 1959-1973</h4>
                                                 </div>
                                             </div>                                     
                                         </a>                                    
                                     </div>
                                     <div class="col-lg-3 col-md-12 col-sm-12">
-                                        <a href="search.html" class="index-link">  
+                                        <a href="search.html" class="index-link" id="index-search">  
                                             <div class="card index-card">
-                                                <div class="card-header" style="padding: 0;">                                        
+                                                <div class="card-header">                                        
                                                     <img src="images/icons/lp-search.png"
                                                         class="d-block w-100"
                                                         alt="Explore the Auden Musulin Papers through full-text search"/>  
@@ -92,22 +92,22 @@
                                                          </button>
                                                      </form>-->                                        
                                                 </div>
-                                                <div class="card-header">  
-                                                    <h4>Explore the Auden Musulin Papers through full-text search.</h4>                                         
+                                                <div class="card-header fadedbox">  
+                                                    <h4 class="text title">Explore the Auden Musulin Papers through full-text search.</h4>                                         
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="col-lg-3 col-md-12 col-sm-12">
-                                        <a href="toc_m.html" class="index-link">  
+                                        <a href="toc_m.html" class="index-link" id="index-memoirs">  
                                             <div class="card index-card">
-                                                <div class="card-header" style="padding: 0;">
+                                                <div class="card-header">
                                                     <img src="images/icons/lp-memoirs.png"
                                                         class="d-block w-100"
                                                         alt="Musulin as Memoirist 1976-1995"/>
                                                 </div>
-                                                <div class="card-header">  
-                                                    <h4>Musulin as Memoirist 1976-1995</h4>                                         
+                                                <div class="card-header fadedbox">  
+                                                    <h4 class="text title">Musulin as Memoirist 1976-1995</h4>                                         
                                                 </div>
                                             </div>                                    
                                         </a>
@@ -116,31 +116,32 @@
                                 </div>
                                     <div class="row">
                                         <div class="col-lg-3 col-md-12 col-sm-12">
-                                            <a href="photos.html" class="index-link">                                                     
+                                            <a href="photos.html" class="index-link" id="index-photo">                                                     
                                                 <div class="card index-card">
-                                                    <div class="card-header" style="padding: 0;">
+                                                    <div class="card-header">
                                                         <img src="images/icons/lp-photos.png"
                                                             class="d-block w-100" 
                                                             alt="Photos"/>
                                                     </div>
-                                                    <div class="card-header">   
-                                                        <h4>Photos</h4>                                     
+                                                    <div class="card-header fadedbox">   
+                                                        <h4 class="text title">Photos</h4>                                     
                                                     </div>
                                                 </div>                                 
                                             </a>
                                         </div>
                                         <div class="col-lg-3 col-md-12 col-sm-12">
-                                            <!-- <a href="cvl.html" class="index-link">  -->                                                    
+                                            <a class="index-link" id="index-cvl">                                        
                                                 <div class="card index-card">
                                                     <div class="card-header">
                                                         <img src="images/icons/lp-cvl.png" 
                                                             class="d-block w-100" 
                                                             alt="Auden through Computer Vision"/>
                                                     </div>
-                                                    <div class="card-header">   
-                                                        <h4>Auden through Computer Vision <small>(In progress)</small></h4>
+                                                    <div class="card-header fadedbox">   
+                                                        <h4 class="text title">Auden through Computer Vision <br/><small>(In progress)</small></h4>
                                                     </div>
-                                                </div>                                 
+                                                </div> 
+                                            </a>
                                         </div>
                                         <div class="col-lg-3 col-md-12 col-sm-12">
                                             

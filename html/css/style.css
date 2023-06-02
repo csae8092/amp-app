@@ -83,6 +83,60 @@ nav.hiddenNav {
     border-radius: .45rem;*/
 }
 
+.index-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+ }
+.index-card .fadedbox {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    vertical-align: middle;
+}
+.index-card:hover .fadedbox {
+    opacity: 0.8;
+}
+.index-card .text {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    transform: translateY(-120%);
+    -webkit-transform: translateY(-120%);
+    padding: 0 .7rem;
+    height: 100px;
+    overflow: visible;
+}
+.index-card .title {
+    opacity: 0;
+    transition-delay: 0.2s;
+    transition-duration: 0.3s;
+}
+.index-card:hover .title,
+.index-card:focus .title {
+    opacity: 1;
+}
+
+
+.index-card:hover .card-header img {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    -ms-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    opacity: 0;
+}
+
+
 #notification {
   background-color: #f6fa29;
   max-height: 75px;
@@ -399,7 +453,6 @@ div.dataTables_filter {
   transition: transform 0.2s;
   border: 1px solid #f1f1f1;
   box-shadow: 2px 2px 4.5px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 0 !important;
 }
 
 .index-card:hover {
@@ -1623,7 +1676,7 @@ td > label {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .expand-wrapper {
     display: none;
   }
@@ -1634,6 +1687,12 @@ td > label {
   .minus-mb-35 {
     margin-bottom: 0;
    }
+   .index-card .text {
+       font-size: 1.5rem;
+   }
+   .index-card .text {
+       font-size: 2rem !important;
+   }
 }
 
 @media (max-width: 1200px) {
@@ -1643,7 +1702,11 @@ td > label {
   }
   .margin-top {
     margin-top: 0;
-}
+    
+    }
+ .index-card .text {
+       font-size: .5rem;
+   }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1654,4 +1717,7 @@ td > label {
       .margin-top {
         margin-top: 0;
     }
+    .index-card .text {
+       font-size: 1rem;
+   }
 }
