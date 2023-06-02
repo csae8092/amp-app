@@ -126,11 +126,15 @@ nav.hiddenNav {
     -o-transition: all 300ms ease-out;
     -ms-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    transform: translateY(-120%);
-    -webkit-transform: translateY(-120%);
+    transform: translateY(-150%);
+    -webkit-transform: translateY(-150%);
     padding: 0 .7rem;
     height: 100px;
     overflow: visible;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .index-card .title {
     opacity: 0;

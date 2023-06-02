@@ -60,20 +60,6 @@
 
                                 <div class="row">
                                     <div class="col-lg-3 col-md-12 col-sm-12">
-                                        <a href="toc.html" class="index-link">                                   
-                                            <div class="card index-card" data="Auden Musulin Papers 1959-1973">
-                                                <div class="card-header">
-                                                    <img src="images/icons/lp-corresp.png"
-                                                        class="d-block w-100"
-                                                        alt="Auden Musulin Papers 1959-1973"/>
-                                                </div>
-                                                <div class="card-header fadedbox">                                            
-                                                    <h4 class="text title">Auden Musulin Papers 1959-1973</h4>
-                                                </div>
-                                            </div>                                     
-                                        </a>                                    
-                                    </div>
-                                    <div class="col-lg-3 col-md-12 col-sm-12">
                                         <a href="search.html" class="index-link" id="index-search">  
                                             <div class="card index-card">
                                                 <div class="card-header">                                        
@@ -99,6 +85,20 @@
                                         </a>
                                     </div>
                                     <div class="col-lg-3 col-md-12 col-sm-12">
+                                        <a href="toc.html" class="index-link">                                   
+                                            <div class="card index-card" data="Auden Musulin Papers 1959-1973">
+                                                <div class="card-header">
+                                                    <img src="images/icons/lp-corresp.png"
+                                                        class="d-block w-100"
+                                                        alt="Auden Musulin Papers 1959-1973"/>
+                                                </div>
+                                                <div class="card-header fadedbox">                                            
+                                                    <h4 class="text title">Auden Musulin Papers 1959-1973</h4>
+                                                </div>
+                                            </div>                                     
+                                        </a>                                    
+                                    </div>
+                                    <div class="col-lg-3 col-md-12 col-sm-12">
                                         <a href="toc_m.html" class="index-link" id="index-memoirs">  
                                             <div class="card index-card">
                                                 <div class="card-header">
@@ -112,7 +112,6 @@
                                             </div>                                    
                                         </a>
                                     </div>
-                                    
                                 </div>
                                     <div class="row">
                                         <div class="col-lg-3 col-md-12 col-sm-12">
@@ -136,15 +135,15 @@
                                                         <img src="images/icons/lp-cvl.png" 
                                                             class="d-block w-100" 
                                                             alt="Auden through Computer Vision"/>
+                                                        
                                                     </div>
                                                     <div class="card-header fadedbox">   
-                                                        <h4 class="text title">Auden through Computer Vision <br/><small>(In progress)</small></h4>
+                                                        <h4 class="text title">Auden through Computer Vision <small>(In progress)</small></h4>
+                                                        
                                                     </div>
+                                                    
                                                 </div> 
                                             </a>
-                                        </div>
-                                        <div class="col-lg-3 col-md-12 col-sm-12">
-                                            
                                         </div>
                                     </div>
                             </div>
