@@ -3,6 +3,6 @@
 
 # amp-app
 
-- build with [DSE-Static-Cookiecutter](https://github.com/acdh-ch/dse-static-cookiecutter)
+- built with [DSE-Static-Cookiecutter](https://github.com/acdh-ch/dse-static-cookiecutter)
 
 - TEI/XML Data from [amp-data](https://github.com/Auden-Musulin-Papers/amp-data)
