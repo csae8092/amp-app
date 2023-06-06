@@ -1,7 +1,15 @@
+/* de-micro-editor aot features class */
+const dse_feat1 = "features-1";
+const dse_feat2 = "features-2";
+
+/* html prev and next buttons -> link id */
+const prev_btn = "prev-doc";
+const next_btn = "next-doc";
+
 window.onload = nextPrevUrl();
 
-var features1 = document.getElementsByClassName("features-1");
-var features2 = document.getElementsByClassName("features-2");
+var features1 = document.getElementsByClassName(dse_feat1);
+var features2 = document.getElementsByClassName(dse_feat2);
 
 [].forEach.call(features1, (opt) => {
   opt.addEventListener("click", nextPrevUrlUpdate);
@@ -12,8 +20,8 @@ var features2 = document.getElementsByClassName("features-2");
 });
 
 function nextPrevUrl() {
-  var prev = document.getElementById("prev-doc");
-  var next = document.getElementById("next-doc");
+  var prev = document.getElementById(prev_btn);
+  var next = document.getElementById(next_btn);
   var urlparam = new URLSearchParams(document.location.search);
   var domain = document.location.origin;
   var path = document.location.pathname;
@@ -36,8 +44,8 @@ function nextPrevUrl() {
 }
 
 function nextPrevUrlUpdate() {
-  var prev = document.getElementById("prev-doc");
-  var next = document.getElementById("next-doc");
+  var prev = document.getElementById(prev_btn);
+  var next = document.getElementById(next_btn);
   var urlparam = new URLSearchParams(document.location.search);
   if (prev) {
     var prev_href = new URL(prev.getAttribute("href"));

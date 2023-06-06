@@ -1,1 +1,3 @@
-denormalize-indices -f "./data/editions/*/*.xml" -i "./data/indices/*.xml" -m './/tei:rs[@ref]/@ref' -t 'mentioned in ' -x './/tei:title[@level="a"]/text()'
+# bin/bash
+
+denormalize-indices -f "./data/editions/*/*.xml" -i "./data/indices/*.xml" -m ".//tei:rs[@ref]/@ref" -x ".//tei:title[@level='a']/text()" -xs ".//tei:editionStmt/tei:edition/text()" -d ".//tei:origDate/@notBefore"

@@ -64,7 +64,7 @@
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 py-2">
                                     <div class="flex-md-row mb-4 align-items-center" style="margin-bottom:.5em!important;">
-                                        <a href="https://www.fwf.ac.at/en/"><img class="card-img-right flex-auto d-md-block" src="https://www.fwf.ac.at/fileadmin/files/Images/News_Presse/Presse/Logo/fwf-logo_var2.jpg" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 180px; height: auto; margin-top:1em;" title="FWF Der Wissenschaftsfond" /></a>
+                                        <a href="https://www.fwf.ac.at/en/"><img class="card-img-right flex-auto d-md-block" src="https://www.fwf.ac.at/fileadmin/files/Images/News_Presse/Presse/Logo/Logo-D/FWF_Logo_Zusatz_Dunkelblau_RGB_DE.png" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 250px; height: auto; margin-top:1em;" title="FWF Der Wissenschaftsfond" /></a>
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 py-2">

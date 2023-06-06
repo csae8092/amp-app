@@ -27,20 +27,20 @@
                                 <a title="Papers" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Papers <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden-Musulin Correspondence</a>
+                                        <a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden Musulin Papers 1959-1973</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;" title="Surface reconstructions" class="nav-link">Surface reconstructions <small>(in progress)</small></a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Musulin memoirs" href="memoirs.html" class="nav-link">Musulin memoirs</a>
+                                        <a href="toc_m.html" title="Additional materials" class="nav-link">Musulin as Memoirist 1976-1995</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a href="photos.html" title="Photos" class="nav-link">Photos</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="additional-materials.html" title="Additional materials" class="nav-link">Additional materials</a>
-                                    </li> 
+                                        <a title="Auden through Computer Vision" class="nav-link" style="color: lightgrey !important;">
+                                        Auden through Computer Vision 
+                                        <small>(In progress)</small>
+                                        </a>  <!--href="cvl.html"-->
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">

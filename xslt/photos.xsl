@@ -19,12 +19,17 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
+                <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.css"/>
+                <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/1.1.1/css/searchPanes.dataTables.min.css"/>
+                <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script>
+                <script type="text/javascript" src="js/imageLoaded.js"></script>
             </head>
             
             <body class="page">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     <div class="container-fluid">
+                        <h1 style="margin: 2em auto; text-align: center;"><xsl:value-of select="$doc_title"/></h1>
                         <div id="navBarLetters">
                             <ul class="nav nav-tabs" id="dropdown-lang">
                                 <li class="nav-item">                                    
@@ -43,18 +48,21 @@
                             <div class="tab-pane active" id="cards-tab" tabindex="-1">  
                                 <div class="row text-center">
                                     <xsl:call-template name="toc-cards">
+                                        <xsl:with-param name="img" select="'on'"/>
                                         <xsl:with-param name="category" select="'photos'"/>
+                                        <xsl:with-param name="max_date" select="xs:date('2023-12-31')"/>
+                                        <xsl:with-param name="low_date" select="xs:date('1958-12-31')"/>
                                     </xsl:call-template>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="table-tab" tabindex="-1">                        
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h1><xsl:value-of select="$doc_title"/></h1>
-                                    </div>
+                                <div class="card">                                    
                                     <div class="card-body">
                                         <xsl:call-template name="toc-table">
+                                            <xsl:with-param name="img" select="'on'"/>
                                             <xsl:with-param name="category" select="'photos'"/>
+                                            <xsl:with-param name="max_date" select="xs:date('2023-12-31')"/>
+                                            <xsl:with-param name="low_date" select="xs:date('1958-12-31')"/>
                                         </xsl:call-template>
                                     </div>
                                 </div> 
@@ -63,12 +71,13 @@
                     </div>
                     
                     <xsl:call-template name="html_footer"/>
+                    <script type="text/javascript" src="js/dt.js"></script>
                     <script>
                         $(document).ready(function () {
-                            createDataTable('tocTable');
+                        createDataTable('tocTable', 'Search titles and dates:');
                         });
                     </script>
-                    <script type="text/javascript" src="js/imageLoaded.js"></script>
+                    
                 </div>
             </body>
         </html>

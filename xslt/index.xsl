@@ -31,7 +31,7 @@
                                 <a id="close" style="color:#b59890;text-align:right;cursor:pointer;"
                                     title="close">X</a>
                             </p>
-                            <h5 class="hidden">Pre-Release (v0.2.0)</h5>                                        
+                            <h5 class="hidden">Pre-Release (v0.3.0)</h5>                                        
                             <p class="hidden">                                            
                                 This website is in development. Help us to improve and                                         
                                 <a style="text-decoration:underline;" 
@@ -41,10 +41,10 @@
                             
                         </div>
                     </div>
-                    <div class="container-fluid" style="background-color:#fff;max-width:100%;margin-bottom:0;">
-                        <div class="row" style="margin: 2% 0;">
+                    <div class="container-fluid padding-vh-12 bg-white w100 mb-0">
+                        <div class="row">
                             
-                            <div class="col-sm-12 col-md-6 intro_column">
+                            <div class="col-sm-12 col-md-12 col-lg-6 intro_column">
                                 <div class="intro_text">
                                     <div class="main-title">
                                         <h1 style="color:#615a60;padding:.5em 0;">Auden Musulin Papers</h1>
@@ -56,30 +56,16 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-sm-12 col-md-6 intro_img">
+                            <div class="col-sm-12 col-md-12 col-lg-6 intro_img">
 
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-12 py-3">
-                                        <a href="toc.html" class="index-link">                                   
+                                    <div class="col-lg-3 col-md-12 col-sm-12">
+                                        <a href="search.html" class="index-link" id="index-search">  
                                             <div class="card index-card">
-                                                <div class="card-body">
-                                                    <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web_1041.png"
+                                                <div class="card-header">                                        
+                                                    <img src="images/icons/lp-search.png"
                                                         class="d-block w-100"
-                                                        alt="Auden-Musulin Correspondence Image"/>
-                                                </div>
-                                                <div class="card-header">                                            
-                                                    <h4>W. H. Auden's correspondence with Stella Musulin</h4>
-                                                </div>
-                                            </div>                                     
-                                        </a>                                    
-                                    </div>
-                                    <div class="col-md-4 col-sm-12 py-3">
-                                        <a href="search.html" class="index-link">  
-                                            <div class="card index-card">
-                                                <div class="card-header" style="padding: 0;">                                        
-                                                    <img src="images/documents-search-icon-resize.png"
-                                                        class="d-block w-100"
-                                                        alt="Search Database Logo"/>  
+                                                        alt="Explore the Auden Musulin Papers through full-text search"/>  
                                                     <!--<form class="form-inline my-2 my-lg-0 navbar-search-form"
                                                          method="get"
                                                          action="search.html"
@@ -92,40 +78,71 @@
                                                          </button>
                                                      </form>-->                                        
                                                 </div>
-                                                <div class="card-header">  
-                                                    <h4>Explore the Auden Musulin Papers through full-text search.</h4>                                         
+                                                <div class="card-header fadedbox">  
+                                                    <h4 class="text title">Explore the Auden Musulin Papers through full-text search.</h4>                                         
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
+                                    <div class="col-lg-3 col-md-12 col-sm-12">
+                                        <a href="toc.html" class="index-link">                                   
+                                            <div class="card index-card" data="Auden Musulin Papers 1959-1973">
+                                                <div class="card-header">
+                                                    <img src="images/icons/lp-corresp.png"
+                                                        class="d-block w-100"
+                                                        alt="Auden Musulin Papers 1959-1973"/>
+                                                </div>
+                                                <div class="card-header fadedbox">                                            
+                                                    <h4 class="text title">Auden Musulin Papers 1959-1973</h4>
+                                                </div>
+                                            </div>                                     
+                                        </a>                                    
+                                    </div>
+                                    <div class="col-lg-3 col-md-12 col-sm-12">
+                                        <a href="toc_m.html" class="index-link" id="index-memoirs">  
+                                            <div class="card index-card">
+                                                <div class="card-header">
+                                                    <img src="images/icons/lp-memoirs.png"
+                                                        class="d-block w-100"
+                                                        alt="Musulin as Memoirist 1976-1995"/>
+                                                </div>
+                                                <div class="card-header fadedbox">  
+                                                    <h4 class="text title">Musulin as Memoirist 1976-1995</h4>                                         
+                                                </div>
+                                            </div>                                    
+                                        </a>
+                                    </div>
                                 </div>
                                     <div class="row">
-                                        <div class="col-md-4 col-sm-12 py-3">
-                                            <a href="auden-biography.html" class="index-link">  
+                                        <div class="col-lg-3 col-md-12 col-sm-12">
+                                            <a href="photos.html" class="index-link" id="index-photo">                                                     
                                                 <div class="card index-card">
-                                                    <div class="card-body">
-                                                        <img src="images/index/W-H-Auden_7.jpg"
-                                                            class="d-block w-100"
-                                                            alt="W.H. Auden Image"/>
-                                                    </div>
-                                                    <div class="card-header">  
-                                                        <h4>W. H. Auden</h4>                                         
-                                                    </div>
-                                                </div>                                    
-                                            </a>
-                                        </div>
-                                        <div class="col-md-4 col-sm-12 py-3">
-                                            <a href="musulin-biography.html" class="index-link">                                                     
-                                                <div class="card index-card">
-                                                    <div class="card-body" style="margin: 0 auto; background-color: #000 !important;">
-                                                        <img src="images/index/stella-musulin_0237_small.png" 
+                                                    <div class="card-header">
+                                                        <img src="images/icons/lp-photos.png"
                                                             class="d-block w-100" 
-                                                            alt="Stella Musulin Image"/>
+                                                            alt="Photos"/>
                                                     </div>
-                                                    <div class="card-header">   
-                                                        <h4>Stella Musulin</h4>                                     
+                                                    <div class="card-header fadedbox">   
+                                                        <h4 class="text title">Photos</h4>                                     
                                                     </div>
                                                 </div>                                 
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-3 col-md-12 col-sm-12">
+                                            <a class="index-link" id="index-cvl">                                        
+                                                <div class="card index-card">
+                                                    <div class="card-header">
+                                                        <img src="images/icons/lp-cvl.png" 
+                                                            class="d-block w-100" 
+                                                            alt="Auden through Computer Vision"/>
+                                                        
+                                                    </div>
+                                                    <div class="card-header fadedbox">   
+                                                        <h4 class="text title">Auden through Computer Vision <small>(In progress)</small></h4>
+                                                        
+                                                    </div>
+                                                    
+                                                </div> 
                                             </a>
                                         </div>
                                     </div>

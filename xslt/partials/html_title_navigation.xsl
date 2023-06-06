@@ -37,7 +37,7 @@
                         <xsl:if test="string-length($prev) != 0">
                             <a id="prev-doc">
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="$prev"/>
+                                    <xsl:value-of select="concat($prev, '?img=off')"/>
                                 </xsl:attribute>
                                 <svg class="arrow svg-inline--fa fa-chevron-left fa-w-10" title="previous" aria-labelledby="svg-inline--fa-title-1" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-1">previous</title><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg><!-- <i class="fas fa-chevron-left" title="previous"></i> -->
                             </a>
@@ -45,36 +45,35 @@
                         
                     </div>
                     <div class="col-md-10" style="margin-top:.7em;">
-                        
+                        <xsl:variable name="doc_date" 
+                            as="xs:date" 
+                            select="xs:date(if(//tei:origDate/@notAfter) then(//tei:origDate/@notAfter) else ('1996-12-31'))"/>
+                        <xsl:variable name="max_date1" as="xs:date" select="xs:date('1973-12-31')"/>
+                        <xsl:variable name="max_date2" as="xs:date" select="xs:date('1996-01-01')"/>
+                        <xsl:variable name="low_date" as="xs:date" select="xs:date('1975-12-31')"/>
                         <xsl:choose>
-                            <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060']">
-                                <a style="text-align:left;" title="back to all letters" href="additional-materials.html" class="nav-link btn btn-round btn-backlink">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                    </svg>
-                                </a>  
-                            </xsl:when>
-                            <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0055', '0048', '0054', '0050']">
-                                <a style="text-align:left;" title="back to all letters" href="photos.html" class="nav-link btn btn-round btn-backlink">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                    </svg>
-                                </a>  
-                            </xsl:when>
-                            <xsl:when test="substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0028']">
-                                <a style="text-align:left;" title="back to all letters" href="memoirs.html" class="nav-link btn btn-round btn-backlink">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
-                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
-                                    </svg>
-                                </a>  
-                            </xsl:when>
-                            <xsl:when test="not(substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml') = ['0046', '0047', '0027', '0051', '0052', '0056', '0029', '0053', '0030', '0031', '0032', '0033', '0034', '0036', '0049', '0037', '0026', '0061', '0060','0055', '0048', '0054', '0050','0028'])">
+                            <xsl:when test="$doc_date lt $max_date1 and not(contains(string-join(('0055', '0048', '0054', '0050', '0064', '0065', '0066', '0067', '0068', '0069', '0070', '0071', '0072', '0073', '0074', '0075'), ' '), substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml')))">
                                 <a style="text-align:left;" title="back to all letters" href="toc.html" class="nav-link btn btn-round btn-backlink">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
                                         <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
                                     </svg>
                                 </a>  
                             </xsl:when>
+                            <xsl:when test="$doc_date lt $max_date2 and $doc_date gt $low_date and not(contains(string-join(('0055', '0048', '0054', '0050', '0064', '0065', '0066', '0067', '0068', '0069', '0070', '0071', '0072', '0073', '0074', '0075'), ' '), substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml')))">
+                                <a style="text-align:left;" title="back to all memoirs" href="toc_m.html" class="nav-link btn btn-round btn-backlink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                    </svg>
+                                </a>  
+                            </xsl:when>
+                            <xsl:when test="contains(string-join(('0055', '0048', '0054', '0050', '0064', '0065', '0066', '0067', '0068', '0069', '0070', '0071', '0072', '0073', '0074', '0075'), ' '), substring-before(substring-after(//tei:TEI/@xml:id, '__'), '.xml'))">
+                                <a style="text-align:left;" title="back to all photos" href="photos.html" class="nav-link btn btn-round btn-backlink">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-back" viewBox="0 0 16 16">
+                                        <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z"/>
+                                    </svg>
+                                </a>  
+                            </xsl:when>
+                            
                         </xsl:choose>
                         
                     </div>
@@ -103,7 +102,7 @@
                         <xsl:if test="string-length($next) != 0">
                             <a id="next-doc">
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="$next"/>
+                                    <xsl:value-of select="concat($next, '?img=off')"/>
                                 </xsl:attribute>
                                 <svg class="arrow svg-inline--fa fa-chevron-right fa-w-10" title="next" aria-labelledby="svg-inline--fa-title-2" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
                                     <title id="svg-inline--fa-title-2">next</title>

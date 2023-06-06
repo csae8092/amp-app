@@ -12,7 +12,7 @@
     <xsl:import href="partials/toc-table.xsl"/>
     <xsl:import href="partials/toc-cards.xsl"/>
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="'Correspondence'"/>
+        <xsl:variable name="doc_title" select="'Auden Musulin Papers 1959-1973'"/>
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
@@ -29,6 +29,7 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     <div class="container-fluid">
+                        <h1 style="margin: 2em auto; text-align: center;"><xsl:value-of select="$doc_title"/></h1>
                         <div id="navBarLetters">
                             <ul class="nav nav-tabs" id="dropdown-lang">
                                 <li class="nav-item">                                    
@@ -47,18 +48,21 @@
                             <div class="tab-pane active" id="cards-tab" tabindex="-1">  
                                 <div class="row gy-1 text-center">
                                     <xsl:call-template name="toc-cards">
+                                        <xsl:with-param name="img" select="'off'"/>
                                         <xsl:with-param name="category" select="'correspondence'"/>
+                                        <xsl:with-param name="max_date" select="xs:date('1973-12-31')"></xsl:with-param>
+                                        <xsl:with-param name="low_date" select="xs:date('1958-12-31')"></xsl:with-param>
                                     </xsl:call-template>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="table-tab" tabindex="-1">                        
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h1><xsl:value-of select="$doc_title"/></h1>
-                                    </div>
+                                <div class="card">                                    
                                     <div class="card-body">
                                         <xsl:call-template name="toc-table">
+                                            <xsl:with-param name="img" select="'off'"/>
                                             <xsl:with-param name="category" select="'correspondence'"/>
+                                            <xsl:with-param name="max_date" select="xs:date('1973-12-31')"></xsl:with-param>
+                                            <xsl:with-param name="low_date" select="xs:date('1958-12-31')"></xsl:with-param>
                                         </xsl:call-template>
                                     </div>
                                 </div> 

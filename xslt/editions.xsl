@@ -80,9 +80,9 @@
                     </div><!-- .container-fluid -->
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
-                <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/3.1.0/openseadragon.min.js"></script>-->
-                <script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script>
-                <!-- <script src="js/dist/de-editor.min.js"></script> -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script>
+                <script src="https://unpkg.com/de-micro-editor@0.2.85/dist/de-editor.min.js"></script>
+                <!--<script src="js/dist/de-editor.min.js"></script> -->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>
                 <script type="text/javascript" src="js/hide-md.js"></script>
@@ -725,7 +725,7 @@
     <xsl:template match="tei:lb">
         <br/>
         <xsl:if test="not(ancestor::tei:note[@type='footnote'])">
-            <xsl:if test="ancestor::tei:p">
+            <xsl:if test="ancestor::tei:p[not(@hand='#stamp')]">
                 <a>
                     <xsl:variable name="para" as="xs:int">
                         <xsl:number level="any" from="tei:body" count="tei:p"/>

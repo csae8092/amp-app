@@ -197,7 +197,7 @@
                                 <xsl:value-of select="count(./tei:listBibl/tei:bibl)"/>
                             </td>
                             <td>
-                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
+                                <xsl:value-of select="count(./tei:noteGrp/tei:note)"/>
                             </td>
                             <td>
                                 <xsl:value-of select="tokenize(./tei:birth/tei:date/@when-iso, '-')[1]"/>
@@ -229,7 +229,7 @@
                 </thead>
                 <tbody>
                     <xsl:for-each select="./tei:place">
-                        <xsl:variable name="count" select="count(./tei:listEvent/tei:event)"/>
+                        <xsl:variable name="count" select="count(./tei:noteGrp/tei:note)"/>
                         <xsl:variable name="coords" select="tokenize(./tei:location[@type='coords']/tei:geo, ', ')"/>
                         <tr>
                             <td>
@@ -353,7 +353,7 @@
                                 <xsl:value-of select="./tei:note"/>
                             </td>
                             <td>
-                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
+                                <xsl:value-of select="count(./tei:noteGrp/tei:note)"/>
                             </td>
                         </tr>
                     </xsl:for-each>
@@ -403,7 +403,7 @@
                                 <xsl:value-of select="./tei:lang"/>
                             </td>
                             <td>
-                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
+                                <xsl:value-of select="count(./tei:noteGrp/tei:note)"/>
                             </td>
                         </tr>
                     </xsl:for-each>
@@ -480,7 +480,7 @@
                                 <xsl:value-of select="./tei:desc"/>
                             </td>
                             <td>
-                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
+                                <xsl:value-of select="count(./tei:noteGrp/tei:note)"/>
                             </td>
                         </tr>
                     </xsl:for-each>

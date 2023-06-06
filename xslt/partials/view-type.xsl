@@ -34,8 +34,7 @@
                 if (ancestor::tei:text/@hand = '#handwritten') then 
                 ($hand) else if (ancestor::tei:text/@hand = '#typed') then 
                 ($typed) else if (ancestor::tei:text/@hand = '#printed') then 
-                ($printed) else 
-                ()
+                ($printed) else ()
             }">
             <xsl:for-each-group select="*" group-starting-with="tei:pb">                                  
                 <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
@@ -49,16 +48,20 @@
                         
                         <div id="text-resize-{position()}" class="text-re col-md-9"> 
                             <div class="card-body">
+                                <xsl:if test="@type='cv_sheet'">
+                                    <img class="card-img-right flex-auto d-md-block" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px; height: auto; padding: .5em;" title="Computer Vision Lab"/>
+                                </xsl:if>
                                 <xsl:choose>
                                     <xsl:when test="position() = last() - 1">
+                                        
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
                                             
                                             <p class="yes-index" style="{
                                                 if (./@hand = '#handwritten') then
                                                 ($hand) else if (./@hand = '#typed') then
                                                 ($typed) else if (./@hand = '#printed') then
-                                                ($printed) else
-                                                ()
+                                                ($printed) else if (./@hand = '#stamp') then
+                                                ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
@@ -86,16 +89,12 @@
                                                 if (./@hand = '#handwritten') then
                                                 ($hand) else if (./@hand = '#typed') then
                                                 ($typed) else if (./@hand = '#printed') then
-                                                ($printed) else
-                                                ()
+                                                ($printed) else if (./@hand = '#stamp') then
+                                                ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
-                                            
-                                            <xsl:if test="./tei:handShift">
-                                                <script type="text/javascript" src="js/handshift.js"></script>
-                                            </xsl:if>
-                                            
+
                                         </xsl:for-each>
                                     </xsl:otherwise>
                                 </xsl:choose>
