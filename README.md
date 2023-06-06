@@ -5,4 +5,4 @@
 
 - built with [DSE-Static-Cookiecutter](https://github.com/acdh-ch/dse-static-cookiecutter)
 
-- TEI/XML Data from [amp-data](https://github.com/Auden-Musulin-Papers/amp-data)
+- TEI/XML data from [amp-data](https://github.com/Auden-Musulin-Papers/amp-data)
