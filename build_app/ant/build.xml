@@ -21,7 +21,6 @@
     <property name="xsl_memoirs" value="${basedir}/xslt/memoirs.xsl"/>
     <property name="xsl_photos" value="${basedir}/xslt/photos.xsl"/>
     <property name="xsl_am" value="${basedir}/xslt/additional-materials.xsl"/>
-    <!-- <property name="xsl_sf value="${basedir}/xslt/surfance-reconstructions.xsl"/> -->
     <property name="xsl_search" value="${basedir}/xslt/search.xsl"/>
     <property name="xsl_desc" value="${basedir}/xslt/description.xsl"/>
     <property name="xsl_bio" value="${basedir}/xslt/biographies.xsl"/>
@@ -87,10 +86,10 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    <!-- <xslt in="${index}" out="${target}/cvl.html" style="${xsl_rti}">
+    <xslt in="${index}" out="${target}/cvl.html" style="${xsl_rti}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt> -->
+    </xslt>
     <xslt in="${description}" out="${target}/description.html" style="${xsl_desc}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>

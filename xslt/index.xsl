@@ -129,7 +129,7 @@
                                             </a>
                                         </div>
                                         <div class="col-lg-3 col-md-12 col-sm-12">
-                                            <a class="index-link" id="index-cvl">                                        
+                                            <a href="cvl.html" class="index-link" id="index-cvl">                                        
                                                 <div class="card index-card">
                                                     <div class="card-header">
                                                         <img src="images/icons/lp-cvl.png" 
@@ -138,7 +138,7 @@
                                                         
                                                     </div>
                                                     <div class="card-header fadedbox">   
-                                                        <h4 class="text title">Auden through Computer Vision <small>(In progress)</small></h4>
+                                                        <h4 class="text title">Auden through Computer Vision</h4>
                                                         
                                                     </div>
                                                     

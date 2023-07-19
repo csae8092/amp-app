@@ -1204,11 +1204,7 @@ div.text-re div.card-body {
 }
 
 .pagination-menu li[type~="cv_sheet"], .pagination-menu li[type~="cv_sheet"] a {
-    /*background-color: rgba(33,114,118, .3);*/
-    cursor: default;
-    pointer-events: none;
-    text-decoration: overline;
-    color: lightgrey;
+    text-decoration: underline;
 }
 
 .options-menu2 {
