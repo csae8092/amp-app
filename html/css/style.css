@@ -1059,10 +1059,22 @@ fieldset.ssFieldset > span > input {
   transform: scale(1.05);
 }
 
+#mastodon-logo {
+  width: 10%;
+  height: auto;
+  padding: 10px 0 10px 20px;
+  transition: transform 0.2s;
+  margin-left: 1em;
+}
+
+#mastodon-logo:hover {
+  transform: scale(1.05);
+}
+
 #twitter-logo {
   width: 10%;
   height: auto;
-  padding: 12px 0 10px 20px;
+  padding: 12px 0 10px 10px;
   transition: transform 0.2s;
   margin-left: 1em;
 }
