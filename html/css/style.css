@@ -126,10 +126,10 @@ nav.hiddenNav {
     -o-transition: all 300ms ease-out;
     -ms-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    transform: translateY(-150%);
-    -webkit-transform: translateY(-150%);
+    transform: translateY(-75%);
+    -webkit-transform: translateY(-75%);
     padding: 0 .7rem;
-    height: 100px;
+    height: 512px;
     overflow: visible;
     align-items: center;
     display: flex;
@@ -1721,6 +1721,22 @@ td > label {
    .index-card .text {
        font-size: 2rem !important;
    }
+   .index-card .text {
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+        transform: translateY(-75%);
+        -webkit-transform: translateY(-75%);
+        padding: 0 .7rem;
+        height: 512px;
+        overflow: visible;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -1735,6 +1751,22 @@ td > label {
  .index-card .text {
        font-size: .5rem;
    }
+   .index-card .text {
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        padding: 0 .7rem;
+        height: 256px;
+        overflow: visible;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1746,6 +1778,22 @@ td > label {
         margin-top: 0;
     }
     .index-card .text {
-       font-size: 1rem;
+       font-size: .75rem;
    }
+   .index-card .text {
+        -webkit-transition: all 300ms ease-out;
+        -moz-transition: all 300ms ease-out;
+        -o-transition: all 300ms ease-out;
+        -ms-transition: all 300ms ease-out;
+        transition: all 300ms ease-out;
+        transform: translateY(-70%);
+        -webkit-transform: translateY(-70%);
+        padding: 0 .7rem;
+        height: 256px;
+        overflow: visible;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
