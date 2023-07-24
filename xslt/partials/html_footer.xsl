@@ -79,7 +79,7 @@
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-sm-12 py-2">
                                     <div class="flex-md-row mb-4 align-items-center">
-                                        <a href="https://cvl.tuwien.ac.at/"><img class="card-img-right flex-auto d-md-block" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px; height: auto; padding: .5em;" title="Computer Vision Lab"/></a>
+                                        <a href="https://cvl.tuwien.ac.at/"><img class="card-img-right flex-auto d-md-block" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 170px; height: auto; padding: .5em;" title="Computer Vision Lab"/></a>
                                     </div>
                                 </div>
                             </div>
