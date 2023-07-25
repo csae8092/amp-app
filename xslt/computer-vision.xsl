@@ -28,6 +28,11 @@
                 <script type="text/javascript" src="spidergl/spidergl.min.js"></script>
                 <script type="text/javascript" src="spidergl/multires.min.js"></script>
                 <script type="text/javascript" src="js/imageLoaded.js"></script>
+                <style>
+                    p, ol {
+                        font-size: 1.2rem;
+                    }
+                </style>
             </head>
             
             <body class="page">
@@ -63,12 +68,12 @@
                             <div class="col-md-12" style="margin:2% auto;">
                                 <p>
                                     Click the light-bulb icon. Place the cursor over the viewer and press the left button of your mouse or trackpad. 
-                                    Keep it pressed and move the cursor across the viewer.
+                                    Keep it pressed and move the cursor across the viewer.<lb/>
                                     In order to reconstruct the hidden layers of text, computer-vision technologies used in the research of 3D cultural-heritage objects were employed. 
                                     At the <a class="cv-link" href="https://cvl.tuwien.ac.at">Computer Vision Lab</a> of <a class="cv-link" href="https://www.tuwien.at/en">TU Wien</a>, 
                                     the documents in question were analyzed with the help of Photometric Stereo: from a set of source images, taken from the same angle, 
                                     but illuminated from different directions, surface models were computed that allow for the reconstruction of the 3D typewriter impressions. 
-                                    The resulting visualizations have been published on <a class="cv-link" href="https://doi.org/10.5281/zenodo.7706092">Zenodo</a>.
+                                    The resulting visualizations have been published on Zenodo <a class="cv-link" href="https://doi.org/10.5281/zenodo.7706092">Zenodo</a>.
                                     The following two poetic texts have been retrieved from the indented impressions:
                                 </p>
                                 <ol>
@@ -85,9 +90,10 @@
                                     </li>
                                 </ol>
                                 <p>
-                                    The methodology, results, and implications of this discovery are discussed in detail in Brenner, Frühwirth, and Mayer:
+                                    The methodology, results, and implications of this discovery are discussed in detail in 
+                                    <a class="cv-link" href="https://doi.org/10.1093/llc/fqad037">Brenner, Frühwirth, and Mayer:
                                     Revealing ‘Invisible’ Poetry by W. H. Auden through Computer Vision: Using Photometric Stereo to Visualize indented
-                                    impressions <a class="cv-link" href="https://doi.org/10.1093/llc/fqad037">https://doi.org/10.1093/llc/fqad037</a>.
+                                    impressions</a>.
                                 </p>
                             </div>
                         </div>
