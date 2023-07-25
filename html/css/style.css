@@ -1550,6 +1550,17 @@ td > label {
     margin-bottom: -35%;
 }
 
+.navbar-search-item {
+    vertical-align: middle;
+    display: contents;
+}
+
+.navbar-search-icon {
+    position: relative!Important;
+    left: 0.25rem !Important;
+    top: -.2rem !Important;
+}
+
 /*media queries for responsive design on smartphones*/
 /*                                                  */
 /*                                                  */
@@ -1617,6 +1628,12 @@ td > label {
   .text-re {
     max-width: 100% !important;
   }
+    .navbar-search-icon {
+        opacity: 0;
+    }
+    .form-inline {
+        justify-content: center;
+    }
   /*
     #aot-navbarNavDropdown {
         display: block;

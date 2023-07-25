@@ -57,33 +57,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-6 intro_img">
-
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-12 col-sm-12">
-                                        <a href="search.html" class="index-link" id="index-search">  
-                                            <div class="card index-card">
-                                                <div class="card-header">                                        
-                                                    <img src="images/icons/lp-search.png"
-                                                        class="d-block w-100"
-                                                        alt="Explore the Auden Musulin Papers through full-text search"/>  
-                                                    <!--<form class="form-inline my-2 my-lg-0 navbar-search-form"
-                                                         method="get"
-                                                         action="search.html"
-                                                         role="search">
-                                                         <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
-                                                         <button type="submit" class="navbar-search-icon">
-                                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                                             </svg>
-                                                         </button>
-                                                     </form>-->                                        
-                                                </div>
-                                                <div class="card-header fadedbox">  
-                                                    <h4 class="text title">Explore the Auden Musulin Papers through full-text search.</h4>                                         
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
                                     <div class="col-lg-3 col-md-12 col-sm-12">
                                         <a href="toc.html" class="index-link">                                   
                                             <div class="card index-card" data="Auden Musulin Papers 1959-1973">
@@ -110,6 +84,22 @@
                                                     <h4 class="text title">Musulin as Memoirist 1976-1995</h4>                                         
                                                 </div>
                                             </div>                                    
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-3 col-md-12 col-sm-12">
+                                        <a href="search.html" class="index-link" id="index-search">  
+                                            <div class="card index-card"
+                                                 style="border:2px solid #b59890;">
+                                                <div class="card-header">
+                                                    <img src="images/icons/lp-search.png"
+                                                        class="d-block w-100"
+                                                        alt="Explore the Auden Musulin Papers through full-text search"/>                                       
+                                                </div>
+                                                <div class="card-header fadedbox">  
+                                                    <h4 class="text title">Explore the Auden Musulin Papers through full-text search.</h4> 
+                                                    
+                                                </div>
+                                            </div>
                                         </a>
                                     </div>
                                 </div>
