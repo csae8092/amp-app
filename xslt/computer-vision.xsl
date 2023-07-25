@@ -68,7 +68,7 @@
                             <div class="col-md-12" style="margin:2% auto;">
                                 <p>
                                     Click the light-bulb icon. Place the cursor over the viewer and press the left button of your mouse or trackpad. 
-                                    Keep it pressed and move the cursor across the viewer.<lb/>
+                                    Keep it pressed and move the cursor across the viewer.<br/>
                                     In order to reconstruct the hidden layers of text, computer-vision technologies used in the research of 3D cultural-heritage objects were employed. 
                                     At the <a class="cv-link" href="https://cvl.tuwien.ac.at">Computer Vision Lab</a> of <a class="cv-link" href="https://www.tuwien.at/en">TU Wien</a>, 
                                     the documents in question were analyzed with the help of Photometric Stereo: from a set of source images, taken from the same angle, 
@@ -78,14 +78,14 @@
                                 </p>
                                 <ol>
                                     <li>
-                                        a previously unknown, otherwise lost, early version of W. H. Auden’s poem “Epithalamium”<lb/><lb/>
-                                        [<a class="cv-link" href="amp-transcript__0039.html?img=off&amp;tab=6">recto</a>]<lb/><lb/>
+                                        a previously unknown, otherwise lost, early version of W. H. Auden’s poem “Epithalamium”
+                                        [<a class="cv-link" href="amp-transcript__0039.html?img=off&amp;tab=6">recto</a>]
                                         [<a class="cv-link" href="amp-transcript__0039.html?img=off&amp;tab=8">verso</a>]
                                     </li>
                                     <li>
                                         an unpublished early version of Auden’s poem “Epistle to a Godson”, 
-                                        sent to Oxford scholar E. R. Dodds on 10 June 1969, now held in the Bodleian Libraries’ Special Collections<lb/><lb/>
-                                        [<a class="cv-link" href="amp-transcript__0040.html?img=off&amp;tab=6">recto</a>]<lb/><lb/>
+                                        sent to Oxford scholar E. R. Dodds on 10 June 1969, now held in the Bodleian Libraries’ Special Collections 
+                                        [<a class="cv-link" href="amp-transcript__0040.html?img=off&amp;tab=6">recto</a>]
                                         [<a class="cv-link" href="amp-transcript__0040.html?img=off&amp;tab=4">verso</a>]
                                     </li>
                                 </ol>
