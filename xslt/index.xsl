@@ -119,7 +119,7 @@
                                             </a>
                                         </div>
                                         <div class="col-lg-3 col-md-12 col-sm-12">
-                                            <a href="cvl.html" class="index-link" id="index-cvl">                                        
+                                            <a href="cv.html" class="index-link" id="index-cvl">                                        
                                                 <div class="card index-card">
                                                     <div class="card-header">
                                                         <img src="images/icons/lp-cvl.png" 

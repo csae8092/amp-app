@@ -1561,6 +1561,11 @@ td > label {
     top: -.2rem !Important;
 }
 
+.cv-link {
+    text-decoration: underline;
+    color: #615a60;
+}
+
 /*media queries for responsive design on smartphones*/
 /*                                                  */
 /*                                                  */
@@ -1642,6 +1647,9 @@ td > label {
         display: none;
     }
     */
+    #viewerContainer_div {
+        width: 300px !Important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -1718,6 +1726,9 @@ td > label {
   .col-md-10 {
     padding: 1em 0;
   }
+  #viewerContainer_div {
+        width: 400px !Important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */

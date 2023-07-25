@@ -36,7 +36,7 @@
                                         <a href="photos.html" title="Photos" class="nav-link">Photos</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="cvl.html" title="Auden through Computer Vision" class="nav-link">
+                                        <a href="cv.html" title="Auden through Computer Vision" class="nav-link">
                                             Auden through Computer Vision 
                                         </a> 
                                     </li>
