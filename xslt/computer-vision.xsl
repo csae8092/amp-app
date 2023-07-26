@@ -16,7 +16,7 @@
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
                 <xsl:call-template name="html_head">
-                    <xsl:with-param name="html_title" select="'RTI Viewer'"></xsl:with-param>
+                    <xsl:with-param name="html_title" select="'Auden through Computer Vision'"></xsl:with-param>
                 </xsl:call-template>
                 <link type="text/css" href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="Stylesheet"/>
                 <link type="text/css" href="css/webrtiviewer.css" rel="Stylesheet"/>
