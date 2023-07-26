@@ -73,12 +73,13 @@
                                     At the <a class="cv-link" href="https://cvl.tuwien.ac.at">Computer Vision Lab</a> of <a class="cv-link" href="https://www.tuwien.at/en">TU Wien</a>, 
                                     the documents in question were analyzed with the help of Photometric Stereo: from a set of source images, taken from the same angle, 
                                     but illuminated from different directions, surface models were computed that allow for the reconstruction of the 3D typewriter impressions. 
-                                    The resulting visualizations have been published on Zenodo <a class="cv-link" href="https://doi.org/10.5281/zenodo.7706092">Zenodo</a>.
+                                    The resulting visualizations have been published on <a class="cv-link" href="https://doi.org/10.5281/zenodo.7706092">Zenodo</a>.
                                     The following two poetic texts have been retrieved from the indented impressions:
                                 </p>
                                 <ol>
                                     <li>
-                                        a previously unknown, otherwise lost, early version of W. H. Auden’s poem “Epithalamium”
+                                        a previously unknown, otherwise lost, early version of W. H. Auden’s poem “Epithalamium” 
+                                        (reversed in relation to the inked typescript overwriting it)
                                         [<a class="cv-link" href="amp-transcript__0039.html?img=off&amp;tab=6">recto</a>]
                                         [<a class="cv-link" href="amp-transcript__0039.html?img=off&amp;tab=8">verso</a>]
                                     </li>
