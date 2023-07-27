@@ -49,13 +49,37 @@
                         <div id="text-resize-{position()}" class="text-re col-md-9"> 
                             <div class="card-body">
                                 <xsl:if test="@type='cv_sheet'">
-                                    <img class="card-img-right flex-auto d-md-block" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px; height: auto; padding: .5em;" title="Computer Vision Lab"/>
+                                    <img class="card-img-right flex-auto d-md-block"
+                                         src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png"
+                                         alt="Computer Vision Lab Logo"
+                                         style="max-width: 140px; height: auto; padding: .5em;"
+                                         title="Computer Vision Lab"/>
                                 </xsl:if>
                                 <xsl:choose>
-                                    <xsl:when test="position() = last() - 1">
-                                        
+                                    <xsl:when test="current-group()[self::tei:cb]">
+                                        <div class="row">
+                                            <xsl:for-each-group select="current-group()[self::tei:p|self::tei:lg|self::tei:cb]"
+                                                                group-starting-with="self::tei:cb">
+                                                <div class="{if(current-group()[self::tei:p[preceding-sibling::tei:cb]|self::tei:lg[preceding-sibling::tei:cb]]) then
+                                                            ('col-md-6') else
+                                                            ('col-md-12')}">
+                                                    <xsl:for-each select="current-group()">
+                                                        <p class="yes-index" style="{
+                                                            if (./@hand = '#handwritten') then
+                                                            ($hand) else if (./@hand = '#typed') then
+                                                            ($typed) else if (./@hand = '#printed') then
+                                                            ($printed) else if (./@hand = '#stamp') then
+                                                            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                                                            }">
+                                                            <xsl:apply-templates/>
+                                                        </p>
+                                                    </xsl:for-each>
+                                                </div>
+                                            </xsl:for-each-group>
+                                        </div>
+                                    </xsl:when>
+                                    <xsl:otherwise>
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                            
                                             <p class="yes-index" style="{
                                                 if (./@hand = '#handwritten') then
                                                 ($hand) else if (./@hand = '#typed') then
@@ -65,7 +89,6 @@
                                                 }">
                                                 <xsl:apply-templates/>
                                             </p>
-                                            
                                             <!--<xsl:if test="name() = 'lg' and not(following-sibling::tei:lg[1])">
                                                 <span style="text-align:center;">____</span>
                                                 <ul id="endnotes">
@@ -79,25 +102,10 @@
                                                 </ul>
                                                 <span style="text-align:center;">___</span>
                                             </xsl:if>-->
-                                            
-                                        </xsl:for-each>
-                                    </xsl:when>
-                                    <xsl:otherwise>
-                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                            
-                                            <p class="yes-index" style="{
-                                                if (./@hand = '#handwritten') then
-                                                ($hand) else if (./@hand = '#typed') then
-                                                ($typed) else if (./@hand = '#printed') then
-                                                ($printed) else if (./@hand = '#stamp') then
-                                                ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-                                                }">
-                                                <xsl:apply-templates/>
-                                            </p>
-
                                         </xsl:for-each>
                                     </xsl:otherwise>
                                 </xsl:choose>
+                                
                                 
                                 <!--<xsl:if test="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
                                     
