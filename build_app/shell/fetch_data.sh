@@ -1,12 +1,12 @@
 # bin/bash
 
-rm main.zip
+rm dev04_1.zip
 rm -rf ./data
-wget https://github.com/Auden-Musulin-Papers/amp-data/archive/refs/heads/main.zip
-unzip main
-mv amp-data-main/data ./data
-rm -rf amp-data-main
-rm main.zip
+wget https://github.com/Auden-Musulin-Papers/amp-data/archive/refs/heads/dev04_1.zip
+unzip dev04_1
+mv amp-data-dev04_1/data ./data
+rm -rf amp-data-dev04_1
+rm dev04_1.zip
 
 rm -rf ./data/tmp
 
