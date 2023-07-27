@@ -122,12 +122,12 @@
                                 </div>   
                                 <div class="row">                         
                                     <div class="custom-html-widget col-12 py-2">   
-                                        <label>App: </label>
-                                        <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.8009647"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8009647.svg" alt="DOI"/></a>
+                                        <label>App: </label>                                        
+                                        <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.8189349"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8189349.svg" alt="DOI"/></a>
                                     </div>
                                     <div class="custom-html-widget col-12 py-2">   
                                         <label>Data: </label>
-                                        <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.8009636"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8009636.svg" alt="DOI"/></a>
+                                        <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.8186401"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.8186401.svg" alt="DOI"/></a>
                                     </div>
                                 </div>
                             </div>
