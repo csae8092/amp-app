@@ -68,7 +68,7 @@
                             <div class="col-md-12" style="margin:2% auto;">
                                 <p>
                                     Click the light-bulb icon. Place the cursor over the viewer and press the left button of your mouse or trackpad. 
-                                    Keep it pressed and move the cursor across the viewer.<br/>
+                                    Keep it pressed and move the cursor across the viewer.<br/><br/>
                                     In order to reconstruct the hidden layers of text, computer-vision technologies used in the research of 3D cultural-heritage objects were employed. 
                                     At the <a class="cv-link" href="https://cvl.tuwien.ac.at">Computer Vision Lab</a> of <a class="cv-link" href="https://www.tuwien.at/en">TU Wien</a>, 
                                     the documents in question were analyzed with the help of Photometric Stereo: from a set of source images, taken from the same angle, 
