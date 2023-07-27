@@ -1750,20 +1750,36 @@ td > label {
        font-size: 2rem !important;
    }
    .index-card .text {
-        -webkit-transition: all 300ms ease-out;
-        -moz-transition: all 300ms ease-out;
-        -o-transition: all 300ms ease-out;
-        -ms-transition: all 300ms ease-out;
-        transition: all 300ms ease-out;
-        transform: translateY(-75%);
-        -webkit-transform: translateY(-75%);
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -ms-transition: none;
+        transition: none;
+        transform: none;
+        -webkit-transform: none;
         padding: 0 .7rem;
-        height: 512px;
+        height: 100px;
         overflow: visible;
         align-items: center;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        opacity: 1;
+    }
+    .index-card .fadedbox {
+        opacity: 1;
+        height: 100px;
+    }
+    .index-card:hover .fadedbox {
+        
+    }
+    .index-card:hover .card-header img {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -ms-transition: none;
+        transition: none;
+        opacity: 1;
     }
 }
 
@@ -1780,20 +1796,9 @@ td > label {
        font-size: .5rem;
    }
    .index-card .text {
-        -webkit-transition: all 300ms ease-out;
-        -moz-transition: all 300ms ease-out;
-        -o-transition: all 300ms ease-out;
-        -ms-transition: all 300ms ease-out;
-        transition: all 300ms ease-out;
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
-        padding: 0 .7rem;
         height: 256px;
-        overflow: visible;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
     }
 }
 
@@ -1809,19 +1814,8 @@ td > label {
        font-size: .75rem;
    }
    .index-card .text {
-        -webkit-transition: all 300ms ease-out;
-        -moz-transition: all 300ms ease-out;
-        -o-transition: all 300ms ease-out;
-        -ms-transition: all 300ms ease-out;
-        transition: all 300ms ease-out;
         transform: translateY(-70%);
         -webkit-transform: translateY(-70%);
-        padding: 0 .7rem;
         height: 256px;
-        overflow: visible;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
     }
 }

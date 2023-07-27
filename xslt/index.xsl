@@ -129,7 +129,6 @@
                                                     </div>
                                                     <div class="card-header fadedbox">   
                                                         <h4 class="text title">Auden through Computer Vision</h4>
-                                                        
                                                     </div>
                                                     
                                                 </div> 
