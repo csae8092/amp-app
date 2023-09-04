@@ -1,21 +1,11 @@
 # bin/bash
 
-rm main.zip
+rm dev05.zip
 rm -rf ./data
-wget https://github.com/Auden-Musulin-Papers/amp-data/archive/refs/heads/main.zip
-unzip main
-mv amp-data-main/data ./data
-rm -rf amp-data-main
-rm main.zip
+wget https://github.com/Auden-Musulin-Papers/amp-data/archive/refs/heads/dev05.zip
+unzip dev05
+mv amp-data-dev05/data ./data
+rm -rf amp-data-dev05
+rm dev05.zip
 
 rm -rf ./data/tmp
-
-# rm dev.zip
-# rm -rf ./data
-# wget https://github.com/Auden-Musulin-Papers/amp-data/archive/refs/heads/dev.zip
-# unzip dev
-# mv amp-data-dev/data ./data
-# rm -rf amp-data-dev
-# rm dev.zip
-
-# rm -rf ./data/tmp

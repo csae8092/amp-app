@@ -30,19 +30,51 @@
                     
                     <div class="card-body" style="border-radius: 0.5rem 0.5rem 0 0; height: 250px; overflow: hidden; background-color: #000; display: flex; align-items: center;">
                         <xsl:variable name="iiif-ext" select="'.jp2/full/,400/0/default.jpg'"/> 
-                        <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/> 
-                        <xsl:variable name="facs_item" select="tokenize(//tei:pb[1]/@facs, '/')[5]"/>
-                        <div class="text-center">
-                            <div class="loader-toc"></div>
-                        </div>
-                        <img onload="hideLoader(this)">
-                            <xsl:attribute name="src">
-                                <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
-                            </xsl:attribute>
-                            <xsl:attribute name="alt">
-                                <xsl:value-of select="//tei:title[@level='a']//text()"/>
-                            </xsl:attribute>
-                        </img>
+                        <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
+                        <xsl:choose>
+                            <xsl:when test=".//tei:body/tei:div[1]/tei:pb[1]">
+                                <xsl:variable name="facs_item" select="tokenize(.//tei:body/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
+                                <div class="text-center">
+                                    <div class="loader-toc"></div>
+                                </div>
+                                <img onload="hideLoader(this)">
+                                    <xsl:attribute name="src">
+                                        <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="alt">
+                                        <xsl:value-of select="//tei:title[@level='a']//text()"/>
+                                    </xsl:attribute>
+                                </img>
+                            </xsl:when>
+                            <xsl:when test=".//tei:body/tei:div[1]/tei:div[1]/tei:pb[1]">
+                                <xsl:variable name="facs_item" select="tokenize(.//tei:body/tei:div[1]/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
+                                <div class="text-center">
+                                    <div class="loader-toc"></div>
+                                </div>
+                                <img onload="hideLoader(this)">
+                                    <xsl:attribute name="src">
+                                        <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="alt">
+                                        <xsl:value-of select="//tei:title[@level='a']//text()"/>
+                                    </xsl:attribute>
+                                </img>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:variable name="facs_item" select="tokenize(.//tei:pb[1]/@facs, '/')[5]"/>
+                                <div class="text-center">
+                                    <div class="loader-toc"></div>
+                                </div>
+                                <img onload="hideLoader(this)">
+                                    <xsl:attribute name="src">
+                                        <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="alt">
+                                        <xsl:value-of select="//tei:title[@level='a']//text()"/>
+                                    </xsl:attribute>
+                                </img>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </div>
                     
                     <div class="card-header" style="height:150px; display: flex; align-items: center;">                                                      

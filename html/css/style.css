@@ -100,9 +100,14 @@ nav.hiddenNav {
 }
 
 .index-card {
+    display: flex;
     position: relative;
     overflow: hidden;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: middle;
+    height: 100%;
  }
 .index-card .fadedbox {
     -webkit-transition: all 300ms ease-out;
@@ -110,15 +115,12 @@ nav.hiddenNav {
     -o-transition: all 300ms ease-out;
     -ms-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    opacity: 0;
-    height: 0;
     padding: 0;
-    margin: 0;
-    align-items: center;
-    vertical-align: middle;
+    height: 0;
+    opacity: 0;
 }
 .index-card:hover .fadedbox {
-    opacity: 0.8;
+    opacity: 1;
 }
 .index-card .text {
     -webkit-transition: all 300ms ease-out;
@@ -126,26 +128,19 @@ nav.hiddenNav {
     -o-transition: all 300ms ease-out;
     -ms-transition: all 300ms ease-out;
     transition: all 300ms ease-out;
-    transform: translateY(-75%);
-    -webkit-transform: translateY(-75%);
     padding: 0 .7rem;
-    height: 512px;
     overflow: visible;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.index-card .title {
-    opacity: 0;
     transition-delay: 0.2s;
     transition-duration: 0.3s;
+    opacity: 0;
 }
-.index-card:hover .title,
-.index-card:focus .title {
+.index-card:hover .text,
+.index-card:focus .text {
     opacity: 1;
+    height: 10rem;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
 }
-
 
 .index-card:hover .card-header img {
     -webkit-transition: all 300ms ease-out;
@@ -1744,25 +1739,13 @@ td > label {
     margin-bottom: 0;
    }
    .index-card .text {
-    -webkit-transition: none !Important;;
-    -moz-transition: none !Important;;
-    -o-transition: none !Important;;
-    -ms-transition: none !Important;;
-    transition: none !Important;;
-    transform: none !Important;
-    -webkit-transform: none !Important;
-    padding: 0 .7em !Important;;
     opacity: 1 !Important;;
-    font-size: 1.5rem !Important;;
-    height: auto !Important;
+    font-size: 1.5rem !Important;
     }
     .index-card .fadedbox {
         opacity: 1 !Important;;
-        padding: 1em !Important;;
-        height: auto !important;
-    }
-    .index-card:hover .fadedbox {
-        
+        padding: 1em !Important;
+        height: 100%;
     }
     .index-card:hover .card-header img {
         -webkit-transition: none !Important;;
@@ -1771,6 +1754,16 @@ td > label {
         -ms-transition: none !Important;;
         transition: none !Important;;
         opacity: 1 !Important;;
+    }
+        .index-card:hover .text,
+        .index-card:focus .text {
+        opacity: 1;
+        height: auto;
+        transform: none;
+        -webkit-transform: none;
+    }
+    .index-card .card-header {
+        width: 100%;
     }
 }
 
@@ -1783,13 +1776,10 @@ td > label {
     margin-top: 0;
     
     }
- .index-card .text {
-       font-size: .5rem;
-   }
-   .index-card .text {
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        height: 256px;
+    .index-card:hover .text,
+    .index-card:focus .text {
+        height: 6rem;
+        font-size: .8rem;
     }
 }
 
@@ -1801,12 +1791,9 @@ td > label {
       .margin-top {
         margin-top: 0;
     }
-    .index-card .text {
-       font-size: .75rem;
-   }
-   .index-card .text {
-        transform: translateY(-70%);
-        -webkit-transform: translateY(-70%);
-        height: 256px;
+    .index-card:hover .text,
+    .index-card:focus .text {
+        height: 6rem;
+        font-size: 1rem;
     }
 }
