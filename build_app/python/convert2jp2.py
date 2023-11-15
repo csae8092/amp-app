@@ -1,4 +1,5 @@
-import os, glob
+import os
+import glob
 from PIL import Image
 
 savepath = "./data/images/update/"
@@ -10,7 +11,6 @@ for infile in sorted(files):
     outfile = f + ".jpg"
     outfile = outfile.split("/")[-1]
     outfile = f"{savepath}{outfile}"
-    
     print(outfile)
     if infile != outfile:
         try:

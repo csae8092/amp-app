@@ -27,13 +27,13 @@
                                               else($category)"/>
         
         <xsl:for-each select="collection(concat('../../data/editions/', $cat-norm))//tei:TEI">
-            <xsl:sort select="//tei:origDate/@notBefore"/>
+            <xsl:sort select="substring-before(//tei:origDate/@notBefore-iso-iso, 'T')"/>
             <xsl:variable name="doc_date" 
                           as="xs:date" 
-                          select="xs:date(if(//tei:origDate/@notBefore) then(//tei:origDate/@notBefore) else ('1996-12-31'))"/>
+                          select="xs:date(if(substring-before(//tei:origDate/@notBefore-iso, 'T')) then(substring-before(//tei:origDate/@notBefore-iso, 'T')) else ('1996-12-31'))"/>
             <xsl:variable name="doc_date_cvl" 
                 as="xs:date" 
-                select="xs:date(if(//tei:origDate/@notAfter) then(//tei:origDate/@notAfter) else ('1996-12-31'))"/>
+                select="xs:date(if(substring-before(//tei:origDate/@notAfter-iso, 'T')) then(substring-before(//tei:origDate/@notAfter-iso, 'T')) else ('1996-12-31'))"/>
             <xsl:if test="$doc_date lt $max_date and $doc_date gt $low_date and $category != 'correspondence-cvl'">
                 <xsl:call-template name="toc-cards-content">
                     <xsl:with-param name="img" select="$img"/>
