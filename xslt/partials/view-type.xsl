@@ -21,21 +21,20 @@
     </xsl:function>
     
     <xsl:template name="view-type-img">
-        <xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 22px;'"/>
+        <!--<xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 22px;'"/>
         <xsl:variable name="typed" select="'font-family: Courier New, monospace; font-size: 18px;'"/>
-        <xsl:variable name="printed" select="'font-family: Arial, serif; font-size: 18px;'"/>
+        <xsl:variable name="printed" select="'font-family: Arial, serif; font-size: 18px;'"/>-->
         
         <div class="pagination-top">
             <xsl:call-template name="view-pagination"/>
         </div> 
         
-        <div class="tab-content"
-            style="{
+        <div class="{
                 if (ancestor::tei:text/@hand = '#handwritten') then 
-                ($hand) else if (ancestor::tei:text/@hand = '#typed') then 
-                ($typed) else if (ancestor::tei:text/@hand = '#printed') then 
-                ($printed) else ()
-            }">
+                ('handwritten') else if (ancestor::tei:text/@hand = '#typed') then 
+                ('typed') else if (ancestor::tei:text/@hand = '#printed') then 
+                ('printed') else ()
+            } tab-content">
             <xsl:choose>
                 <xsl:when test="./tei:div[@type]">
                     <xsl:for-each-group select="./tei:div[@type]/*" group-starting-with="tei:pb">
@@ -62,11 +61,11 @@
                                                         group-starting-with="tei:cb">
                                                         <div class="{if(current-group()[self::tei:p[preceding-sibling::tei:cb]|self::tei:lg[preceding-sibling::tei:cb]]) then
                                                             ('col-md-6') else
-                                                            ('col-md-12')} yes-index" style="{
+                                                            ('col-md-12')} yes-index {
                                                             if (./@hand = '#handwritten') then
-                                                            ($hand) else if (./@hand = '#typed') then
-                                                            ($typed) else if (./@hand = '#printed') then
-                                                            ($printed) else if (./@hand = '#stamp') then
+                                                            ('handwritten') else if (./@hand = '#typed') then
+                                                            ('typed') else if (./@hand = '#printed') then
+                                                            ('printed') else if (./@hand = '#stamp') then
                                                             ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                                                             }">
                                                             <xsl:for-each select="current-group()">
@@ -78,11 +77,11 @@
                                             </xsl:when>
                                             <xsl:otherwise>
                                                 <xsl:for-each select="current-group()[self::tei:ab|self::tei:div]">
-                                                    <div class="yes-index" style="{
+                                                    <div class="yes-index {
                                                         if (./@hand = '#handwritten') then
-                                                        ($hand) else if (./@hand = '#typed') then
-                                                        ($typed) else if (./@hand = '#printed') then
-                                                        ($printed) else if (./@hand = '#stamp') then
+                                                        ('handwritten') else if (./@hand = '#typed') then
+                                                        ('typed') else if (./@hand = '#printed') then
+                                                        ('printed') else if (./@hand = '#stamp') then
                                                         ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                                                         }">
                                                         <xsl:apply-templates/>
@@ -153,11 +152,11 @@
                                                             ('col-md-6') else
                                                             ('col-md-12')}">
                                                             <xsl:for-each select="current-group()">
-                                                                <div class="yes-index" style="{
+                                                                <div class="yes-index {
                                                                     if (./@hand = '#handwritten') then
-                                                                    ($hand) else if (./@hand = '#typed') then
-                                                                    ($typed) else if (./@hand = '#printed') then
-                                                                    ($printed) else if (./@hand = '#stamp') then
+                                                                    ('handwritten') else if (./@hand = '#typed') then
+                                                                    ('typed') else if (./@hand = '#printed') then
+                                                                    ('printed') else if (./@hand = '#stamp') then
                                                                     ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                                                                     }">
                                                                     <xsl:apply-templates/>
@@ -169,11 +168,11 @@
                                             </xsl:when>
                                             <xsl:otherwise>
                                                 <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                                    <div class="yes-index" style="{
+                                                    <div class="yes-index {
                                                         if (./@hand = '#handwritten') then
-                                                        ($hand) else if (./@hand = '#typed') then
-                                                        ($typed) else if (./@hand = '#printed') then
-                                                        ($printed) else if (./@hand = '#stamp') then
+                                                        ('handwritten') else if (./@hand = '#typed') then
+                                                        ('typed') else if (./@hand = '#printed') then
+                                                        ('printed') else if (./@hand = '#stamp') then
                                                         ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                                                         }">
                                                         <xsl:apply-templates/>

@@ -126,7 +126,14 @@
     </xsl:template>
     
     <xsl:template match="tei:seg">
-        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="@hand">
+                <span class="segment {substring-after(@hand, '#')}"><xsl:apply-templates/></span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="segment"><xsl:apply-templates/></span>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="tei:opener">
