@@ -803,6 +803,8 @@
     </xsl:template>
     
     <xsl:template match="tei:l">
+        <xsl:apply-templates/>
+        <!--
         <xsl:choose>
             <xsl:when test="parent::tei:lg">
                 <a>
@@ -844,6 +846,7 @@
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
+        -->
     </xsl:template>
     
 </xsl:stylesheet>
