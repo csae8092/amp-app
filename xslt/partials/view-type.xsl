@@ -37,7 +37,7 @@
             } tab-content">
             <xsl:choose>
                 <xsl:when test="./tei:div[@type]">
-                    <xsl:for-each-group select="./tei:div[@type]/*" group-starting-with="tei:pb">
+                    <xsl:for-each-group select="./tei:div[@type]/*" group-starting-with="tei:pb"><!-- envelope or letter content -->
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
                             id="paginate-{position()}" 
@@ -58,18 +58,16 @@
                                             <xsl:when test="current-group()//tei:cb">
                                                 <div class="row">
                                                     <xsl:for-each-group select="current-group()[self::tei:div]/*"
-                                                        group-starting-with="tei:cb">
+                                                        group-starting-with="tei:cb"><!-- letter_messge or poem -->
                                                         <div class="{if(current-group()[self::tei:p[preceding-sibling::tei:cb]|self::tei:lg[preceding-sibling::tei:cb]]) then
                                                             ('col-md-6') else
-                                                            ('col-md-12')} yes-index {
-                                                            if (./@hand = '#handwritten') then
-                                                            ('handwritten') else if (./@hand = '#typed') then
-                                                            ('typed') else if (./@hand = '#printed') then
-                                                            ('printed') else if (./@hand = '#stamp') then
-                                                            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-                                                            }">
+                                                            ('col-md-12')}">
                                                             <xsl:for-each select="current-group()">
-                                                                <xsl:apply-templates/>
+                                                                <xsl:call-template name="text-window">
+                                                                    <xsl:with-param name="hand">
+                                                                        <xsl:value-of select="./parent::tei:div/@hand"/>
+                                                                    </xsl:with-param>
+                                                                </xsl:call-template>
                                                             </xsl:for-each>
                                                         </div>
                                                     </xsl:for-each-group>
@@ -77,48 +75,18 @@
                                             </xsl:when>
                                             <xsl:otherwise>
                                                 <xsl:for-each select="current-group()[self::tei:ab|self::tei:div]">
-                                                    <div class="yes-index {
-                                                        if (./@hand = '#handwritten') then
-                                                        ('handwritten') else if (./@hand = '#typed') then
-                                                        ('typed') else if (./@hand = '#printed') then
-                                                        ('printed') else if (./@hand = '#stamp') then
-                                                        ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-                                                        }">
-                                                        <xsl:apply-templates/>
-                                                    </div>
+                                                    <xsl:call-template name="text-window">
+                                                        <xsl:with-param name="hand">
+                                                            <xsl:value-of select="@hand"/>
+                                                        </xsl:with-param>
+                                                    </xsl:call-template>
                                                 </xsl:for-each>
                                             </xsl:otherwise>
                                         </xsl:choose>
                                     </div>
                                 </div>   
                                 
-                                <div id="img-resize-{position()}"
-                                    class="col-md-3 card-header osd-viewer"
-                                    style="padding: 1em;background-color: #dedede;">                                    
-                                    <!--<hr/> -->                                             
-                                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
-                                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
-                                    
-                                    <div id="viewer-{position()}">
-                                        <div id="spinner_{$osd_container_id}" class="text-center">
-                                            <div class="loader"></div>
-                                        </div>
-                                        <div id="{$osd_container_id}" style="padding:.5em;">
-                                            <!-- image container accessed by OSD script -->                                           
-                                            <div id="{$osd_container_id2}">
-                                                <xsl:if test="@facs">
-                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                                                    <image-loader 
-                                                        opt="image-loader"
-                                                        data-type="{@type}"
-                                                        data-source="{$facs_item}" 
-                                                        pos="{position()}">
-                                                    </image-loader>                                                            
-                                                </xsl:if>     
-                                            </div>                                
-                                        </div>  
-                                    </div>
-                                </div>
+                                <xsl:call-template name="img-window"/>
                             </div>
                         </div>
                     </xsl:for-each-group>
@@ -143,124 +111,14 @@
                                                 style="max-width: 140px; height: auto; padding: .5em;"
                                                 title="Computer Vision Lab"/>
                                         </xsl:if>
-                                        <xsl:choose>
-                                            <xsl:when test="current-group()[self::tei:cb]">
-                                                <div class="row">
-                                                    <xsl:for-each-group select="current-group()[self::tei:p|self::tei:lg|self::tei:cb]"
-                                                        group-starting-with="self::tei:cb">
-                                                        <div class="{if(current-group()[self::tei:p[preceding-sibling::tei:cb]|self::tei:lg[preceding-sibling::tei:cb]]) then
-                                                            ('col-md-6') else
-                                                            ('col-md-12')}">
-                                                            <xsl:for-each select="current-group()">
-                                                                <div class="yes-index {
-                                                                    if (./@hand = '#handwritten') then
-                                                                    ('handwritten') else if (./@hand = '#typed') then
-                                                                    ('typed') else if (./@hand = '#printed') then
-                                                                    ('printed') else if (./@hand = '#stamp') then
-                                                                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-                                                                    }">
-                                                                    <xsl:apply-templates/>
-                                                                </div>
-                                                            </xsl:for-each>
-                                                        </div>
-                                                    </xsl:for-each-group>
-                                                </div>
-                                            </xsl:when>
-                                            <xsl:otherwise>
-                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                                    <div class="yes-index {
-                                                        if (./@hand = '#handwritten') then
-                                                        ('handwritten') else if (./@hand = '#typed') then
-                                                        ('typed') else if (./@hand = '#printed') then
-                                                        ('printed') else if (./@hand = '#stamp') then
-                                                        ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-                                                        }">
-                                                        <xsl:apply-templates/>
-                                                    </div>
-                                                    <!--<xsl:if test="name() = 'lg' and not(following-sibling::tei:lg[1])">
-                                                <span style="text-align:center;">____</span>
-                                                <ul id="endnotes">
-                                                    <xsl:for-each select="//tei:note[@type='endnote']">
-                                                        <li>
-                                                            <!-\-<span class="footnote_anchor" id="{@xml:id}"></span>-\->
-                                                            <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
-                                                            <xsl:apply-templates/>
-                                                        </li>
-                                                    </xsl:for-each>
-                                                </ul>
-                                                <span style="text-align:center;">___</span>
-                                            </xsl:if>-->
-                                                </xsl:for-each>
-                                            </xsl:otherwise>
-                                        </xsl:choose>
-                                        
-                                        
-                                        <!--<xsl:if test="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
-                                    
-                                    <ul id="footnotes">
-                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]//tei:note[@type='footnote']">
-                                            <li>
-                                                <!-\-<span class="footnote_anchor" id="{@xml:id}"></span>-\->
-                                                <sup><a href="#{@xml:id}" id="{@xml:id}_inline"><xsl:value-of select="@n"/></a></sup>
-                                                <xsl:apply-templates/>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
-                                    
-                                </xsl:if>-->
-                                        
+                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                            <xsl:call-template name="text-window"/>
+                                        </xsl:for-each> 
                                     </div>
                                 </div>   
-                                
-                                <div id="img-resize-{position()}"
-                                    class="col-md-3 card-header osd-viewer"
-                                    style="padding: 1em;background-color: #dedede;">                                    
-                                    <!--<hr/> -->                                             
-                                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
-                                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
-                                    
-                                    <div id="viewer-{position()}">
-                                        <div id="spinner_{$osd_container_id}" class="text-center">
-                                            <div class="loader"></div>
-                                        </div>
-                                        <div id="{$osd_container_id}" style="padding:.5em;">
-                                            <!-- image container accessed by OSD script -->                                           
-                                            <div id="{$osd_container_id2}">
-                                                
-                                                <xsl:if test="@facs">
-                                                    <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                                                    <image-loader 
-                                                        opt="image-loader"
-                                                        data-type="{@type}"
-                                                        data-source="{$facs_item}" 
-                                                        pos="{position()}">
-                                                    </image-loader>
-                                                    <!--<img id="{$facs_id}" onload="[load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}'),$( document ).ready(resize('{position()}'))]">
-                                                        <xsl:attribute name="src">
-                                                            <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
-                                                        </xsl:attribute>
-                                                    </img>  -->                                                              
-                                                </xsl:if>     
-                                                
-                                            </div>                                
-                                        </div>  
-                                    </div>
-                                </div>
+                                <xsl:call-template name="img-window"/>
                             </div>
                         </div>                                                         
-                        <!--
-                         <xsl:variable name="para" as="xs:int">
-                             <xsl:number level="any" from="tei:body" count="tei:p"/>
-                         </xsl:variable>
-                         <xsl:variable name="ano" select="child::*[not(self::tei:lb)]/name()"/>
-                         <xsl:if test="exists($ano)">
-                             <span class="identS" alt="In §{$para} are: {_:ano($ano)} transcript modifications.">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-columns" viewBox="0 0 16 16">
-                                     <path fill-rule="evenodd" d="M0 .5A.5.5 0 0 1 .5 0h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 0 .5Zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-13 2A.5.5 0 0 1 .5 2h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-13 2A.5.5 0 0 1 .5 4h10a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5Zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-13 2A.5.5 0 0 1 .5 6h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-13 2A.5.5 0 0 1 .5 8h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-13 2a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-13 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5Zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-13 2a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5Zm13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z"/>
-                                 </svg>
-                             </span>
-                         </xsl:if>
-                       -->
                     </xsl:for-each-group>
                 </xsl:otherwise>
             </xsl:choose>
@@ -274,5 +132,44 @@
             <xsl:call-template name="view-pagination"/>
         </div>    
         
+    </xsl:template>
+    <xsl:template name="img-window">
+        <div id="img-resize-{position()}"
+            class="col-md-3 card-header osd-viewer"
+            style="padding: 1em;background-color: #dedede;">                                                                              
+            <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
+            <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
+            <div id="viewer-{position()}">
+                <div id="spinner_{$osd_container_id}" class="text-center">
+                    <div class="loader"></div>
+                </div>
+                <div id="{$osd_container_id}" style="padding:.5em;">
+                    <!-- image container accessed by OSD script -->                                           
+                    <div id="{$osd_container_id2}">
+                        <xsl:if test="@facs">
+                            <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
+                            <image-loader 
+                                opt="image-loader"
+                                data-type="{@type}"
+                                data-source="{$facs_item}" 
+                                pos="{position()}">
+                            </image-loader>                                                       
+                        </xsl:if>     
+                    </div>                                
+                </div>  
+            </div>
+        </div>
+    </xsl:template>
+    <xsl:template name="text-window">
+        <xsl:param name="hand"/>
+        <div class="yes-index {
+            if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
 </xsl:stylesheet>

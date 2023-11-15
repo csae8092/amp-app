@@ -313,11 +313,11 @@ div.dataTables_wrapper div.dataTables_filter input {
   color: #444;
 }
 
-.segment{
+/*.segment{
     position: absolute;
     margin-left: -2em;
     margin-top: 3em;
-}
+}*/
 
 .linenumbersTransparent {
   color: transparent;
