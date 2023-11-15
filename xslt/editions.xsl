@@ -756,7 +756,7 @@
     
     <xsl:template match="tei:lb">
         <br/>
-        <xsl:if test="not(ancestor::tei:note[@type='footnote'])">
+        <!--<xsl:if test="not(ancestor::tei:note[@type='footnote'])">
             <xsl:if test="ancestor::tei:p[not(@hand='#stamp')]">
                 <a>
                     <xsl:variable name="para" as="xs:int">
@@ -792,7 +792,7 @@
                     <xsl:value-of select="format-number($lines, '0000')"/>
                 </a>  
             </xsl:if>
-        </xsl:if>
+        </xsl:if>-->
         
     </xsl:template>
     
