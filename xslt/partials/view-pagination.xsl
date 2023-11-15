@@ -29,7 +29,7 @@
                                 
                                 <edition-pagination 
                                     opt="edition-pagination"
-                                    pos="{position()}" 
+                                    pos="{position()}"
                                     facs="{$facs_item}" 
                                     data-type="{@type}">
                                 </edition-pagination>

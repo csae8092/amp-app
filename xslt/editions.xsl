@@ -63,11 +63,11 @@
                                 
                             </div>
                             <!--   add edition text and facsimile   -->
-                             <xsl:for-each select="//tei:div[@xml:id]">                                             
+                            <xsl:for-each select="//tei:body/tei:div[@type='transcription' or @xml:id='transcription']">                           
                                  
                                  <xsl:call-template name="view-type-img"/>
     
-                             </xsl:for-each>
+                            </xsl:for-each>
                             
                         </div><!-- .card -->
                         <xsl:for-each select="//tei:back">
@@ -112,6 +112,38 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>-->
+    
+    <xsl:template match="tei:ab">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:head">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:address">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:seg">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:opener">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:salute">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:closer">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:signed">
+        <xsl:apply-templates/>
+    </xsl:template>
     
     <xsl:template match="tei:unclear">
         <span class="abbr" alt="unclear">
@@ -773,7 +805,6 @@
     <xsl:template match="tei:l">
         <xsl:choose>
             <xsl:when test="parent::tei:lg">
-                <br/>
                 <a>
                     <xsl:variable name="para" as="xs:int">
                         <xsl:number level="any" from="tei:div" count="tei:lg"/>
