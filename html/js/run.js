@@ -261,13 +261,13 @@ var editor = new LoadEditor({
     variants: [
       {
         opt: "es",
-        title: "Facsimile on/off",
+        title: "on/off",
         urlparam: "img",
         chg_citation: "citation-url",
         fade: "fade",
         column_small: {
-          class: "col-md-3",
-          percent: "25",
+          class: "col-md-4",
+          percent: "35",
         },
         column_full: {
           class: "col-md-12",

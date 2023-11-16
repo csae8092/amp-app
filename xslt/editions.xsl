@@ -62,6 +62,49 @@
                                 <xsl:call-template name="header-nav"/>
                                 
                             </div>
+                            <div class="card-body" style="padding: 1em;">
+                                <div class="accordion accordion-flush" id="accordionFlushAot">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Text Features
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse show" data-bs-parent="#accordionFlush">
+                                            <div class="accordion-body">
+                                                <xsl:call-template name="annotation-options"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Metadata
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                                            <div class="accordion-body">
+                                                <xsl:call-template name="edition-md">
+                                                    <xsl:with-param name="doc_title" select="$doc_title"/>
+                                                </xsl:call-template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Correspondence Description
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                                            <div class="accordion-body">
+                                                TBA
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
                             <!--   add edition text and facsimile   -->
                             <xsl:for-each select="//tei:body/tei:div[@type='transcription' or @xml:id='transcription']">                           
                                  

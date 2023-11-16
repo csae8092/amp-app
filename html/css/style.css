@@ -336,6 +336,18 @@ ul {
   margin: 0;
 }
 
+.img-divider {
+    text-align: center;
+    vertical-align: top;
+    width: 4em;
+    background-color: #615a60;
+}
+
+.img-divider div {
+    padding-top: .5em;
+
+}
+
 .numbered > li {
   display: block;
   list-style: none !important;
@@ -519,10 +531,6 @@ td {
 
 .tei-logo {
   padding-right: 2em;
-}
-
-#title-nav {
-  border-bottom: 1px dashed #dedede;
 }
 
 button.close {

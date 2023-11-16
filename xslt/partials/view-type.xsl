@@ -45,7 +45,7 @@
                             
                             <div id="container-resize-{position()}" class="transcript row">  
                                 
-                                <div id="text-resize-{position()}" class="text-re col-md-9"> 
+                                <div id="text-resize-{position()}" class="text-re col-md-8">
                                     <div class="card-body">
                                         <xsl:if test="@type='cv_sheet'">
                                             <img class="card-img-right flex-auto d-md-block"
@@ -97,8 +97,7 @@
                                             </xsl:otherwise>
                                         </xsl:choose>
                                     </div>
-                                </div>   
-                                
+                                </div>
                                 <xsl:call-template name="img-window"/>
                             </div>
                         </div>
@@ -115,7 +114,7 @@
                             
                             <div id="container-resize-{position()}" class="transcript row">  
                                 
-                                <div id="text-resize-{position()}" class="text-re col-md-9"> 
+                                <div id="text-resize-{position()}" class="text-re col-md-8">
                                     <div class="card-body">
                                         <xsl:if test="@type='cv_sheet'">
                                             <img class="card-img-right flex-auto d-md-block"
@@ -132,7 +131,7 @@
                                             </xsl:call-template>
                                         </xsl:for-each> 
                                     </div>
-                                </div>   
+                                </div>
                                 <xsl:call-template name="img-window"/>
                             </div>
                         </div>                                                         
@@ -152,7 +151,7 @@
     </xsl:template>
     <xsl:template name="img-window">
         <div id="img-resize-{position()}"
-            class="col-md-3 card-header osd-viewer"
+            class="col-md-4 card-header osd-viewer"
             style="padding: 1em;background-color: #dedede;">                                                                              
             <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
             <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
@@ -179,7 +178,7 @@
     </xsl:template>
     <xsl:template name="text-window">
         <xsl:param name="hand"/>
-        <div class="yes-index {
+        <p class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
             ('typed') else if ($hand = '#printed') then
@@ -187,6 +186,6 @@
             ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
             }">
             <xsl:apply-templates/>
-        </div>
+        </p>
     </xsl:template>
 </xsl:stylesheet>

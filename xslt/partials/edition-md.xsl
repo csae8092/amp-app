@@ -14,11 +14,7 @@
         <xsl:param name="doc_title"/>
         <div class="row"> 
             <div class="col-md-12">
-                <h5 class="card-text">
-                    <xsl:value-of select="$doc_title"/>                        
-                </h5>
-                
-                <div class="about-text-hidden fade">
+                <div>
                     
                         <dl>
                           

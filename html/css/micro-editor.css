@@ -282,7 +282,23 @@ input:checked + .i-slider:before {
 #aot-navbarNavDropdown li {
   width: 100% !important;
   border: none !important;
-  padding: 0.5em 0.5em !important;
+  padding: 0.5em !important;
+}
+
+annotation-slider {
+    display: flex;
+    justify-content: space-between;
+}
+
+annotation-slider label {
+    margin-left: 2em;
+}
+
+.aot-list {
+    margin: 0 auto;
+    display: inline-grid;
+    width: 33%;
+    justify-content: space-evenly;
 }
 
 .switch input {
