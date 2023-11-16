@@ -82,7 +82,7 @@
                             <xsl:value-of select="//tei:title[@level='a']"/>
                         </p>
                     </div>
-                    <div class="card-footer" style="display: inline-flex;">
+                    <div class="card-footer" style="width: 100%; height: 100%; display: inline-flex;">
                         <div style="text-align: left; display: inline; width: 10%;">
                             <a target="_blank" href="{//tei:publicationStmt/tei:idno}"><i class="fas fa-link"></i></a>
                         </div>
@@ -96,7 +96,7 @@
                             <i class="fas fa-camera"></i> - <xsl:value-of select="count(//tei:graphic)"/>
                         </div>
                     </div>
-                    <div style="background-color:rgba(0,0,0,.03); padding: .5em 0;">
+                    <div class="card-footer" style="width: 100%; height: 100%; background-color:rgba(0,0,0,.03); padding: .5em 0;">
                         
                         <xsl:if test="count(.//tei:listPlace[parent::tei:back]/tei:place) > 0">
                             <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?plc=on&amp;img={$img}">

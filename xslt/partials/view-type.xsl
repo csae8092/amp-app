@@ -37,7 +37,7 @@
             } tab-content">
             <xsl:choose>
                 <xsl:when test="./tei:div[@type]">
-                    <xsl:for-each-group select="./tei:div[@type]/*" group-starting-with="tei:pb"><!-- envelope or letter content -->
+                    <xsl:for-each-group select="./tei:div[@type]/*|./tei:div[@type]/tei:div[@type]/*" group-starting-with="tei:pb"><!-- envelope or letter content -->
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
                             id="paginate-{position()}" 
@@ -74,13 +74,26 @@
                                                 </div>
                                             </xsl:when>
                                             <xsl:otherwise>
-                                                <xsl:for-each select="current-group()[self::tei:ab|self::tei:div]">
-                                                    <xsl:call-template name="text-window">
-                                                        <xsl:with-param name="hand">
-                                                            <xsl:value-of select="@hand"/>
-                                                        </xsl:with-param>
-                                                    </xsl:call-template>
-                                                </xsl:for-each>
+                                                <xsl:choose>
+                                                    <xsl:when test="current-group()[self::tei:div[@type='letter']|self::tei:div[@type='envelope']|self::tei:ab]">
+                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:ab]">
+                                                            <xsl:call-template name="text-window">
+                                                                <xsl:with-param name="hand">
+                                                                    <xsl:value-of select="@hand"/>
+                                                                </xsl:with-param>
+                                                            </xsl:call-template>
+                                                        </xsl:for-each>
+                                                    </xsl:when>
+                                                    <xsl:when test="current-group()[self::tei:p|self::tei:closer|self::tei:lg]">
+                                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:closer|self::tei:lg]">
+                                                            <xsl:call-template name="text-window">
+                                                                <xsl:with-param name="hand">
+                                                                    <xsl:value-of select="@hand"/>
+                                                                </xsl:with-param>
+                                                            </xsl:call-template>
+                                                        </xsl:for-each>
+                                                    </xsl:when>
+                                                </xsl:choose>
                                             </xsl:otherwise>
                                         </xsl:choose>
                                     </div>
@@ -112,7 +125,11 @@
                                                 title="Computer Vision Lab"/>
                                         </xsl:if>
                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                            <xsl:call-template name="text-window"/>
+                                            <xsl:call-template name="text-window">
+                                                <xsl:with-param name="hand">
+                                                    <xsl:value-of select="@hand"/>
+                                                </xsl:with-param>
+                                            </xsl:call-template>
                                         </xsl:for-each> 
                                     </div>
                                 </div>   
