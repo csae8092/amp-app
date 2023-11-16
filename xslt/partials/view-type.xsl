@@ -37,7 +37,7 @@
             } tab-content">
             <xsl:choose>
                 <xsl:when test="./tei:div[@type]">
-                    <xsl:for-each-group select="./tei:div[@type]/*|./tei:div[@type]/tei:div[@type]/*" group-starting-with="tei:pb"><!-- envelope or letter content -->
+                    <xsl:for-each-group select="./tei:div[@type]/*|./tei:div[@type]/tei:div[@type]/*" group-starting-with="tei:pb"><!-- envelope, letter, enclosure or sub level div@type=letter_message or poem ... content -->
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
                             id="paginate-{position()}" 
@@ -75,7 +75,7 @@
                                             </xsl:when>
                                             <xsl:otherwise>
                                                 <xsl:choose>
-                                                    <xsl:when test="current-group()[self::tei:div[@type='letter']|self::tei:div[@type='envelope']|self::tei:ab]">
+                                                    <xsl:when test="current-group()[self::tei:div[@type='letter']|self::tei:div[@type='envelope']|self::tei:div[@type='enclosure']]">
                                                         <xsl:for-each select="current-group()[self::tei:div|self::tei:ab]">
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
@@ -84,8 +84,8 @@
                                                             </xsl:call-template>
                                                         </xsl:for-each>
                                                     </xsl:when>
-                                                    <xsl:when test="current-group()[self::tei:p|self::tei:closer|self::tei:lg]">
-                                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:closer|self::tei:lg]">
+                                                    <xsl:when test="current-group()[self::tei:p|self::tei:closer|self::tei:lg|self::tei:opener]">
+                                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:closer|self::tei:opener|self::tei:lg|self::tei:head|self::tei:ab]">
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
                                                                     <xsl:value-of select="@hand"/>

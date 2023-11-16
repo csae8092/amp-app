@@ -33,7 +33,6 @@
             <div class="col-md-3" style="text-align:left;"> 
                 <div class="row">
                     <div class="col-md-2" style="margin-top:.7em;">
-
                         <xsl:if test="string-length($prev) != 0">
                             <a id="prev-doc">
                                 <xsl:attribute name="href">
@@ -42,9 +41,8 @@
                                 <svg class="arrow svg-inline--fa fa-chevron-left fa-w-10" title="previous" aria-labelledby="svg-inline--fa-title-1" data-prefix="fas" data-icon="chevron-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><title id="svg-inline--fa-title-1">previous</title><path fill="currentColor" d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"></path></svg><!-- <i class="fas fa-chevron-left" title="previous"></i> -->
                             </a>
                         </xsl:if>
-                        
                     </div>
-                    <div class="col-md-10" style="margin-top:.7em;">
+                    <!--<div class="col-md-10" style="margin-top:.7em;">
                         <xsl:variable name="doc_date" 
                             as="xs:date" 
                             select="xs:date(if(//tei:origDate/@notAfter) then(//tei:origDate/@notAfter) else ('1996-12-31'))"/>
@@ -73,10 +71,8 @@
                                     </svg>
                                 </a>  
                             </xsl:when>
-                            
                         </xsl:choose>
-                        
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="col-md-6" style="text-align:center;margin-top: 1em;">
