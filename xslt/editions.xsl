@@ -134,10 +134,6 @@
             </body>
         </html>
     </xsl:template>
-                    
-    <!--<xsl:template match="tei:lb">
-        <br/>        
-    </xsl:template>-->
     
     <!--<xsl:template match="tei:note">
         <xsl:choose>
@@ -155,14 +151,6 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>-->
-    
-    <xsl:template match="tei:ab">
-        <xsl:apply-templates/>
-    </xsl:template>
-    
-    <xsl:template match="tei:p">
-        <xsl:apply-templates/>
-    </xsl:template>
     
     <xsl:template match="tei:head">
         <xsl:apply-templates/>
@@ -183,6 +171,18 @@
         </xsl:choose>
     </xsl:template>
     
+    <xsl:template match="tei:ab">
+        <!-- do not render handled in view-type.xsl -->
+    </xsl:template>
+    
+    <xsl:template match="tei:p[@prev]">
+        <!-- do not render handled in view-type.xsl -->
+    </xsl:template>
+    
+    <xsl:template match="tei:p[not(@prev)]">
+        <xsl:apply-templates/>
+    </xsl:template>
+    
     <xsl:template match="tei:opener">
         <xsl:apply-templates/>
     </xsl:template>
@@ -191,8 +191,12 @@
         <xsl:apply-templates/>
     </xsl:template>
     
-    <xsl:template match="tei:closer">
+    <xsl:template match="tei:closer[not(preceding-sibling::tei:p[@prev])]">
         <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:closer[preceding-sibling::tei:p[@prev]]">
+        <!-- do not render handled in view-type.xsl -->
     </xsl:template>
     
     <xsl:template match="tei:signed">
@@ -205,9 +209,18 @@
         </span> 
     </xsl:template>
     <xsl:template match="tei:space">
-        <span class="space">
-            <xsl:value-of select="string-join((for $i in 1 to @quantity return '&#x00A0;'),'')"/>
-        </span>
+        <xsl:choose>
+            <xsl:when test="@min">
+                <span class="space">
+                    <xsl:value-of select="string-join((for $i in 1 to @min return '&#x00A0;'),'')"/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@quantity">
+                <span class="space">
+                    <xsl:value-of select="string-join((for $i in 1 to @quantity return '&#x00A0;'),'')"/>
+                </span>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:del">
         <span class="del" style="display:none;"><xsl:apply-templates/></span>      

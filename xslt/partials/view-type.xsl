@@ -75,7 +75,8 @@
                                             </xsl:when>
                                             <xsl:otherwise>
                                                 <xsl:choose>
-                                                    <xsl:when test="current-group()[self::tei:div[@type='letter']|self::tei:div[@type='envelope']|self::tei:div[@type='enclosure']]">
+                                                    <xsl:when test="current-group()[parent::tei:div[@type='letter']|parent::tei:div[@type='envelope']|parent::tei:div[@type='enclosure']]">
+                                                        <xsl:value-of select="'main'"/>
                                                         <xsl:for-each select="current-group()[self::tei:div|self::tei:ab]">
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
@@ -86,6 +87,7 @@
                                                     </xsl:when>
                                                     <xsl:when test="current-group()[self::tei:p|self::tei:closer|self::tei:lg|self::tei:opener]">
                                                         <xsl:for-each select="current-group()[self::tei:p|self::tei:closer|self::tei:opener|self::tei:lg|self::tei:head|self::tei:ab]">
+                                                            <xsl:value-of select="'secondary'"/>
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
                                                                     <xsl:value-of select="@hand"/>
