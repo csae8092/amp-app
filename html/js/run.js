@@ -71,6 +71,22 @@ var editor = new LoadEditor({
         },
       },
       {
+        opt: "int",
+        color: "au-brown",
+        title: "Comments",
+        html_class: "interp",
+        css_class: "int",
+        hide: {
+          hidden: true,
+          class: "interp",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-1",
+        },
+      },
+      {
         opt: "tf",
         opt_slider: "text-features-slider",
         title: "Original text features",
@@ -108,11 +124,11 @@ var editor = new LoadEditor({
         opt: "prs",
         color: "pink",
         title: "Persons",
-        html_class: "persons",
+        html_class: "person",
         css_class: "pers",
         hide: {
           hidden: true,
-          class: "persons .entity",
+          class: "person .entity",
         },
         chg_citation: "citation-url",
         features: {
@@ -124,11 +140,11 @@ var editor = new LoadEditor({
         opt: "plc",
         color: "gold",
         title: "Places",
-        html_class: "places",
+        html_class: "place",
         css_class: "plc",
         hide: {
           hidden: true,
-          class: "places .entity",
+          class: "place .entity",
         },
         chg_citation: "citation-url",
         features: {
@@ -140,12 +156,12 @@ var editor = new LoadEditor({
         opt: "wrk",
         color: "turquoise",
         title: "Literature",
-        html_class: "works",
+        html_class: "lit_work",
         css_class: "wrk",
         chg_citation: "citation-url",
         hide: {
           hidden: true,
-          class: "works .entity",
+          class: "lit_work .entity",
         },
         features: {
           all: false,
@@ -156,11 +172,11 @@ var editor = new LoadEditor({
         opt: "org",
         color: "lila",
         title: "Institutions",
-        html_class: "orgs",
-        css_class: "org",
+        html_class: "org",
+        css_class: "orgs",
         hide: {
           hidden: true,
-          class: "orgs .entity",
+          class: "org .entity",
         },
         chg_citation: "citation-url",
         features: {

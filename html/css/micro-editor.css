@@ -134,6 +134,10 @@ input:checked + .i-slider:before {
   background-color: #c9ffcf;
 }
 
+.au-brown {
+    background-color: #b59890;
+}
+
 .i-slider.pink {
   background-color: #ffa7f7;
 }
@@ -158,7 +162,7 @@ input:checked + .i-slider:before {
   font-weight: bold;
 }
 
-.org {
+.orgs {
   font-weight: bold;
 }
 
@@ -174,6 +178,13 @@ input:checked + .i-slider:before {
   font-weight: bold;
 }
 
+.int::after {
+  content: url("../images/icons/chat-left-dots.svg");
+  background-color: #b59890;
+  border-radius: 0.5rem;
+  padding: 0.05em;
+}
+
 .wrk::before {
   content: url("../images/icons/book.svg");
   background-color: #a4f1fd;
@@ -181,7 +192,7 @@ input:checked + .i-slider:before {
   padding: 0.05em;
 }
 
-.org::before {
+.orgs::before {
   content: url("../images/icons/building.svg");
   background-color: #daa4fd;
   border-radius: 0.5rem;
@@ -303,6 +314,24 @@ annotation-slider label {
 
 .switch input {
     visibility: hidden;
+}
+
+/* entities */
+.entity, .ent {
+  cursor: pointer;
+}
+
+.entity-table {
+  margin: 4em auto;
+}
+
+.entity-table tbody tr td,
+.entity-table tbody tr th {
+  border: none;
+}
+
+.entity-table tbody tr th {
+  border-right: 1px solid lightgrey;
 }
 
 @media (max-width: 768px) {

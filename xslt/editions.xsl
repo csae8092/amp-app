@@ -107,17 +107,13 @@
                             </div>
                             <!--   add edition text and facsimile   -->
                             <xsl:for-each select="//tei:body/tei:div[@type='transcription' or @xml:id='transcription']">                           
-                                 
                                  <xsl:call-template name="view-type-img"/>
-    
                             </xsl:for-each>
-                            
                         </div><!-- .card -->
                         <xsl:for-each select="//tei:back">
                             <div class="tei-back">
-                                
                                 <xsl:apply-templates/>
-                                
+                                <xsl:call-template name="interp"/>
                             </div>
                         </xsl:for-each>
                     </div><!-- .container-fluid -->
@@ -131,6 +127,7 @@
                 <script type="text/javascript" src="js/hide-md.js"></script>
                 <script type="text/javascript" src="js/mark.js"></script>
                 <script type="text/javascript" src="js/prev-next-urlupdate.js"></script>
+                <script type="text/javascript" src="js/commentary.js"></script>
             </body>
         </html>
     </xsl:template>
@@ -245,113 +242,87 @@
             </xsl:when>
         </xsl:choose> 
     </xsl:template>
-     <xsl:template match="tei:rs">
+    <xsl:template match="tei:rs">
         <xsl:choose>
             <xsl:when test="count(tokenize(@ref, ' ')) > 1">
-                <xsl:choose>
-                    <xsl:when test="@type='person'">
-                        <span class="persons">
-                            <xsl:apply-templates/>
-                            <xsl:for-each select="tokenize(@ref, ' ')">
-                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
-                                    <xsl:value-of select="position()"/>
-                                </sup>
-                                <xsl:if test="position() != last()">
-                                    <sup class="entity">/</sup>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </span>
-                    </xsl:when>
-                    <xsl:when test="@type='place'">
-                        <span class="places">
-                            <xsl:apply-templates/>
-                            <xsl:for-each select="tokenize(@ref, ' ')">
-                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
-                                    <xsl:value-of select="position()"/>
-                                </sup>
-                                <xsl:if test="position() != last()">
-                                    <sup class="entity">/</sup>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </span>
-                    </xsl:when>
-                    <xsl:when test="@type='org'">
-                        <span class="orgs">
-                            <xsl:apply-templates/>
-                            <xsl:for-each select="tokenize(@ref, ' ')">
-                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
-                                    <xsl:value-of select="position()"/>
-                                </sup>
-                                <xsl:if test="position() != last()">
-                                    <sup class="entity">/</sup>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </span>
-                    </xsl:when>
-                    <xsl:when test="@type='lit_work'">
-                        <span class="works">
-                            <xsl:apply-templates/>
-                            <xsl:for-each select="tokenize(@ref, ' ')">
-                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
-                                    <xsl:value-of select="position()"/>
-                                </sup>
-                                <xsl:if test="position() != last()">
-                                    <sup class="entity">/</sup>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </span>
-                    </xsl:when>
-                    <xsl:when test="@type='event'">
-                        <span class="event">
-                            <xsl:apply-templates/>
-                            <xsl:for-each select="tokenize(@ref, ' ')">
-                                <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
-                                    <xsl:value-of select="position()"/>
-                                </sup>
-                                <xsl:if test="position() != last()">
-                                    <sup class="entity">/</sup>
-                                </xsl:if>
-                            </xsl:for-each>
-                        </span>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:apply-templates/>
-                    </xsl:otherwise>
-                </xsl:choose>
+                <xsl:call-template name="entity">
+                    <xsl:with-param name="name" select="@type"/>
+                    <xsl:with-param name="plural" select="'false'"/>
+                </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:choose>
-                    <xsl:when test="@type='person'">
-                        <span class="persons ent" data-bs-toggle="modal" data-bs-target="{@ref}">
-                            <xsl:apply-templates/>
-                        </span>
-                    </xsl:when>
-                    <xsl:when test="@type='place'">
-                        <span class="places ent" data-bs-toggle="modal" data-bs-target="{@ref}">
-                            <xsl:apply-templates/>
-                        </span>
-                    </xsl:when>
-                    <xsl:when test="@type='org'">
-                        <span class="orgs ent" data-bs-toggle="modal" data-bs-target="{@ref}">
-                            <xsl:apply-templates/>
-                        </span>
-                    </xsl:when>
-                    <xsl:when test="@type='lit_work'">
-                        <span class="works ent" data-bs-toggle="modal" data-bs-target="{@ref}">
-                            <xsl:apply-templates/>
-                        </span>
-                    </xsl:when>
-                    <xsl:when test="@type='event'">
-                        <span class="event ent" data-bs-toggle="modal" data-bs-target="{@ref}">
-                            <xsl:apply-templates/>
-                        </span>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:apply-templates/>
-                    </xsl:otherwise>
-                </xsl:choose>
+                <xsl:call-template name="entity">
+                    <xsl:with-param name="name" select="@type"/>
+                    <xsl:with-param name="plural" select="'false'"/>
+                </xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>
+        <xsl:if test="@ana">
+            <span class="interp ent" ref="{@ana}">
+            </span>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template name="entity">
+        <xsl:param name="name"/>
+        <xsl:param name="plural"/>
+        <xsl:choose>
+            <xsl:when test="$plural='true'">
+                <span class="{$name}">
+                </span>
+                <xsl:apply-templates/>
+                <xsl:for-each select="tokenize(@ref, ' ')">
+                    <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
+                        <xsl:value-of select="position()"/>
+                    </sup>
+                    <xsl:if test="position() != last()">
+                        <sup class="entity">/</sup>
+                    </xsl:if>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="{$name} ent" data-bs-toggle="modal" data-bs-target="{@ref}">
+                </span>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template name="interp">
+        <div id="commentary">
+            <xsl:for-each select="//tei:interpGrp[ancestor::tei:editionStmt]/tei:interp">
+                <xsl:variable name="id" select="@xml:id"/>
+                <div class="fade-all interpComment" id="{$id}">
+                    <div class="comment-header">
+                        <button id="{$id}-button" type="button" class="btn-close btn-commentary" aria-label="Close"></button>
+                    </div>
+                    <div class="comment-body">
+                        <h5><xsl:value-of select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]/text()"/></h5>
+                        <xsl:for-each select="./tei:desc">
+                            <p><xsl:apply-templates/></p>
+                        </xsl:for-each>
+                        <ul>
+                            <xsl:if test="./tei:respons">
+                                <label>Uncertainty:</label>
+                                <li>
+                                    <label>Responsibility: <xsl:value-of select="./tei:respons/@resp"/></label>
+                                </li>
+                            </xsl:if>
+                            <xsl:if test="./tei:certainty">
+                                 <li>
+                                    <label>Locus: <xsl:value-of select="./tei:certainty/@locus"/></label>
+                                </li>
+                                <li>
+                                    <label>Confidence: <xsl:value-of select="./tei:certainty/@cert"/></label>
+                                </li>
+                            </xsl:if>
+                        </ul>
+                        <xsl:if test="@source">
+                            <p style="margin-top: 1em;">External Evidence: <xsl:value-of select="@source"/></p>
+                        </xsl:if>
+                        
+                    </div>
+                </div>
+            </xsl:for-each>
+        </div>
     </xsl:template>
     <xsl:template match="tei:listEvent">
         <xsl:for-each select="./tei:event">

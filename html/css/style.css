@@ -563,6 +563,20 @@ button.close {
   height: 60px;
 }
 
+#commentary {
+    display: flex;
+    margin: 1em;
+}
+
+.interpComment {
+    margin: 0 .5em;
+    width: 25%;
+    padding: .2em;
+    background-color: #fff;
+    border-radius: .25rem;
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.1);
+}
+
 #timeline-heading {
   margin: 0 auto;
   position: relative;
@@ -1465,22 +1479,12 @@ td > label {
   margin: 0 auto;
 }
 
-/* entities */
-.entity, .ent {
-  cursor: pointer;
+.comment-header {
+    text-align: right;
 }
 
-.entity-table {
-  margin: 4em auto;
-}
-
-.entity-table tbody tr td,
-.entity-table tbody tr th {
-  border: none;
-}
-
-.entity-table tbody tr th {
-  border-right: 1px solid lightgrey;
+.comment-body {
+    padding: 1em;
 }
 
 .index-table {
