@@ -27,7 +27,7 @@
                                               else($category)"/>
         
         <xsl:for-each select="collection(concat('../../data/editions/', $cat-norm))//tei:TEI">
-            <xsl:sort select="substring-before(//tei:origDate/@notBefore-iso-iso, 'T')"/>
+            <xsl:sort select="substring-before(//tei:origDate/@notBefore-iso, 'T')"/>
             <xsl:variable name="doc_date" 
                           as="xs:date" 
                           select="xs:date(if(substring-before(//tei:origDate/@notBefore-iso, 'T')) then(substring-before(//tei:origDate/@notBefore-iso, 'T')) else ('1996-12-31'))"/>

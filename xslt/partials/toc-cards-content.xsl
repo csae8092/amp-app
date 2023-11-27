@@ -27,56 +27,28 @@
                     <xsl:value-of select="concat(replace(tokenize($full_path, '/')[last()], '.xml', '.html?img='), $img)"/>
                 </xsl:attribute>
                 <div class="card index-card">
-                    
                     <div class="card-body" style="border-radius: 0.5rem 0.5rem 0 0; height: 250px; overflow: hidden; background-color: #000; display: flex; align-items: center;">
-                        <xsl:variable name="iiif-ext" select="'.jp2/full/,400/0/default.jpg'"/> 
-                        <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
                         <xsl:choose>
                             <xsl:when test=".//tei:body/tei:div[1]/tei:pb[1]">
                                 <xsl:variable name="facs_item" select="tokenize(.//tei:body/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
-                                <div class="text-center">
-                                    <div class="loader-toc"></div>
-                                </div>
-                                <img onload="hideLoader(this)">
-                                    <xsl:attribute name="src">
-                                        <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
-                                    </xsl:attribute>
-                                    <xsl:attribute name="alt">
-                                        <xsl:value-of select="//tei:title[@level='a']//text()"/>
-                                    </xsl:attribute>
-                                </img>
+                                <xsl:call-template name="cover">
+                                    <xsl:with-param name="facs_item" select="$facs_item"/>
+                                </xsl:call-template>
                             </xsl:when>
                             <xsl:when test=".//tei:body/tei:div[1]/tei:div[1]/tei:pb[1]">
                                 <xsl:variable name="facs_item" select="tokenize(.//tei:body/tei:div[1]/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
-                                <div class="text-center">
-                                    <div class="loader-toc"></div>
-                                </div>
-                                <img onload="hideLoader(this)">
-                                    <xsl:attribute name="src">
-                                        <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
-                                    </xsl:attribute>
-                                    <xsl:attribute name="alt">
-                                        <xsl:value-of select="//tei:title[@level='a']//text()"/>
-                                    </xsl:attribute>
-                                </img>
+                                <xsl:call-template name="cover">
+                                    <xsl:with-param name="facs_item" select="$facs_item"/>
+                                </xsl:call-template>
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:variable name="facs_item" select="tokenize(.//tei:pb[1]/@facs, '/')[5]"/>
-                                <div class="text-center">
-                                    <div class="loader-toc"></div>
-                                </div>
-                                <img onload="hideLoader(this)">
-                                    <xsl:attribute name="src">
-                                        <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
-                                    </xsl:attribute>
-                                    <xsl:attribute name="alt">
-                                        <xsl:value-of select="//tei:title[@level='a']//text()"/>
-                                    </xsl:attribute>
-                                </img>
+                                <xsl:call-template name="cover">
+                                    <xsl:with-param name="facs_item" select="$facs_item"/>
+                                </xsl:call-template>
                             </xsl:otherwise>
                         </xsl:choose>
                     </div>
-                    
                     <div class="card-header" style="height:150px; display: flex; align-items: center;">                                                      
                         <p class="p-1 m-0">
                             <xsl:value-of select="//tei:title[@level='a']"/>
@@ -97,66 +69,133 @@
                         </div>
                     </div>
                     <div class="card-footer" style="width: 100%; height: 100%; background-color:rgba(0,0,0,.03); padding: .5em 0;">
-                        
-                        <xsl:if test="count(.//tei:listPlace[parent::tei:back]/tei:place) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?plc=on&amp;img={$img}">
-                                <div title="mentioned places" class="badge badge-en plcs" style="display:inline;width:50px;">
-                                    <span class="number">
-                                        <xsl:value-of select="count(.//tei:listPlace[parent::tei:back]/tei:place)"/>
-                                    </span>
-                                    <span>
-                                        <i class="fas fa-map-marked-alt"></i>
-                                    </span>
-                                </div>
-                            </a>
-                        </xsl:if>
-                        
-                        <xsl:if test="count(.//tei:listPerson[parent::tei:back]/tei:person) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?prs=on&amp;img={$img}">
-                                <div title="mentioned persons" class="badge badge-en prsns" style="display:inline;width:50px;">
-                                    <span class="number">
-                                        <xsl:value-of select="count(.//tei:listPerson[parent::tei:back]/tei:person)"/>
-                                    </span>
-                                    <span><i class="fas fa-user"></i></span>
-                                </div>
-                            </a>
-                        </xsl:if>
-                        
-                        <xsl:if test="count(.//tei:listOrg[parent::tei:back]/tei:org) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?org=on&amp;img={$img}">
-                                <div title="mentioned organisations" class="badge badge-en orgs" style="display:inline;width:50px;">
-                                    <span class="number">
-                                        <xsl:value-of select="count(.//tei:listOrg[parent::tei:back]/tei:org)"/>
-                                    </span>
-                                    <span><i class="fas fa-building"></i></span>
-                                </div>
-                            </a>
-                        </xsl:if>
-                        
-                        <xsl:if test="count(.//tei:listBibl[parent::tei:back]/tei:bibl) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?wrk=on&amp;img={$img}">
-                                <div title="mentioned works" class="badge badge-en wrks" style="display:inline;width:50px;">
-                                    <span class="number">
-                                        <xsl:value-of select="count(.//tei:listBibl[parent::tei:back]/tei:bibl)"/>
-                                    </span>
-                                    <span><i class="fas fa-book"></i></span>
-                                </div>
-                            </a>
-                        </xsl:if>
-                        
-                        <xsl:if test="count(.//tei:listEvent[parent::tei:back]/tei:event) > 0">
-                            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?eve=on&amp;img={$img}">
-                                <div title="mentioned events" class="badge badge-en eves" style="display:inline;width:50px;">
-                                    <span class="number">
-                                        <xsl:value-of select="count(.//tei:listEvent[parent::tei:back]/tei:event)"/>
-                                    </span>
-                                    <span><i class="fas fa-calendar-alt"></i></span>
-                                </div>
-                            </a>
-                        </xsl:if>
+                        <xsl:for-each select="//tei:back/*">
+                            <xsl:call-template name="entity-count">
+                                <xsl:with-param name="i-class">
+                                    <xsl:choose>
+                                        <xsl:when test="name(.) = 'listPlace'">
+                                            <xsl:text>fa-map-marked-alt</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listPerson'">
+                                            <xsl:text>fa-user</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listOrg'">
+                                            <xsl:text>fa-building</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listBibl'">
+                                            <xsl:text>fa-book</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listEvent'">
+                                            <xsl:text>fa-calendar-alt</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:with-param>
+                                <xsl:with-param name="count">
+                                    <xsl:value-of select="count(./*)"/>
+                                </xsl:with-param>
+                                <xsl:with-param name="full_path">
+                                    <xsl:value-of select="$full_path"/>
+                                </xsl:with-param>
+                                <xsl:with-param name="urlparam">
+                                    <xsl:choose>
+                                        <xsl:when test="name(.) = 'listPlace'">
+                                            <xsl:text>plc</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listPerson'">
+                                            <xsl:text>prs</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listOrg'">
+                                            <xsl:text>org</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listBibl'">
+                                            <xsl:text>wrk</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listEvent'">
+                                            <xsl:text>eve</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:with-param>
+                                <xsl:with-param name="img">
+                                    <xsl:value-of select="$img"/>
+                                </xsl:with-param>
+                                <xsl:with-param name="title">
+                                    <xsl:choose>
+                                        <xsl:when test="name(.) = 'listPlace'">
+                                            <xsl:text>places</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listPerson'">
+                                            <xsl:text>persons</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listOrg'">
+                                            <xsl:text>organisations</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listBibl'">
+                                            <xsl:text>literary works</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listEvent'">
+                                            <xsl:text>events</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:with-param>
+                                <xsl:with-param name="class">
+                                    <xsl:choose>
+                                        <xsl:when test="name(.) = 'listPlace'">
+                                            <xsl:text>plcs</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listPerson'">
+                                            <xsl:text>prsns</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listOrg'">
+                                            <xsl:text>orges</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listBibl'">
+                                            <xsl:text>wrks</xsl:text>
+                                        </xsl:when>
+                                        <xsl:when test="name(.) = 'listEvent'">
+                                            <xsl:text>eves</xsl:text>
+                                        </xsl:when>
+                                    </xsl:choose>
+                                </xsl:with-param>
+                            </xsl:call-template>
+                        </xsl:for-each>
                     </div>
                 </div>
             </a>
         </div>
+    </xsl:template>
+    <xsl:template name="cover">
+        <xsl:param name="facs_item"/>
+        <xsl:variable name="iiif-ext" select="'.jp2/full/,400/0/default.jpg'"/> 
+        <xsl:variable name="iiif-domain" select="'https://iiif.acdh.oeaw.ac.at/iiif/images/amp/'"/>
+        <div class="text-center">
+            <div class="loader-toc"></div>
+        </div>
+        <img onload="hideLoader(this)">
+            <xsl:attribute name="src">
+                <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
+            </xsl:attribute>
+            <xsl:attribute name="alt">
+                <xsl:value-of select="//tei:title[@level='a']//text()"/>
+            </xsl:attribute>
+        </img>
+    </xsl:template>
+    <xsl:template name="entity-count">
+        <xsl:param name="count"/>
+        <xsl:param name="title"></xsl:param>
+        <xsl:param name="i-class"/>
+        <xsl:param name="class"/>
+        <xsl:param name="full_path"/>
+        <xsl:param name="urlparam"/>
+        <xsl:param name="img"/>
+        <xsl:if test="$count > 0">
+            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?{$urlparam}=on&amp;img={$img}">
+                <div title="mentioned {$title}" class="badge badge-en {$class}" style="display:inline;width:50px;">
+                    <span class="number">
+                        <xsl:value-of select="$count"/>
+                    </span>
+                    <span><i class="fas {$i-class}"></i></span>
+                </div>
+            </a>
+        </xsl:if>
     </xsl:template>
 </xsl:stylesheet>

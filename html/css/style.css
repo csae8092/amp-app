@@ -278,17 +278,17 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .handwritten {
-    font-family: Times-New-Roman, serif;
+    font-family: 'Times-New-Roman', serif;
     font-size: 22px;
 }
 
 .typed {
-    font-family: Courier-New, monospace;
+    font-family: 'Courier-New', monospace;
     font-size: 18px;
 }
 
 .printed {
-    font-family: Arial, serif;
+    font-family: 'Arial', serif;
     font-size: 18px;
 }
 
@@ -1379,7 +1379,7 @@ td > label {
 .badge-en.wrks:hover {
   background-color: #a4f1fd;
 }
-.badge-en.orgs:hover {
+.badge-en.orges:hover {
   background-color: #daa4fd;
 }
 .badge-en.eves:hover {
