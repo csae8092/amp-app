@@ -153,8 +153,14 @@
         <xsl:apply-templates/>
     </xsl:template>
     
-    <xsl:template match="tei:address">
+    <xsl:template match="tei:div">
         <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:address">
+        <br/>
+        <xsl:apply-templates/>
+        <br/>
     </xsl:template>
     
     <xsl:template match="tei:seg">
@@ -168,9 +174,9 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template match="tei:ab">
-        <!-- do not render handled in view-type.xsl -->
-    </xsl:template>
+    <!--<xsl:template match="tei:ab">
+        <!-\- do not render handled in view-type.xsl -\->
+    </xsl:template>-->
     
     <xsl:template match="tei:p[@prev]">
         <!-- do not render handled in view-type.xsl -->
@@ -185,6 +191,7 @@
     </xsl:template>
     
     <xsl:template match="tei:salute">
+        <br/>
         <xsl:apply-templates/>
     </xsl:template>
     
@@ -197,7 +204,22 @@
     </xsl:template>
     
     <xsl:template match="tei:signed">
+        <br/>
         <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="tei:date[parent::tei:dateline]">
+        <xsl:choose>
+            <xsl:when test="@rend = '#block'">
+                <xsl:apply-templates/><br/>
+            </xsl:when>
+            <xsl:when test="@rend = '#inline'">
+                <xsl:apply-templates/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
     <xsl:template match="tei:unclear">
