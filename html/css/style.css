@@ -1142,6 +1142,7 @@ fieldset.ssFieldset > span > input {
   padding: 0 !important;
   border-top: 3px solid #b59890;
   border-bottom: 3px solid #b59890;
+  min-height: 1000px;
 }
 
 div.text-re {
