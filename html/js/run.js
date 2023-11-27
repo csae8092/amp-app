@@ -83,7 +83,7 @@ var editor = new LoadEditor({
         chg_citation: "citation-url",
         features: {
           all: false,
-          class: "features-1",
+          class: "features-3",
         },
       },
       {

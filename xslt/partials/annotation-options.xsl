@@ -33,9 +33,6 @@
                     <li >
                         <annotation-slider opt="wsp"></annotation-slider>
                     </li>
-                    <li >
-                        <annotation-slider opt="int"></annotation-slider>
-                    </li>
                 </ul>
                 <ul class="aot-list">
                     <li>
@@ -55,6 +52,11 @@
                     </li>
                     <li >
                         <annotation-slider opt="eve"></annotation-slider>
+                    </li>
+                </ul>
+                <ul class="aot-list">
+                    <li >
+                        <annotation-slider opt="int"></annotation-slider>
                     </li>
                 </ul>
                 <ul class="aot-list">

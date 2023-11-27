@@ -308,7 +308,7 @@ annotation-slider label {
 .aot-list {
     margin: 0 auto;
     display: inline-grid;
-    width: 33%;
+    width: 25%;
     justify-content: space-evenly;
 }
 
