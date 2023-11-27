@@ -40,7 +40,7 @@
                         <xsl:value-of select="//tei:title[@level='a'][1]/text()"/>
                     </a>
                 </td>
-                <td><xsl:value-of select="data(//tei:origDate/@notAfter)"/></td>
+                <td><xsl:value-of select="data(substring-before(//tei:origDate/@notAfter-iso, 'T'))"/></td>
                 <td>
                     <ul>
                         <li><xsl:value-of select="concat(@when/name(), ': ' ,@when)"/></li>
