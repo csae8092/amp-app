@@ -74,6 +74,14 @@ nav.hiddenNav {
   z-index: 999;
 }
 
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
 .intro_column {
   display: flex;
   vertical-align: middle;
@@ -752,11 +760,7 @@ a {
 
 p {
   display: block;
-}
-
-.card-header > p,
-.card-body > p {
-  /*padding: 1em;*/
+  margin-bottom: 0 !important;
 }
 
 h4 {

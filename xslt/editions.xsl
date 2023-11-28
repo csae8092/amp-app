@@ -149,19 +149,17 @@
         </xsl:choose>
     </xsl:template>-->
     
-    <xsl:template match="tei:head">
+    <!--<xsl:template match="tei:head">
         <xsl:apply-templates/>
-    </xsl:template>
+    </xsl:template>-->
     
-    <xsl:template match="tei:div">
+    <!--<xsl:template match="tei:div">
         <xsl:apply-templates/>
-    </xsl:template>
+    </xsl:template>-->
     
-    <xsl:template match="tei:address">
-        <br/>
+    <!--<xsl:template match="tei:address">
         <xsl:apply-templates/>
-        <br/>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template match="tei:seg">
         <xsl:choose>
@@ -174,47 +172,53 @@
         </xsl:choose>
     </xsl:template>
     
-    <!--<xsl:template match="tei:ab">
-        <!-\- do not render handled in view-type.xsl -\->
+    <!--<xsl:template match="tei:placeName[parent::tei:dateline]">
+        <p><xsl:apply-templates/></p>
     </xsl:template>-->
+    
+    <!--<xsl:template match="tei:persName[parent::tei:dateline]">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>-->
+    
+    <xsl:template match="tei:ab">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
     
     <xsl:template match="tei:p[@prev]">
         <!-- do not render handled in view-type.xsl -->
     </xsl:template>
     
     <xsl:template match="tei:p[not(@prev)]">
-        <xsl:apply-templates/>
+        <p><xsl:apply-templates/></p>
     </xsl:template>
     
-    <xsl:template match="tei:opener">
+    <!--<xsl:template match="tei:salute">
         <xsl:apply-templates/>
-    </xsl:template>
+    </xsl:template>-->
     
-    <xsl:template match="tei:salute">
-        <br/>
-        <xsl:apply-templates/>
-    </xsl:template>
+    <!--<xsl:template match="tei:opener">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>-->
     
-    <xsl:template match="tei:closer[not(preceding-sibling::tei:p[@prev])]">
-        <xsl:apply-templates/>
-    </xsl:template>
+    <!--<xsl:template match="tei:closer[not(preceding-sibling::tei:p[@prev])]">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>-->
     
     <xsl:template match="tei:closer[preceding-sibling::tei:p[@prev]]">
         <!-- do not render handled in view-type.xsl -->
     </xsl:template>
     
-    <xsl:template match="tei:signed">
-        <br/>
+    <!--<xsl:template match="tei:signed">
         <xsl:apply-templates/>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template match="tei:date[parent::tei:dateline]">
         <xsl:choose>
             <xsl:when test="@rend = '#block'">
-                <xsl:apply-templates/><br/>
+                <span class="block"><xsl:apply-templates/></span>
             </xsl:when>
             <xsl:when test="@rend = '#inline'">
-                <xsl:apply-templates/>
+                <span class="inline"><xsl:apply-templates/></span>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates/>
@@ -269,7 +273,7 @@
             <xsl:when test="count(tokenize(@ref, ' ')) > 1">
                 <xsl:call-template name="entity">
                     <xsl:with-param name="name" select="@type"/>
-                    <xsl:with-param name="plural" select="'false'"/>
+                    <xsl:with-param name="plural" select="'true'"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
