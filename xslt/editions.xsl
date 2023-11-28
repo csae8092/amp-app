@@ -67,7 +67,7 @@
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button show" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                                Text Features
+                                                Additional Text Information
                                             </button>
                                         </h2>
                                         <div id="flush-collapseOne" class="accordion-collapse show" data-bs-parent="#accordionFlush">
