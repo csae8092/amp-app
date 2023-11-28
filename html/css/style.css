@@ -277,21 +277,6 @@ div.dataTables_wrapper div.dataTables_filter input {
   /*text-decoration: underline dotted;*/
 }
 
-.handwritten {
-    font-family: 'Times-New-Roman', serif;
-    font-size: 22px;
-}
-
-.typed {
-    font-family: 'Courier-New', monospace;
-    font-size: 18px;
-}
-
-.printed {
-    font-family: 'Arial', serif;
-    font-size: 18px;
-}
-
 .identS[alt]:hover::after,
 .identS[alt]:focus::after {
   content: attr(alt);

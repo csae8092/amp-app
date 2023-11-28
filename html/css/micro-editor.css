@@ -263,15 +263,27 @@ input:checked + .i-slider:before {
 
 /* font styles and sizes */
 
-.times-new-roman {
+.times-new-roman, .handwritten {
   font-family: "Times New Roman", serif !important;
 }
-.courier-new {
+.courier-new, .typed {
   font-family: "Courier New", monospace !important;
 }
 
-.arial-serif {
+.arial-serif, .printed {
   font-family: "Arial", serif !important;
+}
+
+.handwritten {
+    font-size: 22px;
+}
+
+.typed {
+    font-size: 18px;
+}
+
+.printed {
+    font-size: 18px;
 }
 
 .font-size-26 {
