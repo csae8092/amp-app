@@ -22,13 +22,7 @@
     <xsl:template name="header-nav">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
-        </xsl:variable>
-        <xsl:variable name="prev">
-            <xsl:value-of select="substring-after(replace(.//tei:correspContext/tei:ref[@subtype='previous_letter']/@target, '.xml', '.html'), '#')"/>
-        </xsl:variable>
-        <xsl:variable name="next">
-            <xsl:value-of select="substring-after(replace(.//tei:correspContext/tei:ref[@subtype='next_letter']/@target, '.xml', '.html'), '#')"/>
-        </xsl:variable>        
+        </xsl:variable>       
         <div class="row" id="title-nav">                                    
             <div class="col-md-12" style="text-align:center;margin-top: 1em;">
                 <!--   adding arche metadata for each edition   -->

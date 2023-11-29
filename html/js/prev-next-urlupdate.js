@@ -1,6 +1,7 @@
 /* de-micro-editor aot features class */
 const dse_feat1 = "features-1";
 const dse_feat2 = "features-2";
+const dse_feat3 = "features-3";
 
 /* html prev and next buttons -> link id */
 const prev_btn = "prev-doc";
@@ -10,6 +11,7 @@ window.onload = nextPrevUrl();
 
 var features1 = document.getElementsByClassName(dse_feat1);
 var features2 = document.getElementsByClassName(dse_feat2);
+var features3 = document.getElementsByClassName(dse_feat3);
 
 [].forEach.call(features1, (opt) => {
   opt.addEventListener("click", nextPrevUrlUpdate);
@@ -17,6 +19,11 @@ var features2 = document.getElementsByClassName(dse_feat2);
 
 [].forEach.call(features2, (opt) => {
   opt.addEventListener("click", nextPrevUrlUpdate);
+});
+
+[].forEach.call(features3, (opt) => {
+  opt.addEventListener("click", nextPrevUrlUpdate);
+  console.log(opt);
 });
 
 function nextPrevUrl() {
@@ -46,27 +53,20 @@ function nextPrevUrl() {
 function nextPrevUrlUpdate() {
   var prev = document.getElementById(prev_btn);
   var next = document.getElementById(next_btn);
-  var urlparam = new URLSearchParams(document.location.search);
+  var url = new URL(document.location);
+  var urlparam = new URLSearchParams(url.search);
   if (prev) {
     var prev_href = new URL(prev.getAttribute("href"));
-    var old_prev_search = new URLSearchParams(prev_href.search);
-    urlparam.forEach((value, key) => {
-      old_prev_search.set(key, value);
-    });
     prev.setAttribute(
       "href",
-      `${prev_href.origin}${prev_href.pathname}?${old_prev_search.toString()}`
+      `${prev_href.origin}${prev_href.pathname}?${urlparam.toString()}`
     );
   }
   if (next) {
     var next_href = new URL(next.getAttribute("href"));
-    var old_next_search = new URLSearchParams(next_href.search);
-    urlparam.forEach((value, key) => {
-      old_next_search.set(key, value);
-    });
     next.setAttribute(
       "href",
-      `${next_href.origin}${next_href.pathname}?${old_next_search.toString()}`
+      `${next_href.origin}${next_href.pathname}?${urlparam.toString()}`
     );
   }
 }

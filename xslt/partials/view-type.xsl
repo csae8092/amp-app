@@ -78,11 +78,28 @@
                                                     <xsl:when test="current-group()[self::tei:div[@type='letter_message']|self::tei:div[@type='poem']|self::tei:ab]">
                                                         <xsl:value-of select="'main'"/>
                                                         <xsl:for-each select="current-group()[self::tei:div|self::tei:ab]">
-                                                            <xsl:call-template name="text-window">
-                                                                <xsl:with-param name="hand">
-                                                                    <xsl:value-of select="@hand"/>
-                                                                </xsl:with-param>
-                                                            </xsl:call-template>
+                                                            <xsl:choose>
+                                                                <xsl:when test="self::tei:ab">
+                                                                    <xsl:call-template name="text-window">
+                                                                        <xsl:with-param name="hand">
+                                                                            <xsl:value-of select="@hand"/>
+                                                                        </xsl:with-param>
+                                                                        <xsl:with-param name="group">
+                                                                            <xsl:value-of select="'secondary'"/>
+                                                                        </xsl:with-param>
+                                                                    </xsl:call-template>
+                                                                </xsl:when>
+                                                                <xsl:otherwise>
+                                                                    <xsl:call-template name="text-window">
+                                                                        <xsl:with-param name="hand">
+                                                                            <xsl:value-of select="@hand"/>
+                                                                        </xsl:with-param>
+                                                                        <xsl:with-param name="group">
+                                                                            <xsl:value-of select="'main'"/>
+                                                                        </xsl:with-param>
+                                                                    </xsl:call-template>
+                                                                </xsl:otherwise>
+                                                            </xsl:choose>
                                                         </xsl:for-each>
                                                     </xsl:when>
                                                     <!--<xsl:when test="current-group()[self::tei:p|self::tei:closer|self::tei:lg|self::tei:opener|self::tei:div[not(@type)]]">
@@ -101,6 +118,9 @@
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
                                                                     <xsl:value-of select="@hand"/>
+                                                                </xsl:with-param>
+                                                                <xsl:with-param name="group">
+                                                                    <xsl:value-of select="'secondary'"/>
                                                                 </xsl:with-param>
                                                             </xsl:call-template>
                                                         </xsl:for-each>
@@ -139,6 +159,9 @@
                                             <xsl:call-template name="text-window">
                                                 <xsl:with-param name="hand">
                                                     <xsl:value-of select="@hand"/>
+                                                </xsl:with-param>
+                                                <xsl:with-param name="group">
+                                                    <xsl:value-of select="'main'"/>
                                                 </xsl:with-param>
                                             </xsl:call-template>
                                         </xsl:for-each>
@@ -190,14 +213,22 @@
     </xsl:template>
     <xsl:template name="text-window">
         <xsl:param name="hand"/>
-        <p class="yes-index {
-            if ($hand = '#handwritten') then
-            ('handwritten') else if ($hand = '#typed') then
-            ('typed') else if ($hand = '#printed') then
-            ('printed') else if ($hand = '#stamp') then
-            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-            }">
-            <xsl:apply-templates/>
-        </p>
+        <xsl:param name="group"/>
+        <xsl:choose>
+            <xsl:when test="$group = 'secondary'">
+                <p class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }">
+                    <xsl:apply-templates/>
+                </p>
+            </xsl:when>
+            <xsl:when test="$group = 'main'">
+                <xsl:apply-templates/>
+            </xsl:when>
+        </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>

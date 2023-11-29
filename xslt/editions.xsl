@@ -15,6 +15,7 @@
     <xsl:import href="partials/tei-facsimile.xsl"/>
     <xsl:import href="partials/view-pagination.xsl"/>
     <xsl:import href="partials/view-type.xsl"/>
+    <xsl:import href="partials/correspDesc.xsl"/>
 
     <xsl:template match="/">
         <xsl:variable name="doc_title">
@@ -98,7 +99,7 @@
                                         </h2>
                                         <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
                                             <div class="accordion-body">
-                                                TBA
+                                                <xsl:call-template name="correspDesc"/>
                                             </div>
                                         </div>
                                     </div>
@@ -149,17 +150,13 @@
         </xsl:choose>
     </xsl:template>-->
     
-    <!--<xsl:template match="tei:head">
+    <xsl:template match="tei:head">
         <xsl:apply-templates/>
-    </xsl:template>-->
+    </xsl:template>
     
-    <!--<xsl:template match="tei:div">
+    <xsl:template match="tei:address">
         <xsl:apply-templates/>
-    </xsl:template>-->
-    
-    <!--<xsl:template match="tei:address">
-        <xsl:apply-templates/>
-    </xsl:template>-->
+    </xsl:template>
     
     <xsl:template match="tei:seg">
         <xsl:choose>
@@ -172,16 +169,23 @@
         </xsl:choose>
     </xsl:template>
     
-    <!--<xsl:template match="tei:placeName[parent::tei:dateline]">
-        <p><xsl:apply-templates/></p>
-    </xsl:template>-->
+    <xsl:template match="tei:placeName[parent::tei:dateline]">
+        <xsl:apply-templates/>
+    </xsl:template>
     
-    <!--<xsl:template match="tei:persName[parent::tei:dateline]">
-        <p><xsl:apply-templates/></p>
-    </xsl:template>-->
+    <xsl:template match="tei:persName[parent::tei:dateline]">
+        <xsl:apply-templates/>
+    </xsl:template>
     
     <xsl:template match="tei:ab">
-        <p><xsl:apply-templates/></p>
+        <xsl:variable name="hand" select="@hand"/>
+        <p class="yes-index {
+            if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }"><xsl:apply-templates/></p>
     </xsl:template>
     
     <xsl:template match="tei:p[@prev]">
@@ -189,28 +193,35 @@
     </xsl:template>
     
     <xsl:template match="tei:p[not(@prev)]">
-        <p><xsl:apply-templates/></p>
+        <xsl:variable name="hand" select="@hand"/>
+        <p class="yes-index {
+            if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }"><xsl:apply-templates/></p>
     </xsl:template>
     
-    <!--<xsl:template match="tei:salute">
+    <xsl:template match="tei:salute">
         <xsl:apply-templates/>
-    </xsl:template>-->
+    </xsl:template>
     
-    <!--<xsl:template match="tei:opener">
-        <p><xsl:apply-templates/></p>
-    </xsl:template>-->
+    <xsl:template match="tei:opener">
+        <p class="yes-index"><xsl:apply-templates/></p>
+    </xsl:template>
     
-    <!--<xsl:template match="tei:closer[not(preceding-sibling::tei:p[@prev])]">
-        <p><xsl:apply-templates/></p>
-    </xsl:template>-->
+    <xsl:template match="tei:closer[not(preceding-sibling::tei:p[@prev])]">
+        <p class="yes-index"><xsl:apply-templates/></p>
+    </xsl:template>
     
     <xsl:template match="tei:closer[preceding-sibling::tei:p[@prev]]">
         <!-- do not render handled in view-type.xsl -->
     </xsl:template>
     
-    <!--<xsl:template match="tei:signed">
+    <xsl:template match="tei:signed">
         <xsl:apply-templates/>
-    </xsl:template>-->
+    </xsl:template>
     
     <xsl:template match="tei:date[parent::tei:dateline]">
         <xsl:choose>
