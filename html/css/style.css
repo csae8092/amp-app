@@ -87,11 +87,8 @@ nav.hiddenNav {
   vertical-align: middle;
   margin: 0 auto;
   align-items: center;
-}
-
-.intro_text {
-  padding: 0 15%;
-  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 45vh;
 }
 
 .margin-top {
@@ -103,6 +100,8 @@ nav.hiddenNav {
   padding: 0.5em;
   vertical-align: middle;
   align-items: center;
+  min-height: 45vh;
+
   /*background-color: rgba(97, 90, 96, .8);
     border-radius: .45rem;*/
 }
@@ -117,47 +116,6 @@ nav.hiddenNav {
     vertical-align: middle;
     height: 100%;
  }
-.index-card .fadedbox {
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    padding: 0;
-    height: 0;
-    opacity: 0;
-}
-.index-card:hover .fadedbox {
-    opacity: 1;
-}
-.index-card .text {
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    padding: 0 .7rem;
-    overflow: visible;
-    transition-delay: 0.2s;
-    transition-duration: 0.3s;
-    opacity: 0;
-}
-.index-card:hover .text,
-.index-card:focus .text {
-    opacity: 1;
-    height: 10rem;
-    transform: translateY(-100%);
-    -webkit-transform: translateY(-100%);
-}
-
-.index-card:hover .card-header img {
-    -webkit-transition: all 300ms ease-out;
-    -moz-transition: all 300ms ease-out;
-    -o-transition: all 300ms ease-out;
-    -ms-transition: all 300ms ease-out;
-    transition: all 300ms ease-out;
-    opacity: 0;
-}
 
 
 #notification {
@@ -235,8 +193,15 @@ nav.hiddenNav {
   
 }
 
+.index-card .card-footer {
+  width: 100%;
+  
+}
+
 .intro_img .row {
   align-items: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /*.footnote_anchor {
@@ -1781,30 +1746,6 @@ td > label {
   .minus-mb-35 {
     margin-bottom: 0;
    }
-   .index-card .text {
-    opacity: 1 !Important;;
-    font-size: 1.5rem !Important;
-    }
-    .index-card .fadedbox {
-        opacity: 1 !Important;;
-        padding: 1em !Important;
-        height: 100%;
-    }
-    .index-card:hover .card-header img {
-        -webkit-transition: none !Important;;
-        -moz-transition: none !Important;;
-        -o-transition: none !Important;;
-        -ms-transition: none !Important;;
-        transition: none !Important;;
-        opacity: 1 !Important;;
-    }
-        .index-card:hover .text,
-        .index-card:focus .text {
-        opacity: 1;
-        height: auto;
-        transform: none;
-        -webkit-transform: none;
-    }
     .index-card .card-header {
         width: 100%;
     }
@@ -1819,11 +1760,6 @@ td > label {
     margin-top: 0;
     
     }
-    .index-card:hover .text,
-    .index-card:focus .text {
-        height: 6rem;
-        font-size: .8rem;
-    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1833,10 +1769,5 @@ td > label {
 @media (max-width: 1680px) {
       .margin-top {
         margin-top: 0;
-    }
-    .index-card:hover .text,
-    .index-card:focus .text {
-        height: 6rem;
-        font-size: 1rem;
     }
 }
