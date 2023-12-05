@@ -59,20 +59,14 @@
                         <annotation-slider opt="int"></annotation-slider>
                     </li>
                 </ul>
-                <ul class="aot-list">
-                    <li >
-                        <full-size opt="ef"></full-size>
-                    </li>
-                    <li >
-                        <image-switch opt="es"></image-switch>
-                    </li>
+                <!--<ul class="aot-list">
                     <li >
                         <font-size opt="fs"></font-size>
                     </li>
                     <li >
                         <font-family opt="ff"></font-family>
                     </li>
-                </ul>
+                </ul>-->
             </div>
         </div>
         <script type="text/javascript">

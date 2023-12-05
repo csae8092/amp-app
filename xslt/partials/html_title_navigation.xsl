@@ -31,18 +31,6 @@
                 </h5>
             </div>
         </div><!-- .row -->
-        <div class="row" style="margin:.2em auto;">
-            <div class="col-md-8">
-            </div>
-            <div class="col-md-2" style="text-align:right;">
-                <input type="checkbox" name="opt[]" value="separateWordSearch" checked="checked"/> separate word search
-                <!--<br></br>
-                <input type="checkbox" name="opt[]" value="diacritics" checked="checked"/> diacritics-->
-            </div>
-            <div class="col-md-2" style="text-align:right;">
-                <input type="text" name="keyword" class="form-control input-sm" placeholder="enter keyword..."/>
-            </div>
-        </div>
         <!-- .card-header -->          
     </xsl:template>
 </xsl:stylesheet>

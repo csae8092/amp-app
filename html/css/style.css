@@ -268,7 +268,7 @@ div.dataTables_wrapper div.dataTables_filter input {
 }
 
 .fade {
-  display: none;
+  display: none !important;
 }
 
 .identS {
@@ -558,11 +558,10 @@ button.close {
 
 #commentary {
     display: flex;
-    margin: 1em;
 }
 
 .interpComment {
-    margin: 0 .5em;
+    margin: 1em .5em;
     width: 25%;
     padding: .2em;
     background-color: #fff;
@@ -1278,7 +1277,7 @@ label {
 }
 
 .fade-all {
-  display: none;
+  display: none !important;
 }
 
 td > label {

@@ -58,6 +58,26 @@
                     
                     <div class="container-fluid">  
                         <div class="card">
+                            <div class="card-footer editor-btns-wrapper">
+                                <ul class="editor-btns">
+                                    <li class="edition-doc-search">
+                                        <input type="checkbox" name="opt[]" value="separateWordSearch" checked="checked"/> separate word search
+                                        <input type="text" name="keyword" placeholder="enter keyword..."/>
+                                    </li>
+                                    <li >
+                                        <font-size opt="fs"></font-size>
+                                    </li>
+                                    <li >
+                                        <font-family opt="ff"></font-family>
+                                    </li>
+                                    <li>
+                                        <image-switch opt="es"></image-switch>
+                                    </li>
+                                    <li>
+                                        <full-size opt="ef"></full-size>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="card-body" style="padding: .5em 0 0 0 !important;">
                                 
                                 <xsl:call-template name="header-nav"/>
