@@ -31,6 +31,7 @@
                     <th scope="col">Document Type</th>
                     <th scope="col">Document Hand</th>
                     <th scope="col">Entities</th>
+                    <th scope="col">Comments</th>
                 </tr>
             </thead>
             <tbody>

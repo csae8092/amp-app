@@ -88,7 +88,12 @@
                         </xsl:if>
                         
                     </ul>
-                </td> 
+                </td>
+                <td>
+                    <xsl:if test="count(//tei:rs[@ana]) > 0">
+                        <xsl:value-of select="count(//tei:rs[@ana])"/>
+                    </xsl:if>
+                </td>
             </tr>
         </xsl:for-each>
 

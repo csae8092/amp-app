@@ -1375,6 +1375,9 @@ td > label {
 .badge-en.eves:hover {
   background-color: #dbff8d;
 }
+.badge-en.intes:hover {
+  background-color: #615a60;
+}
 
 .badge-en > .number {
   background-color: #615a60;
