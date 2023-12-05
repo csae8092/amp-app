@@ -161,7 +161,7 @@
                                                     <xsl:value-of select="@hand"/>
                                                 </xsl:with-param>
                                                 <xsl:with-param name="group">
-                                                    <xsl:value-of select="'main'"/>
+                                                    <xsl:value-of select="'secondary'"/>
                                                 </xsl:with-param>
                                             </xsl:call-template>
                                         </xsl:for-each>
