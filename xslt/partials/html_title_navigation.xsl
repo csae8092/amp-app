@@ -26,9 +26,9 @@
         <div class="row" id="title-nav">                                    
             <div class="col-md-12" style="text-align:center;margin-top: 1em;">
                 <!--   adding arche metadata for each edition   -->
-                <h5 class="card-text">
+                <h2>
                     <xsl:value-of select="$doc_title"/>                        
-                </h5>
+                </h2>
             </div>
         </div><!-- .row -->
         <!-- .card-header -->          

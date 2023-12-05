@@ -714,6 +714,10 @@ button.close {
   transform: scale(1.05);
 }
 
+input[type='checkbox'] {
+    accent-color: #b59890;
+}
+
 /* leaflet */
 
 .leaflet-maps {
@@ -738,6 +742,16 @@ button.close {
 .btn-round:hover {
   background-color: #b59890;
   color: #fff;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    color: #b59890;
+}
+
+.accordion-button:focus {
+    border-color: #b59890 !important;
+    box-shadow: none !important;
 }
 
 .btn-round a {
