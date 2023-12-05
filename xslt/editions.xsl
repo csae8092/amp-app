@@ -145,7 +145,7 @@
                 <!--<script src="js/dist/de-editor.min.js"></script> -->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>
-                <script type="text/javascript" src="js/hide-md.js"></script>
+                <!--<script type="text/javascript" src="js/hide-md.js"></script>-->
                 <script type="text/javascript" src="js/mark.js"></script>
                 <script type="text/javascript" src="js/prev-next-urlupdate.js"></script>
                 <script type="text/javascript" src="js/commentary.js"></script>

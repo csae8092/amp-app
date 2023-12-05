@@ -332,7 +332,7 @@ var editor = new LoadEditor({
       "cv_sheet",
     ],
     active_class: "active",
-    inactive_class: "fade-all",
+    inactive_class: "fade",
     bootstrap_class: "show",
   },
   ep: {
@@ -345,7 +345,7 @@ var editor = new LoadEditor({
     pag_tab: ".pagination-tab.tab-pane",
     img_size: "1000px",
     active_class: "active",
-    inactive_class: "fade-all",
+    inactive_class: "fade",
     bootstrap_class: "show",
     url: "https://iiif.acdh.oeaw.ac.at/iiif/images/amp/",
     url_param: ".jp2/full/full/0/default.jpg",
