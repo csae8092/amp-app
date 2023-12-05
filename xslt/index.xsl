@@ -31,7 +31,7 @@
                                 <a id="close" style="color:#b59890;text-align:right;cursor:pointer;"
                                     title="close">X</a>
                             </p>
-                            <h5 class="hidden">Pre-Release (v0.4.0)</h5>                                        
+                            <h5 class="hidden">Pre-Release (v0.5.0)</h5>                                        
                             <p class="hidden">                                            
                                 This website is in development. Help us to improve and                                         
                                 <a style="text-decoration:underline;" 

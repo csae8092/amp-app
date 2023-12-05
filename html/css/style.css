@@ -758,9 +758,13 @@ a {
   color: #615a60;
 }
 
-p {
+p, .p-like  {
   display: block;
-  margin-bottom: 0 !important;
+  margin-bottom: 1em;
+}
+
+.p-like {
+  margin-top: 1em;
 }
 
 h4 {

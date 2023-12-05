@@ -155,7 +155,9 @@
     </xsl:template>
     
     <xsl:template match="tei:address">
-        <xsl:apply-templates/>
+        <span class="p-like">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     
     <xsl:template match="tei:seg">
@@ -204,7 +206,9 @@
     </xsl:template>
     
     <xsl:template match="tei:salute">
-        <xsl:apply-templates/>
+        <span class="p-like">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     
     <xsl:template match="tei:opener">
@@ -220,7 +224,9 @@
     </xsl:template>
     
     <xsl:template match="tei:signed">
-        <xsl:apply-templates/>
+        <span class="p-like">
+            <xsl:apply-templates/>
+        </span>
     </xsl:template>
     
     <xsl:template match="tei:date[parent::tei:dateline]">
