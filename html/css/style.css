@@ -1767,6 +1767,11 @@ td > label {
   #viewerContainer_div {
         width: 400px !Important;
     }
+  .osd-viewer:not(.fade-all) {
+      display: flex;
+      width: 100% !important;
+      max-width: 100% !important;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
