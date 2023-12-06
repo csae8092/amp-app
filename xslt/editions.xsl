@@ -528,6 +528,13 @@
             </xsl:for-each>
         </ul>
     </xsl:template>
+    <xsl:template match="tei:listEvent[parent::tei:desc]">
+        <ul>
+            <xsl:for-each select="./tei:event">
+                <xsl:apply-templates/>
+            </xsl:for-each>
+        </ul>
+    </xsl:template>
     <xsl:template match="tei:listBibl[parent::tei:desc]">
         <ul>
             <xsl:for-each select="./tei:bibl">
