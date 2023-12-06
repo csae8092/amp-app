@@ -521,8 +521,34 @@
         <ul>
             <xsl:for-each select="./tei:place">
                 <li>
-                    <a href="{@source}" target="_blank" alt="external link">
+                    <a href="{@source}" target="_blank" alt="External Link to Geonames">
                         <xsl:value-of select="@source"/>
+                    </a>
+                </li>
+            </xsl:for-each>
+        </ul>
+    </xsl:template>
+    <xsl:template match="tei:listBibl[parent::tei:desc]">
+        <ul>
+            <xsl:for-each select="./tei:bibl">
+                <xsl:variable name="id" select="substring-after(@sameAs, '#')"/>
+                <li>
+                    <a href="{concat($id, '.html')}" alt="Internal Link to Literary Works">
+                        <xsl:value-of select="//id(data($id))/tei:title"/>
+                    </a>
+                </li>
+            </xsl:for-each>
+        </ul>
+    </xsl:template>
+    <xsl:template match="tei:listPerson[parent::tei:desc]">
+        <ul>
+            <xsl:for-each select="./tei:person">
+                <xsl:variable name="id" select="substring-after(./tei:persName/@ref, '#')"/>
+                <li>
+                    <a href="{concat($id, '.html')}" alt="Internal Link to Persons">
+                        <xsl:value-of select="//id(data($id))/tei:persName/tei:surname"/>
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="//id(data($id))/tei:persName/tei:forename"/>
                     </a>
                 </li>
             </xsl:for-each>
