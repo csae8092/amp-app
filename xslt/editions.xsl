@@ -58,25 +58,54 @@
                     
                     <div class="container-fluid">  
                         <div class="card">
-                            <div class="card-footer editor-btns-wrapper">
-                                <ul class="editor-btns">
-                                    <li class="edition-doc-search">
-                                        <input type="checkbox" name="opt[]" value="separateWordSearch" checked="checked"/> separate word search
-                                        <input type="text" name="keyword" placeholder="enter keyword..."/>
-                                    </li>
-                                    <li >
-                                        <font-size opt="fs"></font-size>
-                                    </li>
-                                    <li >
-                                        <font-family opt="ff"></font-family>
-                                    </li>
-                                    <li>
-                                        <image-switch opt="es"></image-switch>
-                                    </li>
-                                    <li>
-                                        <full-size opt="ef"></full-size>
-                                    </li>
-                                </ul>
+                            <div class="editor-options">
+                                <div class="card-footer editor-back-link">
+                                    <a alt="Internal Link to the Table of Contents" class="btn-back-link">
+                                        <xsl:variable name="doc_type" select="//tei:text/@type"/>
+                                        <xsl:variable name="max_date" select="xs:date('1973-12-31')"></xsl:variable>
+                                        <xsl:variable name="low_date" select="xs:date('1958-12-31')"></xsl:variable>
+                                        <xsl:variable name="max_date_am" select="xs:date('1996-01-01')"/>
+                                        <xsl:variable name="low_date_am" select="xs:date('1975-12-31')"/>
+                                        <xsl:variable name="doc_date" 
+                                            as="xs:date" 
+                                            select="xs:date(if(substring-before(//tei:origDate/@notBefore-iso, 'T')) then(substring-before(//tei:origDate/@notBefore-iso, 'T')) else ('1996-12-31'))"/>
+                                        <xsl:attribute name="href">
+                                            <xsl:if test="$doc_date lt $max_date_am and $doc_date gt $low_date_am and $doc_type != 'photograph'">
+                                                <xsl:text>toc_m.html</xsl:text>
+                                            </xsl:if>
+                                            <xsl:if test="$doc_date lt $max_date and $doc_date gt $low_date and $doc_type != 'photograph'">
+                                                <xsl:text>toc.html</xsl:text>
+                                            </xsl:if>
+                                            <xsl:if test="$doc_type = 'photograph'">
+                                                <xsl:text>photos.html</xsl:text>
+                                            </xsl:if>
+                                            
+                                        </xsl:attribute>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                                            <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="card-footer editor-btns-wrapper">
+                                    <ul class="editor-btns">
+                                        <li class="edition-doc-search">
+                                            <input type="checkbox" name="opt[]" value="separateWordSearch" checked="checked"/> separate word search
+                                            <input type="text" name="keyword" placeholder="enter keyword..."/>
+                                        </li>
+                                        <li >
+                                            <font-size opt="fs"></font-size>
+                                        </li>
+                                        <li >
+                                            <font-family opt="ff"></font-family>
+                                        </li>
+                                        <li>
+                                            <image-switch opt="es"></image-switch>
+                                        </li>
+                                        <li>
+                                            <full-size opt="ef"></full-size>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="card-body" style="padding: .5em 0 0 0 !important;">
                                 

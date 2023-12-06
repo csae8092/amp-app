@@ -240,12 +240,31 @@ input:checked + .i-slider:before {
 }
 
 .editor-btns-wrapper {
-    display: flex;
-    justify-content: end;
     padding: .1em .5em !important;
     margin: 0 !important;
-    background-color: #615a60;
+}
+
+
+
+.editor-back-link {
+    padding: .1em .5em !important;
+    margin: 0 !important;
+}
+
+.btn-back-link {
+    color: #fff;
+    text-align: left;
+}
+
+.btn-back-link:hover {
+    color: #b59890;
+}
+
+.editor-options {
+    display: flex;
     border-radius: .25rem .25rem 0 0;
+    background-color: #615a60;
+    justify-content: space-between;
 }
 
 .img-viewer-btn {

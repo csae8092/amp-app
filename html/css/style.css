@@ -1784,6 +1784,10 @@ td > label {
     .index-card .card-header {
         width: 100%;
     }
+    .grid {
+      grid-gap: 20px;
+      padding: 1em;
+    }
 }
 
 @media (max-width: 1200px) {
