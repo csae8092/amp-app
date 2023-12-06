@@ -24,7 +24,7 @@
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
         </xsl:variable>       
         <div class="row" id="title-nav">                                    
-            <div class="col-md-12" style="text-align:center;margin-top: 1em;">
+            <div class="col-md-12" style="text-align:center;margin-top: 2em;">
                 <!--   adding arche metadata for each edition   -->
                 <h2>
                     <xsl:value-of select="$doc_title"/>                        

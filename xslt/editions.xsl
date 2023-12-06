@@ -111,18 +111,20 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header">
-                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                                Correspondence Description
-                                            </button>
-                                        </h2>
-                                        <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
-                                            <div class="accordion-body">
-                                                <xsl:call-template name="correspDesc"/>
+                                    <xsl:if test="//tei:correspDesc">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                    Correspondence Description
+                                                </button>
+                                            </h2>
+                                            <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlush">
+                                                <div class="accordion-body">
+                                                    <xsl:call-template name="correspDesc"/>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </xsl:if>
                                 </div>
                                 
                             </div>

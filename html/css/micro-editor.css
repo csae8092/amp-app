@@ -253,7 +253,7 @@ input:checked + .i-slider:before {
 }
 
 .img-viewer-btn.active {
-    color: lightgrey !important;
+    color: #b59890 !important;
 }
 
 .window-screen-btn.active {
@@ -394,8 +394,14 @@ annotation-slider label {
   border-right: 1px solid lightgrey;
 }
 
-@media (max-width: 768px) {
-  #aot-menu .dropdown .dropdown-menu li:nth-child(-n + 2) {
-    display: none !important;
-  }
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+  .aot-list {
+        margin: 0 auto;
+        display: inline-grid;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 1em 0;
+        border-bottom: 2px dashed lightgrey;
+    }
 }

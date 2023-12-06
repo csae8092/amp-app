@@ -13,99 +13,130 @@
     <xsl:template name="edition-md">
         <xsl:param name="doc_title"/>
         <div class="row"> 
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <div>
                     
-                        <dl>
-                          
-                                <dt>PID</dt>
-                                <dd>
-                                    <a target="_blank"
-                                        title="archived source file"
-                                        href="{//tei:publicationStmt/tei:idno[@type='handle']}">
-                                        <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='handle']"/>
-                                    </a>
-                                </dd>
-                            
-                       
-                                <dt>Author</dt>
-                                <dd><xsl:value-of select="//tei:titleStmt/tei:author"/></dd>
-                            
-                       
-                                <dt>Editor(s)</dt>
-                                <dd>
-                                    <ul style="list-style:none; padding-left:0;margin-bottom:0;">
-                                        <xsl:for-each select="//tei:titleStmt/tei:editor/tei:name">
-                                            <li>
-                                                <xsl:value-of select="."/>
-                                            </li>
-                                        </xsl:for-each>                                                               
-                                    </ul>
-                                </dd>
-                            
-                         
-                                <dt>Publisher</dt>
-                                <dd>
-                                    <xsl:value-of select="concat(
-                                        //tei:publicationStmt/tei:publisher,
-                                        ', ',
-                                        //tei:publicationStmt/tei:pubPlace,
-                                        ' ' ,
-                                        //tei:publicationStmt/tei:date)"/>
-                                </dd>
-                            
-                         
-                                <dt>Download</dt>
-                                <dd>
-                                    <ul style="list-style:none;padding-left:0;margin-bottom:0;">
-                                        <li style="display:inline;margin-right:1em;">
-                                            <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}" title="TEI">
-                                                <img alt="TEI Logo" src="images/TEI_Logo_36px.png"/>
-                                            </a>
-                                        </li>
-                                        <li style="display:inline;margin-right:1em;">
-                                            <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=metadata')}" title="RDF metadata">
-                                                <img border="0" src="http://www.w3.org/RDF/icons/rdf_w3c_icon.48"
-                                                    alt="RDF metadata"/>
-                                            </a>
-                                        </li>
-                                    </ul>                                                            
-                                </dd>                                                        
-                            
-                            
-                                <dt>IIIF Endpoint(s)</dt>
-                                <dd>
-                                    <ul style="list-style:none;margin-bottom:0;padding-left:0;">
-                                        <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=info.json'"/> 
-                                        <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>                                                            
-                                        <xsl:for-each select="//tei:pb">
-                                            <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                                            <li>
-                                                <a href="{concat($iiif-domain, $facs_item, $iiif-ext)}">
-                                                    <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
-                                                </a>
-                                            </li>                                                                    
-                                        </xsl:for-each>   
-                                    </ul>                                                                                                                     
-                                </dd>
-                            
-                                                                                                                                 
-                                <dt>Cite this Source (MLA 9th Edition)</dt>
-                                <dd style="text-align:left !important;">
-                                    <xsl:value-of select="concat(
-                                        'Andorfer Peter, ',
-                                        'Elsner Daniel, ',
-                                        replace(//tei:editor/tei:name[2], ',', ''),
-                                        ', Grigoriou Dimitra, ',
-                                        replace(//tei:editor/tei:name[1], ',', ''),
-                                        ', Mendelson Edward and Neundlinger Helmut')"/>
-                                    <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
-                                    <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
-                                        amp.acdh.oeaw.ac.at
-                                    </a><xsl:text>.</xsl:text>                                                         
-                                </dd>                                                                                                               
-                            
-                        </dl>
+                    <table class="table edition-md">
+                      <tr>
+                          <th>PID</th>
+                          <td>
+                              <a target="_blank"
+                                  title="archived source file"
+                                  href="{//tei:publicationStmt/tei:idno[@type='handle']}">
+                                  <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='handle']"/>
+                              </a>
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>Author</th>
+                          <td><xsl:value-of select="//tei:titleStmt/tei:author"/></td>
+                      </tr>  
+                       <tr>
+                           <th>Editor(s)</th>
+                           <td>
+                               <ul style="list-style:none; padding-left:0;margin-bottom:0;">
+                                   <xsl:for-each select="//tei:titleStmt/tei:editor/tei:name">
+                                       <li>
+                                           <xsl:value-of select="."/>
+                                       </li>
+                                   </xsl:for-each>                                                               
+                               </ul>
+                           </td> 
+                       </tr> 
+                       <tr>
+                           <th>Publisher</th>
+                           <td>
+                               <a href="https://acdh.oeaw.ac.at" target="_blank"
+                                   alt="External link to Austrian Academy of Sciences - Institute Austrian Centre for Digital Humanities">
+                                   <xsl:value-of select="concat(
+                                       //tei:publicationStmt/tei:publisher,
+                                       ', ',
+                                       //tei:publicationStmt/tei:pubPlace,
+                                       ' ' ,
+                                       //tei:publicationStmt/tei:date)"/>
+                               </a>
+                           </td>
+                       </tr>
+                        <tr>
+                            <th>Edition Licence</th>
+                            <td>
+                                <a href="{//tei:publicationStmt/tei:availability/tei:licence/@target}" target="_blank"
+                                    alt="External link to Licence Description">
+                                    <xsl:value-of select="//tei:publicationStmt/tei:availability/tei:licence/@target"/>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Source Information</th>
+                            <td>
+                                <ul>
+                                    <li>
+                                        <xsl:value-of select="//tei:sourceDesc//tei:msIdentifier/tei:repository"/>
+                                    </li>
+                                    <li>
+                                        <xsl:value-of select="//tei:sourceDesc//tei:msIdentifier/tei:collection"/>
+                                    </li>
+                                    <li>
+                                        <xsl:value-of select="//tei:sourceDesc//tei:msIdentifier/tei:settlement"/>
+                                    </li>
+                                    <li>
+                                        <xsl:value-of select="//tei:sourceDesc//tei:history//tei:origDate/@notBefore"/>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                       <tr>
+                           <th>Download</th>
+                           <td>
+                               <ul style="list-style:none;padding-left:0;margin-bottom:0;">
+                                   <li style="display:inline;margin-right:1em;">
+                                       <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}" title="TEI">
+                                           <img alt="TEI Logo" src="images/TEI_Logo_36px.png"/>
+                                       </a>
+                                   </li>
+                                   <li style="display:inline;margin-right:1em;">
+                                       <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=metadata')}" title="RDF metadata">
+                                           <img border="0" src="http://www.w3.org/RDF/icons/rdf_w3c_icon.48"
+                                               alt="RDF metadata"/>
+                                       </a>
+                                   </li>
+                               </ul>                                                            
+                           </td>  
+                       </tr>   
+                       <tr>
+                           <th>IIIF Endpoint(s)</th>
+                           <td>
+                               <ul style="list-style:none;margin-bottom:0;padding-left:0;">
+                                   <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=info.json'"/> 
+                                   <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>                                                            
+                                   <xsl:for-each select="//tei:pb">
+                                       <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
+                                       <li>
+                                           <a href="{concat($iiif-domain, $facs_item, $iiif-ext)}">
+                                               <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
+                                           </a>
+                                       </li>                                                                    
+                                   </xsl:for-each>   
+                               </ul>                                                                                                                     
+                           </td> 
+                       </tr> 
+                       <tr>
+                           <th>Cite this Source (MLA 9th Edition)</th>
+                           <td style="text-align:left !important;">
+                               <xsl:value-of select="concat(
+                                   'Andorfer Peter, ',
+                                   'Elsner Daniel, ',
+                                   replace(//tei:editor/tei:name[2], ',', ''),
+                                   ', Grigoriou Dimitra, ',
+                                   replace(//tei:editor/tei:name[1], ',', ''),
+                                   ', Mendelson Edward and Neundlinger Helmut')"/>
+                               <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
+                               <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
+                                   amp.acdh.oeaw.ac.at
+                               </a><xsl:text>.</xsl:text>                                                         
+                           </td> 
+                       </tr>
+                    </table>
                     
                 </div>
                 
