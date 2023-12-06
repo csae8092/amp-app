@@ -69,9 +69,15 @@
                                 </tr>
                             </xsl:if>
                             <tr>
-                                <th>Language:</th>
+                                <th>Language(s):</th>
                                 <td>
-                                    <xsl:value-of select=".//tei:langUsage/tei:language/text()"/>
+                                    <ul>
+                                        <xsl:for-each select=".//tei:langUsage/tei:language">
+                                            <li>
+                                                <xsl:value-of select="./text()"/>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
                                 </td>
                             </tr>
                         </table>

@@ -34,6 +34,8 @@
                                         <h4>Full Text Search</h4>
                                         <div id="searchbox"></div>
                                         <div id="clear-refinements"></div>
+                                        <h4>Date</h4>
+                                        <div id="range-input"></div>
                                         <h4>Persons</h4>
                                         <div id="refinement-list-persons"></div>
                                         <h4>Places</h4>
@@ -42,14 +44,13 @@
                                         <div id="refinement-list-orgs"></div>
                                         <h4>Works</h4>
                                         <div id="refinement-list-works"></div>
-                                        <h4>Date</h4>
-                                        <div id="range-input"></div>
                                     </div>
                                     <div class="col-md-8">
                                         <div id="sort-by"></div>
                                         <div id="current-refinements"></div>
-                                        <div id="pagination"></div>
+                                        <div id="pagination-top"></div>
                                         <div id="hits"></div>
+                                        <div id="pagination-bottom"></div>
                                     </div>
                                 </div>
                             </div>
