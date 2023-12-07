@@ -23,7 +23,6 @@ var features3 = document.getElementsByClassName(dse_feat3);
 
 [].forEach.call(features3, (opt) => {
   opt.addEventListener("click", nextPrevUrlUpdate);
-  console.log(opt);
 });
 
 function nextPrevUrl() {
