@@ -286,7 +286,7 @@
         <!--<span class="p-like">
             <xsl:apply-templates/>
         </span>-->
-        <xsl:apply-templates/>
+        <xsl:apply-templates/><br/><br/>
     </xsl:template>
     
     <xsl:template match="tei:date[parent::tei:dateline]">
