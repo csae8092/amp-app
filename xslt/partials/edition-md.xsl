@@ -80,7 +80,11 @@
                                         <xsl:value-of select="//tei:sourceDesc//tei:msIdentifier/tei:settlement"/>
                                     </li>
                                     <li>
-                                        <xsl:value-of select="//tei:sourceDesc//tei:history//tei:origDate/@notBefore"/>
+                                        <xsl:value-of select="substring-before(//tei:sourceDesc//tei:history//tei:origDate/@notBefore-iso, 'T')"/>
+                                        <xsl:if test="//tei:sourceDesc//tei:history//tei:origDate[@ana]">
+                                            <span class="interp ent" ref="{//tei:sourceDesc//tei:history//tei:origDate/@ana}">
+                                            </span>
+                                        </xsl:if>
                                     </li>
                                 </ul>
                             </td>
