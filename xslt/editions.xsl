@@ -370,16 +370,10 @@
         <xsl:param name="plural"/>
         <xsl:choose>
             <xsl:when test="$plural='true'">
-                <span class="{$name}">
-                </span>
                 <xsl:apply-templates/>
                 <xsl:for-each select="tokenize(@ref, ' ')">
-                    <sup class="entity" data-bs-toggle="modal" data-bs-target="{.}">
-                        <xsl:value-of select="position()"/>
+                    <sup class="{$name} entity" data-bs-toggle="modal" data-bs-target="{.}">
                     </sup>
-                    <xsl:if test="position() != last()">
-                        <sup class="entity">/</sup>
-                    </xsl:if>
                 </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
