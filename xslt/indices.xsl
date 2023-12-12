@@ -290,7 +290,7 @@
                                 </a>
                             </td>
                             <td>
-                                <xsl:value-of select="count(./tei:listEvent/tei:event)"/>
+                                <xsl:value-of select="count(./tei:noteGrp/tei:note)"/>
                             </td>
                         </tr>
                     </xsl:for-each>
