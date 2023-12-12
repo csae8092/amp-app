@@ -74,7 +74,7 @@
                                             <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
                                             <xsl:variable name="facs_item" select="tokenize(./tei:licence/@facs, '/')[5]"/>
                                             <li>
-                                                About faksimile: <a href="{concat($iiif-domain, $facs_item, $iiif-ext)}">
+                                                About facsimile: <a href="{concat($iiif-domain, $facs_item, $iiif-ext)}">
                                                     <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
                                                 </a>
                                             </li>
