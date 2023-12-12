@@ -58,12 +58,32 @@
                            </td>
                        </tr>
                         <tr>
-                            <th>Edition Licence</th>
+                            <th>Licence(s)</th>
                             <td>
-                                <a href="{//tei:publicationStmt/tei:availability/tei:licence/@target}" target="_blank"
-                                    alt="External link to Licence Description">
-                                    <xsl:value-of select="//tei:publicationStmt/tei:availability/tei:licence/@target"/>
-                                </a>
+                                <ul>
+                                    <xsl:for-each select="//tei:publicationStmt/tei:availability">
+                                        <li style="font-weight: bold;"><xsl:value-of select="position()"/>. licence status: <xsl:value-of select="@status"/></li>
+                                        <li>
+                                            <a href="{./tei:licence/@target}" target="_blank"
+                                                alt="{if(./tei:licence[@facs]) then('External link to licence description') else(./tei:licence//text())}">
+                                                <xsl:value-of select="./tei:licence/@target"/>
+                                            </a>
+                                        </li>
+                                        <xsl:if test="./tei:licence[@facs]">
+                                            <xsl:variable name="iiif-ext" select="'.jpg?format=iiif&amp;param=info.json'"/> 
+                                            <xsl:variable name="iiif-domain" select="'https://id.acdh.oeaw.ac.at/auden-musulin-papers/'"/>
+                                            <xsl:variable name="facs_item" select="tokenize(./tei:licence/@facs, '/')[5]"/>
+                                            <li>
+                                                About faksimile: <a href="{concat($iiif-domain, $facs_item, $iiif-ext)}">
+                                                    <xsl:value-of select="concat($iiif-domain, $facs_item, $iiif-ext)"/>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <xsl:value-of select="./tei:licence//text()"/>
+                                            </li>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
