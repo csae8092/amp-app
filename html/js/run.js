@@ -106,7 +106,7 @@ var editor = new LoadEditor({
       {
         opt: "ef",
         opt_slider: "entities-features-slider",
-        title: "All Entities",
+        title: "All entities",
         color: "grey",
         html_class: "undefined",
         css_class: "undefined",
