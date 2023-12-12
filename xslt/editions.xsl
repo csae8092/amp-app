@@ -256,10 +256,18 @@
             }"><xsl:apply-templates/></p>
     </xsl:template>
     
-    <xsl:template match="tei:salute">
-        <span class="p-like">
+    <xsl:template match="tei:salute[parent::tei:opener]">
+        <!--<span class="p-like">
             <xsl:apply-templates/>
-        </span>
+        </span>-->
+        <br/><br/><xsl:apply-templates/><br/>
+    </xsl:template>
+    
+    <xsl:template match="tei:salute[parent::tei:closer]">
+        <!--<span class="p-like">
+            <xsl:apply-templates/>
+        </span>-->
+        <xsl:apply-templates/><br/><br/>
     </xsl:template>
     
     <xsl:template match="tei:opener">
@@ -275,9 +283,10 @@
     </xsl:template>
     
     <xsl:template match="tei:signed">
-        <span class="p-like">
+        <!--<span class="p-like">
             <xsl:apply-templates/>
-        </span>
+        </span>-->
+        <xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="tei:date[parent::tei:dateline]">
