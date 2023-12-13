@@ -106,6 +106,15 @@
                                             </span>
                                         </xsl:if>
                                     </li>
+                                    <xsl:if test="//tei:sourceDesc//tei:history//tei:origPlace">
+                                        <li>
+                                            <xsl:value-of select="//tei:sourceDesc//tei:history//tei:origPlace"/>
+                                            <xsl:if test="//tei:sourceDesc//tei:history//tei:origPlace[@ana]">
+                                                <span class="interp ent" ref="{//tei:sourceDesc//tei:history//tei:origPlace/@ana}">
+                                                </span>
+                                            </xsl:if>
+                                        </li>
+                                    </xsl:if>
                                 </ul>
                             </td>
                         </tr>

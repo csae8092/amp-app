@@ -368,8 +368,16 @@
             </xsl:otherwise>
         </xsl:choose>
         <xsl:if test="@ana">
-            <span class="interp ent" ref="{@ana}">
-            </span>
+            <xsl:choose>
+                <xsl:when test="starts-with(@ana, '#')">
+                    <span class="interp ent" ref="{@ana}">
+                    </span>
+                </xsl:when>
+                <xsl:when test="starts-with(@ana, 'amp-transcript')">
+                    <span class="interp ent" ref="#{substring-after(@ana, '#')}">
+                    </span>
+                </xsl:when>
+            </xsl:choose>
         </xsl:if>
     </xsl:template>
     <xsl:template name="entity">
@@ -425,6 +433,44 @@
                         
                     </div>
                 </div>
+            </xsl:for-each>
+            <xsl:for-each select="//tei:*[starts-with(@ana, 'amp-transcript')]">
+                <xsl:variable name="doc-id" select="substring-before(@ana, '#')"/>
+                <xsl:variable name="node-id" select="substring-after(@ana, '#')"/>
+                <xsl:variable name="lookup" select="document(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
+                <xsl:for-each select="$lookup//tei:interp[@xml:id=$node-id]">
+                    <xsl:variable name="id" select="@xml:id"/>
+                    <div class="fade-all interpComment" id="{$id}">
+                        <div class="comment-header">
+                            <button id="{$id}-button" type="button" class="btn-close btn-commentary" aria-label="Close"></button>
+                        </div>
+                        <div class="comment-body">
+                            <h5><xsl:value-of select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]/text()"/></h5>
+                            <xsl:for-each select="./tei:desc">
+                                <p><xsl:apply-templates/></p>
+                            </xsl:for-each>
+                            <ul>
+                                <xsl:if test="./tei:respons">
+                                    <label>Uncertainty:</label>
+                                    <li>
+                                        <label>Responsibility: <xsl:value-of select="./tei:respons/@resp"/></label>
+                                    </li>
+                                </xsl:if>
+                                <xsl:if test="./tei:certainty">
+                                    <li>
+                                        <label>Locus: <xsl:value-of select="./tei:certainty/@locus"/></label>
+                                    </li>
+                                    <li>
+                                        <label>Confidence: <xsl:value-of select="./tei:certainty/@cert"/></label>
+                                    </li>
+                                </xsl:if>
+                            </ul>
+                            <xsl:if test="@source">
+                                <p style="margin-top: 1em;">External Evidence: <xsl:value-of select="@source"/></p>
+                            </xsl:if>
+                        </div>
+                    </div>
+                </xsl:for-each>
             </xsl:for-each>
         </div>
     </xsl:template>

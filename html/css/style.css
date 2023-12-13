@@ -1786,6 +1786,16 @@ td > label {
   .interpComment {
     width: 100%;
   }
+  .edition-md tr th,
+  .edition-md tr td {
+    display: block;
+    padding: 0.3em;
+  }
+  .corresp-desc tr th,
+  .corresp-desc tr td {
+    display: block;
+    padding: 0.3em;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1823,5 +1833,5 @@ td > label {
   }
   .intro_img {
     max-width: 100%;
-}
+  }
 }
