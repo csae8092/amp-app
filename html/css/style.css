@@ -1780,6 +1780,12 @@ td > label {
   .index-card .card-header {
     width: 100%;
   }
+  #commentary {
+    display: block;
+  }
+  .interpComment {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1200px) {
