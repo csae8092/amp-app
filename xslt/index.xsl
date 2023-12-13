@@ -68,7 +68,7 @@
                                                         alt="Auden Musulin Papers 1959-1973"/>
                                                 </div>
                                                 <div class="index-footer">                                            
-                                                    <h4 >Auden Musulin Papers <br/> 1959-1973</h4>
+                                                    <h5 >Auden Musulin Papers <br/> 1959-1973</h5>
                                                 </div>
                                             </div>                                     
                                         </a>                                    
@@ -82,7 +82,7 @@
                                                         alt="Musulin as Memoirist 1976-1995"/>
                                                 </div>
                                             <div class="index-footer">  
-                                                    <h4 >Musulin as Memoirist <br/> 1976-1995</h4>                                         
+                                                    <h5 >Musulin as Memoirist <br/> 1976-1995</h5>                                         
                                                 </div>
                                             </div>
                                         </a>
@@ -96,7 +96,7 @@
                                                         alt="Explore the Auden Musulin Papers through full-text search"/>                                       
                                                 </div>
                                                 <div class="index-footer">  
-                                                    <h4 >Explore the AMP through <br/> full-text search.</h4> 
+                                                    <h5 >Explore the AMP through <br/> full-text search.</h5> 
                                                     
                                                 </div>
                                             </div>
@@ -111,7 +111,7 @@
                                                         alt="Photos"/>
                                                 </div>
                                                 <div class="index-footer">   
-                                                    <h4 >Photos and <br/> Postcards</h4>                                     
+                                                    <h5 >Photos and <br/> Postcards</h5>                                     
                                                 </div>
                                             </div>                                 
                                         </a>
@@ -126,7 +126,7 @@
                                                     
                                                 </div>
                                                 <div class="index-footer">   
-                                                    <h4 >Auden through <br/> Computer Vision</h4>
+                                                    <h5 >Auden through <br/> Computer Vision</h5>
                                                 </div>
                                                 
                                             </div> 

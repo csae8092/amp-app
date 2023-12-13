@@ -103,7 +103,7 @@ nav.hiddenNav {
 .intro_column {
   display: flex;
   vertical-align: middle;
-  margin: 0 auto;
+  margin: 2em auto;
   align-items: center;
   max-width: 1200px;
   min-height: 42vh;
@@ -119,6 +119,7 @@ nav.hiddenNav {
   vertical-align: middle;
   align-items: center;
   min-height: 45vh;
+  max-width: 1500px;
 
   /*background-color: rgba(97, 90, 96, .8);
     border-radius: .45rem;*/
@@ -133,6 +134,11 @@ nav.hiddenNav {
   flex-direction: column;
   vertical-align: middle;
   margin-top: 0 !important;
+  border-radius: 0.35rem;
+  background-color: rgba(246, 246, 246, 1);
+  border-radius: 0.35rem;
+  padding: 0 1em;
+  min-height: 280px;
 }
 
 .grid {
@@ -152,12 +158,6 @@ nav.hiddenNav {
   height: 0;
   width: 0;
   padding-bottom: calc(4 / 16 * 100%);
-}
-
-.item a .index-card {
-  min-height: 390px;
-  background-color: rgba(246, 246, 246, 1);
-  border-radius: 0.35rem;
 }
 
 #notification {
@@ -1821,4 +1821,7 @@ td > label {
   .grid {
     padding: 0 20%;
   }
+  .intro_img {
+    max-width: 100%;
+}
 }
