@@ -105,7 +105,7 @@ var editor = new LoadEditor({
       },
       {
         opt: "ef",
-        opt_slider: "entities-features-slider",
+        opt_slider: "ef-features-slider",
         title: "All entities",
         color: "grey",
         html_class: "undefined",
@@ -236,7 +236,7 @@ var editor = new LoadEditor({
     name: "Create full size mode",
     variants: [
       {
-        opt: "ef",
+        opt: "fs",
         title: "Fullscreen",
         urlparam: "fs",
         chg_citation: "citation-url",
@@ -253,7 +253,7 @@ var editor = new LoadEditor({
     name: "Change font size",
     variants: [
       {
-        opt: "fs",
+        opt: "fos",
         title: "Font size",
         urlparam: "fos",
         chg_citation: "citation-url",

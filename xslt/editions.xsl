@@ -93,7 +93,7 @@
                                             <input type="text" name="keyword" placeholder="enter keyword..."/>
                                         </li>
                                         <li >
-                                            <font-size opt="fs"></font-size>
+                                            <font-size opt="fos"></font-size>
                                         </li>
                                         <li >
                                             <font-family opt="ff"></font-family>
@@ -102,7 +102,7 @@
                                             <image-switch opt="es"></image-switch>
                                         </li>
                                         <li>
-                                            <full-size opt="ef"></full-size>
+                                            <full-size opt="fs"></full-size>
                                         </li>
                                     </ul>
                                 </div>
