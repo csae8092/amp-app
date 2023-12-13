@@ -202,7 +202,7 @@
     </xsl:template>-->
     
     <xsl:template match="tei:head">
-        <xsl:apply-templates/>
+        <h5><xsl:apply-templates/></h5>
     </xsl:template>
     
     <xsl:template match="tei:address">
@@ -976,9 +976,9 @@
     </xsl:template>
     
     <xsl:template match="tei:lg">
-        <span style="display:block;margin: 1em 0;">
+        <p style="display:block;margin: 1em 0;">
             <xsl:apply-templates/>
-        </span>
+        </p>
     </xsl:template>
     
     <xsl:template match="tei:l">
