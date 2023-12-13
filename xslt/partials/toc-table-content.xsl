@@ -90,8 +90,8 @@
                     </ul>
                 </td>
                 <td>
-                    <xsl:if test="count(//tei:rs[@ana]) > 0">
-                        <xsl:value-of select="count(//tei:rs[@ana])"/>
+                    <xsl:if test="count(//tei:*[@ana]) > 0">
+                        <xsl:value-of select="count(//tei:*[@ana])"/>
                     </xsl:if>
                 </td>
             </tr>
