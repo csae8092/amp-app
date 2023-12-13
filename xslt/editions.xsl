@@ -202,7 +202,14 @@
     </xsl:template>-->
     
     <xsl:template match="tei:head">
-        <h5><xsl:apply-templates/></h5>
+        <xsl:variable name="hand" select="@hand"/>
+        <h5 class="yes-index {
+            if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }"><xsl:apply-templates/></h5>
     </xsl:template>
     
     <xsl:template match="tei:address">
@@ -976,9 +983,33 @@
     </xsl:template>
     
     <xsl:template match="tei:lg">
-        <p style="display:block;margin: 1em 0;">
-            <xsl:apply-templates/>
-        </p>
+        <xsl:variable name="hand" select="@hand"/>
+        <xsl:variable name="hand2" select="parent::tei:div[@hand]/@hand"/>
+        <xsl:choose>
+            <xsl:when test="string-length($hand) > 0">
+                <p class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }" style="display:block;margin: 1em 0;">
+                    <xsl:apply-templates/>
+                </p>
+            </xsl:when>
+            <xsl:otherwise>
+                <p class="yes-index {
+                    if ($hand2 = '#handwritten') then
+                    ('handwritten') else if ($hand2 = '#typed') then
+                    ('typed') else if ($hand2 = '#printed') then
+                    ('printed') else if ($hand2 = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }" style="display:block;margin: 1em 0;">
+                    <xsl:apply-templates/>
+                </p>
+            </xsl:otherwise>
+        </xsl:choose>
+        
     </xsl:template>
     
     <xsl:template match="tei:l">
