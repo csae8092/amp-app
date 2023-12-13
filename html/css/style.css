@@ -137,15 +137,14 @@ nav.hiddenNav {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: 1fr;
   grid-gap: 40px;
-  padding: 0 15%;
+  padding: 0 10%;
 }
 .item {
   display: flex;
   justify-content: center;
-  max-width: 320px;
 }
 .item:before {
   content: "";
@@ -153,6 +152,12 @@ nav.hiddenNav {
   height: 0;
   width: 0;
   padding-bottom: calc(4 / 16 * 100%);
+}
+
+.item a .index-card {
+  min-height: 390px;
+  background-color: rgba(246, 246, 246, 1);
+  border-radius: 0.35rem;
 }
 
 #notification {
@@ -1791,11 +1796,23 @@ td > label {
 /*@media (min-width: 992px) {  }*/
 
 /* Extra large devices (large desktops, 1680px and up) */
-@media (max-width: 1680px) {
+@media (min-width: 1680px) {
   .margin-top {
     margin-top: 0;
   }
   .grid {
-    padding: 0 2%;
+    padding: 0 5%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .grid {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 2500px) {
+  .grid {
+    padding: 0 20%;
   }
 }
