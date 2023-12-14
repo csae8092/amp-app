@@ -313,15 +313,26 @@ input:checked + .i-slider:before {
 
 /* font styles and sizes */
 
-.times-new-roman, .handwritten {
+.times-new-roman {
   font-family: "Times New Roman", serif !important;
 }
-.courier-new, .typed {
+.courier-new {
   font-family: "Courier New", monospace !important;
 }
 
-.arial-serif, .printed {
+.arial-serif {
   font-family: "Arial", serif !important;
+}
+
+.handwritten {
+  font-family: "Times New Roman", serif;
+}
+.typed {
+  font-family: "Courier New", monospace;
+}
+
+.printed {
+  font-family: "Arial", serif;
 }
 
 .handwritten {
