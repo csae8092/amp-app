@@ -39,12 +39,12 @@ function nextPrevUrl() {
   }
   if (prev) {
     var prev_href = prev.getAttribute("href");
-    var new_prev = new URL(`${domain}/${path}/${prev_href}?${urlparam}`);
+    var new_prev = new URL(`${domain}${path}/${prev_href}?${urlparam}`);
     prev.setAttribute("href", new_prev);
   }
   if (next) {
     var next_href = next.getAttribute("href");
-    var new_next = new URL(`${domain}/${path}/${next_href}?${urlparam}`);
+    var new_next = new URL(`${domain}${path}/${next_href}?${urlparam}`);
     next.setAttribute("href", new_next);
   }
 }
