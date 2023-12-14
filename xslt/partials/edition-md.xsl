@@ -108,7 +108,7 @@
                                 <td>
                                     <ul>
                                         <li>
-                                            <xsl:value-of select="substring-before(//tei:sourceDesc//tei:history//tei:origDate/@notBefore-iso, 'T')"/>
+                                            <xsl:apply-templates select="substring-before(//tei:sourceDesc//tei:history//tei:origDate/@notBefore-iso, 'T')"/>
                                             <xsl:if test="//tei:sourceDesc//tei:history//tei:origDate[@ana]">
                                                 <span class="interp ent" ref="{//tei:sourceDesc//tei:history//tei:origDate/@ana}">
                                                 </span>
@@ -116,7 +116,7 @@
                                         </li>
                                         <xsl:if test="//tei:sourceDesc//tei:history//tei:origPlace">
                                             <li>
-                                                <xsl:value-of select="//tei:sourceDesc//tei:history//tei:origPlace"/>
+                                                <xsl:apply-templates select="//tei:sourceDesc//tei:history//tei:origPlace"/>
                                                 <xsl:if test="//tei:sourceDesc//tei:history//tei:origPlace[@ana]">
                                                     <span class="interp ent" ref="{//tei:sourceDesc//tei:history//tei:origPlace/@ana}">
                                                     </span>

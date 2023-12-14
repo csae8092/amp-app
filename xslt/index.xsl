@@ -61,13 +61,13 @@
                                 <div class="grid">
                                     <div class="item">
                                         <a href="toc.html" class="index-link">                                   
-                                            <div class="index-card" data="Auden Musulin Papers 1959-1973">
-                                                <div class="index-header">
+                                            <div class="index-tile" data="Auden Musulin Papers 1959-1973">
+                                                <div class="index-tile-header">
                                                     <img src="images/icons/lp-corresp.png"
                                                         class="d-block w-100"
                                                         alt="Auden Musulin Papers 1959-1973"/>
                                                 </div>
-                                                <div class="index-footer">                                            
+                                                <div class="index-tile-footer">                                            
                                                     <h5 >Auden Musulin Papers <br/> 1959-1973</h5>
                                                 </div>
                                             </div>                                     
@@ -75,13 +75,13 @@
                                     </div>
                                     <div class="item">
                                         <a href="toc_m.html" class="index-link" id="index-memoirs">  
-                                            <div class="index-card">
-                                            <div class="index-header">
+                                            <div class="index-tile">
+                                            <div class="index-tile-header">
                                                     <img src="images/icons/lp-memoirs.png"
                                                         class="d-block w-100"
                                                         alt="Musulin as Memoirist 1976-1995"/>
                                                 </div>
-                                            <div class="index-footer">  
+                                            <div class="index-tile-footer">  
                                                     <h5 >Musulin as Memoirist <br/> 1976-1995</h5>                                         
                                                 </div>
                                             </div>
@@ -89,28 +89,27 @@
                                     </div>
                                     <div class="item">
                                         <a href="search.html" class="index-link" id="index-search">  
-                                            <div class="index-card" style="border:2px solid #b59890;">
-                                                <div class="index-header">
+                                            <div class="index-tile" style="border:2px solid #b59890;">
+                                                <div class="index-tile-header">
                                                     <img src="images/icons/lp-search.png"
                                                         class="d-block w-100"
                                                         alt="Explore the Auden Musulin Papers through full-text search"/>                                       
                                                 </div>
-                                                <div class="index-footer">  
+                                                <div class="index-tile-footer">  
                                                     <h5 >Explore the AMP through <br/> full-text search.</h5> 
-                                                    
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="item">
                                         <a href="photos.html" class="index-link" id="index-photo">                                                     
-                                            <div class="index-card">
-                                                <div class="index-header">
+                                            <div class="index-tile">
+                                                <div class="index-tile-header">
                                                     <img src="images/icons/lp-photos.png"
                                                         class="d-block w-100" 
                                                         alt="Photos"/>
                                                 </div>
-                                                <div class="index-footer">   
+                                                <div class="index-tile-footer">   
                                                     <h5 >Photos and <br/> Postcards</h5>                                     
                                                 </div>
                                             </div>                                 
@@ -118,14 +117,13 @@
                                     </div>
                                     <div class="item">
                                         <a href="cv.html" class="index-link" id="index-cvl">                                        
-                                            <div class="index-card">
-                                                <div class="index-header">
+                                            <div class="index-tile">
+                                                <div class="index-tile-header">
                                                     <img src="images/icons/lp-cvl.png" 
                                                         class="d-block w-100" 
                                                         alt="Auden through Computer Vision"/>
-                                                    
                                                 </div>
-                                                <div class="index-footer">   
+                                                <div class="index-tile-footer">   
                                                     <h5 >Auden through <br/> Computer Vision</h5>
                                                 </div>
                                                 
