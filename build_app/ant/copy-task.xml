@@ -7,7 +7,7 @@
     <property name="data_editions_am" value="${basedir}/data/editions/additional-materials"/> -->
     <property name="data_editions_c" value="${basedir}/data/editions/correspondence"/>
     <property name="data_editions_p" value="${basedir}/data/editions/photos"/>
-    <property name="xsl_editions" value="${basedir}/xslt/preprocess.xsl"/>
+    <!-- <property name="xsl_editions" value="${basedir}/xslt/preprocess.xsl"/> -->
     <property name="indices" value="${basedir}/data/indices"/>
     <property name="geojson" value="${basedir}/html/geo"/>
 
@@ -19,10 +19,10 @@
         </fileset>
     </copy> -->
 
-    <xslt style="${xsl_editions}" basedir="${data_editions}" destdir="${data_editions}" includes="*.xml">
+    <!-- <xslt style="${xsl_editions}" basedir="${data_editions}" destdir="${data_editions}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    </xslt> -->
 
     <move todir="${data_editions}" includeemptydirs="false">
         <fileset dir="${data_editions}">

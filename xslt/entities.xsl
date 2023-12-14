@@ -26,11 +26,11 @@
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="./tei:label"></xsl:with-param>
                                 </xsl:call-template>                
                                 <meta name="docTitle" class="staticSearch_docTitle">
                                     <xsl:attribute name="content">
-                                        <xsl:value-of select="$doc_title"/>
+                                        <xsl:value-of select="./tei:label"/>
                                     </xsl:attribute>
                                 </meta>
                             </head>
@@ -153,11 +153,11 @@
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"></xsl:with-param>
                                 </xsl:call-template>                
                                 <meta name="docTitle" class="staticSearch_docTitle">
                                     <xsl:attribute name="content">
-                                        <xsl:value-of select="$doc_title"/>
+                                        <xsl:value-of select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"/>
                                     </xsl:attribute>
                                 </meta>
                             </head>
@@ -326,11 +326,11 @@
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select=".//tei:placeName"></xsl:with-param>
                                 </xsl:call-template>                
                                 <meta name="docTitle" class="staticSearch_docTitle">
                                     <xsl:attribute name="content">
-                                        <xsl:value-of select="$doc_title"/>
+                                        <xsl:value-of select=".//tei:placeName"/>
                                     </xsl:attribute>
                                 </meta>
                             </head>
@@ -492,11 +492,11 @@
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="./tei:title"></xsl:with-param>
                                 </xsl:call-template>                
                                 <meta name="docTitle" class="staticSearch_docTitle">
                                     <xsl:attribute name="content">
-                                        <xsl:value-of select="$doc_title"/>
+                                        <xsl:value-of select="./tei:title"/>
                                     </xsl:attribute>
                                 </meta>
                             </head>
@@ -639,11 +639,11 @@
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="./tei:orgName"></xsl:with-param>
                                 </xsl:call-template>                
                                 <meta name="docTitle" class="staticSearch_docTitle">
                                     <xsl:attribute name="content">
-                                        <xsl:value-of select="$doc_title"/>
+                                        <xsl:value-of select="./tei:orgName"/>
                                     </xsl:attribute>
                                 </meta>
                             </head>

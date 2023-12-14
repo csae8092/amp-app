@@ -23,6 +23,7 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   //  filterBy is managed and overridden by InstantSearch.js. To set it, you want to use one of the filter widgets like refinementList or use the `configure` widget.
   additionalSearchParameters: {
     query_by: "full_text,title",
+    // infix: "fallback,fallback",
   },
 });
 
@@ -77,10 +78,6 @@ search.addWidgets([
               </div>
           `,
     },
-  }),
-
-  instantsearch.widgets.pagination({
-    container: "#pagination",
   }),
 
   instantsearch.widgets.stats({
@@ -186,7 +183,17 @@ search.addWidgets([
   }),
 
   instantsearch.widgets.pagination({
-    container: "#pagination",
+    container: "#pagination-top",
+    padding: 2,
+    cssClasses: {
+      list: "pagination",
+      item: "page-item",
+      link: "page-link",
+    },
+  }),
+
+  instantsearch.widgets.pagination({
+    container: "#pagination-bottom",
     padding: 2,
     cssClasses: {
       list: "pagination",

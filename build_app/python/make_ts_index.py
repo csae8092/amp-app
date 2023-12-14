@@ -29,11 +29,11 @@ current_schema = {
         },
         {
             'name': 'title',
-            'type': 'string'
+            'type': 'string',
         },
         {
             'name': 'full_text',
-            'type': 'string'
+            'type': 'string',
         },
         {
             'name': 'year',
@@ -70,12 +70,13 @@ current_schema = {
 
 client.collections.create(current_schema)
 
+
 def get_entities(ent_type, ent_node, ent_name):
     entities = []
     e_path = f'.//tei:rs[@type="{ent_type}"]/@ref'
     for p in body:
         ent = p.xpath(e_path, namespaces={'tei': "http://www.tei-c.org/ns/1.0"})
-        ref = [ref.replace("#", "") for e in ent if len(ent) > 0  for ref in e.split()]
+        ref = [ref.replace("#", "") for e in ent if len(ent) > 0 for ref in e.split()]
         for r in ref:
             p_path = f'.//tei:{ent_node}[@xml:id="{r}"]//tei:{ent_name}[1]'
             en = doc.any_xpath(p_path)
@@ -88,14 +89,16 @@ def get_entities(ent_type, ent_node, ent_name):
                         f.write(f"{r} in {record['id']}\n")
     return [ent for ent in sorted(set(entities))]
 
+
 records = []
 cfts_records = []
 for x in tqdm(files, total=len(files)):
-    doc = TeiReader(xml=x,xsl='./xslt/preprocess_typesense.xsl')
+    doc = TeiReader(xml=x, xsl='./xslt/preprocess_typesense.xsl')
     facs = doc.any_xpath('.//tei:body/tei:div/tei:pb/@facs')
     pages = 0
     for v in facs:
-        p_group = f".//tei:body/tei:div/tei:p[preceding-sibling::tei:pb[1]/@facs='{v}']|.//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{v}']"
+        p_group = f""".//tei:body/tei:div/tei:p[preceding-sibling::tei:pb[1]/@facs='{v}']|
+                      .//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{v}']"""
         body = doc.any_xpath(p_group)
         pages += 1
         cfts_record = {

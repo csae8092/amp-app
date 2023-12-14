@@ -40,7 +40,7 @@
                         <xsl:value-of select="//tei:title[@level='a'][1]/text()"/>
                     </a>
                 </td>
-                <td><xsl:value-of select="data(//tei:origDate/@notAfter)"/></td>
+                <td><xsl:value-of select="data(substring-before(//tei:origDate/@notAfter-iso, 'T'))"/></td>
                 <td>
                     <ul>
                         <li><xsl:value-of select="concat(@when/name(), ': ' ,@when)"/></li>
@@ -88,7 +88,12 @@
                         </xsl:if>
                         
                     </ul>
-                </td> 
+                </td>
+                <td>
+                    <xsl:if test="count(//tei:*[@ana]) > 0">
+                        <xsl:value-of select="count(//tei:*[@ana])"/>
+                    </xsl:if>
+                </td>
             </tr>
         </xsl:for-each>
 

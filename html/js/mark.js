@@ -9,7 +9,9 @@ function performMark() {
   var keyword = keywordInput.value;
 
   // Determine selected options
-  var options = {};
+  var options = {
+    acrossElements: true,
+  };
   [].forEach.call(optionInputs, function (opt) {
     options[opt.value] = opt.checked;
   });
@@ -25,7 +27,9 @@ function performMark() {
 
 function performMarkUrl() {
   // Determine selected options
-  var options = {};
+  var options = {
+    acrossElements: true,
+  };
   [].forEach.call(optionInputs, function (opt) {
     options[opt.value] = opt.checked;
   });
