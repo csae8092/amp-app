@@ -125,7 +125,7 @@ nav.hiddenNav {
     border-radius: .45rem;*/
 }
 
-.index-card {
+.index-tile {
   display: flex;
   position: relative;
   overflow: hidden;
@@ -137,8 +137,23 @@ nav.hiddenNav {
   border-radius: 0.35rem;
   background-color: rgba(246, 246, 246, 1);
   border-radius: 0.35rem;
-  padding: 0 1em;
   min-height: 280px;
+  transition: transform 0.2s;
+  border: 1px solid #f1f1f1;
+  box-shadow: 2px 2px 4.5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.index-tile:hover {
+  transform: scale(1.02);
+}
+
+.index-tile-footer {
+  padding: 0 1em;
+}
+
+.index-tile-header img {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .grid {
