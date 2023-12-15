@@ -73,7 +73,8 @@
                             </div>   
                             <div class="card-body text-center">
                                 <ul style="margin-top:1em;padding-left:0;word-wrap:break-word;word-break:break-word;">
-                                    <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                    
+                                    <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">
+                                        <!--<xsl:sort data-type="number" order="ascending"/>--> 
                                         <li style="display:inline;list-style:none;margin-left:1em;">
                                             <a href="#{current-grouping-key()}" title="jump to date">
                                                 <xsl:value-of select="current-grouping-key()"/>
@@ -88,8 +89,7 @@
                         </div>                     
                         <div class="row">
                             <div class="col-md-12">                                
-                                <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                    
-                                    <!--<xsl:variable name="panel-id" select="concat(generate-id(), '-', position())"/>-->                                                                        
+                                <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notAfter, '-')[1]">                                                                     
                                     <div class="timeline-wrapper" id="{current-grouping-key()}" style="padding-top:5em;">
                                         <div class="text-center">                                            
                                             <h2 id="timeline-heading">
