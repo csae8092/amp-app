@@ -13,7 +13,7 @@
     </doc>
     
     <xsl:template name="bio-circle">
-        <xsl:variable name="dstring" select="./tei:head/tei:date/@notAfter"/>
+        <xsl:variable name="dstring" select="./tei:head/tei:date/@notBefore"/>
         <xsl:variable name="d" select="if(contains($dstring, 'T')) then(substring-before($dstring, 'T')) else($dstring)"/>
         <xsl:variable name="date-formated" select="format-date(xs:date($d), '[MNn] [D1o]', 'en', (), ())"/>
         <div class="timeline-circle text-center" data="{$date-formated}">       
