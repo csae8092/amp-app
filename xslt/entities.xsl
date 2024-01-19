@@ -103,14 +103,14 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                     <tr>
                                                         <th>
                                                             Wikidata
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -245,26 +245,26 @@
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='GND']">
+                                                <xsl:if test="./tei:idno[@subtype='GND']">
                                                 <tr>
                                                     <th>
                                                         GND
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                                        <a href="{./tei:idno[@subtype='GND']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                 <tr>
                                                     <th>
                                                         Wikidata
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                        <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -398,26 +398,26 @@
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='GEONAMES']">
+                                                <xsl:if test="./tei:idno[@subtype='GEONAMES']">
                                                 <tr>
                                                     <th>
                                                         Geonames ID
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GEONAMES'], '/')[4]"/>
+                                                        <a href="{./tei:idno[@subtype='GEONAMES']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='GEONAMES'], '/')[4]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                 <tr>
                                                     <th>
                                                         Wikidata ID
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                        <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -428,8 +428,8 @@
                                                         GND ID
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                                        <a href="{./tei:idno[@subtype='GND']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -567,26 +567,26 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='GND']">
+                                                <xsl:if test="./tei:idno[@subtype='GND']">
                                                     <tr>
                                                         <th>
                                                             GND
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='GND']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                     <tr>
                                                         <th>
                                                             Wikidata
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -697,26 +697,26 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='GND']">
+                                                <xsl:if test="./tei:idno[@subtype='GND']">
                                                     <tr>
                                                         <th>
                                                             GND
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='GND']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                     <tr>
                                                         <th>
                                                             Wikidata
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
