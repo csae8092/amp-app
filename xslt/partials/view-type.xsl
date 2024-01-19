@@ -79,10 +79,11 @@
                                             <xsl:otherwise>
                                                 <xsl:choose>
                                                     <xsl:when test="current-group()[self::tei:div[@type='letter_message']|self::tei:div[@type='poem']]">
-                                                        <!--<xsl:value-of select="'main'"/>-->
-                                                        <xsl:for-each select="current-group()[self::tei:div]">
+                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:lg[preceding-sibling::tei:pb]|self::tei:ab]">
+                                                            <xsl:value-of select="'main'"/>
                                                             <xsl:choose>
-                                                                <xsl:when test="self::tei:ab">
+                                                                <xsl:when test="self::tei:ab|self::tei:lg">
+                                                                    <xsl:value-of select="'secondary below main'"/>
                                                                     <xsl:call-template name="text-window">
                                                                         <xsl:with-param name="hand">
                                                                             <xsl:value-of select="@hand"/>
@@ -93,6 +94,7 @@
                                                                     </xsl:call-template>
                                                                 </xsl:when>
                                                                 <xsl:otherwise>
+                                                                    <xsl:value-of select="'main below main'"/>
                                                                     <xsl:call-template name="text-window">
                                                                         <xsl:with-param name="hand">
                                                                             <xsl:value-of select="@hand"/>
@@ -117,7 +119,7 @@
                                                     </xsl:when>-->
                                                     <xsl:otherwise>
                                                         <xsl:for-each select="current-group()[self::tei:div|self::tei:p|self::tei:closer|self::tei:lg]">
-                                                            <!--<xsl:value-of select="'secondary'"/>-->
+                                                            <xsl:value-of select="'secondary'"/>
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
                                                                     <xsl:value-of select="@hand"/>
