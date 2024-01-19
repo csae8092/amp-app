@@ -94,13 +94,13 @@ records = []
 cfts_records = []
 for x in tqdm(files, total=len(files)):
     doc = TeiReader(xml=x, xsl='./xslt/preprocess_typesense.xsl')
-    facs = doc.any_xpath('.//tei:body/tei:div/tei:pb/@facs')
+    facs = doc.any_xpath('.//tei:body/tei:div//tei:pb/@facs')
     pages = 0
     for v in facs:
         p_group = f""".//tei:body/tei:div/tei:p[preceding-sibling::tei:pb[1]/@facs='{v}']|
                       .//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{v}']|
-                      .//tei:body/tei:div/tei:div/tei:ab[preceding-sibling::tei:pb[1]/@facs='{v}']|
-                      .//tei:body/tei:div/tei:div/tei:div[preceding-sibling::tei:pb[1]/@facs='{v}']"""
+                      .//tei:body/tei:div/tei:div/tei:ab[preceding-sibling::tei:pb[1]/@facs='{v}']//text()|
+                      .//tei:body/tei:div/tei:div/tei:div[preceding-sibling::tei:pb[1]/@facs='{v}']//text()"""
         body = doc.any_xpath(p_group)
         pages += 1
         cfts_record = {

@@ -17,7 +17,7 @@ from tqdm import tqdm
 #     'connection_timeout_seconds': 2
 # })
 
-files = glob.glob('../../data/editions/*/*.xml')
+files = glob.glob('./data/editions/*/*.xml')
 
 # try:
 #     client.collections['amp'].delete()
@@ -101,11 +101,13 @@ def get_entities(ent_type, ent_node, ent_name):
 records = []
 for x in tqdm(files, total=len(files)):
     doc = TeiReader(xml=x, xsl='./xslt/preprocess_typesense.xsl')
-    facs = doc.any_xpath('.//tei:body/tei:div/tei:pb/@facs')
+    facs = doc.any_xpath(""".//tei:body/tei:div//tei:pb/@facs""")
     pages = 0
     for v in facs:
         p_group = f""".//tei:body/tei:div/tei:p[preceding-sibling::tei:pb[1]/@facs='{v}']|
-                   .//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{v}']"""
+                      .//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{v}']|
+                      .//tei:body/tei:div/tei:div/tei:ab[preceding-sibling::tei:pb[1]/@facs='{v}']|
+                      .//tei:body/tei:div/tei:div/tei:div[preceding-sibling::tei:pb[1]/@facs='{v}']"""
         body = doc.any_xpath(p_group)
         pages += 1
         record = {}
@@ -149,6 +151,8 @@ for x in tqdm(files, total=len(files)):
             record['full_text'] = "\n".join(" ".join("".join(p.itertext()).split()) for p in body)
             if len(record['full_text']) > 0:
                 records.append(record)
+                print(record['id'])
+                print(len(record['full_text']))
 
 # make_index = client.collections['amp'].documents.import_(records)
 # print(make_index)
