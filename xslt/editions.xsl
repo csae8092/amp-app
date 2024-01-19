@@ -248,11 +248,20 @@
             }"><xsl:apply-templates/></p>
     </xsl:template>
     
+    <!-- 
+        in doc 0063 p elements are part in both pb groups creating in view-type.xsl
+        since the secondary group creates a paragraph stylesheet if p elements is encountered
+        the rendering of p elments in the main group is stopped if a preceding p silbing
+        has a prev attribute
+    -->
     <xsl:template match="tei:p[@prev]">
         <!-- do not render handled in view-type.xsl -->
     </xsl:template>
+    <xsl:template match="tei:p[preceding-sibling::tei:p[@prev]]">
+        <!-- do not render handled in view-type.xsl -->
+    </xsl:template>
     
-    <xsl:template match="tei:p[not(@prev)]">
+    <xsl:template match="tei:p">
         <xsl:variable name="hand" select="@hand"/>
         <p class="yes-index {
             if ($hand = '#handwritten') then
