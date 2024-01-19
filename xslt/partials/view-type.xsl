@@ -35,9 +35,25 @@
                 ('typed') else if (ancestor::tei:text/@hand = '#printed') then 
                 ('printed') else ()
             } tab-content">
+            <!-- 
+                starting the the first div below tei:body
+                for creating a page based view the transcript is grouped via pb elements
+                since two different container structures are available there are two grouping algos
+                starting the the first div below tei:body
+            -->
             <xsl:choose>
                 <xsl:when test="./tei:div[@type]">
+                    <!-- 
+                        this group is for the new correspondence where containers are structured like
+                        transcript/envelope or letter
+                        transcript/letter/poem or letter_message
+                    -->
                     <xsl:for-each-group select="./tei:div[@type]/*|./tei:div[@type]/tei:div[@type]/*" group-starting-with="tei:pb"><!-- envelope, letter, enclosure or sub level div@type=letter_message or poem ... content -->
+                        <!-- 
+                            first xpath loads level envelope or letter
+                            however, only in envelope there is no further div container
+                            second xpath loads div letter_message or poem
+                        -->
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
                             id="paginate-{position()}" 
@@ -55,6 +71,12 @@
                                                 title="Computer Vision Lab"/>
                                         </xsl:if>
                                         <xsl:choose>
+                                            <!-- 
+                                                second xpath './tei:div[@type]/tei:div[@type]/*'
+                                                in document 0042 div@type=peom includes cb elemets
+                                                this representation requires a column based view
+                                                additional grouping by cb elements
+                                            -->
                                             <xsl:when test="current-group()//tei:cb">
                                                 <div class="row">
                                                     <xsl:for-each-group select="current-group()[self::tei:div]/*"
@@ -78,9 +100,20 @@
                                             </xsl:when>
                                             <xsl:otherwise>
                                                 <xsl:choose>
+                                                    <!-- 
+                                                        second xpath of pb grouping './tei:div[@type]/tei:div[@type]/*'
+                                                        without cb element no additional grouping required
+                                                        the main group selects all of div@type=letter_message or peom
+                                                        usually loads group main where additional stylesheets are handling in editions.xsl
+                                                        
+                                                        some exceptions require the loading of stylesheets of the secondary group
+                                                        in document 0038 pb grouping elements share sibling level nodes as well as parent level siblings
+                                                        this requires the loading of tei:lg and tei:ab. To avoid duplicates they are only loaded
+                                                        if a preceding-sibling::tei:pb is true.
+                                                    -->
                                                     <xsl:when test="current-group()[self::tei:div[@type='letter_message']|self::tei:div[@type='poem']]">
                                                         <xsl:for-each select="current-group()[self::tei:div|self::tei:lg[preceding-sibling::tei:pb]|self::tei:ab]">
-                                                            <xsl:value-of select="'main'"/>
+                                                            <!--<xsl:value-of select="'main'"/>-->
                                                             <xsl:choose>
                                                                 <xsl:when test="self::tei:ab|self::tei:lg">
                                                                     <xsl:value-of select="'secondary below main'"/>
@@ -107,19 +140,12 @@
                                                             </xsl:choose>
                                                         </xsl:for-each>
                                                     </xsl:when>
-                                                    <!--<xsl:when test="current-group()[self::tei:p|self::tei:closer|self::tei:lg|self::tei:opener|self::tei:div[not(@type)]]">
-                                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:closer|self::tei:opener|self::tei:lg|self::tei:head|self::tei:ab|self::tei:div]">
-                                                            <xsl:value-of select="'secondary'"/>
-                                                            <xsl:call-template name="text-window">
-                                                                <xsl:with-param name="hand">
-                                                                    <xsl:value-of select="@hand"/>
-                                                                </xsl:with-param>
-                                                            </xsl:call-template>
-                                                        </xsl:for-each>
-                                                    </xsl:when>-->
                                                     <xsl:otherwise>
-                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:p|self::tei:closer|self::tei:lg]">
-                                                            <xsl:value-of select="'secondary'"/>
+                                                        <!-- 
+                                                            first xpath of pb grouping './tei:div[@type]/*'
+                                                        -->
+                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:p|self::tei:closer|self::tei:lg|self::tei:ab]">
+                                                            <!--<xsl:value-of select="'secondary'"/>-->
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
                                                                     <xsl:value-of select="@hand"/>
@@ -141,6 +167,9 @@
                     </xsl:for-each-group>
                 </xsl:when>
                 <xsl:otherwise>
+                    <!-- 
+                        2nd grouping loading first level div elements that do not container another sublevel div
+                    -->
                     <xsl:for-each-group select="*" group-starting-with="tei:pb">                                  
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
@@ -217,6 +246,12 @@
         </div>
     </xsl:template>
     <xsl:template name="text-window">
+        <!-- 
+            depending on which node level text elements like p, lg, ab are available
+            it is possible to load stylesheets from editions.xsl or the stylesheet created here
+            secondary = stylesheet from this file
+            main = stylesheet from editions.xsl
+        -->
         <xsl:param name="hand"/>
         <xsl:param name="group"/>
         <xsl:choose>
