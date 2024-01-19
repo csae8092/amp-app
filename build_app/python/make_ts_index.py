@@ -98,7 +98,9 @@ for x in tqdm(files, total=len(files)):
     pages = 0
     for v in facs:
         p_group = f""".//tei:body/tei:div/tei:p[preceding-sibling::tei:pb[1]/@facs='{v}']|
-                      .//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{v}']"""
+                      .//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{v}']|
+                      .//tei:body/tei:div/tei:div/tei:ab[preceding-sibling::tei:pb[1]/@facs='{v}']|
+                      .//tei:body/tei:div/tei:div/tei:div[preceding-sibling::tei:pb[1]/@facs='{v}']"""
         body = doc.any_xpath(p_group)
         pages += 1
         cfts_record = {
