@@ -46,19 +46,19 @@
                                 <a title="Indexes" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="listperson.html" title="Persons" class="nav-link">Persons</a>
+                                        <a href="amp-index-persons.html" title="Persons" class="nav-link">Persons</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="listorg.html"  title="Institutions" class="nav-link">Institutions</a>
+                                        <a href="amp-index-organizations.html"  title="Institutions" class="nav-link">Institutions</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="listbibl.html"  title="Works" class="nav-link">Works</a>
+                                        <a href="amp-index-works.html"  title="Works" class="nav-link">Works</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="listplace.html" title="Places" class="nav-link">Places</a>
+                                        <a href="amp-index-places.html" title="Places" class="nav-link">Places</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="listevent.html" title="Events" class="nav-link">Events</a>
+                                        <a href="amp-index-events.html" title="Events" class="nav-link">Events</a>
                                     </li>
                                 </ul>                                
                             </li>                            

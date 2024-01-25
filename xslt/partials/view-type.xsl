@@ -48,7 +48,8 @@
                         transcript/envelope or letter
                         transcript/letter/poem or letter_message
                     -->
-                    <xsl:for-each-group select="./tei:div[@type]/*|./tei:div[@type]/tei:div[@type]/*" group-starting-with="tei:pb"><!-- envelope, letter, enclosure or sub level div@type=letter_message or poem ... content -->
+                    <xsl:for-each-group select="./tei:div[@type]/*|./tei:div[@type]/tei:div[@type]/*" group-starting-with="tei:pb">
+                        <!-- envelope, letter, enclosure or sub level div@type=letter_message or poem ... content -->
                         <!-- 
                             first xpath loads level envelope or letter
                             however, only in envelope there is no further div container

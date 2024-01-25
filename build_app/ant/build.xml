@@ -40,19 +40,19 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
     <delete>
-        <fileset dir="${target}" includes="listbibl.html"/>
+        <fileset dir="${target}" includes="amp-index-works.html"/>
     </delete>
     <delete>
-        <fileset dir="${target}" includes="listplace.html"/>
+        <fileset dir="${target}" includes="amp-index-places.html"/>
     </delete>
     <delete>
-        <fileset dir="${target}" includes="listperson.html"/>
+        <fileset dir="${target}" includes="amp-index-persons.html"/>
     </delete>
     <delete>
-        <fileset dir="${target}" includes="listorg.html"/>
+        <fileset dir="${target}" includes="amp-index-organizations.html"/>
     </delete>
     <delete>
-        <fileset dir="${target}" includes="listevent.html"/>
+        <fileset dir="${target}" includes="amp-index-events.html"/>
     </delete>
     <xslt style="${xsl_indices}" basedir="${indices}" destdir="${target}" includes="*.xml">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
