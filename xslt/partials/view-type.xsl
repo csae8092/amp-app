@@ -112,10 +112,10 @@
                                                         this requires the loading of tei:lg and tei:ab. To avoid duplicates they are only loaded
                                                         if a preceding-sibling::tei:pb is true.
                                                         
-                                                        doc 0042 requires additional hanlding tei:ab[not(preceding-sibling::tei:lg[1])]
+                                                        doc 0042 requires additional hanlding tei:ab[preceding-sibling::tei:pb]
                                                     -->
                                                     <xsl:when test="current-group()[self::tei:div[@type='letter_message']|self::tei:div[@type='poem']]">
-                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:lg[preceding-sibling::tei:pb]|self::tei:ab[not(preceding-sibling::tei:lg[1])]]">
+                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:lg[preceding-sibling::tei:pb]|self::tei:ab[preceding-sibling::tei:pb]]">
                                                             <!--<xsl:value-of select="'main'"/>-->
                                                             <xsl:choose>
                                                                 <xsl:when test="self::tei:ab|self::tei:lg">
