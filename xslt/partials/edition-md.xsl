@@ -168,9 +168,9 @@
                                <xsl:value-of select="concat(
                                    'Andorfer Peter, ',
                                    'Elsner Daniel, ',
-                                   replace(//tei:editor/tei:name[2], ',', ''),
-                                   ', Grigoriou Dimitra, ',
-                                   replace(//tei:editor/tei:name[1], ',', ''),
+                                   'Frühwirth Timo, ',
+                                   'Grigoriou Dimitra, ',
+                                   'Mayer Sandra, ',
                                    ', Mendelson Edward and Neundlinger Helmut')"/>
                                <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
                                <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
