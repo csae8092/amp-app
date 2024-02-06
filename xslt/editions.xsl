@@ -416,7 +416,7 @@
                         <button id="{$id}-button" type="button" class="btn-close btn-commentary" aria-label="Close"></button>
                     </div>
                     <div class="comment-body">
-                        <h5><xsl:value-of select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]/text()"/></h5>
+                        <h5><xsl:value-of select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]//text()"/></h5>
                         <xsl:for-each select="./tei:desc">
                             <p><xsl:apply-templates/></p>
                         </xsl:for-each>
