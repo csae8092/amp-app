@@ -680,6 +680,11 @@
         <br></br>
         <xsl:apply-templates/>
     </xsl:template>
+    <xsl:template match="tei:ref">
+        <a href="{@target}" target="_blank">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
     <xsl:template match="tei:title[parent::tei:bibl][ancestor::tei:interp]">
         <xsl:apply-templates/>
     </xsl:template>
@@ -700,7 +705,10 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="tei:publisher[parent::tei:bibl][ancestor::tei:interp]">
-        <xsl:apply-templates/><xsl:text>, </xsl:text>
+        <xsl:apply-templates/>
+        <xsl:if test="not(following-sibling::node())">
+            <xsl:text>, </xsl:text>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="tei:pubPlace[parent::tei:bibl][ancestor::tei:interp]">
         <xsl:apply-templates/><xsl:text>, </xsl:text>
