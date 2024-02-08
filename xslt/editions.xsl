@@ -211,13 +211,11 @@
             ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
             }"><xsl:apply-templates/></h5>
     </xsl:template>
-    
     <xsl:template match="tei:address">
         <span class="p-like">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-    
     <xsl:template match="tei:seg">
         <xsl:choose>
             <xsl:when test="@hand">
@@ -228,15 +226,12 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
     <xsl:template match="tei:placeName[parent::tei:dateline]">
         <xsl:apply-templates/>
     </xsl:template>
-    
     <xsl:template match="tei:persName[parent::tei:dateline]">
         <xsl:apply-templates/>
     </xsl:template>
-    
     <xsl:template match="tei:ab">
         <xsl:variable name="hand" select="@hand"/>
         <p class="yes-index {
@@ -247,7 +242,6 @@
             ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
             }"><xsl:apply-templates/></p>
     </xsl:template>
-    
     <!-- 
         in doc 0063 p elements are part in both pb groups creating in view-type.xsl
         since the secondary group creates a paragraph stylesheet if p elements is encountered
@@ -260,7 +254,6 @@
     <xsl:template match="tei:p[preceding-sibling::tei:p[@prev]]">
         <!-- do not render handled in view-type.xsl -->
     </xsl:template>
-    
     <xsl:template match="tei:p">
         <xsl:variable name="hand" select="@hand"/>
         <p class="yes-index {
@@ -271,40 +264,33 @@
             ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
             }"><xsl:apply-templates/></p>
     </xsl:template>
-    
     <xsl:template match="tei:salute[parent::tei:opener]">
         <!--<span class="p-like">
             <xsl:apply-templates/>
         </span>-->
         <br/><br/><xsl:apply-templates/><br/>
     </xsl:template>
-    
     <xsl:template match="tei:salute[parent::tei:closer]">
         <!--<span class="p-like">
             <xsl:apply-templates/>
         </span>-->
         <xsl:apply-templates/><br/><br/>
     </xsl:template>
-    
     <xsl:template match="tei:opener">
         <p class="yes-index"><xsl:apply-templates/></p>
     </xsl:template>
-    
     <xsl:template match="tei:closer[not(preceding-sibling::tei:p[@prev])]">
         <p class="yes-index"><xsl:apply-templates/></p>
     </xsl:template>
-    
     <xsl:template match="tei:closer[preceding-sibling::tei:p[@prev]]">
         <!-- do not render handled in view-type.xsl -->
     </xsl:template>
-    
     <xsl:template match="tei:signed">
         <!--<span class="p-like">
             <xsl:apply-templates/>
         </span>-->
         <xsl:apply-templates/><br/><br/>
     </xsl:template>
-    
     <xsl:template match="tei:date[parent::tei:dateline]">
         <xsl:choose>
             <xsl:when test="@rend = '#block'">
@@ -318,7 +304,6 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
     <xsl:template match="tei:unclear">
         <span class="abbr" alt="unclear">
             <xsl:apply-templates/>
@@ -434,7 +419,7 @@
             <xsl:choose>
                 <xsl:when test="starts-with($attribute, '#')">
                     <xsl:choose>
-                        <xsl:when test="$ana = 'true'">
+                        <xsl:when test="$ana = 'false'">
                             <xsl:attribute name="data-bs-toggle">
                                 <xsl:text>modal</xsl:text>
                             </xsl:attribute>
@@ -452,7 +437,7 @@
                 <xsl:when test="starts-with($attribute, 'amp-transcript') or starts-with($attribute, 'acdh:amp-transcript')">
                     <!--<xsl:variable name="acdh" select="substring-before(//tei:prefixDef[@ident='acdh']/@replacementPattern, '$1')"/>-->
                     <xsl:choose>
-                        <xsl:when test="$ana = 'true'">
+                        <xsl:when test="$ana = 'false'">
                             <xsl:attribute name="data-bs-toggle">
                                 <xsl:text>modal</xsl:text>
                             </xsl:attribute>
@@ -665,6 +650,20 @@
             </xsl:for-each>
         </ul>
     </xsl:template>
+    <xsl:template match="tei:label[parent::tei:event][ancestor::tei:interp]">
+        <em>
+            <xsl:choose>
+                <xsl:when test="parent::tei:event[@ref]">
+                    <a href="{substring-after(parent::tei:event/@ref, '#')}.html">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </em>
+    </xsl:template>
     <xsl:template match="tei:listBibl[parent::tei:desc]">
         <ul>
             <xsl:for-each select="./tei:bibl">
@@ -676,6 +675,71 @@
                 </li>
             </xsl:for-each>
         </ul>
+    </xsl:template>
+    <xsl:template match="tei:bibl[parent::tei:desc][ancestor::tei:interp]">
+        <br></br>
+        <xsl:apply-templates/>
+    </xsl:template>
+    <xsl:template match="tei:title[parent::tei:bibl][ancestor::tei:interp]">
+        <xsl:apply-templates/>
+    </xsl:template>
+    <xsl:template match="tei:editor[parent::tei:bibl][ancestor::tei:interp]">
+        <xsl:variable name="id" select="substring-after(@ref, '#')"/>
+        <xsl:variable name="person" select="//id(data($id))/tei:persName"/>
+        <a href="{substring-after(@ref, '#')}.html">
+            <xsl:value-of select="$person/tei:surname"/>, <xsl:value-of select="$person/tei:forename"/>
+        </a>
+        <xsl:text>, </xsl:text>
+    </xsl:template>
+    <xsl:template match="tei:citedRange[parent::tei:bibl][ancestor::tei:interp]">
+        <xsl:text>Pages </xsl:text><xsl:value-of select="@from"/>-<xsl:value-of select="@to"/><xsl:text>, </xsl:text>
+    </xsl:template>
+    <xsl:template match="tei:idno[parent::tei:bibl][ancestor::tei:interp]">
+        <xsl:if test="@type='ISBN'">
+            <xsl:text>ISBN: </xsl:text><xsl:value-of select="./text()"/><xsl:text>, </xsl:text>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template match="tei:publisher[parent::tei:bibl][ancestor::tei:interp]">
+        <xsl:apply-templates/><xsl:text>, </xsl:text>
+    </xsl:template>
+    <xsl:template match="tei:pubPlace[parent::tei:bibl][ancestor::tei:interp]">
+        <xsl:apply-templates/><xsl:text>, </xsl:text>
+    </xsl:template>
+    <xsl:template match="tei:date[parent::tei:bibl][ancestor::tei:interp]">
+        <xsl:choose>
+            <xsl:when test="@when-iso">
+                <xsl:value-of select="@when-iso"/>
+            </xsl:when>
+            <xsl:when test="@when">
+                <xsl:value-of select="@when"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="./text()"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:bibl[parent::tei:event][ancestor::tei:interp]">
+        <li><xsl:apply-templates/></li>
+    </xsl:template>
+    <xsl:template match="tei:msIdentifier[parent::tei:bibl][ancestor::tei:interp]">
+        <ul><xsl:apply-templates/></ul>
+    </xsl:template>
+    <xsl:template match="node()[parent::tei:msIdentifier]">
+        <li>
+            <xsl:choose>
+                <xsl:when test="@ref">
+                    <a>
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="concat(substring-after(@ref, '#'), '.html')"/>
+                        </xsl:attribute>
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </li>
     </xsl:template>
     <xsl:template match="tei:listPerson[parent::tei:desc]">
         <ul>
@@ -1042,7 +1106,6 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
     <xsl:template match="tei:handShift">
         <xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 22px;'"/>
         <xsl:variable name="typed" select="'font-family: Courier New, monospace; font-size: 18px;'"/>
@@ -1059,7 +1122,6 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-    
     <xsl:template match="tei:lb">
         <br/>
         <!--<xsl:if test="not(ancestor::tei:note[@type='footnote'])">
@@ -1101,7 +1163,6 @@
         </xsl:if>-->
         
     </xsl:template>
-    
     <xsl:template match="tei:lg">
         <xsl:variable name="hand" select="@hand"/>
         <xsl:variable name="hand2" select="parent::tei:div[@hand]/@hand"/>
@@ -1131,7 +1192,6 @@
         </xsl:choose>
         
     </xsl:template>
-    
     <xsl:template match="tei:l">
         <xsl:apply-templates/>
         <!--

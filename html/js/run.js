@@ -71,14 +71,14 @@ var editor = new LoadEditor({
         },
       },
       {
-        opt: "int",
+        opt: "nte",
         color: "au-brown",
         title: "Comments",
-        html_class: "interp",
+        html_class: "note",
         css_class: "int",
         hide: {
           hidden: true,
-          class: "interp",
+          class: "note",
         },
         chg_citation: "citation-url",
         features: {

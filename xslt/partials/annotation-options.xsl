@@ -56,7 +56,7 @@
                 </ul>
                 <ul class="aot-list">
                     <li >
-                        <annotation-slider opt="int"></annotation-slider>
+                        <annotation-slider opt="nte"></annotation-slider>
                     </li>
                 </ul>
             </div>

@@ -1,5 +1,5 @@
 var comments = document.getElementById("commentary");
-var comment = document.getElementsByClassName("interp");
+var comment = document.getElementsByClassName("note");
 [...comment].forEach((c) => {
   c.addEventListener("click", function () {
     let ref = c.getAttribute("ref").split("#")[1];
