@@ -129,6 +129,17 @@
                                                                         </xsl:with-param>
                                                                     </xsl:call-template>
                                                                 </xsl:when>
+                                                                <xsl:when test="self::tei:div[@type='poem']">
+                                                                    <!--<xsl:value-of select="'secondary below main poem'"/>-->
+                                                                    <xsl:call-template name="text-window">
+                                                                        <xsl:with-param name="hand">
+                                                                            <xsl:value-of select="@hand"/>
+                                                                        </xsl:with-param>
+                                                                        <xsl:with-param name="group">
+                                                                            <xsl:value-of select="'poem'"/>
+                                                                        </xsl:with-param>
+                                                                    </xsl:call-template>
+                                                                </xsl:when>
                                                                 <xsl:otherwise>
                                                                     <!--<xsl:value-of select="'main below main'"/>-->
                                                                     <xsl:call-template name="text-window">
@@ -271,6 +282,9 @@
             </xsl:when>
             <xsl:when test="$group = 'main'">
                 <xsl:apply-templates/>
+            </xsl:when>
+            <xsl:when test="$group = 'poem'">
+                <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | tei:ab[preceding-sibling::tei:pb])"/>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
