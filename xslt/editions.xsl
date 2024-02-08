@@ -443,8 +443,8 @@
                     </div>
                 </div>
             </xsl:for-each>
-            <xsl:for-each select="//tei:*[starts-with(@ana, 'amp-transcript')]">
-                <xsl:variable name="doc-id" select="substring-before(@ana, '#')"/>
+            <xsl:for-each select="//tei:*[starts-with(@ana, 'acdh:amp-transcript')]">
+                <xsl:variable name="doc-id" select="replace(substring-before(@ana, '#'), 'acdh:', '')"/>
                 <xsl:variable name="node-id" select="substring-after(@ana, '#')"/>
                 <xsl:variable name="lookup" select="document(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
                 <xsl:for-each select="$lookup//tei:interp[@xml:id=$node-id]">
