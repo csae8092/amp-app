@@ -362,50 +362,116 @@
         </xsl:choose> 
     </xsl:template>
     <xsl:template match="tei:rs">
+        <xsl:if test="@ref">
+            <xsl:call-template name="verify-if-multiple-values">
+                <xsl:with-param name="attribute" select="@ref"/>
+                <xsl:with-param name="ana" select="'false'"/>
+            </xsl:call-template>
+        </xsl:if>
+        <xsl:if test="@ana">
+            <xsl:call-template name="verify-if-multiple-values">
+                <xsl:with-param name="attribute" select="@ana"/>
+                <xsl:with-param name="ana" select="'true'"/>
+            </xsl:call-template>
+        </xsl:if>
+    </xsl:template>
+    <xsl:template name="verify-if-multiple-values">
+        <xsl:param name="attribute"/>
+        <xsl:param name="ana"/>
         <xsl:choose>
-            <xsl:when test="count(tokenize(@ref, ' ')) > 1">
+            <xsl:when test="count(tokenize($attribute, ' ')) > 1">
                 <xsl:call-template name="entity">
                     <xsl:with-param name="name" select="@type"/>
                     <xsl:with-param name="plural" select="'true'"/>
+                    <xsl:with-param name="attribute" select="$attribute"/>
+                    <xsl:with-param name="ana" select="$ana"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:call-template name="entity">
                     <xsl:with-param name="name" select="@type"/>
                     <xsl:with-param name="plural" select="'false'"/>
+                    <xsl:with-param name="attribute" select="$attribute"/>
+                    <xsl:with-param name="ana" select="$ana"/>
                 </xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>
-        <xsl:if test="@ana">
-            <xsl:choose>
-                <xsl:when test="starts-with(@ana, '#')">
-                    <span class="interp ent" ref="{@ana}">
-                    </span>
-                </xsl:when>
-                <xsl:when test="starts-with(@ana, 'amp-transcript')">
-                    <span class="interp ent" ref="#{substring-after(@ana, '#')}">
-                    </span>
-                </xsl:when>
-            </xsl:choose>
-        </xsl:if>
     </xsl:template>
     <xsl:template name="entity">
         <xsl:param name="name"/>
         <xsl:param name="plural"/>
+        <xsl:param name="attribute"/>
+        <xsl:param name="ana"/>
         <xsl:choose>
             <xsl:when test="$plural='true'">
                 <xsl:apply-templates/>
-                <xsl:for-each select="tokenize(@ref, ' ')">
-                    <sup class="{$name} entity" data-bs-toggle="modal" data-bs-target="{.}">
-                    </sup>
+                <xsl:for-each select="tokenize($attribute, ' ')">
+                    <xsl:call-template name="verify-ref-ana-content">
+                        <xsl:with-param name="attribute" select="."/>
+                        <xsl:with-param name="plural" select="$plural"/>
+                        <xsl:with-param name="ana" select="$ana"/>
+                        <xsl:with-param name="name" select="$name"/>
+                    </xsl:call-template>
                 </xsl:for-each>
             </xsl:when>
             <xsl:otherwise>
-                <span class="{$name} ent" data-bs-toggle="modal" data-bs-target="{@ref}">
-                </span>
+                <xsl:call-template name="verify-ref-ana-content">
+                    <xsl:with-param name="attribute" select="$attribute"/>
+                    <xsl:with-param name="plural" select="$plural"/>
+                    <xsl:with-param name="ana" select="$ana"/>
+                    <xsl:with-param name="name" select="$name"/>
+                </xsl:call-template>
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    <xsl:template name="verify-ref-ana-content">
+        <xsl:param name="attribute"/>
+        <xsl:param name="ana"/>
+        <xsl:param name="name"/>
+        <xsl:param name="plural"/>
+        <span class="{if($ana='true') then('note') else($name)} {if($plural='true') then('entity') else('ent')}">
+            <xsl:choose>
+                <xsl:when test="starts-with($attribute, '#')">
+                    <xsl:choose>
+                        <xsl:when test="$ana = 'true'">
+                            <xsl:attribute name="data-bs-toggle">
+                                <xsl:text>modal</xsl:text>
+                            </xsl:attribute>
+                            <xsl:attribute name="data-bs-target">
+                                <xsl:value-of select="$attribute"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="ref">
+                                <xsl:value-of select="$attribute"/>
+                            </xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:when test="starts-with($attribute, 'amp-transcript') or starts-with($attribute, 'acdh:amp-transcript')">
+                    <!--<xsl:variable name="acdh" select="substring-before(//tei:prefixDef[@ident='acdh']/@replacementPattern, '$1')"/>-->
+                    <xsl:choose>
+                        <xsl:when test="$ana = 'true'">
+                            <xsl:attribute name="data-bs-toggle">
+                                <xsl:text>modal</xsl:text>
+                            </xsl:attribute>
+                            <xsl:attribute name="data-bs-target">
+                                <xsl:value-of select="concat('#', substring-after($attribute, '#'))"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:attribute name="ref">
+                                <xsl:value-of select="concat('#', substring-after($attribute, '#'))"/>
+                            </xsl:attribute>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    
+                </xsl:otherwise>
+            </xsl:choose>
+        </span>
     </xsl:template>
     <xsl:template name="interp">
         <div id="commentary">
@@ -439,7 +505,6 @@
                         <xsl:if test="@source">
                             <p style="margin-top: 1em;">External Evidence: <xsl:value-of select="@source"/></p>
                         </xsl:if>
-                        
                     </div>
                 </div>
             </xsl:for-each>
@@ -454,7 +519,7 @@
                             <button id="{$id}-button" type="button" class="btn-close btn-commentary" aria-label="Close"></button>
                         </div>
                         <div class="comment-body">
-                            <h5><xsl:value-of select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]/text()"/></h5>
+                            <h5><xsl:value-of select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]//text()"/></h5>
                             <xsl:for-each select="./tei:desc">
                                 <p><xsl:apply-templates/></p>
                             </xsl:for-each>
