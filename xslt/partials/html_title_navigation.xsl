@@ -21,7 +21,7 @@
     
     <xsl:template name="header-nav">
         <xsl:variable name="doc_title">
-            <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
+            <xsl:value-of select=".//tei:titleStmt/tei:title[@level='a'][1]/text()"/>
         </xsl:variable>       
         <div class="row" id="title-nav">                                    
             <div class="col-md-12" style="text-align:center;margin-top: 2em;">
