@@ -387,20 +387,20 @@
     </xsl:template>
     <xsl:template match="tei:rs">
         <xsl:if test="@ref">
-            <xsl:call-template name="verify-if-multiple-values">
+            <xsl:call-template name="rs-verify-if-multiple-values">
                 <xsl:with-param name="attribute" select="@ref"/>
                 <xsl:with-param name="ana" select="'false'"/>
             </xsl:call-template>
         </xsl:if>
         <xsl:if test="@ana">
-            <xsl:call-template name="verify-if-multiple-values">
+            <xsl:call-template name="rs-verify-if-multiple-values">
                 <xsl:with-param name="attribute" select="@ana"/>
                 <xsl:with-param name="ana" select="'true'"/>
             </xsl:call-template>
         </xsl:if>
         <xsl:apply-templates/>
     </xsl:template>
-    <xsl:template name="verify-if-multiple-values">
+    <xsl:template name="rs-verify-if-multiple-values">
         <xsl:param name="attribute"/>
         <xsl:param name="ana"/>
         <xsl:choose>
@@ -453,7 +453,7 @@
         <xsl:param name="ana"/>
         <xsl:param name="name"/>
         <xsl:param name="plural"/>
-        <span class="{if($ana='true') then('note') else($name)} {if($plural='true') then('entity') else('ent')} {if(name() = 'quote') then('quote') else()}">
+        <span class="{if($ana='true') then('note') else($name)} {if($plural='true') then('entity') else('ent')} {if(not($name)) then('quote') else()}">
             <xsl:choose>
                 <xsl:when test="starts-with($attribute, '#')">
                     <xsl:choose>
@@ -705,18 +705,28 @@
     <xsl:template match="tei:listBibl[parent::tei:desc]">
         <ul>
             <xsl:for-each select="./tei:bibl">
-                <xsl:variable name="id" select="substring-after(@sameAs, '#')"/>
-                <li>
-                    <a href="{concat($id, '.html')}" alt="Internal Link to Literary Works">
-                        <xsl:value-of select="//id(data($id))/tei:title"/>
-                        <sup>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
-                                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
-                                <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
-                            </svg>
-                        </sup>
-                    </a>
-                </li>
+                <xsl:choose>
+                    <xsl:when test="@sameAs">
+                        <xsl:variable name="id" select="substring-after(@sameAs, '#')"/>
+                        <li>
+                            <xsl:call-template name="ref-verify-if-multiple-values">
+                                <xsl:with-param name="attribute">
+                                    <xsl:value-of select="@sameAs"/>
+                                </xsl:with-param>
+                            </xsl:call-template>
+                        </li>
+                    </xsl:when>
+                    <xsl:when test="@source">
+                        <xsl:variable name="id" select="@source"/>
+                        <li>
+                            <xsl:call-template name="ref-verify-if-multiple-values">
+                                <xsl:with-param name="attribute">
+                                    <xsl:value-of select="@source"/>
+                                </xsl:with-param>
+                            </xsl:call-template>
+                        </li>
+                    </xsl:when>
+                </xsl:choose>
             </xsl:for-each>
         </ul>
     </xsl:template>
@@ -755,37 +765,109 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    <xsl:template name="ref-verify-if-multiple-values">
+        <xsl:param name="attribute"/>
+        <xsl:choose>
+            <xsl:when test="count(tokenize($attribute, ' ')) > 1">
+                <xsl:call-template name="verify-hash-url-namepsace">
+                    <xsl:with-param name="plural" select="'true'"/>
+                    <xsl:with-param name="ref" select="$attribute"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="verify-hash-url-namepsace">
+                    <xsl:with-param name="plural" select="'false'"/>
+                    <xsl:with-param name="ref" select="$attribute"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template name="verify-hash-url-namepsace">
+        <xsl:param name="ref"/>
+        <xsl:param name="plural"/>
+        <xsl:choose>
+            <xsl:when test="$plural='true'">
+                <xsl:apply-templates/>
+                <xsl:for-each select="tokenize($ref, ' ')">
+                    <a>
+                        <xsl:choose>
+                            <xsl:when test="starts-with(., 'http')">
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="."/>
+                                </xsl:attribute>
+                            </xsl:when>
+                            <xsl:when test="starts-with(., '#')">
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="."/>
+                                </xsl:attribute>
+                            </xsl:when>
+                            <xsl:when test="starts-with(., 'acdh:')">
+                                <xsl:attribute name="href">
+                                    <xsl:value-of select="replace(replace(., 'acdh:', ''), '.xml', '.html')"/>
+                                </xsl:attribute>
+                            </xsl:when>
+                        </xsl:choose>
+                        <sup>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                                <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                            </svg>
+                        </sup>
+                    </a>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                <a>
+                    <xsl:choose>
+                        <xsl:when test="starts-with($ref, 'http')">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="$ref"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:when test="starts-with($ref, '#')">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="$ref"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:when test="starts-with($ref, 'acdh:')">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="replace(replace($ref, 'acdh:', ''), '.xml', '.html')"/>
+                            </xsl:attribute>
+                            <xsl:variable name="id" select="substring-after($ref, '#')"/>
+                            <xsl:value-of select="//id(data($id))/tei:title"/>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:apply-templates/>
+                    <sup>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                        </svg>
+                    </sup>
+                </a>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
     <xsl:template match="tei:ref">
-        <a>
-            <xsl:choose>
-                <xsl:when test="starts-with(@target, 'http') or starts-with(@target, '#')">
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="@target"/>
-                    </xsl:attribute>
-                </xsl:when>
-                <xsl:when test="starts-with(@target, 'acdh:')">
-                    <xsl:attribute name="href">
-                        <xsl:value-of select="replace(replace(@target, 'acdh:', ''), '.xml', '.html')"/>
-                    </xsl:attribute>
-                </xsl:when>
-            </xsl:choose>
-            <xsl:apply-templates/>
-            <sup>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
-                    <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
-                    <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
-                </svg>
-            </sup>
-        </a>
+        <xsl:call-template name="ref-verify-if-multiple-values">
+            <xsl:with-param name="attribute">
+                <xsl:value-of select="@target"/>
+            </xsl:with-param>
+        </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:quote[ancestor::tei:body]">
         <xsl:if test="@source">
-            <xsl:call-template name="verify-if-multiple-values">
+            <xsl:call-template name="rs-verify-if-multiple-values">
                 <xsl:with-param name="attribute" select="@source"/>
                 <xsl:with-param name="ana" select="'false'"/>
             </xsl:call-template>
         </xsl:if>
         <xsl:apply-templates/>
+    </xsl:template>
+    <xsl:template match="tei:choice">
+        <abbr title="{./tei:reg}">
+            <xsl:value-of select="./tei:orig"/>
+        </abbr>
     </xsl:template>
     <xsl:template match="tei:quote[ancestor::tei:interp]">
         <a>
@@ -1335,7 +1417,7 @@
     </xsl:template>
     <xsl:template match="tei:l">
         <xsl:if test="@ana">
-            <xsl:call-template name="verify-if-multiple-values">
+            <xsl:call-template name="rs-verify-if-multiple-values">
                 <xsl:with-param name="attribute" select="@ana"/>
                 <xsl:with-param name="ana" select="'true'"/>
             </xsl:call-template>
