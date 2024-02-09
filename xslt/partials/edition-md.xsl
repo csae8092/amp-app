@@ -15,7 +15,6 @@
         <div class="row"> 
             <div class="col-md-8">
                 <div>
-                    
                     <table class="table edition-md">
                       <tr>
                           <th>PID</th>
@@ -108,19 +107,19 @@
                                 <td>
                                     <ul>
                                         <li>
-                                            <xsl:apply-templates select="substring-before(//tei:sourceDesc//tei:history//tei:origDate/@notBefore-iso, 'T')"/>
                                             <xsl:if test="//tei:sourceDesc//tei:history//tei:origDate[@ana]">
-                                                <span class="interp ent" ref="{//tei:sourceDesc//tei:history//tei:origDate/@ana}">
+                                                <span class="note ent" ref="{//tei:sourceDesc//tei:history//tei:origDate/@ana}">
                                                 </span>
                                             </xsl:if>
+                                            <xsl:apply-templates select="substring-before(//tei:sourceDesc//tei:history//tei:origDate/@notBefore-iso, 'T')"/>
                                         </li>
                                         <xsl:if test="//tei:sourceDesc//tei:history//tei:origPlace">
                                             <li>
-                                                <xsl:apply-templates select="//tei:sourceDesc//tei:history//tei:origPlace"/>
                                                 <xsl:if test="//tei:sourceDesc//tei:history//tei:origPlace[@ana]">
-                                                    <span class="interp ent" ref="{//tei:sourceDesc//tei:history//tei:origPlace/@ana}">
+                                                    <span class="note ent" ref="{//tei:sourceDesc//tei:history//tei:origPlace/@ana}">
                                                     </span>
                                                 </xsl:if>
+                                                <xsl:apply-templates select="//tei:sourceDesc//tei:history//tei:origPlace"/>
                                             </li>
                                         </xsl:if>
                                     </ul>
