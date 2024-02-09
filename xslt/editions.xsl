@@ -254,8 +254,17 @@
     <xsl:template match="tei:p[preceding-sibling::tei:p[@prev]]">
         <!-- do not render handled in view-type.xsl -->
     </xsl:template>
-    <xsl:template match="tei:p">
+    <!--<xsl:template match="tei:div[@type]">
         <xsl:variable name="hand" select="@hand"/>
+        <div class="yes-index {if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }"><xsl:apply-templates/></div>
+    </xsl:template>-->
+    <xsl:template match="tei:p">
+        <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
         <p class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
@@ -277,10 +286,40 @@
         <xsl:apply-templates/><br/><br/>
     </xsl:template>
     <xsl:template match="tei:opener">
-        <p class="yes-index"><xsl:apply-templates/></p>
+        <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+        <div class="yes-index {
+            if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }">
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
+    <xsl:template match="tei:postscript">
+        <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+        <div class="yes-index {
+            if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     <xsl:template match="tei:closer[not(preceding-sibling::tei:p[@prev])]">
-        <p class="yes-index"><xsl:apply-templates/></p>
+        <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+        <div class="yes-index {
+            if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }">
+            <xsl:apply-templates/>
+        </div>
     </xsl:template>
     <xsl:template match="tei:closer[preceding-sibling::tei:p[@prev]]">
         <!-- do not render handled in view-type.xsl -->

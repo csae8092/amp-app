@@ -114,7 +114,7 @@
                                                         
                                                         doc 0042 requires additional hanlding tei:ab[preceding-sibling::tei:pb]
                                                     -->
-                                                    <xsl:when test="current-group()[self::tei:div[@type='letter_message']|self::tei:div[@type='poem']]">
+                                                    <xsl:when test="current-group()[self::tei:div[@type='letter_message']|self::tei:div[@type='poem']|self::tei:div[@type='speech']]">
                                                         <xsl:for-each select="current-group()[self::tei:div|self::tei:lg[preceding-sibling::tei:pb]|self::tei:ab[preceding-sibling::tei:pb]]">
                                                             <!--<xsl:value-of select="'main'"/>-->
                                                             <xsl:choose>
@@ -129,7 +129,7 @@
                                                                         </xsl:with-param>
                                                                     </xsl:call-template>
                                                                 </xsl:when>
-                                                                <xsl:when test="self::tei:div[@type='poem']">
+                                                                <xsl:when test="self::tei:div[@type='poem']|self::tei:div[@type='speech']">
                                                                     <!--<xsl:value-of select="'secondary below main poem'"/>-->
                                                                     <xsl:call-template name="text-window">
                                                                         <xsl:with-param name="hand">
@@ -284,7 +284,10 @@
                 <xsl:apply-templates/>
             </xsl:when>
             <xsl:when test="$group = 'poem'">
-                <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | tei:ab[preceding-sibling::tei:pb])"/>
+                <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | 
+                                                            tei:ab[preceding-sibling::tei:pb] | 
+                                                            tei:p[preceding-sibling::tei:pb] |
+                                                            tei:quote[preceding-sibling::tei:pb])"/>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
