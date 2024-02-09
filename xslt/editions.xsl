@@ -398,6 +398,7 @@
                 <xsl:with-param name="ana" select="'true'"/>
             </xsl:call-template>
         </xsl:if>
+        <xsl:apply-templates/>
     </xsl:template>
     <xsl:template name="verify-if-multiple-values">
         <xsl:param name="attribute"/>
@@ -428,7 +429,6 @@
         <xsl:param name="ana"/>
         <xsl:choose>
             <xsl:when test="$plural='true'">
-                <xsl:apply-templates/>
                 <xsl:for-each select="tokenize($attribute, ' ')">
                     <xsl:call-template name="verify-ref-ana-content">
                         <xsl:with-param name="attribute" select="."/>
@@ -445,7 +445,6 @@
                     <xsl:with-param name="ana" select="$ana"/>
                     <xsl:with-param name="name" select="$name"/>
                 </xsl:call-template>
-                <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
