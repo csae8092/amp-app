@@ -55,8 +55,11 @@
                     </li>
                 </ul>
                 <ul class="aot-list">
-                    <li >
+                    <li>
                         <annotation-slider opt="nte"></annotation-slider>
+                    </li>
+                    <li>
+                        <annotation-slider opt="qte"></annotation-slider>
                     </li>
                 </ul>
             </div>

@@ -87,6 +87,22 @@ var editor = new LoadEditor({
         },
       },
       {
+        opt: "qte",
+        color: "light-grey",
+        title: "Quotes",
+        html_class: "quote",
+        css_class: "qte",
+        hide: {
+          hidden: true,
+          class: "quote",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-3",
+        },
+      },
+      {
         opt: "tf",
         opt_slider: "text-features-slider",
         title: "Original text features",
