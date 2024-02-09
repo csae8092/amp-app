@@ -709,6 +709,12 @@
                 <li>
                     <a href="{concat($id, '.html')}" alt="Internal Link to Literary Works">
                         <xsl:value-of select="//id(data($id))/tei:title"/>
+                        <sup>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                                <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                            </svg>
+                        </sup>
                     </a>
                 </li>
             </xsl:for-each>
@@ -716,11 +722,83 @@
     </xsl:template>
     <xsl:template match="tei:bibl[parent::tei:desc][ancestor::tei:interp]">
         <br></br>
-        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="@sameAs">
+                <a>
+                    <xsl:choose>
+                        <xsl:when test="starts-with(@sameAs, 'http') or starts-with(@sameAs, '#')">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="@sameAs"/>
+                            </xsl:attribute>
+                            <xsl:variable name="id" select="substring-after(@sameAs, '#')"/>
+                            <xsl:value-of select="//id(data($id))/tei:title"/>
+                        </xsl:when>
+                        <xsl:when test="starts-with(@sameAs, 'acdh:')">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="replace(replace(@sameAs, 'acdh:', ''), '.xml', '.html')"/>
+                            </xsl:attribute>
+                            <xsl:variable name="id" select="substring-after(@sameAs, '#')"/>
+                            <xsl:value-of select="//id(data($id))/tei:title"/>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:apply-templates/>
+                    <sup>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                        </svg>
+                    </sup>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:ref">
-        <a href="{@target}" target="_blank">
+        <a>
+            <xsl:choose>
+                <xsl:when test="starts-with(@target, 'http') or starts-with(@target, '#')">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="@target"/>
+                    </xsl:attribute>
+                </xsl:when>
+                <xsl:when test="starts-with(@target, 'acdh:')">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="replace(replace(@target, 'acdh:', ''), '.xml', '.html')"/>
+                    </xsl:attribute>
+                </xsl:when>
+            </xsl:choose>
             <xsl:apply-templates/>
+            <sup>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                    <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                    <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                </svg>
+            </sup>
+        </a>
+    </xsl:template>
+    <xsl:template match="tei:quote[ancestor::tei:interp]">
+        <a>
+            <xsl:choose>
+                <xsl:when test="starts-with(@source, 'http') or starts-with(@source, '#')">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="@source"/>
+                    </xsl:attribute>
+                </xsl:when>
+                <xsl:when test="starts-with(@source, 'acdh:')">
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="replace(replace(@source, 'acdh:', ''), '.xml', '.html')"/>
+                    </xsl:attribute>
+                </xsl:when>
+            </xsl:choose>
+            <xsl:apply-templates/>
+            <sup>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                    <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+                    <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+                </svg>
+            </sup>
         </a>
     </xsl:template>
     <xsl:template match="tei:title[parent::tei:bibl][ancestor::tei:interp]">
@@ -732,10 +810,15 @@
         <a href="{substring-after(@ref, '#')}.html">
             <xsl:value-of select="$person/tei:surname"/>, <xsl:value-of select="$person/tei:forename"/>
         </a>
-        <xsl:text>, </xsl:text>
+        <xsl:if test="not(following-sibling::node())">
+            <xsl:text>, </xsl:text>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="tei:citedRange[parent::tei:bibl][ancestor::tei:interp]">
-        <xsl:text>Pages </xsl:text><xsl:value-of select="@from"/>-<xsl:value-of select="@to"/><xsl:text>, </xsl:text>
+        <xsl:value-of select="@from"/>-<xsl:value-of select="@to"/>
+        <xsl:if test="not(following-sibling::node())">
+            <xsl:text>, </xsl:text>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="tei:idno[parent::tei:bibl][ancestor::tei:interp]">
         <xsl:if test="@type='ISBN'">
@@ -749,7 +832,10 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="tei:pubPlace[parent::tei:bibl][ancestor::tei:interp]">
-        <xsl:apply-templates/><xsl:text>, </xsl:text>
+        <xsl:apply-templates/>
+        <xsl:if test="not(following-sibling::node())">
+            <xsl:text>, </xsl:text>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="tei:date[parent::tei:bibl][ancestor::tei:interp]">
         <xsl:choose>
@@ -1239,6 +1325,12 @@
         
     </xsl:template>
     <xsl:template match="tei:l">
+        <xsl:if test="@ana">
+            <xsl:call-template name="verify-if-multiple-values">
+                <xsl:with-param name="attribute" select="@ana"/>
+                <xsl:with-param name="ana" select="'true'"/>
+            </xsl:call-template>
+        </xsl:if>
         <xsl:apply-templates/>
         <!--
         <xsl:choose>
