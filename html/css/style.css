@@ -135,7 +135,7 @@ body {
   vertical-align: middle;
   margin-top: 0 !important;
   border-radius: 0.35rem;
-  background-color: rgba(246, 246, 246, 1);
+  background-color: #b598901a;
   border-radius: 0.35rem;
   min-height: 280px;
   transition: transform 0.2s;
@@ -145,6 +145,8 @@ body {
 
 .index-tile:hover {
   transform: scale(1.02);
+  background-color: #b59890;
+  color: #ffffff;
 }
 
 .index-tile-footer {
@@ -515,12 +517,18 @@ div.dataTables_filter {
 .index-card {
   /*opacity: .6;*/
   transition: transform 0.2s;
-  border: 1px solid #f1f1f1;
   box-shadow: 2px 2px 4.5px 0 rgba(0, 0, 0, 0.1);
+  background-color: #b598901a;
+}
+
+.index-card a:hover {
+  color: #ffffff !important;
 }
 
 .index-card:hover {
   transform: scale(1.02);
+  background-color: #b59890;
+  color: #ffffff !important;
 }
 
 .index-link:hover {
