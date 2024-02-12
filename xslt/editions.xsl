@@ -597,17 +597,17 @@
                         <div class="modal-body">
                             <table>
                                 <tbody>
-                                    <xsl:if test="./tei:ab[@type='participants']/tei:persName">
+                                    <xsl:if test="./tei:listPerson/tei:person">
                                     <tr>
                                         <th>
                                             Participants
                                         </th>
                                         <td>
                                             <ul>
-                                                <xsl:for-each select="./tei:ab[@type='participants']/tei:persName">
+                                                <xsl:for-each select="./tei:listPerson/tei:person">
                                                     <li>
-                                                        <a href="{@key}.html">
-                                                            <xsl:value-of select="."/>
+                                                        <a href="{@sameAs}.html">
+                                                            <xsl:value-of select="./tei:persName"/>
                                                         </a>
                                                     </li>
                                                 </xsl:for-each>
@@ -615,14 +615,14 @@
                                         </td>
                                     </tr>
                                     </xsl:if>
-                                    <xsl:if test="./tei:ab/tei:placeName[@type='located_in_place']">
+                                    <xsl:if test="./tei:listPlace/tei:place[@subtype='is_event_location']">
                                     <tr>
                                         <th>
                                             Located in
                                         </th>
                                         <td>
-                                            <a href="{./tei:ab/tei:placeName[@type='located_in_place']/@key}.html">
-                                                <xsl:value-of select="./tei:ab/tei:placeName[@type='located_in_place']"/>
+                                            <a href="{./tei:listPlace/tei:place[@subtype='is_event_location']/@sameAs}.html">
+                                                <xsl:value-of select="./tei:listPlace/tei:place[@subtype='is_event_location']/tei:placeName"/>
                                             </a>
                                         </td>
                                     </tr>

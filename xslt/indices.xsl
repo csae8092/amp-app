@@ -468,12 +468,12 @@
                                 </xsl:if>
                             </td>
                             <td>
-                                <xsl:if test="./tei:ab[@type='participants']">
+                                <xsl:if test="./tei:listPerson">
                                     <ul>
-                                        <xsl:for-each select="./tei:ab[@type='participants']/tei:persName">
+                                        <xsl:for-each select="./tei:person">
                                             <li>
-                                                <a href="{@key}.html">
-                                                    <xsl:value-of select="."/>
+                                                <a href="{@sameAs}.html" title="{@role}">
+                                                    <xsl:value-of select="./tei:persName"/>
                                                 </a>
                                             </li>
                                         </xsl:for-each>    
@@ -482,9 +482,10 @@
                             </td>
                             <td>
                                 <xsl:choose>
-                                    <xsl:when test="./tei:ab[@type='location']/tei:location[@type='coords']">
-                                        <xsl:variable name="key" select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName/@key"/>
-                                        <xsl:variable name="coords" select="tokenize(./tei:ab[@type='location']/tei:location[@type='coords']/tei:geo, ', ')"/>
+                                    <xsl:when test="./tei:listPlace/tei:place[@subtype='is_event_location']/tei:location[@type='coords']">
+                                        <xsl:variable name="base" select="./tei:listPlace/tei:place[@subtype='is_event_location']"/>
+                                        <xsl:variable name="key" select="$base/@sameAs"/>
+                                        <xsl:variable name="coords" select="tokenize($base/tei:location[@type='coords']/tei:geo, ', ')"/>
                                         <a href="{$key}.html"
                                             class="map-coordinates" 
                                             lat="{$coords[1]}"
@@ -492,14 +493,15 @@
                                             data-count="{$count}"
                                             data-id="{$key}"
                                             title="{./tei:label}"
-                                            subtitle="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName}">
-                                            <xsl:value-of select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName"/>
+                                            subtitle="{$base/tei:placeName}">
+                                            <xsl:value-of select="$base/tei:placeName"/>
                                         </a>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:if test="./tei:ab[@type='location']/tei:location[@type='located_in_place']">
-                                        <a href="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName/@key}.html">
-                                            <xsl:value-of select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName"/>
+                                        <xsl:variable name="base" select="./tei:listPlace/tei:place[@subtype='is_event_location']"/>
+                                        <xsl:if test="$base">
+                                        <a href="{$base/@sameAs}.html">
+                                            <xsl:value-of select="$base/tei:placeName"/>
                                         </a>
                                         </xsl:if>
                                     </xsl:otherwise>

@@ -52,28 +52,28 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="@when">
+                                                <xsl:if test="@notAfter-iso">
                                                     <tr>
                                                         <th>
                                                             Date
                                                         </th>
                                                         <td>
-                                                            <xsl:value-of select="@when"/>
+                                                            <xsl:value-of select="@notAfter-iso"/>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:ab[@type='participants']">
+                                                <xsl:if test="./tei:listPerson/tei:person">
                                                     <tr>
                                                         <th>
                                                             Participants
                                                         </th>
                                                         <td>
                                                             <ul>
-                                                                <xsl:for-each select="./tei:ab[@type='participants']/tei:persName">
+                                                                <xsl:for-each select="./tei:listPerson/tei:person">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{@key}.html">
-                                                                            <xsl:value-of select="."/>
+                                                                        <a href="{@sameAs}.html" title="{@role}">
+                                                                            <xsl:value-of select="./tei:persName"/>
                                                                         </a>
                                                                     </li>
                                                                 </xsl:for-each>
@@ -81,25 +81,35 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:ab[@type='location']">
+                                                <xsl:if test="./tei:listPlace/tei:place[@subtype='is_event_location']">
                                                     <tr>
                                                         <th>
                                                             Located in
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName/@key}.html">
-                                                                <xsl:value-of select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName"/>
+                                                            <a href="{./tei:listPlace/tei:place[@subtype='is_event_location']/@sameAs}.html">
+                                                                <xsl:value-of select="./tei:listPlace/tei:place[@subtype='is_event_location']/tei:placeName"/>
                                                             </a>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:desc">
+                                                <xsl:if test="@type">
                                                     <tr>
                                                         <th>
-                                                            Description
+                                                            Type
                                                         </th>
                                                         <td>
-                                                            <xsl:value-of select="./tei:desc"/>
+                                                            <xsl:value-of select="@type"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="@subtype">
+                                                    <tr>
+                                                        <th>
+                                                            Subtype
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="@subtype"/>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
