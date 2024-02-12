@@ -139,8 +139,8 @@
             </div>
         </div>
         <!-- #wrapper-footer-full -->
-        <div class="footer-imprint-bar hide-reading" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;" >
-            <span>© Copyright OEAW</span> | <a href="imprint.html">Impressum/Imprint</a>
+        <div class="footer-imprint-bar hide-reading text-light" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;" >
+            <span>© Copyright OEAW</span> | <a href="imprint.html" class="text-light">Impressum/Imprint</a>
         </div>
         <div id="cookie-overlay">
             <div class="container">

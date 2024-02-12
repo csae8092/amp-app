@@ -80,11 +80,11 @@ body {
   max-width: 550px;
 }
 
-nav {
+#wrapper-navbar {
   transition: 0.2s;
 }
 
-nav.hiddenNav {
+#wrapper-navbar.hiddenNav {
   transform: translate3d(0, -100%, 0);
 }
 
@@ -451,9 +451,13 @@ div.dataTables_filter {
 
 /* main navigation */
 
+#wrapper-navbar {
+  background-color: #ffffff;
+}
+
 .navbar {
   border-bottom: 5px solid #615a60 !important;
-  background-color: #fff;
+  background-color: #b598901a;
   overflow: visible;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -1419,6 +1423,10 @@ td > label {
 
 .badge-link:hover {
   color: #b59890;
+}
+
+#wrapper-footer-secondary {
+  background-color: #00122f;
 }
 
 /* XML raw style */

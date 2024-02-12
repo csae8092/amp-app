@@ -135,7 +135,7 @@
                                                                 <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;eve=on">
                                                                             <xsl:value-of select="."/>
                                                                         </a>
                                                                     </li>
@@ -308,7 +308,7 @@
                                                             <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                 <xsl:sort select="." order="ascending"/>
                                                                 <li>
-                                                                    <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                    <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;prs=on">
                                                                         <xsl:value-of select="."/>
                                                                     </a>
                                                                 </li>
@@ -474,7 +474,7 @@
                                                                 <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;plc=on">
                                                                             <xsl:value-of select="."/>
                                                                         </a>
                                                                     </li>
@@ -621,7 +621,7 @@
                                                                 <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;wrk=on">
                                                                             <xsl:value-of select="."/>
                                                                         </a>
                                                                     </li>
@@ -751,7 +751,7 @@
                                                                 <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;org=on">
                                                                             <xsl:value-of select="."/>
                                                                         </a>
                                                                     </li>
