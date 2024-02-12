@@ -505,7 +505,14 @@
                         <button id="{$id}-button" type="button" class="btn-close btn-commentary" aria-label="Close"></button>
                     </div>
                     <div class="comment-body">
-                        <h5><xsl:value-of select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]//text()"/></h5>
+                        <h5>
+                            <xsl:for-each select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]">
+                                <xsl:value-of select=".//text()"/>
+                                <xsl:if test="position() != last()">
+                                    <xsl:text> | </xsl:text>
+                                </xsl:if>
+                            </xsl:for-each>
+                        </h5>
                         <xsl:for-each select="./tei:desc">
                             <p><xsl:apply-templates/></p>
                         </xsl:for-each>
@@ -542,7 +549,14 @@
                             <button id="{$id}-button" type="button" class="btn-close btn-commentary" aria-label="Close"></button>
                         </div>
                         <div class="comment-body">
-                            <h5><xsl:value-of select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]//text()"/></h5>
+                            <h5>
+                                <xsl:for-each select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]">
+                                    <xsl:value-of select=".//text()"/>
+                                    <xsl:if test="position() != last()">
+                                        <xsl:text> | </xsl:text>
+                                    </xsl:if>
+                                </xsl:for-each>
+                            </h5>
                             <xsl:for-each select="./tei:desc">
                                 <p><xsl:apply-templates/></p>
                             </xsl:for-each>
