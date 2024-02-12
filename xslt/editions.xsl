@@ -427,6 +427,7 @@
         <xsl:param name="plural"/>
         <xsl:param name="attribute"/>
         <xsl:param name="ana"/>
+        <xsl:variable name="node" select="name()"/>
         <xsl:choose>
             <xsl:when test="$plural='true'">
                 <xsl:for-each select="tokenize($attribute, ' ')">
@@ -434,7 +435,7 @@
                         <xsl:with-param name="attribute" select="."/>
                         <xsl:with-param name="plural" select="$plural"/>
                         <xsl:with-param name="ana" select="$ana"/>
-                        <xsl:with-param name="name" select="$name"/>
+                        <xsl:with-param name="name" select="if($name) then($name) else($node)"/>
                     </xsl:call-template>
                 </xsl:for-each>
             </xsl:when>
@@ -443,7 +444,7 @@
                     <xsl:with-param name="attribute" select="$attribute"/>
                     <xsl:with-param name="plural" select="$plural"/>
                     <xsl:with-param name="ana" select="$ana"/>
-                    <xsl:with-param name="name" select="$name"/>
+                    <xsl:with-param name="name" select="if($name) then($name) else($node)"/>
                 </xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>
@@ -453,7 +454,7 @@
         <xsl:param name="ana"/>
         <xsl:param name="name"/>
         <xsl:param name="plural"/>
-        <span class="{if($ana='true') then('note') else($name)} {if($plural='true') then('entity') else('ent')} {if(not($name)) then('quote') else()}">
+        <span class="{if($ana='true') then('note') else($name)} {if($plural='true') then('entity') else('ent')}">
             <xsl:choose>
                 <xsl:when test="starts-with($attribute, '#')">
                     <xsl:choose>
