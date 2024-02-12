@@ -470,7 +470,7 @@
                             <td>
                                 <xsl:if test="./tei:listPerson">
                                     <ul>
-                                        <xsl:for-each select="./tei:person">
+                                        <xsl:for-each select="./tei:listPerson/tei:person">
                                             <li>
                                                 <a href="{@sameAs}.html" title="{@role}">
                                                     <xsl:value-of select="./tei:persName"/>
