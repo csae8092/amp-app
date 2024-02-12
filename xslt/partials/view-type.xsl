@@ -55,14 +55,15 @@
                             however, only in envelope there is no further div container
                             second xpath loads div letter_message or poem
                         -->
+                        <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
-                            id="paginate-{position()}" 
+                            id="paginate-{$positionOrNot}" 
                             tabindex="-1">
                             
-                            <div id="container-resize-{position()}" class="transcript row">  
+                            <div id="container-resize-{$positionOrNot}" class="transcript row">  
                                 
-                                <div id="text-resize-{position()}" class="text-re col-md-8">
+                                <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
                                     <div class="card-body">
                                         <xsl:if test="@type='cv_sheet'">
                                             <img class="card-img-right flex-auto d-md-block"
@@ -175,7 +176,9 @@
                                         </xsl:choose>
                                     </div>
                                 </div>
-                                <xsl:call-template name="img-window"/>
+                                <xsl:call-template name="img-window">
+                                    <xsl:with-param name="positionOrNot" select="$positionOrNot"/>
+                                </xsl:call-template>
                             </div>
                         </div>
                     </xsl:for-each-group>
@@ -184,17 +187,18 @@
                     <!-- 
                         2nd grouping loading first level div elements that do not container another sublevel div
                     -->
-                    <xsl:for-each-group select="*" group-starting-with="tei:pb">                                  
+                    <xsl:for-each-group select="*" group-starting-with="tei:pb">  
+                        <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
-                            id="paginate-{position()}" 
+                            id="paginate-{$positionOrNot}" 
                             tabindex="-1">
                             
                             <!--<window-resize opt="resizing" pos="{position()}" size="0.755"></window-resize>-->
                             
-                            <div id="container-resize-{position()}" class="transcript row">  
+                            <div id="container-resize-{$positionOrNot}" class="transcript row">  
                                 
-                                <div id="text-resize-{position()}" class="text-re col-md-8">
+                                <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
                                     <div class="card-body">
                                         <xsl:if test="@type='cv_sheet'">
                                             <img class="card-img-right flex-auto d-md-block"
@@ -215,7 +219,9 @@
                                         </xsl:for-each>
                                     </div>
                                 </div>
-                                <xsl:call-template name="img-window"/>
+                                <xsl:call-template name="img-window">
+                                    <xsl:with-param name="positionOrNot" select="$positionOrNot"/>
+                                </xsl:call-template>
                             </div>
                         </div>                                                         
                     </xsl:for-each-group>
@@ -233,12 +239,13 @@
         
     </xsl:template>
     <xsl:template name="img-window">
-        <div id="img-resize-{position()}"
+        <xsl:param name="positionOrNot"/>
+        <div id="img-resize-{$positionOrNot}"
             class="col-md-4 card-header osd-viewer"
             style="padding: 1em;background-color: #dedede;">                                                                              
-            <xsl:variable name="osd_container_id" select="concat(@type, '_container_', position())"/>
-            <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', position())"/>
-            <div id="viewer-{position()}">
+            <xsl:variable name="osd_container_id" select="concat(@type, '_container_', $positionOrNot)"/>
+            <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', $positionOrNot)"/>
+            <div id="viewer-{$positionOrNot}">
                 <div id="spinner_{$osd_container_id}" class="text-center">
                     <div class="loader"></div>
                 </div>
@@ -251,7 +258,7 @@
                                 opt="image-loader"
                                 data-type="{@type}"
                                 data-source="{$facs_item}" 
-                                pos="{position()}">
+                                pos="{$positionOrNot}">
                             </image-loader>                                                       
                         </xsl:if>     
                     </div>                                
