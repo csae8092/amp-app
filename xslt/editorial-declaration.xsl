@@ -27,18 +27,11 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">  
-                        <div class="card">
-                            <div class="card-header">
-                                <h1><xsl:value-of select="$doc_title"/></h1>
-                            </div>                          
-                             <div class="card-body">                      
-                                 <div class="col-md-12">
-                                     <div class="col-md-12">
-                                         <xsl:apply-templates select="//tei:body/tei:div/tei:div"/>   
-                                     </div>           
-                                 </div>                                                             
-                             </div>
-                        </div>
+
+                         <div class="my-4">
+                             <h1><xsl:value-of select="$doc_title"/></h1>
+                             <xsl:apply-templates select="//tei:body/tei:div/tei:div"/>   
+                         </div>           
                     </div>
                     <xsl:call-template name="html_footer"/>
                 </div>

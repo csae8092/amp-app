@@ -57,7 +57,7 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">  
-                        <div class="card">
+                        <div class="card detail-card">
                             <div class="editor-options">
                                 <div class="card-footer editor-back-link">
                                     <a alt="Internal Link to the Table of Contents" class="btn-back-link">

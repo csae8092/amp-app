@@ -26,12 +26,11 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">
-                        <div style="margin: 2em auto; text-align:center;">
+                        <div class="my-4">
                             <h1><xsl:value-of select="//tei:body/tei:div[1]"/></h1>
-                        </div>
-                        <div class="card">
                             <xsl:apply-templates select="//tei:body"/>
                         </div>
+                            
                     </div>
                     
                     <xsl:call-template name="html_footer"/>

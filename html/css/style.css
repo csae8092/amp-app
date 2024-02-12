@@ -1,15 +1,3 @@
-body {
-  /*background: url("../images/letter-background.png") 0 0 repeat;*/
-}
-
-/*.card-header {
-    background: url("../images/letter-background.png") 0 0 repeat;    
-}
-
-.card-footer {
-    background: url("../images/letter-background.png") 0 0 repeat;
-}*/
-
 #footnotes li,
 #endnotes li {
   list-style: none;
@@ -512,17 +500,32 @@ div.dataTables_filter {
   border-radius: 0.5rem;
   word-wrap: break-word;
   word-break: break-word;
+  background-color: #b598901a;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.tab-content {
+  background-color: #ffffff !important;
 }
 
 .index-card {
   /*opacity: .6;*/
   transition: transform 0.2s;
   box-shadow: 2px 2px 4.5px 0 rgba(0, 0, 0, 0.1);
-  background-color: #b598901a;
+  min-height: 520px;
+  justify-content: space-between;
 }
 
 .index-card a:hover {
   color: #ffffff !important;
+}
+
+.accordion-item {
+  --bs-accordion-btn-bg: transparent;
+  background-color: transparent;
 }
 
 .index-card:hover {
@@ -857,7 +860,6 @@ a.btn-round:hover {
 
 .container-fluid {
   max-width: 1200px;
-  margin-bottom: 1em;
 }
 
 .container {
@@ -1179,6 +1181,20 @@ div.text-re div.card-body {
   justify-content: center;
 }
 
+.card-body,
+.card-header,
+.card-footer {
+  background-color: transparent !important;
+}
+
+.card-header.img {
+  background-color: #000 !important;
+}
+
+.index-card .card-footer {
+  align-self: baseline;
+}
+
 /* expanding and descreasing osd images */
 .expand-wrapper {
   cursor: col-resize;
@@ -1256,7 +1272,6 @@ div.text-re div.card-body {
   margin: 0 auto;
   text-align: center;
   display: block;
-  background-color: #fff;
 }
 
 .pagination-top > .pagination .nav {

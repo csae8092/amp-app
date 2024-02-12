@@ -21,13 +21,13 @@
             <xsl:value-of select="document-uri(/)"/>
         </xsl:variable>
         <!--<xsl:variable name="date" select="//tei:correspAction/tei:date/@when-iso"/>-->
-        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2">
+        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 index-card-wrapper">
             <div class="card index-card">
                 <a>
                     <xsl:attribute name="href">
                         <xsl:value-of select="concat(replace(tokenize($full_path, '/')[last()], '.xml', '.html?img='), $img)"/>
                     </xsl:attribute>
-                    <div class="card-body" style="border-radius: 0.5rem 0.5rem 0 0; height: 250px; overflow: hidden; background-color: #000; display: flex; align-items: center;">
+                    <div class="card-header img" style="border-radius: 0.5rem 0.5rem 0 0; height: 250px; overflow: hidden; background-color: #000; display: flex; align-items: center;">
                         <xsl:choose>
                             <xsl:when test=".//tei:body/tei:div[1]/tei:pb[1]">
                                 <xsl:variable name="facs_item" select="tokenize(.//tei:body/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>

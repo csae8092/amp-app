@@ -26,32 +26,28 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     
-                    <div class="container-fluid">  
-                        <div class="card">
-                            <div class="card-header">
-                                <h1><xsl:value-of select="$doc_title"/></h1>
-                            </div>                          
-                             <div class="card-body">
-                                 <div class="row">
-                                     <div class="col-md-6">
-                                         <xsl:apply-templates select="//tei:body/tei:div/tei:p"/>
-                                         <xsl:apply-templates select="//tei:div/tei:div[1]"/>
-                                     </div>
-                                     <div class="col-md-6">
-                                         <div class="flex-md-row mb-4 align-items-center">
-                                             <xsl:variable name="img" select="replace(//tei:figure/tei:graphic/@url, '../images', 'images')"/>
-                                             <img class="card-img-right flex-auto d-md-block" src="{replace($img, '.JPG', '_800x1128.JPG')}" alt="{//tei:figure/tei:head}"/>
-                                             <p style="text-align:right;"><small><xsl:value-of select="//tei:figure/tei:figDesc"/></small></p>
-                                         </div>
+                    <div class="container-fluid">
+                        <div class="my-4">
+                            <h1><xsl:value-of select="$doc_title"/></h1>
+                             <div class="row">
+                                 <div class="col-md-6">
+                                     <xsl:apply-templates select="//tei:body/tei:div/tei:p"/>
+                                     <xsl:apply-templates select="//tei:div/tei:div[1]"/>
+                                 </div>
+                                 <div class="col-md-6">
+                                     <div class="flex-md-row mb-4 align-items-center">
+                                         <xsl:variable name="img" select="replace(//tei:figure/tei:graphic/@url, '../images', 'images')"/>
+                                         <img class="card-img-right flex-auto d-md-block" src="{replace($img, '.JPG', '_800x1128.JPG')}" alt="{//tei:figure/tei:head}"/>
+                                         <p style="text-align:right;"><small><xsl:value-of select="//tei:figure/tei:figDesc"/></small></p>
                                      </div>
                                  </div>
-                                 <div class="row">
-                                     <div class="col-md-12">
-                                         <xsl:apply-templates select="//tei:div/tei:div[2]"/>
-                                         <xsl:apply-templates select="//tei:div/tei:div[3]"/>
-                                     </div>
-                                 </div>                                 
                              </div>
+                             <div class="row">
+                                 <div class="col-md-12">
+                                     <xsl:apply-templates select="//tei:div/tei:div[2]"/>
+                                     <xsl:apply-templates select="//tei:div/tei:div[3]"/>
+                                 </div>
+                             </div>   
                         </div>
                     </div>
                     <xsl:call-template name="html_footer"/>

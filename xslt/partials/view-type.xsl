@@ -241,8 +241,7 @@
     <xsl:template name="img-window">
         <xsl:param name="positionOrNot"/>
         <div id="img-resize-{$positionOrNot}"
-            class="col-md-4 card-header osd-viewer"
-            style="padding: 1em;background-color: #dedede;">                                                                              
+            class="col-md-4 card-body osd-viewer">                                                                              
             <xsl:variable name="osd_container_id" select="concat(@type, '_container_', $positionOrNot)"/>
             <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', $positionOrNot)"/>
             <div id="viewer-{$positionOrNot}">
