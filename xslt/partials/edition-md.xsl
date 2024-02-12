@@ -170,11 +170,11 @@
                                    'Frühwirth Timo, ',
                                    'Grigoriou Dimitra, ',
                                    'Mayer Sandra, ',
-                                   ', Mendelson Edward and Neundlinger Helmut')"/>
+                                   'Mendelson Edward and Neundlinger Helmut')"/>
                                <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
                                <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
                                    amp.acdh.oeaw.ac.at
-                               </a><xsl:text>.</xsl:text>                                                         
+                               </a><xsl:text>.</xsl:text>
                            </td> 
                        </tr>
                     </table>
