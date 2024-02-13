@@ -158,11 +158,11 @@ for x in tqdm(files, total=len(files)):
         record['page_int'] = int(pages)
         record['page_str'] = str(facs_page)
         if corresp:
-            record["document_type"] = "correspondence"
+            record["document_type"] = ["correspondence"]
         elif photo:
-            record["document_type"] = "photograph"
+            record["document_type"] = ["photograph"]
         else:
-            record["document_type"] = "other"
+            record["document_type"] = ["other"]
         record['id'] = os.path.split(x)[-1].replace('.xml', f".html?tab={str(pages)}")
         cfts_record['id'] = record['id']
         cfts_record['resolver'] = f"https://amp.acdh.oeaw.ac.at/{record['id']}"
