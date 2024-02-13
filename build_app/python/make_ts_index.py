@@ -146,8 +146,7 @@ for x in tqdm(files, total=len(files)):
         p_group = f""".//tei:body/tei:div/tei:p[preceding-sibling::tei:pb[1]/@facs='{facs_id}']|
                       .//tei:body/tei:div/tei:lg[preceding-sibling::tei:pb[1]/@facs='{facs_id}']|
                       .//tei:body/tei:div/tei:div/tei:ab[preceding-sibling::tei:pb[1]/@facs='{facs_id}']|
-                      .//tei:body/tei:div/tei:div/tei:div[preceding-sibling::tei:pb[1]/@facs='{facs_id}']|
-                      .//tei:body/tei:div/tei:div/tei:div/node()[preceding-sibling::tei:pb[1]/@facs='{facs_id}']"""
+                      .//tei:body/tei:div/tei:div/tei:div[preceding-sibling::tei:pb[1]/@facs='{facs_id}']"""
         body = doc.any_xpath(p_group)
         cfts_record = {
             'project': 'amp',
