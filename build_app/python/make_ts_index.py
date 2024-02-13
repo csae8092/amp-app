@@ -66,6 +66,12 @@ current_schema = {
             'optional': True
         },
         {
+            'name': 'events',
+            'type': 'string[]',
+            'facet': True,
+            'optional': True
+        },
+        {
             'name': 'document_type',
             'type': 'string[]',
             'optional': True,
@@ -209,6 +215,11 @@ for x in tqdm(files, total=len(files)):
             ent_node = "bibl"
             record['works'] = get_entities(ent_type=ent_type, ent_node=ent_node, ent_name=ent_name)
             cfts_record['works'] = record['works']
+            # get unique bibls per page
+            ent_type = "event"
+            ent_name = "label"
+            record['events'] = get_entities(ent_type=ent_type, ent_node=ent_type, ent_name=ent_name)
+            cfts_record['events'] = record['events']
             record['full_text'] = "\n".join(" ".join("".join(p.itertext()).split()) for p in body)
             if len(record['full_text']) > 0:
                 records.append(record)
