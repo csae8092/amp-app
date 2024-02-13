@@ -130,10 +130,11 @@ for x in tqdm(files, total=len(files)):
     try:
         corresp = doc.any_xpath('.//tei:text[@type="letter"]')[0]
     except IndexError:
+        corresp = False
         try:
             photo = doc.any_xpath('.//tei:text[@type="photograph"]')[0]
         except IndexError:
-            continue
+            photo = False
     facs = doc.any_xpath('.//tei:body/tei:div//tei:pb')
     pages = 1
     for v in facs:
