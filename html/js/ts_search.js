@@ -1,3 +1,15 @@
+var project_collection_name = "amp";
+const img_url = "https://iiif.acdh.oeaw.ac.at/iiif/images/amp/";
+
+function makeImgUrl(hit) {
+  let hitImage = hit.image;
+  if (hitImage.length > 0) {
+    return img_url + hitImage + ".jp2/full/,300/0/default.jpg";
+  } else {
+    return "no image avaliable";
+  }
+}
+
 const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
   server: {
     apiKey: "ItDIbHdyx8VIgjYJjmO23EhFh2f6lUXJ", // Be sure to use an API key that only allows searches, in production
@@ -8,14 +20,6 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
         protocol: "https",
       },
     ],
-    // apiKey: "xyz", // Be sure to use an API key that only allows searches, in production
-    // nodes: [
-    //   {
-    //     host: "0.0.0.0",
-    //     port: "8108",
-    //     protocol: "http",
-    //   },
-    // ],
   },
   // The following parameters are directly passed to Typesense's search API endpoint.
   //  So you can pass any parameters supported by the search endpoint below.
@@ -30,7 +34,7 @@ const typesenseInstantsearchAdapter = new TypesenseInstantSearchAdapter({
 const searchClient = typesenseInstantsearchAdapter.searchClient;
 const search = instantsearch({
   searchClient,
-  indexName: "amp",
+  indexName: project_collection_name,
   routing: true,
 });
 
@@ -39,8 +43,7 @@ search.addWidgets([
     container: "#searchbox",
     autofocus: true,
     cssClasses: {
-      form: "form-inline",
-      input: "form-control col-md-11",
+      input: "form-control col-md-12",
       submit: "btn",
       reset: "btn",
     },
@@ -48,35 +51,224 @@ search.addWidgets([
 
   instantsearch.widgets.hits({
     container: "#hits",
+    cssClasses: {
+      item: "w-20 border border-light rounded m-2 p-2 d-flex flex-column hover-shadow",
+    },
     templates: {
       empty: "No results for <q>{{ query }}</q>",
-      item: `
-              <h5><a href="{{ id }}">{{#helpers.snippet}}{ "attribute": "title", "highlightedTagName": "mark" }{{/helpers.snippet}}</a></h5>
-              <p style="overflow:hidden;max-height:210px;">{{#helpers.snippet}}{ "attribute": "full_text", "highlightedTagName": "mark" }{{/helpers.snippet}}</p>
-              <h5><span class="badge badge-primary">{{ project }}</span></h5>
-              <div>
-                  <div>
-                      {{#persons}}
-                      <span class="badge badge-secondary">{{ . }}</span>
-                      {{/persons}}
-                  </div>
-                  <div>
-                      {{#works}}
-                      <span class="badge badge-success">{{ . }}</span>
-                      {{/works}}
-                  </div>
-                  <div>
-                      {{#places}}
-                      <span class="badge badge-info">{{ . }}</span>
-                      {{/places}}
-                  </div>
-                  <div>
-                      {{#orgs}}
-                      <span class="badge badge-info">{{ . }}</span>
-                      {{/orgs}}
-                  </div>
+      item(hit, { html, components }) {
+        return html`
+          <div class="row align-items-center">
+            <div class="col-md-12 m-0">
+              <h5
+                class="${hit._snippetResult.full_text.matchedWords.length > 0
+                  ? "show"
+                  : "fade"}"
+              >
+                Keywords in Context:
+              </h5>
+              <p
+                class="${hit._snippetResult.full_text.matchedWords.length > 0
+                  ? "py-4"
+                  : "p-0 m-0"}"
+              >
+                ${hit._snippetResult.full_text.matchedWords.length > 0
+                  ? components.Snippet({ hit, attribute: "full_text" })
+                  : ""}
+              </p>
+            </div>
+            <div class="col-md-4">
+              <a
+                class="text-decoration-none text-dark"
+                href="${hit.id}?tab=${hit.page_str}&img=off"
+                aria-label="Link zu Dokument: ${hit.title}"
+              >
+                <img
+                  src="${makeImgUrl(hit)}"
+                  class="img-thumbnail"
+                  alt="Image of ${hit.title}"
+                />
+              </a>
+            </div>
+            <div class="col-md-8">
+              <table class="table table-sm">
+                <tr>
+                  <td><em>Title:</em></td>
+                  <td>${hit.title}</td>
+                </tr>
+                <tr>
+                  <td><em>Page:</em></td>
+                  <td>${hit.page_str}</td>
+                </tr>
+                <tr>
+                  <td><em>Year:</em></td>
+                  <td>${hit.year}</td>
+                </tr>
+                <tr>
+                  <td><em>Type:</em></td>
+                  <td>${hit.document_type[0]}</td>
+                </tr>
+                <tr>
+                  <td><em>Comments:</em></td>
+                  <td>${hit.comments_count}</td>
+                </tr>
+              </table>
+              <div class="d-flex justify-content-between fade">
+                <a class="btn btn-secondary btn-sm deactivated">Show more</a>
               </div>
-          `,
+              <table class="table table-sm table-ais fade" id="table-ais-show">
+                <tr class="${hit.persons.length > 0 ? "show" : "fade"}">
+                  <td><em>Persons:</em></td>
+                  <td>
+                    <ul>
+                      ${hit.persons.map(
+                        (item) =>
+                          html`<li>
+                            <span
+                              style="overflow:hidden;"
+                              class="text-break badge rounded-pill m-1 bg-secondary"
+                              >${item}</span
+                            >
+                          </li>`
+                      )}
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="${hit.places.length > 0 ? "show" : "fade"}">
+                  <td><em>Places:</em></td>
+                  <td>
+                    <ul>
+                      ${hit.places.map(
+                        (item) =>
+                          html`<li>
+                            <span
+                              style="overflow:hidden;"
+                              class="text-break badge rounded-pill m-1 bg-primary"
+                              >${item}</span
+                            >
+                          </li>`
+                      )}
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="${hit.orgs.length > 0 ? "show" : "fade"}">
+                  <td><em>Institutions:</em></td>
+                  <td>
+                    <ul>
+                      ${hit.orgs.map(
+                        (item) =>
+                          html`<li>
+                            <span
+                              style="overflow:hidden;"
+                              class="text-break badge rounded-pill m-1 bg-info"
+                              >${item}</span
+                            >
+                          </li>`
+                      )}
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="${hit.works.length > 0 ? "show" : "fade"}">
+                  <td><em>Works:</em></td>
+                  <td>
+                    <ul>
+                      ${hit.works.map(
+                        (item) =>
+                          html`<li>
+                            <span
+                              style="overflow:hidden;"
+                              class="text-break badge rounded-pill m-1 bg-success"
+                              >${item}</span
+                            >
+                          </li>`
+                      )}
+                    </ul>
+                  </td>
+                </tr>
+                <tr class="${hit.events.length > 0 ? "show" : "fade"}">
+                  <td><em>Events:</em></td>
+                  <td>
+                    <ul>
+                      ${hit.events.map(
+                        (item) =>
+                          html`<li>
+                            <span
+                              style="overflow:hidden;"
+                              class="text-break badge rounded-pill m-1 bg-danger"
+                              >${item}</span
+                            >
+                          </li>`
+                      )}
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        `;
+      },
+    },
+  }),
+
+  instantsearch.widgets.menu({
+    container: "#document_type",
+    attribute: "document_type",
+  }),
+
+  // instantsearch.widgets.hits({
+  //   container: "#hits",
+  //   templates: {
+  //     empty: "No results for <q>{{ query }}</q>",
+  //     item: `
+  //             <h5><a href="{{ id }}">{{#helpers.snippet}}{ "attribute": "title", "highlightedTagName": "mark" }{{/helpers.snippet}}</a></h5>
+  //             <p style="overflow:hidden;max-height:210px;">{{#helpers.snippet}}{ "attribute": "full_text", "highlightedTagName": "mark" }{{/helpers.snippet}}</p>
+  //             <h5><span class="badge badge-primary">{{ project }}</span></h5>
+  //             <div>
+  //                 <div>
+  //                     {{#persons}}
+  //                     <span class="badge badge-secondary">{{ . }}</span>
+  //                     {{/persons}}
+  //                 </div>
+  //                 <div>
+  //                     {{#works}}
+  //                     <span class="badge badge-success">{{ . }}</span>
+  //                     {{/works}}
+  //                 </div>
+  //                 <div>
+  //                     {{#places}}
+  //                     <span class="badge badge-info">{{ . }}</span>
+  //                     {{/places}}
+  //                 </div>
+  //                 <div>
+  //                     {{#orgs}}
+  //                     <span class="badge badge-info">{{ . }}</span>
+  //                     {{/orgs}}
+  //                 </div>
+  //             </div>
+  //         `,
+  //   },
+  // }),
+
+  instantsearch.widgets.refinementList({
+    container: "#has-comments",
+    attribute: "comments_bool",
+    searchable: false,
+    transformItems(items) {
+      return items.map((item) => ({
+        ...item,
+        highlighted: (item.highlighted =
+          item.label === "true" ? "with comments" : "without comments"),
+      }));
+    },
+    cssClasses: {
+      searchableInput: "form-control form-control-sm m-2 border-light-2",
+      searchableSubmit: "d-none",
+      searchableReset: "d-none",
+      showMore: "btn btn-secondary btn-sm align-content-center",
+      list: "list-unstyled",
+      count: "badge d-flex align-self-end m-2 badge-secondary hideme ",
+      label: "d-flex align-items-start text-left",
+      checkbox: "m-2",
     },
   }),
 
@@ -168,8 +360,25 @@ search.addWidgets([
     },
   }),
 
+  instantsearch.widgets.refinementList({
+    container: "#refinement-list-events",
+    attribute: "events",
+    searchable: true,
+    searchablePlaceholder: "Search",
+    cssClasses: {
+      searchableInput: "form-control form-control-sm mb-2 border-light-2",
+      searchableSubmit: "d-none",
+      searchableReset: "d-none",
+      showMore: "btn btn-secondary btn-sm align-content-center",
+      list: "list-unstyled",
+      count: "badge ml-2 badge-success",
+      label: "d-flex align-items-center",
+      checkbox: "mr-2",
+    },
+  }),
+
   instantsearch.widgets.rangeInput({
-    container: "#range-input",
+    container: "#refinement-range-year",
     attribute: "year",
     templates: {
       separatorText: "to",
@@ -224,13 +433,16 @@ search.addWidgets([
     container: "#sort-by",
     items: [
       { label: "Default", value: "amp" },
-      { label: "Year (asc)", value: "amp/sort/year:asc" },
-      { label: "Year (desc)", value: "amp/sort/year:desc" },
+      { label: "Year (asc)", value: "amp/sort/year:asc, page_int:asc" },
+      {
+        label: "Year (desc)",
+        value: "amp/sort/year:desc, page_int:asc",
+      },
     ],
   }),
 
   instantsearch.widgets.configure({
-    hitsPerPage: 8,
+    hitsPerPage: 12,
     attributesToSnippet: ["full_text"],
   }),
 ]);
@@ -242,3 +454,19 @@ search.addWidgets([
 // ]);
 
 search.start();
+
+function toggleTable(el) {
+  console.log(el);
+  show_table = document.getElementById("table-ais-show");
+  if (el.classList.contains("activated")) {
+    el.classList.add("deactivated");
+    el.classList.remove("activated");
+    show_table.classList.remove("show");
+    show_table.classList.add("fade");
+  } else {
+    el.classList.remove("deactivated");
+    el.classList.add("activated");
+    show_table.classList.remove("fade");
+    show_table.classList.add("show");
+  }
+}
