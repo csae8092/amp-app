@@ -80,7 +80,7 @@ search.addWidgets([
             <div class="col-md-4">
               <a
                 class="text-decoration-none text-dark"
-                href="${hit.id}?tab=${hit.page_str}&img=off"
+                href="${hit.id}&img=off"
                 aria-label="Link zu Dokument: ${hit.title}"
               >
                 <img
@@ -113,96 +113,6 @@ search.addWidgets([
                   <td>${hit.comments_count}</td>
                 </tr>
               </table>
-              <div class="d-flex justify-content-between fade">
-                <a class="btn btn-secondary btn-sm deactivated">Show more</a>
-              </div>
-              <table class="table table-sm table-ais fade" id="table-ais-show">
-                <tr class="${hit.persons.length > 0 ? "show" : "fade"}">
-                  <td><em>Persons:</em></td>
-                  <td>
-                    <ul>
-                      ${hit.persons.map(
-                        (item) =>
-                          html`<li>
-                            <span
-                              style="overflow:hidden;"
-                              class="text-break badge rounded-pill m-1 bg-secondary"
-                              >${item}</span
-                            >
-                          </li>`
-                      )}
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="${hit.places.length > 0 ? "show" : "fade"}">
-                  <td><em>Places:</em></td>
-                  <td>
-                    <ul>
-                      ${hit.places.map(
-                        (item) =>
-                          html`<li>
-                            <span
-                              style="overflow:hidden;"
-                              class="text-break badge rounded-pill m-1 bg-primary"
-                              >${item}</span
-                            >
-                          </li>`
-                      )}
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="${hit.orgs.length > 0 ? "show" : "fade"}">
-                  <td><em>Institutions:</em></td>
-                  <td>
-                    <ul>
-                      ${hit.orgs.map(
-                        (item) =>
-                          html`<li>
-                            <span
-                              style="overflow:hidden;"
-                              class="text-break badge rounded-pill m-1 bg-info"
-                              >${item}</span
-                            >
-                          </li>`
-                      )}
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="${hit.works.length > 0 ? "show" : "fade"}">
-                  <td><em>Works:</em></td>
-                  <td>
-                    <ul>
-                      ${hit.works.map(
-                        (item) =>
-                          html`<li>
-                            <span
-                              style="overflow:hidden;"
-                              class="text-break badge rounded-pill m-1 bg-success"
-                              >${item}</span
-                            >
-                          </li>`
-                      )}
-                    </ul>
-                  </td>
-                </tr>
-                <tr class="${hit.events.length > 0 ? "show" : "fade"}">
-                  <td><em>Events:</em></td>
-                  <td>
-                    <ul>
-                      ${hit.events.map(
-                        (item) =>
-                          html`<li>
-                            <span
-                              style="overflow:hidden;"
-                              class="text-break badge rounded-pill m-1 bg-danger"
-                              >${item}</span
-                            >
-                          </li>`
-                      )}
-                    </ul>
-                  </td>
-                </tr>
-              </table>
             </div>
           </div>
         `;
@@ -214,6 +124,97 @@ search.addWidgets([
     container: "#document_type",
     attribute: "document_type",
   }),
+
+  // <div class="d-flex justify-content-between fade">
+  //   <a class="btn btn-secondary btn-sm deactivated">Show more</a>
+  // </div>
+  // <table class="table table-sm table-ais fade" id="table-ais-show">
+  //   <tr class="${hit.persons.length > 0 ? "show" : "fade"}">
+  //     <td><em>Persons:</em></td>
+  //     <td>
+  //       <ul>
+  //         ${hit.persons.map(
+  //           (item) =>
+  //             html`<li>
+  //               <span
+  //                 style="overflow:hidden;"
+  //                 class="text-break badge rounded-pill m-1 bg-secondary"
+  //                 >${item}</span
+  //               >
+  //             </li>`
+  //         )}
+  //       </ul>
+  //     </td>
+  //   </tr>
+  //   <tr class="${hit.places.length > 0 ? "show" : "fade"}">
+  //     <td><em>Places:</em></td>
+  //     <td>
+  //       <ul>
+  //         ${hit.places.map(
+  //           (item) =>
+  //             html`<li>
+  //               <span
+  //                 style="overflow:hidden;"
+  //                 class="text-break badge rounded-pill m-1 bg-primary"
+  //                 >${item}</span
+  //               >
+  //             </li>`
+  //         )}
+  //       </ul>
+  //     </td>
+  //   </tr>
+  //   <tr class="${hit.orgs.length > 0 ? "show" : "fade"}">
+  //     <td><em>Institutions:</em></td>
+  //     <td>
+  //       <ul>
+  //         ${hit.orgs.map(
+  //           (item) =>
+  //             html`<li>
+  //               <span
+  //                 style="overflow:hidden;"
+  //                 class="text-break badge rounded-pill m-1 bg-info"
+  //                 >${item}</span
+  //               >
+  //             </li>`
+  //         )}
+  //       </ul>
+  //     </td>
+  //   </tr>
+  //   <tr class="${hit.works.length > 0 ? "show" : "fade"}">
+  //     <td><em>Works:</em></td>
+  //     <td>
+  //       <ul>
+  //         ${hit.works.map(
+  //           (item) =>
+  //             html`<li>
+  //               <span
+  //                 style="overflow:hidden;"
+  //                 class="text-break badge rounded-pill m-1 bg-success"
+  //                 >${item}</span
+  //               >
+  //             </li>`
+  //         )}
+  //       </ul>
+  //     </td>
+  //   </tr>
+  //   <tr class="${hit.events.length > 0 ? "show" : "fade"}">
+  //     <td><em>Events:</em></td>
+  //     <td>
+  //       <ul>
+  //         ${hit.events.map(
+  //           (item) =>
+  //             html`<li>
+  //               <span
+  //                 style="overflow:hidden;"
+  //                 class="text-break badge rounded-pill m-1 bg-danger"
+  //                 >${item}</span
+  //               >
+  //             </li>`
+  //         )}
+  //       </ul>
+  //     </td>
+  //   </tr>
+  // </table>
 
   // instantsearch.widgets.hits({
   //   container: "#hits",
@@ -455,18 +456,18 @@ search.addWidgets([
 
 search.start();
 
-function toggleTable(el) {
-  console.log(el);
-  show_table = document.getElementById("table-ais-show");
-  if (el.classList.contains("activated")) {
-    el.classList.add("deactivated");
-    el.classList.remove("activated");
-    show_table.classList.remove("show");
-    show_table.classList.add("fade");
-  } else {
-    el.classList.remove("deactivated");
-    el.classList.add("activated");
-    show_table.classList.remove("fade");
-    show_table.classList.add("show");
-  }
-}
+// function toggleTable(el) {
+//   console.log(el);
+//   show_table = document.getElementById("table-ais-show");
+//   if (el.classList.contains("activated")) {
+//     el.classList.add("deactivated");
+//     el.classList.remove("activated");
+//     show_table.classList.remove("show");
+//     show_table.classList.add("fade");
+//   } else {
+//     el.classList.remove("deactivated");
+//     el.classList.add("activated");
+//     show_table.classList.remove("fade");
+//     show_table.classList.add("show");
+//   }
+// }
