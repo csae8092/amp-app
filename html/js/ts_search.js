@@ -4,7 +4,7 @@ const img_url = "https://iiif.acdh.oeaw.ac.at/iiif/images/amp/";
 function makeImgUrl(hit) {
   let hitImage = hit.image;
   if (hitImage.length > 0) {
-    return img_url + hitImage + ".jp2/full/,300/0/default.jpg";
+    return img_url + hitImage + ".jp2/full/,200/0/default.jpg";
   } else {
     return "no image avaliable";
   }
@@ -77,7 +77,7 @@ search.addWidgets([
                   : ""}
               </p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 image-wrapper">
               <a
                 class="text-decoration-none text-dark"
                 href="${hit.id}&img=off"
@@ -93,24 +93,28 @@ search.addWidgets([
             <div class="col-md-8">
               <table class="table table-sm">
                 <tr>
-                  <td><em>Title:</em></td>
+                  <th><em>Title:</em></th>
                   <td>${hit.title}</td>
                 </tr>
                 <tr>
-                  <td><em>Page:</em></td>
+                  <th><em>Page:</em></th>
                   <td>${hit.page_str}</td>
                 </tr>
                 <tr>
-                  <td><em>Year:</em></td>
+                  <th><em>Year:</em></th>
                   <td>${hit.year}</td>
                 </tr>
                 <tr>
-                  <td><em>Type:</em></td>
+                  <th><em>Type:</em></th>
                   <td>${hit.document_type[0]}</td>
                 </tr>
                 <tr>
-                  <td><em>Comments:</em></td>
+                  <th><em>Comments:</em></th>
                   <td>${hit.comments_count}</td>
+                </tr>
+                <tr>
+                  <th><em>Verses:</em></th>
+                  <td>${hit.poem_count}</td>
                 </tr>
               </table>
             </div>
@@ -268,6 +272,29 @@ search.addWidgets([
       showMore: "btn btn-secondary btn-sm align-content-center",
       list: "list-unstyled",
       count: "badge d-flex align-self-end m-2 badge-secondary hideme ",
+      label: "d-flex align-items-start text-left",
+      checkbox: "m-2",
+    },
+  }),
+
+  instantsearch.widgets.refinementList({
+    container: "#has-poem",
+    attribute: "poem_bool",
+    searchable: false,
+    transformItems(items) {
+      return items.map((item) => ({
+        ...item,
+        highlighted: (item.highlighted =
+          item.label === "true" ? "includes verse" : "no verse included"),
+      }));
+    },
+    cssClasses: {
+      searchableInput: "form-control form-control-sm m-2 border-light-2",
+      searchableSubmit: "d-none",
+      searchableReset: "d-none",
+      showMore: "btn btn-secondary btn-sm align-content-center",
+      list: "list-unstyled",
+      count: "badge d-flex align-self-end m-2 badge-secondary",
       label: "d-flex align-items-start text-left",
       checkbox: "m-2",
     },
@@ -443,7 +470,7 @@ search.addWidgets([
   }),
 
   instantsearch.widgets.configure({
-    hitsPerPage: 12,
+    hitsPerPage: 18,
     attributesToSnippet: ["full_text"],
   }),
 ]);

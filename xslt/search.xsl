@@ -45,6 +45,7 @@
                                 <h5 class="pt-2">Select Document Type</h5>
                                 <div class="p-2" id="document_type"></div>
                                 <div id="has-comments"></div>
+                                <div id="has-poem"></div>
                                 <h5 class="pt-2 hidemobile">Persons</h5>
                                 <div id="refinement-list-persons" class="hidemobile"></div>
                                 <h5 class="pt-2 hidemobile">Places</h5>

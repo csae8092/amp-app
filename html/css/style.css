@@ -1,3 +1,12 @@
+:root {
+  --amp-primary-bg-color: #615a601e;
+  --amp-secondary-bg-color: #ffffff;
+  --amp-primary-link-color: #615a60;
+  --amp-secondary-link-color: #b59890;
+  --amp-primary-text-color: #615a60;
+  --amp-secondary-text-color: #b59890;
+}
+
 #footnotes li,
 #endnotes li {
   list-style: none;
@@ -123,7 +132,7 @@
   vertical-align: middle;
   margin-top: 0 !important;
   border-radius: 0.35rem;
-  background-color: #b598901a;
+  background-color: var(--amp-primary-bg-color);
   border-radius: 0.35rem;
   min-height: 280px;
   transition: transform 0.2s;
@@ -447,7 +456,7 @@ div.dataTables_filter {
 
 .navbar {
   border-bottom: 5px solid #615a60 !important;
-  background-color: #b598901a;
+  background-color: var(--amp-primary-bg-color);
   overflow: visible;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -500,7 +509,7 @@ div.dataTables_filter {
   border-radius: 0.5rem;
   word-wrap: break-word;
   word-break: break-word;
-  background-color: #b598901a;
+  background-color: var(--amp-primary-bg-color);
 }
 
 body {
