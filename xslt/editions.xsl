@@ -552,7 +552,7 @@
                         <div class="comment-body">
                             <h5>
                                 <xsl:for-each select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]">
-                                    <xsl:value-of select=".//text()"/>
+                                    <xsl:apply-templates select="node() except (tei:del | tei:lb)"/>
                                     <xsl:if test="position() != last()">
                                         <xsl:text> | </xsl:text>
                                     </xsl:if>
