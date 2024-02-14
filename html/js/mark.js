@@ -1,5 +1,5 @@
 // the DOM object of the context (where to search for matches)
-var input = document.querySelectorAll(".text-re"),
+var input = document.querySelectorAll(".tab-content"),
   markInstance = new Mark(input),
   // Cache DOM elements
   keywordInput = document.querySelector("input[name='keyword']"),
@@ -36,23 +36,6 @@ function jumpTo(trigger) {
 }
 
 function performMarkUrl() {
-  // Determine selected options
-  var options = {
-    accrossElements: true,
-    done: function () {
-      results = input[0].querySelectorAll("mark");
-      currentIndex = 0;
-      jumpTo(false);
-      setTimeout(() => {
-        console.log(results);
-        resultDiv.innerHTML = "Hits: " + results.length;
-      }, 500);
-    },
-  };
-  [].forEach.call(optionInputs, function (opt) {
-    options[opt.value] = opt.checked;
-  });
-
   // get current url parameters
   let url = new URL(window.location.href);
   let urlParam = new URLSearchParams(url.search);
@@ -61,10 +44,24 @@ function performMarkUrl() {
   } else if (urlParam.get("mark") == "default") {
     // no action needed
   } else {
+    // Determine selected options
+    var options = {
+      done: function () {
+        results = input[0].querySelectorAll("mark");
+        currentIndex = 0;
+        jumpTo(true);
+        console.log(results);
+        btns.classList.remove("fade");
+        resultDiv.innerHTML = "Hits: " + results.length;
+      },
+    };
+
+    [].forEach.call(optionInputs, function (opt) {
+      options[opt.value] = opt.checked;
+    });
+
     var keyword = urlParam.get("mark");
-    if (keyword.length > 0) {
-      btns.classList.remove("fade");
-    }
+    // Remove previous marked elements and mark
     markInstance.unmark({
       done: function () {
         if (keyword.length >= 3) {
@@ -76,7 +73,6 @@ function performMarkUrl() {
 }
 
 function performMark() {
-  btns.classList.remove("fade");
   // Read the keyword
   var keyword = keywordInput.value;
   var flags = "gmi";
@@ -88,9 +84,12 @@ function performMark() {
       accrossElements: true,
       done: function () {
         results = input[0].querySelectorAll("mark");
+        console.log(results);
+        console.log(input);
         currentIndex = 0;
-        jumpTo(false);
+        jumpTo(true);
         setTimeout(() => {
+          btns.classList.remove("fade");
           resultDiv.innerHTML = "Hits: " + results.length;
         }, 500);
       },

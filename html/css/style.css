@@ -7,6 +7,10 @@
   --amp-secondary-text-color: #b59890;
 }
 
+.navbar-search {
+  background-color: #fff !important;
+}
+
 #mark-scroll button {
   border-radius: 0.5rem;
   border: 2px solid var(--amp-secondary-text-color);
