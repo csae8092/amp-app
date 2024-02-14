@@ -82,9 +82,10 @@ search.addWidgets([
                 class="text-decoration-none text-dark"
                 href="${hit.id}&img=${hit.document_type[0] == "Photograph"
                   ? "on"
-                  : "off"}&mark=${hit._snippetResult.full_text.matchedWords.join(
-                  "+"
-                )}"
+                  : "off"}${hit._snippetResult.full_text.matchedWords.length > 0
+                  ? "&mark=" +
+                    hit._snippetResult.full_text.matchedWords.join("+")
+                  : ""}"
                 aria-label="Link zu Dokument: ${hit.title}"
               >
                 <img
