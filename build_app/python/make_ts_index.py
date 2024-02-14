@@ -84,20 +84,21 @@ current_schema = {
         {"name": "page_int", "type": "int32", "sort": True},
         {"name": "page_str", "type": "string"},
         {"name": "comments_count", "type": "int32"},
-        {"name": "comments_bool", "type": "bool", "facet": True}
+        {"name": "comments_bool", "type": "bool", "facet": True},
+        {"name": "poem_bool", "type": "bool", "facet": True},
+        {"name": "poem_count", "type": "int32"}
     ]
 }
 
 client.collections.create(current_schema)
 
 
-def get_comments():
-    e_path = './/node()[@ana]/@ana'
+def get_context(xpath):
     comments = False
     comments_len = 0
     for p in body:
         try:
-            ent = p.xpath(e_path, namespaces={'tei': "http://www.tei-c.org/ns/1.0"})
+            ent = p.xpath(xpath, namespaces={'tei': "http://www.tei-c.org/ns/1.0"})
         except AttributeError:
             ent = []
         if len(ent) > 0:
@@ -225,7 +226,8 @@ for x in tqdm(files, total=len(files)):
                 records.append(record)
                 cfts_record['full_text'] = record['full_text']
                 cfts_records.append(cfts_record)
-            record['comments_bool'], record['comments_count'] = get_comments()
+            record['comments_bool'], record['comments_count'] = get_context('.//node()[@ana]')
+            record['poem_bool'], record['poem_count'] = get_context('.//tei:l')
         pages += 1
 
 make_index = client.collections['amp'].documents.import_(records)
