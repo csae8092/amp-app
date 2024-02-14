@@ -80,7 +80,11 @@ search.addWidgets([
             <div class="col-md-4 image-wrapper">
               <a
                 class="text-decoration-none text-dark"
-                href="${hit.id}&img=off"
+                href="${hit.id}&img=${hit.document_type[0] == "Photograph"
+                  ? "on"
+                  : "off"}&mark=${hit._snippetResult.full_text.matchedWords.join(
+                  "+"
+                )}"
                 aria-label="Link zu Dokument: ${hit.title}"
               >
                 <img
@@ -108,11 +112,11 @@ search.addWidgets([
                   <th><em>Type:</em></th>
                   <td>${hit.document_type[0]}</td>
                 </tr>
-                <tr>
+                <tr class="${hit.comments_count == 0 ? "fade" : "show"}">
                   <th><em>Comments:</em></th>
                   <td>${hit.comments_count}</td>
                 </tr>
-                <tr>
+                <tr class="${hit.poem_count == 0 ? "fade" : "show"}">
                   <th><em>Verses:</em></th>
                   <td>${hit.poem_count}</td>
                 </tr>

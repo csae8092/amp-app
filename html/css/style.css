@@ -1,10 +1,16 @@
 :root {
-  --amp-primary-bg-color: #615a601e;
+  --amp-primary-bg-color: #b598902a;
   --amp-secondary-bg-color: #ffffff;
   --amp-primary-link-color: #615a60;
   --amp-secondary-link-color: #b59890;
   --amp-primary-text-color: #615a60;
   --amp-secondary-text-color: #b59890;
+}
+
+#mark-scroll button {
+  border-radius: 0.5rem;
+  border: 2px solid var(--amp-secondary-text-color);
+  background-color: var(--amp-primary-bg-color);
 }
 
 #footnotes li,

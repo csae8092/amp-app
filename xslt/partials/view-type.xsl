@@ -35,6 +35,12 @@
                 ('typed') else if (ancestor::tei:text/@hand = '#printed') then 
                 ('printed') else ()
             } tab-content">
+            <div id="mark-scroll" class="fade sticky-top my-2">
+                <button data-search="next" disabled="disabled">&#x2193;</button>
+                <button data-search="prev" disabled="disabled">&#x2191;</button>
+                <button data-search="clear" disabled="disabled">✖</button>
+                <div id="results-div"></div>
+            </div>
             <!-- 
                 starting the the first div below tei:body
                 for creating a page based view the transcript is grouped via pb elements
@@ -61,7 +67,7 @@
                             id="paginate-{$positionOrNot}" 
                             tabindex="-1">
                             
-                            <div id="container-resize-{$positionOrNot}" class="transcript row">  
+                            <div id="container-resize-{$positionOrNot}" class="transcript row">
                                 
                                 <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
                                     <div class="card-body">
@@ -193,7 +199,6 @@
                             data-tab="paginate"  
                             id="paginate-{$positionOrNot}" 
                             tabindex="-1">
-                            
                             <!--<window-resize opt="resizing" pos="{position()}" size="0.755"></window-resize>-->
                             
                             <div id="container-resize-{$positionOrNot}" class="transcript row">  
