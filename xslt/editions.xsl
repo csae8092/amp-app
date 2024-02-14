@@ -172,8 +172,8 @@
                     <xsl:call-template name="html_footer"/>
                 </div><!-- .site -->
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
-                <script src="https://unpkg.com/de-micro-editor@0.3.2/dist/de-editor.min.js"></script>
-               <!-- <script src="js/dist/de-editor.min.js"></script> -->
+                <!--<script src="https://unpkg.com/de-micro-editor@0.3.2/dist/de-editor.min.js"></script>-->
+                <script src="js/dist/de-editor.min.js"></script> 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>
                 <!--<script type="text/javascript" src="js/hide-md.js"></script>-->
@@ -508,7 +508,7 @@
                     <div class="comment-body">
                         <h5>
                             <xsl:for-each select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]">
-                                <xsl:value-of select=".//text()"/>
+                                <xsl:apply-templates select="node() except (tei:del | tei:lb)"/>
                                 <xsl:if test="position() != last()">
                                     <xsl:text> | </xsl:text>
                                 </xsl:if>
