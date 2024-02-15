@@ -18,7 +18,7 @@
     <!-- <property name="xsl_editions_xml" value="${basedir}/xslt/editions-xml.xsl"/> -->
     <property name="xsl_index" value="${basedir}/xslt/index.xsl"/>
     <property name="xsl_toc" value="${basedir}/xslt/toc.xsl"/>
-    <property name="xsl_memoirs" value="${basedir}/xslt/memoirs.xsl"/>
+    <!-- <property name="xsl_memoirs" value="${basedir}/xslt/memoirs.xsl"/> -->
     <property name="xsl_photos" value="${basedir}/xslt/photos.xsl"/>
     <property name="xsl_am" value="${basedir}/xslt/additional-materials.xsl"/>
     <property name="xsl_search" value="${basedir}/xslt/search.xsl"/>

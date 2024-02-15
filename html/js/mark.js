@@ -51,7 +51,7 @@ function performMarkUrl() {
         currentIndex = 0;
         jumpTo(true);
         console.log(results);
-        btns.classList.remove("fade");
+        btns.classList.remove("fade-all");
         resultDiv.innerHTML = "Hits: " + results.length;
       },
     };
@@ -89,7 +89,7 @@ function performMark() {
         currentIndex = 0;
         jumpTo(true);
         setTimeout(() => {
-          btns.classList.remove("fade");
+          btns.classList.remove("fade-all");
           resultDiv.innerHTML = "Hits: " + results.length;
         }, 500);
       },
@@ -122,7 +122,7 @@ clearBtn.addEventListener("click", function () {
   clearBtn.setAttribute("disabled", "disabled");
   nextBtn.setAttribute("disabled", "disabled");
   prevBtn.setAttribute("disabled", "disabled");
-  btns.classList.add("fade");
+  btns.classList.add("fade-all");
 });
 
 nextBtn.addEventListener("click", function () {

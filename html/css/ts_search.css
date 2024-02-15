@@ -128,7 +128,7 @@
   margin: 2em auto;
 } */
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .ais-Hits-item {
     width: 100%;
   }

@@ -30,7 +30,7 @@
                     <xsl:call-template name="nav_bar"/>
                     <div class="container-fluid">
                         <h1 style="margin: 2em auto; text-align: center;"><xsl:value-of select="$doc_title"/></h1>
-                        <div id="navBarLetters">
+                        <div id="navBarLetters" class="hidemobile">
                             <ul class="nav nav-tabs" id="dropdown-lang">
                                 <li class="nav-item">                                    
                                     <a title="Cards" href="#cards-tab" data-toggle="tab" class="nav-link btn btn-round active">
@@ -56,16 +56,12 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="table-tab" tabindex="-1">                        
-                                <div class="card">                                    
-                                    <div class="card-body">
-                                        <xsl:call-template name="toc-table">
-                                            <xsl:with-param name="img" select="'off'"/>
-                                            <xsl:with-param name="category" select="'correspondence'"/>
-                                            <xsl:with-param name="max_date" select="xs:date('1973-12-31')"></xsl:with-param>
-                                            <xsl:with-param name="low_date" select="xs:date('1958-12-31')"></xsl:with-param>
-                                        </xsl:call-template>
-                                    </div>
-                                </div> 
+                                <xsl:call-template name="toc-table">
+                                    <xsl:with-param name="img" select="'off'"/>
+                                    <xsl:with-param name="category" select="'correspondence'"/>
+                                    <xsl:with-param name="max_date" select="xs:date('1973-12-31')"></xsl:with-param>
+                                    <xsl:with-param name="low_date" select="xs:date('1958-12-31')"></xsl:with-param>
+                                </xsl:call-template>
                             </div>
                         </div>
                     </div>

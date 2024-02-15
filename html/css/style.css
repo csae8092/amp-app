@@ -11,6 +11,10 @@
   background-color: #fff !important;
 }
 
+#mark-scroll {
+  top: 2em !important;
+}
+
 #mark-scroll button {
   border-radius: 0.5rem;
   border: 2px solid var(--amp-secondary-text-color);
@@ -163,6 +167,14 @@
 .index-tile-header img {
   max-width: 80%;
   margin: 0 auto;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 400px;
+  z-index: 1000;
 }
 
 .grid {
@@ -1184,8 +1196,6 @@ fieldset.ssFieldset > span > input {
 
 .transcript {
   padding: 0 !important;
-  border-top: 3px solid #b59890;
-  border-bottom: 3px solid #b59890;
   min-height: 1000px;
 }
 
@@ -1281,10 +1291,9 @@ div.text-re div.card-body {
   display: none;
 }
 
-.tab-pane > .tab-content {
-  border: 1px solid #b59890;
-  margin: 0 0.5em;
-  border-radius: 0.5rem;
+.tab-edition {
+  border-top: 3px solid #b59890;
+  border-bottom: 3px solid #b59890;
 }
 
 .pagination-top > .pagination {
@@ -1872,6 +1881,9 @@ td > label {
   }
   .margin-top {
     margin-top: 0;
+  }
+  .hidemobile {
+    display: none !important;
   }
 }
 

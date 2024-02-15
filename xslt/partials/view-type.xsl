@@ -34,11 +34,11 @@
                 ('handwritten') else if (ancestor::tei:text/@hand = '#typed') then 
                 ('typed') else if (ancestor::tei:text/@hand = '#printed') then 
                 ('printed') else ()
-            } tab-content">
-            <div id="mark-scroll" class="fade sticky-top my-2">
-                <button data-search="next" disabled="disabled">&#x2193;</button>
-                <button data-search="prev" disabled="disabled">&#x2191;</button>
-                <button data-search="clear" disabled="disabled">✖</button>
+            } tab-content tab-edition">
+            <div id="mark-scroll" class="d-inline fade-all sticky-top mw-20">
+                <button class="mt-4" data-search="next" disabled="disabled">&#x2193;</button>
+                <button class="mt-4" data-search="prev" disabled="disabled">&#x2191;</button>
+                <button class="mt-4" data-search="clear" disabled="disabled">✖</button>
                 <div id="results-div"></div>
             </div>
             <!-- 
