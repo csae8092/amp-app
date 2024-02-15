@@ -60,7 +60,7 @@
                             <div class="col-xl-10">
                                 <div class="row">
                                     <div class="col-xl-4">
-                                        <h5 class="pt-2">Sortierung</h5>
+                                        <h5 class="pt-2">Sort by</h5>
                                         <div id="sort-by"></div>
                                     </div>
                                     <div class="col-xl-4">
