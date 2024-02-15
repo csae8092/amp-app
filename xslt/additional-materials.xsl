@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet 
-    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    version="2.0" exclude-result-prefixes="xsl tei xs">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes" omit-xml-declaration="yes"/>
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    version="2.0" exclude-result-prefixes="#all">
+    <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="yes" omit-xml-declaration="yes"/>
     
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -13,8 +13,7 @@
     <xsl:import href="partials/toc-cards.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="'Musulin as Memoirist 1976-1995'"/>
-        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
-        <html xmlns="http://www.w3.org/1999/xhtml">
+        <html>
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
@@ -24,21 +23,20 @@
                 <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script>
                 <script type="text/javascript" src="js/imageLoaded.js"></script>
             </head>
-            
-            <body class="page">
-                <div class="hfeed site" id="page">
-                    <xsl:call-template name="nav_bar"/>
+            <body class="d-flex flex-column">
+                <xsl:call-template name="nav_bar"/>
+                <main class="flex-shrink-0">
                     <div class="container-fluid">
                         <h1 style="margin: 2em auto; text-align: center;"><xsl:value-of select="$doc_title"/></h1>
                         <div id="navBarLetters">
                             <ul class="nav nav-tabs" id="dropdown-lang">
                                 <li class="nav-item">                                    
-                                    <a title="Cards" href="#cards-tab" data-toggle="tab" class="nav-link btn btn-round active">
+                                    <a title="Cards" href="#cards-tab" data-bs-toggle="tab" class="nav-link btn btn-round active">
                                         show cards
                                     </a>
                                 </li>
                                 <li class="nav-item">                                    
-                                    <a title="Table" href="#table-tab" data-toggle="tab" class="nav-link btn btn-round">
+                                    <a title="Table" href="#table-tab" data-bs-toggle="tab" class="nav-link btn btn-round">
                                         show table
                                     </a>
                                 </li>
@@ -65,15 +63,14 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <xsl:call-template name="html_footer"/>
-                    <script type="text/javascript" src="js/dt.js"></script>
-                    <script>
-                        $(document).ready(function () {
-                            createDataTable('tocTable', 'Search titles and dates:');
-                        });
-                    </script>
-                </div>
+                </main>
+                <xsl:call-template name="html_footer"/>
+                <script type="text/javascript" src="js/dt.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        createDataTable('tocTable', 'Search titles and dates:');
+                    });
+                </script>
             </body>
         </html>
     </xsl:template>

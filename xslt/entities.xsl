@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet 
-    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    version="2.0" exclude-result-prefixes="xsl tei xs">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="no" omit-xml-declaration="yes"/>
+    version="2.0" exclude-result-prefixes="#all">
+    <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="no" omit-xml-declaration="yes"/>
     
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -22,22 +21,15 @@
                 <xsl:for-each select="//tei:event[@xml:id]">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="./tei:label"></xsl:with-param>
-                                </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select="./tei:label"/>
-                                    </xsl:attribute>
-                                </meta>
+                                    <xsl:with-param name="html_title" select="./tei:label"/>
+                                </xsl:call-template>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
                                         
                                         <table class="table entity-table">
@@ -147,9 +139,9 @@
                                             </tbody>
                                         </table>
                                         
-                                    </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                    </div>
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>
@@ -159,24 +151,16 @@
                 <xsl:for-each select="//tei:person">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"/>
                                 </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"/>
-                                    </xsl:attribute>
-                                </meta>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
-                                            
                                         <table class="table entity-table">
                                             <tbody>
                                                 <xsl:if test="./tei:persName/tei:surname">
@@ -321,8 +305,8 @@
                                         </table>
                                            
                                     </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>
@@ -332,25 +316,16 @@
                 <xsl:for-each select="//tei:place">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select=".//tei:placeName"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select=".//tei:placeName"/>
                                 </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select=".//tei:placeName"/>
-                                    </xsl:attribute>
-                                </meta>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
-                                        
-                                        
                                         <table class="table entity-table">
                                             <tbody>
                                                 <tr>
@@ -486,9 +461,9 @@
                                             </tbody>
                                         </table>
                                         
-                                    </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                    </div>
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>
@@ -498,24 +473,16 @@
                 <xsl:for-each select="//tei:bibl">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="./tei:title"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="./tei:title"/>
                                 </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select="./tei:title"/>
-                                    </xsl:attribute>
-                                </meta>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
-                                        
                                         <table class="table entity-table">
                                             <tbody>
                                                 <xsl:if test="./tei:title">
@@ -633,9 +600,9 @@
                                             </tbody>
                                         </table>
                                         
-                                    </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                    </div>
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>
@@ -645,22 +612,15 @@
                 <xsl:for-each select="//tei:org">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="./tei:orgName"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="./tei:orgName"/>
                                 </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select="./tei:orgName"/>
-                                    </xsl:attribute>
-                                </meta>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
                                         
                                         <table class="table entity-table">
@@ -763,9 +723,9 @@
                                             </tbody>
                                         </table>
                                         
-                                    </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                    </div>
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>

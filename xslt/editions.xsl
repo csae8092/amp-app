@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet 
-    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    version="2.0" exclude-result-prefixes="xsl tei xs">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="no" omit-xml-declaration="yes"/>
+    version="2.0" exclude-result-prefixes="#all">
+    <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="no" omit-xml-declaration="yes"/>
     
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="partials/html_footer.xsl"/>
     <xsl:import href="partials/html_title_navigation.xsl"/>
-    <xsl:import href="partials/osd-container.xsl"/>
-    <xsl:import href="partials/tei-facsimile.xsl"/>
     <xsl:import href="partials/view-pagination.xsl"/>
     <xsl:import href="partials/view-type.xsl"/>
     <xsl:import href="partials/correspDesc.xsl"/>
@@ -21,7 +18,6 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:titleStmt/tei:title[@level='a'][1]/text()"/>
         </xsl:variable>
-        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html>
             <head>
                 <xsl:call-template name="html_head">
@@ -31,15 +27,6 @@
                     .transcript {
                         padding: 1em 0;
                     }
-                    /*.text-re::before {
-                        content: '';
-                        background-color: #ccc;
-                        right: .05em;
-                        width: 10px;
-                        height: 100%;
-                        position:absolute;
-                        border-top: 10px solid ccc;
-                    }*/
                     .card-body {
                         padding: 4em 1em;
                     }
@@ -52,10 +39,9 @@
                     }
                 </style>
             </head>
-            <body class="page">
-                <div class="hfeed site" id="page">
-                    <xsl:call-template name="nav_bar"/>
-                    
+            <body class="d-flex flex-column">
+                <xsl:call-template name="nav_bar"/>
+                <main class="flex-shrink-0">
                     <div class="container-fluid">  
                         <div class="card detail-card">
                             <div class="editor-options">
@@ -161,16 +147,16 @@
                             <xsl:for-each select="//tei:body/tei:div[@type='transcription' or @xml:id='transcription']">                           
                                  <xsl:call-template name="view-type-img"/>
                             </xsl:for-each>
-                        </div><!-- .card -->
+                        </div>
                         <xsl:for-each select="//tei:back">
                             <div class="tei-back">
                                 <xsl:apply-templates/>
                                 <xsl:call-template name="interp"/>
                             </div>
                         </xsl:for-each>
-                    </div><!-- .container-fluid -->
-                    <xsl:call-template name="html_footer"/>
-                </div><!-- .site -->
+                    </div>
+                </main>
+                <xsl:call-template name="html_footer"/>
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
                 <script src="https://unpkg.com/de-micro-editor@0.3.3/dist/de-editor.min.js"></script>
                 <!--<script src="js/dist/de-editor.min.js"></script> -->

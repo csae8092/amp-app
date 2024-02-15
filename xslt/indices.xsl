@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet 
-    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    version="2.0" exclude-result-prefixes="xsl tei xs">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="no" omit-xml-declaration="yes"/>
+    version="2.0" exclude-result-prefixes="#all">
+    <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="no" omit-xml-declaration="yes"/>
     
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -16,7 +15,6 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
         </xsl:variable>
-        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html>
             <head>
                 <xsl:call-template name="html_head">
@@ -46,7 +44,6 @@
                 <script src="https://unpkg.com/heatmap.js@2.0.5/build/heatmap.min.js"></script>
                 <script src="https://unpkg.com/heatmap.js@2.0.5/plugins/leaflet-heatmap/leaflet-heatmap.js"></script>
                 <!--<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script>-->
-                
                 <meta name="docTitle" class="staticSearch_docTitle">
                     <xsl:attribute name="content">
                         <xsl:value-of select="$doc_title"/>
@@ -58,12 +55,10 @@
                     }
                 </style>
             </head>
-            <body class="page">
-                <div class="hfeed site" id="page">
-                    <xsl:call-template name="nav_bar"/>
-                    
+            <body class="d-flex flex-column">
+                <xsl:call-template name="nav_bar"/>
+                <main class="flex-shrink-0">
                     <div class="container-fluid">
-                        
                         <xsl:if test="contains($doc_title, 'Places') or 
                             contains($doc_title, 'Institut') or 
                             contains($doc_title, 'Events')">
@@ -78,9 +73,9 @@
                         
                         <xsl:apply-templates select="//tei:body"/>
 
-                    </div><!-- .container-fluid -->
-                    <xsl:call-template name="html_footer"/>
-                </div><!-- .site -->
+                    </div>
+                </main>
+                <xsl:call-template name="html_footer"/>
                 
                 <xsl:choose>
                     <xsl:when test="contains($doc_title, 'Persons')">
