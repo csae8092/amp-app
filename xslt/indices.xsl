@@ -328,7 +328,7 @@
                 </thead>
                 <tbody>
                     <xsl:for-each select="./tei:org">
-                        <xsl:variable name="places" select="document('../data/indices/listplace.xml')//tei:TEI//tei:place"/>
+                        <xsl:variable name="places" select="document('../data/indices/amp-index-places.xml')//tei:TEI//tei:place"/>
                         <xsl:variable name="count" select="count(./tei:listEvent/tei:event)"/>
                         <tr>
                             <td>
