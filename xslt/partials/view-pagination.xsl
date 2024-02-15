@@ -43,7 +43,7 @@
                                 <a
                                     title="more"
                                     href="#"
-                                    data-toggle="dropdown"
+                                    data-bs-toggle="dropdown"
                                     data-tab="paginate"
                                     class="nav-link dropdown-toggle"
                                     style="border-radius:30px;"
