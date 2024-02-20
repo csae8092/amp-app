@@ -1393,7 +1393,6 @@
     </xsl:template>
     <xsl:template match="tei:bibl[ancestor::tei:interp]">
         <br/>
-        <br/>
         <xsl:choose>
             <xsl:when test="@sameAs">
                 <xsl:call-template name="ref-verify-if-multiple-values">
@@ -1485,6 +1484,23 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:pubPlace[ancestor::tei:interp]">
+        <br/>
+        <xsl:choose>
+            <xsl:when test="@ref">
+                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
+                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
+                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
+                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
+                <a href="{$hash}.html">
+                    <xsl:value-of select="$label"/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:settlement[ancestor::tei:interp]">
         <br/>
         <xsl:choose>
             <xsl:when test="@ref">
