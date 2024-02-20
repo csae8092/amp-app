@@ -19,6 +19,7 @@
         <xsl:variable name="full_path">
             <xsl:value-of select="document-uri(/)"/>
         </xsl:variable>
+        <xsl:variable name="doc-title" select="//tei:titleStmt/tei:title[@level='a']"/>
         <!--<xsl:variable name="date" select="//tei:correspAction/tei:date/@when-iso"/>-->
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 index-card-wrapper">
             <div class="card index-card">
@@ -48,9 +49,9 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </div>
-                    <div class="card-header" style="height:150px; display: flex; align-items: center;">                                                      
+                    <div class="card-header" style="height:150px; display: flex; align-items: center;">                                              
                         <p class="p-1 m-0">
-                            <xsl:value-of select="//tei:title[@level='a']"/>
+                            <xsl:value-of select="$doc-title"/>
                         </p>
                     </div>
                 </a>

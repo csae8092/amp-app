@@ -20,6 +20,7 @@
         <xsl:variable name="full_path">
             <xsl:value-of select="document-uri(/)"/>
         </xsl:variable>
+        <xsl:variable name="doc-title" select="//tei:titleStmt/tei:title[@level='a']"/>
         <xsl:for-each select=".//tei:revisionDesc/tei:change[position()=last()]/self::tei:change">                                   
             <tr>
                 <td>
@@ -27,7 +28,7 @@
                         <xsl:attribute name="href">                                                
                             <xsl:value-of select="concat(replace(tokenize($full_path, '/')[last()], '.xml', '.html?img='), $img)"/>
                         </xsl:attribute>
-                        <xsl:value-of select="//tei:title[@level='a'][1]/text()"/>
+                        <xsl:value-of select="$doc-title"/>
                     </a>
                 </td>
                 <td><xsl:value-of select="data(substring-before(//tei:origDate/@notAfter-iso, 'T'))"/></td>
