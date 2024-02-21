@@ -654,8 +654,7 @@
                                                             <ul>
                                                                 <xsl:for-each select="./tei:location[@type='located_in_place']">
                                                                     <xsl:variable name="key" select="./tei:placeName/@key"/>
-                                                                    <xsl:variable name="corr_place" select="$places//id($key)"/>
-                                                                    <xsl:variable name="coords" select="tokenize($corr_place/tei:location[@type='coords']/tei:geo, ', ')"/>
+                                                                    <xsl:variable name="coords" select="tokenize(parent::tei:org/tei:location[@type='coords']/tei:geo, ', ')"/>
                                                                     <li class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:orgName}">
                                                                         <a href="{$key}.html">
                                                                             <xsl:value-of select="./tei:placeName"/>

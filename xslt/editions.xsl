@@ -1435,24 +1435,71 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:msIdentifier[ancestor::tei:interp]">
-        <ul><xsl:apply-templates/></ul>
+        <xsl:apply-templates/>
     </xsl:template>
-    <xsl:template match="node()[parent::tei:msIdentifier]">
-        <li>
-            <xsl:choose>
-                <xsl:when test="@ref">
-                    <a>
-                        <xsl:attribute name="href">
-                            <xsl:value-of select="concat(substring-after(@ref, '#'), '.html')"/>
-                        </xsl:attribute>
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>
-                <xsl:otherwise>
+    <xsl:template match="tei:country[ancestor::tei:interp]">
+        <br/>
+        <xsl:choose>
+            <xsl:when test="@ref">
+                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
+                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
+                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
+                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
+                <a href="{$hash}.html">
+                    <xsl:value-of select="$label"/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:repository[ancestor::tei:interp]">
+        <br/>
+        <xsl:choose>
+            <xsl:when test="@ref">
+                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
+                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
+                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
+                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
+                <a href="{$hash}.html">
+                    <xsl:value-of select="$label"/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:idno[ancestor::tei:interp]">
+        <br/>
+        <xsl:choose>
+            <xsl:when test="@type='URI' or @type='URL'">
+                <a href="{./text()}">
                     <xsl:apply-templates/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </li>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:collection[ancestor::tei:interp]">
+        <br/>
+        <xsl:choose>
+            <xsl:when test="@ref">
+                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
+                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
+                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
+                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
+                <a href="{$hash}.html">
+                    <xsl:value-of select="$label"/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:citedRange[ancestor::tei:interp]">
         <br/>
@@ -1461,10 +1508,6 @@
     <xsl:template match="tei:biblScope[ancestor::tei:interp]">
         <br/>
         <xsl:value-of select="@from"/>-<xsl:value-of select="@to"/>
-    </xsl:template>
-    <xsl:template match="tei:idno[ancestor::tei:interp]">
-        <br/>
-        <xsl:value-of select="./text()"/>
     </xsl:template>
     <xsl:template match="tei:publisher[ancestor::tei:interp]">
         <br/>
