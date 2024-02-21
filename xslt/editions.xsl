@@ -197,7 +197,7 @@
             ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
             }"><xsl:apply-templates/></h5>
     </xsl:template>
-    <xsl:template match="tei:address">
+    <xsl:template match="tei:address[ancestor::tei:body]">
         <span class="p-like">
             <xsl:apply-templates/>
         </span>
@@ -678,7 +678,7 @@
                                 <xsl:attribute name="href">
                                     <xsl:value-of select="replace(replace(., 'acdh:', ''), '.xml', '.html')"/>
                                 </xsl:attribute>
-                                <xsl:if test="ends-with(., '#.+')">
+                                <xsl:if test="contains(., '#')">
                                     <xsl:if test="contains(., 'amp-index')">
                                         <xsl:variable name="doc" select="doc(concat('../data/indices/', replace(., 'acdh:', '')))//tei:TEI"/>
                                         <xsl:variable name="id" select="substring-after(., '#')"/>
@@ -715,7 +715,7 @@
                                 <xsl:value-of select="replace(replace($ref, 'acdh:', ''), '.xml', '.html')"/>
                             </xsl:attribute>
                             <xsl:choose>
-                                <xsl:when test="ends-with($ref, '#.+')">
+                                <xsl:when test="contains($ref, '#')">
                                     <xsl:if test="contains($ref, 'amp-index')">
                                         <xsl:variable name="doc" select="doc(concat('../data/indices/', replace($ref, 'acdh:', '')))//tei:TEI"/>
                                         <xsl:variable name="id" select="substring-after($ref, '#')"/>
@@ -1357,59 +1357,66 @@
         </ul>
     </xsl:template>
     <xsl:template match="tei:label[parent::tei:event][ancestor::tei:interp]">
-        <br/>
-        <em>
-            <xsl:choose>
-                <xsl:when test="parent::tei:event[@ref]">
-                    <a href="{substring-after(parent::tei:event/@ref, '#')}.html">
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:apply-templates/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </em>
-    </xsl:template>
-    <xsl:template match="tei:title[parent::tei:bibl][ancestor::tei:interp]">
-        <br/>
-        <em>
-            <xsl:choose>
-                <xsl:when test="parent::tei:bibl[@sameAs]">
-                    <a href="{substring-after(parent::tei:bibl/@sameAs, '#')}.html">
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>
-                <xsl:when test="parent::tei:bibl[@source]">
-                    <a href="{parent::tei:bibl/@source}.html">
-                        <xsl:apply-templates/>
-                    </a>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:apply-templates/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </em>
-    </xsl:template>
-    <xsl:template match="tei:bibl[ancestor::tei:interp]">
-        <br/>
         <xsl:choose>
-            <xsl:when test="@sameAs">
-                <xsl:call-template name="ref-verify-if-multiple-values">
-                    <xsl:with-param name="attribute">
-                        <xsl:value-of select="@sameAs"/>
-                    </xsl:with-param>
-                </xsl:call-template>
-            </xsl:when>
-            <xsl:when test="@source">
-                <xsl:call-template name="ref-verify-if-multiple-values">
-                    <xsl:with-param name="attribute">
-                        <xsl:value-of select="@source"/>
-                    </xsl:with-param>
+            <xsl:when test="parent::tei:event[@ref]">
+                <xsl:call-template name="verify-url-hash-namespace-single">
+                    <xsl:with-param name="attribute" select="parent::tei:event/@ref"/>
+                    <xsl:with-param name="entity" select="'label'"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
+                <br/>
                 <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:title[parent::tei:bibl][ancestor::tei:interp]">
+        <xsl:choose>
+            <xsl:when test="parent::tei:bibl[@sameAs]">
+                <xsl:call-template name="verify-url-hash-namespace-single">
+                    <xsl:with-param name="attribute" select="parent::tei:bibl/@sameAs"/>
+                    <xsl:with-param name="entity" select="'none'"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:when test="parent::tei:bibl[@source]">
+                <xsl:call-template name="verify-url-hash-namespace-single">
+                    <xsl:with-param name="attribute" select="parent::tei:bibl/@source"/>
+                    <xsl:with-param name="entity" select="'none'"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <br/>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:bibl[ancestor::tei:interp]">
+        <br/>
+        <br/>
+        <xsl:choose>
+            <xsl:when test="./tei:title">
+                <xsl:apply-templates/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:choose>
+                    <xsl:when test="@sameAs">
+                        <xsl:call-template name="ref-verify-if-multiple-values">
+                            <xsl:with-param name="attribute">
+                                <xsl:value-of select="@sameAs"/>
+                            </xsl:with-param>
+                        </xsl:call-template>
+                    </xsl:when>
+                    <xsl:when test="@source">
+                        <xsl:call-template name="ref-verify-if-multiple-values">
+                            <xsl:with-param name="attribute">
+                                <xsl:value-of select="@source"/>
+                            </xsl:with-param>
+                        </xsl:call-template>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates/>
+                    </xsl:otherwise>
+                </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -1440,13 +1447,13 @@
     <xsl:template match="tei:country[ancestor::tei:interp]">
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
-            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+            <xsl:with-param name="entity" select="'place'"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:repository[ancestor::tei:interp]">
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
-            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+            <xsl:with-param name="entity" select="'org'"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:idno[ancestor::tei:interp]">
@@ -1479,34 +1486,34 @@
     <xsl:template match="tei:publisher[ancestor::tei:interp]">
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
-            <xsl:with-param name="entity" select="tei:orgName"/>
+            <xsl:with-param name="entity" select="'org'"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:settlement[ancestor::tei:interp]">
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
-            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+            <xsl:with-param name="entity" select="'place'"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:pubPlace[ancestor::tei:interp]">
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
-            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+            <xsl:with-param name="entity" select="'place'"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:orgName[ancestor::tei:interp]">
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
-            <xsl:with-param name="entity" select="tei:orgName"/>
+            <xsl:with-param name="entity" select="'org'"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template name="verify-url-hash-namespace-single">
         <xsl:param name="attribute"/>
         <xsl:param name="entity"/>
         <br/>
-        <a>
-            <xsl:choose>
-                <xsl:when test="$attribute">
+        <xsl:choose>
+            <xsl:when test="$attribute">
+                <a>
                     <xsl:choose>
                         <xsl:when test="starts-with($attribute, 'http')">
                             <xsl:attribute name="href">
@@ -1518,33 +1525,57 @@
                         </xsl:when>
                         <xsl:when test="starts-with($attribute, '#')">
                             <xsl:attribute name="href">
-                                <xsl:value-of select="$attribute"/>
+                                <xsl:value-of select="substring-after(concat($attribute, '.html'), '#')"/>
                             </xsl:attribute>
                         </xsl:when>
                         <xsl:when test="starts-with($attribute, 'acdh:')">
-                            <xsl:attribute name="href">
-                                <xsl:value-of select="replace(replace($attribute, 'acdh:', ''), '.xml', '.html')"/>
-                            </xsl:attribute>
-                            <xsl:if test="ends-with($attribute, '#.+')">
-                                <xsl:if test="contains($attribute, 'amp-index')">
-                                    <xsl:variable name="fn" select="tokenize(substring-after($attribute, 'acdh:'), '#')[1]"/>
-                                    <xsl:variable name="hash" select="tokenize($attribute, '#')[last()]"/>
-                                    <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                                    <xsl:variable name="label" select="$doc//id(data($hash))//$entity"/>
+                            <xsl:choose>
+                                <xsl:when test="contains($attribute, '#')">
+                                    <xsl:choose>
+                                        <xsl:when test="contains($attribute, 'amp-index')">
+                                            <xsl:variable name="fn" select="tokenize(substring-after($attribute, 'acdh:'), '#')[1]"/>
+                                            <xsl:variable name="hash" select="tokenize($attribute, '#')[last()]"/>
+                                            <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
+                                            <xsl:attribute name="href">
+                                                <xsl:value-of select="concat($hash, '.html')"/>
+                                            </xsl:attribute>
+                                            <xsl:choose>
+                                                <xsl:when test="$entity = 'place'">
+                                                    <xsl:value-of select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
+                                                </xsl:when>
+                                                <xsl:when test="$entity = 'person'">
+                                                    <xsl:value-of select="$doc//id(data($hash))//tei:persName"/>
+                                                </xsl:when>
+                                                <xsl:when test="$entity = 'org'">
+                                                    <xsl:value-of select="$doc//id(data($hash))//tei:orgName"/>
+                                                </xsl:when>
+                                                <xsl:when test="'none'">
+                                                    <!-- no value required -->
+                                                </xsl:when>
+                                            </xsl:choose>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:attribute name="href">
+                                                <xsl:value-of select="replace(replace($attribute, 'acdh:', ''), '.xml', '.html')"/>
+                                            </xsl:attribute>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                </xsl:when>
+                                <xsl:otherwise>
                                     <xsl:attribute name="href">
-                                        <xsl:value-of select="concat($hash, '.html')"/>
+                                        <xsl:value-of select="replace(replace($attribute, 'acdh:', ''), '.xml', '.html')"/>
                                     </xsl:attribute>
-                                    <xsl:value-of select="$label"/>
-                                </xsl:if>
-                            </xsl:if>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:when>
                     </xsl:choose>
-                </xsl:when>
-                <xsl:otherwise>
                     <xsl:apply-templates/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </a>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:date[ancestor::tei:interp]">
         <br/>
@@ -1563,13 +1594,17 @@
     <xsl:template match="tei:editor[ancestor::tei:interp]">
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
-            <xsl:with-param name="entity" select="tei:persName"/>
+            <xsl:with-param name="entity" select="'person'"/>
         </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:author[ancestor::tei:interp]">
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
-            <xsl:with-param name="entity" select="tei:persName"/>
+            <xsl:with-param name="entity" select="'person'"/>
         </xsl:call-template>
+    </xsl:template>
+    <xsl:template match="tei:address[ancestor::tei:interp]">
+        <br/><br/>
+        <xsl:apply-templates/>
     </xsl:template>
 </xsl:stylesheet>
