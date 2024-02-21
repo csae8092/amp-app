@@ -1438,38 +1438,16 @@
         <xsl:apply-templates/>
     </xsl:template>
     <xsl:template match="tei:country[ancestor::tei:interp]">
-        <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="$label"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+        </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:repository[ancestor::tei:interp]">
-        <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="$label"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+        </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:idno[ancestor::tei:interp]">
         <br/>
@@ -1485,21 +1463,10 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:collection[ancestor::tei:interp]">
-        <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="$label"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+        </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:citedRange[ancestor::tei:interp]">
         <br/>
@@ -1510,72 +1477,74 @@
         <xsl:value-of select="@from"/>-<xsl:value-of select="@to"/>
     </xsl:template>
     <xsl:template match="tei:publisher[ancestor::tei:interp]">
-        <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:orgName|$doc//id(data($hash))//tei:persName"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="$label"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    <xsl:template match="tei:pubPlace[ancestor::tei:interp]">
-        <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="$label"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:orgName"/>
+        </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:settlement[ancestor::tei:interp]">
-        <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:placeName[not(@type or @key)]"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="$label"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+        </xsl:call-template>
+    </xsl:template>
+    <xsl:template match="tei:pubPlace[ancestor::tei:interp]">
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
+        </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:orgName[ancestor::tei:interp]">
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:orgName"/>
+        </xsl:call-template>
+    </xsl:template>
+    <xsl:template name="verify-url-hash-namespace-single">
+        <xsl:param name="attribute"/>
+        <xsl:param name="entity"/>
         <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:orgName"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="$label"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <a>
+            <xsl:choose>
+                <xsl:when test="$attribute">
+                    <xsl:choose>
+                        <xsl:when test="starts-with($attribute, 'http')">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="$attribute"/>
+                            </xsl:attribute>
+                            <xsl:attribute name="target">
+                                <xsl:text>_blank</xsl:text>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:when test="starts-with($attribute, '#')">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="$attribute"/>
+                            </xsl:attribute>
+                        </xsl:when>
+                        <xsl:when test="starts-with($attribute, 'acdh:')">
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="replace(replace($attribute, 'acdh:', ''), '.xml', '.html')"/>
+                            </xsl:attribute>
+                            <xsl:if test="ends-with($attribute, '#.+')">
+                                <xsl:if test="contains($attribute, 'amp-index')">
+                                    <xsl:variable name="fn" select="tokenize(substring-after($attribute, 'acdh:'), '#')[1]"/>
+                                    <xsl:variable name="hash" select="tokenize($attribute, '#')[last()]"/>
+                                    <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
+                                    <xsl:variable name="label" select="$doc//id(data($hash))//$entity"/>
+                                    <xsl:attribute name="href">
+                                        <xsl:value-of select="concat($hash, '.html')"/>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="$label"/>
+                                </xsl:if>
+                            </xsl:if>
+                        </xsl:when>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:apply-templates/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </a>
     </xsl:template>
     <xsl:template match="tei:date[ancestor::tei:interp]">
         <br/>
@@ -1592,37 +1561,15 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:editor[ancestor::tei:interp]">
-        <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:persName"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="concat($label/tei:surname, ', ', $label/tei:surname)"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:persName"/>
+        </xsl:call-template>
     </xsl:template>
     <xsl:template match="tei:author[ancestor::tei:interp]">
-        <br/>
-        <xsl:choose>
-            <xsl:when test="@ref">
-                <xsl:variable name="fn" select="tokenize(substring-after(@ref, 'acdh:'), '#')[1]"/>
-                <xsl:variable name="hash" select="tokenize(@ref, '#')[last()]"/>
-                <xsl:variable name="doc" select="doc(concat('../data/indices/', $fn))//tei:TEI"/>
-                <xsl:variable name="label" select="$doc//id(data($hash))//tei:persName"/>
-                <a href="{$hash}.html">
-                    <xsl:value-of select="concat($label/tei:surname, ', ', $label/tei:surname)"/>
-                </a>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="verify-url-hash-namespace-single">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="entity" select="tei:persName"/>
+        </xsl:call-template>
     </xsl:template>
 </xsl:stylesheet>
