@@ -646,7 +646,6 @@
                                                     </tr>
                                                 </xsl:if>
                                                 <xsl:if test="./tei:location[@type='located_in_place']">
-                                                    <xsl:variable name="places" select="document('../data/indices/listplace.xml')//tei:TEI//tei:place"/>
                                                     <tr>
                                                         <th>
                                                             Located in
