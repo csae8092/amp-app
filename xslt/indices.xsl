@@ -99,7 +99,7 @@
                         <script type="text/javascript" src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                createDataTable('listbibl', 'Search:', [1, 2, 5], [0, 3, 4], false);
+                                createDataTable('listbibl', 'Search:', [1, 2, 3, 6], [0, 4, 5], false);
                             });
                         </script>
                     </xsl:when>
@@ -390,6 +390,7 @@
                         <th>Title</th>
                         <th>Author</th>
                         <th>Date</th>
+                        <th>Type</th>
                         <th>Wikidata ID</th>
                         <th>Language</th>
                         <th>Mentioned in papers #</th>
@@ -420,6 +421,9 @@
                             </td>
                             <td>
                                 <xsl:value-of select="./tei:date/@when"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="@type"/>
                             </td>
                             <td>
                                 <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>

@@ -1074,6 +1074,16 @@
                                             </td>
                                         </tr>
                                     </xsl:if>
+                                    <xsl:if test="@type">
+                                        <tr>
+                                            <th>
+                                                Type
+                                            </th>
+                                            <td>
+                                                <xsl:value-of select="@type"/>
+                                            </td>
+                                        </tr>
+                                    </xsl:if>
                                     <xsl:if test="./tei:idno[@subtype='GND']/text()">
                                         <tr>
                                             <th>
