@@ -724,11 +724,13 @@
                             <xsl:attribute name="href">
                                 <xsl:value-of select="$ref"/>
                             </xsl:attribute>
+                            <xsl:apply-templates/>
                         </xsl:when>
                         <xsl:when test="starts-with($ref, '#')">
                             <xsl:attribute name="href">
                                 <xsl:value-of select="$ref"/>
                             </xsl:attribute>
+                            <xsl:apply-templates/>
                         </xsl:when>
                         <xsl:when test="starts-with($ref, 'acdh:')">
                             <xsl:attribute name="href">
@@ -743,18 +745,18 @@
                                         <xsl:value-of select="$title"/>
                                     </xsl:if>
                                 </xsl:when>
+                                <xsl:when test="contains($ref, 'amp-transcript')">
+                                    <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', replace($ref, 'acdh:', '')))//tei:TEI"/>
+                                    <xsl:variable name="id" select="substring-after($ref, '#')"/>
+                                    <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']|$doc//id(data($id))//tei:title|$doc//id(data($id))//tei:label|$doc//id(data($id))//tei:persName|$doc//id(data($id))//tei:placeName|$doc//id(data($id))//tei:orgName"/>
+                                    <xsl:value-of select="$title"/>
+                                </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:if test="contains($ref, 'amp-transcript')">
-                                        <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', replace($ref, 'acdh:', '')))//tei:TEI"/>
-                                        <xsl:variable name="id" select="substring-after($ref, '#')"/>
-                                        <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']|$doc//id(data($id))//tei:title|$doc//id(data($id))//tei:label|$doc//id(data($id))//tei:persName|$doc//id(data($id))//tei:placeName|$doc//id(data($id))//tei:orgName"/>
-                                        <xsl:value-of select="$title"/>
-                                    </xsl:if>
+                                    <xsl:apply-templates/>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:when>
                     </xsl:choose>
-                    <xsl:apply-templates/>
                     <sup>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
                             <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
@@ -1230,7 +1232,6 @@
                 </p>
             </xsl:otherwise>
         </xsl:choose>
-        
     </xsl:template>
     <xsl:template match="tei:l">
         <xsl:if test="@ana">
@@ -1352,7 +1353,7 @@
             <xsl:for-each select="./tei:event">
                 <xsl:choose>
                     <xsl:when test="./tei:label">
-                        <li><xsl:apply-templates/></li>
+                        <li>event: <xsl:apply-templates/></li>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:choose>
@@ -1669,5 +1670,9 @@
     </xsl:template>
     <xsl:template match="tei:district">
         <li><xsl:apply-templates/></li>
+    </xsl:template>
+    <xsl:template match="tei:stamp[ancestor::tei:interp]">
+        <br/>
+        <xsl:text>stamp: </xsl:text><xsl:apply-templates/>
     </xsl:template>
 </xsl:stylesheet>
