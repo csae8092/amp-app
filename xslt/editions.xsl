@@ -1294,9 +1294,10 @@
     <xsl:template match="tei:listBibl[parent::tei:desc]">
         <ul class="my-2">
             <xsl:for-each select="./tei:bibl">
+                <ul class="my-2">
                 <xsl:choose>
                     <xsl:when test="./tei:title">
-                        <li><xsl:apply-templates/></li>
+                        <xsl:apply-templates/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:choose>
@@ -1321,6 +1322,7 @@
                         </xsl:choose>
                     </xsl:otherwise>
                 </xsl:choose>
+                </ul>
             </xsl:for-each>
         </ul>
     </xsl:template>
