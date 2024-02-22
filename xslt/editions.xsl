@@ -577,6 +577,26 @@
                                         </td>
                                     </tr>
                                     </xsl:if>
+                                    <xsl:if test="@notBefore-iso">
+                                        <tr>
+                                            <th>
+                                                Start Date
+                                            </th>
+                                            <td>
+                                                <xsl:value-of select="@notBefore-iso"/>
+                                            </td>
+                                        </tr>
+                                    </xsl:if>
+                                    <xsl:if test="@notAfter-iso">
+                                        <tr>
+                                            <th>
+                                                End Date
+                                            </th>
+                                            <td>
+                                                <xsl:value-of select="@notAfter-iso"/>
+                                            </td>
+                                        </tr>
+                                    </xsl:if>
                                     <xsl:if test="./tei:idno[@subtype='GND']/text()">
                                         <tr>
                                             <th>

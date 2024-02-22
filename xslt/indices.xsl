@@ -115,7 +115,7 @@
                         <script src="js/leaflet.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                leafletDatatable('listevent', [2, 3, 5, 6, 7], [0, 1, 4]);
+                                leafletDatatable('listevent', [2, 3, 4, 6, 7, 8], [0, 1, 5]);
                             });
                         </script>
                     </xsl:when>
@@ -445,7 +445,8 @@
                         <th>Label</th>
                         <th>Participants</th>
                         <th>Located in</th>
-                        <th>Date</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
                         <th>Wikidata ID</th>
                         <th>Type</th>
                         <th>Subtype</th>
@@ -501,6 +502,9 @@
                                         </xsl:if>
                                     </xsl:otherwise>
                                 </xsl:choose>
+                            </td>
+                            <td>
+                                <xsl:value-of select="@notBefore-iso"/>
                             </td>
                             <td>
                                 <xsl:value-of select="@notAfter-iso"/>

@@ -44,10 +44,20 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
+                                                <xsl:if test="@notBefore-iso">
+                                                    <tr>
+                                                        <th>
+                                                            Start Date
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="@notBefore-iso"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
                                                 <xsl:if test="@notAfter-iso">
                                                     <tr>
                                                         <th>
-                                                            Date
+                                                            End Date
                                                         </th>
                                                         <td>
                                                             <xsl:value-of select="@notAfter-iso"/>

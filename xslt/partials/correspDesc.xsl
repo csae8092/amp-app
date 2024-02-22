@@ -107,11 +107,13 @@
                                 <tr>
                                     <th>Sent at:</th>
                                     <td>
-                                        <xsl:value-of select="substring-before(.//tei:correspAction[@type='sent']/tei:date/@notBefore-iso, 'T')"/>
+                                        <xsl:call-template name="corresp-action-date">
+                                            <xsl:with-param name="type" select="'sent'"/>
+                                        </xsl:call-template>
                                     </td>
                                 </tr>
                             </xsl:if>
-                            <xsl:if test=".//tei:correspAction[@type='transmitted']/tei:persName">
+                            <xsl:if test=".//tei:correspAction[@type='transmitted']/tei:orgName or .//tei:correspAction[@type='transmitted']/tei:persName">
                                 <tr>
                                     <th>Transmitted by:</th>
                                     <td>
@@ -135,11 +137,13 @@
                                 <tr>
                                     <th>Transmitted at:</th>
                                     <td>
-                                        <xsl:value-of select="substring-before(.//tei:correspAction[@type='transmitted']/tei:date/@notBefore-iso, 'T')"/>
+                                        <xsl:call-template name="corresp-action-date">
+                                            <xsl:with-param name="type" select="'transmitted'"/>
+                                        </xsl:call-template>
                                     </td>
                                 </tr>
                             </xsl:if>
-                            <xsl:if test=".//tei:correspAction[@type='redirected']/tei:persName">
+                            <xsl:if test=".//tei:correspAction[@type='redirected']/tei:orgName or .//tei:correspAction[@type='redirected']/tei:persName">
                                 <tr>
                                     <th>Redirected by:</th>
                                     <td>
@@ -163,11 +167,13 @@
                                 <tr>
                                     <th>Redirected at:</th>
                                     <td>
-                                        <xsl:value-of select="substring-before(.//tei:correspAction[@type='redirected']/tei:date/@notBefore-iso, 'T')"/>
+                                        <xsl:call-template name="corresp-action-date">
+                                            <xsl:with-param name="type" select="'redirected'"/>
+                                        </xsl:call-template>
                                     </td>
                                 </tr>
                             </xsl:if>
-                            <xsl:if test=".//tei:correspAction[@type='received']/tei:persName">
+                            <xsl:if test=".//tei:correspAction[@type='received']/tei:orgName or .//tei:correspAction[@type='received']/tei:persName">
                             <tr>
                                 <th>Received by:</th>
                                 <td>
@@ -195,7 +201,9 @@
     </xsl:template>
     <xsl:template name="corresp-action-place">
         <xsl:param name="type"/>
+        <ul>
         <xsl:for-each select=".//tei:correspAction[@type=$type]/tei:placeName">
+            <li>
             <xsl:if test="@ana">
                 <xsl:call-template name="rs-verify-if-multiple-values">
                     <xsl:with-param name="attribute" select="@ana"/>
@@ -212,11 +220,15 @@
                     </a>
                 </xsl:otherwise>
             </xsl:choose>
+            </li>
         </xsl:for-each>
+        </ul>
     </xsl:template>
     <xsl:template name="corresp-action-pers-org">
         <xsl:param name="type"/>
+        <ul>
         <xsl:for-each select=".//tei:correspAction[@type=$type]/tei:persName|.//tei:correspAction[@type=$type]/tei:orgName">
+            <li>
             <xsl:if test="@ana">
                 <xsl:call-template name="rs-verify-if-multiple-values">
                     <xsl:with-param name="attribute" select="@ana"/>
@@ -233,6 +245,24 @@
                     </a>
                 </xsl:otherwise>
             </xsl:choose>
+            </li>
         </xsl:for-each>
+        </ul>
+    </xsl:template>
+    <xsl:template name="corresp-action-date">
+        <xsl:param name="type"/>
+        <ul>
+        <xsl:for-each select=".//tei:correspAction[@type=$type]/tei:date">
+            <li>
+            <xsl:if test="@ana">
+                <xsl:call-template name="rs-verify-if-multiple-values">
+                    <xsl:with-param name="attribute" select="@ana"/>
+                    <xsl:with-param name="ana" select="'true'"/>
+                </xsl:call-template>
+            </xsl:if>
+            <xsl:value-of select="substring-before(@notBefore-iso, 'T')"/>
+            </li>
+        </xsl:for-each>
+        </ul>
     </xsl:template>
 </xsl:stylesheet>
