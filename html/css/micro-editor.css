@@ -114,6 +114,10 @@ input:checked + .i-slider:before {
   font-style: normal;
 }
 
+.orange {
+  background-color: #ffdbb8;
+}
+
 .red {
   background-color: #ffe6e6;
 }
@@ -136,6 +140,10 @@ input:checked + .i-slider:before {
 
 .au-brown {
   background-color: #b59890;
+}
+
+.i-slider.orange {
+  background-color: #ffdbb8;
 }
 
 .i-slider.pink {
@@ -445,4 +453,8 @@ annotation-slider label {
     padding: 1em 0;
     border-bottom: 2px dashed lightgrey;
   }
+}
+
+.choice.reg {
+  display: none;
 }

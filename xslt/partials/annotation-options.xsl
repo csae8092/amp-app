@@ -32,6 +32,9 @@
                     <li >
                         <annotation-slider opt="wsp"></annotation-slider>
                     </li>
+                    <li >
+                        <annotation-slider opt="cho"></annotation-slider>
+                    </li>
                 </ul>
                 <ul class="aot-list">
                     <li>

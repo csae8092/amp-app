@@ -71,6 +71,40 @@ var editor = new LoadEditor({
         },
       },
       {
+        opt: "cho",
+        opt_slider: "cho-slider",
+        title: "Original spelling",
+        color: "orange",
+        html_class: "cho",
+        css_class: "choice",
+        hide: {
+          hidden: true,
+          class: "cho.orig",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-1",
+        },
+      },
+      {
+        opt: "tf",
+        opt_slider: "text-features-slider",
+        title: "Original text features",
+        color: "grey",
+        html_class: "undefined",
+        css_class: "undefined",
+        hide: {
+          hidden: false,
+          class: "undefined",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: true,
+          class: "features-1",
+        },
+      },
+      {
         opt: "nte",
         color: "au-brown",
         title: "Comments",
@@ -100,23 +134,6 @@ var editor = new LoadEditor({
         features: {
           all: false,
           class: "features-3",
-        },
-      },
-      {
-        opt: "tf",
-        opt_slider: "text-features-slider",
-        title: "Original text features",
-        color: "grey",
-        html_class: "undefined",
-        css_class: "undefined",
-        hide: {
-          hidden: false,
-          class: "undefined",
-        },
-        chg_citation: "citation-url",
-        features: {
-          all: true,
-          class: "features-1",
         },
       },
       {

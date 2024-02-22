@@ -1264,11 +1264,11 @@
         </xsl:choose>
         -->
     </xsl:template>
-    
-    <xsl:template match="tei:choice">
-        <abbr title="{./tei:reg}">
-            <xsl:value-of select="./tei:orig"/>
-        </abbr>
+    <xsl:template match="tei:orig">
+        <span class="cho orig"><xsl:apply-templates/></span>
+    </xsl:template>
+    <xsl:template match="tei:reg">
+        <span class="cho reg"><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="tei:listBibl[parent::tei:desc]">
         <ul class="my-2">
