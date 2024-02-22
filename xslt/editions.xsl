@@ -1271,7 +1271,7 @@
         </abbr>
     </xsl:template>
     <xsl:template match="tei:listBibl[parent::tei:desc]">
-        <ul>
+        <ul class="my-2">
             <xsl:for-each select="./tei:bibl">
                 <xsl:choose>
                     <xsl:when test="./tei:title">
@@ -1304,18 +1304,31 @@
         </ul>
     </xsl:template>
     <xsl:template match="tei:listPlace[parent::tei:desc]">
-        <ul>
+        <ul class="my-2">
             <xsl:for-each select="./tei:place">
-                <li>
-                    <a href="{@source}" target="_blank" alt="External Link to Geonames">
-                        <xsl:value-of select="@source"/>
-                    </a>
-                </li>
+                <xsl:choose>
+                    <xsl:when test="@sameAs">
+                        <li>
+                            <xsl:call-template name="verify-url-hash-namespace-single">
+                                <xsl:with-param name="attribute" select="@sameAs"/>
+                                <xsl:with-param name="entity" select="'place'"/>
+                            </xsl:call-template>
+                        </li>
+                    </xsl:when>
+                    <xsl:when test="@source">
+                        <li>
+                            <xsl:call-template name="verify-url-hash-namespace-single">
+                                <xsl:with-param name="attribute" select="@source"/>
+                                <xsl:with-param name="entity" select="'place'"/>
+                            </xsl:call-template>
+                        </li>
+                    </xsl:when>
+                </xsl:choose>
             </xsl:for-each>
         </ul>
     </xsl:template>
     <xsl:template match="tei:listEvent[parent::tei:desc]">
-        <ul>
+        <ul class="my-2">
             <xsl:for-each select="./tei:event">
                 <xsl:choose>
                     <xsl:when test="./tei:label">
@@ -1357,6 +1370,7 @@
         </ul>
     </xsl:template>
     <xsl:template match="tei:label[parent::tei:event][ancestor::tei:interp]">
+        <li>
         <xsl:choose>
             <xsl:when test="parent::tei:event[@ref]">
                 <xsl:call-template name="verify-url-hash-namespace-single">
@@ -1365,12 +1379,13 @@
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
-                <br/>
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
+        </li>
     </xsl:template>
     <xsl:template match="tei:title[parent::tei:bibl][ancestor::tei:interp]">
+        <li>
         <xsl:choose>
             <xsl:when test="parent::tei:bibl[@sameAs]">
                 <xsl:call-template name="verify-url-hash-namespace-single">
@@ -1385,14 +1400,13 @@
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
-                <br/>
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
+        </li>
     </xsl:template>
     <xsl:template match="tei:bibl[ancestor::tei:interp]">
-        <br/>
-        <br/>
+        <ul class="my-2">
         <xsl:choose>
             <xsl:when test="./tei:title">
                 <xsl:apply-templates/>
@@ -1419,6 +1433,7 @@
                 </xsl:choose>
             </xsl:otherwise>
         </xsl:choose>
+        </ul>
     </xsl:template>
     <xsl:template match="tei:quote[ancestor::tei:interp]">
         <xsl:choose>
@@ -1442,22 +1457,26 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:msIdentifier[ancestor::tei:interp]">
-        <xsl:apply-templates/>
+        <ul class="my-2"><xsl:apply-templates/></ul>
     </xsl:template>
     <xsl:template match="tei:country[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="'place'"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template match="tei:repository[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="'org'"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template match="tei:idno[ancestor::tei:interp]">
-        <br/>
+        <li>
         <xsl:choose>
             <xsl:when test="@type='URI' or @type='URL'">
                 <a href="{./text()}">
@@ -1468,49 +1487,61 @@
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
+        </li>
     </xsl:template>
     <xsl:template match="tei:collection[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="tei:placeName[not(@type or @key)]"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template match="tei:citedRange[ancestor::tei:interp]">
-        <br/>
+        <li>
         <xsl:value-of select="@from"/>-<xsl:value-of select="@to"/>
+        </li>
     </xsl:template>
     <xsl:template match="tei:biblScope[ancestor::tei:interp]">
-        <br/>
+        <li>
         <xsl:value-of select="@from"/>-<xsl:value-of select="@to"/>
+        </li>
     </xsl:template>
     <xsl:template match="tei:publisher[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="'org'"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template match="tei:settlement[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="'place'"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template match="tei:pubPlace[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="'place'"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template match="tei:orgName[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="'org'"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template name="verify-url-hash-namespace-single">
         <xsl:param name="attribute"/>
         <xsl:param name="entity"/>
-        <br/>
         <xsl:choose>
             <xsl:when test="$attribute">
                 <a>
@@ -1578,7 +1609,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:date[ancestor::tei:interp]">
-        <br/>
+        <li>
         <xsl:choose>
             <xsl:when test="@when-iso">
                 <xsl:value-of select="@when-iso"/>
@@ -1590,21 +1621,33 @@
                 <xsl:value-of select="./text()"/>
             </xsl:otherwise>
         </xsl:choose>
+        </li>
     </xsl:template>
     <xsl:template match="tei:editor[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="'person'"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template match="tei:author[ancestor::tei:interp]">
+        <li>
         <xsl:call-template name="verify-url-hash-namespace-single">
             <xsl:with-param name="attribute" select="@ref"/>
             <xsl:with-param name="entity" select="'person'"/>
         </xsl:call-template>
+        </li>
     </xsl:template>
     <xsl:template match="tei:address[ancestor::tei:interp]">
-        <br/><br/>
-        <xsl:apply-templates/>
+        <ul class="my-2">
+            <xsl:apply-templates/>
+        </ul>
+    </xsl:template>
+    <xsl:template match="tei:street">
+        <li><xsl:apply-templates/></li>
+    </xsl:template>
+    <xsl:template match="tei:district">
+        <li><xsl:apply-templates/></li>
     </xsl:template>
 </xsl:stylesheet>
