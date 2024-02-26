@@ -1330,6 +1330,7 @@
                                 </li>
                             </xsl:when>
                         </xsl:choose>
+                        <xsl:apply-templates/>
                     </xsl:otherwise>
                 </xsl:choose>
                 </ul>
@@ -1440,32 +1441,30 @@
     </xsl:template>
     <xsl:template match="tei:bibl[ancestor::tei:interp]">
         <ul class="my-2">
-        <xsl:choose>
-            <xsl:when test="./tei:title">
-                <xsl:apply-templates/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:choose>
-                    <xsl:when test="@sameAs">
-                        <xsl:call-template name="ref-verify-if-multiple-values">
-                            <xsl:with-param name="attribute">
-                                <xsl:value-of select="@sameAs"/>
-                            </xsl:with-param>
-                        </xsl:call-template>
-                    </xsl:when>
-                    <xsl:when test="@source">
-                        <xsl:call-template name="ref-verify-if-multiple-values">
-                            <xsl:with-param name="attribute">
-                                <xsl:value-of select="@source"/>
-                            </xsl:with-param>
-                        </xsl:call-template>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:apply-templates/>
-                    </xsl:otherwise>
-                </xsl:choose>
-            </xsl:otherwise>
-        </xsl:choose>
+            <xsl:choose>
+                <xsl:when test="./tei:title">
+                    <xsl:apply-templates/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <xsl:when test="@sameAs">
+                            <xsl:call-template name="ref-verify-if-multiple-values">
+                                <xsl:with-param name="attribute">
+                                    <xsl:value-of select="@sameAs"/>
+                                </xsl:with-param>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:when test="@source">
+                            <xsl:call-template name="ref-verify-if-multiple-values">
+                                <xsl:with-param name="attribute">
+                                    <xsl:value-of select="@source"/>
+                                </xsl:with-param>
+                            </xsl:call-template>
+                        </xsl:when>
+                    </xsl:choose>
+                    <xsl:apply-templates/>
+                </xsl:otherwise>
+            </xsl:choose>
         </ul>
     </xsl:template>
     <xsl:template match="tei:quote[ancestor::tei:interp]">
