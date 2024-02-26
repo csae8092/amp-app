@@ -745,7 +745,7 @@
                                         <xsl:value-of select="$title"/>
                                     </xsl:if>
                                 </xsl:when>
-                                <xsl:when test="contains($ref, 'amp-transcript') and not(name() = 'ref')">
+                                <xsl:when test="contains($ref, 'amp-transcript') and not(name() = 'ref' or name() = 'quote')">
                                     <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', replace($ref, 'acdh:', '')))//tei:TEI"/>
                                     <xsl:variable name="id" select="substring-after($ref, '#')"/>
                                     <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']|$doc//id(data($id))//tei:title|$doc//id(data($id))//tei:label|$doc//id(data($id))//tei:persName|$doc//id(data($id))//tei:placeName|$doc//id(data($id))//tei:orgName"/>
