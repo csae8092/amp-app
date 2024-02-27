@@ -1872,6 +1872,9 @@ td > label {
     display: block;
     padding: 0.3em;
   }
+  #searchbox {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1884,6 +1887,9 @@ td > label {
   }
   .hidemobile {
     display: none !important;
+  }
+  #searchbox {
+    width: 80% !important;
   }
 }
 
