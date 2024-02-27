@@ -1,14 +1,25 @@
-body {
-  /*background: url("../images/letter-background.png") 0 0 repeat;*/
+:root {
+  --amp-primary-bg-color: #b598902a;
+  --amp-secondary-bg-color: #ffffff;
+  --amp-primary-link-color: #615a60;
+  --amp-secondary-link-color: #b59890;
+  --amp-primary-text-color: #615a60;
+  --amp-secondary-text-color: #b59890;
 }
 
-/*.card-header {
-    background: url("../images/letter-background.png") 0 0 repeat;    
+.navbar-search {
+  background-color: #fff !important;
 }
 
-.card-footer {
-    background: url("../images/letter-background.png") 0 0 repeat;
-}*/
+#mark-scroll {
+  top: 2em !important;
+}
+
+#mark-scroll button {
+  border-radius: 0.5rem;
+  border: 2px solid var(--amp-secondary-text-color);
+  background-color: var(--amp-primary-bg-color);
+}
 
 #footnotes li,
 #endnotes li {
@@ -80,11 +91,11 @@ body {
   max-width: 550px;
 }
 
-nav {
+#wrapper-navbar {
   transition: 0.2s;
 }
 
-nav.hiddenNav {
+#wrapper-navbar.hiddenNav {
   transform: translate3d(0, -100%, 0);
 }
 
@@ -135,7 +146,7 @@ nav.hiddenNav {
   vertical-align: middle;
   margin-top: 0 !important;
   border-radius: 0.35rem;
-  background-color: rgba(246, 246, 246, 1);
+  background-color: var(--amp-primary-bg-color);
   border-radius: 0.35rem;
   min-height: 280px;
   transition: transform 0.2s;
@@ -145,6 +156,8 @@ nav.hiddenNav {
 
 .index-tile:hover {
   transform: scale(1.02);
+  background-color: #b59890;
+  color: #ffffff;
 }
 
 .index-tile-footer {
@@ -154,6 +167,14 @@ nav.hiddenNav {
 .index-tile-header img {
   max-width: 80%;
   margin: 0 auto;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 400px;
+  z-index: 1000;
 }
 
 .grid {
@@ -451,9 +472,13 @@ div.dataTables_filter {
 
 /* main navigation */
 
+#wrapper-navbar {
+  background-color: #ffffff;
+}
+
 .navbar {
   border-bottom: 5px solid #615a60 !important;
-  background-color: #fff;
+  background-color: var(--amp-primary-bg-color);
   overflow: visible;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -506,17 +531,38 @@ div.dataTables_filter {
   border-radius: 0.5rem;
   word-wrap: break-word;
   word-break: break-word;
+  background-color: var(--amp-primary-bg-color);
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.tab-content {
+  background-color: #ffffff !important;
 }
 
 .index-card {
   /*opacity: .6;*/
   transition: transform 0.2s;
-  border: 1px solid #f1f1f1;
   box-shadow: 2px 2px 4.5px 0 rgba(0, 0, 0, 0.1);
+  min-height: 520px;
+  justify-content: space-between;
+}
+
+.index-card a:hover {
+  color: #ffffff !important;
+}
+
+.accordion-item {
+  --bs-accordion-btn-bg: transparent;
+  background-color: transparent;
 }
 
 .index-card:hover {
   transform: scale(1.02);
+  background-color: #b59890;
+  color: #ffffff !important;
 }
 
 .index-link:hover {
@@ -845,7 +891,6 @@ a.btn-round:hover {
 
 .container-fluid {
   max-width: 1200px;
-  margin-bottom: 1em;
 }
 
 .container {
@@ -1151,8 +1196,6 @@ fieldset.ssFieldset > span > input {
 
 .transcript {
   padding: 0 !important;
-  border-top: 3px solid #b59890;
-  border-bottom: 3px solid #b59890;
   min-height: 1000px;
 }
 
@@ -1165,6 +1208,20 @@ div.text-re {
 div.text-re div.card-body {
   display: grid;
   justify-content: center;
+}
+
+.card-body,
+.card-header,
+.card-footer {
+  background-color: transparent !important;
+}
+
+.card-header.img {
+  background-color: #000 !important;
+}
+
+.index-card .card-footer {
+  align-self: baseline;
 }
 
 /* expanding and descreasing osd images */
@@ -1234,17 +1291,15 @@ div.text-re div.card-body {
   display: none;
 }
 
-.tab-pane > .tab-content {
-  border: 1px solid #b59890;
-  margin: 0 0.5em;
-  border-radius: 0.5rem;
+.tab-edition {
+  border-top: 3px solid #b59890;
+  border-bottom: 3px solid #b59890;
 }
 
 .pagination-top > .pagination {
   margin: 0 auto;
   text-align: center;
   display: block;
-  background-color: #fff;
 }
 
 .pagination-top > .pagination .nav {
@@ -1399,7 +1454,9 @@ td > label {
 .badge-en.intes:hover {
   background-color: #615a60;
 }
-
+.badge-en.qtes:hover {
+  background-color: #dadada;
+}
 .badge-en > .number {
   background-color: #615a60;
 }
@@ -1417,6 +1474,10 @@ td > label {
 
 .badge-link:hover {
   color: #b59890;
+}
+
+#wrapper-footer-secondary {
+  background-color: #00122f;
 }
 
 /* XML raw style */
@@ -1811,6 +1872,9 @@ td > label {
     display: block;
     padding: 0.3em;
   }
+  #searchbox {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -1820,6 +1884,12 @@ td > label {
   }
   .margin-top {
     margin-top: 0;
+  }
+  .hidemobile {
+    display: none !important;
+  }
+  #searchbox {
+    width: 80% !important;
   }
 }
 

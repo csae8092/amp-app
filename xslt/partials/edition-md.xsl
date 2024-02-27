@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:_="urn:acdh" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs xsl tei" version="2.0">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes" omit-xml-declaration="yes"/>
+<xsl:stylesheet 
+    xmlns:_="urn:acdh" 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    exclude-result-prefixes="#all" version="2.0">
     
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>
@@ -15,7 +19,6 @@
         <div class="row"> 
             <div class="col-md-8">
                 <div>
-                    
                     <table class="table edition-md">
                       <tr>
                           <th>PID</th>
@@ -108,19 +111,19 @@
                                 <td>
                                     <ul>
                                         <li>
-                                            <xsl:apply-templates select="substring-before(//tei:sourceDesc//tei:history//tei:origDate/@notBefore-iso, 'T')"/>
                                             <xsl:if test="//tei:sourceDesc//tei:history//tei:origDate[@ana]">
-                                                <span class="interp ent" ref="{//tei:sourceDesc//tei:history//tei:origDate/@ana}">
+                                                <span class="note ent" ref="{//tei:sourceDesc//tei:history//tei:origDate/@ana}">
                                                 </span>
                                             </xsl:if>
+                                            <xsl:apply-templates select="substring-before(//tei:sourceDesc//tei:history//tei:origDate/@notBefore-iso, 'T')"/>
                                         </li>
                                         <xsl:if test="//tei:sourceDesc//tei:history//tei:origPlace">
                                             <li>
-                                                <xsl:apply-templates select="//tei:sourceDesc//tei:history//tei:origPlace"/>
                                                 <xsl:if test="//tei:sourceDesc//tei:history//tei:origPlace[@ana]">
-                                                    <span class="interp ent" ref="{//tei:sourceDesc//tei:history//tei:origPlace/@ana}">
+                                                    <span class="note ent" ref="{//tei:sourceDesc//tei:history//tei:origPlace/@ana}">
                                                     </span>
                                                 </xsl:if>
+                                                <xsl:apply-templates select="//tei:sourceDesc//tei:history//tei:origPlace"/>
                                             </li>
                                         </xsl:if>
                                     </ul>
@@ -168,14 +171,14 @@
                                <xsl:value-of select="concat(
                                    'Andorfer Peter, ',
                                    'Elsner Daniel, ',
-                                   replace(//tei:editor/tei:name[2], ',', ''),
-                                   ', Grigoriou Dimitra, ',
-                                   replace(//tei:editor/tei:name[1], ',', ''),
-                                   ', Mendelson Edward and Neundlinger Helmut')"/>
+                                   'Frühwirth Timo, ',
+                                   'Grigoriou Dimitra, ',
+                                   'Mayer Sandra, ',
+                                   'Mendelson Edward and Neundlinger Helmut')"/>
                                <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
                                <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
                                    amp.acdh.oeaw.ac.at
-                               </a><xsl:text>.</xsl:text>                                                         
+                               </a><xsl:text>.</xsl:text>
                            </td> 
                        </tr>
                     </table>

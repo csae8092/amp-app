@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs xsl tei" version="2.0">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes" omit-xml-declaration="yes"/>
+<xsl:stylesheet 
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+    xmlns:tei="http://www.tei-c.org/ns/1.0" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    exclude-result-prefixes="#all" version="2.0">
     
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>
@@ -26,10 +29,10 @@
                     <xsl:choose>
                         <xsl:when test="position() = [1,2,3,4,5,6,7,8,9]">
                             <li class="nav-item" type="{@type}">
-                                
+                                <xsl:variable name="positionOrNot" select="if(@ed) then(@ed) else(position())"/>
                                 <edition-pagination 
                                     opt="edition-pagination"
-                                    pos="{position()}"
+                                    pos="{$positionOrNot}"
                                     facs="{$facs_item}" 
                                     data-type="{@type}">
                                 </edition-pagination>
@@ -40,7 +43,7 @@
                                 <a
                                     title="more"
                                     href="#"
-                                    data-toggle="dropdown"
+                                    data-bs-toggle="dropdown"
                                     data-tab="paginate"
                                     class="nav-link dropdown-toggle"
                                     style="border-radius:30px;"
@@ -48,6 +51,7 @@
                                 </a>
                                 <ul class="pagination-menu dropdown-menu" role="menu">
                                     <xsl:for-each select="$vseq">
+                                        <xsl:variable name="positionOrNot" select="if(@ed) then(@ed) else(position())"/>
                                         <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/> 
                                         <xsl:choose>
                                             <xsl:when test="position() > 9">
@@ -57,7 +61,7 @@
                                                     
                                                     <edition-pagination 
                                                         opt="edition-pagination"
-                                                        pos="{position()}" 
+                                                        pos="{$positionOrNot}" 
                                                         facs="{$facs_item}" 
                                                         data-type="{@type}">
                                                     </edition-pagination>

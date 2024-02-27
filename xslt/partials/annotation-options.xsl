@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
+<xsl:stylesheet 
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xs xsl tei" version="2.0">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes" omit-xml-declaration="yes"/>
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all" version="2.0">
 
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>
@@ -33,6 +32,9 @@
                     <li >
                         <annotation-slider opt="wsp"></annotation-slider>
                     </li>
+                    <li >
+                        <annotation-slider opt="cho"></annotation-slider>
+                    </li>
                 </ul>
                 <ul class="aot-list">
                     <li>
@@ -55,8 +57,11 @@
                     </li>
                 </ul>
                 <ul class="aot-list">
-                    <li >
-                        <annotation-slider opt="int"></annotation-slider>
+                    <li>
+                        <annotation-slider opt="nte"></annotation-slider>
+                    </li>
+                    <li>
+                        <annotation-slider opt="qte"></annotation-slider>
                     </li>
                 </ul>
             </div>

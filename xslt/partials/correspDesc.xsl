@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet 
-    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xsl tei xs"
+    exclude-result-prefixes="#all"
     version="2.0">
     
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
@@ -74,7 +73,7 @@
                                     <ul>
                                         <xsl:for-each select=".//tei:langUsage/tei:language">
                                             <li>
-                                                <xsl:value-of select="./text()"/>
+                                                <xsl:apply-templates/>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
@@ -86,68 +85,184 @@
                         <table class="table corresp-desc">
                             <xsl:if test=".//tei:correspAction[@type='sent']/tei:orgName or .//tei:correspAction[@type='sent']/tei:persName">
                                 <tr>
-                                    <th>Sent by: </th>
+                                    <th>Sent at:</th>
                                     <td>
-                                        <a href="{concat(substring-after(.//tei:correspAction[@type='sent']/tei:orgName/@ref, '#'), '.html')}"
-                                            alt="{./text()}">
-                                            <xsl:choose>
-                                                <xsl:when test=".//tei:correspAction[@type='sent']/tei:orgName/text()">
-                                                    <xsl:value-of select=".//tei:correspAction[@type='sent']/tei:orgName/text()"/>
-                                                </xsl:when>
-                                                <xsl:when test=".//tei:correspAction[@type='sent']/tei:persName/text()">
-                                                    <xsl:value-of select=".//tei:correspAction[@type='sent']/tei:persName/text()"/>
-                                                </xsl:when>
-                                            </xsl:choose>
-                                        </a>
+                                        <xsl:call-template name="corresp-action-pers-org">
+                                            <xsl:with-param name="type" select="'sent'"/>
+                                        </xsl:call-template>
                                     </td>
                                 </tr>
                             </xsl:if>
                             <xsl:if test=".//tei:correspAction[@type='sent']/tei:placeName">
                             <tr>
-                                <th>Sent from (Place): </th>
+                                <th>Sent from:</th>
                                 <td>
-                                    <a href="{concat(substring-after(.//tei:correspAction[@type='sent']/tei:placeName/@ref, '#'), '.html')}"
-                                        alt="{./text()}">
-                                    <xsl:value-of select=".//tei:correspAction[@type='sent']/tei:placeName/text()"/>
-                                    </a>
+                                    <xsl:call-template name="corresp-action-place">
+                                        <xsl:with-param name="type" select="'sent'"/>
+                                    </xsl:call-template>
                                 </td>
                             </tr>
                             </xsl:if>
                             <xsl:if test=".//tei:correspAction[@type='sent']/tei:date">
-                            <tr>
-                                <th>Sent Date: </th>
-                                <td>
-                                    <xsl:value-of select="substring-before(.//tei:correspAction[@type='sent']/tei:date/@notBefore-iso, 'T')"/>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <th>Sent at:</th>
+                                    <td>
+                                        <xsl:call-template name="corresp-action-date">
+                                            <xsl:with-param name="type" select="'sent'"/>
+                                        </xsl:call-template>
+                                    </td>
+                                </tr>
                             </xsl:if>
-                            <xsl:if test=".//tei:correspAction[@type='received']/tei:persName">
+                            <xsl:if test=".//tei:correspAction[@type='transmitted']/tei:orgName or .//tei:correspAction[@type='transmitted']/tei:persName">
+                                <tr>
+                                    <th>Transmitted by:</th>
+                                    <td>
+                                        <xsl:call-template name="corresp-action-pers-org">
+                                            <xsl:with-param name="type" select="'transmitted'"/>
+                                        </xsl:call-template>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <xsl:if test=".//tei:correspAction[@type='transmitted']/tei:placeName">
+                                <tr>
+                                    <th>Transmitted at:</th>
+                                    <td>
+                                        <xsl:call-template name="corresp-action-place">
+                                            <xsl:with-param name="type" select="'transmitted'"/>
+                                        </xsl:call-template>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <xsl:if test=".//tei:correspAction[@type='transmitted']/tei:date">
+                                <tr>
+                                    <th>Transmitted at:</th>
+                                    <td>
+                                        <xsl:call-template name="corresp-action-date">
+                                            <xsl:with-param name="type" select="'transmitted'"/>
+                                        </xsl:call-template>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <xsl:if test=".//tei:correspAction[@type='redirected']/tei:orgName or .//tei:correspAction[@type='redirected']/tei:persName">
+                                <tr>
+                                    <th>Redirected by:</th>
+                                    <td>
+                                        <xsl:call-template name="corresp-action-pers-org">
+                                            <xsl:with-param name="type" select="'redirected'"/>
+                                        </xsl:call-template>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <xsl:if test=".//tei:correspAction[@type='redirected']/tei:placeName">
+                                <tr>
+                                    <th>Redirected at:</th>
+                                    <td>
+                                        <xsl:call-template name="corresp-action-place">
+                                            <xsl:with-param name="type" select="'redirected'"/>
+                                        </xsl:call-template>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <xsl:if test=".//tei:correspAction[@type='redirected']/tei:date">
+                                <tr>
+                                    <th>Redirected at:</th>
+                                    <td>
+                                        <xsl:call-template name="corresp-action-date">
+                                            <xsl:with-param name="type" select="'redirected'"/>
+                                        </xsl:call-template>
+                                    </td>
+                                </tr>
+                            </xsl:if>
+                            <xsl:if test=".//tei:correspAction[@type='received']/tei:orgName or .//tei:correspAction[@type='received']/tei:persName">
                             <tr>
-                                <th>Received by: </th>
+                                <th>Received by:</th>
                                 <td>
-                                    <a href="{concat(substring-after(.//tei:correspAction[@type='received']/tei:persName/@ref, '#'), '.html')}"
-                                        alt="{./text()}">
-                                    <xsl:value-of select=".//tei:correspAction[@type='received']/tei:persName/text()"/>
-                                    </a>
+                                    <xsl:call-template name="corresp-action-pers-org">
+                                        <xsl:with-param name="type" select="'received'"/>
+                                    </xsl:call-template>
                                 </td>
                             </tr>
                             </xsl:if>
                             <xsl:if test=".//tei:correspAction[@type='received']/tei:placeName">
                             <tr>
-                                <th>Received in (Place): </th>
+                                <th>Received at:</th>
                                 <td>
-                                    <a href="{concat(substring-after(.//tei:correspAction[@type='received']/tei:placeName/@ref, '#'), '.html')}"
-                                        alt="{./text()}">
-                                    <xsl:value-of select=".//tei:correspAction[@type='received']/tei:placeName/text()"/>
-                                    </a>
+                                    <xsl:call-template name="corresp-action-place">
+                                        <xsl:with-param name="type" select="'received'"/>
+                                    </xsl:call-template>
                                 </td>
                             </tr>
                             </xsl:if>
                         </table>
                     </div>
                 </div>
-                
             </div>
-        </div><!-- .row -->    
+        </div>   
+    </xsl:template>
+    <xsl:template name="corresp-action-place">
+        <xsl:param name="type"/>
+        <ul>
+        <xsl:for-each select=".//tei:correspAction[@type=$type]/tei:placeName">
+            <li>
+            <xsl:if test="@ana">
+                <xsl:call-template name="rs-verify-if-multiple-values">
+                    <xsl:with-param name="attribute" select="@ana"/>
+                    <xsl:with-param name="ana" select="'true'"/>
+                </xsl:call-template>
+            </xsl:if>
+            <xsl:choose>
+                <xsl:when test="./tei:rs">
+                    <xsl:apply-templates/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <a href="{concat(substring-after(@ref, '#'), '.html')}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:otherwise>
+            </xsl:choose>
+            </li>
+        </xsl:for-each>
+        </ul>
+    </xsl:template>
+    <xsl:template name="corresp-action-pers-org">
+        <xsl:param name="type"/>
+        <ul>
+        <xsl:for-each select=".//tei:correspAction[@type=$type]/tei:persName|.//tei:correspAction[@type=$type]/tei:orgName">
+            <li>
+            <xsl:if test="@ana">
+                <xsl:call-template name="rs-verify-if-multiple-values">
+                    <xsl:with-param name="attribute" select="@ana"/>
+                    <xsl:with-param name="ana" select="'true'"/>
+                </xsl:call-template>
+            </xsl:if>
+            <xsl:choose>
+                <xsl:when test="./tei:rs">
+                    <xsl:apply-templates/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <a href="{concat(substring-after(@ref, '#'), '.html')}">
+                        <xsl:apply-templates/>
+                    </a>
+                </xsl:otherwise>
+            </xsl:choose>
+            </li>
+        </xsl:for-each>
+        </ul>
+    </xsl:template>
+    <xsl:template name="corresp-action-date">
+        <xsl:param name="type"/>
+        <ul>
+        <xsl:for-each select=".//tei:correspAction[@type=$type]/tei:date">
+            <li>
+            <xsl:if test="@ana">
+                <xsl:call-template name="rs-verify-if-multiple-values">
+                    <xsl:with-param name="attribute" select="@ana"/>
+                    <xsl:with-param name="ana" select="'true'"/>
+                </xsl:call-template>
+            </xsl:if>
+            <xsl:value-of select="substring-before(@notBefore-iso, 'T')"/>
+            </li>
+        </xsl:for-each>
+        </ul>
     </xsl:template>
 </xsl:stylesheet>

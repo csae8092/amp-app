@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet 
-    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    version="2.0" exclude-result-prefixes="xsl tei xs">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="no" omit-xml-declaration="yes"/>
+    version="2.0" exclude-result-prefixes="#all">
+    <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="no" omit-xml-declaration="yes"/>
     
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -22,22 +21,15 @@
                 <xsl:for-each select="//tei:event[@xml:id]">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="./tei:label"></xsl:with-param>
-                                </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select="./tei:label"/>
-                                    </xsl:attribute>
-                                </meta>
+                                    <xsl:with-param name="html_title" select="./tei:label"/>
+                                </xsl:call-template>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
                                         
                                         <table class="table entity-table">
@@ -52,28 +44,38 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="@when">
+                                                <xsl:if test="@notBefore-iso">
                                                     <tr>
                                                         <th>
-                                                            Date
+                                                            Start Date
                                                         </th>
                                                         <td>
-                                                            <xsl:value-of select="@when"/>
+                                                            <xsl:value-of select="@notBefore-iso"/>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:ab[@type='participants']">
+                                                <xsl:if test="@notAfter-iso">
+                                                    <tr>
+                                                        <th>
+                                                            End Date
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="@notAfter-iso"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:listPerson/tei:person">
                                                     <tr>
                                                         <th>
                                                             Participants
                                                         </th>
                                                         <td>
                                                             <ul>
-                                                                <xsl:for-each select="./tei:ab[@type='participants']/tei:persName">
+                                                                <xsl:for-each select="./tei:listPerson/tei:person">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{@key}.html">
-                                                                            <xsl:value-of select="."/>
+                                                                        <a href="{@sameAs}.html" title="{@role}">
+                                                                            <xsl:value-of select="./tei:persName"/>
                                                                         </a>
                                                                     </li>
                                                                 </xsl:for-each>
@@ -81,36 +83,46 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:ab[@type='location']">
+                                                <xsl:if test="./tei:listPlace/tei:place[@subtype='is_event_location']">
                                                     <tr>
                                                         <th>
                                                             Located in
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName/@key}.html">
-                                                                <xsl:value-of select="./tei:ab[@type='location']/tei:location[@type='located_in_place']/tei:placeName"/>
+                                                            <a href="{./tei:listPlace/tei:place[@subtype='is_event_location']/@sameAs}.html">
+                                                                <xsl:value-of select="./tei:listPlace/tei:place[@subtype='is_event_location']/tei:placeName"/>
                                                             </a>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:desc">
+                                                <xsl:if test="@type">
                                                     <tr>
                                                         <th>
-                                                            Description
+                                                            Type
                                                         </th>
                                                         <td>
-                                                            <xsl:value-of select="./tei:desc"/>
+                                                            <xsl:value-of select="@type"/>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="@subtype">
+                                                    <tr>
+                                                        <th>
+                                                            Subtype
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="@subtype"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                     <tr>
                                                         <th>
                                                             Wikidata
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -125,7 +137,7 @@
                                                                 <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;eve=on">
                                                                             <xsl:value-of select="."/>
                                                                         </a>
                                                                     </li>
@@ -137,9 +149,9 @@
                                             </tbody>
                                         </table>
                                         
-                                    </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                    </div>
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>
@@ -149,24 +161,16 @@
                 <xsl:for-each select="//tei:person">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"/>
                                 </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"/>
-                                    </xsl:attribute>
-                                </meta>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
-                                            
                                         <table class="table entity-table">
                                             <tbody>
                                                 <xsl:if test="./tei:persName/tei:surname">
@@ -245,26 +249,26 @@
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='GND']">
+                                                <xsl:if test="./tei:idno[@subtype='GND']">
                                                 <tr>
                                                     <th>
                                                         GND
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                                        <a href="{./tei:idno[@subtype='GND']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                 <tr>
                                                     <th>
                                                         Wikidata
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                        <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -298,7 +302,7 @@
                                                             <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                 <xsl:sort select="." order="ascending"/>
                                                                 <li>
-                                                                    <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                    <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;prs=on">
                                                                         <xsl:value-of select="."/>
                                                                     </a>
                                                                 </li>
@@ -311,8 +315,8 @@
                                         </table>
                                            
                                     </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>
@@ -322,25 +326,16 @@
                 <xsl:for-each select="//tei:place">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select=".//tei:placeName"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select=".//tei:placeName"/>
                                 </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select=".//tei:placeName"/>
-                                    </xsl:attribute>
-                                </meta>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
-                                        
-                                        
                                         <table class="table entity-table">
                                             <tbody>
                                                 <tr>
@@ -398,26 +393,26 @@
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='GEONAMES']">
+                                                <xsl:if test="./tei:idno[@subtype='GEONAMES']">
                                                 <tr>
                                                     <th>
                                                         Geonames ID
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='GEONAMES']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GEONAMES'], '/')[4]"/>
+                                                        <a href="{./tei:idno[@subtype='GEONAMES']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='GEONAMES'], '/')[4]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                 <tr>
                                                     <th>
                                                         Wikidata ID
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                        <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -428,8 +423,8 @@
                                                         GND ID
                                                     </th>
                                                     <td>
-                                                        <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                            <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                                        <a href="{./tei:idno[@subtype='GND']}" target="_blank">
+                                                            <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -464,7 +459,7 @@
                                                                 <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;plc=on">
                                                                             <xsl:value-of select="."/>
                                                                         </a>
                                                                     </li>
@@ -476,9 +471,9 @@
                                             </tbody>
                                         </table>
                                         
-                                    </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                    </div>
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>
@@ -488,24 +483,16 @@
                 <xsl:for-each select="//tei:bibl">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="./tei:title"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="./tei:title"/>
                                 </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select="./tei:title"/>
-                                    </xsl:attribute>
-                                </meta>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
-                                        
                                         <table class="table entity-table">
                                             <tbody>
                                                 <xsl:if test="./tei:title">
@@ -547,6 +534,16 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
+                                                <xsl:if test="@type">
+                                                    <tr>
+                                                        <th>
+                                                            Type
+                                                        </th>
+                                                        <td>
+                                                            <xsl:value-of select="@type"/>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
                                                 <xsl:if test="./tei:biblScope[@type='volume']">
                                                     <tr>
                                                         <th>
@@ -567,26 +564,26 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='GND']">
+                                                <xsl:if test="./tei:idno[@subtype='GND']">
                                                     <tr>
                                                         <th>
                                                             GND
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='GND']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                     <tr>
                                                         <th>
                                                             Wikidata
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -611,7 +608,7 @@
                                                                 <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;wrk=on">
                                                                             <xsl:value-of select="."/>
                                                                         </a>
                                                                     </li>
@@ -623,9 +620,9 @@
                                             </tbody>
                                         </table>
                                         
-                                    </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                    </div>
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>
@@ -635,22 +632,15 @@
                 <xsl:for-each select="//tei:org">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
                         <html>
                             <head>
                                 <xsl:call-template name="html_head">
-                                    <xsl:with-param name="html_title" select="./tei:orgName"></xsl:with-param>
+                                    <xsl:with-param name="html_title" select="./tei:orgName"/>
                                 </xsl:call-template>                
-                                <meta name="docTitle" class="staticSearch_docTitle">
-                                    <xsl:attribute name="content">
-                                        <xsl:value-of select="./tei:orgName"/>
-                                    </xsl:attribute>
-                                </meta>
                             </head>
-                            <body class="page">
-                                <div class="hfeed site" id="page">
-                                    <xsl:call-template name="nav_bar"/>
-                                    
+                            <body class="d-flex flex-column">
+                                <xsl:call-template name="nav_bar"/>
+                                <main class="flex-shrink-0">
                                     <div class="container-fluid">  
                                         
                                         <table class="table entity-table">
@@ -676,7 +666,6 @@
                                                     </tr>
                                                 </xsl:if>
                                                 <xsl:if test="./tei:location[@type='located_in_place']">
-                                                    <xsl:variable name="places" select="document('../data/indices/listplace.xml')//tei:TEI//tei:place"/>
                                                     <tr>
                                                         <th>
                                                             Located in
@@ -685,8 +674,7 @@
                                                             <ul>
                                                                 <xsl:for-each select="./tei:location[@type='located_in_place']">
                                                                     <xsl:variable name="key" select="./tei:placeName/@key"/>
-                                                                    <xsl:variable name="corr_place" select="$places//id($key)"/>
-                                                                    <xsl:variable name="coords" select="tokenize($corr_place/tei:location[@type='coords']/tei:geo, ', ')"/>
+                                                                    <xsl:variable name="coords" select="tokenize(parent::tei:org/tei:location[@type='coords']/tei:geo, ', ')"/>
                                                                     <li class="map-coordinates" lat="{$coords[1]}" long="{$coords[2]}" subtitle="{./tei:orgName}">
                                                                         <a href="{$key}.html">
                                                                             <xsl:value-of select="./tei:placeName"/>
@@ -697,26 +685,26 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='GND']">
+                                                <xsl:if test="./tei:idno[@subtype='GND']">
                                                     <tr>
                                                         <th>
                                                             GND
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='GND']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='GND'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='GND']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:idno[@type='WIKIDATA']">
+                                                <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                     <tr>
                                                         <th>
                                                             Wikidata
                                                         </th>
                                                         <td>
-                                                            <a href="{./tei:idno[@type='WIKIDATA']}" target="_blank">
-                                                                <xsl:value-of select="tokenize(./tei:idno[@type='WIKIDATA'], '/')[last()]"/>
+                                                            <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
                                                             </a>
                                                         </td>
                                                     </tr>
@@ -741,7 +729,7 @@
                                                                 <xsl:for-each select="./tei:noteGrp/tei:note">
                                                                     <xsl:sort select="." order="ascending"/>
                                                                     <li>
-                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}">
+                                                                        <a href="{replace(replace(@target, '/amp-app/', '/amp-app-dev/'), '.xml', '.html')}?img={$img}&amp;org=on">
                                                                             <xsl:value-of select="."/>
                                                                         </a>
                                                                     </li>
@@ -753,9 +741,9 @@
                                             </tbody>
                                         </table>
                                         
-                                    </div><!-- .container-fluid -->
-                                    <xsl:call-template name="html_footer"/>
-                                </div><!-- .site -->
+                                    </div>
+                                </main>
+                                <xsl:call-template name="html_footer"/>
                             </body>
                         </html>
                     </xsl:result-document>

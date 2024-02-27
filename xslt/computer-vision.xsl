@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet 
-    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    version="2.0" exclude-result-prefixes="tei xsl xs">
-    <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes" omit-xml-declaration="yes"/>
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    version="2.0" exclude-result-prefixes="#all">
+    <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="yes" omit-xml-declaration="yes"/>
     
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -12,8 +12,7 @@
     <xsl:import href="partials/toc-table.xsl"/>
     <xsl:import href="partials/toc-cards.xsl"/>
     <xsl:template match="/">
-        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
-        <html xmlns="http://www.w3.org/1999/xhtml">
+        <html>
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="'Auden through Computer Vision'"></xsl:with-param>
@@ -34,11 +33,9 @@
                     }
                 </style>
             </head>
-            
-            <body class="page">
-                <div class="hfeed site" id="page">
-                    <xsl:call-template name="nav_bar"/>
-                    
+            <body class="d-flex flex-column">
+                <xsl:call-template name="nav_bar"/>
+                <main class="flex-shrink-0">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12" style="margin:4em auto 1em auto;">
@@ -144,15 +141,15 @@
                         </div>
                         
                     </div>
-                    
-                    <xsl:call-template name="html_footer"/>
-                    <script type="text/javascript" src="js/dt.js"></script>
-                    <script>
-                        $(document).ready(function () {
-                            createDataTable('tocTable', 'Search titles and dates:');
-                        });
-                    </script>
-                </div>
+                
+                </main>
+                <xsl:call-template name="html_footer"/>
+                <script type="text/javascript" src="js/dt.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        createDataTable('tocTable', 'Search titles and dates:');
+                    });
+                </script>
             </body>
         </html>
     </xsl:template>
