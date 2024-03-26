@@ -137,8 +137,8 @@
                                         </div>
                                         <div class="custom-html-widget col-12 py-2">
                                             <label>Data: </label>
-                                            <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.10715088">
-                                                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10715088.svg" alt="DOI"/>
+                                            <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.10852982">
+                                                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10852982.svg" alt="DOI"/>
                                             </a>
                                         </div>
                                     </div>
