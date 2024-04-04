@@ -50,6 +50,8 @@
             <include name="*0073.xml"/>
             <include name="*0074.xml"/>
             <include name="*0075.xml"/>
+            <include name="*0077.xml"/>
+            <include name="*0078.xml"/>
         </fileset>
     </move>
 
