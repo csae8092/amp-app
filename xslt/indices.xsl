@@ -493,27 +493,37 @@
                             <td>
                                 <xsl:choose>
                                     <xsl:when test="./tei:listPlace/tei:place[@subtype='is_event_location']/tei:location[@type='coords']">
-                                        <xsl:variable name="base" select="./tei:listPlace/tei:place[@subtype='is_event_location']"/>
-                                        <xsl:variable name="key" select="$base/@sameAs"/>
-                                        <xsl:variable name="coords" select="tokenize($base/tei:location[@type='coords']/tei:geo, ', ')"/>
-                                        <a href="{$key}.html"
-                                            class="map-coordinates" 
-                                            lat="{$coords[1]}"
-                                            long="{$coords[2]}"
-                                            data-count="{$count}"
-                                            data-id="{$key}"
-                                            title="{./tei:label}"
-                                            subtitle="{$base/tei:placeName}">
-                                            <xsl:value-of select="$base/tei:placeName"/>
-                                        </a>
+                                        <xsl:for-each select="./tei:listPlace/tei:place[@subtype='is_event_location']">
+                                            <xsl:variable name="base" select="."/>
+                                            <xsl:variable name="key" select="$base/@sameAs"/>
+                                            <xsl:variable name="coords" select="tokenize($base/tei:location[@type='coords']/tei:geo, ', ')"/>
+                                            <a href="{$key}.html"
+                                                class="map-coordinates" 
+                                                lat="{$coords[1]}"
+                                                long="{$coords[2]}"
+                                                data-count="{$count}"
+                                                data-id="{$key}"
+                                                title="{./tei:label}"
+                                                subtitle="{$base/tei:placeName}">
+                                                <xsl:value-of select="$base/tei:placeName"/>
+                                            </a>
+                                            <xsl:if test="position() != last()">
+                                                <xsl:text>, </xsl:text>
+                                            </xsl:if>
+                                        </xsl:for-each>
                                     </xsl:when>
                                     <xsl:otherwise>
-                                        <xsl:variable name="base" select="./tei:listPlace/tei:place[@subtype='is_event_location']"/>
-                                        <xsl:if test="$base">
-                                        <a href="{$base/@sameAs}.html">
-                                            <xsl:value-of select="$base/tei:placeName"/>
-                                        </a>
-                                        </xsl:if>
+                                        <xsl:for-each select="./tei:listPlace/tei:place[@subtype='is_event_location']">
+                                            <xsl:variable name="base" select="."/>
+                                            <xsl:if test="$base">
+                                                <a href="{$base/@sameAs}.html">
+                                                    <xsl:value-of select="$base/tei:placeName"/>
+                                                </a>
+                                            </xsl:if>
+                                            <xsl:if test="position() != last()">
+                                                <xsl:text>, </xsl:text>
+                                            </xsl:if>
+                                        </xsl:for-each>
                                     </xsl:otherwise>
                                 </xsl:choose>
                             </td>
