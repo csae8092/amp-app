@@ -391,7 +391,7 @@
                         <th>Author</th>
                         <th>Date</th>
                         <th>Type</th>
-                        <th>Wikidata ID</th>
+                        <th>URI or URL</th>
                         <th>Language</th>
                         <th>Mentioned in papers #</th>
                     </tr>
