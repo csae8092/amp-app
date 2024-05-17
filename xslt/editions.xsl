@@ -255,10 +255,38 @@
         has a prev attribute
     -->
     <xsl:template match="tei:p[@prev]">
-        <!-- do not render handled in view-type.xsl -->
+        <xsl:choose>
+            <xsl:when test="parent::tei:div[@type='letter_message']/preceding-sibling::tei:div[@type='letter_message']">
+                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <p class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }"><xsl:apply-templates/></p>
+            </xsl:when>
+            <xsl:otherwise>
+                <!-- do not render handled in view-type.xsl --> 
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:p[preceding-sibling::tei:p[@prev]]">
-        <!-- do not render handled in view-type.xsl -->
+        <xsl:choose>
+            <xsl:when test="parent::tei:div[@type='letter_message']/preceding-sibling::tei:div[@type='letter_message']">
+                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <p class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }"><xsl:apply-templates/></p>
+            </xsl:when>
+            <xsl:otherwise>
+                <!-- do not render handled in view-type.xsl --> 
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:p">
         <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
@@ -319,7 +347,21 @@
         </div>
     </xsl:template>
     <xsl:template match="tei:closer[preceding-sibling::tei:p[@prev]]">
-        <!-- do not render handled in view-type.xsl -->
+        <xsl:choose>
+            <xsl:when test="parent::tei:div[@type='letter_message']/preceding-sibling::tei:div[@type='letter_message']">
+                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <div class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }"><xsl:apply-templates/></div>
+            </xsl:when>
+            <xsl:otherwise>
+                <!-- do not render handled in view-type.xsl --> 
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:signed">
         <!--<span class="p-like">

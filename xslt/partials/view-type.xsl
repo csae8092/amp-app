@@ -116,7 +116,7 @@
                                                         second xpath of pb grouping './tei:div[@type]/tei:div[@type]/*'
                                                         without cb element no additional grouping required
                                                         the main group selects all of div@type=letter_message or peom
-                                                        usually loads group main where additional stylesheets are handling in editions.xsl
+                                                        usually loads group main where additional stylesheets are handled in editions.xsl
                                                         
                                                         some exceptions require the loading of stylesheets of the secondary group
                                                         in document 0038 pb grouping elements share sibling level nodes as well as parent level siblings
