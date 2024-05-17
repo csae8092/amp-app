@@ -166,18 +166,28 @@
                            </td> 
                        </tr> 
                        <tr>
-                           <th>Cite this Source (MLA 9th Edition)</th>
+                           <th>Cite this Source (Chicago Manual of Style)</th>
                            <td style="text-align:left !important;">
+                               <xsl:for-each select=".//tei:titleStmt/tei:author">
+                                   <xsl:value-of select="."/>
+                                   <xsl:if test="position() != last()">
+                                       <xsl:text>; </xsl:text>
+                                   </xsl:if>
+                               </xsl:for-each>
+                               <xsl:text> 1959/2024.</xsl:text>
+                               <xsl:text> "</xsl:text>
+                               <xsl:value-of select=".//tei:titleStmt/tei:title[@level='a']/text()"/>
+                               <xsl:text>." In Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin, edited by </xsl:text>
                                <xsl:value-of select="concat(
-                                   'Andorfer Peter, ',
-                                   'Elsner Daniel, ',
-                                   'Frühwirth Timo, ',
-                                   'Grigoriou Dimitra, ',
-                                   'Mayer Sandra, ',
-                                   'Mendelson Edward and Neundlinger Helmut')"/>
-                               <xsl:text>. Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin. Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences, 2022, </xsl:text>
-                               <a href="https://amp.acdh.oeaw.ac.at" id="citation-url">
-                                   amp.acdh.oeaw.ac.at
+                                   'Sandra Mayer, ',
+                                   'Timo Frühwirth, ',
+                                   'Dimitra Grigoriou, ',
+                                   'Edward Mendelson, ', 
+                                   'Peter Andorfer and ',
+                                   'Daniel Elsner')"/>
+                               <xsl:text>. Vienna: Austrian Centre for Digital Humanities and Cultural Heritage, Austrian Academy of Sciences. </xsl:text>
+                               <a href="{.//tei:publicationStmt/tei:idno[@type='handle']/text()}">
+                                   <xsl:value-of select=".//tei:publicationStmt/tei:idno[@type='handle']/text()"/>
                                </a><xsl:text>.</xsl:text>
                            </td> 
                        </tr>
