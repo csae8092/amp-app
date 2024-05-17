@@ -319,7 +319,7 @@
                 <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Wikidata ID</th>
+                        <th>Authority file</th>
                         <th>Located in</th>
                         <th>Description</th>
                         <th>Comment</th>

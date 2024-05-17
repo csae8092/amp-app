@@ -712,7 +712,7 @@
                                                 <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                                     <tr>
                                                         <th>
-                                                            Wikidata
+                                                            Authority file
                                                         </th>
                                                         <td>
                                                             <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
