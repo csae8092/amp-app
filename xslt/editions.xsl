@@ -213,10 +213,30 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:placeName[parent::tei:dateline]">
-        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="@rend = '#block'">
+                <span class="block"><xsl:apply-templates/></span>
+            </xsl:when>
+            <xsl:when test="@rend = '#inline'">
+                <span class="inline"><xsl:apply-templates/></span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span><xsl:apply-templates/></span>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:persName[parent::tei:dateline]">
-        <xsl:apply-templates/>
+        <xsl:choose>
+            <xsl:when test="@rend = '#block'">
+                <span class="block"><xsl:apply-templates/></span>
+            </xsl:when>
+            <xsl:when test="@rend = '#inline'">
+                <span class="inline"><xsl:apply-templates/></span>
+            </xsl:when>
+            <xsl:otherwise>
+                <span><xsl:apply-templates/></span>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:ab">
         <xsl:variable name="hand" select="@hand"/>
@@ -316,7 +336,7 @@
                 <span class="inline"><xsl:apply-templates/></span>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:apply-templates/>
+                <span><xsl:apply-templates/></span>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -1087,7 +1107,7 @@
                                     <xsl:if test="./tei:idno[@subtype='GND']/text()">
                                         <tr>
                                             <th>
-                                                GND
+                                                URI|GND
                                             </th>
                                             <td>
                                                 <a href="{./tei:idno[@subtype='GND']}" target="_blank">
@@ -1099,7 +1119,7 @@
                                     <xsl:if test="./tei:idno[@subtype='WIKIDATA']/text()">
                                         <tr>
                                             <th>
-                                                Wikidata
+                                                URI|Wikidata
                                             </th>
                                             <td>
                                                 <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
@@ -1108,14 +1128,14 @@
                                             </td>
                                         </tr>
                                     </xsl:if>
-                                    <xsl:if test="./tei:idno[@subtype='GEONAMES']/text()">
+                                    <xsl:if test="./tei:idno[@subtype='OTHER']/text()">
                                         <tr>
                                             <th>
-                                                Geonames
+                                                URL|OTHER
                                             </th>
                                             <td>
-                                                <a href="{./tei:idno[@subtype='GEONAMES']}" target="_blank">
-                                                    <xsl:value-of select="tokenize(./tei:idno[@subtype='GEONAMES'], '/')[4]"/>
+                                                <a href="{./tei:idno[@subtype='OTHER']}" target="_blank">
+                                                    <xsl:value-of select="./tei:idno[@subtype='OTHER']"/>
                                                 </a>
                                             </td>
                                         </tr>

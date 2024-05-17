@@ -426,7 +426,17 @@
                                 <xsl:value-of select="@type"/>
                             </td>
                             <td>
-                                <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
+                                <xsl:choose>
+                                    <xsl:when test="./tei:idno/@subtype='WIKIDATA'">
+                                        <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
+                                    </xsl:when>
+                                    <xsl:when test="./tei:idno/@subtype='GND'">
+                                        <xsl:value-of select="tokenize(./tei:idno[@subtype='GND'], '/')[last()]"/>
+                                    </xsl:when>
+                                    <xsl:when test="./tei:idno/@subtype='OTHER'">
+                                        <xsl:value-of select="./tei:idno[@subtype='GND']"/>
+                                    </xsl:when>
+                                </xsl:choose>
                             </td>
                             <td>
                                 <xsl:value-of select="./tei:lang"/>
