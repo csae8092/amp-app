@@ -292,11 +292,17 @@
                     ('printed') else if ($hand = '#stamp') then
                     ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                     }">
-                    <xsl:apply-templates/>
+                    <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | 
+                        tei:ab[preceding-sibling::tei:pb] | 
+                        tei:p[preceding-sibling::tei:pb] |
+                        tei:quote[preceding-sibling::tei:pb])"/>
                 </p>
             </xsl:when>
             <xsl:when test="$group = 'main'">
-                <xsl:apply-templates/>
+                <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | 
+                    tei:ab[preceding-sibling::tei:pb] | 
+                    tei:p[preceding-sibling::tei:pb] |
+                    tei:quote[preceding-sibling::tei:pb])"/>
             </xsl:when>
             <xsl:when test="$group = 'poem'">
                 <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | 
