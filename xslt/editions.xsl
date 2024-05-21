@@ -1248,7 +1248,7 @@
                                     <xsl:if test="./tei:idno[@subtype='OTHER']/text()">
                                         <tr>
                                             <th>
-                                                URL|OTHER
+                                                URL
                                             </th>
                                             <td>
                                                 <a href="{./tei:idno[@subtype='OTHER']}" target="_blank">
