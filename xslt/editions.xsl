@@ -919,7 +919,7 @@
                 <li>
                     <a href="{concat($id, '.html')}" alt="Internal Link to Persons">
                         <xsl:value-of select="//id(data($id))/tei:persName/tei:surname"/>
-                        <xsl:text></xsl:text>
+                        <xsl:text>, </xsl:text>
                         <xsl:value-of select="//id(data($id))/tei:persName/tei:forename"/>
                     </a>
                 </li>
