@@ -186,15 +186,30 @@
 
     <xsl:template match="tei:head">
         <xsl:variable name="hand" select="@hand"/>
-        <h5 class="yes-index {
-            if ($hand = '#handwritten') then
-            ('handwritten') else if ($hand = '#typed') then
-            ('typed') else if ($hand = '#printed') then
-            ('printed') else if ($hand = '#stamp') then
-            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-            }">
-            <xsl:apply-templates/>
-        </h5>
+        <xsl:choose>
+            <xsl:when test="parent::tei:p">
+                <span class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <h5 class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }">
+                    <xsl:apply-templates/>
+                </h5>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:address[ancestor::tei:body]">
         <span class="p-like">
