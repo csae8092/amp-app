@@ -174,7 +174,7 @@
                                        <xsl:text>; </xsl:text>
                                    </xsl:if>
                                </xsl:for-each>
-                               <xsl:text> 1959/2024.</xsl:text>
+                               <xsl:text> </xsl:text><xsl:value-of select="tokenize(.//tei:origDate/@notBefore-iso, '-')[1]"/><xsl:text>/2024.</xsl:text>
                                <xsl:text> "</xsl:text>
                                <xsl:value-of select=".//tei:titleStmt/tei:title[@level='a']/text()"/>
                                <xsl:text>." In Auden Musulin Papers: A Digital Edition of W. H. Auden's Letters to Stella Musulin, edited by </xsl:text>
