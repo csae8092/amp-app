@@ -119,7 +119,7 @@
                                         </div>
                                         <div class="custom-html-widget col-4">
                                             <a id="twitter-logo" title="Auden Musulin on Twitter" href="https://twitter.com/amp_oeaw" class="nav-link" target="_blank">
-                                                <img class="card-img-right flex-auto d-md-block" style="max-width: 32px;height:auto;" title="2021 Twitter Logo Blue" alt="2021 Twitter Logo Blue" src="images/2021-twitter-logo-blue.png"></img>
+                                                <img class="card-img-right flex-auto d-md-block" style="max-width: 32px;height:auto;" title="2021 Twitter Logo Blue" alt="2021 Twitter Logo Blue" src="images/x-logo-black.png"></img>
                                             </a>
                                         </div>
                                         <div class="custom-html-widget col-4">
