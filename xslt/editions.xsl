@@ -616,8 +616,10 @@
             </div>
             <div class="comment-body">
                 <h5>
-                    <xsl:if test="string-length($title) gt 0">
-                        <xsl:value-of select="$title"/><xsl:text> | </xsl:text>
+                    <xsl:if test="$title">
+                        <xsl:for-each select="$title">
+                            <xsl:value-of select="$title"/><xsl:text> | </xsl:text>
+                        </xsl:for-each>
                     </xsl:if>
                     <xsl:for-each select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]">
                         <xsl:apply-templates select="node() except (tei:del | tei:lb)"/>
