@@ -609,12 +609,16 @@
     </xsl:template>
     <xsl:template name="interp-content">
         <xsl:param name="id"/>
+        <xsl:param name="title"/>
         <div class="fade-all interpComment" id="{$id}">
             <div class="comment-header">
                 <button id="{$id}-button" type="button" class="btn-close btn-commentary" aria-label="Close"></button>
             </div>
             <div class="comment-body">
                 <h5>
+                    <xsl:if test="string-length($title) gt 0">
+                        <xsl:value-of select="$title"/><xsl:text> | </xsl:text>
+                    </xsl:if>
                     <xsl:for-each select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]">
                         <xsl:apply-templates select="node() except (tei:del | tei:lb)"/>
                         <xsl:if test="position() != last()">
@@ -662,6 +666,7 @@
                 </xsl:call-template>
             </xsl:for-each>
             <xsl:for-each select="//tei:*[starts-with(@ana, 'acdh:amp-transcript')]">
+                <xsl:variable name="title" select="text()"/>
                 <xsl:variable name="doc-id" select="replace(substring-before(@ana, '#'), 'acdh:', '')"/>
                 <xsl:variable name="node-id" select="substring-after(@ana, '#')"/>
                 <xsl:variable name="lookup" select="document(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
@@ -669,6 +674,7 @@
                     <xsl:variable name="id" select="@xml:id"/>
                     <xsl:call-template name="interp-content">
                         <xsl:with-param name="id" select="$id"/>
+                        <xsl:with-param name="title" select="$title"/>
                     </xsl:call-template>
                 </xsl:for-each>
             </xsl:for-each>
