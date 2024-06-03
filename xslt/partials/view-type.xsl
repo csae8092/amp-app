@@ -197,7 +197,7 @@
                     <!-- 
                         2nd grouping loading first level div elements that do not container another sublevel div
                     -->
-                    <xsl:for-each-group select="*" group-starting-with="tei:pb">  
+                    <xsl:for-each-group select="*|tei:quote/*" group-starting-with="tei:pb">  
                         <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
@@ -216,7 +216,7 @@
                                                 style="max-width: 140px; height: auto; padding: .5em;"
                                                 title="Computer Vision Lab"/>
                                         </xsl:if>
-                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg|self::tei:ab|self::tei:head]">
                                             <xsl:call-template name="text-window">
                                                 <xsl:with-param name="hand">
                                                     <xsl:value-of select="@hand"/>
