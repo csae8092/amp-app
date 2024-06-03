@@ -552,6 +552,7 @@
         <xsl:param name="ana"/>
         <xsl:param name="name"/>
         <xsl:param name="plural"/>
+        <xsl:variable name="test-for-hash" select="contains($attribute, '#')"/>
         <span class="{if($ana='true') then('note') else($name)} {if($plural='true') then('entity') else('ent')}">
             <xsl:choose>
                 <xsl:when test="starts-with($attribute, '#')">
@@ -574,6 +575,17 @@
                 <xsl:when test="starts-with($attribute, 'amp-transcript') or starts-with($attribute, 'acdh:amp-transcript')">
                     <!--<xsl:variable name="acdh" select="substring-before(//tei:prefixDef[@ident='acdh']/@replacementPattern, '$1')"/>-->
                     <xsl:choose>
+                        <xsl:when test="not($test-for-hash)">
+                            <a>
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="replace(concat('https://amp.acdh.oeaw.ac.at/', substring-after($attribute, 'acdh:')), '.xml', '.html')"/>
+                            </xsl:attribute>
+                            <xsl:attribute name="alt">
+                                <xsl:text>Quote Link</xsl:text>
+                            </xsl:attribute>
+                                Open Link>>
+                            </a>
+                        </xsl:when>
                         <xsl:when test="$ana = 'false'">
                             <xsl:attribute name="data-bs-toggle">
                                 <xsl:text>modal</xsl:text>
@@ -1366,6 +1378,17 @@
                     }" style="display:block;margin: 1em 0;">
                     <xsl:apply-templates/>
                 </p>
+            </xsl:when>
+            <xsl:when test="parent::tei:quote and ancestor::tei:seg">
+                <span class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }" style="display:block;">
+                    <xsl:apply-templates/>
+                </span>
             </xsl:when>
             <xsl:otherwise>
                 <p class="yes-index {
