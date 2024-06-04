@@ -583,7 +583,6 @@
                             <xsl:attribute name="alt">
                                 <xsl:text>Quote Link</xsl:text>
                             </xsl:attribute>
-                                Open Link>>
                             </a>
                         </xsl:when>
                         <xsl:when test="$ana = 'false'">
