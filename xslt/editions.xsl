@@ -943,6 +943,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:ref">
+        <xsl:apply-templates/>
         <xsl:call-template name="ref-verify-if-multiple-values">
             <xsl:with-param name="attribute">
                 <xsl:value-of select="@target"/>
@@ -1638,7 +1639,7 @@
     <xsl:template match="tei:bibl[ancestor::tei:interp]">
         <xsl:choose>
             <xsl:when test="parent::tei:listBibl">
-                <li class="my-4">
+                <li class="my-2">
                     <xsl:call-template name="interpBibl">
                         <xsl:with-param name="attribute">
                             <xsl:choose>
