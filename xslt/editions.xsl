@@ -610,6 +610,7 @@
     <xsl:template name="interp-content">
         <xsl:param name="id"/>
         <xsl:param name="title"/>
+        <xsl:variable name="root" select="ancestor::tei:TEI"/>
         <div class="fade-all interpComment" id="{$id}">
             <div class="comment-header">
                 <button id="{$id}-button" type="button" class="btn-close btn-commentary" aria-label="Close"></button>
@@ -621,7 +622,7 @@
                             <xsl:value-of select="$title"/><xsl:text> | </xsl:text>
                         </xsl:for-each>
                     </xsl:if>
-                    <xsl:for-each select="ancestor::tei:TEI//node()[@ana=concat('#', $id)]">
+                    <xsl:for-each select="$root//node()[@ana=concat('#', $id)]">
                         <xsl:apply-templates select="node() except (tei:del | tei:lb)"/>
                         <xsl:if test="position() != last()">
                             <xsl:text> | </xsl:text>
@@ -635,9 +636,22 @@
                 </xsl:for-each>
                 <ul>
                     <xsl:if test="./tei:respons">
+                        <xsl:variable name="ids" select="tokenize(./tei:respons/@resp, ' ')"/>
                         <label>Uncertainty:</label>
                         <li>
-                            <label>Responsibility: <xsl:value-of select="./tei:respons/@resp"/>
+                            <label>
+                                <xsl:text>Responsibility: </xsl:text>
+                                <a href="{$root//id(data($ids[1]))//@ref}">
+                                    <xsl:value-of select="$root//id(data($ids[1]))//text()"/>
+                                </a>
+                                <xsl:text>; </xsl:text>
+                                <a href="{$root//id(data($ids[2]))//@ref}">
+                                    <xsl:value-of select="$root//id(data($ids[2]))//text()"/>
+                                </a>
+                                <xsl:text>; </xsl:text>
+                                <a href="{$root//id(data($ids[3]))//@ref}">
+                                    <xsl:value-of select="$root//id(data($ids[3]))//text()"/>
+                                </a>
                             </label>
                         </li>
                     </xsl:if>
@@ -906,17 +920,13 @@
                                     <xsl:attribute name="href">
                                         <xsl:value-of select="replace(replace($ref, 'acdh:', ''), '.xml', '.html')"/>
                                     </xsl:attribute>
-                                    <xsl:if test="contains($ref, 'amp-index')">
-                                        <xsl:variable name="doc-id" select="replace($ref, 'acdh:', '')"/>
+                                    <xsl:variable name="doc-id" select="replace($ref, 'acdh:', '')"/>
+                                    <xsl:if test="contains($ref, 'amp-index')">                             
                                         <xsl:variable name="doc" select="doc(concat('../data/indices/', $doc-id))//tei:TEI"/>
                                         <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
                                         <xsl:value-of select="$title"/>
                                     </xsl:if>
                                     <xsl:if test="contains($ref, 'amp-transcript') and not(name() = 'ref' or name() = 'quote')">
-                                        <xsl:attribute name="href">
-                                            <xsl:value-of select="replace(replace($ref, 'acdh:', ''), '.xml', '.html')"/>
-                                        </xsl:attribute>
-                                        <xsl:variable name="doc-id" select="replace($ref, 'acdh:', '')"/>
                                         <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
                                         <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
                                         <xsl:value-of select="$title"/>
