@@ -618,9 +618,7 @@
             <div class="comment-body">
                 <h5>
                     <xsl:if test="$title">
-                        <xsl:for-each select="$title">
-                            <xsl:value-of select="$title"/><xsl:text> | </xsl:text>
-                        </xsl:for-each>
+                        <xsl:value-of select="$title"/><xsl:text> | </xsl:text>
                     </xsl:if>
                     <xsl:for-each select="$root//node()[@ana=concat('#', $id)]">
                         <xsl:apply-templates select="node() except (tei:del | tei:lb)"/>
@@ -682,7 +680,7 @@
                 </xsl:call-template>
             </xsl:for-each>
             <xsl:for-each select="//tei:*[starts-with(@ana, 'acdh:amp-transcript')]">
-                <xsl:variable name="title" select="text()"/>
+                <xsl:variable name="title" select=".//text()"/>
                 <xsl:variable name="doc-id" select="replace(substring-before(@ana, '#'), 'acdh:', '')"/>
                 <xsl:variable name="node-id" select="substring-after(@ana, '#')"/>
                 <xsl:variable name="lookup" select="document(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
