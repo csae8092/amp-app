@@ -216,7 +216,7 @@
                                                 style="max-width: 140px; height: auto; padding: .5em;"
                                                 title="Computer Vision Lab"/>
                                         </xsl:if>
-                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg|self::tei:ab|self::tei:head]">
+                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg|self::tei:ab|self::tei:head|self::tei:fw]">
                                             <xsl:call-template name="text-window">
                                                 <xsl:with-param name="hand">
                                                     <xsl:value-of select="@hand"/>

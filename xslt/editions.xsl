@@ -942,6 +942,9 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    <xsl:template match="tei:fw[@type='pageNum']">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
     <xsl:template match="tei:ref">
         <xsl:apply-templates/>
         <xsl:call-template name="ref-verify-if-multiple-values">
