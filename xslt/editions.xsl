@@ -898,19 +898,24 @@
                                     <xsl:attribute name="href">
                                         <xsl:value-of select="concat(substring-after($ref, '#'), '.html')"/>
                                     </xsl:attribute>
+                                    <xsl:variable name="doc-id" select="substring-before(replace($ref, 'acdh:', ''), '#')"/>
                                     <xsl:if test="contains($ref, 'amp-index')">
-                                        <xsl:variable name="doc-id" select="substring-before(replace($ref, 'acdh:', ''), '#')"/>
                                         <xsl:variable name="doc" select="doc(concat('../data/indices/', $doc-id))//tei:TEI"/>
                                         <xsl:variable name="id" select="substring-after($ref, '#')"/>
                                         <xsl:variable name="title" select="$doc//id(data($id))//tei:title|$doc//id(data($id))//tei:label|$doc//id(data($id))//tei:persName|$doc//id(data($id))//tei:placeName|$doc//id(data($id))//tei:orgName"/>
                                         <xsl:value-of select="$title"/>
                                     </xsl:if>
-                                    <xsl:if test="contains($ref, 'amp-transcript') and not(name() = 'ref' or name() = 'quote')">
-                                        <xsl:variable name="doc-id" select="substring-before(replace($ref, 'acdh:', ''), '#')"/>
-                                        <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
-                                        <xsl:variable name="id" select="substring-after($ref, '#')"/>
-                                        <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']|$doc//id(data($id))//tei:title|$doc//id(data($id))//tei:label|$doc//id(data($id))//tei:persName|$doc//id(data($id))//tei:placeName|$doc//id(data($id))//tei:orgName"/>
-                                        <xsl:value-of select="$title"/>
+                                    <xsl:if test="contains($ref, 'amp-transcript') and not(name() = 'ref' or name() = 'quote')">                     
+                                        <xsl:try>
+                                            <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
+                                            <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
+                                            <xsl:value-of select="$title"/>
+                                            <xsl:catch>
+                                                <xsl:variable name="doc" select="doc(concat('../data/editions/photos/', $doc-id))//tei:TEI"/>
+                                                <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
+                                                <xsl:value-of select="$title"/>
+                                            </xsl:catch>
+                                        </xsl:try>
                                     </xsl:if>
                                 </xsl:when>
                                 <xsl:otherwise>
@@ -924,9 +929,16 @@
                                         <xsl:value-of select="$title"/>
                                     </xsl:if>
                                     <xsl:if test="contains($ref, 'amp-transcript') and not(name() = 'ref' or name() = 'quote')">
-                                        <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
-                                        <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
-                                        <xsl:value-of select="$title"/>
+                                        <xsl:try>
+                                            <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
+                                            <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
+                                            <xsl:value-of select="$title"/>
+                                            <xsl:catch>
+                                                <xsl:variable name="doc" select="doc(concat('../data/editions/photos/', $doc-id))//tei:TEI"/>
+                                                <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
+                                                <xsl:value-of select="$title"/>
+                                            </xsl:catch>
+                                        </xsl:try>
                                     </xsl:if>
                                 </xsl:otherwise>
                             </xsl:choose>
