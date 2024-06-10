@@ -679,7 +679,7 @@
                 </xsl:call-template>
             </xsl:for-each>
             <xsl:for-each select="//tei:*[starts-with(@ana, 'acdh:amp-transcript')]">
-                <xsl:variable name="title" select=".//text()"/>
+                <xsl:variable name="title" select="node() except (tei:del | tei:lb)"/>
                 <xsl:variable name="doc-id" select="replace(substring-before(@ana, '#'), 'acdh:', '')"/>
                 <xsl:variable name="node-id" select="substring-after(@ana, '#')"/>
                 <xsl:variable name="lookup" select="document(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
