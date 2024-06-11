@@ -141,7 +141,7 @@
 
                             </div>
                             <!--   add edition text and facsimile   -->
-                            <xsl:for-each select="//tei:body/tei:div[@type='transcription' or @xml:id='transcription']">
+                            <xsl:for-each select="//tei:body/tei:div[@type='transcription']">
                                 <xsl:call-template name="view-type-img"/>
                             </xsl:for-each>
                         </div>
@@ -280,6 +280,7 @@
             <xsl:apply-templates/>
         </p>
     </xsl:template>
+  
     <!-- 
         in doc 0063 p elements are part in both pb groups creating in view-type.xsl
         since the secondary group creates a paragraph stylesheet if p elements is encountered
@@ -300,14 +301,41 @@
                     <xsl:apply-templates/>
                 </p>
             </xsl:when>
+            <xsl:when test="parent::tei:div[@type='prose']/preceding-sibling::tei:div[@type='prose']">
+                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <p class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }">
+                    <xsl:apply-templates/>
+                </p>
+            </xsl:when>
             <xsl:otherwise>
                 <!-- do not render handled in view-type.xsl -->
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    <xsl:template match="tei:floatingText">
+        <!-- do not render -->
+    </xsl:template>
     <xsl:template match="tei:p[preceding-sibling::tei:p[@prev]]">
         <xsl:choose>
             <xsl:when test="parent::tei:div[@type='letter_message']/preceding-sibling::tei:div[@type='letter_message']">
+                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <p class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }">
+                    <xsl:apply-templates/>
+                </p>
+            </xsl:when>
+            <xsl:when test="parent::tei:div[@type='prose']/preceding-sibling::tei:div[@type='prose']">
                 <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
                 <p class="yes-index {
                     if ($hand = '#handwritten') then
@@ -955,7 +983,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:fw[@type='pageNum']">
-        <p><xsl:apply-templates/></p>
+        <!-- do not render handled in view type tempalte -->
     </xsl:template>
     <xsl:template match="tei:ref">
         <xsl:apply-templates/>

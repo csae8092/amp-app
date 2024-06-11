@@ -29,14 +29,20 @@
                     </xsl:attribute>
                     <div class="card-header img" style="border-radius: 0.5rem 0.5rem 0 0; height: 250px; overflow: hidden; background-color: #000; display: flex; align-items: center;">
                         <xsl:choose>
-                            <xsl:when test=".//tei:body/tei:div[1]/tei:pb[1]">
-                                <xsl:variable name="facs_item" select="tokenize(.//tei:body/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
+                            <xsl:when test=".//tei:text/tei:body/tei:div[1]/tei:pb[1]">
+                                <xsl:variable name="facs_item" select="tokenize(.//tei:text/tei:body/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
                                 <xsl:call-template name="cover">
                                     <xsl:with-param name="facs_item" select="$facs_item"/>
                                 </xsl:call-template>
                             </xsl:when>
-                            <xsl:when test=".//tei:body/tei:div[1]/tei:div[1]/tei:pb[1]">
-                                <xsl:variable name="facs_item" select="tokenize(.//tei:body/tei:div[1]/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
+                            <xsl:when test=".//tei:text/tei:body/tei:div[1]/tei:div[1]/tei:pb[1]">
+                                <xsl:variable name="facs_item" select="tokenize(.//tei:text/tei:body/tei:div[1]/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
+                                <xsl:call-template name="cover">
+                                    <xsl:with-param name="facs_item" select="$facs_item"/>
+                                </xsl:call-template>
+                            </xsl:when>
+                            <xsl:when test=".//tei:floatingText/tei:body/tei:div[1]/tei:pb[1]">
+                                <xsl:variable name="facs_item" select="tokenize(.//tei:floatingText/tei:body/tei:div[1]/tei:pb[1]/@facs, '/')[5]"/>
                                 <xsl:call-template name="cover">
                                     <xsl:with-param name="facs_item" select="$facs_item"/>
                                 </xsl:call-template>

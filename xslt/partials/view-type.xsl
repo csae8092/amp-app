@@ -52,7 +52,7 @@
                 starting the the first div below tei:body
             -->
             <xsl:choose>
-                <xsl:when test="./tei:div[@type]">
+                <xsl:when test="ancestor::tei:text[@type='letter']">
                     <!-- 
                         this group is for the new correspondence where containers are structured like
                         transcript/envelope or letter
@@ -125,7 +125,11 @@
                                                         
                                                         doc 0042 requires additional hanlding tei:ab[preceding-sibling::tei:pb]
                                                     -->
-                                                    <xsl:when test="current-group()[self::tei:div[@type='letter_message']|self::tei:div[@type='poem']|self::tei:div[@type='speech']|self::tei:div[@type='prose_translation']|self::tei:div[@type='comments']]">
+                                                    <xsl:when test="current-group()[self::tei:div[@type='letter_message']|
+                                                        self::tei:div[@type='poem']|
+                                                        self::tei:div[@type='speech']|
+                                                        self::tei:div[@type='prose_translation']|
+                                                        self::tei:div[@type='comments']]">
                                                         <xsl:for-each select="current-group()[self::tei:div|self::tei:lg[preceding-sibling::tei:pb]|self::tei:ab[preceding-sibling::tei:pb]]">
                                                             <!--<xsl:value-of select="'main'"/>-->
                                                             <xsl:choose>
@@ -169,7 +173,7 @@
                                                         <!-- 
                                                             first xpath of pb grouping './tei:div[@type]/*'
                                                         -->
-                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:p|self::tei:closer|self::tei:lg|self::tei:ab]">
+                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:p|self::tei:closer|self::tei:lg|self::tei:ab|self::tei:fw]">
                                                             <!--<xsl:value-of select="'secondary'"/>-->
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
@@ -193,11 +197,11 @@
                         </div>
                     </xsl:for-each-group>
                 </xsl:when>
-                <xsl:otherwise>
+                <xsl:when test="ancestor::tei:text[@type='prose']">
                     <!-- 
                         2nd grouping loading first level div elements that do not container another sublevel div
                     -->
-                    <xsl:for-each-group select="*|tei:quote/*" group-starting-with="tei:pb">  
+                    <xsl:for-each-group select="*|./tei:div/*|//tei:floatingText/tei:body/tei:div/*" group-starting-with="tei:pb">  
                         <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
@@ -216,16 +220,65 @@
                                                 style="max-width: 140px; height: auto; padding: .5em;"
                                                 title="Computer Vision Lab"/>
                                         </xsl:if>
-                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg|self::tei:ab|self::tei:head|self::tei:fw]">
-                                            <xsl:call-template name="text-window">
-                                                <xsl:with-param name="hand">
-                                                    <xsl:value-of select="@hand"/>
-                                                </xsl:with-param>
-                                                <xsl:with-param name="group">
-                                                    <xsl:value-of select="'secondary'"/>
-                                                </xsl:with-param>
-                                            </xsl:call-template>
-                                        </xsl:for-each>
+                                        <xsl:choose>
+                                            <xsl:when test="current-group()[self::tei:div]">
+                                                <xsl:for-each select="current-group()[self::tei:div]">
+                                                    <xsl:call-template name="text-window">
+                                                        <xsl:with-param name="hand">
+                                                            <xsl:value-of select="@hand"/>
+                                                        </xsl:with-param>
+                                                        <xsl:with-param name="group">
+                                                            <xsl:value-of select="'main'"/>
+                                                        </xsl:with-param>
+                                                    </xsl:call-template>
+                                                </xsl:for-each>
+                                            </xsl:when>
+                                            <xsl:when test="current-group()[ancestor::tei:floatingText]">
+                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:fw|self::tei:ab|self::tei:head]">
+                                                    <xsl:call-template name="text-window">
+                                                        <xsl:with-param name="hand">
+                                                            <xsl:value-of select="@hand"/>
+                                                        </xsl:with-param>
+                                                        <xsl:with-param name="group">
+                                                            <xsl:value-of select="'secondary'"/>
+                                                        </xsl:with-param>
+                                                    </xsl:call-template>
+                                                </xsl:for-each>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <xsl:for-each select="current-group()[self::tei:p|
+                                                    self::tei:lg|
+                                                    self::tei:ab|
+                                                    self::tei:head|
+                                                    self::tei:fw|
+                                                    self::tei:quote]">
+                                                    <xsl:choose>
+                                                        <xsl:when test="self::tei:quote">
+                                                            <xsl:call-template name="text-window">
+                                                                <xsl:with-param name="hand">
+                                                                    <xsl:value-of select="@hand"/>
+                                                                </xsl:with-param>
+                                                                <xsl:with-param name="group">
+                                                                    <xsl:value-of select="'main'"/>
+                                                                </xsl:with-param>
+                                                            </xsl:call-template>
+                                                        </xsl:when>
+                                                        <xsl:otherwise>
+                                                            <xsl:call-template name="text-window">
+                                                                <xsl:with-param name="hand">
+                                                                    <xsl:value-of select="@hand"/>
+                                                                </xsl:with-param>
+                                                                <xsl:with-param name="group">
+                                                                    <xsl:value-of select="'secondary'"/>
+                                                                </xsl:with-param>
+                                                            </xsl:call-template>
+                                                        </xsl:otherwise>
+                                                    </xsl:choose>
+                                                    
+                                                </xsl:for-each>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                        
                                     </div>
                                 </div>
                                 <xsl:call-template name="img-window">
@@ -234,7 +287,7 @@
                             </div>
                         </div>                                                         
                     </xsl:for-each-group>
-                </xsl:otherwise>
+                </xsl:when>
             </xsl:choose>
             
             <xsl:if test="//tei:handShift">
@@ -295,20 +348,23 @@
                     <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | 
                         tei:ab[preceding-sibling::tei:pb] | 
                         tei:p[preceding-sibling::tei:pb] |
-                        tei:quote[preceding-sibling::tei:pb])"/>
+                        tei:quote[preceding-sibling::tei:pb] |
+                        tei:fw[preceding-sibling::tei:fw])"/>
                 </p>
             </xsl:when>
             <xsl:when test="$group = 'main'">
                 <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | 
                     tei:ab[preceding-sibling::tei:pb] | 
                     tei:p[preceding-sibling::tei:pb] |
-                    tei:quote[preceding-sibling::tei:pb])"/>
+                    tei:quote[preceding-sibling::tei:pb] |
+                    tei:fw[preceding-sibling::tei:fw])"/>
             </xsl:when>
             <xsl:when test="$group = 'poem'">
                 <xsl:apply-templates select="node() except (tei:lg[preceding-sibling::tei:pb] | 
                                                             tei:ab[preceding-sibling::tei:pb] | 
                                                             tei:p[preceding-sibling::tei:pb] |
-                                                            tei:quote[preceding-sibling::tei:pb])"/>
+                                                            tei:quote[preceding-sibling::tei:pb] |
+                                                            tei:fw[preceding-sibling::tei:fw])"/>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
