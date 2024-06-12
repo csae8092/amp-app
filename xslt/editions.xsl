@@ -986,7 +986,6 @@
         <!-- do not render handled in view type tempalte -->
     </xsl:template>
     <xsl:template match="tei:ref">
-        <xsl:apply-templates/>
         <xsl:call-template name="ref-verify-if-multiple-values">
             <xsl:with-param name="attribute">
                 <xsl:value-of select="@target"/>
