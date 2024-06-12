@@ -306,6 +306,49 @@
                         </div>                                                         
                     </xsl:for-each-group>
                 </xsl:when>
+                <xsl:otherwise>
+                    <xsl:for-each-group select="*" group-starting-with="tei:pb">  
+                        <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
+                        <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
+                            data-tab="paginate"  
+                            id="paginate-{$positionOrNot}" 
+                            tabindex="-1">
+                            <!--<window-resize opt="resizing" pos="{position()}" size="0.755"></window-resize>-->
+                            
+                            <div id="container-resize-{$positionOrNot}" class="transcript row">  
+                                
+                                <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
+                                    <div class="card-body">
+                                        <xsl:if test="@type='cv_sheet'">
+                                            <img class="card-img-right flex-auto d-md-block"
+                                                src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png"
+                                                alt="Computer Vision Lab Logo"
+                                                style="max-width: 140px; height: auto; padding: .5em;"
+                                                title="Computer Vision Lab"/>
+                                        </xsl:if>
+                                        <xsl:for-each select="current-group()[self::tei:lg|
+                                            self::tei:p|
+                                            self::tei:fw|
+                                            self::tei:ab]">
+                                            <xsl:call-template name="text-window">
+                                                <xsl:with-param name="hand">
+                                                    <xsl:value-of select="@hand"/>
+                                                </xsl:with-param>
+                                                <xsl:with-param name="group">
+                                                    <xsl:value-of select="'secondary'"/>
+                                                </xsl:with-param>
+                                            </xsl:call-template>
+                                        </xsl:for-each>
+                                        
+                                    </div>
+                                </div>
+                                <xsl:call-template name="img-window">
+                                    <xsl:with-param name="positionOrNot" select="$positionOrNot"/>
+                                </xsl:call-template>
+                            </div>
+                        </div>                                                         
+                    </xsl:for-each-group>
+                </xsl:otherwise>
             </xsl:choose>
             
             <xsl:if test="//tei:handShift">
