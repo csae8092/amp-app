@@ -1882,9 +1882,23 @@
                             </xsl:attribute>
                         </xsl:when>
                         <xsl:when test="starts-with($attribute, '#')">
-                            <xsl:attribute name="href">
-                                <xsl:value-of select="substring-after(concat($attribute, '.html'), '#')"/>
-                            </xsl:attribute>
+                            <xsl:choose>
+                                <xsl:when test="contains($attribute, 'tfruehwirth') or contains($attribute, 'smayer') or contains($attribute, 'dgrigoriou')">
+                                    <xsl:variable name="name" select="//tei:TEI//id(data(substring-after($attribute, '#')))"/>
+                                    <xsl:attribute name="href">
+                                        <xsl:value-of select="$name/@ref"/>
+                                    </xsl:attribute>
+                                    <xsl:attribute name="target">
+                                        <xsl:text>_blank</xsl:text>
+                                    </xsl:attribute>
+                                    <xsl:value-of select="$name/text()"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:attribute name="href">
+                                        <xsl:value-of select="substring-after(concat($attribute, '.html'), '#')"/>
+                                    </xsl:attribute>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:when>
                         <xsl:when test="starts-with($attribute, 'acdh:')">
                             <xsl:choose>
@@ -1961,7 +1975,16 @@
     <xsl:template match="tei:author[ancestor::tei:interp]">
         <li>
             <xsl:call-template name="verify-url-hash-namespace-single">
-                <xsl:with-param name="attribute" select="@ref"/>
+                <xsl:with-param name="attribute">
+                    <xsl:choose>
+                        <xsl:when test="@ref">
+                            <xsl:value-of select="@ref"/>
+                        </xsl:when>
+                        <xsl:when test="@sameAs">
+                            <xsl:value-of select="@sameAs"/>
+                        </xsl:when>
+                    </xsl:choose>
+                </xsl:with-param>
                 <xsl:with-param name="entity" select="'person'"/>
             </xsl:call-template>
         </li>
