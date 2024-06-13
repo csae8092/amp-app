@@ -622,12 +622,12 @@ button.close {
 }
 
 #commentary {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .interpComment {
   margin: 1em 0.5em;
-  width: 25%;
   padding: 0.2em;
   background-color: #fff;
   border-radius: 0.25rem;
@@ -1857,11 +1857,11 @@ td > label {
     width: 100%;
   }
   #commentary {
-    display: block;
-  }
-  .interpComment {
-    width: 100%;
-  }
+      	grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .interpComment {
+        margin: .5em;
+    }
   .edition-md tr th,
   .edition-md tr td {
     display: block;
