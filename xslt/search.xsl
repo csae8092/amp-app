@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet 
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    version="2.0" exclude-result-prefixes="#all">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0" exclude-result-prefixes="#all">
     <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="yes" omit-xml-declaration="yes"/>
-    
+
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
@@ -39,20 +37,14 @@
                             </div>
                             <div class="col-xl-2 py-2 bg-diarium-search">
                                 <div class="text-center py-2" id="clear-refinements"></div>
-                                <h5 class="pt-2">Select Document Type</h5>
-                                <div class="p-2" id="document_type"></div>
-                                <div id="has-comments"></div>
-                                <div id="has-poem"></div>
-                                <h5 class="pt-2 hidemobile">Persons</h5>
-                                <div id="refinement-list-persons" class="hidemobile"></div>
-                                <h5 class="pt-2 hidemobile">Places</h5>
-                                <div id="refinement-list-places" class="hidemobile"></div>
-                                <h5 class="pt-2 hidemobile">Institutions</h5>
-                                <div id="refinement-list-orgs" class="hidemobile"></div>
-                                <h5 class="pt-2 hidemobile">Works</h5>
-                                <div id="refinement-list-works" class="hidemobile"></div>
-                                <h5 class="pt-2 hidemobile">Events</h5>
-                                <div id="refinement-list-events" class="hidemobile"></div>
+                                <div class="py-2" id="document_type"></div>
+                                <div class="py-2" id="has-comments"></div>
+                                <div class="py-2" id="has-poem"></div>
+                                <div id="refinement-list-persons" class="hidemobile py-2"></div>
+                                <div id="refinement-list-places" class="hidemobile py-2"></div>
+                                <div id="refinement-list-orgs" class="hidemobile py-2"></div>
+                                <div id="refinement-list-works" class="hidemobile py-2"></div>
+                                <div id="refinement-list-events" class="hidemobile py-2"></div>
                             </div>
                             <div class="col-xl-10">
                                 <div class="row">
@@ -64,7 +56,7 @@
                                         <div id="pagination-top"></div>
                                     </div>
                                     <div class="col-xl-4">
-                                        
+
                                     </div>
                                 </div>
                                 <div class="text-center" id="stats-container" style="margin-bottom: 1em;"></div>

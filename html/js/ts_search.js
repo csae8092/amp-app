@@ -129,7 +129,14 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.menu({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Select Document Type",
+    },
+  })(instantsearch.widgets.menu)({
     container: "#document_type",
     attribute: "document_type",
   }),
@@ -259,7 +266,14 @@ search.addWidgets([
   //   },
   // }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Comments",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#has-comments",
     attribute: "comments_bool",
     searchable: false,
@@ -282,7 +296,14 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Poems",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#has-poem",
     attribute: "poem_bool",
     searchable: false,
@@ -290,7 +311,7 @@ search.addWidgets([
       return items.map((item) => ({
         ...item,
         highlighted: (item.highlighted =
-          item.label === "true" ? "includes verse" : "no verse included"),
+          item.label === "true" ? "included" : "not included"),
       }));
     },
     cssClasses: {
@@ -325,10 +346,21 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Places",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-places",
     attribute: "places",
     searchable: true,
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     searchablePlaceholder: "Search",
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
@@ -342,11 +374,22 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Persons",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-persons",
     attribute: "persons",
     searchable: true,
     searchablePlaceholder: "Search",
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
       searchableSubmit: "d-none",
@@ -359,11 +402,22 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Works",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-works",
     attribute: "works",
     searchable: true,
     searchablePlaceholder: "Search",
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
       searchableSubmit: "d-none",
@@ -376,11 +430,22 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Institutions",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-orgs",
     attribute: "orgs",
     searchable: true,
     searchablePlaceholder: "Search",
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
       searchableSubmit: "d-none",
@@ -393,11 +458,22 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Events",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-events",
     attribute: "events",
     searchable: true,
     searchablePlaceholder: "Search",
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
       searchableSubmit: "d-none",
