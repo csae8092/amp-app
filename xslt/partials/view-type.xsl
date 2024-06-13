@@ -256,7 +256,7 @@
                                                     <xsl:if test="self::tei:quote">
                                                         <a class="quote ent">
                                                             <xsl:attribute name="href">
-                                                                <xsl:value-of select="replace(concat('https://amp.acdh.oeaw.ac.at/', substring-after(@source, 'acdh:')), '.xml', '.html')"/>
+                                                                <xsl:value-of select="replace(substring-after(@source, 'acdh:'), '.xml', '.html')"/>
                                                             </xsl:attribute>
                                                             <xsl:attribute name="alt">
                                                                 <xsl:text>Quote Link</xsl:text>
