@@ -915,13 +915,11 @@
                             <xsl:attribute name="href">
                                 <xsl:value-of select="$ref"/>
                             </xsl:attribute>
-                            <xsl:apply-templates/>
                         </xsl:when>
                         <xsl:when test="starts-with($ref, '#')">
                             <xsl:attribute name="href">
                                 <xsl:value-of select="$ref"/>
                             </xsl:attribute>
-                            <xsl:apply-templates/>
                         </xsl:when>
                         <xsl:when test="starts-with($ref, 'acdh:')">
                             <xsl:choose>
@@ -982,6 +980,7 @@
                         </svg>
                     </sup>
                 </a>
+                <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
@@ -1670,21 +1669,26 @@
                 </xsl:choose>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:if test="string-length($attribute) > 0">
-                    <xsl:call-template name="ref-verify-if-multiple-values">
-                        <xsl:with-param name="attribute">
-                            <xsl:value-of select="$attribute"/>
-                        </xsl:with-param>
-                    </xsl:call-template>
-                </xsl:if>
                 <xsl:choose>
                     <xsl:when test="child::tei:* except tei:msIdentifier">
                         <ul class="my-2">
-                            <xsl:apply-templates/>
+                            <xsl:if test="string-length($attribute) > 0">
+                                <xsl:call-template name="ref-verify-if-multiple-values">
+                                    <xsl:with-param name="attribute">
+                                        <xsl:value-of select="$attribute"/>
+                                    </xsl:with-param>
+                                </xsl:call-template>
+                            </xsl:if>
                         </ul>
                     </xsl:when>
                     <xsl:otherwise>
-                        <xsl:apply-templates/>
+                        <xsl:if test="string-length($attribute) > 0">
+                            <xsl:call-template name="ref-verify-if-multiple-values">
+                                <xsl:with-param name="attribute">
+                                    <xsl:value-of select="$attribute"/>
+                                </xsl:with-param>
+                            </xsl:call-template>
+                        </xsl:if>
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:otherwise>
