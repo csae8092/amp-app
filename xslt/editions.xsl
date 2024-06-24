@@ -319,7 +319,9 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:floatingText">
-        <!-- do not render -->
+        <xsl:if test="parent::tei:quote">
+            <xsl:apply-templates/>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="tei:p[preceding-sibling::tei:p[@prev]]">
         <xsl:choose>
