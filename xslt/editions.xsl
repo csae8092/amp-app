@@ -1484,7 +1484,42 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    <xsl:template match="tei:add">
+        <xsl:if test="not(@corresp)">
+            <xsl:variable name="place" select="
+                if(@place = 'left') then('margin-left:-5rem;')
+                else if(@place = 'right') then('margin-right:-5rem;')
+                else if(@place = 'top') then('margin-top:-3em;')
+                else if(@place = 'bottom') then('margin-bottom:-3rem;')
+                else if(@place = 'superimposed') then('margin-top:-1rem;')
+                else('')
+                "/>
+            <span style="position:absolute;{$place}">
+                <xsl:apply-templates/>
+            </span>
+        </xsl:if>
+    </xsl:template>
     <xsl:template match="tei:l">
+        <xsl:if test="@xml:id">
+            <xsl:variable name="sibling" select="if(preceding-sibling::tei:l[1][@xml:id]) then('false') else('true')"/>
+            <xsl:variable name="add" select="data(@xml:id)"/>
+            <xsl:for-each select="//tei:add[contains(@corresp, $add)]">
+                <xsl:variable name="place" select="
+                    if(@place = 'left') then('margin-left:-5rem;')
+                    else('')
+                    "/>
+                <xsl:choose>
+                    <xsl:when test="$sibling = 'true'">
+                        <span style="position:absolute;{$place}">
+                            <xsl:apply-templates/>
+                        </span>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <!-- do not render twice -->
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:if>
         <xsl:if test="@ana">
             <xsl:call-template name="rs-verify-if-multiple-values">
                 <xsl:with-param name="attribute" select="@ana"/>
