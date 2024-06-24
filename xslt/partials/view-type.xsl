@@ -126,15 +126,17 @@
                                                         doc 0042 requires additional hanlding tei:ab[preceding-sibling::tei:pb]
                                                     -->
                                                     <xsl:when test="current-group()[self::tei:div[@type='letter_message']|
-                                                        self::tei:div[@type='poem']|
-                                                        self::tei:div[@type='speech']|
-                                                        self::tei:div[@type='prose_translation']|
-                                                        self::tei:div[@type='comments']]">
-                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:lg[preceding-sibling::tei:pb]|self::tei:ab[preceding-sibling::tei:pb]]">
+                                                                                    self::tei:div[@type='poem']|
+                                                                                    self::tei:div[@type='speech']|
+                                                                                    self::tei:div[@type='prose_translation']|
+                                                                                    self::tei:div[@type='comments']]">
+                                                        <xsl:for-each select="current-group()[self::tei:div|
+                                                                                              self::tei:lg[preceding-sibling::tei:pb]|
+                                                                                              self::tei:ab[preceding-sibling::tei:pb]]">
                                                             <!--<xsl:value-of select="'main'"/>-->
                                                             <xsl:choose>
                                                                 <xsl:when test="self::tei:ab|self::tei:lg">
-                                                                    <!--<xsl:value-of select="'secondary below main'"/>-->
+                                                                    <xsl:value-of select="'secondary below main'"/>
                                                                     <xsl:call-template name="text-window">
                                                                         <xsl:with-param name="hand">
                                                                             <xsl:value-of select="@hand"/>
@@ -173,8 +175,14 @@
                                                         <!-- 
                                                             first xpath of pb grouping './tei:div[@type]/*'
                                                         -->
-                                                        <xsl:for-each select="current-group()[self::tei:div|self::tei:p|self::tei:closer|self::tei:lg|self::tei:ab|self::tei:fw]">
-                                                            <!--<xsl:value-of select="'secondary'"/>-->
+                                                        <xsl:for-each select="current-group()[self::tei:div[not(@type)]|
+                                                                                              self::tei:p|
+                                                                                              self::tei:closer|
+                                                                                              self::tei:lg|
+                                                                                              self::tei:ab|
+                                                                                              self::tei:fw]">
+                                                            <!--<xsl:value-of select="'secondary'"/>
+                                                            <xsl:value-of select="name()"/>-->
                                                             <xsl:call-template name="text-window">
                                                                 <xsl:with-param name="hand">
                                                                     <xsl:value-of select="@hand"/>
