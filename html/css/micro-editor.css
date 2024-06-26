@@ -122,6 +122,10 @@ input:checked + .i-slider:before {
   background-color: #ffe6e6;
 }
 
+/*.red {
+  background-image: linear-gradient(to right, #ffe6e6, #B1FFBC);
+}*/
+
 .blue {
   background-color: #e1d4ff;
 }
@@ -140,6 +144,11 @@ input:checked + .i-slider:before {
 
 .au-brown {
   background-color: #b59890;
+}
+
+
+.i-slider.red {
+  background-image: linear-gradient(to right, #FF9D9D, #B1FFBC);
 }
 
 .i-slider.orange {
@@ -457,4 +466,9 @@ annotation-slider label {
 
 .choice.reg {
   display: none;
+}
+
+.rev.add.strikethrough {
+    background-color: #B1FFBC;
+    text-decoration: none;
 }

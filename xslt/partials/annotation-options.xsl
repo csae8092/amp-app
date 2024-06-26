@@ -21,7 +21,7 @@
                         <annotation-slider opt="tf"></annotation-slider>
                     </li>
                     <li >
-                        <annotation-slider opt="del"></annotation-slider>
+                        <annotation-slider opt="rev"></annotation-slider>
                     </li>
                     <li >
                         <annotation-slider opt="ucl"></annotation-slider>

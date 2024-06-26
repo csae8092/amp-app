@@ -3,15 +3,15 @@ var editor = new LoadEditor({
     title: "Text Annotations",
     variants: [
       {
-        opt: "del",
-        opt_slider: "deleted-slider",
-        title: "Deleted",
+        opt: "rev",
+        opt_slider: "revision-slider",
+        title: "Revision",
         color: "red",
-        html_class: "del",
+        html_class: "rev",
         css_class: "strikethrough",
         hide: {
           hidden: true,
-          class: "del",
+          class: "rev.del",
         },
         chg_citation: "citation-url",
         features: {

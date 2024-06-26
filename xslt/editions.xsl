@@ -485,7 +485,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:del">
-        <span class="del">
+        <span class="rev del">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
@@ -1486,15 +1486,15 @@
     </xsl:template>
     <xsl:template match="tei:add">
         <xsl:if test="not(@corresp)">
-            <xsl:variable name="place" select="
+            <!--<xsl:variable name="place" select="
                 if(@place = 'left') then('margin-left:-5rem;')
                 else if(@place = 'right') then('margin-right:-5rem;')
                 else if(@place = 'top') then('margin-top:-3em;')
                 else if(@place = 'bottom') then('margin-bottom:-3rem;')
                 else if(@place = 'superimposed') then('margin-top:-1rem;')
                 else('')
-                "/>
-            <span style="position:absolute;{$place}">
+                "/>-->
+            <span class="rev add">
                 <xsl:apply-templates/>
             </span>
         </xsl:if>
