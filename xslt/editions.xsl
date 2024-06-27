@@ -987,6 +987,9 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:fw[@type='pageNum']">
+        <xsl:if test="not(preceding-sibling::tei:pb)">
+            <xsl:apply-templates/>
+        </xsl:if>
         <!-- do not render handled in view type tempalte -->
     </xsl:template>
     <xsl:template match="tei:ref">
