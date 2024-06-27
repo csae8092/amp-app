@@ -280,7 +280,7 @@
             <xsl:apply-templates/>
         </p>
     </xsl:template>
-  
+
     <!-- 
         in doc 0063 p elements are part in both pb groups creating in view-type.xsl
         since the secondary group creates a paragraph stylesheet if p elements is encountered
@@ -606,17 +606,17 @@
                     <!--<xsl:variable name="acdh" select="substring-before(//tei:prefixDef[@ident='acdh']/@replacementPattern, '$1')"/>-->
                     <xsl:choose>
                         <xsl:when test="not($test-for-hash)">
-                            
-                                <xsl:attribute name="href">
-                                    <xsl:value-of select="replace(substring-after($attribute, 'acdh:'), '.xml', '.html')"/>
-                                </xsl:attribute>
-                                <xsl:attribute name="alt">
-                                    <xsl:text>Quote Link</xsl:text>
-                                </xsl:attribute>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="fade-all bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-                                    <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
-                                </svg>
+
+                            <xsl:attribute name="href">
+                                <xsl:value-of select="replace(substring-after($attribute, 'acdh:'), '.xml', '.html')"/>
+                            </xsl:attribute>
+                            <xsl:attribute name="alt">
+                                <xsl:text>Quote Link</xsl:text>
+                            </xsl:attribute>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="fade-all bi bi-box-arrow-up-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                            </svg>
                         </xsl:when>
                         <xsl:when test="$ana = 'false'">
                             <xsl:attribute name="data-bs-toggle">
@@ -650,7 +650,8 @@
             <div class="comment-body">
                 <h5>
                     <xsl:if test="$title">
-                        <xsl:value-of select="$title"/><xsl:text> | </xsl:text>
+                        <xsl:value-of select="$title"/>
+                        <xsl:text> | </xsl:text>
                     </xsl:if>
                     <xsl:for-each select="$root//node()[@ana=concat('#', $id)]">
                         <xsl:apply-templates select="node() except (tei:del | tei:lb)"/>
@@ -936,7 +937,7 @@
                                         <xsl:variable name="title" select="$doc//id(data($id))//tei:title|$doc//id(data($id))//tei:label|$doc//id(data($id))//tei:persName|$doc//id(data($id))//tei:placeName|$doc//id(data($id))//tei:orgName"/>
                                         <xsl:value-of select="$title"/>
                                     </xsl:if>
-                                    <xsl:if test="contains($ref, 'amp-transcript') and not(name() = 'ref' or name() = 'quote')">                     
+                                    <xsl:if test="contains($ref, 'amp-transcript') and not(name() = 'ref' or name() = 'quote')">
                                         <xsl:try>
                                             <xsl:variable name="doc" select="doc(concat('../data/editions/correspondence/', $doc-id))//tei:TEI"/>
                                             <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
@@ -954,7 +955,7 @@
                                         <xsl:value-of select="replace(replace($ref, 'acdh:', ''), '.xml', '.html')"/>
                                     </xsl:attribute>
                                     <xsl:variable name="doc-id" select="replace($ref, 'acdh:', '')"/>
-                                    <xsl:if test="contains($ref, 'amp-index')">                             
+                                    <xsl:if test="contains($ref, 'amp-index')">
                                         <xsl:variable name="doc" select="doc(concat('../data/indices/', $doc-id))//tei:TEI"/>
                                         <xsl:variable name="title" select="$doc//tei:titleStmt/tei:title[@level='a']"/>
                                         <xsl:value-of select="$title"/>
@@ -1487,20 +1488,21 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    <xsl:template match="tei:add">
-        <xsl:if test="not(@corresp)">
-            <!--<xsl:variable name="place" select="
-                if(@place = 'left') then('margin-left:-5rem;')
-                else if(@place = 'right') then('margin-right:-5rem;')
-                else if(@place = 'top') then('margin-top:-3em;')
-                else if(@place = 'bottom') then('margin-bottom:-3rem;')
-                else if(@place = 'superimposed') then('margin-top:-1rem;')
-                else('')
-                "/>-->
-            <span class="rev add">
-                <xsl:apply-templates/>
-            </span>
-        </xsl:if>
+    <xsl:template match="tei:add[not(@corresp)]">
+        <xsl:choose>
+            <xsl:when test="text() = '̲'">
+                <span class="rev add" style="position:absolute;margin-left:.3rem;">
+                    <xsl:apply-templates/>
+                </span>
+                
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="rev add">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:otherwise>
+        </xsl:choose>
+        
     </xsl:template>
     <xsl:template match="tei:l">
         <xsl:if test="@xml:id">
@@ -1748,7 +1750,7 @@
                                     <xsl:value-of select="@source"/>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    
+
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:with-param>
@@ -1767,7 +1769,7 @@
                                 <xsl:value-of select="@source"/>
                             </xsl:when>
                             <xsl:otherwise>
-                                
+
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:with-param>
