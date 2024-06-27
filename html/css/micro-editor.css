@@ -452,6 +452,15 @@ annotation-slider label {
   border-right: 1px solid lightgrey;
 }
 
+.choice.reg {
+  display: none;
+}
+
+.rev.add.strikethrough {
+    background-color: #B1FFBC;
+    text-decoration: none;
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 992px) {
   .aot-list {
@@ -462,13 +471,4 @@ annotation-slider label {
     padding: 1em 0;
     border-bottom: 2px dashed lightgrey;
   }
-}
-
-.choice.reg {
-  display: none;
-}
-
-.rev.add.strikethrough {
-    background-color: #B1FFBC;
-    text-decoration: none;
 }
