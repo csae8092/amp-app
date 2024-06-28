@@ -149,6 +149,7 @@
                             <div class="tei-back">
                                 <xsl:apply-templates/>
                                 <xsl:call-template name="interp"/>
+                                <xsl:call-template name="glyph"/>
                             </div>
                         </xsl:for-each>
                     </div>
@@ -1407,6 +1408,35 @@
                 <span class="handShift" style="{$printed}"/>
             </xsl:when>
         </xsl:choose>
+    </xsl:template>
+    <xsl:template match="tei:g">
+        <xsl:call-template name="rs-verify-if-multiple-values">
+            <xsl:with-param name="attribute" select="@ref"/>
+            <xsl:with-param name="ana" select="'false'"/>
+        </xsl:call-template>
+        <xsl:apply-templates/>
+    </xsl:template>
+    <xsl:template name="glyph">
+        <xsl:for-each select="//tei:charDecl/tei:glyph">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="glyph description" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                                <xsl:value-of select="string-join(//tei:g[contains(@ref, @xml:id)][1]/text())"/>
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <xsl:value-of select="./tei:desc//text()"/>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </xsl:for-each>
     </xsl:template>
     <xsl:template match="tei:lb">
         <br/>

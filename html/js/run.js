@@ -88,6 +88,23 @@ var editor = new LoadEditor({
         },
       },
       {
+        opt: "gly",
+        opt_slider: "gly-slider",
+        title: "Glyph",
+        color: "brown",
+        html_class: "g",
+        css_class: "glyph",
+        hide: {
+          hidden: true,
+          class: "g",
+        },
+        chg_citation: "citation-url",
+        features: {
+          all: false,
+          class: "features-1",
+        },
+      },
+      {
         opt: "tf",
         opt_slider: "text-features-slider",
         title: "Original text features",

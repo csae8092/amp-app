@@ -35,6 +35,9 @@
                     <li >
                         <annotation-slider opt="cho"></annotation-slider>
                     </li>
+                    <li >
+                        <annotation-slider opt="gly"></annotation-slider>
+                    </li>
                 </ul>
                 <ul class="aot-list">
                     <li>

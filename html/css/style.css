@@ -1457,6 +1457,9 @@ td > label {
 .badge-en.qtes:hover {
   background-color: #dadada;
 }
+.badge-en.gtes:hover {
+  background-color: #ffdd81;
+}
 .badge-en > .number {
   background-color: #615a60;
 }
