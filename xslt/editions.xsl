@@ -474,12 +474,12 @@
     <xsl:template match="tei:space">
         <xsl:choose>
             <xsl:when test="@min">
-                <span class="space">
+                <span class="whitespace">
                     <xsl:value-of select="string-join((for $i in 1 to @min return '&#x00A0;'),'')"/>
                 </span>
             </xsl:when>
             <xsl:when test="@quantity">
-                <span class="space">
+                <span class="whitespace">
                     <xsl:value-of select="string-join((for $i in 1 to @quantity return '&#x00A0;'),'')"/>
                 </span>
             </xsl:when>
@@ -1388,7 +1388,7 @@
     <xsl:template match="tei:hi">
         <xsl:choose>
             <xsl:when test="@rend='underline'">
-                <span class="hi-underline italic">
+                <span class="underline">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
@@ -1616,12 +1616,12 @@
         -->
     </xsl:template>
     <xsl:template match="tei:orig">
-        <span class="cho orig">
+        <span class="choice">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     <xsl:template match="tei:reg">
-        <span class="cho reg">
+        <span class="choice">
             <xsl:apply-templates/>
         </span>
     </xsl:template>

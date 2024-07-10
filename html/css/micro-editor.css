@@ -98,20 +98,15 @@ input:checked + .i-slider:before {
   text-decoration: line-through;
 }
 
-.whitespace {
-}
-
-/* .underline {
-  text-decoration: underline;
-} */
+/*.whitespace {
+}*/
 
 .italic {
   font-style: italic;
 }
 
-.italic.underline {
+.underline {
   text-decoration: underline;
-  font-style: normal;
 }
 
 .orange {
@@ -463,9 +458,9 @@ annotation-slider label {
   border-right: 1px solid lightgrey;
 }
 
-.choice.reg {
+/*.choice.reg {
   display: none;
-}
+}*/
 
 .rev.add.strikethrough {
     background-color: #B1FFBC;

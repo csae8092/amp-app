@@ -19,7 +19,7 @@ var editor = new LoadEditor({
           class: "features-1",
         },
       },
-      {
+/*      {
         opt: "udl",
         opt_slider: "underlined-slider",
         title: "Underlined",
@@ -35,8 +35,8 @@ var editor = new LoadEditor({
           all: false,
           class: "features-1",
         },
-      },
-      {
+      },*/
+      /*{
         opt: "wsp",
         opt_slider: "whitespace-slider",
         title: "Original white spaces",
@@ -52,7 +52,7 @@ var editor = new LoadEditor({
           all: false,
           class: "features-1",
         },
-      },
+      },*/
       {
         opt: "ucl",
         opt_slider: "unclear-slider",
@@ -70,7 +70,7 @@ var editor = new LoadEditor({
           class: "features-1",
         },
       },
-      {
+      /*{
         opt: "cho",
         opt_slider: "cho-slider",
         title: "Original spelling",
@@ -86,7 +86,7 @@ var editor = new LoadEditor({
           all: false,
           class: "features-1",
         },
-      },
+      },*/
       {
         opt: "gly",
         opt_slider: "gly-slider",

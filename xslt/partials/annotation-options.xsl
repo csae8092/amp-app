@@ -26,15 +26,15 @@
                     <li >
                         <annotation-slider opt="ucl"></annotation-slider>
                     </li>
-                    <li >
+                    <!--<li >
                         <annotation-slider opt="udl"></annotation-slider>
-                    </li>
-                    <li >
+                    </li>-->
+                    <!--<li >
                         <annotation-slider opt="wsp"></annotation-slider>
-                    </li>
-                    <li >
+                    </li>-->
+                    <!--<li >
                         <annotation-slider opt="cho"></annotation-slider>
-                    </li>
+                    </li>-->
                     <li >
                         <annotation-slider opt="gly"></annotation-slider>
                     </li>
