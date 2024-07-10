@@ -989,8 +989,17 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:fw[@type='pageNum']">
+        <xsl:variable name="hand" select="@hand"/>
         <xsl:if test="not(preceding-sibling::tei:pb)">
-            <xsl:apply-templates/>
+            <p class="yes-index {
+                if ($hand = '#handwritten') then
+                ('handwritten') else if ($hand = '#typed') then
+                ('typed') else if ($hand = '#printed') then
+                ('printed') else if ($hand = '#stamp') then
+                ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                }">
+                <xsl:apply-templates/>
+            </p>
         </xsl:if>
         <!-- do not render handled in view type tempalte -->
     </xsl:template>

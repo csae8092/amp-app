@@ -233,10 +233,9 @@
                                                 
                                                 <xsl:for-each select="current-group()[self::tei:div|
                                                                                     self::tei:p[preceding-sibling::tei:pb]|
-                                                                                    self::tei:fw[preceding-sibling::tei:pb]|
                                                                                     self::tei:ab[preceding-sibling::tei:pb]]">
-                                                    <!--<xsl:text>main</xsl:text>-->
-                                                    <!--<xsl:value-of select="name()"/>-->
+                                                    <!--<xsl:text>main</xsl:text>
+                                                    <xsl:value-of select="name()"/>-->
                                                     <xsl:choose>
                                                         <xsl:when test="self::tei:div">
                                                             <xsl:call-template name="text-window">
