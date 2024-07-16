@@ -1386,6 +1386,7 @@
         </xsl:for-each>
     </xsl:template>
     <xsl:template match="tei:hi">
+        <xsl:variable name="letter-count" select="string-length(.)"/>
         <xsl:choose>
             <xsl:when test="@rend='underline'">
                 <span class="underline">
@@ -1406,6 +1407,20 @@
                 <xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
+        <xsl:if test="@xml:id">
+            <xsl:variable name="id" select="@xml:id"/>
+            <xsl:for-each select="//tei:add[contains(@corresp, $id)]">
+                <xsl:variable name="place-top" select="
+                    if(@place = 'left') then('margin-left:-5rem;')
+                    else if (@place = 'above') then('margin-top:-1rem;')
+                    else() 
+                    "/>
+                <xsl:variable name="place-left" select="string($letter-count div 2)"/>
+                <span style="position:absolute;{$place-top}{concat('margin-left:-', $place-left, 'rem;')}">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:for-each>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="tei:handShift">
         <xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 22px;'"/>
@@ -1533,20 +1548,30 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:add[not(@corresp)]">
+       <!-- <xsl:variable name="place" select="
+            if(@place = 'left') then('margin-left:-5rem;')
+            else if (@place = 'above') then('margin-top:-1rem;')
+            else if (@place = 'bottom') then('margin-bottom:-.5rem;')
+            else()
+            "/>
         <xsl:choose>
-            <xsl:when test="text() = '̲'">
-                <span class="rev add" style="position:absolute;margin-left:.3rem;">
+            <xsl:when test="@place and @place='above' or @place='bottom'">
+                <span class="rev add" style="position:absolute;{$place}">
                     <xsl:apply-templates/>
                 </span>
-                
             </xsl:when>
             <xsl:otherwise>
                 <span class="rev add">
                     <xsl:apply-templates/>
                 </span>
             </xsl:otherwise>
-        </xsl:choose>
-        
+        </xsl:choose>-->
+        <span class="rev add">
+            <xsl:apply-templates/>
+        </span>
+    </xsl:template>
+    <xsl:template match="tei:add[@corresp]">
+        <!-- do not render -->
     </xsl:template>
     <xsl:template match="tei:l">
         <xsl:if test="@xml:id">
