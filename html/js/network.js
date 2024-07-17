@@ -12,14 +12,22 @@ Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
     // } catch (err) {
     //   console.log(err);
     // }
+    try {
+      var source = data[x].source[0].value;
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      var target = data[x].target[0].value;
+    } catch (err) {
+      console.log(err);
+    }
 
-    let source = data[x].source[0].value;
-    let target = data[x].target[0].value;
-    let type_node = `type_${type}_${node.replace("relationship_id_", "")}`;
+    let type_node = `${type}_${node.replace("relationship_person_id_", "")}`;
     nodes.push(
-      [`Name: ${source}`, node],
-      [`Name: ${target}`, node],
-      [type_node, node]
+      [`Name: ${source}`, type_node],
+      [`Name: ${target}`, type_node]
+      //[type_node, node]
     );
   }
 
@@ -87,29 +95,30 @@ Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
           nodes[link[1]] = {
             id: link[1],
             marker: {
-              radius: 10,
+              radius: 5,
             },
             color: "#7f8c8d",
-          };
-        } else if (nodes[link[0]] && nodes[link[0]].color) {
-          nodes[link[1]] = {
-            id: link[1],
-            color: "#615a60",
-          };
-        } else if (link[0].includes("type_")) {
-          // let random = Math.floor(Math.random() * colors.length);
-          nodes[link[0]] = {
-            id: link[0],
-            color: "#7f8c8d",
-          };
-          nodes[link[1]] = {
-            id: link[1],
-            marker: {
-              radius: 10,
-            },
-            color: "#615a60",
           };
         }
+        // } else if (nodes[link[0]] && nodes[link[0]].color) {
+        //   nodes[link[1]] = {
+        //     id: link[1],
+        //     color: "#fff",
+        //   };
+        // } else if (link[0].includes("type_")) {
+        //   // let random = Math.floor(Math.random() * colors.length);
+        //   nodes[link[0]] = {
+        //     id: link[0],
+        //     color: "#f1f1f1",
+        //   };
+        //   nodes[link[1]] = {
+        //     id: link[1],
+        //     marker: {
+        //       radius: 0,
+        //     },
+        //     color: "#f1f1f1",
+        //   };
+        // }
       });
 
       e.options.nodes = Object.keys(nodes).map(function (id) {
