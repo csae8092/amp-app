@@ -1447,12 +1447,13 @@
     </xsl:template>
     <xsl:template name="glyph">
         <xsl:for-each select="//tei:charDecl/tei:glyph">
+            <xsl:variable name="id" select="@xml:id"/>
             <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="glyph description" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                                <xsl:value-of select="string-join(//tei:g[contains(@ref, @xml:id)][1]/text())"/>
+                                <xsl:value-of select="substring(string-join(//tei:g[contains(@ref, $id)]/text()), 1 ,1)"/>
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
