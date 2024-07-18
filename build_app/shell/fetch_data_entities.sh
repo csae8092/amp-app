@@ -7,6 +7,7 @@ unzip main
 mkdir ./data/indices
 mv amp-entities-main/out/*.xml ./data/indices
 mv amp-entities-main/out/*.geojson ./data/indices
-mv amp-entities-main/json_dumps/person_person.json ./html/js/json/analytics/relationships.json
+mv amp-entities-main/json_dumps/person_person.json ./html/js/json/analytics
+mv amp-entities-main/json_dumps/person_org.json ./html/js/json/analytics
 rm -rf amp-entities-main
 rm main.zip
