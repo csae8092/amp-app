@@ -68,7 +68,7 @@
                 </main>
                 <xsl:call-template name="html_footer"/>
                 <script src="js/vendor/instantsearch.js-bin-4.46.0/js/instantsearch.js"></script>
-                <script src="js/vendor/typesense-instantsearch-adapter-bin-2.8.0/dist/typesense-instantsearch-adapter.min.js"></script>
+                <script src="js/vendor/typesense-instantsearch-adapter-bin-2.8.0/typesense-instantsearch-adapter.min.js"></script>
                 <script src="js/ts_search.js"></script>
             </body>
         </html>
