@@ -5,6 +5,7 @@
   --amp-secondary-link-color: #b59890;
   --amp-primary-text-color: #615a60;
   --amp-secondary-text-color: #b59890;
+  --bs-body-bg: transparent;
 }
 
 .navbar-search {
@@ -1860,11 +1861,11 @@ td > label {
     width: 100%;
   }
   #commentary {
-      	grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-    .interpComment {
-        margin: .5em;
-    }
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .interpComment {
+    margin: 0.5em;
+  }
   .edition-md tr th,
   .edition-md tr td {
     display: block;

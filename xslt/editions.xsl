@@ -155,12 +155,10 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
-                <script src="https://unpkg.com/de-micro-editor@0.3.4/dist/de-editor.min.js"></script>
-                <!--<script src="js/dist/de-editor.min.js"></script> -->
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"></script>
+                <script src="js/vendor/openseadragon-bin-4.1.1/openseadragon.min.js"></script>
+                <script src="js/vendor/de-micro-editor-bin-0.4.0/de-editor.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>
-                <!--<script type="text/javascript" src="js/hide-md.js"></script>-->
+                <script src="js/vendor/markjs-bin-8.11.1/mark.min.js"></script>
                 <script type="text/javascript" src="js/mark.js"></script>
                 <script type="text/javascript" src="js/prev-next-urlupdate.js"></script>
                 <script type="text/javascript" src="js/commentary.js"></script>
@@ -1549,7 +1547,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:add[not(@corresp)]">
-       <!-- <xsl:variable name="place" select="
+        <!-- <xsl:variable name="place" select="
             if(@place = 'left') then('margin-left:-5rem;')
             else if (@place = 'above') then('margin-top:-1rem;')
             else if (@place = 'bottom') then('margin-bottom:-.5rem;')
