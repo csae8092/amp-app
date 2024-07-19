@@ -19,40 +19,6 @@ var editor = new LoadEditor({
           class: "features-1",
         },
       },
-/*      {
-        opt: "udl",
-        opt_slider: "underlined-slider",
-        title: "Underlined",
-        color: "blue",
-        html_class: "hi-underline",
-        css_class: "underline",
-        hide: {
-          hidden: false,
-          class: "hi-underline",
-        },
-        chg_citation: "citation-url",
-        features: {
-          all: false,
-          class: "features-1",
-        },
-      },*/
-      /*{
-        opt: "wsp",
-        opt_slider: "whitespace-slider",
-        title: "Original white spaces",
-        color: "green",
-        html_class: "space",
-        css_class: "whitespace",
-        hide: {
-          hidden: true,
-          class: "space",
-        },
-        chg_citation: 1,
-        features: {
-          all: false,
-          class: "features-1",
-        },
-      },*/
       {
         opt: "ucl",
         opt_slider: "unclear-slider",
@@ -70,23 +36,6 @@ var editor = new LoadEditor({
           class: "features-1",
         },
       },
-      /*{
-        opt: "cho",
-        opt_slider: "cho-slider",
-        title: "Original spelling",
-        color: "orange",
-        html_class: "cho",
-        css_class: "choice",
-        hide: {
-          hidden: true,
-          class: "cho.orig",
-        },
-        chg_citation: "citation-url",
-        features: {
-          all: false,
-          class: "features-1",
-        },
-      },*/
       {
         opt: "gly",
         opt_slider: "gly-slider",

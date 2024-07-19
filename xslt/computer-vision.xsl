@@ -19,8 +19,8 @@
                 <link type="text/css" href="css/webrtiviewer.css" rel="Stylesheet"/>
                 <link rel="stylesheet" type="text/css" href="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.css"/>
                 <script type="text/javascript" src="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.js"></script>
-                <script type="text/javascript" src="js/jquery-ui.min.js"></script>
-                <script type="text/javascript" src="js/pep.min.js"></script>
+                <script type="text/javascript" src="js/vendor/jquery-ui-bin-1.10.3/jquery-ui.min.js"></script>
+                <script type="text/javascript" src="js/vendor/pep-bin-0.4.1/pep.min.js"></script>
                 <script type="text/javascript" src="spidergl/spidergl.min.js"></script>
                 <script type="text/javascript" src="spidergl/multires.min.js"></script>
                 <script type="text/javascript" src="js/imageLoaded.js"></script>
@@ -98,12 +98,12 @@
                             <div id="navBarLetters">
                                 <ul class="nav nav-tabs" id="dropdown-lang">
                                     <li class="nav-item">
-                                        <a title="Cards" href="#cards-tab" data-toggle="tab" class="nav-link btn btn-round active">
+                                        <a title="Cards" href="#cards-tab" data-bs-toggle="tab" class="nav-link btn btn-round active">
                                                 show cards
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a title="Table" href="#table-tab" data-toggle="tab" class="nav-link btn btn-round">
+                                        <a title="Table" href="#table-tab" data-bs-toggle="tab" class="nav-link btn btn-round">
                                                 show table
                                         </a>
                                     </li>
@@ -123,16 +123,12 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="table-tab" tabindex="-1">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <xsl:call-template name="toc-table">
-                                                <xsl:with-param name="img" select="'off'"/>
-                                                <xsl:with-param name="category" select="'correspondence-cvl'"/>
-                                                <xsl:with-param name="max_date" select="xs:date('1969-06-10')"></xsl:with-param>
-                                                <xsl:with-param name="low_date" select="xs:date('1965-04-28')"></xsl:with-param>
-                                            </xsl:call-template>
-                                        </div>
-                                    </div>
+                                    <xsl:call-template name="toc-table">
+                                        <xsl:with-param name="img" select="'off'"/>
+                                        <xsl:with-param name="category" select="'correspondence-cvl'"/>
+                                        <xsl:with-param name="max_date" select="xs:date('1969-06-10')"></xsl:with-param>
+                                        <xsl:with-param name="low_date" select="xs:date('1965-04-28')"></xsl:with-param>
+                                    </xsl:call-template>
                                 </div>
                             </div>
                         </div>
@@ -142,10 +138,10 @@
 
             </main>
             <xsl:call-template name="html_footer"/>
-            <script type="text/javascript" src="js/dt.js"></script>
-            <script>
+            <script type="text/javascript" src="js/dt-panes.js"></script>
+            <script type="text/javascript">
                     $(document).ready(function () {
-                        createDataTable('tocTable', 'Search titles and dates:');
+                        createDataTable('tocTable', 'Search titles and dates:', [], [0, 1, 2, 3, 4, 5, 6, 7, 8], []);
                     });
             </script>
         </body>
