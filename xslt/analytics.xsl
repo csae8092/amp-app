@@ -32,7 +32,8 @@
                         </figure>
 
                         <figure class="highcharts-figure">
-                            <div id="container-network"></div>
+                            <div id="container-network"
+                                style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
                             <p class="highcharts-description">
                                 This directed graph shows an example of a network graph, where
                                 the nodes represent persons and their relationships with each other. 
@@ -42,7 +43,8 @@
                         </figure>
 
                         <figure class="highcharts-figure">
-                            <div id="container-network-org"></div>
+                            <div id="container-network-org"
+                                style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
                             <p class="highcharts-description">
                                 This directed graph shows an example of a network graph, where
                                 the nodes represent persons and their relationships to organizations. 
@@ -60,9 +62,20 @@
                 <script src="https://code.highcharts.com/modules/exporting.js"></script>
                 <script src="https://code.highcharts.com/modules/export-data.js"></script>
                 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-                <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
                 <script src="js/sender-receiver-graph.js"></script>
-                <script src="js/network.js"></script>
+                <script
+                    src="https://unpkg.com/react@16/umd/react.production.min.js"
+                    ></script>
+                <script
+                    src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
+                    ></script>
+                <script
+                    src="https://unpkg.com/three@0.126.1/build/three.min.js"
+                    ></script>                
+                <script
+                    src="https://unpkg.com/@acdh/network-visualization@0/lib/network-visualization.umd.js"
+                    ></script>
+                <script type="text/javascript" src="js/network-visualisation.js"></script>
             </body>
         </html>
     </xsl:template>
