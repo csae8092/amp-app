@@ -86,10 +86,10 @@ const networkVisualization = (url, container_id, second) => {
       });
 
       ReactDOM.render(
-        React.createElement(NetworkVisualization.Visualization, {
+        React.createElement(NetworkVisualization.SelectionControls, {
           //   height: 800,
           //   width: 600,
-          // showNeighborsOnly: true,
+          showNeighborsOnly: true,
           graph: {
             edges,
             nodes,
