@@ -32,18 +32,21 @@
                       </tr>
                       <tr>
                           <th>Author</th>
-                          <td><xsl:value-of select="//tei:titleStmt/tei:author"/></td>
+                          <td><ul>
+                              <xsl:for-each select="//tei:titleStmt/tei:author">
+                                  <li><a href="{@ref}" target="_blank"><xsl:value-of select="text()"/></a></li>
+                              </xsl:for-each>
+                          </ul></td>
                       </tr>  
                        <tr>
                            <th>Editor(s)</th>
                            <td>
-                               <ul style="list-style:none; padding-left:0;margin-bottom:0;">
-                                   <xsl:for-each select="//tei:titleStmt/tei:editor/tei:name">
-                                       <li>
-                                           <xsl:value-of select="."/>
-                                       </li>
-                                   </xsl:for-each>                                                               
-                               </ul>
+                               <xsl:for-each select="//tei:titleStmt/tei:editor/tei:name">
+                                   <a href="{@ref}" target="_blank"><xsl:value-of select="text()"/></a>
+                                   <xsl:if test="position() != last()">
+                                       <xsl:text>; </xsl:text>
+                                   </xsl:if>
+                               </xsl:for-each>
                            </td> 
                        </tr> 
                        <tr>
