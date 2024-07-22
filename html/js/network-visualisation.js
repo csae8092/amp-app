@@ -21,7 +21,7 @@ const networkVisualization = (url, container_id, second) => {
       const types = { edges: {}, nodes: {} };
 
       Object.entries(data).map((relation) => {
-        console.log(relation[1]);
+        // console.log(relation[1]);
         var amp_id = second ? relation[1].person_org : relation[1].amp_id;
         var load = true;
         try {
@@ -82,7 +82,7 @@ const networkVisualization = (url, container_id, second) => {
             };
           }
         }
-        console.log(edges, nodes, types);
+        // console.log(edges, nodes, types);
       });
 
       ReactDOM.render(

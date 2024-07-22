@@ -1,6 +1,7 @@
 Highcharts.getJSON(
   "js/json/analytics/Sender_receiver_addresses_XY.json",
   function (data) {
+    console.log(data);
     let features = data.features;
     var auden = [];
     var audenD = {};
@@ -14,10 +15,11 @@ Highcharts.getJSON(
     var krausD = {};
 
     for (let x in features) {
-      if (features[x].attributes.Role == "Sender") {
+      if (features[x].attributes.Role) {
         // convert unix date to m/d/y
         let d = features[x].attributes.Date;
         let nd = new Date(d);
+        console.log(nd);
         // let ndd = nd.getDate(nd);
         // let ndm = nd.getMonth(nd);
         let ndy = nd.getFullYear(nd);
@@ -136,18 +138,18 @@ Highcharts.getJSON(
           name: "Stella Musulin",
           data: stella,
         },
-        {
-          name: "Edward Mendelson",
-          data: mendelson,
-        },
-        {
-          name: "Michael O`Sullivan",
-          data: sullivan,
-        },
-        {
-          name: "Dr. Wolfgang Kraus",
-          data: kraus,
-        },
+        // {
+        //   name: "Edward Mendelson",
+        //   data: mendelson,
+        // },
+        // {
+        //   name: "Michael O`Sullivan",
+        //   data: sullivan,
+        // },
+        // {
+        //   name: "Dr. Wolfgang Kraus",
+        //   data: kraus,
+        // },
       ],
 
       // responsive: {
