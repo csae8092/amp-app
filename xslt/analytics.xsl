@@ -36,10 +36,7 @@
                             <div id="container-network"
                                 style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
                             <p class="highcharts-description">
-                                This directed graph shows an example of a network graph, where
-                                the nodes represent persons and their relationships with each other. 
-                                The IDs have different types like "is_lover_of" to describe
-                                the nature of the relationship. 
+                                
                             </p>
                         </figure>
 
@@ -48,10 +45,16 @@
                             <div id="container-network-org"
                                 style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
                             <p class="highcharts-description">
-                                This directed graph shows an example of a network graph, where
-                                the nodes represent persons and their relationships to organizations. 
-                                The IDs have different types like "is_employee_of" to describe
-                                the nature of the relationship. 
+                                
+                            </p>
+                        </figure>
+                        
+                        <figure class="highcharts-figure">
+                            <h5 class="text-center">All Relationships (Person, Place, Organization, Event)</h5>
+                            <div id="container-network-merged"
+                                style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
+                            <p class="highcharts-description">
+                                
                             </p>
                         </figure>
 

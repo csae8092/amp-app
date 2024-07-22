@@ -1,7 +1,6 @@
 Highcharts.getJSON(
   "js/json/analytics/Sender_receiver_addresses_XY.json",
   function (data) {
-    console.log(data);
     let features = data.features;
     var auden = [];
     var audenD = {};
@@ -19,7 +18,6 @@ Highcharts.getJSON(
         // convert unix date to m/d/y
         let d = features[x].attributes.Date;
         let nd = new Date(d);
-        console.log(nd);
         // let ndd = nd.getDate(nd);
         // let ndm = nd.getMonth(nd);
         let ndy = nd.getFullYear(nd);
