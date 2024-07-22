@@ -32,6 +32,7 @@
                         </figure>
 
                         <figure class="highcharts-figure">
+                            <h5 class="text-center">Relationships between Persons</h5>
                             <div id="container-network"
                                 style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
                             <p class="highcharts-description">
@@ -43,6 +44,7 @@
                         </figure>
 
                         <figure class="highcharts-figure">
+                            <h5 class="text-center">Relationships between Persons and Organizations</h5>
                             <div id="container-network-org"
                                 style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
                             <p class="highcharts-description">
