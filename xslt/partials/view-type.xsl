@@ -34,9 +34,9 @@
         </div> 
         
         <div class="{
-                if (ancestor::tei:text/@hand = '#handwritten') then 
-                ('handwritten') else if (ancestor::tei:text/@hand = '#typed') then 
-                ('typed') else if (ancestor::tei:text/@hand = '#printed') then 
+                if (@hand = '#handwritten') then 
+                ('handwritten') else if (@hand = '#typed') then 
+                ('typed') else if (@hand = '#printed') then 
                 ('printed') else ()
             } tab-content tab-edition">
             <div id="mark-scroll" class="d-inline fade-all sticky-top mw-20">
@@ -52,7 +52,7 @@
                 starting the the first div below tei:body
             -->
             <xsl:choose>
-                <xsl:when test="ancestor::tei:text[@type='letter']">
+                <xsl:when test="child::tei:div[1]/@type = 'letter' or child::tei:div[1]/@type = 'envelope'">
                     <!-- 
                         this group is for the new correspondence where containers are structured like
                         transcript/envelope or letter
@@ -205,7 +205,7 @@
                         </div>
                     </xsl:for-each-group>
                 </xsl:when>
-                <xsl:when test="ancestor::tei:text[@type='prose']">
+                <xsl:when test="child::tei:div[1]/@type = 'prose'">
                     <!-- 
                         2nd grouping loading first level div elements that do not container another sublevel div
                     -->

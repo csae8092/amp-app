@@ -45,10 +45,10 @@
                     <xsl:value-of select="count(//tei:graphic)"/>                                                                                             
                 </td>  
                 <td>
-                    <xsl:value-of select="//tei:text/@type"/>                                                                                           
+                    <xsl:value-of select="if(//tei:div[@type='transcription']/tei:div[1]/@type = 'envelope') then('letter') else('letter')"/>                                                                                           
                 </td>  
                 <td>
-                    <xsl:value-of select="//tei:text/@hand"/>                                                                                             
+                    <xsl:value-of select="//tei:div[@type='transcription']/@hand"/>                                                                                             
                 </td>
                 <td>
                     <ul>

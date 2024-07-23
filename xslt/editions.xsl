@@ -45,20 +45,20 @@
                             <div class="editor-options">
                                 <div class="card-footer editor-back-link">
                                     <a alt="Internal Link to the Table of Contents" class="btn-back-link">
-                                        <xsl:variable name="doc_type" select="//tei:text/@type"/>
+                                        <xsl:variable name="doc_type" select="//tei:div[@type='transcription']/tei:div[1]/@type"/>
                                         <xsl:variable name="max_date" select="xs:date('1973-12-31')"></xsl:variable>
                                         <xsl:variable name="low_date" select="xs:date('1958-12-31')"></xsl:variable>
                                         <xsl:variable name="max_date_am" select="xs:date('1996-01-01')"/>
                                         <xsl:variable name="low_date_am" select="xs:date('1975-12-31')"/>
                                         <xsl:variable name="doc_date" as="xs:date" select="xs:date(if(substring-before(//tei:origDate/@notBefore-iso, 'T')) then(substring-before(//tei:origDate/@notBefore-iso, 'T')) else ('1996-12-31'))"/>
                                         <xsl:attribute name="href">
-                                            <xsl:if test="$doc_date lt $max_date_am and $doc_date gt $low_date_am and $doc_type != 'photograph'">
+                                            <xsl:if test="$doc_date lt $max_date_am and $doc_date gt $low_date_am and $doc_type != 'photo'">
                                                 <xsl:text>toc_m.html</xsl:text>
                                             </xsl:if>
-                                            <xsl:if test="$doc_date lt $max_date and $doc_date gt $low_date and $doc_type != 'photograph'">
+                                            <xsl:if test="$doc_date lt $max_date and $doc_date gt $low_date and $doc_type != 'photo'">
                                                 <xsl:text>toc.html</xsl:text>
                                             </xsl:if>
-                                            <xsl:if test="$doc_type = 'photograph'">
+                                            <xsl:if test="$doc_type = 'photo'">
                                                 <xsl:text>photos.html</xsl:text>
                                             </xsl:if>
 

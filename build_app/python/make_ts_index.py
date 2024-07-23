@@ -135,11 +135,11 @@ cfts_records = []
 for x in tqdm(files, total=len(files)):
     doc = TeiReader(xml=x, xsl='./xslt/preprocess_typesense.xsl')
     try:
-        corresp = doc.any_xpath('.//tei:text[@type="letter"]')[0]
+        corresp = doc.any_xpath('.//tei:div[@type="transcription"]/tei:div[1][@type="letter" or @type="envelope"]')[0]
     except IndexError:
         corresp = False
         try:
-            photo = doc.any_xpath('.//tei:text[@type="photograph"]')[0]
+            photo = doc.any_xpath('.//tei:div[@type="transcription"]/tei:div[1][@type="photograph"]')[0]
         except IndexError:
             photo = False
     facs = doc.any_xpath('.//tei:body/tei:div//tei:pb')

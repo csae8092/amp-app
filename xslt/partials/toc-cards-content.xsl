@@ -66,10 +66,10 @@
                         <a target="_blank" href="{//tei:publicationStmt/tei:idno}"><i class="fas fa-link"></i></a>
                     </div>
                     <div style="text-align: center; display: inline;width: 25%;">
-                        <small>#<xsl:value-of select="//tei:text/@type"/></small>
+                        <small>#<xsl:value-of select="if(//tei:div[@type='transcription']/tei:div[1]/@type = 'envelope') then('letter') else('letter')"/></small>
                     </div>
                     <div style="text-align: center; display: inline;width: 40%;">
-                        <small><xsl:value-of select="//tei:text/@hand"/></small>
+                        <small><xsl:value-of select="//tei:div[@type='transcription']/@hand"/></small>
                     </div>
                     <div style="text-align: right; display: inline;width: 25%;">
                         <i class="fas fa-camera"></i> - <xsl:value-of select="count(//tei:graphic)"/>
