@@ -31,33 +31,18 @@
                             </p>
                         </figure>
 
-                        <figure class="highcharts-figure">
+                        <figure class="network-visualization">
                             <h5 class="text-center">Relationships between Persons</h5>
-                            <div id="container-network"
-                                style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
+                            <select id="network-visualization-data" class="form-select" aria-label="Select different graph data">
+                                <option value="all">All Entities - Person, Organization, Place, Event</option>
+                                <option value="person">Person - Person</option>
+                                <option value="org">Person - Organization</option>
+                            </select>
+                            <div id="network-container" style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
                             <p class="highcharts-description">
-                                
-                            </p>
-                        </figure>
 
-                        <figure class="highcharts-figure">
-                            <h5 class="text-center">Relationships between Persons and Organizations</h5>
-                            <div id="container-network-org"
-                                style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
-                            <p class="highcharts-description">
-                                
                             </p>
                         </figure>
-                        
-                        <figure class="highcharts-figure">
-                            <h5 class="text-center">All Relationships (Person, Place, Organization, Event)</h5>
-                            <div id="container-network-merged"
-                                style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
-                            <p class="highcharts-description">
-                                
-                            </p>
-                        </figure>
-
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
@@ -68,18 +53,10 @@
                 <script src="https://code.highcharts.com/modules/export-data.js"></script>
                 <script src="https://code.highcharts.com/modules/accessibility.js"></script>
                 <script src="js/sender-receiver-graph.js"></script>
-                <script
-                    src="https://unpkg.com/react@16/umd/react.production.min.js"
-                    ></script>
-                <script
-                    src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"
-                    ></script>
-                <script
-                    src="https://unpkg.com/three@0.126.1/build/three.min.js"
-                    ></script>                
-                <script
-                    src="https://unpkg.com/@acdh/network-visualization@0/lib/network-visualization.umd.js"
-                    ></script>
+                <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+                <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+                <script src="https://unpkg.com/three@0.126.1/build/three.min.js"></script>
+                <script src="https://unpkg.com/@acdh/network-visualization@0/lib/network-visualization.umd.js"></script>
                 <script type="text/javascript" src="js/network-visualisation.js"></script>
             </body>
         </html>

@@ -14,7 +14,7 @@ Highcharts.getJSON(
     var krausD = {};
 
     for (let x in features) {
-      if (features[x].attributes.Role) {
+      if (features[x].attributes.Role === "Sender") {
         // convert unix date to m/d/y
         let d = features[x].attributes.Date;
         let nd = new Date(d);
