@@ -46,17 +46,17 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
-                <script src="https://code.highcharts.com/highcharts.js"></script>
-                <script src="https://code.highcharts.com/modules/data.js"></script>
-                <script src="https://code.highcharts.com/modules/series-label.js"></script>
-                <script src="https://code.highcharts.com/modules/exporting.js"></script>
-                <script src="https://code.highcharts.com/modules/export-data.js"></script>
-                <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+                <script src="js/vendor/highcharts-bin-11.4.6/highcharts.js"></script>
+                <script src="js/vendor/highcharts-bin-11.4.6/data.js"></script>
+                <script src="js/vendor/highcharts-bin-11.4.6/series-label.js"></script>
+                <script src="js/vendor/highcharts-bin-11.4.6/exporting.js"></script>
+                <script src="js/vendor/highcharts-bin-11.4.6/export-data.js"></script>
+                <script src="js/vendor/highcharts-bin-11.4.6/accessibility.js"></script>
                 <script src="js/sender-receiver-graph.js"></script>
-                <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-                <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-                <script src="https://unpkg.com/three@0.126.1/build/three.min.js"></script>
-                <script src="https://unpkg.com/@acdh/network-visualization@0/lib/network-visualization.umd.js"></script>
+                <script src="js/vendor/react-bin-16.14.0/react.production.min.js"></script>
+                <script src="js/vendor/react-bin-16.14.0/react-dom.production.min.js"></script>
+                <script src="js/vendor/three-bin-0.126.1/three.min.js"></script>
+                <script src="js/vendor/acdh-network-visualization-bin-0.1.39/network-visualization.umd.js"></script>
                 <script type="text/javascript" src="js/network-visualisation.js"></script>
             </body>
         </html>
