@@ -28,11 +28,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/editions/correspondence/amp-transcript__0062.xml</String>
+                                    <String>data/meta/about.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>editions</String>
+                                        <String>index</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -68,11 +68,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>html/css/style.css</String>
+                                    <String>data/editions/correspondence/amp-transcript__0062.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>search</String>
+                                        <String>editions</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -88,7 +88,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/meta/about.xml</String>
+                                    <String>html/css/style.css</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>

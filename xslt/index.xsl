@@ -39,7 +39,7 @@
                             
                         </div>
                     </div>
-                    <div class="container-fluid bg-white w100 mb-0">
+                    <div class="container-fluid bg-white w80 mb-0">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-12 intro_column">
                                 <div class="intro_text">
@@ -86,20 +86,6 @@
                                         </a>
                                     </div>
                                     <div class="item">
-                                        <a href="search.html" class="index-link" id="index-search">  
-                                            <div class="index-tile" style="border:2px solid #b59890;">
-                                                <div class="index-tile-header">
-                                                    <img src="images/icons/lp-search.png"
-                                                        class="d-block w-100"
-                                                        alt="Explore the Auden Musulin Papers through full-text search"/>                                       
-                                                </div>
-                                                <div class="index-tile-footer">  
-                                                    <h5 >Explore the AMP through <br/> full-text search.</h5> 
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="item">
                                         <a href="photos.html" class="index-link" id="index-photo">                                                     
                                             <div class="index-tile">
                                                 <div class="index-tile-header">
@@ -111,6 +97,34 @@
                                                     <h5 >Photos and <br/> Postcards</h5>                                     
                                                 </div>
                                             </div>                                 
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="analytics.html" class="index-link" id="index-analytics">                                                     
+                                            <div class="index-tile">
+                                                <div class="index-tile-header">
+                                                    <img src="images/icons/lp-analytics.png"
+                                                        class="d-block w-100" 
+                                                        alt="Analytics"/>
+                                                </div>
+                                                <div class="index-tile-footer">   
+                                                    <h5 >Analtytics <br/> Network and Diagram</h5>                                     
+                                                </div>
+                                            </div>                                 
+                                        </a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="search.html" class="index-link" id="index-search">  
+                                            <div class="index-tile" style="border:2px solid #b59890;">
+                                                <div class="index-tile-header">
+                                                    <img src="images/icons/lp-search.png"
+                                                        class="d-block w-100"
+                                                        alt="Explore the Auden Musulin Papers through full-text search"/>                                       
+                                                </div>
+                                                <div class="index-tile-footer">  
+                                                    <h5 >Explore the AMP through <br/> full-text search.</h5> 
+                                                </div>
+                                            </div>
                                         </a>
                                     </div>
                                     <div class="item">
@@ -129,8 +143,10 @@
                                         </a>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
+                        
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
