@@ -6,7 +6,21 @@ const person_org =
   "https://raw.githubusercontent.com/Auden-Musulin-Papers/amp-app/dev/html/js/json/analytics/person_org.json";
 const merged = "js/json/analytics/merged_relationships.json";
 
-const networkVisualization = (url, container_id, second, all) => {
+const networkVisualization = (
+  url,
+  container_id,
+  second,
+  all,
+  debug = false
+) => {
+  if (debug) {
+    console.log("URL:", url);
+    console.log("Container:", container_id);
+    second
+      ? console.log("Person Org Graph:", second)
+      : console.log("Person Person Graph:", true);
+    console.log("All Entitites Graph:", all);
+  }
   window
     .fetch(url)
     .then((response) => {
@@ -16,22 +30,29 @@ const networkVisualization = (url, container_id, second, all) => {
       return response.json();
     })
     .then((data) => {
-      //console.log(data, typeof data);
+      if (debug) {
+        console.log(data);
+      }
       const edges = {};
       const nodes = {};
       const types = { edges: {}, nodes: {} };
 
       if (all) {
         data.map((relation) => {
-          // console.log(relation);
+          if (debug) {
+            console.log(relation);
+          }
           if (relation.hasOwnProperty("person_org")) {
             var amp_id = relation.person_org;
           } else if (relation.hasOwnProperty("org_event")) {
             var amp_id = relation.org_event;
           } else if (relation.hasOwnProperty("place_relationship_id")) {
             var amp_id = relation.place_relationship_id;
-          } else {
+          } else if (relation.hasOwnProperty("amp_id")) {
             var amp_id = relation.amp_id;
+          } else {
+            console.log("No amp_id found");
+            console.log(relation);
           }
           var load = true;
           try {
@@ -40,7 +61,10 @@ const networkVisualization = (url, container_id, second, all) => {
               ? "org_" + source[0].id
               : "person_" + source[0].id;
           } catch (err) {
-            console.log(err);
+            if (debug) {
+              console.log(err);
+              console.log(relation);
+            }
             load = false;
           }
           try {
@@ -53,16 +77,22 @@ const networkVisualization = (url, container_id, second, all) => {
               ? "event_" + target[0].id
               : amp_id.includes("person_org")
               ? "org_" + target[0].id
-              : "event_" + target[0].id;
+              : "person_" + target[0].id;
           } catch (err) {
-            console.log(err);
+            if (debug) {
+              console.log(err);
+              console.log(relation);
+            }
             load = false;
           }
           try {
             var relation_type = relation.relation_type_object;
             var _type = "relation_type_" + relation_type[0].id;
           } catch (err) {
-            console.log(err);
+            if (debug) {
+              console.log(err);
+              console.log(relation);
+            }
             load = false;
           }
 
@@ -76,7 +106,7 @@ const networkVisualization = (url, container_id, second, all) => {
             nodes[_source] = {
               id: _source,
               label: source[0].value,
-              type: "Person",
+              type: amp_id.includes("org_event") ? "Organization" : "Person",
             };
             nodes[_target] = {
               id: _target,
@@ -126,7 +156,10 @@ const networkVisualization = (url, container_id, second, all) => {
             var source = relation[1].source;
             var _source = "person_" + source[0].id;
           } catch (err) {
-            console.log(err);
+            if (debug) {
+              console.log(err);
+              console.log(relation);
+            }
             load = false;
           }
           try {
@@ -135,14 +168,20 @@ const networkVisualization = (url, container_id, second, all) => {
               ? "org_" + target[0].id
               : "person_" + target[0].id;
           } catch (err) {
-            console.log(err);
+            if (debug) {
+              console.log(err);
+              console.log(relation);
+            }
             load = false;
           }
           try {
             var relation_type = relation[1].relation_type_object;
             var _type = "relation_type_" + relation_type[0].id;
           } catch (err) {
-            console.log(err);
+            if (debug) {
+              console.log(err);
+              console.log(relation);
+            }
             load = false;
           }
 
@@ -203,7 +242,10 @@ const networkVisualization = (url, container_id, second, all) => {
       );
     })
     .catch((error) => {
-      console.error(error);
+      if (debug) {
+        console.log(error);
+        console.log(relation);
+      }
     });
 };
 
