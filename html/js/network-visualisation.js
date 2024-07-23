@@ -386,7 +386,7 @@ const networkVisualization = (
               }, 500);
             }
           },
-          showDirectionality: false,
+          showDirectionality: true,
         }),
         document.getElementById(container_id)
       );
