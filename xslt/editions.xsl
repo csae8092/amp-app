@@ -44,7 +44,7 @@
                         <div class="card detail-card">
                             <div class="editor-options">
                                 <div class="card-footer editor-back-link">
-                                    <a class="btn-back-link">
+                                    <a class="btn-back-link" title="Link to table or cards of contents.">
                                         <xsl:variable name="doc_type" select="//tei:div[@type='transcription']/tei:div[1]/@type"/>
                                         <xsl:variable name="max_date" select="xs:date('1973-12-31')"></xsl:variable>
                                         <xsl:variable name="low_date" select="xs:date('1958-12-31')"></xsl:variable>
@@ -71,9 +71,9 @@
                                 <div class="card-footer editor-btns-wrapper">
                                     <ul class="editor-btns">
                                         <li class="edition-doc-search">
-                                            <input type="checkbox" name="opt[]" value="separateWordSearch" checked="checked"/>
- separate word search
-                                            <input type="text" name="keyword" placeholder="enter keyword..."/>
+                                            <input type="checkbox" name="opt[]" value="separateWordSearch" title="Enable seperate word search"  checked="checked"/>
+                                            <label>search for keywords</label>
+                                            <input type="text" name="keyword" title="Search for keywords" placeholder="enter keyword..."/>
                                         </li>
                                         <li >
                                             <font-size opt="fos"></font-size>

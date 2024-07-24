@@ -23,7 +23,7 @@
         <!--<xsl:variable name="date" select="//tei:correspAction/tei:date/@when-iso"/>-->
         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 col-sm-12 col-xs-12 p-2 index-card-wrapper">
             <div class="card index-card">
-                <a>
+                <a aria-labelledby="card-label-{position()}">
                     <xsl:attribute name="href">
                         <xsl:value-of select="concat(replace(tokenize($full_path, '/')[last()], '.xml', '.html?img='), $img)"/>
                     </xsl:attribute>
@@ -56,14 +56,14 @@
                         </xsl:choose>
                     </div>
                     <div class="card-header" style="height:150px; display: flex; align-items: center;">                                              
-                        <p class="p-1 m-0">
+                        <p class="p-1 m-0" id="card-label-{position()}">
                             <xsl:value-of select="$doc-title"/>
                         </p>
                     </div>
                 </a>
                 <div class="card-footer" style="width: 100%; height: 100%; display: inline-flex;">
                     <div style="text-align: left; display: inline; width: 10%;">
-                        <a target="_blank" href="{//tei:publicationStmt/tei:idno}"><i class="fas fa-link"></i></a>
+                        <a target="_blank" href="{//tei:publicationStmt/tei:idno}" title="External Handle UID linking to the archived source."><i class="fas fa-link"></i></a>
                     </div>
                     <div style="text-align: center; display: inline;width: 25%;">
                         <small>#<xsl:value-of select="if(//tei:div[@type='transcription']/tei:div[1]/@type = 'envelope') then('letter') else('letter')"/></small>
@@ -167,7 +167,8 @@
                     </xsl:for-each>
                     <xsl:if test="//node()[@ana]">
                         <xsl:variable name="count-ana" select="count(//node()[@ana])"/>
-                        <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?nte=on&amp;img=off">
+                        <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?nte=on&amp;img=off"
+                            title="Links to the detail page with the comment url-parameter enabled.">
                             <div title="comment"
                                 class="badge badge-en intes" style="display:inline;width:50px;">
                                 <span class="number">
@@ -182,7 +183,8 @@
                     </xsl:if>
                     <xsl:if test="//tei:quote[ancestor::tei:body][@source]">
                         <xsl:variable name="count" select="count(//tei:quote[ancestor::tei:body][@source])"/>
-                        <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?qte=on&amp;img=off">
+                        <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?qte=on&amp;img=off"
+                            title="Links to the detail page with the quote url-parameter enabled.">
                             <div title="quote"
                                 class="badge badge-en qtes" style="display:inline;width:50px;">
                                 <span class="number">
@@ -196,7 +198,8 @@
                     </xsl:if>
                     <xsl:if test="//tei:g[ancestor::tei:body][@ref]">
                         <xsl:variable name="count" select="count(//tei:g[ancestor::tei:body][@ref])"/>
-                        <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?gly=on&amp;img=off">
+                        <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?gly=on&amp;img=off"
+                            title="Links to the detail page with the glyph url-parameter enabled.">
                             <div title="glyph"
                                 class="badge badge-en gtes" style="display:inline;width:50px;">
                                 <span class="number">
@@ -237,7 +240,8 @@
         <xsl:param name="urlparam"/>
         <xsl:param name="img"/>
         <xsl:if test="$count > 0">
-            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?{$urlparam}=on&amp;img={$img}">
+            <a href="{replace(tokenize($full_path, '/')[last()], '.xml', '.html')}?{$urlparam}=on&amp;img={$img}"
+                title="Links to the detail page with the {$title} url-parameter enabled.">
                 <div title="mentioned {$title}" class="badge badge-en {$class}" style="display:inline;width:50px;">
                     <span class="number">
                         <xsl:value-of select="$count"/>

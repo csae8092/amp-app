@@ -485,18 +485,18 @@ const getEntityLabels = (entity, edges, debug) => {
       // console.log(data);
       // console.log(entityId);
       // console.log(data[entityId].name);
-      let label = document.createElement("label");
+      let wrapper = document.createElement("span");
       let span = document.createElement("span");
       span.style.fontStyle = "italic";
       span.style.fontSize = "0.8em";
       span.innerText = "Type: " + relationType;
       let span2 = document.createElement("span");
       span2.innerText = data[entityId].name;
-      label.appendChild(span);
+      wrapper.appendChild(span);
       let breakLine = document.createElement("br");
-      label.appendChild(breakLine);
-      label.appendChild(span2);
-      return label;
+      wrapper.appendChild(breakLine);
+      wrapper.appendChild(span2);
+      return wrapper;
     })
     .catch((error) => {
       console.log(error);
@@ -589,10 +589,8 @@ const createLegendItem = (label, color, debug) => {
   let legendItem = document.createElement("li");
   legendItem.style.padding = "5px";
   legendItem.style.margin = "0";
-  let legendItemLabel = document.createElement("label");
-  legendItemLabel.innerText = label;
-  legendItemLabel.style.color = color;
-  legendItem.appendChild(legendItemLabel);
+  legendItem.innerText = label;
+  legendItem.style.color = color;
   if (debug) {
     console.log(legendItem);
   }
