@@ -18,12 +18,12 @@
                 <link type="text/css" href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="Stylesheet"/>
                 <link type="text/css" href="css/webrtiviewer.css" rel="Stylesheet"/>
                 <link rel="stylesheet" type="text/css" href="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.css"/>
-                <script type="text/javascript" src="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.js"></script>
-                <script type="text/javascript" src="js/vendor/jquery-ui-bin-1.10.3/jquery-ui.min.js"></script>
-                <script type="text/javascript" src="js/vendor/pep-bin-0.4.1/pep.min.js"></script>
-                <script type="text/javascript" src="spidergl/spidergl.min.js"></script>
-                <script type="text/javascript" src="spidergl/multires.min.js"></script>
-                <script type="text/javascript" src="js/imageLoaded.js"></script>
+                <script src="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.js"></script>
+                <script src="js/vendor/jquery-ui-bin-1.10.3/jquery-ui.min.js"></script>
+                <script src="js/vendor/pep-bin-0.4.1/pep.min.js"></script>
+                <script src="spidergl/spidergl.min.js"></script>
+                <script src="spidergl/multires.min.js"></script>
+                <script src="js/imageLoaded.js"></script>
                 <style>
                     p, ol {
                         font-size: 1.2rem;

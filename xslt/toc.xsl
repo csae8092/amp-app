@@ -17,8 +17,8 @@
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
                 <link rel="stylesheet" type="text/css" href="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.css"/>
-                <script type="text/javascript" src="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.js"></script>
-                <script type="text/javascript" src="js/imageLoaded.js"></script>
+                <script src="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.js"></script>
+                <script src="js/imageLoaded.js"></script>
             </head>
 
             <body class="d-flex flex-column">
@@ -65,7 +65,7 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
-                <script type="text/javascript" src="js/dt-panes.js"></script>
+                <script src="js/dt-panes.js"></script>
                 <script type="text/javascript">
                     $(document).ready(function () {
                         createDataTable('tocTable', 'Search titles and dates:', [], [0, 1, 2, 3, 4, 5, 6, 7, 8], []);

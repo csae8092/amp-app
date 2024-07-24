@@ -32,8 +32,7 @@
                                 <td>
                                     <ul>
                                         <xsl:for-each select=".//tei:correspContext/tei:ref[@type='belongsToCorrespondence']">
-                                            <li><a href="{concat(substring-after(@target, '#'), '.html')}"
-                                                    alt="{./text()}">
+                                            <li><a href="{concat(substring-after(@target, '#'), '.html')}">
                                                 <xsl:value-of select="./text()"/>
                                             </a></li>
                                         </xsl:for-each>

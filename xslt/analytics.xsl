@@ -57,7 +57,7 @@
                 <script src="js/vendor/react-bin-16.14.0/react-dom.production.min.js"></script>
                 <script src="js/vendor/three-bin-0.126.1/three.min.js"></script>
                 <script src="js/vendor/acdh-network-visualization-bin-0.1.39/network-visualization.umd.js"></script>
-                <script type="text/javascript" src="js/network-visualisation.js"></script>
+                <script src="js/network-visualisation.js"></script>
             </body>
         </html>
     </xsl:template>

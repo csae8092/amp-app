@@ -98,7 +98,7 @@
                                                             </div>-->
                                                         </div>
                                                     </xsl:when>
-                                                    <xsl:when test="@type='correspondence'">                                                        <!-- or @type='additional-materials' or @type='photos' -->
+                                                    <xsl:when test="@type='correspondence'">
                                                         <div class="col-md-5">
 
                                                         </div>
@@ -122,26 +122,26 @@
                     </div>
                 </main>
                 <xsl:call-template name="html_footer"/>
+                <script type="text/javascript">
+                    $('.timeline-circle').mouseover(function() {                                        
+                    var date = $(this).attr('data');
+                    $(this).html(date);                                        
+                    });
+                    $('.timeline-circle').mouseout(function() {
+                    $(this).html("");
+                    });
+                </script>
+                <script type="text/javascript">
+                    $(document).on('click', 'a[href^="#"]', function (event) {
+                    event.preventDefault();
+                    
+                    $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                    }, 500);
+                    });
+                </script>
+                <script src="js/leaflet_bio.js"/>
             </body>
-            <script type="text/javascript">
-                $('.timeline-circle').mouseover(function() {                                        
-                var date = $(this).attr('data');
-                $(this).html(date);                                        
-                });
-                $('.timeline-circle').mouseout(function() {
-                $(this).html("");
-                });
-            </script>
-            <script type="text/javascript">
-                $(document).on('click', 'a[href^="#"]', function (event) {
-                event.preventDefault();
-                
-                $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top
-                }, 500);
-                });
-            </script>
-            <script src="js/leaflet_bio.js"/>
         </html>
     </xsl:template>
     <xsl:template match="tei:hi">

@@ -24,7 +24,6 @@
                           <th>PID</th>
                           <td>
                               <a target="_blank"
-                                  title="archived source file"
                                   href="{//tei:publicationStmt/tei:idno[@type='handle']}">
                                   <xsl:value-of select="//tei:publicationStmt/tei:idno[@type='handle']"/>
                               </a>
@@ -52,8 +51,7 @@
                        <tr>
                            <th>Publisher</th>
                            <td>
-                               <a href="https://acdh.oeaw.ac.at" target="_blank"
-                                   area-label="External link to Austrian Academy of Sciences - Institute Austrian Centre for Digital Humanities">
+                               <a href="https://acdh.oeaw.ac.at" target="_blank">
                                    <xsl:value-of select="concat(
                                        //tei:publicationStmt/tei:publisher,
                                        ', ',
@@ -70,8 +68,7 @@
                                     <xsl:for-each select="//tei:publicationStmt/tei:availability">
                                         <li style="font-weight: bold;"><xsl:value-of select="position()"/>. licence status: <xsl:value-of select="@status"/></li>
                                         <li>
-                                            <a href="{./tei:licence/@target}" target="_blank"
-                                                area-label="{if(./tei:licence[@facs]) then('External link to licence description') else(./tei:licence//text())}">
+                                            <a href="{./tei:licence/@target}" target="_blank">
                                                 <xsl:value-of select="./tei:licence/@target"/>
                                             </a>
                                         </li>
@@ -138,12 +135,12 @@
                            <td>
                                <ul style="list-style:none;padding-left:0;margin-bottom:0;">
                                    <li style="display:inline;margin-right:1em;">
-                                       <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}" title="TEI">
+                                       <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=raw')}">
                                            <img alt="TEI Logo" src="images/TEI_Logo_36px.png"/>
                                        </a>
                                    </li>
                                    <li style="display:inline;margin-right:1em;">
-                                       <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=metadata')}" title="RDF metadata">
+                                       <a href="{concat('https://id.acdh.oeaw.ac.at/auden-musulin-papers/', //tei:TEI/@xml:id, '?format=metadata')}">
                                            <img border="0" src="http://www.w3.org/RDF/icons/rdf_w3c_icon.48"
                                                alt="RDF metadata"/>
                                        </a>
