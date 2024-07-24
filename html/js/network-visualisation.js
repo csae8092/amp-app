@@ -300,6 +300,13 @@ const networkVisualization = (
               div.style.height = "100%";
               div.style.overflowY = "auto";
               div.style.width = "350px";
+              div.style.padding = "5px";
+              div.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+              div.style.borderRadius = "5px";
+              div.style.border = "1px solid #ddd";
+              div.style.display = "flex";
+              div.style.flexDirection = "column";
+              div.style.alignItems = "left";
 
               // ########################################
               // create button to clease div
