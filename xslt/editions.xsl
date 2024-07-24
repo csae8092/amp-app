@@ -1572,12 +1572,11 @@
                 </span>
             </xsl:otherwise>
         </xsl:choose>-->
-        <span class="rev add { if ($hand = '#handwritten') then
+        <span class="rev add {if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
             ('typed') else if ($hand = '#printed') then
             ('printed') else if ($hand = '#stamp') then
-            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-            }">}">
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()}">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
