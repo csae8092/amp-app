@@ -48,7 +48,7 @@
     height: 7vh;
 }*/
 
-#network-container-item ul li ul label:after {
+#network-container-item .entity-list > label:after {
   content: "";
   margin: 0 0.5em;
   display: inline-block;

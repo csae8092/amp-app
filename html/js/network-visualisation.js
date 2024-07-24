@@ -198,7 +198,7 @@ const networkVisualization = (
           }
           try {
             var relation_type = relation[1].relation_type_object;
-            var _type = "relation_type_" + relation_type[0].id;
+            var _type = relation_type[0].value + "___" + relation_type[0].id;
           } catch (err) {
             if (debug) {
               console.log(err);
@@ -208,8 +208,23 @@ const networkVisualization = (
           }
 
           if (load) {
-            edges[amp_id] = {
-              id: amp_id,
+            edges[
+              amp_id +
+                "___" +
+                _source +
+                "___" +
+                relation_type[0].value +
+                "___" +
+                _target
+            ] = {
+              id:
+                amp_id +
+                "___" +
+                _source +
+                "___" +
+                relation_type[0].value +
+                "___" +
+                _target,
               source: _source,
               target: _target,
               type: _type,
@@ -487,6 +502,7 @@ const getEntityLabels = (entity, edges, debug) => {
 
 const createEntityList = (entity, debug) => {
   let nList = document.createElement("ul");
+  nList.className = "entity-list";
   let nListLabel = document.createElement("label");
   nListLabel.style.cursor = "pointer";
   nListLabel.style.display = "block";
