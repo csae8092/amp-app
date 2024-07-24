@@ -22,7 +22,9 @@
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container-fluid">
-
+                        <h1 style="margin: 2em auto; text-align: center;">
+                            <xsl:value-of select="$doc_title"/>
+                        </h1>
                         <figure class="highcharts-figure">
                             <div id="container"></div>
                             <p class="highcharts-description">

@@ -97,8 +97,7 @@
                                                     <img src="images/icons/lp-analytics.png" class="d-block w-100" alt="Analytics"/>
                                                 </div>
                                                 <div class="index-tile-footer">
-                                                    <h5 >Analytics <br/>
- Network and Diagram</h5>
+                                                    <h5> Analytics <br/> <span style="opacity:0;">Network and Diagram</span></h5>
                                                 </div>
                                             </div>
                                         </a>

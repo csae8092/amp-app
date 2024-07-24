@@ -39,14 +39,14 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a title="Tools" href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Tools <span class="caret"></span>
+                                <a title="Tools" href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Features <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
                                         <a href="search.html" title="Full-Text Search" class="nav-link">Full-Text Search</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="analytics.html" title="Additional materials" class="nav-link">Analytics Network and Diagram</a>
+                                        <a href="analytics.html" title="Additional materials" class="nav-link">Analytics</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a href="cv.html" title="Auden through Computer Vision" class="nav-link">
@@ -103,10 +103,6 @@
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a href="https://github.com/Auden-Musulin-Papers/amp-app/releases" target="_blank" title="Release Notes" class="nav-link">Release Notes</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a style="color:lightgrey!important;" title="Technical Documentation" class="nav-link">Technical Documentation <small>(in progress)</small>
-                                        </a>
                                     </li>
                                 </ul>
                             </li>
