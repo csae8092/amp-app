@@ -1,6 +1,6 @@
 // Library: https://github.com/acdh-oeaw/network-visualisation
 
-const currentDomain = "https://auden-musulin-papers.github.io/amp-app-dev/";
+const currentDomain = ""; // empty string for relative path
 
 // second refers to the person_org graph; all to all entities graph
 const networkVisualization = (
@@ -92,7 +92,7 @@ const networkVisualization = (
           }
           try {
             var relation_type = relation.relation_type_object;
-            var _type = "relation_type_" + relation_type[0].id;
+            var _type = relation_type[0].value + "___" + relation_type[0].id;
           } catch (err) {
             if (debug) {
               console.log(err);
@@ -102,8 +102,23 @@ const networkVisualization = (
           }
 
           if (load) {
-            edges[amp_id] = {
-              id: amp_id,
+            edges[
+              amp_id +
+                "___" +
+                _source +
+                "___" +
+                relation_type[0].value +
+                "___" +
+                _target
+            ] = {
+              id:
+                amp_id +
+                "___" +
+                _source +
+                "___" +
+                relation_type[0].value +
+                "___" +
+                _target,
               source: _source,
               target: _target,
               type: _type,
@@ -241,7 +256,9 @@ const networkVisualization = (
             types,
           },
           onNodeClick: (node) => {
-            // console.log(node.node);
+            if (debug) {
+              console.log(node);
+            }
             // removing existing item
             try {
               var currentDiv = document.getElementById(container_id + "-item");
@@ -295,16 +312,18 @@ const networkVisualization = (
               const entityType = node.node.type; // string
               const entityUrl =
                 entityType === "Person"
-                  ? currentDomain + "amp_" + node.node.id
+                  ? currentDomain + "amp_" + node.node.id + ".html"
                   : entityType === "Organization"
-                  ? currentDomain + "amp_" + node.node.id
+                  ? currentDomain + "amp_" + node.node.id + ".html"
                   : currentDomain +
                     "amp_" +
                     node.node.id.split("_")[0] +
                     "_id_" +
-                    node.node.id.split("_")[1]; // string URL
+                    node.node.id.split("_")[1] +
+                    ".html"; // string URL
               const entityLabel = node.node.label; // string
               const neighbors = node.node.neighbors; // list of strings (node IDs)
+              const edges = node.node.edges; // list of strings (edge IDs)
               let li = document.createElement("li");
               let label = document.createElement("label");
               label.style.display = "block";
@@ -340,16 +359,20 @@ const networkVisualization = (
                 let nA = document.createElement("a");
                 nA.className = "text-capitalize";
                 const neighborUrl = neighbor.includes("person")
-                  ? currentDomain + "amp_" + neighbor
+                  ? currentDomain + "amp_" + neighbor + ".html"
                   : neighbor.includes("org")
-                  ? currentDomain + "amp_organization_" + neighbor.split("_")[1]
+                  ? currentDomain +
+                    "amp_organization_" +
+                    neighbor.split("_")[1] +
+                    ".html"
                   : currentDomain +
                     "amp_" +
                     neighbor.split("_")[0] +
                     "_id_" +
-                    neighbor.split("_")[1]; // string URL
+                    neighbor.split("_")[1] +
+                    ".html"; // string URL
                 nA.href = neighborUrl;
-                nA.innerText = await getEntityLabels(neighbor);
+                nA.appendChild(await getEntityLabels(neighbor, edges, debug));
                 nLi.appendChild(nA);
                 if (neighbor.includes("person")) {
                   nLi.classList.add("neighbor-persons");
@@ -401,10 +424,25 @@ const networkVisualization = (
     });
 };
 
-const getEntityLabels = (entity) => {
-  // console.log(entity);
+const findEntity = (entity, edges, debug) => {
+  // console.log(edges);
+  for (const e of edges) {
+    if (debug) {
+      console.log(e.split("___")[2], entity);
+    }
+    const source = e.split("___")[1];
+    const type = e.split("___")[2];
+    const target = e.split("___")[3];
+    if (source === entity || target === entity) {
+      return type;
+    }
+  }
+};
+
+const getEntityLabels = (entity, edges, debug) => {
   const entityType = entity.split("_")[0];
   const entityId = entity.split("_")[1];
+  const relationType = findEntity(entity, edges, debug);
   const entityData =
     entityType === "person"
       ? "js/json/analytics/persons.json"
@@ -425,15 +463,29 @@ const getEntityLabels = (entity) => {
       // console.log(data);
       // console.log(entityId);
       // console.log(data[entityId].name);
-      return data[entityId].name;
+      let label = document.createElement("label");
+      let span = document.createElement("span");
+      span.style.fontStyle = "italic";
+      span.style.fontSize = "0.8em";
+      span.innerText = "Type: " + relationType;
+      let span2 = document.createElement("span");
+      span2.innerText = data[entityId].name;
+      label.appendChild(span);
+      let breakLine = document.createElement("br");
+      label.appendChild(breakLine);
+      label.appendChild(span2);
+      return label;
     })
     .catch((error) => {
       console.log(error);
     });
+  if (debug) {
+    console.log(labels);
+  }
   return labels;
 };
 
-const createEntityList = (entity) => {
+const createEntityList = (entity, debug) => {
   let nList = document.createElement("ul");
   let nListLabel = document.createElement("label");
   nListLabel.style.cursor = "pointer";
@@ -452,11 +504,13 @@ const createEntityList = (entity) => {
     });
   };
   nList.appendChild(nListLabel);
+  if (debug) {
+    console.log(nList);
+  }
   return nList;
 };
 
-const createLegend = (second, all, container_id) => {
-  console.log("Creating Legend");
+const createLegend = (second, all, container_id, debug) => {
   let legend = document.createElement("div");
   legend.className = "legend";
   legend.style.position = "absolute";
@@ -503,10 +557,12 @@ const createLegend = (second, all, container_id) => {
   legend.appendChild(legendList);
   const container = document.getElementById(container_id);
   container.appendChild(legend);
-  console.log("Legend Created");
+  if (debug) {
+    console.log(legend);
+  }
 };
 
-const createLegendItem = (label, color) => {
+const createLegendItem = (label, color, debug) => {
   let legendItem = document.createElement("li");
   legendItem.style.padding = "5px";
   legendItem.style.margin = "0";
@@ -514,6 +570,9 @@ const createLegendItem = (label, color) => {
   legendItemLabel.innerText = label;
   legendItemLabel.style.color = color;
   legendItem.appendChild(legendItemLabel);
+  if (debug) {
+    console.log(legendItem);
+  }
   return legendItem;
 };
 
