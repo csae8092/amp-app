@@ -11,7 +11,7 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='s'][1]/text()"/>
         </xsl:variable>
-        <html>
+        <html lang="en">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
@@ -44,9 +44,7 @@
                                         <h2 style="color:#615a60;">A Digital Edition of W. H. Auden's Letters to Stella Musulin</h2>
                                     </div>
                                     <p style="font-size:22px;">This website presents the letters and literary papers by Anglo-American poet W. H. Auden (1907-1973) in the estate of Welsh-Austrian writer and journalist Stella Musulin (1915-1996). Previously unpublished, they cast a fresh light on Auden's life and work in Austria.</p>
-                                    <button class="btn btn-round">
-                                        <a href="description.html" style="font-size:18px;">Read More</a>
-                                    </button>
+                                    <a class="btn btn-round" href="description.html" style="font-size:18px;">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +53,7 @@
                                 <div class="grid">
                                     <div class="item">
                                         <a href="toc.html" class="index-link">
-                                            <div class="index-tile" data="Auden Musulin Papers 1959-1973">
+                                            <div class="index-tile">
                                                 <div class="index-tile-header">
                                                     <img src="images/icons/lp-corresp.png" class="d-block w-100" alt="Auden Musulin Papers 1959-1973"/>
                                                 </div>

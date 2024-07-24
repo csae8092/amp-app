@@ -11,10 +11,11 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <!-- Your site title as branding in the menu -->
-                    <a href="index.html" class="navbar-brand custom-logo-link" rel="home" itemprop="url">
-                        <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="img-fluid" title="Auden Musulin Papers Logo" alt="Auden Musulin Papers Logo" itemprop="logo" />
-                    </a>                    <!-- end custom logo -->
-                    <a class="navbar-brand site-title-with-logo" rel="home" href="index.html" title="{$site_title}" itemprop="url">                        <!--<xsl:value-of select="$site_title"/>--></a>
+                    <a href="index.html" class="navbar-brand custom-logo-link" rel="home">
+                        <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="img-fluid" title="Auden Musulin Papers Logo" alt="Auden Musulin Papers Logo" />
+                    </a>
+                    <!-- end custom logo -->
+                    <a class="navbar-brand site-title-with-logo" rel="home" href="index.html" title="{$site_title}"></a>
                     <span style="margin-left:-1.7em;" class="badge bg-light text-dark">in development</span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -110,7 +111,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item navbar-search-item">
-                                <form class="form-inline my-3 my-lg-0" method="get" action="search.html?amp[query]" role="search">
+                                <form class="form-inline my-3 my-lg-0" method="get" action="search.html?amp%5Bquery%5D" role="search">
                                     <input class="form-control navbar-search" id="s" name="amp[query]" type="text" placeholder="Search" value="" autocomplete="off" />
                                     <button type="submit" class="navbar-search-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">

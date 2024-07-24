@@ -11,7 +11,7 @@
     <xsl:import href="partials/toc-cards.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="'Auden Musulin Papers 1959-1973'"/>
-        <html>
+        <html lang="en">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>

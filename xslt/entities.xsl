@@ -21,7 +21,7 @@
                 <xsl:for-each select="//tei:event[@xml:id]">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <html>
+                        <html lang="en">
                             <head>
                                 <xsl:call-template name="html_head">
                                     <xsl:with-param name="html_title" select="./tei:label"/>
@@ -161,7 +161,7 @@
                 <xsl:for-each select="//tei:person">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <html>
+                        <html lang="en">
                             <head>
                                 <xsl:call-template name="html_head">
                                     <xsl:with-param name="html_title" select="concat(./tei:persName/tei:surname, ' ', ./tei:persName/tei:forename)"/>
@@ -326,7 +326,7 @@
                 <xsl:for-each select="//tei:place">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <html>
+                        <html lang="en">
                             <head>
                                 <xsl:call-template name="html_head">
                                     <xsl:with-param name="html_title" select=".//tei:placeName"/>
@@ -483,7 +483,7 @@
                 <xsl:for-each select="//tei:bibl">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <html>
+                        <html lang="en">
                             <head>
                                 <xsl:call-template name="html_head">
                                     <xsl:with-param name="html_title" select="./tei:title"/>
@@ -644,7 +644,7 @@
                 <xsl:for-each select="//tei:org">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
-                        <html>
+                        <html lang="en">
                             <head>
                                 <xsl:call-template name="html_head">
                                     <xsl:with-param name="html_title" select="./tei:orgName"/>

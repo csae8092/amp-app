@@ -13,7 +13,7 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
         </xsl:variable>
-        <html>
+        <html lang="en">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
@@ -27,7 +27,7 @@
 
                 <!-- ############### datatable ############### -->
                 <link rel="stylesheet" type="text/css" href="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.css"/>
-                <script type="text/javascript" src="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.js"></script>
+                <script src="js/vendor/datatables-bin-bs5-jszip3.10.1-dt2.0.8-html5-print3.0.2-r3.0.2-sp2.3.1/datatables.min.js"></script>
 
                 <!-- ############### leaflet script ################ -->
                 <script src="js/vendor/leaflet-bin-1.9.4/leaflet.js"></script>
@@ -72,7 +72,7 @@
 
                 <xsl:choose>
                     <xsl:when test="contains($doc_title, 'Persons')">
-                        <script type="text/javascript" src="js/dt-panes.js"></script>
+                        <script src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
                                 createDataTable('listperson', 'Search:', [5, 6, 7, 8, 9, 10], [0, 1, 2, 3, 4], [9, 10]);
@@ -89,7 +89,7 @@
                         </script>
                     </xsl:when>
                     <xsl:when test="contains($doc_title, 'Literature')">
-                        <script type="text/javascript" src="js/dt-panes.js"></script>
+                        <script src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
                                 createDataTable('listbibl', 'Search:', [1, 2, 3, 6], [0, 4, 5], false);

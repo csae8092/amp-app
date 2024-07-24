@@ -14,7 +14,7 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
         </xsl:variable>
-        <html>
+        <html lang="en">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
@@ -71,7 +71,7 @@
                                 <xsl:for-each-group select="//tei:event" group-by="tokenize(./tei:head/tei:date/@notBefore, '-')[1]">
                                     <div class="timeline-wrapper" id="{current-grouping-key()}" style="padding-top:5em;">
                                         <div class="text-center">
-                                            <h2 id="timeline-heading">
+                                            <h2 class="timeline-heading">
                                                 <xsl:value-of select="current-grouping-key()"/>
                                                 <a href="#main_level" title="jump to the top" style="color:#fff; font-size:12px;">
                                                     <small>TOP</small>
@@ -141,7 +141,7 @@
                 }, 500);
                 });
             </script>
-            <script type="text/javascript" src="js/leaflet_bio.js"/>
+            <script src="js/leaflet_bio.js"/>
         </html>
     </xsl:template>
     <xsl:template match="tei:hi">

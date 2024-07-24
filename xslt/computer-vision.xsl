@@ -10,7 +10,7 @@
     <xsl:import href="partials/toc-table.xsl"/>
     <xsl:import href="partials/toc-cards.xsl"/>
     <xsl:template match="/">
-        <html>
+        <html lang="en">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="'Auden through Computer Vision'"></xsl:with-param>
@@ -138,7 +138,7 @@
 
             </main>
             <xsl:call-template name="html_footer"/>
-            <script type="text/javascript" src="js/dt-panes.js"></script>
+            <script src="js/dt-panes.js"></script>
             <script type="text/javascript">
                     $(document).ready(function () {
                         createDataTable('tocTable', 'Search titles and dates:', [], [0, 1, 2, 3, 4, 5, 6, 7, 8], []);

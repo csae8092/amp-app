@@ -53,7 +53,7 @@
                            <th>Publisher</th>
                            <td>
                                <a href="https://acdh.oeaw.ac.at" target="_blank"
-                                   alt="External link to Austrian Academy of Sciences - Institute Austrian Centre for Digital Humanities">
+                                   area-label="External link to Austrian Academy of Sciences - Institute Austrian Centre for Digital Humanities">
                                    <xsl:value-of select="concat(
                                        //tei:publicationStmt/tei:publisher,
                                        ', ',
@@ -71,7 +71,7 @@
                                         <li style="font-weight: bold;"><xsl:value-of select="position()"/>. licence status: <xsl:value-of select="@status"/></li>
                                         <li>
                                             <a href="{./tei:licence/@target}" target="_blank"
-                                                alt="{if(./tei:licence[@facs]) then('External link to licence description') else(./tei:licence//text())}">
+                                                area-label="{if(./tei:licence[@facs]) then('External link to licence description') else(./tei:licence//text())}">
                                                 <xsl:value-of select="./tei:licence/@target"/>
                                             </a>
                                         </li>

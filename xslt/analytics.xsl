@@ -10,7 +10,7 @@
 
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="'Analytics'"/>
-        <html>
+        <html lang="en">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>

@@ -16,7 +16,7 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:titleStmt/tei:title[@level='a'][1]/text()"/>
         </xsl:variable>
-        <html>
+        <html lang="en">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
@@ -44,7 +44,7 @@
                         <div class="card detail-card">
                             <div class="editor-options">
                                 <div class="card-footer editor-back-link">
-                                    <a alt="Internal Link to the Table of Contents" class="btn-back-link">
+                                    <a area-label="Internal Link to the Table of Contents" class="btn-back-link">
                                         <xsl:variable name="doc_type" select="//tei:div[@type='transcription']/tei:div[1]/@type"/>
                                         <xsl:variable name="max_date" select="xs:date('1973-12-31')"></xsl:variable>
                                         <xsl:variable name="low_date" select="xs:date('1958-12-31')"></xsl:variable>
@@ -157,31 +157,14 @@
                 <xsl:call-template name="html_footer"/>
                 <script src="js/vendor/openseadragon-bin-4.1.1/openseadragon.min.js"></script>
                 <script src="js/vendor/de-micro-editor-bin-0.4.0/de-editor.min.js"></script>
-                <script type="text/javascript" src="js/run.js"></script>
+                <script src="js/run.js"></script>
                 <script src="js/vendor/markjs-bin-8.11.1/mark.min.js"></script>
-                <script type="text/javascript" src="js/mark.js"></script>
-                <script type="text/javascript" src="js/prev-next-urlupdate.js"></script>
-                <script type="text/javascript" src="js/commentary.js"></script>
+                <script src="js/mark.js"></script>
+                <script src="js/prev-next-urlupdate.js"></script>
+                <script src="js/commentary.js"></script>
             </body>
         </html>
     </xsl:template>
-
-    <!--<xsl:template match="tei:note">
-        <xsl:choose>
-            <xsl:when test="@type='footnote'">
-                <!-\-<span class="footnote_anchor" id="{@xml:id}_inline"></span>-\->
-                <sup><a href="#{@xml:id}_inline" id="{@xml:id}" title="footnote {@n}"><xsl:value-of select="@n"/></a></sup>
-            </xsl:when>
-            <xsl:when test="@type='endnote'">
-                <xsl:variable name="place" select="7"/>
-                <!-\-<xsl:variable name="place" select="tokenize(@place, '\s')[last()]"/>-\->
-                <sup><a href="?tab={$place}#{@xml:id}_inline" id="{@xml:id}" title="endnote {@n}"><xsl:value-of select="@n"/></a></sup>
-            </xsl:when>
-            <xsl:otherwise>
-                <sup><a href="#{@xml:id}_inline" id="{@xml:id}" title="note {@n}"><xsl:value-of select="@n"/></a></sup>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>-->
 
     <xsl:template match="tei:head">
         <xsl:variable name="hand" select="@hand"/>
@@ -465,7 +448,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:unclear">
-        <span class="abbr" alt="unclear">
+        <span class="abbr">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
@@ -728,11 +711,11 @@
     </xsl:template>
     <xsl:template match="tei:listEvent[parent::tei:back]">
         <xsl:for-each select="./tei:event">
-            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:label}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#staticBackdropLabel-{position()}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel-{position()}">
                                 <xsl:value-of select="./tei:label"/>
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1033,11 +1016,11 @@
     </xsl:template>
     <xsl:template match="tei:listPerson[parent::tei:back]">
         <xsl:for-each select="./tei:person">
-            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{concat(./tei:persName/tei:surname, ', ', ./tei:persName/tei:forename)}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#staticBackdropLabel-{position()}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel-{position()}">
                                 <xsl:value-of select="concat(./tei:persName/tei:surname, ', ', ./tei:persName/tei:forename)"/>
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1124,11 +1107,11 @@
     </xsl:template>
     <xsl:template match="tei:listPlace[parent::tei:back]">
         <xsl:for-each select="./tei:place">
-            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{if(./tei:settlement) then(./tei:settlement/tei:placeName) else (./tei:placeName)}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#staticBackdropLabel-{position()}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel-{position()}">
                                 <xsl:value-of select="if(./tei:settlement) then(./tei:settlement/tei:placeName) else (./tei:placeName)"/>
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1205,11 +1188,11 @@
     </xsl:template>
     <xsl:template match="tei:listOrg[parent::tei:back]">
         <xsl:for-each select="./tei:org">
-            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:orgName}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#staticBackdropLabel-{position()}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel-{position()}">
                                 <xsl:value-of select="./tei:orgName"/>
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1276,11 +1259,11 @@
     </xsl:template>
     <xsl:template match="tei:listBibl[parent::tei:back]">
         <xsl:for-each select="./tei:bibl">
-            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="{./tei:title}" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#staticBackdropLabel-{position()}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel-{position()}">
                                 <xsl:value-of select="./tei:title"/>
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -1452,11 +1435,11 @@
     <xsl:template name="glyph">
         <xsl:for-each select="//tei:charDecl/tei:glyph">
             <xsl:variable name="id" select="@xml:id"/>
-            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="glyph description" aria-hidden="true">
+            <div class="modal fade" id="{@xml:id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="#staticBackdropLabel-{position()}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel-{position()}">
                                 <xsl:value-of select="substring(string-join(//tei:g[contains(@ref, $id)]/text()), 1 ,1)"/>
                             </h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

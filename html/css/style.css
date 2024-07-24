@@ -180,7 +180,6 @@
 }
 
 .sticky {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   width: 400px;
@@ -643,7 +642,7 @@ button.close {
   box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.1);
 }
 
-#timeline-heading {
+.timeline-heading {
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -662,7 +661,7 @@ button.close {
   transition: transform 1s;
 }
 
-#timeline-heading:hover {
+.timeline-heading:hover {
   transform: scale(1.05);
 }
 
@@ -1905,7 +1904,8 @@ td > label {
   }
 }
 
-/* Large devices (desktops, 992px and up) */
-/*@media (min-width: 992px) {  }*/
-
-/* Extra large devices (large desktops, 1680px and up) */
+@media (max-width: 540px) {
+  .grid {
+      grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
