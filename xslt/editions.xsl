@@ -475,7 +475,7 @@
         <xsl:choose>
             <xsl:when test="@reason='deleted'">
                 <span class="del gap">
-                    <xsl:attribute name="alt">
+                    <xsl:attribute name="title">
                         <xsl:value-of select="data(@reason)"/>
                     </xsl:attribute>
                     <xsl:text>[</xsl:text>
@@ -485,7 +485,7 @@
             </xsl:when>
             <xsl:when test="@reason='illegible'">
                 <span class="gap">
-                    <xsl:attribute name="alt">
+                    <xsl:attribute name="title">
                         <xsl:value-of select="data(@reason)"/>
                     </xsl:attribute>
                     <xsl:text>[</xsl:text>
@@ -1005,7 +1005,7 @@
             <xsl:for-each select="./tei:person">
                 <xsl:variable name="id" select="substring-after(./tei:persName/@ref, '#')"/>
                 <li>
-                    <a href="{concat($id, '.html')}" alt="Internal Link to Persons">
+                    <a href="{concat($id, '.html')}">
                         <xsl:value-of select="//id(data($id))/tei:persName/tei:surname"/>
                         <xsl:text>, </xsl:text>
                         <xsl:value-of select="//id(data($id))/tei:persName/tei:forename"/>
