@@ -1553,6 +1553,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:add[not(@corresp)]">
+        <xsl:variable name="hand" select="@hand"/>
         <!-- <xsl:variable name="place" select="
             if(@place = 'left') then('margin-left:-5rem;')
             else if (@place = 'above') then('margin-top:-1rem;')
@@ -1571,7 +1572,12 @@
                 </span>
             </xsl:otherwise>
         </xsl:choose>-->
-        <span class="rev add">
+        <span class="rev add { if ($hand = '#handwritten') then
+            ('handwritten') else if ($hand = '#typed') then
+            ('typed') else if ($hand = '#printed') then
+            ('printed') else if ($hand = '#stamp') then
+            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+            }">}">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
