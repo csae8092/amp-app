@@ -273,6 +273,18 @@
                                                     </td>
                                                 </tr>
                                                 </xsl:if>
+                                                <xsl:if test="./tei:idno[@subtype='PMB']">
+                                                    <tr>
+                                                        <th>
+                                                            PMB
+                                                        </th>
+                                                        <td>
+                                                            <a href="{./tei:idno[@subtype='PMB']}" target="_blank">
+                                                                <xsl:value-of select="tokenize(./tei:idno[@subtype='PMB'], '/')[last()]"/>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
                                                 <xsl:if test="./tei:listBibl">
                                                 <tr>
                                                     <th>
