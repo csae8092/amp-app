@@ -37,7 +37,7 @@
                                     <xsl:for-each-group select="collection('../data/editions/correspondence')//tei:TEI |
                                                                 //tei:listEvent/tei:event" group-by="tokenize(//tei:origDate/@notBefore-iso | @notBefore-iso, '-')[1]">
                                         <xsl:sort select="current-grouping-key()"/>
-                                        <xsl:if test="(number(current-grouping-key()) &gt; 1958) and (number(current-grouping-key()) &lt; 1973)">
+                                        <xsl:if test="(number(current-grouping-key()) &gt; 1958) and (number(current-grouping-key()) &lt; 1974)">
                                             <li style="display:inline;list-style:none;margin-left:1em;">
                                                 <a href="#{current-grouping-key()}" title="jump to date">
                                                     <xsl:value-of select="current-grouping-key()"/>
@@ -55,7 +55,7 @@
                                 <xsl:for-each-group select="collection('../data/editions/correspondence')//tei:TEI | //tei:listEvent/tei:event"
                                                     group-by="tokenize(//tei:origDate/@notBefore-iso | @notBefore-iso, '-')[1]">
                                     <xsl:sort select="current-grouping-key()"/>
-                                    <xsl:if test="(number(current-grouping-key()) &gt; 1958) and (number(current-grouping-key()) &lt; 1973)">
+                                    <xsl:if test="(number(current-grouping-key()) &gt; 1958) and (number(current-grouping-key()) &lt; 1974)">
                                         <div class="timeline-wrapper" id="{current-grouping-key()}" style="padding-top:5em;">
                                             <div class="text-center">
                                                 <h2 class="timeline-heading">
