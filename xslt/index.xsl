@@ -84,8 +84,7 @@
                                                     <img src="images/icons/lp-photos.png" class="d-block w-100" alt="Photos"/>
                                                 </div>
                                                 <div class="index-tile-footer">
-                                                    <h5 >Photos and <br/>
- Postcards</h5>
+                                                    <h5 >Photos <br/> <span style="opacity:0;">placeholder</span></h5>
                                                 </div>
                                             </div>
                                         </a>
@@ -97,7 +96,7 @@
                                                     <img src="images/icons/lp-analytics.png" class="d-block w-100" alt="Analytics"/>
                                                 </div>
                                                 <div class="index-tile-footer">
-                                                    <h5> Analytics <br/> <span style="opacity:0;">Network and Diagram</span></h5>
+                                                    <h5> Analytics <br/> <span style="opacity:0;">placeholder</span></h5>
                                                 </div>
                                             </div>
                                         </a>
@@ -109,8 +108,8 @@
                                                     <img src="images/icons/lp-search.png" class="d-block w-100" alt="Explore the Auden Musulin Papers through full-text search"/>
                                                 </div>
                                                 <div class="index-tile-footer">
-                                                    <h5 >Explore the AMP through <br/>
- full-text search.</h5>
+                                                    <h5 >Explore the Edition through <br/>
+                                                        Full-Text Search</h5>
                                                 </div>
                                             </div>
                                         </a>
