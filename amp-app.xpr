@@ -28,34 +28,11 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/meta/about.xml</String>
+                                    <String>data/indices/amp-index-events.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>index</String>
-                                        <String>analytics</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>html/css/style.css</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>search</String>
+                                        <String>timeline</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -111,11 +88,34 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>data/indices/amp-index-events.xml</String>
+                                    <String>data/meta/about.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>indexes</String>
+                                        <String>index</String>
+                                        <String>analytics</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>html/css/style.css</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>search</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -155,7 +155,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>biographies</String>
+                                        <String>timeline</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -275,7 +275,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>biographies</String>
+                                        <String>timeline</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -525,7 +525,7 @@
                                     <null/>
                                 </field>
                                 <field name="name">
-                                    <String>biographies</String>
+                                    <String>timeline</String>
                                 </field>
                                 <field name="baseURL">
                                     <String></String>
@@ -543,7 +543,7 @@
                                     <String></String>
                                 </field>
                                 <field name="inputXSLURL">
-                                    <String>${pdu}/xslt/biographies.xsl</String>
+                                    <String>${pdu}/xslt/timeline.xsl</String>
                                 </field>
                                 <field name="inputXMLURL">
                                     <String>${currentFileURL}</String>
@@ -561,10 +561,10 @@
                                     <Boolean>true</Boolean>
                                 </field>
                                 <field name="openInBrowser">
-                                    <Boolean>true</Boolean>
+                                    <Boolean>false</Boolean>
                                 </field>
                                 <field name="outputResource">
-                                    <String>${pd}/html/${cfn}.html</String>
+                                    <String>${pd}/html/timeline.html</String>
                                 </field>
                                 <field name="openOtherLocationInBrowser">
                                     <Boolean>false</Boolean>

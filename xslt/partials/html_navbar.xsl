@@ -24,85 +24,78 @@
                         <!-- Your menu goes here -->
                         <ul id="main-menu" class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a title="Papers" href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Papers <span class="caret"></span>
+                                <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Papers <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden Musulin Papers 1959-1973</a>
+                                        <a href="toc.html" class="nav-link">Auden Musulin Papers 1959-1973</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="toc_m.html" title="Additional materials" class="nav-link">Musulin as Memoirist 1976-1995</a>
+                                        <a href="toc_m.html" class="nav-link">Musulin as Memoirist 1976-1995</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="photos.html" title="Photos" class="nav-link">Photos</a>
+                                        <a href="photos.html" class="nav-link">Photos</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a title="Tools" href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Features <span class="caret"></span>
+                                <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Features <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="search.html" title="Full-Text Search" class="nav-link">Full-Text Search</a>
+                                        <a href="search.html" class="nav-link">Full-Text Search</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="analytics.html" title="Additional materials" class="nav-link">Analytics</a>
+                                        <a href="analytics.html" class="nav-link">Analytics</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="cv.html" title="Auden through Computer Vision" class="nav-link">
+                                        <a href="cv.html" class="nav-link">
                                             Auden through Computer Vision 
+                                        </a>
+                                    </li>
+                                    <li class="nav-item dropdown-submenu">
+                                        <a href="timeline.html" class="nav-link">
+                                            Timeline 
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a title="Indexes" href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span>
+                                <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="amp-index-persons.html" title="Persons" class="nav-link">Persons</a>
+                                        <a href="amp-index-persons.html" class="nav-link">Persons</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="amp-index-organizations.html" title="Institutions" class="nav-link">Institutions</a>
+                                        <a href="amp-index-organizations.html" class="nav-link">Institutions</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="amp-index-works.html" title="Works" class="nav-link">Works</a>
+                                        <a href="amp-index-works.html" class="nav-link">Works</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="amp-index-places.html" title="Places" class="nav-link">Places</a>
+                                        <a href="amp-index-places.html" class="nav-link">Places</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="amp-index-events.html" title="Events" class="nav-link">Events</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a title="Biographies" href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span>
-                                </a>
-                                <ul class=" dropdown-menu" role="menu">
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="W. H. Auden" href="auden-biography.html" class="nav-link">W. H. Auden</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Stella Musulin" href="musulin-biography.html" class="nav-link">Stella Musulin</a>
+                                        <a href="amp-index-events.html" class="nav-link">Events</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a title="Project" href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Project <span class="caret"></span>
+                                <a href="#" data-bs-toggle="dropdown" class="nav-link dropdown-toggle">Project <span class="caret"></span>
                                 </a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Description" href="description.html" class="nav-link">Description</a>
+                                        <a href="description.html" class="nav-link">Description</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Team" href="team.html" class="nav-link">Team</a>
+                                        <a href="team.html" class="nav-link">Team</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="editorial-declaration.html" title="Editorial Declaration" class="nav-link">Documentation</a>
+                                        <a href="editorial-declaration.html" class="nav-link">Documentation</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="https://github.com/Auden-Musulin-Papers/amp-app/releases" target="_blank" title="Release Notes" class="nav-link">Release Notes</a>
+                                        <a href="https://github.com/Auden-Musulin-Papers/amp-app/releases" target="_blank" class="nav-link">Release Notes</a>
                                     </li>
                                 </ul>
                             </li>

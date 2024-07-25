@@ -19,83 +19,54 @@
         <xsl:param name="img"/>
         <xsl:param name="location"/>          
         <xsl:choose>
-            <xsl:when test="$location = 'false'">
-                <div class="row">
-                    <div class="col-md-5">
-                        <img title="{if (./tei:label) then(./tei:label) else (./tei:desc/tei:title)}"
-                             alt="{if (./tei:label) then(./tei:label) else (./tei:desc/tei:title)}"
-                             src="{$img}"/>
-                        <xsl:if test="./tei:desc/tei:location/tei:geo/text()">
-                            <xsl:variable name="lat" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[1]"/>
-                            <xsl:variable name="long" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[2]"/>
-                            <div class="leaflet-maps-modal" lat="{$lat}" long="{$long}"></div>
-                        </xsl:if>
+            <xsl:when test="$location = 'right'">
+                <div class="card timeline-panel-{$location}">   
+                    <div class="card-header my-0 py-1">
+                        <small>Correspondence</small>
                     </div>
-                    <div class="col-md-7">
-                        <xsl:choose>
-                            <xsl:when test="./tei:label">
-                                <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
-                                    <span><xsl:value-of select="substring-before(translate(translate(./tei:label, '[', ''), ']', ''), ' 19')"/></span>
-                                </a>
-                            </xsl:when>
-                            <xsl:when test="./tei:desc">
-                                <h6><xsl:value-of select="./tei:desc/tei:title"/></h6>
-                                <span><xsl:value-of select="./tei:desc/text()"/></span>    
-                                <ul>
-                                    <xsl:for-each select="./tei:desc/tei:location/tei:address/tei:placeName/*">
-                                        <li><xsl:apply-templates/></li>
-                                    </xsl:for-each>
-                                </ul>
-                            </xsl:when>
-                        </xsl:choose>
+                    <div class="card-body my-0 py-1">
+                        <a href="{@xml:id}">
+                            <xsl:value-of select=".//tei:titleStmt/tei:title[@level='a']"/>
+                        </a>
                     </div>
                 </div>
             </xsl:when>
             <xsl:otherwise>
-                <div class="card timeline-panel-{$location}">   
-                    <div class="card-body">
-                        <xsl:choose>
-                            <xsl:when test="./tei:label">
-                                <a title="open document" href="{replace(@xml:id, '.xml', '.html')}">
-                                    <span><xsl:value-of select="substring-before(translate(translate(./tei:label, '[', ''), ']', ''), ' 19')"/></span>
-                                </a>
-                            </xsl:when>
-                            <xsl:when test="./tei:desc">
-                                <h6><xsl:value-of select="./tei:desc/tei:title"/></h6>
-                                <span><xsl:value-of select="./tei:desc/text()"/></span>
-                                <!--<table class="table">
-                                    <tbody>
-                                        <xsl:for-each select="./tei:desc/tei:location/tei:address/tei:placeName/*">
-                                            <tr>
-                                                <th class="capitalize"
-                                                    style="border:none;border-right: 1px solid #f1f1f1;width:25%;padding:.2em;">
-                                                    <xsl:value-of select="name()"/>
-                                                </th>
-                                                <td style="border:none;padding:.2em;.5em;">
-                                                    <xsl:apply-templates/>
-                                                </td>
-                                            </tr>
-                                        </xsl:for-each>
-                                    </tbody>
-                                    
-                                </table>-->
-                                
-                                <xsl:if test="./tei:desc/tei:idno[@type='geonames']">
-                                    <br/>
-                                    <br/>
-                                    <span style="font-weight: bold;">Geonames ID: </span>
-                                    <a target="_blank" href="{./tei:desc/tei:idno[@type='geonames']}">
-                                        <xsl:value-of select="tokenize(./tei:desc/tei:idno[@type='geonames'], '/')[last()]"/>
-                                    </a>
-                                </xsl:if>
-                                
-                                <xsl:if test="./tei:desc/tei:location/tei:geo/text()">
-                                    <xsl:variable name="lat" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[1]"/>
-                                    <xsl:variable name="long" select="tokenize(./tei:desc/tei:location/tei:geo, ' ')[2]"/>
-                                    <div class="leaflet-maps" lat="{$lat}" long="{$long}"></div>
-                                </xsl:if>
-                            </xsl:when>                            
-                        </xsl:choose>                        
+                <div class="card timeline-panel-{$location}">
+                    <div class="card-header my-0 py-1">
+                        <small>Event</small>
+                    </div>
+                    <div class="card-body my-0 py-1">
+                        <div>
+                            <a title="open document" href="{concat(@xml:id, '.html')}">
+                                <h6 class="my-2"><xsl:value-of select="./tei:label"/></h6>
+                            </a>
+                            
+                            <xsl:if test="./tei:listPerson">
+                            <xsl:for-each-group select="./tei:listPerson/tei:person" group-by="@role">
+                                <ul class="my-2">
+                                    <label>Role: <xsl:value-of select="replace(current-grouping-key(), '_', ' ')"/></label>
+                                    <xsl:for-each select="current-group()[self::tei:person]">
+                                    <li>                                        
+                                        <a href="{concat(@xml:id, '.html')}"><xsl:value-of select="tei:persName"/></a><xsl:text> </xsl:text>
+                                    </li>
+                                    </xsl:for-each>
+                                </ul>
+                            </xsl:for-each-group>
+                            </xsl:if>
+                        </div>
+                 
+                        <xsl:if test="./tei:listPlace/tei:place/tei:location">
+                            <xsl:for-each select="./tei:listPlace/tei:place">
+                                <div class="my-2">
+                                    <span>Type: <xsl:value-of select="replace(@subtype, '_', ' ')"/></span><br></br>
+                                    <span><a href="{concat(@sameAs, '.html')}"><xsl:value-of select="tei:placeName"/></a></span>
+                                </div>
+                                <xsl:variable name="lat" select="tokenize(./tei:location/tei:geo, ', ')[1]"/>
+                                <xsl:variable name="long" select="tokenize(./tei:location/tei:geo, ', ')[2]"/>
+                                <div class="leaflet-maps my-2" lat="{$lat}" long="{$long}"></div>
+                            </xsl:for-each>
+                        </xsl:if> 
                     </div>
                 </div>
             </xsl:otherwise>

@@ -34,14 +34,14 @@
                         </figure>
 
                         <figure class="network-visualization">
-                            <h5 class="text-center">Relationships between Persons</h5>
+                            <h5 class="text-center">Entity Network</h5>
                             <select id="network-visualization-data" class="form-select" aria-label="Select different graph data">
                                 <option value="all">All Entities - Person, Organization, Place, Event</option>
                                 <option value="person">Person - Person</option>
                                 <option value="org">Person - Organization</option>
                             </select>
                             <div id="network-container" style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
-                            <p class="highcharts-description">
+                            <p class="network-description">
 
                             </p>
                         </figure>
