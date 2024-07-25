@@ -71,8 +71,7 @@
                                                     <img src="images/icons/lp-memoirs.png" class="d-block w-100" alt="Musulin as Memoirist 1976-1995"/>
                                                 </div>
                                                 <div class="index-tile-footer">
-                                                    <h5 >Musulin as Memoirist <br/>
- 1976-1995</h5>
+                                                    <h5 >Musulin as Memoirist <br/> 1976-1985</h5>
                                                 </div>
                                             </div>
                                         </a>
