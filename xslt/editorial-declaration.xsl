@@ -64,5 +64,10 @@
     <xsl:template match="tei:hi">
         <span class="{@rend}"><xsl:apply-templates/></span>
     </xsl:template>
+    <xsl:template match="tei:ref">
+        <a href="{@target}" target="_blank">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
     
 </xsl:stylesheet>
