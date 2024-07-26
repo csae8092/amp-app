@@ -75,7 +75,7 @@
                         <script src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                createDataTable('listperson', 'Search:', [5, 6, 7, 8, 9, 10], [0, 1, 2, 3, 4], [9, 10]);
+                                createDataTable('listperson', 'Search:', [6, 7, 8, 9, 10, 11], [0, 1, 2, 3, 4, 5], [10, 11]);
                             });
                         </script>
                     </xsl:when>
@@ -129,6 +129,7 @@
                         <th>Name</th>
                         <th>GND</th>
                         <th>Wikidata</th>
+                        <th>PMB</th>
                         <th>Birth</th>
                         <th>Death</th>
                         <th>Place of birth</th>
@@ -168,6 +169,13 @@
                                 <xsl:if test="./tei:idno[@subtype='WIKIDATA']">
                                     <a href="{./tei:idno[@subtype='WIKIDATA']}" target="_blank">
                                         <xsl:value-of select="tokenize(./tei:idno[@subtype='WIKIDATA'], '/')[last()]"/>
+                                    </a>
+                                </xsl:if>
+                            </td>
+                            <td>
+                                <xsl:if test="./tei:idno[@subtype='PMB']">
+                                    <a href="{./tei:idno[@subtype='PMB']}" target="_blank">
+                                        <xsl:value-of select="tokenize(./tei:idno[@subtype='PMB'], '/')[last()]"/>
                                     </a>
                                 </xsl:if>
                             </td>
