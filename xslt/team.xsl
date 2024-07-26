@@ -25,7 +25,6 @@
                 <main class="flex-shrink-0">
                     <div class="container-fluid">
                         <div class="my-4">
-                            <h1><xsl:value-of select="//tei:body/tei:div[1]"/></h1>
                             <xsl:apply-templates select="//tei:body"/>
                         </div>
                             
@@ -37,33 +36,52 @@
     </xsl:template>
     
     
-    <xsl:template match="tei:body/tei:div[1]"/>
     <xsl:template match="tei:div">
-        <xsl:apply-templates/>
+        <div class="p-2"><xsl:apply-templates/></div>
     </xsl:template>
     <xsl:template match="tei:head">
-        <xsl:choose>
-            <xsl:when test="following-sibling::tei:p[1]">
-                <div class="card-header">
-                    <h3><xsl:apply-templates/></h3>
-                </div>
-            </xsl:when>
-            <xsl:otherwise>
-                <div class="card-header" style="padding: 2em; text-align: center;">
-                    <h2><xsl:apply-templates/></h2>
-                </div>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-    <xsl:template match="tei:p">
-        <div class="card-body">
-            <p><xsl:apply-templates/></p>
+        <div class="p-2">
+         <xsl:if test="@facs">
+             <img src="images/team/{@facs}" alt="image of {text()}"/>
+         </xsl:if>
+         <xsl:choose>
+             <xsl:when test="@rendition">
+                 <h2 class="py-2 text-center"><xsl:apply-templates/></h2>
+             </xsl:when>
+             <xsl:otherwise>
+                 <h6 class="pt-4"><xsl:apply-templates/></h6>
+             </xsl:otherwise>
+         </xsl:choose>
         </div>
     </xsl:template>
+    <xsl:template match="tei:p">
+        <p class="p-2"><xsl:apply-templates/></p>
+    </xsl:template>
+    <xsl:template match="tei:ref">
+        <a href="{@target}" target="_blank"><xsl:apply-templates/></a>
+    </xsl:template>
+    <xsl:template match="tei:list">
+        <ul class="p-2"><xsl:apply-templates/></ul>
+    </xsl:template>
+    <xsl:template match="tei:item">
+        <li><xsl:apply-templates/></li>
+    </xsl:template>
     <xsl:template match="tei:hi">
-        <span style="font-weight:{@rend};">
-            <xsl:apply-templates/>
-        </span>
+        <xsl:choose>
+            <xsl:when test="@rend = 'bold'">
+                <span style="font-weight:{@rend};">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend = 'italic'">
+                <span style="text-style:{@rend};">
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:apply-templates/>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
     
 </xsl:stylesheet>
