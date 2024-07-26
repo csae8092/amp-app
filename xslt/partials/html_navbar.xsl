@@ -31,7 +31,7 @@
                                         <a href="toc.html" class="nav-link">Auden Musulin Papers 1959-1973</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a href="toc_m.html" class="nav-link">Musulin as Memoirist 1976-1995</a>
+                                        <a href="toc_m.html" class="nav-link">Musulin as Memoirist 1976-1985</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
                                         <a href="photos.html" class="nav-link">Photos</a>
