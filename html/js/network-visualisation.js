@@ -489,7 +489,8 @@ const getEntityLabels = (entity, edges, debug) => {
       let span = document.createElement("span");
       span.style.fontStyle = "italic";
       span.style.fontSize = "0.8em";
-      span.innerText = "Type: " + relationType;
+      let relType = String(relationType.replace('_', ' ').replace('_', ' '));
+      span.innerText = relType.toLowerCase();
       let span2 = document.createElement("span");
       span2.innerText = data[entityId].name;
       wrapper.appendChild(span);
