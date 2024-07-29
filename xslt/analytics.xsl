@@ -26,24 +26,27 @@
                             <xsl:value-of select="$doc_title"/>
                         </h1>
                         <figure class="highcharts-figure">
-                            <div id="container"></div>
+                            <h5 class="text-center font-weight-bold">Correspondence W. H. Auden and Stella Musulin</h5>
                             <p class="highcharts-description">
-                                Chart showing data loaded dynamically. The individual data points can
-                                be hovered to display more information.
+                                This line chart depicts the number of letters exchanged between W. H. Auden and Stella Musulin during 1959-1973 per year. The data are loaded dynamically; more information can be displayed by hovering over the individual data points. More viewing and downloading options are available through the dropdown menu.
                             </p>
+                            <div id="container"></div>
+                            
                         </figure>
 
                         <figure class="network-visualization">
-                            <h5 class="text-center">Entity Network</h5>
+                            
+                            <h5 class="text-center font-weight-bold">Entity Network</h5>
+                            <p class="network-description">
+                                This network graph by default displays the interrelations between person, institution, place, and event entities retrieved from all edition documents. The legend in the bottom-right corner explains the color coding. The top dropdown bar allows to narrow down the display to person-person and person-organization relations. The size of the nodes corresponds to the number of connected edges; by hovering over the nodes and edges, their names can be displayed. By selecting individual nodes, the network graph focuses on their immediate environments; at the same time, a left-hand window lists these nodes' interrelations, providing links that connect to the detail-view pages of the entities in question.
+                            </p>
                             <select id="network-visualization-data" class="form-select" aria-label="Select different graph data">
                                 <option value="all">All Entities - Person, Organization, Place, Event</option>
                                 <option value="person">Person - Person</option>
                                 <option value="org">Person - Organization</option>
                             </select>
                             <div id="network-container" style="position: relative; height: 600px; background: #fafafa; height: 800px;"></div>
-                            <p class="network-description">
-
-                            </p>
+                            
                         </figure>
                     </div>
                 </main>

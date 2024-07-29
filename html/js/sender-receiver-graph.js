@@ -83,12 +83,8 @@ Highcharts.getJSON(
 
     Highcharts.chart("container", {
       title: {
-        text: "Auden Musulin Papers: Correspondence",
+        text: "",
       },
-
-      // subtitle: {
-      //     text: 'Source" target="_blank">IREC</a>'
-      // },
 
       yAxis: {
         title: {
@@ -99,10 +95,6 @@ Highcharts.getJSON(
 
       xAxis: {
         type: "datetime",
-        // dateTimeLabelFormats: { // don't display the year
-        //     month: '%e. %b',
-        //     year: '%b'
-        // },
         title: {
           text: "Year",
         },
@@ -118,52 +110,24 @@ Highcharts.getJSON(
         series: {
           marker: {
             enabled: true,
+            inside: true,
             radius: 2.5,
+            
           },
         },
       },
 
       series: [
+      
         {
           name: "Auden W.H.",
-          // lineWidth: 4,
-          // marker: {
-          //     radius: 4
-          // },
           data: auden,
         },
         {
           name: "Stella Musulin",
           data: stella,
         },
-        // {
-        //   name: "Edward Mendelson",
-        //   data: mendelson,
-        // },
-        // {
-        //   name: "Michael O`Sullivan",
-        //   data: sullivan,
-        // },
-        // {
-        //   name: "Dr. Wolfgang Kraus",
-        //   data: kraus,
-        // },
-      ],
-
-      // responsive: {
-      //     rules: [{
-      //         condition: {
-      //             maxWidth: 500
-      //         },
-      //         chartOptions: {
-      //             legend: {
-      //                 layout: 'horizontal',
-      //                 align: 'center',
-      //                 verticalAlign: 'bottom'
-      //             }
-      //         }
-      //     }]
-      // }
+       ] 
     });
   }
 );
