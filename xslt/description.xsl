@@ -24,26 +24,10 @@
                 <main class="flex-shrink-0">
                     <div class="container-fluid">
                         <div class="my-4">
-                            <h1><xsl:value-of select="$doc_title"/></h1>
-                             <div class="row">
-                                 <div class="col-md-6">
-                                     <xsl:apply-templates select="//tei:body/tei:div/tei:p"/>
-                                     <xsl:apply-templates select="//tei:div/tei:div[1]"/>
-                                 </div>
-                                 <div class="col-md-6">
-                                     <div class="flex-md-row mb-4 align-items-center">
-                                         <xsl:variable name="img" select="replace(//tei:figure/tei:graphic/@url, '../images', 'images')"/>
-                                         <img class="card-img-right flex-auto d-md-block" src="{replace($img, '.JPG', '_800x1128.JPG')}" alt="{//tei:figure/tei:head}"/>
-                                         <p style="text-align:right;"><small><xsl:value-of select="//tei:figure/tei:figDesc"/></small></p>
-                                     </div>
-                                 </div>
-                             </div>
-                             <div class="row">
-                                 <div class="col-md-12">
-                                     <xsl:apply-templates select="//tei:div/tei:div[2]"/>
-                                     <xsl:apply-templates select="//tei:div/tei:div[3]"/>
-                                 </div>
-                             </div>   
+                            <xsl:for-each select="//tei:body">
+                                <h2 class="text-center my-4"><xsl:value-of select="$doc_title"/></h2>
+                                <xsl:apply-templates/>
+                            </xsl:for-each>   
                         </div>
                     </div>
                 </main>
@@ -53,10 +37,10 @@
     </xsl:template>
                     
     <xsl:template match="tei:div">
-        <div><xsl:apply-templates/></div>
+        <div class="my-2"><xsl:apply-templates/></div>
     </xsl:template>
     <xsl:template match="tei:head">
-        <h3><xsl:apply-templates/></h3>
+        <h4 class="text-left"><xsl:apply-templates/></h4>
     </xsl:template>
     <xsl:template match="tei:p">
         <p><xsl:apply-templates/></p>
