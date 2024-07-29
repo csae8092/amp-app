@@ -45,5 +45,8 @@
     <xsl:template match="tei:p">
         <p><xsl:apply-templates/></p>
     </xsl:template>
+    <xsl:template match="tei:ref">
+        <a class="text-decoration-underline" href="{@target}" target="_blank"><xsl:apply-templates/></a>
+    </xsl:template>
     
 </xsl:stylesheet>

@@ -65,7 +65,7 @@
         <span class="{@rend}"><xsl:apply-templates/></span>
     </xsl:template>
     <xsl:template match="tei:ref">
-        <a href="{@target}" target="_blank">
+        <a class="text-decoration-underline" href="{@target}" target="_blank">
             <xsl:apply-templates/>
         </a>
     </xsl:template>
