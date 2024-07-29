@@ -10,7 +10,7 @@
     <xsl:import href="partials/toc-table.xsl"/>
     <xsl:import href="partials/toc-cards.xsl"/>
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="'Musulin as Memoirist 1976-1995'"/>
+        <xsl:variable name="doc_title" select="'Musulin as Memoirist 1976-1985'"/>
         <html lang="en">
             <head>
                 <xsl:call-template name="html_head">
