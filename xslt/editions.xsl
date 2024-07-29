@@ -251,7 +251,9 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:ab">
+        
         <xsl:variable name="hand" select="@hand"/>
+        
         <p class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
@@ -1576,6 +1578,24 @@
         </span>
     </xsl:template>
     <xsl:template match="tei:add[@corresp]">
+        <xsl:if test="parent::tei:ab">
+            <xsl:variable name="hand" select="@hand"/>
+            <!--<xsl:variable name="place" select="
+                if(@place = 'right') then('right:-5rem;')
+                else if(@place = 'left') then('left:-5rem;')
+                else if(@place = 'below') then('bottom:-5rem;')
+                else if(@place = 'above') then('top:-5rem;')
+                else()
+                "/>-->
+            <span class="{if ($hand = '#handwritten') then
+                ('handwritten') else if ($hand = '#typed') then
+                ('typed') else if ($hand = '#printed') then
+                ('printed') else if ($hand = '#stamp') then
+                ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                }">
+                <xsl:apply-templates/>
+            </span>
+        </xsl:if>
         <!-- do not render -->
     </xsl:template>
     <xsl:template match="tei:l">
