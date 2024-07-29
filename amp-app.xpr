@@ -32,27 +32,7 @@
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>analytics</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>XSL</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioStorageLocations">
-                                    <list>
-                                        <Byte>2</Byte>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>data/meta/description.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>description</String>
+                                        <String>timeline</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -73,6 +53,26 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>editions</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>XSL</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioStorageLocations">
+                                    <list>
+                                        <Byte>2</Byte>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>data/meta/description.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>description</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">

@@ -25,9 +25,6 @@
     </xsl:function>
     
     <xsl:template name="view-type-img">
-        <!--<xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 22px;'"/>
-        <xsl:variable name="typed" select="'font-family: Courier New, monospace; font-size: 18px;'"/>
-        <xsl:variable name="printed" select="'font-family: Arial, serif; font-size: 18px;'"/>-->
         
         <div class="pagination-top">
             <xsl:call-template name="view-pagination"/>

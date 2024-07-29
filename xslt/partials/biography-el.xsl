@@ -25,7 +25,7 @@
                         <small>Correspondence</small>
                     </div>
                     <div class="card-body my-0 py-1">
-                        <a href="{@xml:id}">
+                        <a href="{replace(@xml:id, '.xml', '.html')}">
                             <xsl:value-of select=".//tei:titleStmt/tei:title[@level='a']"/>
                         </a>
                     </div>
@@ -48,7 +48,7 @@
                                     <label>Role: <xsl:value-of select="replace(current-grouping-key(), '_', ' ')"/></label>
                                     <xsl:for-each select="current-group()[self::tei:person]">
                                     <li>                                        
-                                        <a href="{concat(@xml:id, '.html')}"><xsl:value-of select="tei:persName"/></a><xsl:text> </xsl:text>
+                                        <a href="{@sameAs}.html"><xsl:value-of select="tei:persName"/></a>
                                     </li>
                                     </xsl:for-each>
                                 </ul>
