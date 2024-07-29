@@ -129,11 +129,13 @@
                                                                                     self::tei:div[@type='poem']|
                                                                                     self::tei:div[@type='speech']|
                                                                                     self::tei:div[@type='prose_translation']|
+                                                                                    self::tei:div[@type='enclosure']|
                                                                                     self::tei:div[@type='comments']]">
                                                         <xsl:for-each select="current-group()[self::tei:div|
                                                                                               self::tei:lg[preceding-sibling::tei:pb]|
                                                                                               self::tei:ab[preceding-sibling::tei:pb]]">
-                                                            <!--<xsl:value-of select="'main'"/>-->
+                                                            <!--<xsl:value-of select="'main'"/>
+                                                            <xsl:value-of select="name()"/>-->
                                                             <xsl:choose>
                                                                 <xsl:when test="self::tei:ab|self::tei:lg">
                                                                     <!--<xsl:value-of select="'secondary below main'"/>-->
@@ -147,7 +149,6 @@
                                                                     </xsl:call-template>
                                                                 </xsl:when>
                                                                 <xsl:when test="self::tei:div[@type='poem']|self::tei:div[@type='speech']">
-                                                                    <!--<xsl:value-of select="'secondary below main poem'"/>-->
                                                                     <xsl:call-template name="text-window">
                                                                         <xsl:with-param name="hand">
                                                                             <xsl:value-of select="@hand"/>
@@ -158,7 +159,6 @@
                                                                     </xsl:call-template>
                                                                 </xsl:when>
                                                                 <xsl:otherwise>
-                                                                    <!--<xsl:value-of select="'main below main'"/>-->
                                                                     <xsl:call-template name="text-window">
                                                                         <xsl:with-param name="hand">
                                                                             <xsl:value-of select="@hand"/>
@@ -175,12 +175,13 @@
                                                         <!-- 
                                                             first xpath of pb grouping './tei:div[@type]/*'
                                                         -->
-                                                        <xsl:for-each select="current-group()[self::tei:div[not(@type)]|
+                                                        <xsl:for-each select="current-group()[self::tei:div|
                                                                                               self::tei:p|
                                                                                               self::tei:closer|
                                                                                               self::tei:lg|
                                                                                               self::tei:ab|
-                                                                                              self::tei:fw]">
+                                                                                              self::tei:fw]|
+                                                                                              self::tei:head">
                                                             <!--<xsl:value-of select="'secondary'"/>
                                                             <xsl:value-of select="name()"/>-->
                                                             <xsl:call-template name="text-window">
