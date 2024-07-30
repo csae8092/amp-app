@@ -106,7 +106,7 @@
 }
 
 #wrapper-navbar.hiddenNav {
-  transform: translate3d(0, -100%, 0);
+  transform: translateY(-100%);
 }
 
 .slider {
@@ -1906,6 +1906,6 @@ td > label {
 
 @media (max-width: 540px) {
   .grid {
-      grid-template-columns: repeat(1, minmax(200px, 1fr));
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 }
