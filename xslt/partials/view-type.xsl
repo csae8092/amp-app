@@ -337,9 +337,7 @@
                             data-tab="paginate"  
                             id="paginate-{$positionOrNot}" 
                             tabindex="-1">
-                            
                             <div id="container-resize-{$positionOrNot}" class="transcript row">  
-                                
                                 <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
                                     <div class="card-body">
                                         <xsl:if test="@type='cv_sheet'">

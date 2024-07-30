@@ -167,7 +167,7 @@
     </xsl:template>
 
     <xsl:template match="tei:head">
-        <xsl:variable name="hand" select="@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <xsl:choose>
             <xsl:when test="parent::tei:p">
                 <span class="yes-index {
@@ -251,7 +251,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:ab">
-        <xsl:variable name="hand" select="@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <p class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
@@ -263,7 +263,7 @@
         </p>
     </xsl:template>
     <xsl:template match="tei:div">
-        <xsl:variable name="hand" select="@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <div class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
@@ -284,7 +284,7 @@
     <xsl:template match="tei:p[@prev]">
         <xsl:choose>
             <xsl:when test="parent::tei:div[@type='letter_message']/preceding-sibling::tei:div[@type='letter_message']">
-                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
                 <p class="yes-index {
                     if ($hand = '#handwritten') then
                     ('handwritten') else if ($hand = '#typed') then
@@ -296,7 +296,7 @@
                 </p>
             </xsl:when>
             <xsl:when test="parent::tei:div[@type='prose']/preceding-sibling::tei:div[@type='prose']">
-                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
                 <p class="yes-index {
                     if ($hand = '#handwritten') then
                     ('handwritten') else if ($hand = '#typed') then
@@ -320,7 +320,7 @@
     <xsl:template match="tei:p[preceding-sibling::tei:p[@prev]]">
         <xsl:choose>
             <xsl:when test="parent::tei:div[@type='letter_message']/preceding-sibling::tei:div[@type='letter_message']">
-                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
                 <p class="yes-index {
                     if ($hand = '#handwritten') then
                     ('handwritten') else if ($hand = '#typed') then
@@ -332,7 +332,7 @@
                 </p>
             </xsl:when>
             <xsl:when test="parent::tei:div[@type='prose']/preceding-sibling::tei:div[@type='prose']">
-                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
                 <p class="yes-index {
                     if ($hand = '#handwritten') then
                     ('handwritten') else if ($hand = '#typed') then
@@ -349,7 +349,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:p">
-        <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <p class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
@@ -378,7 +378,7 @@
         <br/>
     </xsl:template>
     <xsl:template match="tei:opener">
-        <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <div class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
@@ -390,7 +390,7 @@
         </div>
     </xsl:template>
     <xsl:template match="tei:postscript">
-        <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <div class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
@@ -402,7 +402,7 @@
         </div>
     </xsl:template>
     <xsl:template match="tei:closer[not(preceding-sibling::tei:p[@prev])]">
-        <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <div class="yes-index {
             if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
@@ -416,7 +416,7 @@
     <xsl:template match="tei:closer[preceding-sibling::tei:p[@prev]]">
         <xsl:choose>
             <xsl:when test="parent::tei:div[@type='letter_message']/preceding-sibling::tei:div[@type='letter_message']">
-                <xsl:variable name="hand" select="@hand|parent::tei:div[@hand]/@hand"/>
+                <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
                 <div class="yes-index {
                     if ($hand = '#handwritten') then
                     ('handwritten') else if ($hand = '#typed') then
@@ -982,7 +982,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:fw[@type='pageNum']">
-        <xsl:variable name="hand" select="@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <xsl:if test="not(preceding-sibling::tei:pb)">
             <p class="yes-index {
                 if ($hand = '#handwritten') then
@@ -1521,8 +1521,7 @@
 
     </xsl:template>
     <xsl:template match="tei:lg">
-        <xsl:variable name="hand" select="@hand"/>
-        <xsl:variable name="hand2" select="parent::tei:div[@hand]/@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <xsl:choose>
             <xsl:when test="string-length($hand) > 0">
                 <p class="yes-index {
@@ -1548,10 +1547,10 @@
             </xsl:when>
             <xsl:otherwise>
                 <p class="yes-index {
-                    if ($hand2 = '#handwritten') then
-                    ('handwritten') else if ($hand2 = '#typed') then
-                    ('typed') else if ($hand2 = '#printed') then
-                    ('printed') else if ($hand2 = '#stamp') then
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
                     ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
                     }" style="display:block;margin: 1em 0;">
                     <xsl:apply-templates/>
@@ -1560,7 +1559,7 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:add[not(@corresp)]">
-        <xsl:variable name="hand" select="@hand"/>
+        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <!-- <xsl:variable name="place" select="
             if(@place = 'left') then('margin-left:-5rem;')
             else if (@place = 'above') then('margin-top:-1rem;')
@@ -1589,7 +1588,7 @@
     </xsl:template>
     <xsl:template match="tei:add[@corresp]">
         <xsl:if test="parent::tei:ab">
-            <xsl:variable name="hand" select="@hand"/>
+            <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
             <!--<xsl:variable name="place" select="
                 if(@place = 'right') then('right:-5rem;')
                 else if(@place = 'left') then('left:-5rem;')
