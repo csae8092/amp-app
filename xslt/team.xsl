@@ -22,7 +22,7 @@
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container-fluid">
-                        <div class="my-4">
+                        <div class="my-5">
                             <xsl:apply-templates select="//tei:body"/>
                         </div>
 

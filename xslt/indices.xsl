@@ -50,6 +50,9 @@
             <body class="d-flex flex-column">
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
+                    <h1 class="my-5 mx-auto text-center">
+                        <xsl:value-of select="$doc_title"/>
+                    </h1>
                     <div class="container-fluid">
                         <xsl:if test="contains($doc_title, 'Places') or 
                             contains($doc_title, 'Institut') or 

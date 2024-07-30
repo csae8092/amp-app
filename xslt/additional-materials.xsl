@@ -24,7 +24,7 @@
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
                     <div class="container-fluid">
-                        <h1 class="my-2 mx-auto text-center">
+                        <h1 class="my-5 mx-auto text-center">
                             <xsl:value-of select="$doc_title"/>
                         </h1>
                         <div id="navBarLetters">
