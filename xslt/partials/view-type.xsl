@@ -6,23 +6,22 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     exclude-result-prefixes="#all" version="2.0">
     
-    <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
-        <desc>
-            <h1>Widget tei-facsimile.</h1>
-            <p>Contact person: daniel.stoxreiter@oeaw.ac.at</p>
-            <p>Applied with call-templates in html:body.</p>
-            <p>The template "view type" generates various view types e.g. reading, diplomatic, commentary.</p> 
-            <p>Select between a type with or without images.</p>
-            <p>Bootstrap is required.</p>
-        </desc>    
-    </doc>
-    
+
     <xsl:function name="_:ano">
         <xsl:param name="node"/>
         <xsl:for-each-group select="$node" group-by="$node">
             <xsl:sequence select="concat('(', count(current-group()[current-grouping-key() = .]), ' ', current-grouping-key(), ')')"/>
         </xsl:for-each-group>    
     </xsl:function>
+    
+    <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+        <desc>
+            <h1>Widget view-type-img</h1>
+            <p>Contact person: daniel.elsner@oeaw.ac.at</p>
+            <p>Applied with call-templates in html:body.</p>
+            <p>Containes the paginated view of text and image.</p>
+        </desc>    
+    </doc>
     
     <xsl:template name="view-type-img">
         
@@ -332,13 +331,12 @@
                     </xsl:for-each-group>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:for-each-group select="*" group-starting-with="tei:pb">  
+                    <xsl:for-each-group select="*|./tei:div[@type='photo']/*" group-starting-with="tei:pb">  
                         <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
                             id="paginate-{$positionOrNot}" 
                             tabindex="-1">
-                            <!--<window-resize opt="resizing" pos="{position()}" size="0.755"></window-resize>-->
                             
                             <div id="container-resize-{$positionOrNot}" class="transcript row">  
                                 
@@ -354,7 +352,8 @@
                                         <xsl:for-each select="current-group()[self::tei:lg|
                                             self::tei:p|
                                             self::tei:fw|
-                                            self::tei:ab]">
+                                            self::tei:ab|
+                                            self::tei:div[not(@type='photo')]]">
                                             <xsl:call-template name="text-window">
                                                 <xsl:with-param name="hand">
                                                     <xsl:value-of select="@hand"/>
@@ -364,7 +363,6 @@
                                                 </xsl:with-param>
                                             </xsl:call-template>
                                         </xsl:for-each>
-                                        
                                     </div>
                                 </div>
                                 <xsl:call-template name="img-window">
@@ -386,6 +384,7 @@
         </div>    
         
     </xsl:template>
+    
     <xsl:template name="img-window">
         <xsl:param name="positionOrNot"/>
         <div id="img-resize-{$positionOrNot}"
@@ -397,7 +396,7 @@
                     <div class="loader"></div>
                 </div>
                 <div id="{$osd_container_id}" style="padding:.5em;">
-                    <!-- image container accessed by OSD script -->                                           
+                    <!-- image container accessed by OSD script -->      
                     <div id="{$osd_container_id2}">
                         <xsl:if test="@facs">
                             <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
@@ -413,6 +412,7 @@
             </div>
         </div>
     </xsl:template>
+    
     <xsl:template name="text-window">
         <!-- 
             depending on which node level text elements like p, lg, ab are available
@@ -454,4 +454,5 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
+    
 </xsl:stylesheet>
