@@ -91,26 +91,6 @@
   "features": [
     {
       "attributes": {
-        "OBJECTID": 1,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0001",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1963-05-12",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 2,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -131,26 +111,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 3,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0002",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1964-12-23",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 4,
         "Address": "Hubertusbader Straße 43",
         "Role": "Sender",
@@ -167,26 +127,6 @@
       "geometry": {
         "x": 13.275646670000071,
         "y": 52.479007468000077
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 5,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0003",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1965-09-29",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -231,26 +171,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 8,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0004",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1966-02-03",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 9,
         "Address": "77 St. Mark's Place",
         "Role": "Sender",
@@ -267,26 +187,6 @@
       "geometry": {
         "x": -73.98358772499995,
         "y": 40.728389819000029
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 10,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0005",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1967-11-08",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -311,46 +211,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 12,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0006",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-02-06",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 13,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0007",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-10-06",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 14,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -367,26 +227,6 @@
       "geometry": {
         "x": 15.811512574000062,
         "y": 48.181531884000037
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 15,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0008",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-10-12",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -431,26 +271,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 18,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0009",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-10-15",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 19,
         "Address": "77 St. Mark's Place",
         "Role": "Sender",
@@ -467,26 +287,6 @@
       "geometry": {
         "x": -73.98358772499995,
         "y": 40.728389819000029
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 20,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0010",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-11-06",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -511,26 +311,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 22,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0011",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-12-13",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 23,
         "Address": "77 St. Mark's Place",
         "Role": "Sender",
@@ -547,26 +327,6 @@
       "geometry": {
         "x": -73.98358772499995,
         "y": 40.728389819000029
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 24,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0012",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-12-29",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -591,26 +351,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 26,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0013",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1969-01-04",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 27,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -627,26 +367,6 @@
       "geometry": {
         "x": 15.811512574000062,
         "y": 48.181531884000037
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 28,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0014",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1969-05-21",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -671,46 +391,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 30,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0015",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1970-06-10",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 31,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0016",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1970-09-18",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 32,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -721,7 +401,7 @@
         "Location_Y": 48.181531884216675,
         "From_Person": "W. H. Auden",
         "To_Person": "Stella Musulin",
-        "Date": "1970-09-18",
+        "Date": 1970-09-18,
         "Field": null
       },
       "geometry": {
@@ -747,46 +427,6 @@
       "geometry": {
         "x": 15.811512574000062,
         "y": 48.181531884000037
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 34,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0017",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1971-06-04",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 35,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0018",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1971-10-19",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -831,46 +471,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 38,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0019",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1972-02-22",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 39,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0020",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1973-09-24",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 40,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -887,26 +487,6 @@
       "geometry": {
         "x": 15.811512574000062,
         "y": 48.181531884000037
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 41,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0021",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1961-10-13",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -931,26 +511,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 43,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0022",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1961-08-16",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 44,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -967,26 +527,6 @@
       "geometry": {
         "x": 15.811512574000062,
         "y": 48.181531884000037
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 45,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0023",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1962-07-23",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
       }
     },
     {
@@ -1031,46 +571,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 48,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0024",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1962-09-11",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 49,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0025",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1962-10-17",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 50,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -1111,46 +611,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 62,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0035",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "Stella Musulin",
-        "To_Person": "W. H. Auden",
-        "Date": "1971-05-13",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 67,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0038",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1965-03-15",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 68,
         "Address": "Hubertusbader Straße 43",
         "Role": "Sender",
@@ -1167,26 +627,6 @@
       "geometry": {
         "x": 13.275646670000071,
         "y": 52.479007468000077
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 69,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0039",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1965-04-28",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
       }
     },
     {
@@ -1231,46 +671,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 72,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0040",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1969-06-10",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 73,
-        "Address": "2 Seaforth St. Julian's Street",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0041",
-        "Location": "51.671427500244214, -4.698087203148403",
-        "Location_X": -4.6980872031484031,
-        "Location_Y": 51.671427500244214,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1970-07-06",
-        "Field": null
-      },
-      "geometry": {
-        "x": -4.6980872029999432,
-        "y": 51.67142750000005
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 74,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -1287,26 +687,6 @@
       "geometry": {
         "x": 15.811512574000062,
         "y": 48.181531884000037
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 75,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0042",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-10-04",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
       }
     },
     {
@@ -1351,26 +731,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 78,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0044",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1968-10-24",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 79,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -1387,46 +747,6 @@
       "geometry": {
         "x": 15.811512574000062,
         "y": 48.181531884000037
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 80,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0045",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1960-07-21",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 81,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0057",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1961-04-25",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
       }
     },
     {
@@ -1451,26 +771,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 83,
-        "Address": "Fridau",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0058",
-        "Location": "48.14765, 15.55595",
-        "Location_X": 15.555949999999999,
-        "Location_Y": 48.147649999999999,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1961-10-01",
-        "Field": null
-      },
-      "geometry": {
-        "x": 15.555950000000053,
-        "y": 48.147650000000056
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 84,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -1491,26 +791,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 85,
-        "Address": "Neulinggasse 26",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0059",
-        "Location": "48.19947103998972, 16.388089895227534",
-        "Location_X": 16.388089895227534,
-        "Location_Y": 48.199471039989717,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1962-04-30",
-        "Field": null
-      },
-      "geometry": {
-        "x": 16.388089895000064,
-        "y": 48.199471040000049
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 86,
         "Address": "Hinterholz 6",
         "Role": "Sender",
@@ -1527,26 +807,6 @@
       "geometry": {
         "x": 15.811512574000062,
         "y": 48.181531884000037
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 87,
-        "Address": "Fillgradergasse 12",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0070",
-        "Location": "48.19994, 16.35857",
-        "Location_X": 48.19994,
-        "Location_Y": 16.35857,
-        "From_Person": "W. H. Auden",
-        "To_Person": "Stella Musulin",
-        "Date": "1959-10-10",
-        "Field": null
-      },
-      "geometry": {
-        "x": 48.19994,
-        "y": 16.35857
       }
     },
     {
@@ -1591,26 +851,6 @@
     },
     {
       "attributes": {
-        "OBJECTID": 89,
-        "Address": "Kirchstetten",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0071",
-        "Location": "48.18333, 15.81667",
-        "Location_X": 48.18333,
-        "Location_Y": 15.81667,
-        "From_Person": "Stella Musulin",
-        "To_Person": "W. H. Auden",
-        "Date": "1962-04-16",
-        "Field": null
-      },
-      "geometry": {
-        "x": 48.18333,
-        "y": 15.81667
-      }
-    },
-    {
-      "attributes": {
         "OBJECTID": 88,
         "Address": "Not available",
         "Role": "Sender",
@@ -1619,28 +859,8 @@
         "Location": "48., 16.",
         "Location_X": "",
         "Location_Y": "",
-        "From_Person": "Stella Musulin",
-        "To_Person": "W. H. Auden",
-        "Date": "1970-05-21",
-        "Field": null
-      },
-      "geometry": {
-        "x": "",
-        "y": ""
-      }
-    },
-    {
-      "attributes": {
-        "OBJECTID": 89,
-        "Address": "Not available",
-        "Role": "Receiver",
-        "Appearance": 1,
-        "Doc": "amp-transcript__0043",
-        "Location": "48., 16.",
-        "Location_X": "",
-        "Location_Y": "",
-        "From_Person": "Stella Musulin",
-        "To_Person": "W. H. Auden",
+        "From_Person": "W. H. Auden",
+        "To_Person": "Stella Musulin",
         "Date": "1970-05-21",
         "Field": null
       },
