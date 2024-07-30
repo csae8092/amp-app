@@ -211,9 +211,7 @@
                         <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
                             data-tab="paginate"  
                             id="paginate-{$positionOrNot}" 
-                            tabindex="-1">
-                            <!--<window-resize opt="resizing" pos="{position()}" size="0.755"></window-resize>-->
-                            
+                            tabindex="-1">                            
                             <div id="container-resize-{$positionOrNot}" class="transcript row">  
                                 
                                 <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
@@ -232,7 +230,7 @@
                                                                                     self::tei:p[preceding-sibling::tei:pb]|
                                                                                     self::tei:ab[preceding-sibling::tei:pb]|
                                                                                     self::tei:fw[preceding-sibling::tei:pb]]">
-                                                    <!--<xsl:text>main</xsl:text>
+                                                    <!--<xsl:text>main </xsl:text>
                                                     <xsl:value-of select="name()"/>-->
                                                     <xsl:choose>
                                                         <xsl:when test="self::tei:div">
@@ -260,8 +258,13 @@
                                                 </xsl:for-each>
                                             </xsl:when>
                                             <xsl:when test="current-group()[ancestor::tei:floatingText]">
-                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:fw|self::tei:ab|self::tei:head|self::tei:quote]">
-                                                    <!--<xsl:text>secondary</xsl:text>-->
+                                                <xsl:for-each select="current-group()[self::tei:p|
+                                                                                      self::tei:fw|
+                                                                                      self::tei:ab|
+                                                                                      self::tei:head|
+                                                                                      self::tei:quote]">
+                                                    <!--<xsl:text>flaotingText </xsl:text>
+                                                    <xsl:value-of select="name()"/>-->
                                                     <xsl:if test="self::tei:quote">
                                                         <a class="quote ent">
                                                             <xsl:attribute name="href">
@@ -293,7 +296,8 @@
                                                     self::tei:head|
                                                     self::tei:fw|
                                                     self::tei:quote]">
-                                                    <!--<xsl:text>other</xsl:text>-->
+                                                    <!--<xsl:text>other </xsl:text>
+                                                    <xsl:value-of select="name()"/>-->
                                                     <xsl:choose>
                                                         <xsl:when test="self::tei:quote">
                                                             <xsl:call-template name="text-window">

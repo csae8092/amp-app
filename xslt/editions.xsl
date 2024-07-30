@@ -251,17 +251,24 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:ab">
-        <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
-        <p class="yes-index {
-            if ($hand = '#handwritten') then
-            ('handwritten') else if ($hand = '#typed') then
-            ('typed') else if ($hand = '#printed') then
-            ('printed') else if ($hand = '#stamp') then
-            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-            }">
-            <xsl:apply-templates/>
-        </p>
-    </xsl:template>
+        <xsl:choose>
+            <xsl:when test="preceding-sibling::tei:pb|preceding-sibling::tei:floatingText">
+                <!-- do not render see doc0028 page 10 -->
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
+                <p class="yes-index {
+                    if ($hand = '#handwritten') then
+                    ('handwritten') else if ($hand = '#typed') then
+                    ('typed') else if ($hand = '#printed') then
+                    ('printed') else if ($hand = '#stamp') then
+                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
+                    }">
+                    <xsl:apply-templates/>
+                </p>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>    
     <xsl:template match="tei:div">
         <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <div class="yes-index {
@@ -274,7 +281,9 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-
+    <xsl:template match="tei:floatingText">
+        <xsl:apply-templates/>       
+    </xsl:template>
     <!-- 
         in doc 0063 p elements are part in both pb groups creating in view-type.xsl
         since the secondary group creates a paragraph stylesheet if p elements is encountered
@@ -311,11 +320,6 @@
                 <!-- do not render handled in view-type.xsl -->
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
-    <xsl:template match="tei:floatingText">
-        <xsl:if test="parent::tei:quote">
-            <xsl:apply-templates/>
-        </xsl:if>
     </xsl:template>
     <xsl:template match="tei:p[preceding-sibling::tei:p[@prev]]">
         <xsl:choose>
@@ -361,18 +365,12 @@
         </p>
     </xsl:template>
     <xsl:template match="tei:salute[parent::tei:opener]">
-        <!--<span class="p-like">
-            <xsl:apply-templates/>
-        </span>-->
         <br/>
         <br/>
         <xsl:apply-templates/>
         <br/>
     </xsl:template>
     <xsl:template match="tei:salute[parent::tei:closer]">
-        <!--<span class="p-like">
-            <xsl:apply-templates/>
-        </span>-->
         <xsl:apply-templates/>
         <br/>
         <br/>
@@ -433,9 +431,6 @@
         </xsl:choose>
     </xsl:template>
     <xsl:template match="tei:signed">
-        <!--<span class="p-like">
-            <xsl:apply-templates/>
-        </span>-->
         <xsl:apply-templates/>
         <br/>
         <br/>
