@@ -26,7 +26,7 @@
                                 <div class="row px-5">
                                     <div class="col-xl-12 text-center justify-content-center">
                                         <h3 class="px-2">Full Text Search</h3>
-                                        <div id="searchbox" class="w-50" style="margin: 0 auto;"></div>
+                                        <div id="searchbox" class="w-50 my-0 mx-auto"></div>
                                         <div class="d-flex flex-column align-items-center p-4" id="current-refinements"></div>
                                     </div>
                                     <div class="col-xl-12 px-4 d-flex justify-content-center">
@@ -59,7 +59,7 @@
 
                                     </div>
                                 </div>
-                                <div class="text-center" id="stats-container" style="margin-bottom: 1em;"></div>
+                                <div class="text-center mb-2" id="stats-container"></div>
                                 <div id="hits"></div>
                                 <div id="pagination-bottom" class="py-4"></div>
                             </div>

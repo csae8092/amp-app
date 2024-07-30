@@ -23,7 +23,7 @@
         <xsl:param name="max_date"></xsl:param>
         <xsl:param name="low_date"></xsl:param>
         <xsl:variable name="cat-norm" select="if($category = 'correspondence-cvl') then(substring-before($category, '-cvl')) else($category)"/>
-        <table class="table table-striped display" id="tocTable" style="width:100%;">
+        <table class="table table-striped display w-100" id="tocTable">
             <thead>
                 <tr>
                     <th scope="col" style="width: 18%;">Title</th>

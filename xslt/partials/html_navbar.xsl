@@ -16,7 +16,9 @@
                     </a>
                     <!-- end custom logo -->
                     <a class="navbar-brand site-title-with-logo" rel="home" href="index.html" title="{$site_title}"></a>
-                    <span style="margin-left:-1.7em;" class="badge bg-light text-dark">in development</span>
+                    <span id="navbar-version" class="badge bg-light text-dark fs-6">
+                        <a href="https://github.com/Auden-Musulin-Papers/amp-app/releases" target="_blank" title="Digital Edition Version 1.0.0">v1.0.0</a>
+                    </span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

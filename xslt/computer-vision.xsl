@@ -35,7 +35,7 @@
                 <main class="flex-shrink-0">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-12" style="margin:4em auto 1em auto;">
+                            <div class="col-md-12 mx-auto mt-4 mb-2">
                                 <h1 class="text-center my-4">Auden Musulin Papers through Computer Vision</h1>
                                 <p>Two edition documents contain indented impressions: <a class="cv-link" href="amp-transcript__0039.html">the 1965 typescript of W. H. Auden’s German prose translation of his poem 
                                     “Joseph Weinheber”</a> and <a class="cv-link" href="amp-transcript__0040.html">Auden’s letter to Stella Musulin 
@@ -49,17 +49,17 @@
                                     from an oblique angle:
                                 </p>
                             </div>
-                            <div class="col-md-12 text-center" style="margin: 1em auto;">
+                            <div class="col-md-12 text-center my-2 mx-auto">
                                 <h2>RTI Viewer</h2>
                             </div>
-                            <div class="col-md-12" style="margin: 1em auto;">
+                            <div class="col-md-12 my-2 mx-auto">
                                 <div id="viewerContainer">
                                     <script type="text/javascript">
                                         createRtiViewer("viewerContainer", "rti-images", 1000, 800); 
                                     </script>
                                 </div>
                             </div>
-                            <div class="col-md-12" style="margin:2% auto;">
+                            <div class="col-md-12 my-2 mx-auto">
                                 <p>
                                     Click the light-bulb icon. Place the cursor over the viewer and press the left button of your mouse or trackpad. 
                                     Keep it pressed and move the cursor across the viewer.<br/>
@@ -110,7 +110,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-12" style="margin: 1em auto;">
+                        <div class="col-md-12 my-2 mx-auto">
                             <div class="tab-content">
                                 <div class="tab-pane active" id="cards-tab" tabindex="-1">
                                     <div class="row gy-1 text-center">

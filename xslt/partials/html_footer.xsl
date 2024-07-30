@@ -12,7 +12,7 @@
                         <div class="footer-widget col-lg-1 col-md-2 col-sm-2 col-xs-6  ml-auto text-center ">
                             <div class="textwidget custom-html-widget py-2">
                                 <a href="https://www.oeaw.ac.at/acdh">
-                                    <img src="images/acdh_logo.svg" class="image" alt="ACDH Logo" style="max-width: 100%; height: auto;"/>
+                                    <img src="images/acdh_logo.svg" class="image w-100 h-auto" alt="ACDH Logo"/>
                                 </a>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                             </div>
                             <div class="textwidget custom-html-widget">
                                 <a title="CC-BY 4.0" target="_blank" href="https://creativecommons.org/licenses/by/4.0">
-                                    <img style="max-width: 50%; margin-top: 2em;" alt="CC-BY 4.0 Free Cultural Approved" src="images/by.png"></img>
+                                    <img class="w-50 mt-2" alt="CC-BY 4.0 Free Cultural Approved" src="images/by.png"></img>
                                 </a>
                             </div>
                         </div>
@@ -53,30 +53,30 @@
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 py-2">
-                                        <div class="flex-md-row mb-4 align-items-center" style="margin-bottom:.5em!important;">
+                                        <div class="flex-md-row mb-4 align-items-center mb-1">
                                             <a href="https://www.fwf.ac.at/en/">
-                                                <img class="card-img-right flex-auto d-md-block" src="images/FWF_Logo.png" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 250px; height: auto; margin-top:1em;" title="FWF Der Wissenschaftsfond" />
+                                                <img class="card-img-right flex-auto d-md-block h-auto mt-2 align-middle" src="images/FWF_Logo.png" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 250px;" title="FWF Der Wissenschaftsfond" />
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 py-2">
-                                        <div class="flex-md-row mb-4 align-items-center" style="margin-bottom:.5em!important; margin-left: -1em;">
+                                        <div class="flex-md-row mb-4 align-items-center mb-1" id="footer-univie">
                                             <a href="https://www.univie.ac.at/en/">
-                                                <img class="card-img-right flex-auto d-md-block" src="images/Uni_Logo_2016.jpg" alt="Universität Wien Logo" style="max-width: 250px; height: auto; vertical-align: middle;" title="Universität Wien" />
+                                                <img class="card-img-right flex-auto d-md-block h-auto align-middle" src="images/Uni_Logo_2016.jpg" alt="Universität Wien Logo" style="max-width: 250px;" title="Universität Wien" />
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 py-2">
                                         <div class="flex-md-row mb-4 align-items-center">
                                             <a href="https://www.donau-uni.ac.at/en.html">
-                                                <img class="card-img-right flex-auto d-md-block" src="images/Donau_Universit%C3%A4t_Krems.svg" alt="Donau Universität Krems Logo" style="max-width: 120px; height: auto; vertical-align: middle;" title="Donau Universität Krems " />
+                                                <img class="card-img-right flex-auto d-md-block h-auto align-middle" src="images/Donau_Universit%C3%A4t_Krems.svg" alt="Donau Universität Krems Logo" style="max-width: 120px;" title="Donau Universität Krems " />
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 py-2">
                                         <div class="flex-md-row mb-4 align-items-center">
                                             <a href="https://cvl.tuwien.ac.at/">
-                                                <img class="card-img-right flex-auto d-md-block" src="images/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 170px; height: auto; padding: .5em;" title="Computer Vision Lab"/>
+                                                <img class="card-img-right flex-auto d-md-block h-auto p-1 align-middle" src="images/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 170px;" title="Computer Vision Lab"/>
                                             </a>
                                         </div>
                                     </div>
@@ -95,10 +95,10 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="custom-html-widget" style="margin-left:0 !important;">
+                                <div class="custom-html-widget ml-0">
                                     <div class="row">
                                         <div class="textwidget custom-html-widget">
-                                            <p style="margin-bottom:0 !important;">Social: </p>
+                                            <p class="mb-0">Social: </p>
                                         </div>
                                     </div>
                                     <div class="row py-2">
@@ -111,25 +111,25 @@
                                         </div>
                                         <div class="custom-html-widget col-4">
                                             <a id="twitter-logo" title="Auden Musulin on Twitter" href="https://twitter.com/amp_oeaw" class="nav-link" target="_blank">
-                                                <img class="card-img-right flex-auto d-md-block" style="max-width: 32px;height:auto;" title="2021 Twitter Logo Blue" alt="2021 Twitter Logo Blue" src="images/x-logo-black.png"></img>
+                                                <img class="card-img-right flex-auto d-md-block h-auto" style="max-width: 32px;" title="2021 Twitter Logo Blue" alt="2021 Twitter Logo Blue" src="images/x-logo-black.png"></img>
                                             </a>
                                         </div>
                                         <div class="custom-html-widget col-4">
                                             <a id="mastodon-logo" rel="me" href="https://fedihum.org/@AMP_OeAW" class="nav-link" target="_blank">
-                                                <img class="card-img-right flex-auto d-md-block" style="max-width: 32px;height:auto;" title="2023 Mastodon Logo" alt="2023 Mastodon Logo" src="images/Mastodon_Logotype.svg"></img>
+                                                <img class="card-img-right flex-auto d-md-block h-auto" style="max-width: 32px;" title="2023 Mastodon Logo" alt="2023 Mastodon Logo" src="images/Mastodon_Logotype.svg"></img>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="custom-html-widget col-12 py-2">
                                             <label>App: </label>
-                                            <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.10718378">
+                                            <a class="ml-1" href="https://doi.org/10.5281/zenodo.10718378">
                                                 <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10718378.svg" alt="DOI to Zenodo App Repository"/>
                                             </a>
                                         </div>
                                         <div class="custom-html-widget col-12 py-2">
                                             <label>Data: </label>
-                                            <a style="margin-left: .5rem;" href="https://doi.org/10.5281/zenodo.10852982">
+                                            <a class="ml-1" href="https://doi.org/10.5281/zenodo.10852982">
                                                 <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10852982.svg" alt="DOI to Zenodo Data Repository"/>
                                             </a>
                                         </div>
@@ -143,7 +143,7 @@
                 </div>
             </div>
             <!-- #wrapper-footer-full -->
-            <div class="footer-imprint-bar hide-reading text-light" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;">
+            <div class="footer-imprint-bar hide-reading text-light text-center py-1 px-0" id="wrapper-footer-secondary">
                 <span>© Copyright OEAW</span> |                <a href="imprint.html" class="text-light">Impressum/Imprint</a>
             </div>
             <div id="cookie-overlay">

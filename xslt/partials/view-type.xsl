@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet 
-    xmlns:_="urn:acdh" 
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-    xmlns:tei="http://www.tei-c.org/ns/1.0" 
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-    exclude-result-prefixes="#all" version="2.0">
-    
+<xsl:stylesheet xmlns:_="urn:acdh"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="#all" version="2.0">
+
 
     <xsl:function name="_:ano">
         <xsl:param name="node"/>
         <xsl:for-each-group select="$node" group-by="$node">
             <xsl:sequence select="concat('(', count(current-group()[current-grouping-key() = .]), ' ', current-grouping-key(), ')')"/>
-        </xsl:for-each-group>    
+        </xsl:for-each-group>
     </xsl:function>
-    
+
     <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
         <desc>
             <h1>Widget view-type-img</h1>
             <p>Contact person: daniel.elsner@oeaw.ac.at</p>
             <p>Applied with call-templates in html:body.</p>
             <p>Containes the paginated view of text and image.</p>
-        </desc>    
+        </desc>
     </doc>
-    
+
     <xsl:template name="view-type-img">
-        
+
         <div class="pagination-top">
             <xsl:call-template name="view-pagination"/>
-        </div> 
-        
+        </div>
+
         <div class="{
                 if (@hand = '#handwritten') then 
                 ('handwritten') else if (@hand = '#typed') then 
@@ -62,21 +60,14 @@
                             second xpath loads div letter_message or poem
                         -->
                         <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
-                        <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
-                            data-tab="paginate"  
-                            id="paginate-{$positionOrNot}" 
-                            tabindex="-1">
-                            
+                        <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" data-tab="paginate" id="paginate-{$positionOrNot}" tabindex="-1">
+
                             <div id="container-resize-{$positionOrNot}" class="transcript row">
-                                
+
                                 <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
                                     <div class="card-body">
                                         <xsl:if test="@type='cv_sheet'">
-                                            <img class="card-img-right flex-auto d-md-block"
-                                                src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png"
-                                                alt="Computer Vision Lab Logo"
-                                                style="max-width: 140px; height: auto; padding: .5em;"
-                                                title="Computer Vision Lab"/>
+                                            <img class="card-img-right flex-auto d-md-block h-auto p-1" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px;" title="Computer Vision Lab"/>
                                         </xsl:if>
                                         <xsl:choose>
                                             <!-- 
@@ -87,8 +78,7 @@
                                             -->
                                             <xsl:when test="current-group()//tei:cb">
                                                 <div class="row">
-                                                    <xsl:for-each-group select="current-group()[self::tei:div]/*"
-                                                        group-starting-with="tei:cb"><!-- letter_messge or poem -->
+                                                    <xsl:for-each-group select="current-group()[self::tei:div]/*" group-starting-with="tei:cb">                                                        <!-- letter_messge or poem -->
                                                         <div class="{if(current-group()[self::tei:p[preceding-sibling::tei:cb]|self::tei:lg[preceding-sibling::tei:cb]]) then
                                                             ('col-md-6') else
                                                             ('col-md-12')}">
@@ -121,12 +111,7 @@
                                                         
                                                         doc 0042 requires additional hanlding tei:ab[preceding-sibling::tei:pb]
                                                     -->
-                                                    <xsl:when test="current-group()[self::tei:div[@type='letter_message']|
-                                                                                    self::tei:div[@type='poem']|
-                                                                                    self::tei:div[@type='speech']|
-                                                                                    self::tei:div[@type='prose_translation']|
-                                                                                    self::tei:div[@type='enclosure']|
-                                                                                    self::tei:div[@type='comments']]">
+                                                    <xsl:when test="current-group()[self::tei:div[@type='letter_message']| self::tei:div[@type='poem']| self::tei:div[@type='speech']| self::tei:div[@type='prose_translation']| self::tei:div[@type='enclosure']| self::tei:div[@type='comments']]">
                                                         <xsl:for-each select="current-group()[self::tei:div|
                                                                                               self::tei:lg[preceding-sibling::tei:pb]|
                                                                                               self::tei:ab[preceding-sibling::tei:pb]]">
@@ -206,26 +191,19 @@
                     <!-- 
                         2nd grouping loading first level div elements that do not container another sublevel div
                     -->
-                    <xsl:for-each-group select="*|./tei:div/*|//tei:floatingText/tei:body/tei:div/*" group-starting-with="tei:pb">  
+                    <xsl:for-each-group select="*|./tei:div/*|//tei:floatingText/tei:body/tei:div/*" group-starting-with="tei:pb">
                         <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
-                        <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
-                            data-tab="paginate"  
-                            id="paginate-{$positionOrNot}" 
-                            tabindex="-1">                            
-                            <div id="container-resize-{$positionOrNot}" class="transcript row">  
-                                
+                        <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" data-tab="paginate" id="paginate-{$positionOrNot}" tabindex="-1">
+                            <div id="container-resize-{$positionOrNot}" class="transcript row">
+
                                 <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
                                     <div class="card-body">
                                         <xsl:if test="@type='cv_sheet'">
-                                            <img class="card-img-right flex-auto d-md-block"
-                                                src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png"
-                                                alt="Computer Vision Lab Logo"
-                                                style="max-width: 140px; height: auto; padding: .5em;"
-                                                title="Computer Vision Lab"/>
+                                            <img class="card-img-right flex-auto d-md-block h-auto p-1" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px;" title="Computer Vision Lab"/>
                                         </xsl:if>
                                         <xsl:choose>
                                             <xsl:when test="current-group()[self::tei:div]">
-                                                
+
                                                 <xsl:for-each select="current-group()[self::tei:div|
                                                                                     self::tei:p[preceding-sibling::tei:pb]|
                                                                                     self::tei:ab[preceding-sibling::tei:pb]|
@@ -254,7 +232,7 @@
                                                             </xsl:call-template>
                                                         </xsl:otherwise>
                                                     </xsl:choose>
-                                                    
+
                                                 </xsl:for-each>
                                             </xsl:when>
                                             <xsl:when test="current-group()[ancestor::tei:floatingText]">
@@ -320,42 +298,34 @@
                                                             </xsl:call-template>
                                                         </xsl:otherwise>
                                                     </xsl:choose>
-                                                    
+
                                                 </xsl:for-each>
                                             </xsl:otherwise>
                                         </xsl:choose>
-                                        
+
                                     </div>
                                 </div>
                                 <xsl:call-template name="img-window">
                                     <xsl:with-param name="positionOrNot" select="$positionOrNot"/>
                                 </xsl:call-template>
                             </div>
-                        </div>                                                         
+                        </div>
                     </xsl:for-each-group>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:for-each-group select="*|./tei:div[@type='photo']/*" group-starting-with="tei:pb">  
+                    <xsl:for-each-group select="*|./tei:div[@type='photo']/*" group-starting-with="tei:pb">
                         <xsl:variable name="positionOrNot" select="if(current-group()/self::tei:pb/@ed) then(current-group()/self::tei:pb/@ed) else(position())"/>
-                        <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" 
-                            data-tab="paginate"  
-                            id="paginate-{$positionOrNot}" 
-                            tabindex="-1">
-                            <div id="container-resize-{$positionOrNot}" class="transcript row">  
+                        <div class="pagination-tab tab-pane {if(position() = 1) then('active') else('fade')}" data-tab="paginate" id="paginate-{$positionOrNot}" tabindex="-1">
+                            <div id="container-resize-{$positionOrNot}" class="transcript row">
                                 <div id="text-resize-{$positionOrNot}" class="text-re col-md-8">
                                     <div class="card-body">
                                         <xsl:if test="@type='cv_sheet'">
-                                            <img class="card-img-right flex-auto d-md-block"
-                                                src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png"
-                                                alt="Computer Vision Lab Logo"
-                                                style="max-width: 140px; height: auto; padding: .5em;"
-                                                title="Computer Vision Lab"/>
+                                            <img class="card-img-right flex-auto d-md-block h-auto p-1" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px;" title="Computer Vision Lab"/>
                                         </xsl:if>
                                         <xsl:for-each select="current-group()[self::tei:lg|
                                             self::tei:p|
                                             self::tei:fw|
-                                            self::tei:ab|
-                                            self::tei:div[not(@type='photo')]]">
+                                            self::tei:ab| self::tei:div[not(@type='photo')]]">
                                             <xsl:call-template name="text-window">
                                                 <xsl:with-param name="hand">
                                                     <xsl:value-of select="@hand"/>
@@ -371,50 +341,45 @@
                                     <xsl:with-param name="positionOrNot" select="$positionOrNot"/>
                                 </xsl:call-template>
                             </div>
-                        </div>                                                         
+                        </div>
                     </xsl:for-each-group>
                 </xsl:otherwise>
             </xsl:choose>
-            
+
             <xsl:if test="//tei:handShift">
                 <script type="text/javascript" src="js/handshift.js"></script>
             </xsl:if>
         </div>
-        
+
         <div class="pagination-bottom">
             <xsl:call-template name="view-pagination"/>
-        </div>    
-        
+        </div>
+
     </xsl:template>
-    
+
     <xsl:template name="img-window">
         <xsl:param name="positionOrNot"/>
-        <div id="img-resize-{$positionOrNot}"
-            class="col-md-4 card-body osd-viewer">                                                                              
+        <div id="img-resize-{$positionOrNot}" class="col-md-4 card-body osd-viewer">
             <xsl:variable name="osd_container_id" select="concat(@type, '_container_', $positionOrNot)"/>
             <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', $positionOrNot)"/>
             <div id="viewer-{$positionOrNot}">
                 <div id="spinner_{$osd_container_id}" class="text-center">
                     <div class="loader"></div>
                 </div>
-                <div id="{$osd_container_id}" style="padding:.5em;">
-                    <!-- image container accessed by OSD script -->      
+                <div id="{$osd_container_id}" class="p-1">
+                    <!-- image container accessed by OSD script -->
                     <div id="{$osd_container_id2}">
                         <xsl:if test="@facs">
                             <xsl:variable name="facs_item" select="tokenize(@facs, '/')[5]"/>
-                            <image-loader 
-                                opt="image-loader"
-                                data-type="{@type}"
-                                data-source="{$facs_item}" 
-                                pos="{$positionOrNot}">
+                            <image-loader opt="image-loader" data-type="{@type}" data-source="{$facs_item}" pos="{$positionOrNot}">
                             </image-loader>
-                        </xsl:if>     
-                    </div>                                
-                </div>  
+                        </xsl:if>
+                    </div>
+                </div>
             </div>
         </div>
     </xsl:template>
-    
+
     <xsl:template name="text-window">
         <!-- 
             depending on which node level text elements like p, lg, ab are available
@@ -456,5 +421,5 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
-    
+
 </xsl:stylesheet>

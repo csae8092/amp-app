@@ -71,7 +71,7 @@
                                 <div class="card-footer editor-btns-wrapper">
                                     <ul class="editor-btns">
                                         <li class="edition-doc-search">
-                                            <input type="checkbox" name="opt[]" value="separateWordSearch" title="Enable seperate word search"  checked="checked"/>
+                                            <input type="checkbox" name="opt[]" value="separateWordSearch" title="Enable seperate word search" checked="checked"/>
                                             <label>search for keywords</label>
                                             <input type="text" name="keyword" title="Search for keywords" placeholder="enter keyword..."/>
                                         </li>
@@ -90,12 +90,12 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="card-body" style="padding: .5em 0 0 0 !important;">
+                            <div class="card-body pt-1 px-0 pb-0">
 
                                 <xsl:call-template name="header-nav"/>
 
                             </div>
-                            <div class="card-body" style="padding: 1em;">
+                            <div class="card-body p-2">
                                 <div class="accordion accordion-flush" id="accordionFlushAot">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
@@ -268,7 +268,7 @@
                 </p>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>    
+    </xsl:template>
     <xsl:template match="tei:div">
         <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <div class="yes-index {
@@ -282,7 +282,7 @@
         </div>
     </xsl:template>
     <xsl:template match="tei:floatingText">
-        <xsl:apply-templates/>       
+        <xsl:apply-templates/>
     </xsl:template>
     <!-- 
         in doc 0063 p elements are part in both pb groups creating in view-type.xsl
@@ -687,7 +687,7 @@
                     </xsl:if>
                 </ul>
                 <xsl:if test="@source">
-                    <p style="margin-top: 1em;">External Evidence: <xsl:value-of select="@source"/>
+                    <p class="mt-2">External Evidence: <xsl:value-of select="@source"/>
                     </p>
                 </xsl:if>
             </div>
@@ -1429,18 +1429,34 @@
         </xsl:if>
     </xsl:template>
     <xsl:template match="tei:handShift">
-        <xsl:variable name="hand" select="'font-family: Times New Roman, serif; font-size: 22px;'"/>
-        <xsl:variable name="typed" select="'font-family: Courier New, monospace; font-size: 18px;'"/>
-        <xsl:variable name="printed" select="'font-family: Arial, serif; font-size: 18px;'"/>
+        <xsl:variable name="hand" select="@new"/>
         <xsl:choose>
-            <xsl:when test="@new = '#handwritten'">
-                <span class="handShift" style="{$hand}"/>
+            <xsl:when test="$hand = '#handwritten'">
+                <span class="handShift {if ($hand = '#handwritten') then
+                            ('handwritten') else if ($hand = '#typed') then
+                            ('typed') else if ($hand = '#printed') then
+                            ('printed') else if ($hand = '#stamp') then
+                            ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()}">
+                    <xsl:apply-templates/>
+                </span>
             </xsl:when>
-            <xsl:when test="@new = '#typed'">
-                <span class="handShift" style="{$typed}"/>
+            <xsl:when test="$hand = '#typed'">
+                <span class="handShift {if ($hand = '#handwritten') then
+                                ('handwritten') else if ($hand = '#typed') then
+                                ('typed') else if ($hand = '#printed') then
+                                ('printed') else if ($hand = '#stamp') then
+                                ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()}">
+                    <xsl:apply-templates/>
+                </span>
             </xsl:when>
-            <xsl:when test="@new = '#printed'">
-                <span class="handShift" style="{$printed}"/>
+            <xsl:when test="$hand = '#printed'">
+                <span class="handShift {if ($hand = '#handwritten') then
+                                    ('handwritten') else if ($hand = '#typed') then
+                                    ('typed') else if ($hand = '#printed') then
+                                    ('printed') else if ($hand = '#stamp') then
+                                    ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()}">
+                    <xsl:apply-templates/>
+                </span>
             </xsl:when>
         </xsl:choose>
     </xsl:template>
@@ -1519,35 +1535,35 @@
         <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
         <xsl:choose>
             <xsl:when test="string-length($hand) > 0">
-                <p class="yes-index {
+                <p class="yes-index block my-2 px-0 {
                     if ($hand = '#handwritten') then
                     ('handwritten') else if ($hand = '#typed') then
                     ('typed') else if ($hand = '#printed') then
                     ('printed') else if ($hand = '#stamp') then
                     ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-                    }" style="display:block;margin: 1em 0;">
+                    }">
                     <xsl:apply-templates/>
                 </p>
             </xsl:when>
             <xsl:when test="parent::tei:quote and ancestor::tei:seg">
-                <span class="yes-index {
+                <span class="yes-index block {
                     if ($hand = '#handwritten') then
                     ('handwritten') else if ($hand = '#typed') then
                     ('typed') else if ($hand = '#printed') then
                     ('printed') else if ($hand = '#stamp') then
                     ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-                    }" style="display:block;">
+                    }">
                     <xsl:apply-templates/>
                 </span>
             </xsl:when>
             <xsl:otherwise>
-                <p class="yes-index {
+                <p class="yes-index block my-2 px-0 {
                     if ($hand = '#handwritten') then
                     ('handwritten') else if ($hand = '#typed') then
                     ('typed') else if ($hand = '#printed') then
                     ('printed') else if ($hand = '#stamp') then
                     ('text-align:center;font-weight:bold;letter-spacing:.2em;') else ()
-                    }" style="display:block;margin: 1em 0;">
+                    }">
                     <xsl:apply-templates/>
                 </p>
             </xsl:otherwise>
@@ -1555,24 +1571,6 @@
     </xsl:template>
     <xsl:template match="tei:add[not(@corresp)]">
         <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
-        <!-- <xsl:variable name="place" select="
-            if(@place = 'left') then('margin-left:-5rem;')
-            else if (@place = 'above') then('margin-top:-1rem;')
-            else if (@place = 'bottom') then('margin-bottom:-.5rem;')
-            else()
-            "/>
-        <xsl:choose>
-            <xsl:when test="@place and @place='above' or @place='bottom'">
-                <span class="rev add" style="position:absolute;{$place}">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:when>
-            <xsl:otherwise>
-                <span class="rev add">
-                    <xsl:apply-templates/>
-                </span>
-            </xsl:otherwise>
-        </xsl:choose>-->
         <span class="rev add {if ($hand = '#handwritten') then
             ('handwritten') else if ($hand = '#typed') then
             ('typed') else if ($hand = '#printed') then
@@ -1584,13 +1582,6 @@
     <xsl:template match="tei:add[@corresp]">
         <xsl:if test="parent::tei:ab">
             <xsl:variable name="hand" select="@hand|parent::tei:*[@hand]/@hand"/>
-            <!--<xsl:variable name="place" select="
-                if(@place = 'right') then('right:-5rem;')
-                else if(@place = 'left') then('left:-5rem;')
-                else if(@place = 'below') then('bottom:-5rem;')
-                else if(@place = 'above') then('top:-5rem;')
-                else()
-                "/>-->
             <span class="{if ($hand = '#handwritten') then
                 ('handwritten') else if ($hand = '#typed') then
                 ('typed') else if ($hand = '#printed') then
@@ -1636,49 +1627,6 @@
             </xsl:call-template>
         </xsl:if>
         <xsl:apply-templates/>
-        <!--
-        <xsl:choose>
-            <xsl:when test="parent::tei:lg">
-                <a>
-                    <xsl:variable name="para" as="xs:int">
-                        <xsl:number level="any" from="tei:div" count="tei:lg"/>
-                    </xsl:variable>
-                    <xsl:variable name="lines" as="xs:int">
-                        <xsl:number level="any" from="tei:div" count="tei:l"/>
-                    </xsl:variable>
-                    <xsl:attribute name="href">
-                        <xsl:text>#</xsl:text><xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="name">
-                        <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="id">
-                        <xsl:value-of select="ancestor::tei:div/@xml:id"/><xsl:text>__lg</xsl:text><xsl:value-of select="$para"/><xsl:text>__vl</xsl:text><xsl:value-of select="$lines"/>
-                    </xsl:attribute>
-                    <xsl:choose>
-                        <xsl:when test="($lines mod 5) = 0">
-                            <xsl:attribute name="class">
-                                <xsl:text>linenumbersVisible linenumbers verseline yes-index</xsl:text>
-                            </xsl:attribute>
-                            <xsl:attribute name="data-lbnr">
-                                <xsl:value-of select="$lines"/>
-                            </xsl:attribute>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:attribute name="class">
-                                <xsl:text>linenumbersTransparent linenumbers verseline yes-index</xsl:text>
-                            </xsl:attribute>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:value-of select="concat('(vl) ', format-number($lines, '0000'))"/>
-                </a>
-                <xsl:apply-templates/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates/>
-            </xsl:otherwise>
-        </xsl:choose>
-        -->
     </xsl:template>
     <xsl:template match="tei:orig">
         <span class="choice">
