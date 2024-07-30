@@ -401,7 +401,7 @@
         "Location_Y": 48.181531884216675,
         "From_Person": "W. H. Auden",
         "To_Person": "Stella Musulin",
-        "Date": 1970-09-18,
+        "Date": "1970-09-18",
         "Field": null
       },
       "geometry": {
@@ -701,7 +701,7 @@
         "Location_Y": 48.181531884216675,
         "From_Person": "W. H. Auden",
         "To_Person": "Stella Musulin",
-        "Date": "1968-10-040",
+        "Date": "1968-10-04",
         "Field": null
       },
       "geometry": {
