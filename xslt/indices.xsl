@@ -11,7 +11,7 @@
 
     <xsl:template match="/">
         <xsl:variable name="doc_title">
-            <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
+            <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
         </xsl:variable>
         <html lang="en">
             <head>
