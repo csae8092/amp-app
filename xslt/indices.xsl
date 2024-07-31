@@ -91,7 +91,7 @@
                             });
                         </script>
                     </xsl:when>
-                    <xsl:when test="contains($doc_title, 'Literature')">
+                    <xsl:when test="contains($doc_title, 'Works')">
                         <script src="js/dt-panes.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
@@ -99,7 +99,7 @@
                             });
                         </script>
                     </xsl:when>
-                    <xsl:when test="contains($doc_title, 'Institut')">
+                    <xsl:when test="contains($doc_title, 'Institutions')">
                         <script src="js/leaflet.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {

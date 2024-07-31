@@ -13,7 +13,7 @@
 
     <xsl:template match="/">
         <xsl:variable name="doc_title">
-            <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
+            <xsl:value-of select=".//tei:title[@level='a'][1]/text()"/>
         </xsl:variable>
         <xsl:variable name="img" select="'off'"/>
         <xsl:choose>
@@ -491,7 +491,7 @@
                     </xsl:result-document>
                 </xsl:for-each>
             </xsl:when>
-            <xsl:when test="contains($doc_title, 'Literature')">
+            <xsl:when test="contains($doc_title, 'Works')">
                 <xsl:for-each select="//tei:bibl">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
@@ -652,7 +652,7 @@
                     </xsl:result-document>
                 </xsl:for-each>
             </xsl:when>
-            <xsl:when test="contains($doc_title, 'Institut')">
+            <xsl:when test="contains($doc_title, 'Institutions')">
                 <xsl:for-each select="//tei:org">
                     <xsl:variable name="doc_url" select="concat(@xml:id, '.html')"/>
                     <xsl:result-document href="{$doc_url}">
