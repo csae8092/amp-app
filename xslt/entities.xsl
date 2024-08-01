@@ -95,6 +95,28 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
+                                                <xsl:if test="./tei:org">
+                                                    <tr>
+                                                        <th>
+                                                            Organizations
+                                                        </th>
+                                                        <td>
+                                                            <ul>
+                                                            <xsl:for-each select="./tei:org">
+                                                                <li>
+                                                                    <xsl:if test="@role">
+                                                                        <small><xsl:value-of select="replace(@role, '_', ' ')"/>:</small>
+                                                                        <br/>
+                                                                    </xsl:if>
+                                                                    <a href="{@sameAs}.html">
+                                                                        <xsl:value-of select="./tei:orgName/text()"/>
+                                                                    </a>
+                                                                </li>
+                                                            </xsl:for-each>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </xsl:if>
                                                 <xsl:if test="@type">
                                                     <tr>
                                                         <th>

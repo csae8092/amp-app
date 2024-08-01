@@ -111,7 +111,7 @@
                         <script src="js/leaflet.js"></script>
                         <script type="text/javascript">
                             $(document).ready(function () {
-                                leafletDatatable('listevent', [2, 3, 4, 6, 7, 8], [0, 1, 5]);
+                                leafletDatatable('listevent', [2, 4, 5, 7, 8, 9], [0, 1, 3, 6]);
                             });
                         </script>
                     </xsl:when>
@@ -450,6 +450,7 @@
                         <th>Label</th>
                         <th>Participants</th>
                         <th>Located in</th>
+                        <th>Organizations</th>
                         <th>Start Date</th>
                         <th>End Date</th>
                         <th>Wikidata ID</th>
@@ -510,6 +511,19 @@
                                         </xsl:for-each>
                                     </xsl:otherwise>
                                 </xsl:choose>
+                            </td>
+                            <td>
+                                <xsl:if test="./tei:org">
+                                    <xsl:for-each select="./tei:org">
+                                        <a href="{@sameAs}.html">
+                                            
+                                            <xsl:value-of select="./tei:orgName/text()"/>
+                                        </a>
+                                        <xsl:if test="position() != last()">
+                                            <xsl:text>, </xsl:text>
+                                        </xsl:if>
+                                    </xsl:for-each>
+                                </xsl:if>
                             </td>
                             <td>
                                 <xsl:value-of select="@notBefore-iso"/>
