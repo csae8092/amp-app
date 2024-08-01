@@ -38,7 +38,7 @@
                                                                 //tei:listEvent/tei:event" group-by="tokenize(//tei:origDate/@notBefore-iso | @notBefore-iso, '-')[1]">
                                         <xsl:sort select="current-grouping-key()"/>
                                         <xsl:if test="(number(current-grouping-key()) &gt; 1958) and (number(current-grouping-key()) &lt; 1974)">
-                                            <li class="inline ml-5">
+                                            <li class="inline ml-4">
                                                 <a href="#{current-grouping-key()}" title="jump to date">
                                                     <xsl:value-of select="current-grouping-key()"/>
                                                 </a>
