@@ -21,20 +21,6 @@
             <body class="d-flex flex-column">
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
-                    <!-- <div class="card" id="notification">
-                        <div class="card-body">
-                            <p class="hidden py-0 px-2">
-                                <a id="close" title="close">X</a>
-                            </p>
-                            <h5 class="hidden">Pre-Release (v0.6.0)</h5>
-                            <p class="hidden">                                            
-                                This website is in development. Help us to improve and                                         
-                                <a class="text-decoration-underline" href="mailto:amp@oeaw.ac.at?subject=Auden-Musulin%20Papers%20Feedback!">
-                                    send us your feedback</a>.
-                            </p>
-
-                        </div>
-                    </div> -->
                     <div class="container-fluid bg-white w80 mb-0">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-12 intro_column">
