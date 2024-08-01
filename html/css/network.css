@@ -2,7 +2,7 @@
 .highcharts-data-table table {
   min-width: 320px;
   max-width: 100%;
-  margin: 1em auto;
+  margin: 4em auto;
 }
 
 .highcharts-data-table table {
@@ -39,8 +39,4 @@
 
 .highcharts-data-table tr:hover {
   background: #f1f7ff;
-}
-
-.container-fluid {
-  max-width: 60% !important;
 }

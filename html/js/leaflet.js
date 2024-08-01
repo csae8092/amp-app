@@ -93,7 +93,7 @@ function leafletDatatable(table, panesShow, panesHide) {
   });
 
   tableOne.on("search.dt", function () {
-    var value = $(".dataTables_filter input").val();
+    var value = $(".dt-search input").val();
     if (value.length != 0) {
       markers.clearLayers();
       getCoordinates();

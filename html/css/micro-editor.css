@@ -98,29 +98,32 @@ input:checked + .i-slider:before {
   text-decoration: line-through;
 }
 
-.whitespace {
-}
-
-/* .underline {
-  text-decoration: underline;
-} */
+/*.whitespace {
+}*/
 
 .italic {
   font-style: italic;
 }
 
-.italic.underline {
+.underline {
   text-decoration: underline;
-  font-style: normal;
 }
 
 .orange {
   background-color: #ffdbb8;
 }
 
+.brown {
+   background-color: #ffdd81; 
+}
+
 .red {
   background-color: #ffe6e6;
 }
+
+/*.red {
+  background-image: linear-gradient(to right, #ffe6e6, #B1FFBC);
+}*/
 
 .blue {
   background-color: #e1d4ff;
@@ -140,6 +143,11 @@ input:checked + .i-slider:before {
 
 .au-brown {
   background-color: #b59890;
+}
+
+
+.i-slider.red {
+  background-image: linear-gradient(to right, #FF9D9D, #B1FFBC);
 }
 
 .i-slider.orange {
@@ -235,6 +243,13 @@ input:checked + .i-slider:before {
 .plc::before {
   content: url("../images/icons/geo-alt-fill.svg");
   background-color: #ffdc6e;
+  border-radius: 0.5rem;
+  padding: 0.05em;
+}
+
+.g::before {
+  content: url("../images/icons/alphabet.svg");
+  background-color: #ffdd81;
   border-radius: 0.5rem;
   padding: 0.05em;
 }
@@ -443,6 +458,15 @@ annotation-slider label {
   border-right: 1px solid lightgrey;
 }
 
+/*.choice.reg {
+  display: none;
+}*/
+
+.rev.add.strikethrough {
+    background-color: #B1FFBC;
+    text-decoration: none;
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 992px) {
   .aot-list {
@@ -453,8 +477,4 @@ annotation-slider label {
     padding: 1em 0;
     border-bottom: 2px dashed lightgrey;
   }
-}
-
-.choice.reg {
-  display: none;
 }

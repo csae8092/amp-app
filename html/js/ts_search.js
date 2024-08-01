@@ -129,137 +129,26 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.menu({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Select Document Type",
+    },
+  })(instantsearch.widgets.menu)({
     container: "#document_type",
     attribute: "document_type",
   }),
 
-  // <div class="d-flex justify-content-between fade">
-  //   <a class="btn btn-secondary btn-sm deactivated">Show more</a>
-  // </div>
-  // <table class="table table-sm table-ais fade" id="table-ais-show">
-  //   <tr class="${hit.persons.length > 0 ? "show" : "fade"}">
-  //     <td><em>Persons:</em></td>
-  //     <td>
-  //       <ul>
-  //         ${hit.persons.map(
-  //           (item) =>
-  //             html`<li>
-  //               <span
-  //                 style="overflow:hidden;"
-  //                 class="text-break badge rounded-pill m-1 bg-secondary"
-  //                 >${item}</span
-  //               >
-  //             </li>`
-  //         )}
-  //       </ul>
-  //     </td>
-  //   </tr>
-  //   <tr class="${hit.places.length > 0 ? "show" : "fade"}">
-  //     <td><em>Places:</em></td>
-  //     <td>
-  //       <ul>
-  //         ${hit.places.map(
-  //           (item) =>
-  //             html`<li>
-  //               <span
-  //                 style="overflow:hidden;"
-  //                 class="text-break badge rounded-pill m-1 bg-primary"
-  //                 >${item}</span
-  //               >
-  //             </li>`
-  //         )}
-  //       </ul>
-  //     </td>
-  //   </tr>
-  //   <tr class="${hit.orgs.length > 0 ? "show" : "fade"}">
-  //     <td><em>Institutions:</em></td>
-  //     <td>
-  //       <ul>
-  //         ${hit.orgs.map(
-  //           (item) =>
-  //             html`<li>
-  //               <span
-  //                 style="overflow:hidden;"
-  //                 class="text-break badge rounded-pill m-1 bg-info"
-  //                 >${item}</span
-  //               >
-  //             </li>`
-  //         )}
-  //       </ul>
-  //     </td>
-  //   </tr>
-  //   <tr class="${hit.works.length > 0 ? "show" : "fade"}">
-  //     <td><em>Works:</em></td>
-  //     <td>
-  //       <ul>
-  //         ${hit.works.map(
-  //           (item) =>
-  //             html`<li>
-  //               <span
-  //                 style="overflow:hidden;"
-  //                 class="text-break badge rounded-pill m-1 bg-success"
-  //                 >${item}</span
-  //               >
-  //             </li>`
-  //         )}
-  //       </ul>
-  //     </td>
-  //   </tr>
-  //   <tr class="${hit.events.length > 0 ? "show" : "fade"}">
-  //     <td><em>Events:</em></td>
-  //     <td>
-  //       <ul>
-  //         ${hit.events.map(
-  //           (item) =>
-  //             html`<li>
-  //               <span
-  //                 style="overflow:hidden;"
-  //                 class="text-break badge rounded-pill m-1 bg-danger"
-  //                 >${item}</span
-  //               >
-  //             </li>`
-  //         )}
-  //       </ul>
-  //     </td>
-  //   </tr>
-  // </table>
-
-  // instantsearch.widgets.hits({
-  //   container: "#hits",
-  //   templates: {
-  //     empty: "No results for <q>{{ query }}</q>",
-  //     item: `
-  //             <h5><a href="{{ id }}">{{#helpers.snippet}}{ "attribute": "title", "highlightedTagName": "mark" }{{/helpers.snippet}}</a></h5>
-  //             <p style="overflow:hidden;max-height:210px;">{{#helpers.snippet}}{ "attribute": "full_text", "highlightedTagName": "mark" }{{/helpers.snippet}}</p>
-  //             <h5><span class="badge badge-primary">{{ project }}</span></h5>
-  //             <div>
-  //                 <div>
-  //                     {{#persons}}
-  //                     <span class="badge badge-secondary">{{ . }}</span>
-  //                     {{/persons}}
-  //                 </div>
-  //                 <div>
-  //                     {{#works}}
-  //                     <span class="badge badge-success">{{ . }}</span>
-  //                     {{/works}}
-  //                 </div>
-  //                 <div>
-  //                     {{#places}}
-  //                     <span class="badge badge-info">{{ . }}</span>
-  //                     {{/places}}
-  //                 </div>
-  //                 <div>
-  //                     {{#orgs}}
-  //                     <span class="badge badge-info">{{ . }}</span>
-  //                     {{/orgs}}
-  //                 </div>
-  //             </div>
-  //         `,
-  //   },
-  // }),
-
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Comments",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#has-comments",
     attribute: "comments_bool",
     searchable: false,
@@ -282,7 +171,14 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Poems",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#has-poem",
     attribute: "poem_bool",
     searchable: false,
@@ -290,7 +186,7 @@ search.addWidgets([
       return items.map((item) => ({
         ...item,
         highlighted: (item.highlighted =
-          item.label === "true" ? "includes verse" : "no verse included"),
+          item.label === "true" ? "included" : "not included"),
       }));
     },
     cssClasses: {
@@ -325,10 +221,21 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Places",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-places",
     attribute: "places",
     searchable: true,
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     searchablePlaceholder: "Search",
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
@@ -342,11 +249,22 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Persons",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-persons",
     attribute: "persons",
     searchable: true,
     searchablePlaceholder: "Search",
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
       searchableSubmit: "d-none",
@@ -359,11 +277,22 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Works",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-works",
     attribute: "works",
     searchable: true,
     searchablePlaceholder: "Search",
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
       searchableSubmit: "d-none",
@@ -376,11 +305,22 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Institutions",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-orgs",
     attribute: "orgs",
     searchable: true,
     searchablePlaceholder: "Search",
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
       searchableSubmit: "d-none",
@@ -393,11 +333,22 @@ search.addWidgets([
     },
   }),
 
-  instantsearch.widgets.refinementList({
+  instantsearch.widgets.panel({
+    collapsed: ({ state }) => {
+      return state.query.length === 0;
+    },
+    templates: {
+      header: "Events",
+    },
+  })(instantsearch.widgets.refinementList)({
     container: "#refinement-list-events",
     attribute: "events",
     searchable: true,
     searchablePlaceholder: "Search",
+    showMore: true,
+    sortBy: ["isRefined", "count:desc", "name:asc"],
+    showMoreLimit: 9999,
+    searchableIsAlwaysActive: false,
     cssClasses: {
       searchableInput: "form-control form-control-sm mb-2 border-light-2",
       searchableSubmit: "d-none",

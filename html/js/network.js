@@ -1,4 +1,4 @@
-Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
+Highcharts.getJSON("js/json/analytics/person_person.json", function (data) {
   const nodes = [];
   for (let x in data) {
     let node = data[x].amp_id;
@@ -12,14 +12,22 @@ Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
     // } catch (err) {
     //   console.log(err);
     // }
+    try {
+      var source = data[x].source[0].value;
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      var target = data[x].target[0].value;
+    } catch (err) {
+      console.log(err);
+    }
 
-    let source = data[x].source[0].value;
-    let target = data[x].target[0].value;
-    let type_node = `type_${type}_${node.replace("relationship_id_", "")}`;
+    let type_node = `${type}_${node.replace("relationship_person_id_", "")}`;
     nodes.push(
-      [`Name: ${source}`, node],
-      [`Name: ${target}`, node],
-      [type_node, node]
+      [`Name: ${source}`, type_node],
+      [`Name: ${target}`, type_node]
+      //[type_node, node]
     );
   }
 
@@ -87,29 +95,30 @@ Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
           nodes[link[1]] = {
             id: link[1],
             marker: {
-              radius: 10,
+              radius: 5,
             },
             color: "#7f8c8d",
-          };
-        } else if (nodes[link[0]] && nodes[link[0]].color) {
-          nodes[link[1]] = {
-            id: link[1],
-            color: "#615a60",
-          };
-        } else if (link[0].includes("type_")) {
-          // let random = Math.floor(Math.random() * colors.length);
-          nodes[link[0]] = {
-            id: link[0],
-            color: "#7f8c8d",
-          };
-          nodes[link[1]] = {
-            id: link[1],
-            marker: {
-              radius: 10,
-            },
-            color: "#615a60",
           };
         }
+        // } else if (nodes[link[0]] && nodes[link[0]].color) {
+        //   nodes[link[1]] = {
+        //     id: link[1],
+        //     color: "#fff",
+        //   };
+        // } else if (link[0].includes("type_")) {
+        //   // let random = Math.floor(Math.random() * colors.length);
+        //   nodes[link[0]] = {
+        //     id: link[0],
+        //     color: "#f1f1f1",
+        //   };
+        //   nodes[link[1]] = {
+        //     id: link[1],
+        //     marker: {
+        //       radius: 0,
+        //     },
+        //     color: "#f1f1f1",
+        //   };
+        // }
       });
 
       e.options.nodes = Object.keys(nodes).map(function (id) {
@@ -124,7 +133,148 @@ Highcharts.getJSON("js/json/analytics/relationships.json", function (data) {
       height: "100%",
     },
     title: {
-      text: "Auden Musulin Relationships",
+      text: "Auden Musulin Relationships between People",
+      align: "left",
+    },
+    subtitle: {
+      text: "A Force-Directed Network Graph",
+      align: "left",
+    },
+    plotOptions: {
+      networkgraph: {
+        keys: ["from", "to"],
+        layoutAlgorithm: {
+          enableSimulation: true,
+          friction: -0.981,
+        },
+      },
+    },
+    series: [
+      {
+        accessibility: {
+          enabled: false,
+        },
+        dataLabels: {
+          enabled: true,
+          linkFormat: "",
+        },
+        id: "lang-tree",
+        data: nodes,
+      },
+    ],
+  });
+});
+
+Highcharts.getJSON("js/json/analytics/person_org.json", function (data) {
+  const nodes = [];
+  for (let x in data) {
+    let node = data[x].person_org;
+    try {
+      var type = data[x].relation_type_object[0].value;
+    } catch (err) {
+      console.log(err);
+    }
+    // try {
+    //   var type_id = data[x].relation_type_object[0].data.amp_id;
+    // } catch (err) {
+    //   console.log(err);
+    // }
+    try {
+      var source = data[x].source[0].value;
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      var target = data[x].target[0].value;
+    } catch (err) {
+      console.log(err);
+    }
+
+    let type_node = `${type}_${node.replace("person_org_", "")}`;
+    nodes.push(
+      [`Name: ${source}`, type_node],
+      [`Organization: ${target}`, type_node]
+      //[type_node, node]
+    );
+  }
+
+  Highcharts.addEvent(Highcharts.Series, "afterSetOptions", function (e) {
+    //var colors = Highcharts.getOptions().colors,
+    var nodes = {};
+
+    if (
+      this instanceof Highcharts.Series.types.networkgraph &&
+      e.options.id === "lang-tree"
+    ) {
+      var i = 0;
+      e.options.data.forEach(function (link) {
+        if (link[0].includes("Name: ")) {
+          // let random = Math.floor(Math.random() * colors.length);
+          nodes[link[0]] = {
+            id: link[0],
+            marker: {
+              radius: 20,
+            },
+            color: "#b59890",
+          };
+          nodes[link[1]] = {
+            id: link[1],
+            marker: {
+              radius: 5,
+            },
+            color: "#7f8c8d",
+          };
+        } else if (link[0].includes("Organization: ")) {
+          // let random = Math.floor(Math.random() * colors.length);
+          nodes[link[0]] = {
+            id: link[0],
+            marker: {
+              radius: 20,
+            },
+            color: "#615a60",
+          };
+          nodes[link[1]] = {
+            id: link[1],
+            marker: {
+              radius: 5,
+            },
+            color: "#7f8c8d",
+          };
+        }
+        // } else if (nodes[link[0]] && nodes[link[0]].color) {
+        //   nodes[link[1]] = {
+        //     id: link[1],
+        //     color: "#fff",
+        //   };
+        // } else if (link[0].includes("type_")) {
+        //   // let random = Math.floor(Math.random() * colors.length);
+        //   nodes[link[0]] = {
+        //     id: link[0],
+        //     color: "#f1f1f1",
+        //   };
+        //   nodes[link[1]] = {
+        //     id: link[1],
+        //     marker: {
+        //       radius: 0,
+        //     },
+        //     color: "#f1f1f1",
+        //   };
+        // }
+      });
+
+      e.options.nodes = Object.keys(nodes).map(function (id) {
+        return nodes[id];
+      });
+    }
+  });
+
+  Highcharts.chart("container-network-org", {
+    chart: {
+      type: "networkgraph",
+      height: "100%",
+    },
+    title: {
+      text: "Auden Musulin Relationships between People and Organizations",
       align: "left",
     },
     subtitle: {

@@ -21,19 +21,22 @@
                         <annotation-slider opt="tf"></annotation-slider>
                     </li>
                     <li >
-                        <annotation-slider opt="del"></annotation-slider>
+                        <annotation-slider opt="rev"></annotation-slider>
                     </li>
                     <li >
                         <annotation-slider opt="ucl"></annotation-slider>
                     </li>
-                    <li >
+                    <!--<li >
                         <annotation-slider opt="udl"></annotation-slider>
-                    </li>
-                    <li >
+                    </li>-->
+                    <!--<li >
                         <annotation-slider opt="wsp"></annotation-slider>
-                    </li>
-                    <li >
+                    </li>-->
+                    <!--<li >
                         <annotation-slider opt="cho"></annotation-slider>
+                    </li>-->
+                    <li >
+                        <annotation-slider opt="gly"></annotation-slider>
                     </li>
                 </ul>
                 <ul class="aot-list">

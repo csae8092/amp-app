@@ -4,26 +4,22 @@
     <property name="editions" value="${basedir}/data/editions"/>
     <property name="index" value="${basedir}/data/meta/about.xml"/>
     <property name="description" value="${basedir}/data/meta/description.xml"/>
-    <property name="auden_bio" value="${basedir}/data/meta/auden-biography.xml"/>
-    <property name="musulin_bio" value="${basedir}/data/meta/musulin-biography.xml"/>
+    <property name="amp_timeline" value="${basedir}/data/indices/amp-index-events.xml"/>
     <property name="team" value="${basedir}/data/meta/team.xml"/>
     <property name="imprint" value="${basedir}/data/imprint.xml"/>
     <property name="editorial-decl" value="${basedir}/data/meta/editorial-declaration.xml"/>
     <property name="target" value="${basedir}/html"/>
-    <!-- <property name="target_xml" value="${basedir}/html/xml-view"/> -->
     <property name="xsl_analytics" value="${basedir}/xslt/analytics.xsl"/>
     <property name="xsl_indices" value="${basedir}/xslt/indices.xsl"/>
     <property name="xsl_entities" value="${basedir}/xslt/entities.xsl"/>
     <property name="xsl_editions" value="${basedir}/xslt/editions.xsl"/>
-    <!-- <property name="xsl_editions_xml" value="${basedir}/xslt/editions-xml.xsl"/> -->
     <property name="xsl_index" value="${basedir}/xslt/index.xsl"/>
     <property name="xsl_toc" value="${basedir}/xslt/toc.xsl"/>
-    <!-- <property name="xsl_memoirs" value="${basedir}/xslt/memoirs.xsl"/> -->
     <property name="xsl_photos" value="${basedir}/xslt/photos.xsl"/>
     <property name="xsl_am" value="${basedir}/xslt/additional-materials.xsl"/>
     <property name="xsl_search" value="${basedir}/xslt/search.xsl"/>
     <property name="xsl_desc" value="${basedir}/xslt/description.xsl"/>
-    <property name="xsl_bio" value="${basedir}/xslt/biographies.xsl"/>
+    <property name="xsl_timeline" value="${basedir}/xslt/timeline.xsl"/>
     <property name="xsl_team" value="${basedir}/xslt/team.xsl"/>
     <property name="xsl_imprint" value="${basedir}/xslt/imprint.xsl"/>
     <property name="xsl_edit" value="${basedir}/xslt/editorial-declaration.xsl"/>
@@ -98,11 +94,7 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    <xslt in="${auden_bio}" out="${target}/auden-biography.html" style="${xsl_bio}">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    <xslt in="${musulin_bio}" out="${target}/musulin-biography.html" style="${xsl_bio}">
+    <xslt in="${amp_timeline}" out="${target}/timeline.html" style="${xsl_timeline}">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -121,16 +113,6 @@
     <copy todir="${basedir}/html/images">
         <fileset dir="${basedir}/data/images">
             <include name="*.JPG"/>
-        </fileset>
-    </copy>
-    <!-- <copy todir="${target}" flatten="true">
-        <fileset dir="data/editions">
-            <include name="**/*.xml"/>
-        </fileset>
-    </copy> -->
-    <copy todir="${target}" flatten="true">
-        <fileset dir="${basedir}/data/meta">
-            <include name="**/*-biography.xml"/>
         </fileset>
     </copy>
     <copy todir="${target}" flatten="true">
