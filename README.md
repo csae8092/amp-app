@@ -12,7 +12,7 @@
 - run `./build_app/shell/build-local.sh` to build the app locally
 - use the `.github/workflows/build.yml` workflow to build the app on GitHub
 
-## Depenedencies
+## Dependencies
 
 - Python 3.10
 - Apache Ant [ant-contrib-1.0b3](https://github.com/Auden-Musulin-Papers/amp-app/blob/master/.github/workflows/build.yml#L42C77-L43)
