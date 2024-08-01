@@ -32,6 +32,10 @@
   padding-right: 1em;
 }
 
+.entity-table tbody tr th {
+    width: 200px!important;
+}
+
 #footnotes li sup,
 #endnotes li sup {
   font-size: 18px;
