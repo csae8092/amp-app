@@ -123,41 +123,42 @@
                                     <div class="row">
                                         <div class="custom-html-widget col-12 py-2">
                                             <label>App: </label>
-                                            <a class="ml-1" href="https://doi.org/10.5281/zenodo.10718378">
-                                                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10718378.svg" alt="DOI to Zenodo App Repository"/>
+                                            <a class="ml-1" href="https://doi.org/10.5281/zenodo.13149595">
+                                                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.13149595.svg" alt="DOI"/>
                                             </a>
+
                                         </div>
                                         <div class="custom-html-widget col-12 py-2">
                                             <label>Data: </label>
                                             <a class="ml-1" href="https://doi.org/10.5281/zenodo.13149400">
-                                                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.13149400.svg" alt="DOI"/></a>
-
-                                            </div>
+                                                <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.13149400.svg" alt="DOI"/>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- .footer-widget -->
-                        </div>
+                        <!-- .footer-widget -->
                     </div>
                 </div>
-                <!-- #wrapper-footer-full -->
-                <div class="footer-imprint-bar hide-reading text-light text-center py-1 px-0" id="wrapper-footer-secondary">
-                    <span>© Copyright OEAW</span> |                    <a href="imprint.html" class="text-light">Impressum/Imprint</a>
-                </div>
-                <div id="cookie-overlay">
-                    <div class="container">
-                        <div class="cookie-message">This website uses cookies to ensure you get the best experience on our website. <a href="imprint.html">More info</a>
-                            <br/>
-                        </div>
-                        <div class="cookie-buttons">
-                            <div class="cookie-accept-btn">Accept All Cookies (functional and tracking)</div>
-                            <div class="cookie-accept-necessary-btn">Accept Necessary Cookies Only</div>
-                        </div>
+            </div>
+            <!-- #wrapper-footer-full -->
+            <div class="footer-imprint-bar hide-reading text-light text-center py-1 px-0" id="wrapper-footer-secondary">
+                <span>© Copyright OEAW</span> |                <a href="imprint.html" class="text-light">Impressum/Imprint</a>
+            </div>
+            <div id="cookie-overlay">
+                <div class="container">
+                    <div class="cookie-message">This website uses cookies to ensure you get the best experience on our website. <a href="imprint.html">More info</a>
+                        <br/>
+                    </div>
+                    <div class="cookie-buttons">
+                        <div class="cookie-accept-btn">Accept All Cookies (functional and tracking)</div>
+                        <div class="cookie-accept-necessary-btn">Accept Necessary Cookies Only</div>
                     </div>
                 </div>
-            </footer>
-            <script src="js/navScrollHide.js"></script>
-        </xsl:template>
-    </xsl:stylesheet>
+            </div>
+        </footer>
+        <script src="js/navScrollHide.js"></script>
+    </xsl:template>
+</xsl:stylesheet>
