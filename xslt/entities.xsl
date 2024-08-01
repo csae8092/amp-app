@@ -102,17 +102,20 @@
                                                         </th>
                                                         <td>
                                                             <ul>
-                                                            <xsl:for-each select="./tei:org">
+                                                            <xsl:for-each-group select="./tei:org" group-by="@role">
                                                                 <li>
-                                                                    <xsl:if test="@role">
-                                                                        <small><xsl:value-of select="replace(@role, '_', ' ')"/>:</small>
-                                                                        <br/>
-                                                                    </xsl:if>
-                                                                    <a href="{@sameAs}.html">
-                                                                        <xsl:value-of select="./tei:orgName/text()"/>
-                                                                    </a>
+                                                                    <small><xsl:value-of select="replace(current-grouping-key(), '_', ' ')"/>:</small>
+                                                                    <ul>
+                                                                     <xsl:for-each select="current-group()">
+                                                                         <li>
+                                                                             <a href="{@sameAs}.html">
+                                                                                 <xsl:value-of select="./tei:orgName/text()"/>
+                                                                             </a>
+                                                                         </li>
+                                                                     </xsl:for-each>
+                                                                    </ul>
                                                                 </li>
-                                                            </xsl:for-each>
+                                                            </xsl:for-each-group>
                                                             </ul>
                                                         </td>
                                                     </tr>
@@ -701,7 +704,7 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:desc">
+                                                <xsl:if test="./tei:desc/text()">
                                                     <tr>
                                                         <th>
                                                             Description
@@ -755,13 +758,13 @@
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
-                                                <xsl:if test="./tei:note">
+                                                <xsl:if test="./tei:note/text()">
                                                     <tr>
                                                         <th>
                                                             Comments
                                                         </th>
                                                         <td>
-                                                            <xsl:value-of select="./tei:note"/>
+                                                            <xsl:value-of select="./tei:note/text()"/>
                                                         </td>
                                                     </tr>
                                                 </xsl:if>
