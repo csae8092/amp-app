@@ -21,7 +21,7 @@
             <body class="d-flex flex-column">
                 <xsl:call-template name="nav_bar"/>
                 <main class="flex-shrink-0">
-                    <div class="container-fluid">
+                    <div class="container-fluid mx-2">
                         <h1 class="my-5 mx-auto text-center">
                             <xsl:value-of select="$doc_title"/>
                         </h1>

@@ -134,6 +134,14 @@
                                                 <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.13149400.svg" alt="DOI"/>
                                             </a>
                                         </div>
+                                        <div class="custom-html-widget col-12 py-2">
+                                            <label class="block">Archive: </label>
+                                            <a class="ml-1 aligne-middle" href="https://id.acdh.oeaw.ac.at/auden-musulin-papers">
+                                                <img src="images/arche_logo.png" alt="ARCHE: A Resource Centre for Humanities Related Research in Austria"/>
+                                                <small> id:auden-musulin-papers</small>
+                                            </a>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
