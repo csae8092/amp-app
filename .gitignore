@@ -1,6 +1,7 @@
 # project specific
 /html/*.html
 /html/*.xml
+/html/oai-pmh
 /saxon
 /static-search
 /html/static-search

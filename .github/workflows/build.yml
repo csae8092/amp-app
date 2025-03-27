@@ -53,6 +53,8 @@ jobs:
       - name: Build
         run: |
           ant -f ./build_app/ant/build.xml
+      - name: OAI-PMH
+        run: python oai-pmh/make_files.py
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
@@ -63,6 +65,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-      - name: Build Typesense Index
-        run: |
-          python ./build_app/python/make_ts_index.py
+      # - name: Build Typesense Index
+      #   run: |
+      #     python ./build_app/python/make_ts_index.py
